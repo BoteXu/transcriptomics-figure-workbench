@@ -1,0 +1,122 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K23",
+    "title": "相同成员关系的弦图＋精确矩阵＋集合冗余网络",
+    "size_pt": [
+      1370,
+      660
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          450,
+          615
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          480,
+          45,
+          860,
+          615
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "3",
+        "label": "C",
+        "rect_pt": [
+          890,
+          45,
+          1345,
+          615
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "b958961293db660379c54909839f973914e59c769dcf083eac31a2fbad6f85af",
+      "source_table_sha256": "553ee5a3570c439b9644dffea3f4ac02a54dacf4400174be3fa4675c9d0da354",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          450,
+          615
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "adcdbc012477d42628afc64333becb21e10d20cc03759f25d348fb9d8f047556",
+      "source_table_sha256": "90ffce26fe5840f5fd2ed1851b34c23e2bf4f3b4e0de1f3a5807a7a28a5a680e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          480,
+          45,
+          860,
+          615
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "3",
+      "source_pdf_sha256": "8d0cbc7c66908b124debfb01650da59d6bf8c7786a0addb1fb625a99930c99b7",
+      "source_table_sha256": "bfd52c3481ca77d69e1e915ea991457884bc2fdf12007bef8ba9f5e7b825588e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "3",
+        "label": "C",
+        "rect_pt": [
+          890,
+          45,
+          1345,
+          615
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "553ee5a3570c439b9644dffea3f4ac02a54dacf4400174be3fa4675c9d0da354",
+    "2.tsv": "90ffce26fe5840f5fd2ed1851b34c23e2bf4f3b4e0de1f3a5807a7a28a5a680e",
+    "3.tsv": "bfd52c3481ca77d69e1e915ea991457884bc2fdf12007bef8ba9f5e7b825588e",
+    "K23.pdf": "6aa95052396b060b5511f6ae373fdba9ae7be352197212a7ceaee1939b3718a6",
+    "K23.png": "8b60e6b3430ec964c6460a45da0fed1c8868c4aeb5c40867ec04d7db95939be7",
+    "K23.svg": "ff26f5dff1324d4e622c7deb612e5dba0643f05e40bf23888be24b49e6287e7d"
+  },
+  "example_id": "K23",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "42条去重BP成员边逐项对应E09的42个1；E23从同一成员集合计算Jaccard，实算结果另有校验。",
+  "component_ids": [
+    "E08",
+    "E09",
+    "E23"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

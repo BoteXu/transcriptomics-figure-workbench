@@ -1,0 +1,20 @@
+{
+  "module": "figure_publication",
+  "function": "plot_aligned_matrix",
+  "theme_mode": "theme_wrapper",
+  "params": {
+    "value_label": "Supplied signed loading",
+    "limits": [
+      -1,
+      1
+    ],
+    "signed": true,
+    "block_palette": {
+      "RNA": "#506AAA",
+      "Protein": "#E17692",
+      "ATAC": "#91BBDF"
+    },
+    "count_label": "One supplied feature",
+    "title": "Feature loadings, fixed factor order"
+  }
+}

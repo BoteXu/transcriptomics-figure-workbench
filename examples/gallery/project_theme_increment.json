@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "project_id": "figure-library-v0.2-preview",
+  "palette_name": "card_06",
+  "palette_colors": [
+    "#506AAA",
+    "#728DC1",
+    "#91BBDF",
+    "#B6DBF1",
+    "#F6D3D9",
+    "#E79FBF",
+    "#E17692"
+  ],
+  "group_slots": {
+    "G1": 0,
+    "G2": 1,
+    "G3": 2,
+    "G4": 3,
+    "G5": 4,
+    "G6": 5,
+    "G7": 6,
+    "CT1": 2,
+    "CT2": 3,
+    "CT3": 5,
+    "Set A": 0,
+    "Set B": 3,
+    "Before": 0,
+    "After": 6,
+    "Neither": 3,
+    "X only": 0,
+    "Y only": 4,
+    "Both": 6,
+    "RNA": 0,
+    "Protein": 6,
+    "ATAC": 2,
+    "Metabolite": 4,
+    "Observed": 0,
+    "Reference": 6,
+    "M+0": 0,
+    "M+1": 2,
+    "M+2": 4,
+    "M+3": 6
+  },
+  "roles": {
+    "primary": "#506AAA",
+    "negative": "#506AAA",
+    "positive": "#E17692",
+    "accent": "#E17692",
+    "neutral": "#A8ADB3",
+    "significant": "#E17692",
+    "border": "#526272"
+  },
+  "continuous": {
+    "sequential": [
+      "#F7F9FC",
+      "#506AAA"
+    ],
+    "diverging": [
+      "#506AAA",
+      "#F7F7F7",
+      "#E17692"
+    ]
+  },
+  "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+  "font_family": "Arial",
+  "design": {
+    "label_pt": 10,
+    "tick_pt": 9,
+    "title_pt": 11,
+    "note_pt": 8,
+    "spine_width": 0.7,
+    "spine_mode": "keep",
+    "grid": "keep"
+  },
+  "line_width": 1.4,
+  "point_edge_width": 0.4,
+  "preview_only": true
+}

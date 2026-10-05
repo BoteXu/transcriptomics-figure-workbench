@@ -169,7 +169,7 @@ def plot_qc(data,y_label):
     ax.set(xlabel='Capture / sample',ylabel=y_label)
     return stamp(fig, data, 'qc', y_label=y_label)
 
-def plot_composition(data,palette):
+def plot_composition(data,palette,*,y_label='Fraction of included cells'):
     d=checked(data,['sample','celltype','count'],['count'])
     if d.duplicated(['sample','celltype']).any() or ((d['count']<0)|(d['count']%1!=0)).any(): raise ValueError('Invalid counts')
     palette_check(d.celltype,palette)
@@ -180,9 +180,10 @@ def plot_composition(data,palette):
     for celltype in prop.columns:
         ax.bar(prop.index,prop[celltype],bottom=bottom,color=palette[celltype],label=celltype,width=.75)
         bottom+=prop[celltype].to_numpy()
-    ax.set_ylim(0,1); ax.set_ylabel('Fraction of included cells')
+    if not isinstance(y_label,str) or not y_label.strip():raise ValueError('Explicit denominator label required')
+    ax.set_ylim(0,1); ax.set_ylabel(y_label)
     ax.legend(loc='upper left',bbox_to_anchor=(1,1),frameon=False)
-    return stamp(fig, data, 'composition', palette=palette, denominator='all supplied counts per sample')
+    return stamp(fig, data, 'composition', palette=palette, denominator='all supplied counts per sample',y_label=y_label)
 
 def plot_curve(data,kind='ROC'):
     if kind not in ['ROC','PR','calibration']: raise ValueError('Unknown curve kind')
@@ -237,8 +238,15 @@ def export_figure(fig,data,out_dir,figure_id,meta, *, source_file=None, expected
         stage=Path(tempfile.mkdtemp(prefix='.'+figure_id+'-staging-',dir=out))
         files=[stage/(figure_id+ext) for ext in extensions]
         if meta['synthetic']:
-            fig.suptitle('SYNTHETIC DEMO - '+figure_id,weight='bold')
-            fig.supxlabel('Software test fixture; not biological evidence',fontsize=8)
+            if fig._omics_spec.get('demo_label_style') == 'compact':
+                # A separate reserved band preserves the scientific title and guides.
+                fig.text(.02,.987,'SYNTHETIC DEMO | '+figure_id,fontsize=8,
+                         va='top',color='#66727D',fontfamily=fig._omics_spec.get('project_theme',{}).get('font_family','sans-serif'))
+                fig.text(.02,.008,'Software test fixture; not biological evidence',fontsize=7,
+                         va='bottom',color='#66727D',fontfamily=fig._omics_spec.get('project_theme',{}).get('font_family','sans-serif'))
+            else:
+                fig.suptitle('SYNTHETIC DEMO - '+figure_id,weight='bold')
+                fig.supxlabel('Software test fixture; not biological evidence',fontsize=8)
         with plt.rc_context({'svg.fonttype':'none','pdf.fonttype':42}):
             for file in files[:3]: fig.savefig(file,dpi=300,facecolor='white')
         files[3].write_bytes(raw)

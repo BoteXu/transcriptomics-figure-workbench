@@ -1,0 +1,15 @@
+{
+  "module": "figure_multiomics_views",
+  "function": "plot_aligned_views",
+  "theme_mode": "theme_argument",
+  "params": {
+    "view_order": [
+      "RNA",
+      "Protein",
+      "ATAC"
+    ],
+    "coordinate_definition": "Frozen assay-specific synthetic component scores; matched IDs",
+    "draw_links": true,
+    "title": "Matched objects in separate view spaces"
+  }
+}

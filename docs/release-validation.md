@@ -13,3 +13,7 @@ Core requirements are deliberately small. Pillow/PyMuPDF are optional review/com
 Run `python tests/check_package.py` from the repository root for dependency-free structural and privacy checks. To exercise the plotting backend, use `python skills/transcriptomics-figure-workbench/scripts/smoke_test.py NEW_OUTPUT_DIRECTORY` in a prepared environment. That driver produces synthetic examples, not research results.
 
 The downloadable skill ZIP includes only the installable skill, license/attribution and version information. The repository additionally contains the full public gallery and overview; user reference images and private runtime receipts are excluded.
+
+## Subsequent release
+
+This document preserves the v0.1.0 history. Current v0.2.0 scope is [release-validation-v020.md](release-validation-v020.md).

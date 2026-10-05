@@ -1,0 +1,72 @@
+{
+  "status": "DESCRIPTIVE_SYNTHETIC_OVERLAP_CHECK",
+  "synthetic": true,
+  "tool": "Biomni advanced.summarize_pathway_overlap",
+  "objects": 22,
+  "terms": 6,
+  "memberships": 42,
+  "threshold": 0.15,
+  "input_sha256": "55fdac6e5588057fefad1d8927256c4eba0cc2c071db608d4579859f9228af8b",
+  "source_receipt_sha256": "3316911c5d11202796ab2e8c35f9a48088e2dfd61704bb8a95e05fe62f744c04",
+  "pairs": [
+    {
+      "term1": "BP01",
+      "term2": "BP02",
+      "jaccard": 0.4,
+      "shared_genes": [
+        "F04",
+        "F05",
+        "F06",
+        "F07"
+      ]
+    },
+    {
+      "term1": "BP02",
+      "term2": "BP03",
+      "jaccard": 0.4,
+      "shared_genes": [
+        "F07",
+        "F08",
+        "F09",
+        "F10"
+      ]
+    },
+    {
+      "term1": "BP03",
+      "term2": "BP04",
+      "jaccard": 0.4,
+      "shared_genes": [
+        "F10",
+        "F11",
+        "F12",
+        "F13"
+      ]
+    },
+    {
+      "term1": "BP04",
+      "term2": "BP05",
+      "jaccard": 0.4,
+      "shared_genes": [
+        "F13",
+        "F14",
+        "F15",
+        "F16"
+      ]
+    },
+    {
+      "term1": "BP05",
+      "term2": "BP06",
+      "jaccard": 0.4,
+      "shared_genes": [
+        "F16",
+        "F17",
+        "F18",
+        "F19"
+      ]
+    }
+  ],
+  "limitations": [
+    "Overlap is descriptive; redundant terms are retained and not silently removed from multiplicity families.",
+    "Leading edges must come from the actual enrichment result; they are not inferred from set overlap."
+  ]
+}

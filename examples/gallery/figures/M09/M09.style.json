@@ -1,0 +1,14 @@
+{
+  "module": "figure_multiomics_views",
+  "function": "plot_pathway_overlay",
+  "theme_mode": "theme_argument",
+  "params": {
+    "node_limits": [
+      -1.5,
+      1.5
+    ],
+    "node_value_definition": "Supplied log2 abundance change",
+    "edge_definition": "Fixed fictional pathway topology; arrows are known-map order only",
+    "title": "Abundance on a fixed pathway map"
+  }
+}

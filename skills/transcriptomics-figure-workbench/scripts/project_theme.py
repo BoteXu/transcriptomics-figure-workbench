@@ -6,10 +6,11 @@ from pathlib import Path
 import json,copy,hashlib
 import matplotlib.pyplot as plt
 from matplotlib.colors import to_rgba
-from figure_reference_palettes import load_palettes,palette_scope
+from figure_reference_palettes import load_palettes,palette_scope,resolve_card_name
 from figure_design import DesignSpec,apply_design
 
 def create_theme(project_id,palette_name,group_slots,*,font_family='Arial',roles=None):
+    palette_name=resolve_card_name(palette_name)
     card=load_palettes()[palette_name]
     if card['semantic']!='categorical': raise ValueError('Project base card must be categorical; set continuous roles separately')
     colors=card['colors']; slots=dict(group_slots)
@@ -29,6 +30,9 @@ def validate_theme(theme):
     for name in ('sequential','diverging'):
         if len(theme['continuous'][name])<2: raise ValueError('Incomplete continuous scale')
         for c in theme['continuous'][name]: to_rgba(c)
+        if name in theme.get('continuous_cards',{}):
+            continuous_card=load_palettes()[theme['continuous_cards'][name]]
+            if continuous_card['semantic']!=name or continuous_card['colors']!=theme['continuous'][name]: raise ValueError('Continuous card changed or has incompatible semantics')
     for c in theme['roles'].values(): to_rgba(c)
     DesignSpec(font_family=theme['font_family'],**theme['design']).validate()
     if theme['line_width']<=0 or theme['point_edge_width']<0: raise ValueError('Invalid line/point appearance')
@@ -92,6 +96,10 @@ def render_with_theme(renderer,data,params,theme):
             settings[field]=group_palette(theme,list(settings[field]))
     for field,role in [('node_color','primary'),('up_color','positive'),('down_color','negative')]:
         if field in signature.parameters: settings[field]=theme['roles'][role]
+    if 'continuous_colors' in signature.parameters:
+        settings['continuous_colors']=theme['continuous']['diverging' if settings.get('signed',False) else 'sequential']
+    if isinstance(settings.get('block_palette'),dict) and set(settings['block_palette'])<=set(theme['group_slots']):
+        settings['block_palette']=group_palette(theme,list(settings['block_palette']))
     if 'font_family' in signature.parameters: settings['font_family']=theme['font_family']
     with palette_scope(theme),plt.rc_context({'font.family':theme['font_family']}): fig=renderer(data,**settings); fig=apply_project_style(fig,theme)
     fig._omics_spec['theme_adapter']=renderer.__module__+'.'+renderer.__name__

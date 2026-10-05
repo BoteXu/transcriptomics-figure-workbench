@@ -195,4 +195,6 @@ This product includes color specifications and designs developed by Cynthia Brew
 
 新课题默认按project-style.md生成统一project_theme.json。分组字典固定身份，连续角色独立指定；C14/C15不能作为类别基底。category_map和reference_cmap仍供明确低层调用。
 
+`set_project_theme.py --list-cards` 列出全部 C01–C15、注册名和类型；`--card C06` 等编号可直接选择类别卡。连续角色使用 `--sequential-card C14 --diverging-card C15`。只更换字体时保留原连续卡与角色色；更换类别基底时默认重建其派生色阶，指定连续卡可覆盖相应角色。
+
 plot_palette_panel绘制单独panel；plot_palette_plate保留旧整页应用复现兼容入口，不作为新图默认输出。色卡、独立panel、组合图各有入口。

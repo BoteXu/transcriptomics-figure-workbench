@@ -1,0 +1,92 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K26",
+    "title": "协变量平衡诊断＋调整阶段的已有模型估计",
+    "size_pt": [
+      1070,
+      550
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          515,
+          495
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          550,
+          45,
+          1045,
+          495
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "9856b24198e1737459e04ceec24a777de747144f11dbd7ee8bdcd908b23ae427",
+      "source_table_sha256": "61c0a2e376f82311d7ef6264f4bc05bb215f7fc63fc1d2abcacd36db277340b3",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          515,
+          495
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "e39e5156ec3a01c847e75a4a30083a8398b905cb48d420658e30f5b308aaf19b",
+      "source_table_sha256": "68cb15dc00ee3e89619c44d1791ade9feeae0b6bd25a015a5b3f19a30cf82f41",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          550,
+          45,
+          1045,
+          495
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "61c0a2e376f82311d7ef6264f4bc05bb215f7fc63fc1d2abcacd36db277340b3",
+    "2.tsv": "68cb15dc00ee3e89619c44d1791ade9feeae0b6bd25a015a5b3f19a30cf82f41",
+    "K26.pdf": "ebbd317e57aad7596b83e2235136ef6c0a5281e3c3ade781c143fdfdce9ef2b2",
+    "K26.png": "0d786121e1491c3263974025587b8f86be83c3b1185512ec6098f65c77188314",
+    "K26.svg": "70afc3a79b172a7df83e82da7fc4ff3ad68c9d5f87f25bc39c4604a935ca7268"
+  },
+  "example_id": "K26",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "同一Before/After阶段身份与色槽；SMD与估计区间都是独立给定的合成输出，未声称运行了匹配、加权或因果模型。",
+  "component_ids": [
+    "E13",
+    "E21"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

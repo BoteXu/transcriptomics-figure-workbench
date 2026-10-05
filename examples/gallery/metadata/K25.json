@@ -1,0 +1,92 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K25",
+    "title": "相同配对对象的XY＋Bland–Altman差值",
+    "size_pt": [
+      1030,
+      590
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          510,
+          535
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          545,
+          45,
+          1005,
+          535
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "adeda8f8d8da5d317f81f186e4d4759cdc8a33d5530572f1487b20961a5d2766",
+      "source_table_sha256": "624cef0005b8cb49310464d184f962749fcdeeeb2b1c6754013f76d18adcc761",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          510,
+          535
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "7c02041f67a292a63b7687d9ba663a24745db0329aea0ab3e0e170542e503b87",
+      "source_table_sha256": "0708e92e613bfdf1dbb98d74a71e8213ee0829cf0b49831653baf1fbe232938c",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          545,
+          45,
+          1005,
+          535
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "624cef0005b8cb49310464d184f962749fcdeeeb2b1c6754013f76d18adcc761",
+    "2.tsv": "0708e92e613bfdf1dbb98d74a71e8213ee0829cf0b49831653baf1fbe232938c",
+    "K25.pdf": "387daf85d0ea2a8eec86f40784688c418158f82d9fabef65424c3ff5a4bf36e7",
+    "K25.png": "0c4baf4171000a72aa197975a6f133f2173557b44da604c271791d7ed675ad78",
+    "K25.svg": "ca3db27773267d9d993abbecbec834f6e054a84db8d6114efb2519534b687ddf"
+  },
+  "example_id": "K25",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "同一76对象，A=mean-difference/2、B=mean+difference/2；偏倚与限界为固定示例输入。",
+  "component_ids": [
+    "E24",
+    "E14"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

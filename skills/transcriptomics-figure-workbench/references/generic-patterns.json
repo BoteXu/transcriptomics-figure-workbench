@@ -1,8 +1,22 @@
 {
-  "schema_version": 1,
-  "general_drawing_entries": 48,
+  "schema_version": 2,
+  "general_drawing_entries": 43,
   "native_structure_entry": 1,
   "palette_library_entry": 1,
+  "aliases": {
+    "G04": "G01",
+    "G09": "G18",
+    "G13": "G11",
+    "G24": "G10",
+    "G27": "G26",
+    "G29": "G10",
+    "G34": "G17",
+    "G37": "G50",
+    "G39": "G25",
+    "G42": "G17",
+    "G43": "G15",
+    "G46": "G10"
+  },
   "entries": [
     {
       "id": "G01",
@@ -15,35 +29,144 @@
           "data_required": "对象ID×组别×一个数值",
           "expression": "比较原始数值、组间差异和离散",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。每个独立单位一行"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。每个独立单位一行",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P04",
+            "reason": "同一原始点，可选中心/IQR概括；IQR不能当置信区间。"
+          }
         },
         {
           "id": "P02",
           "data_required": "对象ID×分组×一个非负数值",
           "expression": "比较数值分布及异常范围",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。只展示已有指标，不选择过滤阈值"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。只展示已有指标，不选择过滤阈值",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P02",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "P04",
           "data_required": "对象ID×组别×数值",
           "expression": "同时表达完整观测与中心、离散",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。IQR不是置信区间"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。IQR不是置信区间",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P04",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R17",
           "data_required": "单位 ID、组和值；每组已计算中心值，以及中心值的定义。",
           "expression": "看分布形状、离群范围和组中心；点密集的宽处表示局部观测多。",
           "how_to_draw": "纵坐标保持测量值；横向仅防重叠排点；中心值用深色点加白边。",
-          "limitations": "黑点到底是平均数还是中位数由输入定义；图形宽度不等同置信区间。"
+          "limitations": "黑点到底是平均数还是中位数由输入定义；图形宽度不等同置信区间。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R17",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T36",
           "data_required": "组别×Q1/中位数/Q3/上下须；离群点另表提供",
           "expression": "表达中心与离散概括；不能替代全体观测",
           "how_to_draw": "直接画已有统计量；无离群点输入就不造点。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T36",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
+        },
+        {
+          "id": "P35",
+          "data_required": "组别×箱左界/右界×计数",
+          "expression": "表达已定分箱中的数量分布，不重新分箱",
+          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。上游已定分箱；不重新分箱",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P35",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "P37",
+          "data_required": "组别×共同X网格×密度",
+          "expression": "表达多组密度形状，保留共同显示尺度",
+          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已计算密度；共同显示缩放",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P37",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "T08",
+          "data_required": "组别×已有密度网格，另有五数概括",
+          "expression": "表达分布形状、中心和离散",
+          "how_to_draw": "绘制提供的密度与箱线概括；密度不是置信区间。",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T08",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E10",
+          "data_required": "组别×升序量值×已有累计概率",
+          "expression": "全分布位置、尾部和跨组差异；不依赖分箱",
+          "how_to_draw": "输入阶梯坐标原顺序，累计概率不重新拟合",
+          "limitations": "重复观测和权重须在上游处理；有删失的数据不能冒充普通经验CDF。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E10",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E11",
+          "data_required": "参考分位数与观测分位数的配对坐标；参考分布定义",
+          "expression": "偏移、尺度差异和尾部偏离",
+          "how_to_draw": "复用分布结果入口，散点与等值线；不拟合回归线",
+          "limitations": "图本身不进行正态性检验；坐标已标准化与否需明确。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E11",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E12",
+          "data_required": "组别×共用x网格×已有非负密度，密度定义与带宽",
+          "expression": "多组的位置、宽度及分布形状",
+          "how_to_draw": "复用旧山脊函数，用同一个高度乘数，不单组峰值归一",
+          "limitations": "本例为生成E10/E11样本的解析模型密度，不是样本拟合；不同归一化或带宽不直接比较。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E12",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K24",
+          "data_required": "组别×升序量值×已有累计概率；参考分位数与观测分位数的配对坐标；参考分布定义；组别×共用x网格×已有非负密度，密度定义与带宽",
+          "expression": "全分布位置、尾部和跨组差异；不依赖分箱；偏移、尺度差异和尾部偏离；多组的位置、宽度及分布形状",
+          "how_to_draw": "E10/E11各组相同28个值，QQ参考为标准正态j/29分位数。E12是生成这些合成样本的解析密度，不是样本KDE拟合。",
+          "limitations": "E10/E11各组相同28个值，QQ参考为标准正态j/29分位数。E12是生成这些合成样本的解析密度，不是样本KDE拟合。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K24",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -58,28 +181,48 @@
           "data_required": "对象ID×组别×数值，独立单位说明",
           "expression": "同时表达分布形状、箱线概括和全部原始点",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。默认n>=20且>=5个不同值才显示密度，n>=5才显示箱线"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。默认n>=20且>=5个不同值才显示密度，n>=5才显示箱线",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P05",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "R16",
           "data_required": "每行每面板的效应记录；给定汇总效应、上下界、样本数字标签和 p；给定行顺序。",
           "expression": "同时看汇总方向、区间宽度和原始效应分散程度。",
           "how_to_draw": "交替淡灰行底；散点保留效应值；菱形位于汇总值、横线显示给定区间；给定 p 映射标记。",
-          "limitations": "不合并效应或做元分析；n(k) 的两个数字各是什么必须定义；相关效应不自动成为独立研究。"
+          "limitations": "不合并效应或做元分析；n(k) 的两个数字各是什么必须定义；相关效应不自动成为独立研究。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R16",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "K04",
           "data_required": "同一对象×组别×数值",
           "expression": "比较同一数据的原始观测、中心与完整分布",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。"
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K04",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K05",
           "data_required": "对象×组别×值＋同组别估计及上下界",
           "expression": "对照分布与已经提供的估计范围",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。"
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K05",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -94,43 +237,24 @@
           "data_required": "同一对象ID×条件×数值",
           "expression": "表达同一对象在条件间的变化",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。仅两个条件的完整配对"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。仅两个条件的完整配对",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P03",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "K12",
           "data_required": "完整subject×condition值、同主体delta、已有estimate／bounds定义",
           "expression": "展示个体变化、差值分布与估计范围三个层次",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "All 48 subject IDs retained; example bounds fixed, not inferential CI."
-        }
-      ]
-    },
-    {
-      "id": "G04",
-      "title": "固定分箱、密度与小提琴",
-      "role": "figure",
-      "default_example": "T08",
-      "examples": [
-        {
-          "id": "P35",
-          "data_required": "组别×箱左界/右界×计数",
-          "expression": "表达已定分箱中的数量分布，不重新分箱",
-          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。上游已定分箱；不重新分箱"
-        },
-        {
-          "id": "P37",
-          "data_required": "组别×共同X网格×密度",
-          "expression": "表达多组密度形状，保留共同显示尺度",
-          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已计算密度；共同显示缩放"
-        },
-        {
-          "id": "T08",
-          "data_required": "组别×已有密度网格，另有五数概括",
-          "expression": "表达分布形状、中心和离散",
-          "how_to_draw": "绘制提供的密度与箱线概括；密度不是置信区间。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "All 48 subject IDs retained; example bounds fixed, not inferential CI.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K12",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -145,35 +269,60 @@
           "data_required": "对象ID×已有X/Y坐标×组别",
           "expression": "表达已有几何与分组",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不计算坐标；PCA轴方差需另外说明"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不计算坐标；PCA轴方差需另外说明",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E25",
+            "reason": "相同类别坐标散点，优先外置图例；椭圆/中心连线另保留。"
+          }
         },
         {
           "id": "T07",
           "data_required": "对象×已有二维坐标×组别，另有已计算椭圆参数",
           "expression": "表达组间位置和给定范围；椭圆含义由上游定义",
           "how_to_draw": "散点与给定椭圆共同使用固定坐标。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T07",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T19",
           "data_required": "对象×已有二维坐标×组别",
           "expression": "表达已有几何与亚群分布；坐标距离不自动等于生物距离",
           "how_to_draw": "直接绘制坐标，按固定身份字典着色。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E25",
+            "reason": "相同类别坐标散点，优先外置图例；椭圆/中心连线另保留。"
+          }
         },
         {
           "id": "R18",
           "data_required": "每单位两维坐标、组；给定质心；给定椭圆中心、宽高和角度。",
           "expression": "显示样本到组中心的离散、方向及组间位置。",
           "how_to_draw": "保留坐标；每个点连到指定中心；中心白边强调；椭圆按给定几何参数画。",
-          "limitations": "PCA 解释方差及椭圆含义由上游提供；不把散布椭圆默认叫 95% CI。"
+          "limitations": "PCA 解释方差及椭圆含义由上游提供；不把散布椭圆默认叫 95% CI。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R18",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "R19",
           "data_required": "与 R18 同一张表；附给定的轴解释和分组颜色、符号。",
           "expression": "强调分组重叠、象限位置以及各轴的投影分布。",
           "how_to_draw": "在共享二维坐标上用颜色和形状双重编码；画零线、淡象限及每个原始点的边缘 rug。",
-          "limitations": "R18/R19 示例输入哈希一致；背景象限不会改变数据，也不能产生类别分界结论。"
+          "limitations": "R18/R19 示例输入哈希一致；背景象限不会改变数据，也不能产生类别分界结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R19",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         }
       ]
     },
@@ -181,14 +330,31 @@
       "id": "G06",
       "title": "同一坐标的连续特征分面",
       "role": "figure",
-      "default_example": "P07",
+      "default_example": "E26",
       "examples": [
         {
           "id": "P07",
           "data_required": "对象ID×同一X/Y×特征×非负数值",
           "expression": "在相同几何上比较多个marker或特征值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。完整细胞×feature网格与一致坐标；不插补表达"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。完整细胞×feature网格与一致坐标；不插补表达",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E26",
+            "reason": "同一坐标的连续特征分面，优先共用明确色限的统一主题。"
+          }
+        },
+        {
+          "id": "E26",
+          "data_required": "完整对象×特征表；同对象每个特征坐标完全一致、已有非负特征值",
+          "expression": "每个身份中的已有连续特征位置，与分类/向量图共同查询",
+          "how_to_draw": "复用现有特征分面；共用色标范围，同一课题顺序色阶",
+          "limitations": "不从颜色判断注释真实性；不插补表达，不计算向量或新坐标。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E26",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -196,70 +362,151 @@
       "id": "G07",
       "title": "亚群＋marker＋数量／构成组合",
       "role": "combination",
-      "default_example": "K07",
+      "default_example": "K28",
       "examples": [
         {
           "id": "R03",
           "data_required": "已有二维坐标及所属块；状态顺序表；状态×条件的效应与证据强度；状态×特征的两种数值矩阵。",
           "expression": "把群体位置、条件关联、平均值及标准化得分按共同状态对齐。",
           "how_to_draw": "建立共享行坐标和块间留白；点阵面积编码证据强度、颜色编码效应；两种矩阵各用独立明确色标。",
-          "limitations": "不计算降维、效应或标准化；mean、evidence 和 score 的定义必须上游提供。"
+          "limitations": "不计算降维、效应或标准化；mean、evidence 和 score 的定义必须上游提供。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R03",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R04",
           "data_required": "二维坐标和类别；类别×段的整数计数；给定树线段和叶顺序；类别×特征的表达比例及平均值。",
           "expression": "从整体类别分布看到组成数量，再对齐层次、数量和特征特征。",
           "how_to_draw": "已有坐标统一居中缩放进入圆形视窗；外围按类别画径向堆叠条；下方依给定叶顺序对齐树、柱和点阵。",
-          "limitations": "不重新拟合坐标或聚类；70 类示例应在最终论文尺寸下考虑分图，颜色不独自承担识别。"
+          "limitations": "不重新拟合坐标或聚类；70 类示例应在最终论文尺寸下考虑分图，颜色不独自承担识别。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R04",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "K01",
           "data_required": "同一对象ID的坐标／亚群＋亚群×特征量值矩阵",
           "expression": "同时看亚群位置与marker概括",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。"
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K01",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K02",
           "data_required": "同一对象ID的坐标／亚群＋对象×特征值",
           "expression": "在相同位置同时看分类与多个连续特征",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。"
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K02",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K03",
           "data_required": "坐标／亚群＋特征矩阵＋条件×组成比例与分母",
           "expression": "展示位置、特征与明确条件构成三个层次",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。"
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K03",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K07",
           "data_required": "同一对象ID的坐标、亚群和特征值；冻结的分组概括",
           "expression": "在同一几何和汇总层次比较分类与特征",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。"
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K07",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K08",
           "data_required": "同一对象坐标／亚群＋同亚群特征量值与记录数量",
           "expression": "同时看位置、特征模式与每组支持量",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。"
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K08",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K09",
           "data_required": "对象ID、固定XY、类别、对象×特征值；检测阈值与分母",
           "expression": "分类位置与同一批对象的特征强度、覆盖比例同时展示",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Same unit IDs; detection threshold fixed at 1 only in the synthetic fixture."
+          "limitations": "Same unit IDs; detection threshold fixed at 1 only in the synthetic fixture.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K09",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K11",
           "data_required": "同一对象ID与类别／坐标；明确计数单位与总体分母",
           "expression": "同时看位置、支持量、类别构成；位置重叠不会隐藏数量",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Counts and denominator both derived descriptively from the exact displayed unit IDs."
+          "limitations": "Counts and denominator both derived descriptively from the exact displayed unit IDs.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K11",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "E18",
+          "data_required": "对象ID、已有x/y、vx/vy、身份，以及投影与向量单位定义",
+          "expression": "坐标中已计算局部方向与幅度",
+          "how_to_draw": "直接画已有向量；不重新投影、不平滑、不积分流线",
+          "limitations": "二维方向不能单独证明轨迹、时间顺序或因果；RNA velocity另需其分析输入与模型。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E18",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E25",
+          "data_required": "对象ID×同一x/y×明确身份",
+          "expression": "向量和marker数据对应哪个已有亚群或身份",
+          "how_to_draw": "复用已有分类坐标入口；保持与E18/E26相同对象与坐标",
+          "limitations": "本图不计算PCA/UMAP，也不重新注释亚群。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E25",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K28",
+          "data_required": "对象ID×同一x/y×明确身份；对象ID、已有x/y、vx/vy、身份，以及投影与向量单位定义；完整对象×特征表；同对象每个特征坐标完全一致、已有非负特征值",
+          "expression": "向量和marker数据对应哪个已有亚群或身份；坐标中已计算局部方向与幅度；每个身份中的已有连续特征位置，与分类/向量图共同查询",
+          "how_to_draw": "三panel共享140个对象ID与完全相同x/y；marker值和已投影向量是另外给定的合成输入，不重做降维或velocity分析。",
+          "limitations": "三panel共享140个对象ID与完全相同x/y；marker值和已投影向量是另外给定的合成输入，不重做降维或velocity分析。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K28",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -274,50 +521,48 @@
           "data_required": "对象ID×已有效应×已校正p值",
           "expression": "表达效应方向、大小及证据",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有差异统计；不计算DE/FDR"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有差异统计；不计算DE/FDR",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T24",
+            "reason": "基础火山图复用通用画法；侧标签、堆积边际为独立表达保留。"
+          }
         },
         {
           "id": "P09",
           "data_required": "火山图表＋明确标注对象列表",
           "expression": "表达整体效应和选定对象的位置",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。标签每侧最多6个；不改变原坐标"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。标签每侧最多6个；不改变原坐标",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P09",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "P10",
           "data_required": "火山图表＋固定阈值、分箱和标注列表",
           "expression": "表达效应－证据全景，同时显示同一批点的边缘计数构成",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。R需要patchwork；保留原差异数值"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。R需要patchwork；保留原差异数值",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P10",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "T24",
           "data_required": "对象×效应×已有证据量×分组；固定阈值",
           "expression": "表达方向、幅度与证据强弱",
           "how_to_draw": "保留全部输入点、阈值和明确校正约定。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
-        }
-      ]
-    },
-    {
-      "id": "G09",
-      "title": "评分／富集棒棒糖",
-      "role": "figure",
-      "default_example": "P11b",
-      "examples": [
-        {
-          "id": "P11a",
-          "data_required": "项目×评分×校正p值×计数及量纲",
-          "expression": "表达项目评分、方向、证据及数量",
-          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不运行富集，也不生成GSEA running-score曲线"
-        },
-        {
-          "id": "P11b",
-          "data_required": "项目×评分×校正p值×计数及量纲",
-          "expression": "表达项目评分、方向、证据及数量",
-          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不运行富集，也不生成GSEA running-score曲线"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T24",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -332,105 +577,240 @@
           "data_required": "行×列×数值，色阶语义与顺序",
           "expression": "表达二维模式和数值强弱",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不缩放、补值或聚类"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不缩放、补值或聚类",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T30",
+            "reason": "已有数值矩阵；顺序/发散、范围与单位是明确参数。"
+          }
         },
         {
           "id": "P12b",
           "data_required": "行×列×数值，色阶语义与顺序",
           "expression": "表达二维模式和数值强弱",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不缩放、补值或聚类"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不缩放、补值或聚类",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T30",
+            "reason": "已有数值矩阵；顺序/发散、范围与单位是明确参数。"
+          }
         },
         {
           "id": "P15",
           "data_required": "矩阵＋列分组＋行模块",
           "expression": "表达数值模式与两侧分类注释",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。固定输入顺序；R需要patchwork"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。固定输入顺序；R需要patchwork",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P15",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "P16a",
           "data_required": "完整矩阵＋可选行模块、行计数",
           "expression": "表达矩阵模式及对齐的数量；方块和气泡两种画法",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。此处bubble面积恒定，不编码第二变量"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。此处bubble面积恒定，不编码第二变量",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P16a",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "P16b",
           "data_required": "完整矩阵＋可选行模块、行计数",
           "expression": "表达矩阵模式及对齐的数量；方块和气泡两种画法",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。此处bubble面积恒定，不编码第二变量"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。此处bubble面积恒定，不编码第二变量",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P16a",
+            "reason": "同一矩阵叠加计数，不同外观不增加新的数据语义。"
+          }
         },
         {
           "id": "P17a",
           "data_required": "完整矩阵＋明确别名字典与连续行分块",
           "expression": "表达稠密矩阵并改善阅读，保留顺序与原值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P17b",
+            "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。"
+          }
         },
         {
           "id": "P17b",
           "data_required": "完整矩阵＋明确别名字典与连续行分块",
           "expression": "表达稠密矩阵并改善阅读，保留顺序与原值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P17b",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "P17c",
           "data_required": "完整矩阵＋明确别名字典与连续行分块",
           "expression": "表达稠密矩阵并改善阅读，保留顺序与原值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P17b",
+            "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。"
+          }
         },
         {
           "id": "T03",
           "data_required": "完整行×列×数值；固定顺序和色限",
           "expression": "表达模式、强弱与成块结构",
           "how_to_draw": "数值映射颜色；连续尺度与量纲明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T03",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T16",
           "data_required": "完整行×列×数值；固定顺序和色限",
           "expression": "表达模式、强弱与成块结构",
           "how_to_draw": "数值映射颜色；连续尺度与量纲明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T30",
+            "reason": "已有数值矩阵；顺序/发散、范围与单位是明确参数。"
+          }
         },
         {
           "id": "T30",
           "data_required": "完整行×列×数值；固定顺序和色限",
           "expression": "表达模式、强弱与成块结构",
           "how_to_draw": "数值映射颜色；连续尺度与量纲明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T30",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T34",
           "data_required": "完整行×列×数值，提供两侧树坐标与矩阵索引映射",
           "expression": "表达矩阵模式及已有层次关系",
           "how_to_draw": "按已给叶序对齐树与矩阵；不重新聚类。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T34",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T41",
           "data_required": "完整行×列×数值；固定顺序和色限",
           "expression": "表达模式、强弱与成块结构",
           "how_to_draw": "数值映射颜色；连续尺度与量纲明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T30",
+            "reason": "已有数值矩阵；顺序/发散、范围与单位是明确参数。"
+          }
         },
         {
           "id": "R15",
           "data_required": "完整矩阵、行所属组、冻结行列顺序、每列柱值与线值、各组给定密度。",
           "expression": "显示模块块结构，并同时看列尺度和各组分布。",
           "how_to_draw": "矩阵按给定顺序画格；左侧连续分组色条；顶部柱与线使用明确分别标注的尺度；右侧密度分窗。",
-          "limitations": "不聚类或行标准化；两个顶部量量纲不同时须明确双轴，不能通过缩放营造相关。"
+          "limitations": "不聚类或行标准化；两个顶部量量纲不同时须明确双轴，不能通过缩放营造相关。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R15",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "K10",
           "data_required": "同一行×列矩阵、行身份、列顺序",
           "expression": "色块比较整体模式，曲线比较行的相对轮廓与转折",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Rows/columns and values agree exactly; no new means fitted for aesthetics."
+          "limitations": "Rows/columns and values agree exactly; no new means fitted for aesthetics.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K10",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "P36",
+          "data_required": "真实类别×预测类别×整数计数",
+          "expression": "表达已有分类结果的正确与误分位置",
+          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。行观测列预测；不拟合模型",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P36",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "R22",
+          "data_required": "类别顺序与连续块归属；每个轨道×类别的整数计数；每个矩阵×行×类别的值；各矩阵范围。",
+          "expression": "把同一批类别的数量与多种关联/比例量上下对齐。",
+          "how_to_draw": "所有面板共用 x 位置；上方分别柱轨道；下方分别矩阵和色标；底部按连续类别块加括号。",
+          "limitations": "不按跨物种等领域归类；可以迁移到任意共同类别轴；每种矩阵的量纲和范围保持独立。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R22",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
+        },
+        {
+          "id": "N07",
+          "data_required": "行×对象的完整表、可并存的状态清单、明确None与未知",
+          "expression": "一个格内分层色块看状态共现、哪些对象具有多个事件",
+          "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
+          "limitations": "原创合成演示；状态不是连续量；None须确认为测量后无事件；多事件不能重复计为多人",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N07",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K20",
+          "data_required": "完整对象×特征状态、None／未知、计数去重规则",
+          "expression": "矩阵看共现，数量看支持量；按对象去重避免事件累加",
+          "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
+          "limitations": "Any-event counts use unique objects, never sum overlapping states as separate people.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K20",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "E20",
+          "data_required": "完整对象×变量的已记录状态；Observed/Missing/Not tested明确区分",
+          "expression": "检查缺失聚集和未检验的范围",
+          "how_to_draw": "复用已有状态矩阵入口，以类别状态绘制，不把缺失插补为零",
+          "limitations": "图不判断MCAR/MAR/MNAR；状态定义和对象总体由上游提供。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "N07",
+            "reason": "多状态矩阵的可用性示例，不是新的矩阵算法。"
+          }
         }
       ]
     },
@@ -445,21 +825,60 @@
           "data_required": "特征×组别×比例×平均值或已有量值",
           "expression": "面积表达比例，颜色表达明确量值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。必须提供颜色语义与检出分母"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。必须提供颜色语义与检出分母",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P13",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "T11",
           "data_required": "完整行×列×有符号值",
           "expression": "颜色表达方向，面积表达绝对大小",
           "how_to_draw": "固定零中心色图与面积比例；两种数量编码有独立说明。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T11",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R20",
           "data_required": "两种分面键、特征、时间/窗口坐标、已算关联 r；完整组合网格。",
           "expression": "比较不同条件和窗口的关联方向、大小及一致性。",
           "how_to_draw": "分面使用同一行列顺序；圆面积正比 |r|、颜色编码 r；所有分面共享尺度与面积图例。",
-          "limitations": "这里面积是效应大小，不能误读为比例或显著性；偏相关的控制变量需记录。"
+          "limitations": "这里面积是效应大小，不能误读为比例或显著性；偏相关的控制变量需记录。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R20",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
+        },
+        {
+          "id": "P14",
+          "data_required": "项目×比较×效应/上下界/校正p",
+          "expression": "同时表达效应方向与证据，保留不可估计状态",
+          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。完整可估计网格；不生成统计量",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P14",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
+        },
+        {
+          "id": "E01",
+          "data_required": "完整术语×组别/亚类点阵；term_id、block、status、校正p、GeneRatio及列身份",
+          "expression": "同一术语在各条件是否报告、报告的比例和证据量；显式区分未报告与未检验",
+          "how_to_draw": "共享显著性范围；组形状归一化填充面积；顶部两层身份条，术语与图例各有独立区域",
+          "limitations": "本例G1/CT1的BP/MF/PW术语ID、p与环形图对应，GeneRatio=7/40；其他列另给合成结果。不计算富集或FDR。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E01",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -474,29 +893,24 @@
           "data_required": "项目×维度×关联系数×校正p×样本量×状态",
           "expression": "表达方向、强度、证据与缺测边界",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；输入完整状态网格，不重新计算相关/FDR"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；输入完整状态网格，不重新计算相关/FDR",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P18",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "R05",
           "data_required": "变量顺序及每个无重复变量对的相关系数，范围 [-1,1]。",
           "expression": "上三角直观显示关联方向和强度，下三角提供准确数值。",
           "how_to_draw": "用 sqrt(1+r)、sqrt(1-r) 确定椭圆轴；固定倾角；下三角写 r；色标固定 -1 至 1。",
-          "limitations": "相关不说明因果；沿用参考黄紫色时数字改深色以保证可读性。"
-        }
-      ]
-    },
-    {
-      "id": "G13",
-      "title": "效应与证据矩阵",
-      "role": "figure",
-      "default_example": "P14",
-      "examples": [
-        {
-          "id": "P14",
-          "data_required": "项目×比较×效应/上下界/校正p",
-          "expression": "同时表达效应方向与证据，保留不可估计状态",
-          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。完整可估计网格；不生成统计量"
+          "limitations": "相关不说明因果；沿用参考黄紫色时数字改深色以保证可读性。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R05",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         }
       ]
     },
@@ -511,42 +925,96 @@
           "data_required": "节点 ID 与展示顺序；无自环、无重复无向边的端点与带符号权重。",
           "expression": "显示对象间连接方向符号、强弱以及网络分布。",
           "how_to_draw": "固定节点圆周顺序；贝塞尔曲线连接端点；边色编码符号、线宽编码绝对值；节点大小默认固定。",
-          "limitations": "不推断网络、真实方向或作用机制；密集边可迁移为矩阵或分面。"
+          "limitations": "不推断网络、真实方向或作用机制；密集边可迁移为矩阵或分面。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R06",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "R25",
           "data_required": "节点ID、类型、类别、固定XY、面积；边的端点、符号、权重及关系来源；不同条件共享布局与比例。",
           "expression": "形状区分实体类型，颜色固定类别，线色表达正负，线宽表达给定权重；找跨类型关联和中心连接；并排比较不同输入网络。",
           "how_to_draw": "明确实体形状字典、课题颜色字典、给定节点布局、边符号和权重；各条件独立导出再组合。",
-          "limitations": "仅有截图，原边表和原统计方法不可恢复。当前使用合成网络复现形状／颜色／关系／比较语言；关联不是因果或生化通路。"
+          "limitations": "仅有截图，原边表和原统计方法不可恢复。当前使用合成网络复现形状／颜色／关系／比较语言；关联不是因果或生化通路。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R25",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "N01",
           "data_required": "节点ID、类型、类别、固定XY、面积；边的端点、符号、权重及关系来源",
           "expression": "形状区分实体类型，颜色固定类别，线色表达正负，线宽表达给定权重；找跨类型关联和中心连接",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；关联不画因果箭头；面积若只是排版强调必须注明；位置来自显式输入"
+          "limitations": "原创合成演示；关联不画因果箭头；面积若只是排版强调必须注明；位置来自显式输入",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N01",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "N02",
           "data_required": "集合节点表＋已提供的集合间相似／重叠权重及定义",
           "expression": "看哪些集合成模块、共享关系是否密集",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；重叠／相似不代表通路间反应；不自动计算相似度或筛选弱边"
+          "limitations": "原创合成演示；重叠／相似不代表通路间反应；不自动计算相似度或筛选弱边",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E23",
+            "reason": "同类给定重叠网络，优先可核对成员集合与Jaccard的完整示例。"
+          }
         },
         {
           "id": "N03",
           "data_required": "实体与集合节点表＋明确成员关系；类别／量值另列",
           "expression": "看一个实体属于哪些集合、哪些实体被多个集合共享",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；成员关系不等同调控；未知成员不能当0；高密度优先并排矩阵"
+          "limitations": "原创合成演示；成员关系不等同调控；未知成员不能当0；高密度优先并排矩阵",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N03",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "N12",
           "data_required": "明确parent→child关系、节点类型／值／位置",
           "expression": "看已有层级与父子关系，节点形状／颜色可增加类型信息",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；不是新聚类、祖先重建或调控推断；箭头只表达声明的父子关系"
+          "limitations": "原创合成演示；不是新聚类、祖先重建或调控推断；箭头只表达声明的父子关系",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N12",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
+        },
+        {
+          "id": "M09",
+          "data_required": "明确节点ID/坐标/已有数值和已知拓扑、边证据",
+          "expression": "将数量变化定位到功能图中的位置",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "箭头为已有底图；不把丰度画成通量或补完整机制。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M09",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K36",
+          "data_required": "明确节点ID/坐标/已有数值和已知拓扑、边证据；样本×M+i已给数量；总计数和分母、校正状态",
+          "expression": "将数量变化定位到功能图中的位置；各样本标记组成",
+          "how_to_draw": "底图的数量与M+i组成是不同物理读出，保留各自单位与分母。示例不声明节点对应M+i对象，不从丰度或组成推断通量。",
+          "limitations": "底图的数量与M+i组成是不同物理读出，保留各自单位与分母。示例不声明节点对应M+i对象，不从丰度或组成推断通量。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K36",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -561,28 +1029,120 @@
           "data_required": "完整上三角 r、p；集合 ID 到目标变量的检验 r、p；明确原始或校正 p。",
           "expression": "同时呈现变量内部相关与另一组对象对这些变量的关联。",
           "how_to_draw": "矩阵方块面积编码 |r|、色编码 r；外接线宽编码 |检验 r|、颜色编码给定 p 档；星号只由提供的 p 映射。",
-          "limitations": "Mantel 等检验需要上游的距离矩阵和置换方案；本函数仅显示已有结果。"
+          "limitations": "Mantel 等检验需要上游的距离矩阵和置换方案；本函数仅显示已有结果。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R07",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "K14",
           "data_required": "同一节点清单、带符号权重的边、已知无边／未知规则",
           "expression": "网络看拓扑，矩阵精确定位边；两者可以互相核对",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Known absent fixture edges are zero; real unknown relationships must remain missing."
+          "limitations": "Known absent fixture edges are zero; real unknown relationships must remain missing.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K14",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K15",
           "data_required": "同一完整对象×集合成员表",
           "expression": "同时看共享对象、成员逐项关系与集合交集量",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "All views use the same complete membership table; gene-term membership is not regulatory effect."
+          "limitations": "All views use the same complete membership table; gene-term membership is not regulatory effect.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K15",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         },
         {
           "id": "K16",
           "data_required": "共同集合ID的重叠权重、条件×集合已有分数",
           "expression": "同时看集合之间关系和各条件的响应模式",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Common term IDs; overlap weights and condition scores are separate supplied quantities."
+          "limitations": "Common term IDs; overlap weights and condition scores are separate supplied quantities.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K16",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "N04",
+          "data_required": "source、target、非负weight、明确扇区次序与类别字典",
+          "expression": "带宽看关系量、扇区长度看输入量合计，比较数量在类别间怎样分配",
+          "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
+          "limitations": "原创合成演示；与细线圆形相关网络区分；当前无方向；不能把负值直接当宽度",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N04",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
+        },
+        {
+          "id": "K18",
+          "data_required": "同一source×target非负weight完整表",
+          "expression": "宏观看分配，矩阵读局部数值；同一数量两种视角",
+          "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
+          "limitations": "Same unsigned quantities; widths indicate weight, without causal direction.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K18",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "E08",
+          "data_required": "去重的成员-术语边表，每个成员已有效应与明确显示顺序",
+          "expression": "看哪些术语共享成员，并查出这些成员的效应方向",
+          "how_to_draw": "成员扇区按效应着色，每条关系等宽；扇区与外置名称保持映射",
+          "limitations": "弦宽不表示作用强度，关系不代表因果；最多24成员、8术语，过密改矩阵。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E08",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E09",
+          "data_required": "完整成员×术语的0/1矩阵；方向标签与已计数的覆盖数",
+          "expression": "弦图中相同关系的精确逐格查询和成员覆盖度",
+          "how_to_draw": "复用通用注释矩阵入口；保持同一成员和术语順序；颜色是成员关系状态",
+          "limitations": "零必须是已知不属于该集合；缺失成员关系不能填成零。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P17b",
+            "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。"
+          }
+        },
+        {
+          "id": "E23",
+          "data_required": "已有term集合两两Jaccard边表、固定坐标、身份和显示面积",
+          "expression": "选定条目的成员重叠与冗余，保留所有条目",
+          "how_to_draw": "复用多实体网络入口；无方向边宽读取已有Jaccard",
+          "limitations": "与E08/E09同一BP成员边表，合成集合的Jaccard另通过Biomni实算核对；不提供富集检验，不删冗余term。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E23",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K23",
+          "data_required": "去重的成员-术语边表，每个成员已有效应与明确显示顺序；完整成员×术语的0/1矩阵；方向标签与已计数的覆盖数；已有term集合两两Jaccard边表、固定坐标、身份和显示面积",
+          "expression": "看哪些术语共享成员，并查出这些成员的效应方向；弦图中相同关系的精确逐格查询和成员覆盖度；选定条目的成员重叠与冗余，保留所有条目",
+          "how_to_draw": "42条去重BP成员边逐项对应E09的42个1；E23从同一成员集合计算Jaccard，实算结果另有校验。",
+          "limitations": "42条去重BP成员边逐项对应E09的42个1；E23从同一成员集合计算Jaccard，实算结果另有校验。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K23",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -590,49 +1150,163 @@
       "id": "G16",
       "title": "森林图：区间、分组与数值表",
       "role": "figure",
-      "default_example": "P20a",
+      "default_example": "E21",
       "examples": [
         {
           "id": "P19a",
           "data_required": "项目×效应/上下界，差值或比值尺度",
           "expression": "表达方向、大小和已有不确定性",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。明确效应尺度和区间含义；不拟合模型"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。明确效应尺度和区间含义；不拟合模型",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E21",
+            "reason": "旧森林图退出默认推荐；优先紧凑区间＋数字列，保留原编号回查。"
+          }
         },
         {
           "id": "P19b",
           "data_required": "项目×效应/上下界，差值或比值尺度",
           "expression": "表达方向、大小和已有不确定性",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。明确效应尺度和区间含义；不拟合模型"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。明确效应尺度和区间含义；不拟合模型",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E21",
+            "reason": "旧森林图退出默认推荐；优先紧凑区间＋数字列，保留原编号回查。"
+          }
         },
         {
           "id": "P20a",
           "data_required": "项目×组别×效应/上下界，差值或比值尺度",
           "expression": "表达分组效应，数值与区间可直接读取",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。区间意义由上游提供"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。区间意义由上游提供",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E21",
+            "reason": "旧森林图退出默认推荐；优先紧凑区间＋数字列，保留原编号回查。"
+          }
         },
         {
           "id": "P20b",
           "data_required": "项目×组别×效应/上下界，差值或比值尺度",
           "expression": "表达分组效应，数值与区间可直接读取",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。区间意义由上游提供"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。区间意义由上游提供",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E21",
+            "reason": "旧森林图退出默认推荐；优先紧凑区间＋数字列，保留原编号回查。"
+          }
         },
         {
           "id": "P21a",
           "data_required": "项目×系列×效应/上下界",
           "expression": "表达多个系列方向和幅度的一致或冲突",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；相同比较/单位；不自动合并效应"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；相同比较/单位；不自动合并效应",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P21a",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "P21b",
           "data_required": "项目×系列×效应/上下界",
           "expression": "表达多个系列方向和幅度的一致或冲突",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；相同比较/单位；不自动合并效应"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；相同比较/单位；不自动合并效应",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P21a",
+            "reason": "已有区间的线性/比值尺度选项；零线必须分别为0/1。"
+          }
+        },
+        {
+          "id": "E13",
+          "data_required": "协变量×调整阶段×已有SMD，SMD分母与参考阈值",
+          "expression": "逐协变量诊断调整前后的观测平衡变化",
+          "how_to_draw": "同一协变量横线连已有阶段值；双侧阈值线独立于数据",
+          "limitations": "只诊断已观测变量；不能证明不存在未观测混杂或因果可识别。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E13",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E21",
+          "data_required": "每行标签、身份、已有点估计和上下界；差值/对数比值/比值尺度",
+          "expression": "逐行对比效应方向、大小与区间，精确读出所有数值",
+          "how_to_draw": "统一森林图入口；独立标签、区间和完整数字栏，比值用对数轴",
+          "limitations": "区间定义必须已给；森林图不自动做meta分析或替换统计模型。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E21",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E22",
+          "data_required": "每行标签、身份、已有点估计和上下界；差值/对数比值/比值尺度",
+          "expression": "逐行对比效应方向、大小与区间，精确读出所有数值",
+          "how_to_draw": "统一森林图入口；独立标签、区间和完整数字栏，比值用对数轴",
+          "limitations": "区间定义必须已给；森林图不自动做meta分析或替换统计模型。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "E21",
+            "reason": "紧凑森林通用引擎；比值/差值尺度和研究表是参数。"
+          }
+        },
+        {
+          "id": "E30",
+          "data_required": "研究ID、效应、SE；给定参考值和两条参考边界坐标",
+          "expression": "效应估计与精度分布，核对小样本与不对称结构",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "不做合并估计、Egger或补齐；不对称不等于发表偏倚。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E30",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E30b",
+          "data_required": "同一研究ID、分组、效应及已有区间",
+          "expression": "精度图可回到每一研究的完整估计与区间",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "仅为已有通用森林图的配套输入示例。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "E21",
+            "reason": "紧凑森林通用引擎；比值/差值尺度和研究表是参数。"
+          }
+        },
+        {
+          "id": "K26",
+          "data_required": "协变量×调整阶段×已有SMD，SMD分母与参考阈值；每行标签、身份、已有点估计和上下界；差值/对数比值/比值尺度",
+          "expression": "逐协变量诊断调整前后的观测平衡变化；逐行对比效应方向、大小与区间，精确读出所有数值",
+          "how_to_draw": "同一Before/After阶段身份与色槽；SMD与估计区间都是独立给定的合成输出，未声称运行了匹配、加权或因果模型。",
+          "limitations": "同一Before/After阶段身份与色槽；SMD与估计区间都是独立给定的合成输出，未声称运行了匹配、加权或因果模型。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K26",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "K31",
+          "data_required": "同一研究ID、分组、效应及已有区间；研究ID、效应、SE；给定参考值和两条参考边界坐标",
+          "expression": "精度图可回到每一研究的完整估计与区间；效应估计与精度分布，核对小样本与不对称结构",
+          "how_to_draw": "18研究的ID、分组和效应逐项相等；森林区间与漏斗示意参考为固定输入，未合并研究。",
+          "limitations": "18研究的ID、分组和效应逐项相等；森林区间与漏斗示意参考为固定输入，未合并研究。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K31",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -640,56 +1314,295 @@
       "id": "G17",
       "title": "关系散点与已有拟合、边缘、差值诊断",
       "role": "combination",
-      "default_example": "R13",
+      "default_example": "K30",
       "examples": [
         {
           "id": "P22",
           "data_required": "项目×评分A/B×已计算差值/区间",
           "expression": "同时表达两评分关系和已有差值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。分数范围0到1，delta须与两分数一致"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。分数范围0到1，delta须与两分数一致",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P22",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "P33",
           "data_required": "对象ID×组别×X/Y",
           "expression": "表达两变量关系和离散",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。每个独立单位一行；不拟合回归"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。每个独立单位一行；不拟合回归",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "E24",
+            "reason": "同类单位ID＋XY关系散点，优先外置图例。"
+          }
         },
         {
           "id": "T05",
           "data_required": "对象×X/Y；可加组别、已计算拟合曲线及上下界",
           "expression": "表达两变量关联、离散和已有拟合；不推出因果或一致性",
           "how_to_draw": "原值定位散点，叠加明确提供的曲线和区间。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T05",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T33",
           "data_required": "对象×X/Y；可加组别、已计算拟合曲线及上下界",
           "expression": "表达两变量关联、离散和已有拟合；不推出因果或一致性",
           "how_to_draw": "原值定位散点，叠加明确提供的曲线和区间。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T33",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R08",
           "data_required": "每单位 x、y、组；给定相同边界的边缘计数；二维密度网格及可选统计文字。",
           "expression": "同时看组间位置、重叠范围与两个变量各自的分布。",
           "how_to_draw": "用共享 x/y 范围搭建主窗与边缘窗；点保持原坐标；给定二维网格画等高线；边缘画固定分箱。",
-          "limitations": "图中边缘为 Count；只有值确为概率密度时才标 Density；不自动算 KDE、rho 或 p。"
+          "limitations": "图中边缘为 Count；只有值确为概率密度时才标 Density；不自动算 KDE、rho 或 p。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R08",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R12",
           "data_required": "单位 ID、组、两方法测量；给定边缘密度；给定差值箱线摘要和比较文字。",
           "expression": "看两种测量与 y=x 的偏离，以及各组误差和分布。",
           "how_to_draw": "保留成对点；画 y=x 参照；上下/右侧画给定密度；插图使用已提供的 y-x 五数摘要。",
-          "limitations": "相关强不代表一致；统计结论需另外提供；箱线不能替代正式一致性分析。"
+          "limitations": "相关强不代表一致；统计结论需另外提供；箱线不能替代正式一致性分析。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R12",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R13",
           "data_required": "单位 x/y 与组；拟合 x/y、lower/upper；边缘密度；显示用统计文字。",
           "expression": "比较组间线性趋势与分布差异。",
           "how_to_draw": "原点坐标上叠加给定拟合与范围带；共享边缘坐标；角落放统计框并保留组色边框。",
-          "limitations": "不拟合回归或计算 R²/RMSE/p；带的 CI/PI/SD 含义必须写明。"
+          "limitations": "不拟合回归或计算 R²/RMSE/p；带的 CI/PI/SD 含义必须写明。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R13",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "T20",
+          "data_required": "对象×正X/Y×已有密度值；提供门界线",
+          "expression": "表达密集区与固定门的关系",
+          "how_to_draw": "使用对数坐标、已有密度颜色和明确门界；不计算门控结果。",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T20",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "T21",
+          "data_required": "对象×正X/Y×已有密度值；提供门界线",
+          "expression": "表达密集区与固定门的关系",
+          "how_to_draw": "使用对数坐标、已有密度颜色和明确门界；不计算门控结果。",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T20",
+            "reason": "同一已有对数密度/给定门界；样本与条件更换属于输入。"
+          }
+        },
+        {
+          "id": "T22",
+          "data_required": "对象×正X/Y×已有密度值；提供门界线",
+          "expression": "表达密集区与固定门的关系",
+          "how_to_draw": "使用对数坐标、已有密度颜色和明确门界；不计算门控结果。",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T20",
+            "reason": "同一已有对数密度/给定门界；样本与条件更换属于输入。"
+          }
+        },
+        {
+          "id": "T23",
+          "data_required": "对象×正X/Y×已有密度值；提供门界线",
+          "expression": "表达密集区与固定门的关系",
+          "how_to_draw": "使用对数坐标、已有密度颜色和明确门界；不计算门控结果。",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T20",
+            "reason": "同一已有对数密度/给定门界；样本与条件更换属于输入。"
+          }
+        },
+        {
+          "id": "T15",
+          "data_required": "对象×X/Y×非负大小值×组别",
+          "expression": "表达两坐标与第三值；大小按面积编码",
+          "how_to_draw": "面积比例固定，类别图例和大小图例分别保留。",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T29",
+            "reason": "相同XY＋第三数量面积编码，点数与颜色仅参数。"
+          }
+        },
+        {
+          "id": "T29",
+          "data_required": "对象×X/Y×非负大小值×组别",
+          "expression": "表达两坐标与第三值；大小按面积编码",
+          "how_to_draw": "面积比例固定，类别图例和大小图例分别保留。",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T29",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "T40",
+          "data_required": "对象×X/Y×非负大小值×组别",
+          "expression": "表达两坐标与第三值；大小按面积编码",
+          "how_to_draw": "面积比例固定，类别图例和大小图例分别保留。",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T29",
+            "reason": "相同XY＋第三数量面积编码，点数与颜色仅参数。"
+          }
+        },
+        {
+          "id": "K13",
+          "data_required": "同一对象X、Y、独立size变量、对象单位",
+          "expression": "气泡看附加量值，六边形看重叠区域到底有多少记录",
+          "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
+          "limitations": "Second panel counts objects, not the independent bubble-size variable.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K13",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "E14",
+          "data_required": "同对象配对平均值、差值；已有偏倚、上下相合限界和单位定义",
+          "expression": "量程相关偏差与个体差值分布",
+          "how_to_draw": "保留已有平均和差值坐标，水平线直接读取已审查的偏倚/限界",
+          "limitations": "相关不等于相合；重复测量的限界需匹配其设计，不在绘图时重算。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E14",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E24",
+          "data_required": "每个配对对象的两种已有量值、身份和唯一ID",
+          "expression": "两种测量的取值范围与关系，和差值相合图联合查看",
+          "how_to_draw": "复用通用散点；图例外置；不重新拟合相关或回归",
+          "limitations": "XY关系不能代替相合性，散点不构成独立样本设计。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E24",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "M01",
+          "data_required": "映射后共同特征ID、两层效应及各自q、相同对比方向",
+          "expression": "同向/异向与每层独立的显著证据状态",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "不同层单位要明示；不把共有名单或同向作为因果。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M01",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "M11a",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "四个模式复用同一表；不拟合模型或平滑，不自动删除高影响对象。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M11a",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "M11b",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "四个模式复用同一表；不拟合模型或平滑，不自动删除高影响对象。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M11b",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "M11c",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "四个模式复用同一表；不拟合模型或平滑，不自动删除高影响对象。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M11c",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "M11d",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "四个模式复用同一表；不拟合模型或平滑，不自动删除高影响对象。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M11d",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K25",
+          "data_required": "每个配对对象的两种已有量值、身份和唯一ID；同对象配对平均值、差值；已有偏倚、上下相合限界和单位定义",
+          "expression": "两种测量的取值范围与关系，和差值相合图联合查看；量程相关偏差与个体差值分布",
+          "how_to_draw": "同一76对象，A=mean-difference/2、B=mean+difference/2；偏倚与限界为固定示例输入。",
+          "limitations": "同一76对象，A=mean-difference/2、B=mean+difference/2；偏倚与限界为固定示例输入。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K25",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "K30",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差；对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差；对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差；对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "how_to_draw": "四个panel使用完全相同48对象、拟合值、残差、标准残差、leverage、Cook；QQ排序值与原标准残差相等。没有实际研究拟合或自动筛除。",
+          "limitations": "四个panel使用完全相同48对象、拟合值、残差、标准残差、leverage、Cook；QQ排序值与原标准残差相等。没有实际研究拟合或自动筛除。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K30",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -704,56 +1617,120 @@
           "data_required": "类别×组别×估计/上下界",
           "expression": "表达条件间已有估计及区间",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。原有估计和区间；完整唯一网格"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。原有估计和区间；完整唯一网格",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T32",
+            "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。"
+          }
         },
         {
           "id": "T06",
           "data_required": "类别×组别×估计值/上下界",
           "expression": "表达各条件水平与给定不确定性",
           "how_to_draw": "类别和组别完整对应，柱高与误差线来自输入。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T32",
+            "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。"
+          }
         },
         {
           "id": "T13",
           "data_required": "类别×组别×估计值/上下界",
           "expression": "表达各条件水平与给定不确定性",
           "how_to_draw": "类别和组别完整对应，柱高与误差线来自输入。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T32",
+            "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。"
+          }
         },
         {
           "id": "T25",
           "data_required": "类别×组别×估计值/上下界",
           "expression": "表达各条件水平与给定不确定性",
           "how_to_draw": "类别和组别完整对应，柱高与误差线来自输入。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T32",
+            "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。"
+          }
         },
         {
           "id": "T27",
           "data_required": "类别×组别×估计值/上下界",
           "expression": "表达各条件水平与给定不确定性",
           "how_to_draw": "类别和组别完整对应，柱高与误差线来自输入。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T32",
+            "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。"
+          }
         },
         {
           "id": "T32",
           "data_required": "类别×组别×估计值/上下界",
           "expression": "表达各条件水平与给定不确定性",
           "how_to_draw": "类别和组别完整对应，柱高与误差线来自输入。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T32",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T38",
           "data_required": "类别×组别×估计值/上下界",
           "expression": "表达各条件水平与给定不确定性",
           "how_to_draw": "类别和组别完整对应，柱高与误差线来自输入。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T32",
+            "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。"
+          }
         },
         {
           "id": "T43",
           "data_required": "类别×组别×估计值/上下界",
           "expression": "表达各条件水平与给定不确定性",
           "how_to_draw": "类别和组别完整对应，柱高与误差线来自输入。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T32",
+            "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。"
+          }
+        },
+        {
+          "id": "P11a",
+          "data_required": "项目×评分×校正p值×计数及量纲",
+          "expression": "表达项目评分、方向、证据及数量",
+          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不运行富集，也不生成GSEA running-score曲线",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P11a",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
+        },
+        {
+          "id": "P11b",
+          "data_required": "项目×评分×校正p值×计数及量纲",
+          "expression": "表达项目评分、方向、证据及数量",
+          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不运行富集，也不生成GSEA running-score曲线",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P11b",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         }
       ]
     },
@@ -761,35 +1738,67 @@
       "id": "G19",
       "title": "组成堆叠柱与分面",
       "role": "figure",
-      "default_example": "P24",
+      "default_example": "T10",
       "examples": [
         {
           "id": "P23",
           "data_required": "对象×组成项×非负整数计数",
           "expression": "表达每对象构成；分母来自完整计数",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。捕获组成；零/缺项规则需解释"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。捕获组成；零/缺项规则需解释",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T10",
+            "reason": "组成堆积的通用画法；计数→份额须明确分母与量纲。"
+          }
         },
         {
           "id": "P24",
           "data_required": "对象×组别×组成项×计数，明确单位",
           "expression": "表达每对象比例与组内离散，不混淆对象与组概括",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。保留样本单位和统一比例尺度"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。保留样本单位和统一比例尺度",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P24",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T10",
           "data_required": "类别×组成项×非负比例，每类总和为1",
           "expression": "表达各对象或条件内部构成",
           "how_to_draw": "按固定组成项顺序堆叠；共享分母定义。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T10",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T17",
           "data_required": "类别×组成项×非负比例，每类总和为1",
           "expression": "表达各对象或条件内部构成",
           "how_to_draw": "按固定组成项顺序堆叠；共享分母定义。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T10",
+            "reason": "组成堆积的通用画法；计数→份额须明确分母与量纲。"
+          }
+        },
+        {
+          "id": "M10",
+          "data_required": "样本×M+i已给数量；总计数和分母、校正状态",
+          "expression": "各样本标记组成",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "仅示意通用组成；M+i份额不等于绝对浓度或代谢通量。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T10",
+            "reason": "组成堆积的通用画法；计数→份额须明确分母与量纲。"
+          }
         }
       ]
     },
@@ -804,14 +1813,24 @@
           "data_required": "少量组成项×非负比例，总和为1",
           "expression": "表达一个整体的组成；精确跨组比较优先柱或点",
           "how_to_draw": "固定类别色与比例，保留类别图例及分母。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T12",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T26",
           "data_required": "少量组成项×非负比例，总和为1",
           "expression": "表达一个整体的组成；精确跨组比较优先柱或点",
           "how_to_draw": "固定类别色与比例，保留类别图例及分母。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T12",
+            "reason": "份额环形的同一画法，组数属于参数。"
+          }
         }
       ]
     },
@@ -826,28 +1845,48 @@
           "data_required": "模型×按阈值顺序的X/Y，曲线语义",
           "expression": "表达已有性能曲线，不训练或改阈值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "P26a",
+            "reason": "同一ROC冻结结果，使用细化样式。"
+          }
         },
         {
           "id": "P25b",
           "data_required": "模型×按阈值顺序的X/Y，曲线语义",
           "expression": "表达已有性能曲线，不训练或改阈值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型",
+          "curation": {
+            "decision": "replace_style",
+            "canonical": "P26b",
+            "reason": "同一PR冻结结果，保持与ROC不同的基线和量纲。"
+          }
         },
         {
           "id": "P26a",
           "data_required": "模型×已有X/Y＋已有AUC/AP标签",
           "expression": "表达多个模型性能曲线及给定指标",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。PR需提供阳性比例；不重算AUC/AP"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。PR需提供阳性比例；不重算AUC/AP",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P26a",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "P26b",
           "data_required": "模型×已有X/Y＋已有AUC/AP标签",
           "expression": "表达多个模型性能曲线及给定指标",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。PR需提供阳性比例；不重算AUC/AP"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。PR需提供阳性比例；不重算AUC/AP",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P26b",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -862,14 +1901,24 @@
           "data_required": "模型×按阈值顺序的X/Y，曲线语义",
           "expression": "表达已有性能曲线，不训练或改阈值",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P25c",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "P27",
           "data_required": "模型×分箱边界×预测/观测值/区间×计数",
           "expression": "同时表达校准形状、已有不确定性与各箱支持量",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；已有互斥分箱，不重新拟合校准"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；已有互斥分箱，不重新拟合校准",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P27",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         }
       ]
     },
@@ -884,29 +1933,24 @@
           "data_required": "单位 ID、特征、已计算贡献值，以及用于着色的特征值（本适配器要求已声明为 [0,1] 展示尺度）。",
           "expression": "看每个特征的正负贡献、贡献分布与高低特征值的关系。",
           "how_to_draw": "固定特征顺序；横坐标使用原贡献；纵向仅做确定性防重叠排布；颜色编码特征值。",
-          "limitations": "不会算 SHAP/GeoShapley；名称中包含交互项并不能代替真正的交互贡献。"
+          "limitations": "不会算 SHAP/GeoShapley；名称中包含交互项并不能代替真正的交互贡献。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R10",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R11",
           "data_required": "各类单位×特征贡献和特征值；各类特征非负份额且每类合计 1；各类特征顺序。",
           "expression": "比较各类别的贡献分布和已定义的整体贡献份额。",
           "how_to_draw": "每类一个蜂群；等角玫瑰的扇形面积与份额成比例；每类一条环，环上角度编码份额。",
-          "limitations": "有符号单位贡献与绝对贡献份额是两种量，份额计算定义必须提供；示例小字需按最终版面放大或拆图。"
-        }
-      ]
-    },
-    {
-      "id": "G24",
-      "title": "已有分类计数混淆矩阵",
-      "role": "figure",
-      "default_example": "P36",
-      "examples": [
-        {
-          "id": "P36",
-          "data_required": "真实类别×预测类别×整数计数",
-          "expression": "表达已有分类结果的正确与误分位置",
-          "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。行观测列预测；不拟合模型"
+          "limitations": "有符号单位贡献与绝对贡献份额是两种量，份额计算定义必须提供；示例小字需按最终版面放大或拆图。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R11",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -921,56 +1965,144 @@
           "data_required": "系列×时间×值/上下界",
           "expression": "表达记录的变化和已提供的范围",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不运行模拟、平滑或生成区间"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不运行模拟、平滑或生成区间",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T31",
+            "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。"
+          }
         },
         {
           "id": "T09",
           "data_required": "系列×有序X×Y/上下界",
           "expression": "表达随时间、剂量或位置变化及给定不确定性",
           "how_to_draw": "按X排序连线，上下界构成带，区间定义由输入明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T31",
+            "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。"
+          }
         },
         {
           "id": "T14",
           "data_required": "系列×有序X×Y/上下界",
           "expression": "表达随时间、剂量或位置变化及给定不确定性",
           "how_to_draw": "按X排序连线，上下界构成带，区间定义由输入明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T31",
+            "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。"
+          }
         },
         {
           "id": "T18",
           "data_required": "系列×有序X×Y/上下界",
           "expression": "表达随时间、剂量或位置变化及给定不确定性",
           "how_to_draw": "按X排序连线，上下界构成带，区间定义由输入明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T31",
+            "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。"
+          }
         },
         {
           "id": "T28",
           "data_required": "系列×有序X×Y/上下界",
           "expression": "表达随时间、剂量或位置变化及给定不确定性",
           "how_to_draw": "按X排序连线，上下界构成带，区间定义由输入明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T31",
+            "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。"
+          }
         },
         {
           "id": "T31",
           "data_required": "系列×有序X×Y/上下界",
           "expression": "表达随时间、剂量或位置变化及给定不确定性",
           "how_to_draw": "按X排序连线，上下界构成带，区间定义由输入明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T31",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T35",
           "data_required": "系列×有序坐标×强度，可有明确记录的偏移",
           "expression": "表达曲线形状、峰位和系列差异",
           "how_to_draw": "读取记录值；已有偏移需披露，不随意平滑或改变峰。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T35",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "T39",
           "data_required": "系列×有序X×Y/上下界",
           "expression": "表达随时间、剂量或位置变化及给定不确定性",
           "how_to_draw": "按X排序连线，上下界构成带，区间定义由输入明确。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T31",
+            "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。"
+          }
+        },
+        {
+          "id": "K06",
+          "data_required": "共同组别×条件估计／上下界＋有序X／Y／上下界",
+          "expression": "互补展示各条件水平和有序变化",
+          "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K06",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "E32",
+          "data_required": "组×有序X×区间覆盖率；已有中心和相互嵌套上下界",
+          "expression": "中央轨迹与不同覆盖范围",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "区分CI/预测区间/可信区间；不估计或预测。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E32",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "M07",
+          "data_required": "曲线ID、有序保留时间及强度/明确已给区间",
+          "expression": "峰形、保留时间和不同条件的曲线位置",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "复用有序曲线；不提峰、积分、对齐或平滑。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "T31",
+            "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。"
+          }
+        },
+        {
+          "id": "K35",
+          "data_required": "曲线ID、有序保留时间及强度/明确已给区间；谱图ID、峰ID、m/z、非负强度、归一化/仪器/匹配说明",
+          "expression": "峰形、保留时间和不同条件的曲线位置；实测与参考碎片的位置和强度分布",
+          "how_to_draw": "两图展示互补测量通道的输入结构。此示例分别提供软件曲线与峰表，未声称来自同一已鉴定化合物；实际项目须绑定样本/前体/RT/仪器/归一化记录。",
+          "limitations": "两图展示互补测量通道的输入结构。此示例分别提供软件曲线与峰表，未声称来自同一已鉴定化合物；实际项目须绑定样本/前体/RT/仪器/归一化记录。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K35",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -978,29 +2110,79 @@
       "id": "G26",
       "title": "共用位置轴的区间信号轨道",
       "role": "figure",
-      "default_example": "P28",
+      "default_example": "K29",
       "examples": [
         {
           "id": "P28",
           "data_required": "轨道×起止位置×已有数值，参考版本",
           "expression": "表达同一位置轴上的多种记录信号",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不直接解析BAM/bigWig/GTF"
-        }
-      ]
-    },
-    {
-      "id": "G27",
-      "title": "残基置信度轨道",
-      "role": "figure",
-      "default_example": "P30",
-      "examples": [
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不直接解析BAM/bigWig/GTF",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P28",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
         {
           "id": "P30",
           "data_required": "残基号×pLDDT，结构版本与链",
           "expression": "表达局部预测置信度和缺口，不表达亲和力",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不画PAE或3D结构，pLDDT不是亲和力"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不画PAE或3D结构，pLDDT不是亲和力",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P30",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E28",
+          "data_required": "变异ID、染色体、位置、已有p；明确版本、段长度及阈值",
+          "expression": "全基因组已有信号位置与局部聚集",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "不做GWAS、LD计算、clumping或自动挑选lead。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E28",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E29",
+          "data_required": "同一位置体系中的关联、已有LD、重组率与基因跨度/方向",
+          "expression": "局部信号与多条轨道对应；未知LD单独标识",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "不把邻近基因当作用靶点，不推断共定位、外显子或调控。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E29",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "M08",
+          "data_required": "已分箱不重叠信号、共同版本/坐标/单位、已有连接端点和分数",
+          "expression": "峰信号和候选跨位点连接",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "同图不同测量若单位不一致应分轴；不把弧线当调控因果。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M08",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K29",
+          "data_required": "变异ID、染色体、位置、已有p；明确版本、段长度及阈值；同一位置体系中的关联、已有LD、重组率与基因跨度/方向",
+          "expression": "全基因组已有信号位置与局部聚集；局部信号与多条轨道对应；未知LD单独标识",
+          "how_to_draw": "E29关联表是E28的第2段220000–480000子集；ID、位置与p逐行对应。LD、重组率与基因跨度是单独明确给定的合成轨道。",
+          "limitations": "E29关联表是E28的第2段220000–480000子集；ID、位置与p逐行对应。LD、重组率与基因跨度是单独明确给定的合成轨道。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K29",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -1015,43 +2197,48 @@
           "data_required": "分类×记录计数×明确共同分母，缺失状态",
           "expression": "表达对齐计数证据；并排、数值表、上下分面均保留",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P31a",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "P31b",
           "data_required": "分类×记录计数×明确共同分母，缺失状态",
           "expression": "表达对齐计数证据；并排、数值表、上下分面均保留",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P31a",
+            "reason": "对齐计数与证据矩阵的颜色、外观与转置变体。"
+          }
         },
         {
           "id": "P31c",
           "data_required": "分类×记录计数×明确共同分母，缺失状态",
           "expression": "表达对齐计数证据；并排、数值表、上下分面均保留",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P31a",
+            "reason": "对齐计数与证据矩阵的颜色、外观与转置变体。"
+          }
         },
         {
           "id": "P32",
           "data_required": "分类×全部数量×已记录数量×额外来源计数",
           "expression": "表达支持量与缺失，不将记录数当效应",
           "how_to_draw": "读取已提供的量值、坐标或统计量，用该入口的明确参数绘制；保留原画法变体和可独立调整的组合结构。",
-          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；报告不是患者，可重叠分组不能直接相加"
-        }
-      ]
-    },
-    {
-      "id": "G29",
-      "title": "共用类别轴的柱轨道＋多行矩阵",
-      "role": "combination",
-      "default_example": "R22",
-      "examples": [
-        {
-          "id": "R22",
-          "data_required": "类别顺序与连续块归属；每个轨道×类别的整数计数；每个矩阵×行×类别的值；各矩阵范围。",
-          "expression": "把同一批类别的数量与多种关联/比例量上下对齐。",
-          "how_to_draw": "所有面板共用 x 位置；上方分别柱轨道；下方分别矩阵和色标；底部按连续类别块加括号。",
-          "limitations": "不按跨物种等领域归类；可以迁移到任意共同类别轴；每种矩阵的量纲和范围保持独立。"
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；报告不是患者，可重叠分组不能直接相加",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "P32",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         }
       ]
     },
@@ -1066,14 +2253,24 @@
           "data_required": "每个类别、系列一行：主数值和非负第二数值；给定类别顺序、系列顺序及量纲。",
           "expression": "一个圆内同时比较多系列主值轮廓和第二数值的规模。",
           "how_to_draw": "把类别映射为角度、主值映射为半径；在各系列固定环上画面积与第二值成比例的气泡；中心留空放指标名。",
-          "limitations": "无序类别默认不连成连续曲线；示例平滑仅为有界显示连接，不生成新观测。"
+          "limitations": "无序类别默认不连成连续曲线；示例平滑仅为有界显示连接，不生成新观测。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R01",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R02",
           "data_required": "与 R01 完全相同；可直接替换 palette，不改表。",
           "expression": "同一种数据的另一种视觉气质，可强调一个系列。",
           "how_to_draw": "复用 R01 的半径和面积映射，只替换系列色和填充层次。",
-          "limitations": "R01/R02 示例输入哈希一致；柔和颜色不适合作为白底细小文字。"
+          "limitations": "R01/R02 示例输入哈希一致；柔和颜色不适合作为白底细小文字。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "R01",
+            "reason": "相同环形轮廓和气泡双量，仅色卡改变。"
+          }
         }
       ]
     },
@@ -1088,7 +2285,12 @@
           "data_required": "试次 ID、维度名、各维数值、每试次固定评价值；各轴真实上下限。",
           "expression": "同时看多参数组合如何对应评价表现。",
           "how_to_draw": "分别按声明量纲归一化每条轴的展示位置；试次跨轴连接为贝塞尔线；颜色编码评价。",
-          "limitations": "平滑线只是连接；评价来自上游，绘图不执行调参，也不决定测试集选优。"
+          "limitations": "平滑线只是连接；评价来自上游，绘图不执行调参，也不决定测试集选优。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R09",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -1103,7 +2305,12 @@
           "data_required": "训练/验证等系列的阶段值与上下界；运行×阶段矩阵；正值梯度及界限；已选阶段。",
           "expression": "看收敛过程、运行间波动和梯度尺度。",
           "how_to_draw": "损失共享轴和范围带；右上矩阵按运行与阶段对齐；右下正值采用对数轴；标出外部提供的选定阶段。",
-          "limitations": "不训练、不自动早停；区间必须解释是重复运行范围还是统计不确定性。"
+          "limitations": "不训练、不自动早停；区间必须解释是重复运行范围还是统计不确定性。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R14",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -1118,57 +2325,84 @@
           "data_required": "经度×纬度×数值网格，另有海岸轮廓",
           "expression": "表达地理分布与区域差异",
           "how_to_draw": "明确投影、网格值和色限；不从截图推数值。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T01",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T02",
           "data_required": "区域经纬度网格×数值，另有地理轮廓",
           "expression": "表达指定区域已有数值场",
           "how_to_draw": "固定区域边界与投影／坐标语义。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T02",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "T04",
           "data_required": "路径ID×有序经纬度点×边值，另有地理轮廓",
           "expression": "表达记录的连接路径与边属性",
           "how_to_draw": "连已有路径；路径不自动代表推断迁移或因果。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
-        }
-      ]
-    },
-    {
-      "id": "G34",
-      "title": "对数密度坐标与给定门界",
-      "role": "figure",
-      "default_example": "T20",
-      "examples": [
-        {
-          "id": "T20",
-          "data_required": "对象×正X/Y×已有密度值；提供门界线",
-          "expression": "表达密集区与固定门的关系",
-          "how_to_draw": "使用对数坐标、已有密度颜色和明确门界；不计算门控结果。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T04",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
-          "id": "T21",
-          "data_required": "对象×正X/Y×已有密度值；提供门界线",
-          "expression": "表达密集区与固定门的关系",
-          "how_to_draw": "使用对数坐标、已有密度颜色和明确门界；不计算门控结果。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "id": "E19",
+          "data_required": "完整行×列单元；两种连续量及各自明确分箱边界",
+          "expression": "识别两个指标同时高、低或不一致的位置",
+          "how_to_draw": "两维分箱映射课题角色色的明确混合色键；同格保留两个原值",
+          "limitations": "混合色是另行说明的扩展，不是原色卡；不能代替精确数值或显著性。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E19",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
-          "id": "T22",
-          "data_required": "对象×正X/Y×已有密度值；提供门界线",
-          "expression": "表达密集区与固定门的关系",
-          "how_to_draw": "使用对数坐标、已有密度颜色和明确门界；不计算门控结果。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "id": "E33a",
+          "data_required": "RGB像素、同一配准体系的对象中心与物理半径、像素尺度、类别/特征",
+          "expression": "同一物理位置的身份与测量",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "此背景不是H&E；不做配准、分割或反卷积。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E33a",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
-          "id": "T23",
-          "data_required": "对象×正X/Y×已有密度值；提供门界线",
-          "expression": "表达密集区与固定门的关系",
-          "how_to_draw": "使用对数坐标、已有密度颜色和明确门界；不计算门控结果。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "id": "E33b",
+          "data_required": "RGB像素、同一配准体系的对象中心与物理半径、像素尺度、类别/特征",
+          "expression": "同一物理位置的身份与测量",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "此背景不是H&E；不做配准、分割或反卷积。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E33b",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K32",
+          "data_required": "RGB像素、同一配准体系的对象中心与物理半径、像素尺度、类别/特征；RGB像素、同一配准体系的对象中心与物理半径、像素尺度、类别/特征",
+          "expression": "同一物理位置的身份与测量",
+          "how_to_draw": "完整RGB像素、56对象ID、中心、物理半径和尺度完全相同；两种图只切换类别与已有特征值。背景为程序生成中性图，非H&E。",
+          "limitations": "完整RGB像素、56对象ID、中心、物理半径和尺度完全相同；两种图只切换类别与已有特征值。背景为程序生成中性图，非H&E。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K32",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -1183,7 +2417,12 @@
           "data_required": "组别×固定有序指标×可比较尺度的数值",
           "expression": "表达指标画像；面积不是可靠总分",
           "how_to_draw": "角度固定对应指标，半径范围与归一化明示。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T37",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -1198,22 +2437,12 @@
           "data_required": "特征 ID、比较、面板、效应、padj、已固定的水平展示抖动。",
           "expression": "在多个比较中同时显示正负变化及符合声明条件的特征数。",
           "how_to_draw": "每个比较一列；竖坐标效应、固定抖动分散；按明确 padj/效应门槛给 eligible 点着色；底带为比较色。",
-          "limitations": "全输入保留在 TSV；显示计数是符合条件的特征记录数，不是受试者数；不重算差异或 FDR。"
-        }
-      ]
-    },
-    {
-      "id": "G37",
-      "title": "连续数值曲面",
-      "role": "figure",
-      "default_example": "R23",
-      "examples": [
-        {
-          "id": "R23",
-          "data_required": "完整、无重复的 (x,y,z) 网格；x/y 真正量纲、z 数值定义及范围。",
-          "expression": "显示两个维度变化下的数值地形、峰谷与梯度。",
-          "how_to_draw": "按冻结网格构造 surface，颜色映射 z；不插值、重采样；声明相机俯仰和方位；添加独立色标。",
-          "limitations": "3D 可能遮挡数值，精确比较可配二维热图；原截图未提供原始网格。"
+          "limitations": "全输入保留在 TSV；显示计数是符合条件的特征记录数，不是受试者数；不重算差异或 FDR。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R21",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         }
       ]
     },
@@ -1228,87 +2457,24 @@
           "data_required": "对象×位置/半径/类别，另有箭头或关系",
           "expression": "表达构成和流程；几何为示意时明确标注",
           "how_to_draw": "用可编辑形状绘制，不把示意球当真实原子结构。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。 T42保留对象、支持层和方向箭头；当前不含参考的材质高光和局部过程小窗，不是原子结构。"
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。 T42保留对象、支持层和方向箭头；当前不含参考的材质高光和局部过程小窗，不是原子结构。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "T42",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "R24",
           "data_required": "流程节点和有类型连线；对象轮廓或真实结构渲染；给定候选矩阵；三份二维数值网格和峰标记；两组阶段计数。",
           "expression": "把方法逻辑、对象外观、评价地形及阶段数量放在同一页。",
           "how_to_draw": "流程层以节点/线型表达不同输入；矩阵横向对齐；地形按已有网格画；对象图保持独立相机；阶段柱用同一颜色字典。",
-          "limitations": "R24 的轮廓仅是示意，没有原始 PDB/mmCIF；真实蛋白必须走结构可视化入口，不用随机轮廓冒充结构。"
-        }
-      ]
-    },
-    {
-      "id": "G39",
-      "title": "分组条件估计＋有序响应组合",
-      "role": "combination",
-      "default_example": "K06",
-      "examples": [
-        {
-          "id": "K06",
-          "data_required": "共同组别×条件估计／上下界＋有序X／Y／上下界",
-          "expression": "互补展示各条件水平和有序变化",
-          "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。"
-        }
-      ]
-    },
-    {
-      "id": "G42",
-      "title": "通用三变量气泡散点与支持量",
-      "role": "combination",
-      "default_example": "T29",
-      "examples": [
-        {
-          "id": "T15",
-          "data_required": "对象×X/Y×非负大小值×组别",
-          "expression": "表达两坐标与第三值；大小按面积编码",
-          "how_to_draw": "面积比例固定，类别图例和大小图例分别保留。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
-        },
-        {
-          "id": "T29",
-          "data_required": "对象×X/Y×非负大小值×组别",
-          "expression": "表达两坐标与第三值；大小按面积编码",
-          "how_to_draw": "面积比例固定，类别图例和大小图例分别保留。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
-        },
-        {
-          "id": "T40",
-          "data_required": "对象×X/Y×非负大小值×组别",
-          "expression": "表达两坐标与第三值；大小按面积编码",
-          "how_to_draw": "面积比例固定，类别图例和大小图例分别保留。",
-          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。"
-        },
-        {
-          "id": "K13",
-          "data_required": "同一对象X、Y、独立size变量、对象单位",
-          "expression": "气泡看附加量值，六边形看重叠区域到底有多少记录",
-          "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Second panel counts objects, not the independent bubble-size variable."
-        }
-      ]
-    },
-    {
-      "id": "G43",
-      "title": "数量带宽弦图与矩阵对照",
-      "role": "combination",
-      "default_example": "N04",
-      "examples": [
-        {
-          "id": "N04",
-          "data_required": "source、target、非负weight、明确扇区次序与类别字典",
-          "expression": "带宽看关系量、扇区长度看输入量合计，比较数量在类别间怎样分配",
-          "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；与细线圆形相关网络区分；当前无方向；不能把负值直接当宽度"
-        },
-        {
-          "id": "K18",
-          "data_required": "同一source×target非负weight完整表",
-          "expression": "宏观看分配，矩阵读局部数值；同一数量两种视角",
-          "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Same unsigned quantities; widths indicate weight, without causal direction."
+          "limitations": "R24 的轮廓仅是示意，没有原始 PDB/mmCIF；真实蛋白必须走结构可视化入口，不用随机轮廓冒充结构。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R24",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -1323,14 +2489,24 @@
           "data_required": "路径ID、各阶段的类别、同一路径weight和阶段次序",
           "expression": "带的高度表达数量，追踪输入已经记录的跨阶段类别路径",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；边缘比例无法恢复个体迁移；不是从横断面推断轨迹；路径数量每阶段守恒"
+          "limitations": "原创合成演示；边缘比例无法恢复个体迁移；不是从横断面推断轨迹；路径数量每阶段守恒",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N05",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         },
         {
           "id": "K17",
           "data_required": "同一已记录路径ID、各阶段类别与固定路径量",
           "expression": "流带看对应路径，堆叠看各阶段总体构成；分母一致",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "The same path quantities are conserved; marginal compositions alone do not identify transitions."
+          "limitations": "The same path quantities are conserved; marginal compositions alone do not identify transitions.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K17",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -1345,29 +2521,24 @@
           "data_required": "对象ID×集合的完整0/1成员表、对象单位",
           "expression": "顶柱为互斥交集数量，点阵为参与集合，侧柱为各集合总量",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；完整成员表才能表示0；全0对象保留；互斥交集与包容性交集定义需明确"
-        }
-      ]
-    },
-    {
-      "id": "G46",
-      "title": "多状态事件矩阵与去重数量",
-      "role": "combination",
-      "default_example": "N07",
-      "examples": [
-        {
-          "id": "N07",
-          "data_required": "行×对象的完整表、可并存的状态清单、明确None与未知",
-          "expression": "一个格内分层色块看状态共现、哪些对象具有多个事件",
-          "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；状态不是连续量；None须确认为测量后无事件；多事件不能重复计为多人"
+          "limitations": "原创合成演示；完整成员表才能表示0；全0对象保留；互斥交集与包容性交集定义需明确",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N06",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
-          "id": "K20",
-          "data_required": "完整对象×特征状态、None／未知、计数去重规则",
-          "expression": "矩阵看共现，数量看支持量；按对象去重避免事件累加",
-          "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Any-event counts use unique objects, never sum overlapping states as separate people."
+          "id": "E07",
+          "data_required": "完整对象ID×两个集合的0/1成员关系；并集中的对象一行一次",
+          "expression": "读出两个集合的独有项和共同项数量",
+          "how_to_draw": "用成员表精确计数，百分比分母为并集；等面积示意圆不编码集合大小",
+          "limitations": "面积不是比例；三个以上集合用现有UpSet；全零对象应另声明背景总体。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E07",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -1382,14 +2553,24 @@
           "data_required": "相同排名索引的运行分数、命中位置、排序量、集合ID",
           "expression": "同时看已有曲线起伏、命中集中在哪段，以及对应排名量值",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；只画已算结果；不计算富集、NES或显著性；排名位置不是基因编号"
+          "limitations": "原创合成演示；只画已算结果；不计算富集、NES或显著性；排名位置不是基因编号",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N08",
+            "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。"
+          }
         },
         {
           "id": "K19",
           "data_required": "相同排名索引的已有曲线／命中／排序量、明确窗口",
           "expression": "全景看已有信号，局部窗口看命中结构；窗口范围明示",
           "how_to_draw": "先独立画各 panel；核对身份、量纲、分母和主题，再按显式网格组合。每个来源表与图例单独保留。",
-          "limitations": "Second panel displays ranks 1-60 only; full 300-rank curve and inputs preserved."
+          "limitations": "Second panel displays ranks 1-60 only; full 300-rank curve and inputs preserved.",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K19",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
         }
       ]
     },
@@ -1404,7 +2585,12 @@
           "data_required": "类别／实体ID×阶段的已提供rank，阶段顺序",
           "expression": "看同一实体在阶段间排名怎样上升、下降、交叉",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；不重新排名；保留并列；反向纵轴明确1最高；排名不能表达原量值差"
+          "limitations": "原创合成演示；不重新排名；保留并列；反向纵轴明确1最高；排名不能表达原量值差",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N09",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -1419,7 +2605,12 @@
           "data_required": "对象ID、X、Y、对象单位、给定分箱粒度",
           "expression": "减少密集点重叠，同时用颜色看每个空间格内的记录量",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；描述性显示分箱，非独立性证据；计数不是其他变量均值或概率密度"
+          "limitations": "原创合成演示；描述性显示分箱，非独立性证据；计数不是其他变量均值或概率密度",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N10",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -1434,7 +2625,24 @@
           "data_required": "完整X×Y数值网格、量值单位、色限、中心与等值层",
           "expression": "同时看连续量的空间分布、梯度方向与相同量值区域",
           "how_to_draw": "使用明确冻结的节点／边、成员、路径、排名或网格表；视觉计算只涉及声明的排版与描述性计数，不重新做科学分析。",
-          "limitations": "原创合成演示；不拟合响应面；已知网格缺口不填0；只有比较同量纲场才共用色限"
+          "limitations": "原创合成演示；不拟合响应面；已知网格缺口不填0；只有比较同量纲场才共用色限",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "N11",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "R23",
+          "data_required": "完整、无重复的 (x,y,z) 网格；x/y 真正量纲、z 数值定义及范围。",
+          "expression": "显示两个维度变化下的数值地形、峰谷与梯度。",
+          "how_to_draw": "按冻结网格构造 surface，颜色映射 z；不插值、重采样；声明相机俯仰和方位；添加独立色标。",
+          "limitations": "3D 可能遮挡数值，精确比较可配二维热图；原截图未提供原始网格。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "R23",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     },
@@ -1449,21 +2657,36 @@
           "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
           "expression": "整体折叠及二级结构走向",
           "how_to_draw": "使用已安装结构查看器的 typed layers，保存选择、相机与真实导出 sidecar。",
-          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。"
+          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "S01",
+            "reason": "实际公共原子坐标；丝带、表面和局部原子保留不同表示。"
+          }
         },
         {
           "id": "S02",
           "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
           "expression": "外形、凹凸与轮廓",
           "how_to_draw": "使用已安装结构查看器的 typed layers，保存选择、相机与真实导出 sidecar。",
-          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。"
+          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "S02",
+            "reason": "实际公共原子坐标；丝带、表面和局部原子保留不同表示。"
+          }
         },
         {
           "id": "S03",
           "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
           "expression": "指定残基范围的原子细节",
           "how_to_draw": "使用已安装结构查看器的 typed layers，保存选择、相机与真实导出 sidecar。",
-          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。"
+          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "S03",
+            "reason": "实际公共原子坐标；丝带、表面和局部原子保留不同表示。"
+          }
         }
       ]
     },
@@ -1478,105 +2701,512 @@
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C01",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C02",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C02",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C03",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C03",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C04",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C04",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C05",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C05",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C06",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C06",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C07",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C07",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C08",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "作者为灰度区分优化的三色方案；实际图仍需按最终尺寸检查。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "作者为灰度区分优化的三色方案；实际图仍需按最终尺寸检查。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C08",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C09",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "黄色和浅青色在白底细线中需加粗；类别同时用形状或标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "黄色和浅青色在白底细线中需加粗；类别同时用形状或标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C09",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C10",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "九色容量不等于九条细线都清晰；多系列优先分面。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "九色容量不等于九条细线都清晰；多系列优先分面。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C10",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C11",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "红与洋红等相近组仍加形状或线型；灰色组保持明确标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "红与洋红等相近组仍加形状或线型；灰色组保持明确标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C11",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C12",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "八色完整集合不默认声称通过色觉缺陷测试。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "八色完整集合不默认声称通过色觉缺陷测试。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C12",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C13",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "八色集合可有难分辨色对；细图要加符号、线型和标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "八色集合可有难分辨色对；细图要加符号、线型和标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C13",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C14",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "颜色顺序为低到高；不能拿不同深浅隐含无序组别等级。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "颜色顺序为低到高；不能拿不同深浅隐含无序组别等级。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C14",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
         },
         {
           "id": "C15",
           "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
           "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
           "how_to_draw": "读取准确 Hex 与来源记录；课题选一次主卡，固定身份字典，连续角色与色限另行明确。",
-          "limitations": "原顺序为红→白→蓝；示例负值红、正值蓝。反转必须显式记录。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。"
+          "limitations": "原顺序为红→白→蓝；示例负值红、正值蓝。反转必须显式记录。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "C15",
+            "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G51",
+      "title": "术语效应环形轨道与独立对照表",
+      "role": "figure",
+      "default_example": "E02",
+      "examples": [
+        {
+          "id": "E02",
+          "data_required": "术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值",
+          "expression": "内圈显著性高度与方向色；外圈每个成员的效应分布",
+          "how_to_draw": "内圈高度=-log10校正p，颜色=已给方向分数；外圈径向坐标=效应，角度仅用于排布",
+          "limitations": "方向分数不是默认统计检验；零p不接受，不补生成员或推断leading-edge。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E02",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E03",
+          "data_required": "术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值",
+          "expression": "内圈显著性高度与方向色；外圈每个成员的效应分布",
+          "how_to_draw": "内圈高度=-log10校正p，颜色=已给方向分数；外圈径向坐标=效应，角度仅用于排布",
+          "limitations": "方向分数不是默认统计检验；零p不接受，不补生成员或推断leading-edge。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "E02",
+            "reason": "相同术语环形轨道；BP/MF/CC/通路属于集合标签和输入差异。"
+          }
+        },
+        {
+          "id": "E04",
+          "data_required": "术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值",
+          "expression": "内圈显著性高度与方向色；外圈每个成员的效应分布",
+          "how_to_draw": "内圈高度=-log10校正p，颜色=已给方向分数；外圈径向坐标=效应，角度仅用于排布",
+          "limitations": "方向分数不是默认统计检验；零p不接受，不补生成员或推断leading-edge。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "E02",
+            "reason": "相同术语环形轨道；BP/MF/CC/通路属于集合标签和输入差异。"
+          }
+        },
+        {
+          "id": "E05",
+          "data_required": "术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值",
+          "expression": "内圈显著性高度与方向色；外圈每个成员的效应分布",
+          "how_to_draw": "内圈高度=-log10校正p，颜色=已给方向分数；外圈径向坐标=效应，角度仅用于排布",
+          "limitations": "方向分数不是默认统计检验；零p不接受，不补生成员或推断leading-edge。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "E02",
+            "reason": "相同术语环形轨道；BP/MF/CC/通路属于集合标签和输入差异。"
+          }
+        },
+        {
+          "id": "E06a",
+          "data_required": "一行一个唯一术语ID和已有完整说明",
+          "expression": "读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "how_to_draw": "输入原顺序；独立表格，行高与字号固定；不自动查询或截断定义",
+          "limitations": "描述来自上游；长内容拆为附表，不缩成不可读的小字。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E06a",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E06b",
+          "data_required": "一行一个唯一术语ID和已有完整说明",
+          "expression": "读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "how_to_draw": "输入原顺序；独立表格，行高与字号固定；不自动查询或截断定义",
+          "limitations": "描述来自上游；长内容拆为附表，不缩成不可读的小字。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "E06a",
+            "reason": "同一独立术语对照表，标题和行数可参数化。"
+          }
+        },
+        {
+          "id": "E06c",
+          "data_required": "一行一个唯一术语ID和已有完整说明",
+          "expression": "读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "how_to_draw": "输入原顺序；独立表格，行高与字号固定；不自动查询或截断定义",
+          "limitations": "描述来自上游；长内容拆为附表，不缩成不可读的小字。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "E06a",
+            "reason": "同一独立术语对照表，标题和行数可参数化。"
+          }
+        },
+        {
+          "id": "E06d",
+          "data_required": "一行一个唯一术语ID和已有完整说明",
+          "expression": "读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "how_to_draw": "输入原顺序；独立表格，行高与字号固定；不自动查询或截断定义",
+          "limitations": "描述来自上游；长内容拆为附表，不缩成不可读的小字。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "E06a",
+            "reason": "同一独立术语对照表，标题和行数可参数化。"
+          }
+        },
+        {
+          "id": "K21",
+          "data_required": "完整术语×组别/亚类点阵；term_id、block、status、校正p、GeneRatio及列身份；术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值；一行一个唯一术语ID和已有完整说明",
+          "expression": "同一术语在各条件是否报告、报告的比例和证据量；显式区分未报告与未检验；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "how_to_draw": "E01的G1/CT1 BP术语p与E02逐ID相等，术语说明与E06a相等；其他矩阵列另给固定合成结果。",
+          "limitations": "E01的G1/CT1 BP术语p与E02逐ID相等，术语说明与E06a相等；其他矩阵列另给固定合成结果。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K21",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "K22",
+          "data_required": "完整对象ID×两个集合的0/1成员关系；并集中的对象一行一次；术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值；一行一个唯一术语ID和已有完整说明；术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值；一行一个唯一术语ID和已有完整说明；术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值；一行一个唯一术语ID和已有完整说明；术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值；一行一个唯一术语ID和已有完整说明",
+          "expression": "读出两个集合的独有项和共同项数量；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "how_to_draw": "交集计数由明确成员表得到；BP/MF/CC/PW分别保留其term/member/统计表、相同效应色限和术语对照，不把集合数当作显著性。",
+          "limitations": "交集计数由明确成员表得到；BP/MF/CC/PW分别保留其term/member/统计表、相同效应色限和术语对照，不把集合数当作显著性。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K22",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G52",
+      "title": "时间到事件与个体随访",
+      "role": "figure",
+      "default_example": "K27",
+      "examples": [
+        {
+          "id": "E15",
+          "data_required": "阶梯时间、S(t)、上下界；指定时点风险人数；删失标记另行提供",
+          "expression": "随时间的概率变化、不确定性与仍被随访的人数",
+          "how_to_draw": "阶梯和区间使用相同post定义；风险人数独立下轨，指定期初/期末口径",
+          "limitations": "不拟合KM或log-rank；本入口不支持风险集重新进入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E15",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "E16",
+          "data_required": "对象ID、组、随访开始/结束；事件时间、类型与显示顺序",
+          "expression": "个体随访长度、断续区间和事件时序",
+          "how_to_draw": "绘制已有区间；形状表示已记录事件；事件不得超出随访区间",
+          "limitations": "不从区间拟合生存模型；断续区间不是连续暴露，删失类型须声明。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E16",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K27",
+          "data_required": "阶梯时间、S(t)、上下界；指定时点风险人数；删失标记另行提供；对象ID、组、随访开始/结束；事件时间、类型与显示顺序",
+          "expression": "随时间的概率变化、不确定性与仍被随访的人数；个体随访长度、断续区间和事件时序",
+          "how_to_draw": "两组各6个对象，逐时点期末风险人数与E16结束时间核对；删失位置与已有阶梯一致，区间为明确合成示意。",
+          "limitations": "两组各6个对象，逐时点期末风险人数与E16结束时间核对；删失位置与已有阶梯一致，区间为明确合成示意。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K27",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G53",
+      "title": "多分析规格的估计与决策矩阵",
+      "role": "figure",
+      "default_example": "E17",
+      "examples": [
+        {
+          "id": "E17",
+          "data_required": "规格ID、已有估计/区间，以及完整规格×模型决策0/1表",
+          "expression": "查看分析选择与结果变动的对应关系",
+          "how_to_draw": "上方估计区间，下方决策点阵严格同一规格顺序；无静默按显著性挑选",
+          "limitations": "展示不等于联合稳健性推断；备选规格应科学合理并提前界定。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E17",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G54",
+      "title": "三种成分的相对组成",
+      "role": "figure",
+      "default_example": "E27",
+      "examples": [
+        {
+          "id": "E27",
+          "data_required": "对象ID、组别、同一分母的三个非负比例，和为1",
+          "expression": "三种成分的相对平衡和组间位置",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "闭合组成不可直接当独立相关；不归一化输入。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E27",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G55",
+      "title": "层级与数量面积",
+      "role": "figure",
+      "default_example": "E31",
+      "examples": [
+        {
+          "id": "E31",
+          "data_required": "唯一节点/父节点、正的可加数量和已给面积布局",
+          "expression": "各叶子占整体份额与层级归属",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "面积编码可加量；不可把父子值重复累加，不新做聚类。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "E31",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G56",
+      "title": "多组学已有因子、分数与特征投影",
+      "role": "figure",
+      "default_example": "K33",
+      "examples": [
+        {
+          "id": "M02",
+          "data_required": "模态×因子完整已给方差比例表、模型版本与缺失策略",
+          "expression": "每个因子在哪些层解释更多变异",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "复用通用矩阵；方差份额不作为各因子无条件可加量。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P17b",
+            "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。"
+          }
+        },
+        {
+          "id": "M03",
+          "data_required": "特征×因子权重、模态归属和固定因子方向",
+          "expression": "因子由哪些分子特征共同构成",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "复用通用块矩阵；因子符号任意，比较前冻结方向。",
+          "curation": {
+            "decision": "parameter_variant",
+            "canonical": "P17b",
+            "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。"
+          }
+        },
+        {
+          "id": "M04",
+          "data_required": "对象ID×2/3模态已有坐标、组别、明确配对/非配对",
+          "expression": "各模态的组间位置及对象对应",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "轴空间各自独立；连线只表示相同对象，不表示位移。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M04",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "M05",
+          "data_required": "特征ID、模态、与两个已给成分的相关坐标",
+          "expression": "不同模态特征指向哪些成分方向",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "坐标为相关而非任意载荷；不推断因果边或显著性。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M05",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
+        },
+        {
+          "id": "K33",
+          "data_required": "模态×因子完整已给方差比例表、模型版本与缺失策略；特征×因子权重、模态归属和固定因子方向",
+          "expression": "每个因子在哪些层解释更多变异；因子由哪些分子特征共同构成",
+          "how_to_draw": "4个相同Factor ID对应3模态方差表与12特征载荷；两个结果是固定合成模型输出，未声称运行MOFA。载荷方向和范围固定。",
+          "limitations": "4个相同Factor ID对应3模态方差表与12特征载荷；两个结果是固定合成模型输出，未声称运行MOFA。载荷方向和范围固定。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K33",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        },
+        {
+          "id": "K34",
+          "data_required": "对象ID×2/3模态已有坐标、组别、明确配对/非配对；特征ID、模态、与两个已给成分的相关坐标",
+          "expression": "各模态的组间位置及对象对应；不同模态特征指向哪些成分方向",
+          "how_to_draw": "按RNA/Protein/ATAC身份关联对象分数与特征投影；两类对象不同、ID不混同，各轴独立。全为固定合成说明，不从图形反推整合成功。",
+          "limitations": "按RNA/Protein/ATAC身份关联对象分数与特征投影；两类对象不同、ID不混同，各轴独立。全为固定合成说明，不从图形反推整合成功。 合成展示，不建立统计或因果结论。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "K34",
+            "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G57",
+      "title": "已有峰表的质谱棒图与镜像",
+      "role": "figure",
+      "default_example": "M06",
+      "examples": [
+        {
+          "id": "M06",
+          "data_required": "谱图ID、峰ID、m/z、非负强度、归一化/仪器/匹配说明",
+          "expression": "实测与参考碎片的位置和强度分布",
+          "how_to_draw": "按明确ID、顺序、范围和量纲绘制已有结果；外置图例，课题色卡与字体统一",
+          "limitations": "不自动归一化、匹配、定结构；镜像负号仅排版。",
+          "curation": {
+            "decision": "recommended",
+            "canonical": "M06",
+            "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。"
+          }
         }
       ]
     }

@@ -25,6 +25,17 @@ def semantic_color(role,fallback):
 def load_palettes():
     return json.loads(REGISTRY_PATH.read_text(encoding='utf-8'))['palettes']
 
+def load_color_cards():
+    """Return the 15 registered cards; ordinary reference colours stay separate."""
+    registry=json.loads(REGISTRY_PATH.read_text(encoding='utf-8'))
+    cards={f'C{i:02d}':dict(registry['palettes'][f'card_{i:02d}'],registry_name=f'card_{i:02d}') for i in range(1,8)}
+    cards.update({card['id']:dict(card) for card in registry['additional_cards']})
+    return cards
+
+def resolve_card_name(name):
+    cards=load_color_cards()
+    return cards[name]['registry_name'] if name in cards else name
+
 def get_palette(name, *, semantic=None):
     p=load_palettes()[name]
     if semantic is not None and p['semantic']!=semantic:

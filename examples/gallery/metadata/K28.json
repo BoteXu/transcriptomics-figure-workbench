@@ -1,0 +1,122 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K28",
+    "title": "相同对象的亚群＋marker＋已有向量场",
+    "size_pt": [
+      1100,
+      880
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          535,
+          410
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          575,
+          45,
+          1075,
+          410
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "3",
+        "label": "C",
+        "rect_pt": [
+          25,
+          465,
+          1075,
+          835
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "cc869c21b6e00cb42c3e268514733a6a6bb33c6a67771bd0f02d894b7ef5b2cf",
+      "source_table_sha256": "8049625f92c105285abff7fe9bbc72bdc4dbbfc6ac21b873365f15e4fed8caed",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          535,
+          410
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "097034c00663f0ba327ab240adb3b60257a5fe6b8df72d8f70baf066732c1628",
+      "source_table_sha256": "e4a004b89fedbe6485728c418d354c7a8891081a47692c71000fd4700205c06a",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          575,
+          45,
+          1075,
+          410
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "3",
+      "source_pdf_sha256": "de70bef0bd39794e5d7330db4607d5a087e3f277a6d2bbae2eb7aa64ad6f6f6b",
+      "source_table_sha256": "863cf5d165ed577b07c16d101f9f8f1adeb1fd0a4426cfdbe390dabcfc7c2ebc",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "3",
+        "label": "C",
+        "rect_pt": [
+          25,
+          465,
+          1075,
+          835
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "8049625f92c105285abff7fe9bbc72bdc4dbbfc6ac21b873365f15e4fed8caed",
+    "2.tsv": "e4a004b89fedbe6485728c418d354c7a8891081a47692c71000fd4700205c06a",
+    "3.tsv": "863cf5d165ed577b07c16d101f9f8f1adeb1fd0a4426cfdbe390dabcfc7c2ebc",
+    "K28.pdf": "1c7e45509f1f14c496a470381daf995378a35f5b3f85ee0385f7cbbe011c3bd3",
+    "K28.png": "87fb64f77c41d8cdafbafb0cc4261fdff2f34aeb2b3ad3f83521d033943e1fdb",
+    "K28.svg": "cd905134ef093bc3e8f52e3532e9fc5f0e3b88bfdbb8755b5ce9d48df778171d"
+  },
+  "example_id": "K28",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "三panel共享140个对象ID与完全相同x/y；marker值和已投影向量是另外给定的合成输入，不重做降维或velocity分析。",
+  "component_ids": [
+    "E25",
+    "E18",
+    "E26"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

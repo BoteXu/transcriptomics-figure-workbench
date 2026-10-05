@@ -1,0 +1,22 @@
+{
+  "module": "figure_multiomics_views",
+  "function": "plot_genomic_links",
+  "theme_mode": "theme_argument",
+  "params": {
+    "track_order": [
+      "RNA",
+      "ATAC",
+      "Protein"
+    ],
+    "region": [
+      0,
+      30000
+    ],
+    "assembly": "SYNTHETIC assembly",
+    "chromosome": "segment A",
+    "coordinate_definition": "zero-based half-open positions",
+    "value_definition": "Common supplied display quantity, matched synthetic scale",
+    "link_definition": "Given candidate association links and bounded scores; not direct regulation",
+    "title": "Multi-layer signal and candidate links"
+  }
+}

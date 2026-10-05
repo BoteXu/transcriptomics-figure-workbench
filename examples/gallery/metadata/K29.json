@@ -1,0 +1,92 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K29",
+    "title": "全局关联＋同一变异的局部轨道",
+    "size_pt": [
+      1080,
+      650
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          45,
+          550,
+          585
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          585,
+          45,
+          1060,
+          605
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "0df857e28c53bb72f3cb981610d6763b2909c05894e41f44d376787c55519bbb",
+      "source_table_sha256": "5888986efd10441b40e1db20faf93b2cbcebec0748ead29938ced21e59fc41b6",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          45,
+          550,
+          585
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "ae9b7d4c9625879ad6089ce6e1a8afabc2ced3815ef4f5e55d65620af50da97a",
+      "source_table_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          585,
+          45,
+          1060,
+          605
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "5888986efd10441b40e1db20faf93b2cbcebec0748ead29938ced21e59fc41b6",
+    "2.tsv": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2",
+    "K29.pdf": "f6881a5dbe26e6e0fc8e87481e7e79b5a69cf68cccf52bca4ee75369446f14a7",
+    "K29.png": "94543b5b3bbd178644862b6a8124d1611f4fb434f9c7c3cdbee8a240a5f4819b",
+    "K29.svg": "05931c0c3cd5e5a444364cc6d41e334ae96dc9280a2d032c350e6f20a5cd01a7"
+  },
+  "example_id": "K29",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "E29关联表是E28的第2段220000–480000子集；ID、位置与p逐行对应。LD、重组率与基因跨度是单独明确给定的合成轨道。",
+  "component_ids": [
+    "E28",
+    "E29"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

@@ -1,0 +1,92 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K36",
+    "title": "通路数量底图＋标记组成",
+    "size_pt": [
+      1080,
+      610
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          45,
+          610,
+          565
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          655,
+          75,
+          1060,
+          535
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "2ca361f27bb89f6bfa4b08606e80db175e34974ccbc4fc3ca38e2a6747a0a406",
+      "source_table_sha256": "bce2b60cd33080d2dec4b3ece8925cdc0b1f4c88ad2269baf2e6d0596144876c",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          45,
+          610,
+          565
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "b3b0f71280f1e8056cc9442b1def4015ad88dad7d6af86799aed80d9f2a58afd",
+      "source_table_sha256": "314fcb38df709ac3a0c2d20e9f52dcaf37ae91f680e262aa56799fd5450a40c6",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          655,
+          75,
+          1060,
+          535
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "bce2b60cd33080d2dec4b3ece8925cdc0b1f4c88ad2269baf2e6d0596144876c",
+    "2.tsv": "314fcb38df709ac3a0c2d20e9f52dcaf37ae91f680e262aa56799fd5450a40c6",
+    "K36.pdf": "a33b11df322014f0ece2293c1344629a19129f795537acd4dfd77c39b7d9cdc8",
+    "K36.png": "710b7bc9f836a3ed43ad35c51039c531c1c8e69d0230e6ace874ecc929c35437",
+    "K36.svg": "33b072df3cbd3ba91103620f2270e6c7bf8d9fb6b751dfc5343684cb81c130c0"
+  },
+  "example_id": "K36",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "底图的数量与M+i组成是不同物理读出，保留各自单位与分母。示例不声明节点对应M+i对象，不从丰度或组成推断通量。",
+  "component_ids": [
+    "M09",
+    "M10"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

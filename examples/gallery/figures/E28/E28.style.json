@@ -1,0 +1,31 @@
+{
+  "module": "figure_multiscale",
+  "function": "plot_genome_overview",
+  "theme_mode": "theme_argument",
+  "params": {
+    "chromosome_order": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "chromosome_lengths": {
+      "1": 720000,
+      "2": 720000,
+      "3": 720000,
+      "4": 720000
+    },
+    "segment_slots": {
+      "1": "G1",
+      "2": "G7",
+      "3": "G1",
+      "4": "G7"
+    },
+    "assembly": "SYNTHETIC assembly; not a human build",
+    "coordinate_definition": "Supplied one-based synthetic position",
+    "thresholds": {
+      "Illustrative threshold": 1e-05
+    },
+    "title": "Global association overview"
+  }
+}

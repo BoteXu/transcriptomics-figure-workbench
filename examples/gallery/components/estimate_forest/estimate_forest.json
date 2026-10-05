@@ -1,0 +1,121 @@
+{
+  "source": "Same synthetic observations preserved from legacy P05; Control/Treated display identities mapped to G1/G2. Means are descriptive; estimate bounds are fixed demonstration values, not research confidence intervals.",
+  "palette": "Defined in project_theme.json",
+  "input_unit": "Provided panel table rows",
+  "experimental_unit": "Synthetic units; no research inference",
+  "contrast": "Independent panel aesthetic demonstration",
+  "denominator": "Complete supplied panel table",
+  "model": "No fitting, testing or analysis",
+  "limits": "Supplied panel settings; preserved during style replacement",
+  "filtering": "Only the named panel selected; no observation removed within the panel",
+  "uncertainty": "Upstream fixed demonstration bounds or density; not new inference",
+  "interpretation_limit": "Synthetic visual example; suitable real inputs must be independently reviewed",
+  "synthetic": true,
+  "schema_version": 2,
+  "figure_id": "estimate_forest",
+  "status": "RENDERED_UNREVIEWED",
+  "input_hash": "c2825c5d65c2b61533c220b63c900a390f841761a0b38616e1fb4c8c4c169a5d",
+  "input_hash_algorithm": "SHA256",
+  "input_hash_scope": "exact exported TSV bytes",
+  "figure_spec": {
+    "kind": "publication_grouped_forest",
+    "palette": {
+      "G1": "#506AAA",
+      "G2": "#728DC1"
+    },
+    "effect_scale": "difference",
+    "interval_label": "Fixed demo bounds; not a research CI",
+    "group_gaps": 0.45,
+    "design": {
+      "width_mm": null,
+      "height_mm": null,
+      "font_family": "Arial",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "Arial",
+      "geometry_sha256": "4d133f8b251ffd70e3a66ff7a45b152bb0de387eb034ae2a37c3f469b639fea2"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "aesthetic-library-preview",
+      "palette_name": "card_06",
+      "palette_colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "group_slots": {
+        "G1": 0,
+        "G2": 1,
+        "G3": 2,
+        "G4": 3,
+        "G5": 4,
+        "G6": 5,
+        "G7": 6,
+        "All points": 0,
+        "Support": 1,
+        "Site": 6,
+        "Input": 2,
+        "Output": 0
+      },
+      "roles": {
+        "primary": "#506AAA",
+        "negative": "#506AAA",
+        "positive": "#E17692",
+        "accent": "#E17692",
+        "neutral": "#A8ADB3",
+        "significant": "#E17692",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "diverging": [
+          "#506AAA",
+          "#F7F7F7",
+          "#E17692"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "Arial",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+  },
+  "output_sha256": {
+    "estimate_forest.pdf": "ec5d73f6a46f2ec27ff32246d21f6f1979fe3a8ca955934672a1ee8599b22bf6",
+    "estimate_forest.png": "8ac319385bc5f7baf174d4a84597c1c03b88f6ad472a1cbdaf2099ad699cc0c9",
+    "estimate_forest.svg": "6a10b24977b101896e374a3ec1df3234aba0bd7795259cafebe7174bd7710899",
+    "estimate_forest.tsv": "c2825c5d65c2b61533c220b63c900a390f841761a0b38616e1fb4c8c4c169a5d"
+  },
+  "example_kind": "supplemental_standalone_component"
+}

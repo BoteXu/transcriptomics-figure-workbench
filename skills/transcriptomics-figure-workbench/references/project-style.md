@@ -24,6 +24,8 @@
 
 要统一换色卡与字体，使用 `set_project_theme.py --from-theme project_theme.json --card card_03 --font "Times New Roman" --output project_theme_v2.json`，再重绘同一 manifest 到新目录。此操作保留身份槽位；新卡容量不够会拒绝。定制的连续映射或角色色若需沿用，必须在新主题中明确登记，不将其错误归属于新色卡。
 
+15套卡均可通过编号查看：`set_project_theme.py --list-cards`。例如 `--card C06 --sequential-card C14 --diverging-card C15` 同时明确类别、顺序和正负数值角色。仅改变字体、保持同一基底卡时，原角色色和连续色阶保留。C14/C15按数值语义选择，不强行充当无序类别色。
+
 现有 R/Python 低层函数保留兼容。新课题默认通过主题入口。`render_with_theme` 适配明确 palette/stack_palette 参数及 reference 语义色图；旧后端内部未知颜色的自动转换尚未全面覆盖，应补明确适配或提供主题参数，不能根据像素猜组别。R 可以读取同一 JSON 的分组字典和字体，但新增 panel 未提供 R 实现；不要声称已完成全后端自动替换。
 
 ## 什么时候组图
@@ -31,6 +33,8 @@
 多个 panel 回答同一问题、分享比较对象或提供互补证据时再组合。每个 panel 保留原始数据和独立导出；组图仅安排位置、panel 字母与共同图例。参考 R03/R04/R11/R14/R15/R22/R24 是已复现的组合结构，可作为排版借鉴。数据类型不匹配时不用该组合，不为形式高级增补没有数据支撑的面板。
 
 科研出图验收：图型与数据形状相容；读者能看懂位置/面积/颜色代表什么；单位、区间、方向和图例明确；统一替换不改数值；最终尺寸不遮挡。来源与统计检查针对正式绘图任务，不是浏览图型目录时先要求用户提交某个数据文件。
+
+完整图库的36个组合均保存于 `combination-recipes.json`。`compose_catalog_examples.py --gallery GALLERY_DIRECTORY --ids K07 K33 --output NEW_DIRECTORY` 从经过哈希核对的独立panel重建；`--all` 重建全部36个。旧组合22个辅助panel另有 `render_saved_components.py` 固定适配器及公开数据文件；它们作为组合组件保留，不重复计为新增通用方法。更换主题后先重绘组件，再用 `compose_bundles` 配置新组件前缀，检查同一主题哈希和字体。
 
 ## 内容与图例互不遮挡
 

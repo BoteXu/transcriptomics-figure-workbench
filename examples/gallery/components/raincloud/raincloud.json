@@ -1,0 +1,133 @@
+{
+  "source": "Same synthetic observations preserved from legacy P05; Control/Treated display identities mapped to G1/G2. Means are descriptive; estimate bounds are fixed demonstration values, not research confidence intervals.",
+  "palette": "Defined in project_theme.json",
+  "input_unit": "Provided panel table rows",
+  "experimental_unit": "Synthetic units; no research inference",
+  "contrast": "Independent panel aesthetic demonstration",
+  "denominator": "Complete supplied panel table",
+  "model": "No fitting, testing or analysis",
+  "limits": "Supplied panel settings; preserved during style replacement",
+  "filtering": "Only the named panel selected; no observation removed within the panel",
+  "uncertainty": "Upstream fixed demonstration bounds or density; not new inference",
+  "interpretation_limit": "Synthetic visual example; suitable real inputs must be independently reviewed",
+  "synthetic": true,
+  "schema_version": 2,
+  "figure_id": "raincloud",
+  "status": "RENDERED_UNREVIEWED",
+  "input_hash": "f953c6bfbc81e875e1bb644fd899bb4a9953ebd1773ac9e9fb530cecb912044b",
+  "input_hash_algorithm": "SHA256",
+  "input_hash_scope": "exact exported TSV bytes",
+  "figure_spec": {
+    "kind": "publication_raincloud",
+    "palette": {
+      "G1": "#506AAA",
+      "G2": "#728DC1"
+    },
+    "unit_label": "synthetic observation",
+    "y_label": "Recorded value",
+    "density_groups": [
+      "G1",
+      "G2"
+    ],
+    "density_min_n": 20,
+    "density": "Scott Gaussian KDE restricted to observed min/max; area visually normalized within group",
+    "box": "Q1/Q3 linear, median; whiskers at observations within1.5IQR; all raw points retained",
+    "counts": {
+      "G1": 24,
+      "G2": 24
+    },
+    "point_offsets": "deterministic input-order sequence",
+    "sampling": "none",
+    "design": {
+      "width_mm": null,
+      "height_mm": null,
+      "font_family": "Arial",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "Arial",
+      "geometry_sha256": "22cc0c9425009b358fdb8c29b80e48829dc7ced56260c3ad8b7a628c4a959352"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "aesthetic-library-preview",
+      "palette_name": "card_06",
+      "palette_colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "group_slots": {
+        "G1": 0,
+        "G2": 1,
+        "G3": 2,
+        "G4": 3,
+        "G5": 4,
+        "G6": 5,
+        "G7": 6,
+        "All points": 0,
+        "Support": 1,
+        "Site": 6,
+        "Input": 2,
+        "Output": 0
+      },
+      "roles": {
+        "primary": "#506AAA",
+        "negative": "#506AAA",
+        "positive": "#E17692",
+        "accent": "#E17692",
+        "neutral": "#A8ADB3",
+        "significant": "#E17692",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "diverging": [
+          "#506AAA",
+          "#F7F7F7",
+          "#E17692"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "Arial",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+  },
+  "output_sha256": {
+    "raincloud.pdf": "cca1ce76b3ca97a57835408c1f85e77ec65ee8396adf52b455be688c98fc276b",
+    "raincloud.png": "329e3e3a52bebda693e966dfd2042983c625709f84b960ae71d217a3d08d7574",
+    "raincloud.svg": "589dbf423e7ac74c0064086fc3e505e2a7c0631b42a3d098eae2688fd3126a39",
+    "raincloud.tsv": "f953c6bfbc81e875e1bb644fd899bb4a9953ebd1773ac9e9fb530cecb912044b"
+  },
+  "example_kind": "supplemental_standalone_component"
+}

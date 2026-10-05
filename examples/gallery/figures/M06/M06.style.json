@@ -1,0 +1,17 @@
+{
+  "module": "figure_multiomics_views",
+  "function": "plot_mass_spectrum",
+  "theme_mode": "theme_argument",
+  "params": {
+    "spectrum_order": [
+      "Observed",
+      "Reference"
+    ],
+    "mass_definition": "m/z",
+    "intensity_definition": "Supplied intensity",
+    "normalization_definition": "Given common arbitrary instrument scale; no normalization",
+    "mirror": true,
+    "label_peak_ids": [],
+    "title": "Observed and reference peaks"
+  }
+}

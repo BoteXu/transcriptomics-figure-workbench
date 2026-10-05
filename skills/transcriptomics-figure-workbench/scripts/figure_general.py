@@ -81,7 +81,7 @@ def plot_confusion_counts(data,*,unit_label):
                  semantics='Rows observed, columns predicted; no model fitting, threshold choice or accuracy calculation')
 
 
-def plot_density_ridges(data,palette,x_label,*,density_label,amplitude=.8):
+def plot_density_ridges(data,palette,x_label,*,density_label,amplitude=.8,height_scale=None,title=''):
     text_required(x=x_label,density=density_label)
     d=checked(data,['group','x','density'],['x','density']);palette_check(d.group,palette)
     if (d.density<0).any() or not np.isfinite(amplitude) or not 0<amplitude<=1:
@@ -94,10 +94,12 @@ def plot_density_ridges(data,palette,x_label,*,density_label,amplitude=.8):
     if any(grid!=grids[0] for grid in grids[1:]): raise ValueError('Identical density grids required')
     peak=d.density.max()
     if peak<=0: raise ValueError('Positive density peak required')
+    scale=amplitude/peak if height_scale is None else height_scale
+    if not np.isfinite(scale) or scale<=0 or scale*peak>.95:raise ValueError('Common density height scale must fit between baselines')
     fig,ax=canvas();groups=list(pd.unique(d.group))
     for i,g in enumerate(groups):
-        sub=d[d.group==g];y=i+sub.density.to_numpy()/peak*amplitude
-        ax.fill_between(sub.x,i,y,color=palette[g],alpha=.65);ax.plot(sub.x,y,color=palette[g],linewidth=.9)
-    ax.set_yticks(range(len(groups)),groups);ax.set(xlabel=x_label,ylabel=density_label)
+        sub=d[d.group==g];y=i+sub.density.to_numpy()*scale
+        ax.fill_between(sub.x,i,y,color=palette[g],alpha=.45);ax.plot(sub.x,y,color=palette[g],linewidth=1.2)
+    ax.set_yticks(range(len(groups)),groups);ax.set(xlabel=x_label,ylabel=density_label,title=title)
     return stamp(fig,data,'density_ridges',palette=palette,x_label=x_label,density_label=density_label,
-                 shared_display_scale=float(amplitude/peak),density_estimation='Upstream only; no KDE, bandwidth choice or per-group rescaling')
+                 shared_display_scale=float(scale),density_estimation='Upstream only; no KDE, bandwidth choice or per-group rescaling',demo_label_style='compact')

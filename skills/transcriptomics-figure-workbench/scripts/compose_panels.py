@@ -17,7 +17,8 @@ def compose_bundles(panels,layout,output):
     if len(panels)!=len(layout['panels']): raise ValueError('Every layout cell must have one supplied bundle')
     rectangles=[]
     for item,cell in zip(panels,layout['panels']):
-        prefix=Path(item['prefix']); meta=json.loads(prefix.with_suffix('.json').read_text(encoding='utf8')); pdf=prefix.with_suffix('.pdf')
+        prefix=Path(item['prefix']); metadata=Path(item.get('metadata',prefix.with_suffix('.json')))
+        meta=json.loads(metadata.read_text(encoding='utf8')); pdf=prefix.with_suffix('.pdf')
         for ext in ('.pdf','.svg','.png','.tsv'):
             f=prefix.with_suffix(ext)
             if _sha(f)!=meta['output_sha256'][f.name]: raise ValueError('Changed source bundle')

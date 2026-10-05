@@ -1,0 +1,92 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K33",
+    "title": "多组学因子的层间解释量＋特征载荷",
+    "size_pt": [
+      1000,
+      560
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          45,
+          470,
+          510
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          515,
+          45,
+          980,
+          510
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "4f5ffa96396d3a26f87e481b1adc8fd454c3e05503a9688044b95f7b2766b108",
+      "source_table_sha256": "a2fdfaee95ad701f7bf719852d97056d5164b7eae43fd3e9ac8a3de4653fd5ba",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          45,
+          470,
+          510
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "4d7688165eb42a9cfc56d55ad7149caf8f4f026ef207162bd1ebe05fed15fbb3",
+      "source_table_sha256": "d4455aa7078554a03c59d8817d97536b5734d6d09518de07f5e6595238eef6ab",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          515,
+          45,
+          980,
+          510
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "a2fdfaee95ad701f7bf719852d97056d5164b7eae43fd3e9ac8a3de4653fd5ba",
+    "2.tsv": "d4455aa7078554a03c59d8817d97536b5734d6d09518de07f5e6595238eef6ab",
+    "K33.pdf": "b287ad000d312c606cfa5652f3b7a32cb59118858e6b4d827232834489696061",
+    "K33.png": "639ac450ff04876b5e61ead53ae9fdf4b23c4a93b67b277d02217d3da1a9b81b",
+    "K33.svg": "c72e49491844d9a6f16b0e87f82671714b79eb2b19beb66f1b48c4ae0182799b"
+  },
+  "example_id": "K33",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "4个相同Factor ID对应3模态方差表与12特征载荷；两个结果是固定合成模型输出，未声称运行MOFA。载荷方向和范围固定。",
+  "component_ids": [
+    "M02",
+    "M03"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

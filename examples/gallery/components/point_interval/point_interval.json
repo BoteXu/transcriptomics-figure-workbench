@@ -1,0 +1,126 @@
+{
+  "source": "Same synthetic observations preserved from legacy P05; Control/Treated display identities mapped to G1/G2. Means are descriptive; estimate bounds are fixed demonstration values, not research confidence intervals.",
+  "palette": "Defined in project_theme.json",
+  "input_unit": "Provided panel table rows",
+  "experimental_unit": "Synthetic units; no research inference",
+  "contrast": "Independent panel aesthetic demonstration",
+  "denominator": "Complete supplied panel table",
+  "model": "No fitting, testing or analysis",
+  "limits": "Supplied panel settings; preserved during style replacement",
+  "filtering": "Only the named panel selected; no observation removed within the panel",
+  "uncertainty": "Upstream fixed demonstration bounds or density; not new inference",
+  "interpretation_limit": "Synthetic visual example; suitable real inputs must be independently reviewed",
+  "synthetic": true,
+  "schema_version": 2,
+  "figure_id": "point_interval",
+  "status": "RENDERED_UNREVIEWED",
+  "input_hash": "f953c6bfbc81e875e1bb644fd899bb4a9953ebd1773ac9e9fb530cecb912044b",
+  "input_hash_algorithm": "SHA256",
+  "input_hash_scope": "exact exported TSV bytes",
+  "figure_spec": {
+    "kind": "sample_distribution",
+    "palette": {
+      "G1": "#506AAA",
+      "G2": "#728DC1"
+    },
+    "y_label": "Recorded value",
+    "summary": "median and Q1-Q3; linear quantiles; only n>=5; not CI",
+    "offsets": "deterministic horizontal first-appearance offsets; not a density estimate",
+    "sample_n": {
+      "G1": 24,
+      "G2": 24
+    },
+    "inference": "none",
+    "design": {
+      "width_mm": null,
+      "height_mm": null,
+      "font_family": "Arial",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "Arial",
+      "geometry_sha256": "f86b4f3e2c1eea1591ce729e5f8d09d3d6e3c5e968aaf72247902ca8db94070e"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "aesthetic-library-preview",
+      "palette_name": "card_06",
+      "palette_colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "group_slots": {
+        "G1": 0,
+        "G2": 1,
+        "G3": 2,
+        "G4": 3,
+        "G5": 4,
+        "G6": 5,
+        "G7": 6,
+        "All points": 0,
+        "Support": 1,
+        "Site": 6,
+        "Input": 2,
+        "Output": 0
+      },
+      "roles": {
+        "primary": "#506AAA",
+        "negative": "#506AAA",
+        "positive": "#E17692",
+        "accent": "#E17692",
+        "neutral": "#A8ADB3",
+        "significant": "#E17692",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "diverging": [
+          "#506AAA",
+          "#F7F7F7",
+          "#E17692"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "Arial",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+  },
+  "output_sha256": {
+    "point_interval.pdf": "119db6c18c55b5b4145dfc9fb66b3da0d48cdbed3ae947349b6615c19c339ff6",
+    "point_interval.png": "7047786e0ed56f6104da087135746d9c5675e6e6cfb91ab2b34574eacfd3d86e",
+    "point_interval.svg": "a85b6c5f99d77a0b4ebdc4ea7d000dcbe5f85a361ee77ac64536603cdae79f34",
+    "point_interval.tsv": "f953c6bfbc81e875e1bb644fd899bb4a9953ebd1773ac9e9fb530cecb912044b"
+  },
+  "example_kind": "supplemental_standalone_component"
+}

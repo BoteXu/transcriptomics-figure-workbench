@@ -2,7 +2,7 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-当前版本 **v0.1.0**。名称保留历史兼容性；支持的数据表达已经扩展至多组学、统计结果、关联网络、模型解释与计算生物学。
+当前版本 **v0.2.0**。名称保留历史兼容性；支持的数据表达已经扩展至多组学、统计结果、关联网络、模型解释与计算生物学。
 
 [下载安装包](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/latest) · [全部图PDF示意总览](examples/overview/all-previews.pdf) · [全部图长图](examples/overview/all-previews.jpg) · [通用画法总览](examples/overview/general-patterns.jpg) · [数据需求索引](examples/overview/index.tsv)
 
@@ -12,21 +12,31 @@
 
 | 内容 | 数量与含义 |
 |---|---|
-| 通用导航入口 | 50：48 个数据绘图/组合入口、原生结构入口、色卡库入口 |
-| 可查看预览 | 168：50 个旧版形式、25 个参考结构示例、43 个独立 panel、20 个组合、12 个关系扩展、3 个真实公共坐标结构示例、15 套纯色卡 |
-| Python 绘图函数 | 68：保留 37 个原有函数，新增 31 个参考/应用/网络函数 |
+| 通用导航入口 | 45：43 个数据绘图/组合入口、原生结构入口、色卡库入口 |
+| 可查看预览 | 236：完整保留旧168个，另增52个独立示例、16个组合；共36个组合、15套纯色卡、3个真实公共坐标结构示例 |
+| Python 绘图函数 | 95：保留先前68个，新增27个冻结结果展示函数 |
 | 历史 R 对应函数 | 28；不宣称所有 Python 新功能都有 R 对应 |
-| 全部图 PDF | 24 页，包含全部 168 个稳定编号 |
+| 全部图 PDF | 20 页，包含全部 236 个稳定编号 |
+
+默认推荐177个示例；59个参数变体或旧样式可勾选查看。全部稳定编号、旧审美意见与文件保留。P19/P20旧森林图退出默认推荐，使用E21紧凑区间＋数字列。
 
 这些数量是不同维度的清单，不能相加当作算法数。同类柱状图、折线图、热图合并到通用画法，保留有意义的变体与组合。雨云图、带堆积边际分布的火山图、精细森林图、相关性矩阵/网络、亚群与 marker 联合视图都保留。
 
 每个预览说明需要什么数据、能表达什么、怎么画、哪些审美参数可调，以及使用边界。全部图片是自行生成的示例；除明确标注的公共蛋白坐标外，数据用于合成演示。原始参考图片和私人研究结果不随包分发。
 
+## 本版增量和完整检查
+
+新增富集点阵、GO成员效应环形、成员弦/矩阵/重叠网络、ECDF/QQ、协变量平衡、Bland–Altman、已有生存与个体随访、分析规格、已有向量场、三元组成、全局/局部关联轨道、漏斗、数量层级、嵌套区间与四种冻结模型诊断。
+
+课件相关多组学增量包括：跨层效应、因子解释量与载荷、同对象多视图、特征相关圆、注册空间身份/分子叠加、质谱镜像与色谱、基因组候选连接、通路底图和同位素组成。已有矩阵、曲线和堆积画法直接复用，不按应用场景重复计算为新方法。
+
+[完整逐项检查](skills/transcriptomics-figure-workbench/references/consolidation-audit.md) · [新画法数据契约与原始文档](skills/transcriptomics-figure-workbench/references/methods-extension-router.md) · [课件多组学路由](skills/transcriptomics-figure-workbench/references/course-visualization-router.md) · [新增组合](skills/transcriptomics-figure-workbench/references/extended-combinations.md)
+
 ## 安装为 Codex skill
 
 任选一种方式：
 
-1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.1.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
+1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.2.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
 2. 在 Codex 中使用 skill-installer，指定仓库 `BoteXu/transcriptomics-figure-workbench` 和路径 `skills/transcriptomics-figure-workbench`。
 3. 克隆仓库，只复制 `skills/transcriptomics-figure-workbench/` 至自己的 skills 目录。
 
@@ -54,6 +64,8 @@ python -m http.server 8768 --bind 127.0.0.1 --directory .
 
 [15 套色卡](skills/transcriptomics-figure-workbench/references/reference-palette-guide.md)包含 7 套原海报色值与 8 套注明来源的 Tol/ColorBrewer 色卡。仅明确标题为“科研配色方案”的原海报登记为原始色卡。示例 C06/Arial 是演示配置，实际课题由用户选择；目标机器必须有所选字体。原生结构与 R 后端的自动替换范围以文档声明为准。
 
+全部15套可按C01–C15编号查找：13套类别卡、C14顺序卡、C15分歧卡。主题工具 `--list-cards` 完整列出；`--card C06 --sequential-card C14 --diverging-card C15` 明确三种颜色角色。只换字体保留已选连续色阶。
+
 ## 直接绘图与依赖
 
 核心 Python 冻结表适配器使用 numpy、pandas、matplotlib；需要 PDF/灰度检查或组合时另外使用 Pillow/PyMuPDF。在自己选择的环境中**明确安装**依赖即可；本 skill 不自动安装软件：
@@ -72,6 +84,10 @@ python skills/transcriptomics-figure-workbench/scripts/render_reference_table.py
 
 整批独立 panel 使用 `render_project_panels.py --manifest INPUT_MANIFEST --theme PROJECT_THEME --output NEW_OUTPUT_DIRECTORY`；输入结构见 [课题样式说明](skills/transcriptomics-figure-workbench/references/project-style.md)。组合使用 `compose_panels.py`，兼容关系见 [组合路由](skills/transcriptomics-figure-workbench/references/combinations-router.md)。R 基础函数见 [代码配方](skills/transcriptomics-figure-workbench/references/code-recipes.md)；原生蛋白结构使用已有结构查看器或 PyMOL，并明确来源、链与残基。
 
+新增固定适配器：`render_frozen_table.py ADAPTER --input INPUT.tsv --style STYLE.json --meta META.json --theme PROJECT_THEME.json --output NEW_OUTPUT_DIRECTORY --id FIGURE_ID`。38个注册适配器保持对象字符串与数值字段分离，不调用任意模块或执行科学分析。
+
+36个组合均有已保存的 [布局与组件注册表](skills/transcriptomics-figure-workbench/references/combination-recipes.json)：`compose_catalog_examples.py --gallery examples/gallery --all --output NEW_OUTPUT_DIRECTORY` 可重建全部组合。原组合的22个辅助panel也保存了独立导出、输入表、设置和 `render_saved_components.py` 重绘入口。图库中的“单独Panel”链接分别打开各组件。
+
 最小依赖版本是声明范围，不代表每个组合都已在所有版本验证。实际发布检查和历史测试范围见 [release-validation.md](docs/release-validation.md)。
 
 ## 科研使用边界
@@ -86,4 +102,4 @@ python skills/transcriptomics-figure-workbench/scripts/render_reference_table.py
 
 ---
 
-**English:** A Codex skill and frozen-table scientific plotting workbench. Choose visualizations by input shape and intended expression, retain useful legacy forms and standalone/composite panels, apply one project palette and typography configuration, and export traceable bundles without silently rerunning upstream research. The gallery contains 168 preserved previews and 15 attributed color cards. Python implements 68 plot functions; 28 historical R counterparts are retained. Native protein examples use explicit public coordinates. Installation and software tests do not establish scientific validity.
+**English:** A Codex skill and frozen-table scientific plotting workbench. Choose visualizations by input shape and intended expression, retain useful legacy forms and standalone/composite panels, apply one project palette and typography configuration, and export traceable bundles without silently rerunning upstream research. The gallery contains 236 stable previews (177 recommended; 59 optional parameter/old-style examples) and 15 attributed color cards. Python implements 95 plot functions; 28 historical R counterparts are retained. Native protein examples use explicit public coordinates. Installation and software tests do not establish scientific validity.

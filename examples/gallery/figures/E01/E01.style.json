@@ -1,0 +1,46 @@
+{
+  "module": "figure_method_extensions",
+  "function": "plot_enrichment_grid",
+  "theme_mode": "theme_argument",
+  "params": {
+    "significance_limits": [
+      0,
+      6
+    ],
+    "ratio_max": 0.25,
+    "block_slots": {
+      "KEGG": "G1",
+      "BP": "G7",
+      "MF": "G3"
+    },
+    "column_order": [
+      "G1/CT1",
+      "G1/CT2",
+      "G1/CT3",
+      "G7/CT1",
+      "G7/CT2",
+      "G7/CT3"
+    ],
+    "term_order": [
+      "BP01",
+      "BP02",
+      "BP03",
+      "BP04",
+      "BP05",
+      "BP06",
+      "MF01",
+      "MF02",
+      "MF03",
+      "MF04",
+      "MF05",
+      "MF06",
+      "PW01",
+      "PW02",
+      "PW03",
+      "PW04",
+      "PW05",
+      "PW06"
+    ],
+    "title": "Terms across groups and cell classes"
+  }
+}

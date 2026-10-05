@@ -1,0 +1,192 @@
+{
+  "source": "Original bounded synthetic visualization fixture, seed 20261005. No biological analysis or external results.",
+  "palette": "Defined in project_theme.json",
+  "input_unit": "Provided panel table rows",
+  "experimental_unit": "Synthetic units; no research inference",
+  "contrast": "Independent panel aesthetic demonstration",
+  "denominator": "Complete supplied panel table",
+  "model": "No fitting, testing or analysis",
+  "limits": "Supplied panel settings; preserved during style replacement",
+  "filtering": "Only the named panel selected; no observation removed within the panel",
+  "uncertainty": "Upstream fixed demonstration bounds or density; not new inference",
+  "interpretation_limit": "Synthetic visual example; suitable real inputs must be independently reviewed",
+  "synthetic": true,
+  "schema_version": 2,
+  "figure_id": "hit_window",
+  "status": "RENDERED_UNREVIEWED",
+  "input_hash": "c1199ef0da5b604b26eae5f307909fe0af92db91a545e4b6dbdf15cebc34e7bb",
+  "input_hash_algorithm": "SHA256",
+  "input_hash_scope": "exact exported TSV bytes",
+  "figure_spec": {
+    "kind": "reference_palette_plate",
+    "palette": {
+      "semantic": "categorical",
+      "colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "references": [
+        "C06"
+      ],
+      "provenance": "exact_visible_hex",
+      "rgb_from_hex": [
+        [
+          80,
+          106,
+          170
+        ],
+        [
+          114,
+          141,
+          193
+        ],
+        [
+          145,
+          187,
+          223
+        ],
+        [
+          182,
+          219,
+          241
+        ],
+        [
+          246,
+          211,
+          217
+        ],
+        [
+          231,
+          159,
+          191
+        ],
+        [
+          225,
+          118,
+          146
+        ]
+      ],
+      "note": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices."
+    },
+    "panel_specs": [
+      {
+        "id": "A",
+        "type": "matrix",
+        "title": "Same hits: explicit rank window 1–60",
+        "color_label": "Hit membership 0/1",
+        "color_limits": [
+          0,
+          1
+        ],
+        "continuous_colors": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "map_colors": [
+          "#F7F9FC",
+          "#506AAA"
+        ]
+      }
+    ],
+    "analysis": "none; all panel values supplied",
+    "font_family": "Arial",
+    "layout": "panel",
+    "adapter_version": 2,
+    "design": {
+      "width_mm": null,
+      "height_mm": null,
+      "font_family": "Arial",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "Arial",
+      "geometry_sha256": "196772e5f4780b0aacd34566d2f46f715dd41cfba5045c212ea51ae9f61aa747"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "aesthetic-library-preview",
+      "palette_name": "card_06",
+      "palette_colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "group_slots": {
+        "G1": 0,
+        "G2": 1,
+        "G3": 2,
+        "G4": 3,
+        "G5": 4,
+        "G6": 5,
+        "G7": 6,
+        "All points": 0,
+        "Support": 1,
+        "Site": 6,
+        "Input": 2,
+        "Output": 0
+      },
+      "roles": {
+        "primary": "#506AAA",
+        "negative": "#506AAA",
+        "positive": "#E17692",
+        "accent": "#E17692",
+        "neutral": "#A8ADB3",
+        "significant": "#E17692",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "diverging": [
+          "#506AAA",
+          "#F7F7F7",
+          "#E17692"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "Arial",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+  },
+  "output_sha256": {
+    "hit_window.pdf": "8e8ebb9187681d8888fb497436b698a3e87dd6d06bbffbaded05933d680b2084",
+    "hit_window.png": "10993907f9d4e3d1447cbe5409a86471e39a666555fee21e9611f4ff46c606c6",
+    "hit_window.svg": "cbcea82e9a23b4251cc6da26eafb449976c7a4841ea3258995232a93d3066c59",
+    "hit_window.tsv": "c1199ef0da5b604b26eae5f307909fe0af92db91a545e4b6dbdf15cebc34e7bb"
+  },
+  "example_kind": "supplemental_standalone_component"
+}

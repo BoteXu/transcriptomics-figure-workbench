@@ -1,0 +1,92 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K27",
+    "title": "相同十二对象的生存结果＋个体随访",
+    "size_pt": [
+      1130,
+      650
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          555,
+          605
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          590,
+          45,
+          1105,
+          605
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "bb89a84ed8bf211920d691d60b937f81a99bf4a346df0419c4d0d3a0f5b5256b",
+      "source_table_sha256": "6c744dd7234e9b7cf001dddbb1913d31810f897c8e6a974c7f5f7c7ade23f681",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          555,
+          605
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "c9d5adf413a1acf597ea2881dce43d26e996e25aa7f8e2a036b190466a053ba9",
+      "source_table_sha256": "9efe4e56a132f71cd0114df44dd6b95b3e1ba6cc3b106d1544704521f49fa968",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          590,
+          45,
+          1105,
+          605
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "6c744dd7234e9b7cf001dddbb1913d31810f897c8e6a974c7f5f7c7ade23f681",
+    "2.tsv": "9efe4e56a132f71cd0114df44dd6b95b3e1ba6cc3b106d1544704521f49fa968",
+    "K27.pdf": "4925cb5a05d023df274f8f6212670b4dce97adbecc9dad2b19e60b255e8da9f4",
+    "K27.png": "2e0bd323f951241f8d1dc93bfe2ead0b1d137245c070f584a36ca6f760d0e740",
+    "K27.svg": "7b4fea87bb480585905f8b1b8490e13ad95b9c774250e512f91fba7201cc989a"
+  },
+  "example_id": "K27",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "两组各6个对象，逐时点期末风险人数与E16结束时间核对；删失位置与已有阶梯一致，区间为明确合成示意。",
+  "component_ids": [
+    "E15",
+    "E16"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

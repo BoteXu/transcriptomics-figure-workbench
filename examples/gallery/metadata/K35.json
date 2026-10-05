@@ -1,0 +1,92 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K35",
+    "title": "色谱读出＋实测与参考碎片谱",
+    "size_pt": [
+      1080,
+      570
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          45,
+          530,
+          525
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          570,
+          45,
+          1060,
+          525
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "7b9c0d07f0012b566c27d89896ba919c1ce6115b82aa238cd9ab405545ea99ae",
+      "source_table_sha256": "d8742cfa0fa3e40c6a4bc53e74301ccf5e8df762145768fb1b5ae83e7855763e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          45,
+          530,
+          525
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "10c29deb8763574db134ebbf266f5de64c4d8f4f841b7d582d94b3e1d1bad904",
+      "source_table_sha256": "a68c4670b9548758c5dac979ccb61ebb04f21d83310c7745fd49f271ec9ed6cd",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          570,
+          45,
+          1060,
+          525
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "d8742cfa0fa3e40c6a4bc53e74301ccf5e8df762145768fb1b5ae83e7855763e",
+    "2.tsv": "a68c4670b9548758c5dac979ccb61ebb04f21d83310c7745fd49f271ec9ed6cd",
+    "K35.pdf": "78b798fea5d15b653e5e31ffea4f38f2f9c2603f2006ad6a90c21703f09e333e",
+    "K35.png": "7c28210491796969e48dd0d6d9bad4dbf10d7bc229641a3397384382bdfee011",
+    "K35.svg": "30ca921db82941f30a785dbfd9e71a8c44180759482b6b81887c58a20d89b033"
+  },
+  "example_id": "K35",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "两图展示互补测量通道的输入结构。此示例分别提供软件曲线与峰表，未声称来自同一已鉴定化合物；实际项目须绑定样本/前体/RT/仪器/归一化记录。",
+  "component_ids": [
+    "M07",
+    "M06"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

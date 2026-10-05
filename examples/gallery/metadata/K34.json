@@ -1,0 +1,92 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K34",
+    "title": "多组学对象分数＋特征相关投影",
+    "size_pt": [
+      1140,
+      610
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          70,
+          675,
+          530
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          715,
+          45,
+          1120,
+          565
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "fe387b6fda8b69bf0d129aa3cfb30776670e1bb5efb7351768c2ae81cd042688",
+      "source_table_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          70,
+          675,
+          530
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "0203e6abcd4a3f3eee861548a33dade333499eb83c84ee70c762c10a20e584d9",
+      "source_table_sha256": "b19562723275c14ad315db2eef27d45c72e4c466ce13094c9be8a0bd44c3790e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          715,
+          45,
+          1120,
+          565
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d",
+    "2.tsv": "b19562723275c14ad315db2eef27d45c72e4c466ce13094c9be8a0bd44c3790e",
+    "K34.pdf": "6215cfdaa1883410ddd988463b4dd4f84e541fe4d24f3375b9cc3dcb68b83346",
+    "K34.png": "2cce9adb104f40ada51afc2f9d9a9285bd902e1b5f69bc01558825b74f55b62c",
+    "K34.svg": "9ea3d3e04d0d408bd4cb3e1e0e17b4246bea566ed3ed41dabf9a9fd609206a58"
+  },
+  "example_id": "K34",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "按RNA/Protein/ATAC身份关联对象分数与特征投影；两类对象不同、ID不混同，各轴独立。全为固定合成说明，不从图形反推整合成功。",
+  "component_ids": [
+    "M04",
+    "M05"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

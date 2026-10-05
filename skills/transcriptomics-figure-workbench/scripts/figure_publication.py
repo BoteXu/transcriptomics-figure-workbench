@@ -38,7 +38,7 @@ def plot_publication_curve(data,palette,*,curve_type,labels,title='',prevalence=
     ax.legend(loc='upper center',bbox_to_anchor=(.5,-.17),ncol=2,frameon=False,fontsize=8.5,handlelength=2.7,columnspacing=1.7)
     return stamp(fig,data,'publication_curve',curve_type=curve_type,labels=labels,palette=palette,step_by_model=steps,prevalence=prevalence)
 
-def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry='tile',block_palette=None,count_label='Supplied count',title=''):
+def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry='tile',block_palette=None,count_label='Supplied count',title='',continuous_colors=None):
     d=checked(data,['feature','sample','value'],['value']);rows=list(dict.fromkeys(d.feature));cols=list(dict.fromkeys(d['sample']))
     if d.duplicated(['feature','sample']).any() or len(d)!=len(rows)*len(cols):raise ValueError('Complete matrix required')
     if len(limits)!=2 or not np.isfinite(limits).all() or limits[0]>=limits[1] or d.value.min()<limits[0] or d.value.max()>limits[1]:raise ValueError('Limits must include every supplied value')
@@ -60,7 +60,7 @@ def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry=
         strip.set(xlim=(0,1),ylim=(len(rows)-.5,-.5));strip.axis('off')
     ax=fig.add_subplot(gs[0,k]);k+=1
     norm=TwoSlopeNorm(center,limits[0],limits[1]) if signed else Normalize(*limits)
-    cmap=SIGNED if signed else SEQUENTIAL
+    cmap=LinearSegmentedColormap.from_list('project_matrix',continuous_colors) if continuous_colors is not None else SIGNED if signed else SEQUENTIAL
     if geometry=='tile':im=ax.imshow(mat,norm=norm,cmap=cmap,aspect='auto',interpolation='nearest')
     else:
         xx,yy=np.meshgrid(np.arange(len(cols)),np.arange(len(rows)));im=ax.scatter(xx.ravel(),yy.ravel(),c=mat.ravel(),norm=norm,cmap=cmap,s=105,edgecolors='none');ax.set(xlim=(-.5,len(cols)-.5),ylim=(len(rows)-.5,-.5))
@@ -76,12 +76,38 @@ def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry=
         paper_axis(side)
     cb=fig.add_subplot(gs[0,k]);fig.colorbar(im,cax=cb,label=value_label);cb.tick_params(labelsize=8);cb.set_box_aspect(20)
     fig.suptitle(title,x=.27,ha='left',fontsize=12,y=.97)
-    return stamp(fig,data,'publication_aligned_matrix',limits=list(limits),center=center,signed=signed,value_label=value_label,geometry=geometry,bubble_area='constant_not_detection',row_order=rows,column_order=cols,count_label=count_label,block_palette=block_palette,clustering='none_frozen_input_order')
+    return stamp(fig,data,'publication_aligned_matrix',limits=list(limits),center=center,signed=signed,value_label=value_label,geometry=geometry,bubble_area='constant_not_detection',row_order=rows,column_order=cols,count_label=count_label,block_palette=block_palette,continuous_colors=continuous_colors,clustering='none_frozen_input_order')
 
-def plot_publication_forest(data,palette,*,x_label,interval_label,effect_scale,title=''):
+def plot_publication_forest(data,palette,*,x_label,interval_label,effect_scale,title='',compact=True,decimals=2):
     d=checked(data,['label','group','estimate','lower','upper'],['estimate','lower','upper']);palette_check(d.group,palette);null=effect_reference(effect_scale)
     if d.label.duplicated().any() or ((d.lower>d.estimate)|(d.upper<d.estimate)).any():raise ValueError('Invalid interval')
     if effect_scale=='ratio' and (d[['estimate','lower','upper']]<=0).any().any():raise ValueError('Ratio must be positive')
+    if type(decimals) is not int or not 0<=decimals<=5:raise ValueError('Decimals must be an integer from 0 to 5')
+    if compact:
+        from matplotlib.ticker import LogLocator, FuncFormatter
+        height=max(3.0,len(d)*.31+1.28)
+        fig=plt.figure(figsize=(8.2,height))
+        labels=fig.add_axes([.04,.19,.28,.62]);ax=fig.add_axes([.35,.19,.34,.62]);numbers=fig.add_axes([.73,.19,.25,.62])
+        yy=np.arange(len(d)); limits=(len(d)-.45,-.8)
+        for a in [labels,ax,numbers]: a.set_ylim(*limits)
+        for i,r in enumerate(d.itertuples()):
+            if i%2==0:
+                for a in [labels,ax,numbers]: a.axhspan(i-.45,i+.45,color='#F3F6F8',zorder=0,lw=0)
+            labels.text(.02,i,r.label,va='center',fontsize=9,color=palette[r.group])
+            ax.plot([r.lower,r.upper],[i,i],color=palette[r.group],lw=1.5)
+            ax.scatter(r.estimate,i,s=40,marker='D',color=palette[r.group],edgecolor='white',linewidth=.6,zorder=3)
+            numbers.text(.02,i,f'{r.estimate:.{decimals}f} [{r.lower:.{decimals}f}, {r.upper:.{decimals}f}]',va='center',fontsize=9)
+        labels.set_xlim(0,1);numbers.set_xlim(0,1);labels.axis('off');numbers.axis('off')
+        ax.axvline(null,color='#8593A0',ls='--',lw=.9,zorder=1)
+        if effect_scale=='ratio':
+            ax.set_xscale('log');ax.xaxis.set_major_locator(LogLocator(base=10,subs=(1,2,5)))
+            ax.xaxis.set_major_formatter(FuncFormatter(lambda x,pos:f'{x:g}'));ax.xaxis.set_minor_formatter(FuncFormatter(lambda x,pos:''))
+        ax.set_yticks([]);ax.set_xlabel(x_label);paper_axis(ax)
+        labels.text(.02,1.06,'Comparison',transform=labels.transAxes,weight='bold',fontsize=9)
+        numbers.text(.02,1.06,'Estimate [interval]',transform=numbers.transAxes,weight='bold',fontsize=9)
+        fig.text(.04,.91,title,fontsize=11,weight='bold');fig.text(.04,.065,interval_label,fontsize=8,color='#586672')
+        return stamp(fig,data,'publication_grouped_forest',palette=palette,effect_scale=effect_scale,interval_label=interval_label,
+                     x_label=x_label,compact=True,decimals=decimals,display_values='estimate and full supplied interval',demo_label_style='compact')
     yy=[];last=None;gap=0
     for i,g in enumerate(d.group):
         if last is not None and g!=last:gap+=.45
@@ -97,22 +123,23 @@ def plot_publication_forest(data,palette,*,x_label,interval_label,effect_scale,t
     fig.text(.32,.055,interval_label,color='#707A84',fontsize=8)
     return stamp(fig,data,'publication_grouped_forest',palette=palette,effect_scale=effect_scale,interval_label=interval_label,group_gaps=.45)
 
-def plot_feature_facets(data,*,value_label,limits,title='',ncols=3,point_size=2):
+def plot_feature_facets(data,*,value_label,limits,title='',ncols=3,point_size=2,continuous_colors=None):
     d=checked(data,['cell_id','x','y','feature','value'],['x','y','value'])
     if d.duplicated(['cell_id','feature']).any() or len(d)!=d.cell_id.nunique()*d.feature.nunique():raise ValueError('Complete cell-feature grid required')
     if (d.groupby('cell_id')[['x','y']].nunique()>1).any().any():raise ValueError('Coordinates must match across features')
     if len(limits)!=2 or limits[0]!=0 or not np.isfinite(limits).all() or limits[1]<=0 or (d.value<0).any() or d.value.max()>limits[1]:raise ValueError('Explicit nonnegative common limits must include all values')
     feats=list(dict.fromkeys(d.feature));nrows=int(np.ceil(len(feats)/ncols));fig,axs=plt.subplots(nrows,ncols,figsize=(ncols*2.5,nrows*2.6),squeeze=False,layout='constrained')
     norm=Normalize(*limits);artist=None
+    cmap=LinearSegmentedColormap.from_list('project_features',continuous_colors) if continuous_colors is not None else 'magma'
     for ax,f in zip(axs.ravel(),feats):
         z=d[d.feature==f];zero=z[z.value==0];pos=z[z.value>0]
         ax.scatter(zero.x,zero.y,s=point_size,c='#D8DDE2',lw=0,rasterized=True)
-        artist=ax.scatter(pos.x,pos.y,c=pos.value,s=point_size,cmap='magma',norm=norm,lw=0,rasterized=True)
+        artist=ax.scatter(pos.x,pos.y,c=pos.value,s=point_size,cmap=cmap,norm=norm,lw=0,rasterized=True)
         dx=max(float(d.x.max()-d.x.min()),1)*.03;dy=max(float(d.y.max()-d.y.min()),1)*.03
         ax.set(xlim=(d.x.min()-dx,d.x.max()+dx),ylim=(d.y.min()-dy,d.y.max()+dy),title=f,aspect='equal');ax.set_axis_off()
     for ax in axs.ravel()[len(feats):]:ax.set_axis_off()
     fig.colorbar(artist,ax=list(axs.ravel()),fraction=.02,pad=.025,label=value_label);fig.suptitle(title,fontsize=12)
-    return stamp(fig,data,'publication_stored_feature_facets',limits=list(limits),value_label=value_label,coordinates='unchanged',draw_order='zeros_then_positive_original_order',point_size=point_size,cmap='magma',point_layers_rasterized=True)
+    return stamp(fig,data,'publication_stored_feature_facets',limits=list(limits),value_label=value_label,coordinates='unchanged',draw_order='zeros_then_positive_original_order',point_size=point_size,cmap=continuous_colors if continuous_colors is not None else 'magma',point_layers_rasterized=True)
 
 def plot_raincloud(data,palette,*,y_label,unit_label,title='',density_min_n=20):
     d=checked(data,['sample_id','group','value'],['value']);palette_check(d.group,palette)

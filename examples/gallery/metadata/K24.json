@@ -1,0 +1,122 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K24",
+    "title": "相同观测的ECDF＋QQ与明确的生成密度",
+    "size_pt": [
+      1370,
+      550
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          440,
+          505
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          480,
+          45,
+          890,
+          505
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "3",
+        "label": "C",
+        "rect_pt": [
+          930,
+          45,
+          1345,
+          505
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "220dafd53d3a6a45818a163841de66c266c49c3ac7134727d24dcc5779fe4ab7",
+      "source_table_sha256": "b137feadcefaba97b6ccc4f150291d3bddfee22adbc28fc58a557c0800065030",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          440,
+          505
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "4f56bc73c70d5c17221914fb30186f0efa30d3f946f2c231c271f930b70ff6eb",
+      "source_table_sha256": "91ae012bae24fd171df7ba75a63301ca9dce24e7df12884d21893168c1b40438",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          480,
+          45,
+          890,
+          505
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "3",
+      "source_pdf_sha256": "02603fe67b65d358d029dc0256f3ee08e64da0c23cab66ceb1c6214217d7a6ae",
+      "source_table_sha256": "0baa6b8a2facb19f898d73237a5e4ba0ba720eda5049794e0949aead31e251b7",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "3",
+        "label": "C",
+        "rect_pt": [
+          930,
+          45,
+          1345,
+          505
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "b137feadcefaba97b6ccc4f150291d3bddfee22adbc28fc58a557c0800065030",
+    "2.tsv": "91ae012bae24fd171df7ba75a63301ca9dce24e7df12884d21893168c1b40438",
+    "3.tsv": "0baa6b8a2facb19f898d73237a5e4ba0ba720eda5049794e0949aead31e251b7",
+    "K24.pdf": "93887f16014d7a9f1f3248675fe4df5a322c3de63c4cdf676732aa8dc596036a",
+    "K24.png": "b76b6f90853b955153d9008415347572010e544885f24debda08e4e21c828697",
+    "K24.svg": "3ce32e2e46f5f2fdb6de3c9f75316d19bccc791bdc459e3ab5aad784b1377989"
+  },
+  "example_id": "K24",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "E10/E11各组相同28个值，QQ参考为标准正态j/29分位数。E12是生成这些合成样本的解析密度，不是样本KDE拟合。",
+  "component_ids": [
+    "E10",
+    "E11",
+    "E12"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

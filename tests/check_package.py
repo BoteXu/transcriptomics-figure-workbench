@@ -23,6 +23,7 @@ def main():
     entry=(SKILL/'SKILL.md').read_text(encoding='utf8')
     assert entry.startswith('---\n') and 'name: transcriptomics-figure-workbench' in entry
     assert (ROOT/'LICENSE').is_file() and (SKILL/'references/colorbrewer-license.txt').is_file()
+    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.2.0'
     files=[p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and 'dist' not in p.parts]
     for p in files:
         assert p.stat().st_size < 100_000_000, 'GitHub file size exceeded'
@@ -35,14 +36,30 @@ def main():
         if p.suffix=='.json': json.loads(p.read_text(encoding='utf8'))
     catalog=json.loads((GALLERY/'catalog.json').read_text(encoding='utf8'))
     items=catalog['preserved_examples']; groups=catalog['general_entries']
-    assert len(items)==168 and len(groups)==50
+    assert len(items)==236 and len(groups)==45
     ids=[i['id'] for i in items]; assert len(ids)==len(set(ids))
     flattened=[id_ for g in groups for id_ in g['members']]
     assert sorted(flattened)==sorted(ids), 'Lost or duplicate catalog member'
     assert {'P05','P10','P20a','R05','R25','K07','K15','C15','S03','T43','N12'} <= set(ids)
     for g in groups: assert g['default'] in g['members']
     counts=collections.Counter(i['role'] for i in items)
-    assert counts['palette']==15 and counts['protein']==3 and counts['combination']==20
+    assert counts['palette']==15 and counts['protein']==3 and counts['combination']==36
+    assert sum(i['curation']['decision']=='recommended' for i in items)==177
+    by_id={i['id']:i for i in items}
+    for item in items:
+        assert item['curation']['canonical'] in by_id
+        assert by_id[item['curation']['canonical']]['curation']['decision']=='recommended'
+    baseline=json.loads((ROOT/'docs/baseline-preservation-v020.json').read_text(encoding='utf8'))
+    assert len(baseline['ids'])==168
+    for old in baseline['ids']:
+        now=by_id[old['id']]
+        assert now['png_sha256']==old['png_sha256'], 'Original preview removed or changed'
+        if old['pdf_sha256']: assert now['pdf_sha256']==old['pdf_sha256']
+    ledger=json.loads((SKILL/'references/catalog-audit.json').read_text(encoding='utf8'))['entries']
+    assert sorted(x['id'] for x in ledger)==sorted(ids)
+    for row in ledger:
+        assert row['png_sha256']==by_id[row['id']]['png_sha256']
+        assert row['decision']==by_id[row['id']]['curation']['decision']
     assets=set()
     for item in items:
         assert item['reference'] is None, 'Original reference pixels included'
@@ -59,6 +76,21 @@ def main():
         if item['role']=='protein':
             assert meta['synthetic'] is False and meta['structure_source']['pdb_id']=='1EMA'
         elif item['role']!='palette': assert meta['synthetic'] is True
+    recipes=json.loads((SKILL/'references/combination-recipes.json').read_text(encoding='utf8'))
+    assert len(recipes['recipes'])==36 and len(recipes['supplemental_components'])==22
+    assert {r['id'] for r in recipes['recipes']}=={i['id'] for i in items if i['role']=='combination'}
+    for recipe in recipes['recipes']:
+        item=by_id[recipe['id']]
+        assert len(recipe['bundles'])==len(recipe['layout']['panels'])==len(item['component_links'])
+        for index,bundle in enumerate(recipe['bundles']):
+            assert sha(checked_path(bundle['prefix']+'.tsv'))==bundle['table_sha256']==sha(checked_path(item['component_tables'][index]))
+            metadata=json.loads(checked_path(bundle['metadata']).read_text(encoding='utf8'))
+            for ext in ('.png','.pdf','.svg','.tsv'):
+                file=checked_path(bundle['prefix']+ext)
+                assert sha(file)==metadata['output_sha256'][file.name]
+        for component in item['component_links']:
+            if component['url'].startswith('#'): assert component['url'][1:] in by_id
+            else:checked_path(component['url'])
     html=(GALLERY/'index.html').read_text(encoding='utf8')
     start=html.index('<script>const items=')+len('<script>const items=')
     inline=json.JSONDecoder().raw_decode(html[start:])[0]
@@ -82,7 +114,7 @@ def main():
     for name in ['all-previews.png','all-previews.jpg','all-previews.pdf','general-patterns.png','general-patterns.jpg','index.tsv']:
         assert (overview/name).is_file()
     lines=(overview/'index.tsv').read_text(encoding='utf8').splitlines()
-    assert len(lines)==169
+    assert len(lines)==237
     for line in lines[1:]: checked_path('overview/'+line.split('\t')[-1],ROOT/'examples')
     plots={}
     for p in (SKILL/'scripts').glob('figure_*.py'):

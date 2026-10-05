@@ -1,0 +1,27 @@
+{
+  "module": "figure_method_extensions",
+  "function": "plot_term_effect_circle",
+  "theme_mode": "theme_argument",
+  "params": {
+    "term_order": [
+      "BP01",
+      "BP02",
+      "BP03",
+      "BP04",
+      "BP05",
+      "BP06"
+    ],
+    "effect_limits": [
+      -2,
+      2
+    ],
+    "zscore_limits": [
+      -3,
+      3
+    ],
+    "significance_max": 6,
+    "zscore_definition": "Descriptive GOplot-style (n_up - n_down)/sqrt(n_members); supplied by the fixture, not calculated by the renderer",
+    "effect_label": "Supplied log2 fold change",
+    "title": "BP terms and member effects"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K30",
+    "title": "同一模型的四种诊断视角",
+    "size_pt": [
+      1050,
+      830
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          40,
+          500,
+          405
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          545,
+          40,
+          1030,
+          405
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "3",
+        "label": "C",
+        "rect_pt": [
+          20,
+          445,
+          500,
+          810
+        ],
+        "crop_software_labels": true
+      },
+      {
+        "id": "4",
+        "label": "D",
+        "rect_pt": [
+          545,
+          445,
+          1030,
+          810
+        ],
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "30980e0d50c684f793b15ec9099ed7e539aa7b2db3de8c856feffdb6de97116f",
+      "source_table_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          20,
+          40,
+          500,
+          405
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "a170f5541e773495f2620786386c8710abb95fc951f8a1ce4742c20ca4364494",
+      "source_table_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          545,
+          40,
+          1030,
+          405
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "3",
+      "source_pdf_sha256": "bc580b46114cf1cbb3dad82c95e1cbabed5d3030a8f8043b2023756731add29a",
+      "source_table_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "3",
+        "label": "C",
+        "rect_pt": [
+          20,
+          445,
+          500,
+          810
+        ],
+        "crop_software_labels": true
+      }
+    },
+    {
+      "id": "4",
+      "source_pdf_sha256": "4211203a936a098d11ee59a55e2c9639b6b9fae331f3a299310bf040fab7e2e8",
+      "source_table_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "4",
+        "label": "D",
+        "rect_pt": [
+          545,
+          445,
+          1030,
+          810
+        ],
+        "crop_software_labels": true
+      }
+    }
+  ],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+    "2.tsv": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+    "3.tsv": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+    "4.tsv": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+    "K30.pdf": "935a2d3c9c296a4b2eb7463abae6c56c6e003778eed0e0814c0c52b4905f880c",
+    "K30.png": "af80723d4e9b2c3c1ad037f4bb415316e7aa3edd1ecaee37610e248201c7387a",
+    "K30.svg": "4ba95ab853ed0bc472bffeb5210b8eb1a6d8383324e48dca08aad3d9e0fb67f8"
+  },
+  "example_id": "K30",
+  "example_kind": "synthetic_demonstration",
+  "relationship": "四个panel使用完全相同48对象、拟合值、残差、标准残差、leverage、Cook；QQ排序值与原标准残差相等。没有实际研究拟合或自动筛除。",
+  "component_ids": [
+    "M11a",
+    "M11b",
+    "M11c",
+    "M11d"
+  ],
+  "review_status": "PREVIEW_VISUALLY_REVIEWED",
+  "review_scope": "Complete layout and guide placement; no new analysis"
+}

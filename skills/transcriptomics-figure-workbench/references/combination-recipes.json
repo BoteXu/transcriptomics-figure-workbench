@@ -1,0 +1,2317 @@
+{
+  "schema_version": 1,
+  "recipes": [
+    {
+      "id": "K01",
+      "title": "亚群坐标＋marker 矩阵",
+      "relation": "同时看亚群位置与marker概括",
+      "bundles": [
+        {
+          "name": "T19",
+          "prefix": "figures/T19/T19",
+          "metadata": "metadata/T19.json",
+          "table_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+        },
+        {
+          "name": "marker_matrix",
+          "prefix": "components/marker_matrix/marker_matrix",
+          "metadata": "components/marker_matrix/marker_matrix.json",
+          "table_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+        }
+      ],
+      "layout": {
+        "id": "K01",
+        "title": "Subgroups and supplied marker matrix",
+        "size_pt": [
+          945,
+          445
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              450,
+              420
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              485,
+              38,
+              920,
+              420
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K02",
+      "title": "亚群坐标＋marker 原位置分面",
+      "relation": "在相同位置同时看分类与多个连续特征",
+      "bundles": [
+        {
+          "name": "T19",
+          "prefix": "figures/T19/T19",
+          "metadata": "metadata/T19.json",
+          "table_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+        },
+        {
+          "name": "marker_coordinates",
+          "prefix": "components/marker_coordinates/marker_coordinates",
+          "metadata": "components/marker_coordinates/marker_coordinates.json",
+          "table_sha256": "1cc3b14a3ef2b34f47ae0941fd18bdf651b8ee8234d06b060cb2e1a4d2876812"
+        }
+      ],
+      "layout": {
+        "id": "K02",
+        "title": "Subgroups and markers at the same stored coordinates",
+        "size_pt": [
+          1010,
+          445
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              400,
+              420
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              440,
+              38,
+              985,
+              420
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K03",
+      "title": "亚群＋marker＋组成",
+      "relation": "展示位置、特征与明确条件构成三个层次",
+      "bundles": [
+        {
+          "name": "T19",
+          "prefix": "figures/T19/T19",
+          "metadata": "metadata/T19.json",
+          "table_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+        },
+        {
+          "name": "marker_matrix",
+          "prefix": "components/marker_matrix/marker_matrix",
+          "metadata": "components/marker_matrix/marker_matrix.json",
+          "table_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+        },
+        {
+          "name": "T10",
+          "prefix": "figures/T10/T10",
+          "metadata": "metadata/T10.json",
+          "table_sha256": "9130d14084806dd08e74698fdd84d82fd23e008a1fdd24116d5d20aa07573f0d"
+        }
+      ],
+      "layout": {
+        "id": "K03",
+        "title": "Subgroups, marker matrix and supplied composition",
+        "size_pt": [
+          1275,
+          445
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              20,
+              38,
+              410,
+              420
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              440,
+              38,
+              830,
+              420
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "rect_pt": [
+              860,
+              38,
+              1250,
+              420
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K04",
+      "title": "同一观测：点／IQR＋雨云",
+      "relation": "比较同一数据的原始观测、中心与完整分布",
+      "bundles": [
+        {
+          "name": "point_interval",
+          "prefix": "components/point_interval/point_interval",
+          "metadata": "components/point_interval/point_interval.json",
+          "table_sha256": "f953c6bfbc81e875e1bb644fd899bb4a9953ebd1773ac9e9fb530cecb912044b"
+        },
+        {
+          "name": "raincloud",
+          "prefix": "components/raincloud/raincloud",
+          "metadata": "components/raincloud/raincloud.json",
+          "table_sha256": "f953c6bfbc81e875e1bb644fd899bb4a9953ebd1773ac9e9fb530cecb912044b"
+        }
+      ],
+      "layout": {
+        "id": "K04",
+        "title": "Same observations: points-IQR and raincloud",
+        "size_pt": [
+          945,
+          445
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              450,
+              420
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              485,
+              38,
+              920,
+              420
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K05",
+      "title": "雨云＋已有估计区间",
+      "relation": "对照分布与已经提供的估计范围",
+      "bundles": [
+        {
+          "name": "raincloud",
+          "prefix": "components/raincloud/raincloud",
+          "metadata": "components/raincloud/raincloud.json",
+          "table_sha256": "f953c6bfbc81e875e1bb644fd899bb4a9953ebd1773ac9e9fb530cecb912044b"
+        },
+        {
+          "name": "estimate_forest",
+          "prefix": "components/estimate_forest/estimate_forest",
+          "metadata": "components/estimate_forest/estimate_forest.json",
+          "table_sha256": "c2825c5d65c2b61533c220b63c900a390f841761a0b38616e1fb4c8c4c169a5d"
+        }
+      ],
+      "layout": {
+        "id": "K05",
+        "title": "Distribution and stored estimate bounds",
+        "size_pt": [
+          1005,
+          445
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              450,
+              420
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              485,
+              38,
+              980,
+              420
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K06",
+      "title": "分组条件估计＋有序响应",
+      "relation": "互补展示各条件水平和有序变化",
+      "bundles": [
+        {
+          "name": "T32",
+          "prefix": "figures/T32/T32",
+          "metadata": "metadata/T32.json",
+          "table_sha256": "3bbd9ccd7d5b7a9eac67473e44af3cc8724edfc1951cda3763cff448997a81b4"
+        },
+        {
+          "name": "T31",
+          "prefix": "figures/T31/T31",
+          "metadata": "metadata/T31.json",
+          "table_sha256": "f08972b71dba6e649481e2aa8bec179bf0fbbf65f4d0b289252a44655850031e"
+        }
+      ],
+      "layout": {
+        "id": "K06",
+        "title": "Grouped condition estimates and ordered response",
+        "size_pt": [
+          945,
+          445
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              450,
+              420
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              485,
+              38,
+              920,
+              420
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K07",
+      "title": "亚群＋marker 分面＋marker 汇总",
+      "relation": "在同一几何和汇总层次比较分类与特征",
+      "bundles": [
+        {
+          "name": "T19",
+          "prefix": "figures/T19/T19",
+          "metadata": "metadata/T19.json",
+          "table_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+        },
+        {
+          "name": "marker_coordinates",
+          "prefix": "components/marker_coordinates/marker_coordinates",
+          "metadata": "components/marker_coordinates/marker_coordinates.json",
+          "table_sha256": "1cc3b14a3ef2b34f47ae0941fd18bdf651b8ee8234d06b060cb2e1a4d2876812"
+        },
+        {
+          "name": "marker_matrix",
+          "prefix": "components/marker_matrix/marker_matrix",
+          "metadata": "components/marker_matrix/marker_matrix.json",
+          "table_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+        }
+      ],
+      "layout": {
+        "id": "K07",
+        "title": "Subgroups, markers at stored coordinates and fixed means",
+        "size_pt": [
+          1095,
+          640
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              20,
+              38,
+              420,
+              615
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              450,
+              38,
+              1070,
+              250
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "rect_pt": [
+              450,
+              290,
+              1070,
+              615
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K08",
+      "title": "亚群＋marker＋对象数量",
+      "relation": "同时看位置、特征模式与每组支持量",
+      "bundles": [
+        {
+          "name": "T19",
+          "prefix": "figures/T19/T19",
+          "metadata": "metadata/T19.json",
+          "table_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+        },
+        {
+          "name": "marker_counts",
+          "prefix": "components/marker_counts/marker_counts",
+          "metadata": "components/marker_counts/marker_counts.json",
+          "table_sha256": "c17c1220c6e7fdfd7159cff20f27959117085d2191bc07780c41bb3716e6e1dc"
+        }
+      ],
+      "layout": {
+        "id": "K08",
+        "title": "Subgroups, stored marker means and recorded object counts",
+        "size_pt": [
+          1075,
+          445
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              450,
+              420
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              485,
+              38,
+              1050,
+              420
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K09",
+      "title": "同对象坐标＋特征均值／比例点阵",
+      "relation": "分类位置与同一批对象的特征强度、覆盖比例同时展示",
+      "bundles": [
+        {
+          "name": "T19",
+          "prefix": "figures/T19/T19",
+          "metadata": "metadata/T19.json",
+          "table_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+        },
+        {
+          "name": "marker_fraction",
+          "prefix": "components/marker_fraction/marker_fraction",
+          "metadata": "components/marker_fraction/marker_fraction.json",
+          "table_sha256": "55e02200fefb346fe4b557740874cadee3048f7112684c2e508fb475976f029d"
+        }
+      ],
+      "layout": {
+        "id": "K09",
+        "title": "Coordinates plus same-object feature mean and detection fraction",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K10",
+      "title": "同一矩阵：热图＋趋势轮廓",
+      "relation": "色块比较整体模式，曲线比较行的相对轮廓与转折",
+      "bundles": [
+        {
+          "name": "marker_matrix",
+          "prefix": "components/marker_matrix/marker_matrix",
+          "metadata": "components/marker_matrix/marker_matrix.json",
+          "table_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+        },
+        {
+          "name": "marker_profiles",
+          "prefix": "components/marker_profiles/marker_profiles",
+          "metadata": "components/marker_profiles/marker_profiles.json",
+          "table_sha256": "3ea5f08f99ea9a447e87f0bc75780cbc26190774bd214b03d173694ab1938b9b"
+        }
+      ],
+      "layout": {
+        "id": "K10",
+        "title": "Same frozen matrix: tile and grouped profile views",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K11",
+      "title": "同对象位置＋数量＋组成",
+      "relation": "同时看位置、支持量、类别构成；位置重叠不会隐藏数量",
+      "bundles": [
+        {
+          "name": "T19",
+          "prefix": "figures/T19/T19",
+          "metadata": "metadata/T19.json",
+          "table_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+        },
+        {
+          "name": "subgroup_counts",
+          "prefix": "components/subgroup_counts/subgroup_counts",
+          "metadata": "components/subgroup_counts/subgroup_counts.json",
+          "table_sha256": "635d83a0a35272767f4194ef78b3ad914df60cf3ecc29fc4e3685c6c865023bc"
+        },
+        {
+          "name": "subgroup_shares",
+          "prefix": "components/subgroup_shares/subgroup_shares",
+          "metadata": "components/subgroup_shares/subgroup_shares.json",
+          "table_sha256": "48de7fc9962bff4287f3c5533a66bb6e6ace0405d76277ee88422e7d55a6844a"
+        }
+      ],
+      "layout": {
+        "id": "K11",
+        "title": "Same object table: location, recorded counts and shares",
+        "size_pt": [
+          1415,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "rect_pt": [
+              955,
+              38,
+              1390,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K12",
+      "title": "配对值＋同主体差值雨云＋已有估计",
+      "relation": "展示个体变化、差值分布与估计范围三个层次",
+      "bundles": [
+        {
+          "name": "paired",
+          "prefix": "components/paired/paired",
+          "metadata": "components/paired/paired.json",
+          "table_sha256": "29a401737bae3d319bc992e81c6a1154e8ab28a98f6c8a1d85f308602af09473"
+        },
+        {
+          "name": "paired_deltas",
+          "prefix": "components/paired_deltas/paired_deltas",
+          "metadata": "components/paired_deltas/paired_deltas.json",
+          "table_sha256": "39dfa0b492e5363fb5868ebc7a863f8d03eaa42a035cd4a16531f1b6c1873b21"
+        },
+        {
+          "name": "delta_estimate",
+          "prefix": "components/delta_estimate/delta_estimate",
+          "metadata": "components/delta_estimate/delta_estimate.json",
+          "table_sha256": "345608a360c824864e3abe70c5ffee77defcf53d8c2f3ed3a40cb74156a1df19"
+        }
+      ],
+      "layout": {
+        "id": "K12",
+        "title": "Paired values, same-subject deltas and stored delta bounds",
+        "size_pt": [
+          1415,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "rect_pt": [
+              955,
+              38,
+              1390,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K13",
+      "title": "同XY：气泡量值＋六边形支持量",
+      "relation": "气泡看附加量值，六边形看重叠区域到底有多少记录",
+      "bundles": [
+        {
+          "name": "T29",
+          "prefix": "figures/T29/T29",
+          "metadata": "metadata/T29.json",
+          "table_sha256": "1ab080a05132e6029978a2af999a43f948c59fd93958310787163fe60d7350a8"
+        },
+        {
+          "name": "bubble_hex",
+          "prefix": "components/bubble_hex/bubble_hex",
+          "metadata": "components/bubble_hex/bubble_hex.json",
+          "table_sha256": "bc0c162070fa693864493290ab460db4e993a651d0313f1065f092c64c470a91"
+        }
+      ],
+      "layout": {
+        "id": "K13",
+        "title": "Same XY objects: quantitative bubbles and occupied bins",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K14",
+      "title": "多实体网络＋同一邻接矩阵",
+      "relation": "网络看拓扑，矩阵精确定位边；两者可以互相核对",
+      "bundles": [
+        {
+          "name": "N01",
+          "prefix": "figures/N01/N01",
+          "metadata": "metadata/N01.json",
+          "table_sha256": "d8727314f4134564b9ffd7e8573d8e49d1d3a5b563976f7dbbe5bf00aacc6f68"
+        },
+        {
+          "name": "adjacency",
+          "prefix": "components/adjacency/adjacency",
+          "metadata": "components/adjacency/adjacency.json",
+          "table_sha256": "a4f7bce33fa9773f07574cccd7c33d433e51e9420ec40c65fdd935e124a817e9"
+        }
+      ],
+      "layout": {
+        "id": "K14",
+        "title": "Mixed-entity signed network plus its exact adjacency matrix",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K15",
+      "title": "同成员关系：二部网络＋矩阵＋UpSet",
+      "relation": "同时看共享对象、成员逐项关系与集合交集量",
+      "bundles": [
+        {
+          "name": "N03",
+          "prefix": "figures/N03/N03",
+          "metadata": "metadata/N03.json",
+          "table_sha256": "8add7c6263735b7c53000049dbd2eedb6593aa502e79225ed7cbaa8e512ef135"
+        },
+        {
+          "name": "membership",
+          "prefix": "components/membership/membership",
+          "metadata": "components/membership/membership.json",
+          "table_sha256": "c0f24a0f92e5265795c8bf2dbfa299e1b131442f0eea590c50c185380f0ba2d6"
+        },
+        {
+          "name": "membership_upset",
+          "prefix": "components/membership_upset/membership_upset",
+          "metadata": "components/membership_upset/membership_upset.json",
+          "table_sha256": "e263c1b45d4d513bc2041527fe1c8119ca72bceae8248713730940e38e93292b"
+        }
+      ],
+      "layout": {
+        "id": "K15",
+        "title": "Same known memberships: two-layer network, matrix and intersections",
+        "size_pt": [
+          1415,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "C",
+            "label": "C",
+            "rect_pt": [
+              955,
+              38,
+              1390,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K16",
+      "title": "集合重叠网络＋同集合条件分数",
+      "relation": "同时看集合之间关系和各条件的响应模式",
+      "bundles": [
+        {
+          "name": "N02",
+          "prefix": "figures/N02/N02",
+          "metadata": "metadata/N02.json",
+          "table_sha256": "9904209537a6bcc58014d73f2fd2364d1ea6e6cd84fa0e7563f71aff8654f51d"
+        },
+        {
+          "name": "term_scores",
+          "prefix": "components/term_scores/term_scores",
+          "metadata": "components/term_scores/term_scores.json",
+          "table_sha256": "b1ce6f89f2244517d24ab8800a2ad7d59e3f4159594970b8220a0fbd99184f95"
+        }
+      ],
+      "layout": {
+        "id": "K16",
+        "title": "Term-overlap topology and same-term condition score matrix",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K17",
+      "title": "同路径流带＋阶段边缘组成",
+      "relation": "流带看对应路径，堆叠看各阶段总体构成；分母一致",
+      "bundles": [
+        {
+          "name": "N05",
+          "prefix": "figures/N05/N05",
+          "metadata": "metadata/N05.json",
+          "table_sha256": "497982e006e28c9bf5f8696ee16e27911f0e48b9d592dea252ac37f436946a62"
+        },
+        {
+          "name": "stage_composition",
+          "prefix": "components/stage_composition/stage_composition",
+          "metadata": "components/stage_composition/stage_composition.json",
+          "table_sha256": "8fd008ce23af91e587f465e3243c31c63d1da0c2623b2ad0567f89b96f707f0d"
+        }
+      ],
+      "layout": {
+        "id": "K17",
+        "title": "Recorded path flow plus stage-wise composition of the same weights",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K18",
+      "title": "同关系：带宽弦图＋数量矩阵",
+      "relation": "宏观看分配，矩阵读局部数值；同一数量两种视角",
+      "bundles": [
+        {
+          "name": "N04",
+          "prefix": "figures/N04/N04",
+          "metadata": "metadata/N04.json",
+          "table_sha256": "c92072adec8cc59a5cc1e4e40edfbcab509ac8069a6009d2e88eb8f78116f4a3"
+        },
+        {
+          "name": "flow_matrix",
+          "prefix": "components/flow_matrix/flow_matrix",
+          "metadata": "components/flow_matrix/flow_matrix.json",
+          "table_sha256": "36c9c8529b7052d0a0c25caecbb1fe816ed8d4f0e1ff9d1faa62adaed0cf51a2"
+        }
+      ],
+      "layout": {
+        "id": "K18",
+        "title": "Weighted ribbon relations plus their original quantitative matrix",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K19",
+      "title": "已有富集三层图＋命中窗口",
+      "relation": "全景看已有信号，局部窗口看命中结构；窗口范围明示",
+      "bundles": [
+        {
+          "name": "N08",
+          "prefix": "figures/N08/N08",
+          "metadata": "metadata/N08.json",
+          "table_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a"
+        },
+        {
+          "name": "hit_window",
+          "prefix": "components/hit_window/hit_window",
+          "metadata": "components/hit_window/hit_window.json",
+          "table_sha256": "c1199ef0da5b604b26eae5f307909fe0af92db91a545e4b6dbdf15cebc34e7bb"
+        }
+      ],
+      "layout": {
+        "id": "K19",
+        "title": "Stored enrichment stack plus an explicitly selected hit window",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K20",
+      "title": "多状态矩阵＋同对象事件数量",
+      "relation": "矩阵看共现，数量看支持量；按对象去重避免事件累加",
+      "bundles": [
+        {
+          "name": "N07",
+          "prefix": "figures/N07/N07",
+          "metadata": "metadata/N07.json",
+          "table_sha256": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0"
+        },
+        {
+          "name": "event_counts",
+          "prefix": "components/event_counts/event_counts",
+          "metadata": "components/event_counts/event_counts.json",
+          "table_sha256": "3e32d3171211a5d391b2b63fbdd6fbbcd797ca5eec8c4ebe78945f91dfce557d"
+        }
+      ],
+      "layout": {
+        "id": "K20",
+        "title": "Multiple measured states plus counts of objects with any event",
+        "size_pt": [
+          950,
+          460
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              38,
+              460,
+              435
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              490,
+              38,
+              925,
+              435
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K21",
+      "title": "多组富集点阵＋对应条件的环形成员轨道＋术语表",
+      "relation": "同一术语在各条件是否报告、报告的比例和证据量；显式区分未报告与未检验；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+      "bundles": [
+        {
+          "name": "E01",
+          "prefix": "figures/E01/E01",
+          "metadata": "metadata/E01.json",
+          "table_sha256": "4693c93c12e01023e7b381077de14b371ff28a38db141660204b3bb417d43b4d"
+        },
+        {
+          "name": "E02",
+          "prefix": "figures/E02/E02",
+          "metadata": "metadata/E02.json",
+          "table_sha256": "28b3ea6ce0f2790b216fb41e7c835ed7ca46f7ce15254578ab05e03f85475eb6"
+        },
+        {
+          "name": "E06a",
+          "prefix": "figures/E06a/E06a",
+          "metadata": "metadata/E06a.json",
+          "table_sha256": "3a3b9715b686e4dfce46380033a99feff4fb4ba677ff040e349a39bff53f449e"
+        }
+      ],
+      "layout": {
+        "id": "K21",
+        "title": "多组富集点阵＋对应条件的环形成员轨道＋术语表",
+        "size_pt": [
+          1250,
+          680
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              740,
+              620
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              785,
+              45,
+              1225,
+              485
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "3",
+            "label": "",
+            "rect_pt": [
+              785,
+              505,
+              1225,
+              640
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K22",
+      "title": "集合交集＋四类环形轨道＋独立术语表",
+      "relation": "读出两个集合的独有项和共同项数量；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+      "bundles": [
+        {
+          "name": "E07",
+          "prefix": "figures/E07/E07",
+          "metadata": "metadata/E07.json",
+          "table_sha256": "b5acc8a21bb947937c2c878afde270f546ff15b36912a8cb18ce8c2d8c5d4e77"
+        },
+        {
+          "name": "E02",
+          "prefix": "figures/E02/E02",
+          "metadata": "metadata/E02.json",
+          "table_sha256": "28b3ea6ce0f2790b216fb41e7c835ed7ca46f7ce15254578ab05e03f85475eb6"
+        },
+        {
+          "name": "E06a",
+          "prefix": "figures/E06a/E06a",
+          "metadata": "metadata/E06a.json",
+          "table_sha256": "3a3b9715b686e4dfce46380033a99feff4fb4ba677ff040e349a39bff53f449e"
+        },
+        {
+          "name": "E03",
+          "prefix": "figures/E03/E03",
+          "metadata": "metadata/E03.json",
+          "table_sha256": "094b4e7dd73cc7eaa90187a5711ff183fb262b4ccee891c93bf0412775020ed0"
+        },
+        {
+          "name": "E06b",
+          "prefix": "figures/E06b/E06b",
+          "metadata": "metadata/E06b.json",
+          "table_sha256": "33c240e80f500ed804b53478451175881daa2467666f607b96063f36719e330b"
+        },
+        {
+          "name": "E04",
+          "prefix": "figures/E04/E04",
+          "metadata": "metadata/E04.json",
+          "table_sha256": "8f8a4b2b812dbd0ae32e42c8cbc74ed82162dd8e232ed8f7311ac846fbdd1356"
+        },
+        {
+          "name": "E06c",
+          "prefix": "figures/E06c/E06c",
+          "metadata": "metadata/E06c.json",
+          "table_sha256": "902d78994ddd1213f4b37a2161e033540c14f4a0ab4187a21773f926ad3408ee"
+        },
+        {
+          "name": "E05",
+          "prefix": "figures/E05/E05",
+          "metadata": "metadata/E05.json",
+          "table_sha256": "9ab791e054d30ac351af4b50fc82beef6e027e126cbc9417fe08d7dcc87b3b20"
+        },
+        {
+          "name": "E06d",
+          "prefix": "figures/E06d/E06d",
+          "metadata": "metadata/E06d.json",
+          "table_sha256": "b1704016fa8315eec4b4c2841c6c2104fb6298c9ade07f295f8c520783ad1de9"
+        }
+      ],
+      "layout": {
+        "id": "K22",
+        "title": "集合交集＋四类环形轨道＋独立术语表",
+        "size_pt": [
+          1370,
+          1040
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              440,
+              410
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              480,
+              45,
+              890,
+              470
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "3",
+            "label": "",
+            "rect_pt": [
+              930,
+              100,
+              1345,
+              350
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "4",
+            "label": "C",
+            "rect_pt": [
+              25,
+              515,
+              440,
+              895
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "5",
+            "label": "",
+            "rect_pt": [
+              25,
+              915,
+              440,
+              1015
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "6",
+            "label": "D",
+            "rect_pt": [
+              480,
+              515,
+              890,
+              895
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "7",
+            "label": "",
+            "rect_pt": [
+              480,
+              915,
+              890,
+              1015
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "8",
+            "label": "E",
+            "rect_pt": [
+              930,
+              515,
+              1345,
+              895
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "9",
+            "label": "",
+            "rect_pt": [
+              930,
+              915,
+              1345,
+              1015
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K23",
+      "title": "相同成员关系的弦图＋精确矩阵＋集合冗余网络",
+      "relation": "看哪些术语共享成员，并查出这些成员的效应方向；弦图中相同关系的精确逐格查询和成员覆盖度；选定条目的成员重叠与冗余，保留所有条目",
+      "bundles": [
+        {
+          "name": "E08",
+          "prefix": "figures/E08/E08",
+          "metadata": "metadata/E08.json",
+          "table_sha256": "553ee5a3570c439b9644dffea3f4ac02a54dacf4400174be3fa4675c9d0da354"
+        },
+        {
+          "name": "E09",
+          "prefix": "figures/E09/E09",
+          "metadata": "metadata/E09.json",
+          "table_sha256": "90ffce26fe5840f5fd2ed1851b34c23e2bf4f3b4e0de1f3a5807a7a28a5a680e"
+        },
+        {
+          "name": "E23",
+          "prefix": "figures/E23/E23",
+          "metadata": "metadata/E23.json",
+          "table_sha256": "bfd52c3481ca77d69e1e915ea991457884bc2fdf12007bef8ba9f5e7b825588e"
+        }
+      ],
+      "layout": {
+        "id": "K23",
+        "title": "相同成员关系的弦图＋精确矩阵＋集合冗余网络",
+        "size_pt": [
+          1370,
+          660
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              450,
+              615
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              480,
+              45,
+              860,
+              615
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "rect_pt": [
+              890,
+              45,
+              1345,
+              615
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K24",
+      "title": "相同观测的ECDF＋QQ与明确的生成密度",
+      "relation": "全分布位置、尾部和跨组差异；不依赖分箱；偏移、尺度差异和尾部偏离；多组的位置、宽度及分布形状",
+      "bundles": [
+        {
+          "name": "E10",
+          "prefix": "figures/E10/E10",
+          "metadata": "metadata/E10.json",
+          "table_sha256": "b137feadcefaba97b6ccc4f150291d3bddfee22adbc28fc58a557c0800065030"
+        },
+        {
+          "name": "E11",
+          "prefix": "figures/E11/E11",
+          "metadata": "metadata/E11.json",
+          "table_sha256": "91ae012bae24fd171df7ba75a63301ca9dce24e7df12884d21893168c1b40438"
+        },
+        {
+          "name": "E12",
+          "prefix": "figures/E12/E12",
+          "metadata": "metadata/E12.json",
+          "table_sha256": "0baa6b8a2facb19f898d73237a5e4ba0ba720eda5049794e0949aead31e251b7"
+        }
+      ],
+      "layout": {
+        "id": "K24",
+        "title": "相同观测的ECDF＋QQ与明确的生成密度",
+        "size_pt": [
+          1370,
+          550
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              440,
+              505
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              480,
+              45,
+              890,
+              505
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "rect_pt": [
+              930,
+              45,
+              1345,
+              505
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K25",
+      "title": "相同配对对象的XY＋Bland–Altman差值",
+      "relation": "两种测量的取值范围与关系，和差值相合图联合查看；量程相关偏差与个体差值分布",
+      "bundles": [
+        {
+          "name": "E24",
+          "prefix": "figures/E24/E24",
+          "metadata": "metadata/E24.json",
+          "table_sha256": "624cef0005b8cb49310464d184f962749fcdeeeb2b1c6754013f76d18adcc761"
+        },
+        {
+          "name": "E14",
+          "prefix": "figures/E14/E14",
+          "metadata": "metadata/E14.json",
+          "table_sha256": "0708e92e613bfdf1dbb98d74a71e8213ee0829cf0b49831653baf1fbe232938c"
+        }
+      ],
+      "layout": {
+        "id": "K25",
+        "title": "相同配对对象的XY＋Bland–Altman差值",
+        "size_pt": [
+          1030,
+          590
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              510,
+              535
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              545,
+              45,
+              1005,
+              535
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K26",
+      "title": "协变量平衡诊断＋调整阶段的已有模型估计",
+      "relation": "逐协变量诊断调整前后的观测平衡变化；逐行对比效应方向、大小与区间，精确读出所有数值",
+      "bundles": [
+        {
+          "name": "E13",
+          "prefix": "figures/E13/E13",
+          "metadata": "metadata/E13.json",
+          "table_sha256": "61c0a2e376f82311d7ef6264f4bc05bb215f7fc63fc1d2abcacd36db277340b3"
+        },
+        {
+          "name": "E21",
+          "prefix": "figures/E21/E21",
+          "metadata": "metadata/E21.json",
+          "table_sha256": "68cb15dc00ee3e89619c44d1791ade9feeae0b6bd25a015a5b3f19a30cf82f41"
+        }
+      ],
+      "layout": {
+        "id": "K26",
+        "title": "协变量平衡诊断＋调整阶段的已有模型估计",
+        "size_pt": [
+          1070,
+          550
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              515,
+              495
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              550,
+              45,
+              1045,
+              495
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K27",
+      "title": "相同十二对象的生存结果＋个体随访",
+      "relation": "随时间的概率变化、不确定性与仍被随访的人数；个体随访长度、断续区间和事件时序",
+      "bundles": [
+        {
+          "name": "E15",
+          "prefix": "figures/E15/E15",
+          "metadata": "metadata/E15.json",
+          "table_sha256": "6c744dd7234e9b7cf001dddbb1913d31810f897c8e6a974c7f5f7c7ade23f681"
+        },
+        {
+          "name": "E16",
+          "prefix": "figures/E16/E16",
+          "metadata": "metadata/E16.json",
+          "table_sha256": "9efe4e56a132f71cd0114df44dd6b95b3e1ba6cc3b106d1544704521f49fa968"
+        }
+      ],
+      "layout": {
+        "id": "K27",
+        "title": "相同十二对象的生存结果＋个体随访",
+        "size_pt": [
+          1130,
+          650
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              555,
+              605
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              590,
+              45,
+              1105,
+              605
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K28",
+      "title": "相同对象的亚群＋marker＋已有向量场",
+      "relation": "向量和marker数据对应哪个已有亚群或身份；坐标中已计算局部方向与幅度；每个身份中的已有连续特征位置，与分类/向量图共同查询",
+      "bundles": [
+        {
+          "name": "E25",
+          "prefix": "figures/E25/E25",
+          "metadata": "metadata/E25.json",
+          "table_sha256": "8049625f92c105285abff7fe9bbc72bdc4dbbfc6ac21b873365f15e4fed8caed"
+        },
+        {
+          "name": "E18",
+          "prefix": "figures/E18/E18",
+          "metadata": "metadata/E18.json",
+          "table_sha256": "e4a004b89fedbe6485728c418d354c7a8891081a47692c71000fd4700205c06a"
+        },
+        {
+          "name": "E26",
+          "prefix": "figures/E26/E26",
+          "metadata": "metadata/E26.json",
+          "table_sha256": "863cf5d165ed577b07c16d101f9f8f1adeb1fd0a4426cfdbe390dabcfc7c2ebc"
+        }
+      ],
+      "layout": {
+        "id": "K28",
+        "title": "相同对象的亚群＋marker＋已有向量场",
+        "size_pt": [
+          1100,
+          880
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              535,
+              410
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              575,
+              45,
+              1075,
+              410
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "rect_pt": [
+              25,
+              465,
+              1075,
+              835
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K29",
+      "title": "全局关联＋同一变异的局部轨道",
+      "relation": "全基因组已有信号位置与局部聚集；局部信号与多条轨道对应；未知LD单独标识",
+      "bundles": [
+        {
+          "name": "E28",
+          "prefix": "figures/E28/E28",
+          "metadata": "metadata/E28.json",
+          "table_sha256": "5888986efd10441b40e1db20faf93b2cbcebec0748ead29938ced21e59fc41b6"
+        },
+        {
+          "name": "E29",
+          "prefix": "figures/E29/E29",
+          "metadata": "metadata/E29.json",
+          "table_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2"
+        }
+      ],
+      "layout": {
+        "id": "K29",
+        "title": "全局关联＋同一变异的局部轨道",
+        "size_pt": [
+          1080,
+          650
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              20,
+              45,
+              550,
+              585
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              585,
+              45,
+              1060,
+              605
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K30",
+      "title": "同一模型的四种诊断视角",
+      "relation": "同时检查残差形态、分布、尺度和高影响对象",
+      "bundles": [
+        {
+          "name": "M11a",
+          "prefix": "figures/M11a/M11a",
+          "metadata": "metadata/M11a.json",
+          "table_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+        },
+        {
+          "name": "M11b",
+          "prefix": "figures/M11b/M11b",
+          "metadata": "metadata/M11b.json",
+          "table_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+        },
+        {
+          "name": "M11c",
+          "prefix": "figures/M11c/M11c",
+          "metadata": "metadata/M11c.json",
+          "table_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+        },
+        {
+          "name": "M11d",
+          "prefix": "figures/M11d/M11d",
+          "metadata": "metadata/M11d.json",
+          "table_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+        }
+      ],
+      "layout": {
+        "id": "K30",
+        "title": "同一模型的四种诊断视角",
+        "size_pt": [
+          1050,
+          830
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              20,
+              40,
+              500,
+              405
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              545,
+              40,
+              1030,
+              405
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "3",
+            "label": "C",
+            "rect_pt": [
+              20,
+              445,
+              500,
+              810
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "4",
+            "label": "D",
+            "rect_pt": [
+              545,
+              445,
+              1030,
+              810
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K31",
+      "title": "同一研究的完整区间＋效应精度",
+      "relation": "精度图可回到每一研究的完整估计与区间；效应估计与精度分布，核对小样本与不对称结构",
+      "bundles": [
+        {
+          "name": "E30b",
+          "prefix": "figures/E30b/E30b",
+          "metadata": "metadata/E30b.json",
+          "table_sha256": "de7876f7f8f18c60d3117d54ec82ff53edeab72c84b4000c2781a51b98a8c810"
+        },
+        {
+          "name": "E30",
+          "prefix": "figures/E30/E30",
+          "metadata": "metadata/E30.json",
+          "table_sha256": "cfc46deb87b7b44514a4678d52f0a3ada3cf7f9bed5881222a414a75bdc106cf"
+        }
+      ],
+      "layout": {
+        "id": "K31",
+        "title": "同一研究的完整区间＋效应精度",
+        "size_pt": [
+          1050,
+          700
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              20,
+              40,
+              510,
+              650
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              550,
+              90,
+              1030,
+              590
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K32",
+      "title": "同一空间背景的身份＋分子数量",
+      "relation": "同一物理位置的身份与测量",
+      "bundles": [
+        {
+          "name": "E33a",
+          "prefix": "figures/E33a/E33a",
+          "metadata": "metadata/E33a.json",
+          "table_sha256": "1398806bf1ef7fb2cae3b1d7775ef50fa68b6849e0943b97d0c08c3a703a0c4f"
+        },
+        {
+          "name": "E33b",
+          "prefix": "figures/E33b/E33b",
+          "metadata": "metadata/E33b.json",
+          "table_sha256": "1398806bf1ef7fb2cae3b1d7775ef50fa68b6849e0943b97d0c08c3a703a0c4f"
+        }
+      ],
+      "layout": {
+        "id": "K32",
+        "title": "同一空间背景的身份＋分子数量",
+        "size_pt": [
+          1050,
+          550
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              20,
+              45,
+              510,
+              505
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              550,
+              45,
+              1030,
+              505
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K33",
+      "title": "多组学因子的层间解释量＋特征载荷",
+      "relation": "每个因子在哪些层解释更多变异；因子由哪些分子特征共同构成",
+      "bundles": [
+        {
+          "name": "M02",
+          "prefix": "figures/M02/M02",
+          "metadata": "metadata/M02.json",
+          "table_sha256": "a2fdfaee95ad701f7bf719852d97056d5164b7eae43fd3e9ac8a3de4653fd5ba"
+        },
+        {
+          "name": "M03",
+          "prefix": "figures/M03/M03",
+          "metadata": "metadata/M03.json",
+          "table_sha256": "d4455aa7078554a03c59d8817d97536b5734d6d09518de07f5e6595238eef6ab"
+        }
+      ],
+      "layout": {
+        "id": "K33",
+        "title": "多组学因子的层间解释量＋特征载荷",
+        "size_pt": [
+          1000,
+          560
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              20,
+              45,
+              470,
+              510
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              515,
+              45,
+              980,
+              510
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K34",
+      "title": "多组学对象分数＋特征相关投影",
+      "relation": "各模态的组间位置及对象对应；不同模态特征指向哪些成分方向",
+      "bundles": [
+        {
+          "name": "M04",
+          "prefix": "figures/M04/M04",
+          "metadata": "metadata/M04.json",
+          "table_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d"
+        },
+        {
+          "name": "M05",
+          "prefix": "figures/M05/M05",
+          "metadata": "metadata/M05.json",
+          "table_sha256": "b19562723275c14ad315db2eef27d45c72e4c466ce13094c9be8a0bd44c3790e"
+        }
+      ],
+      "layout": {
+        "id": "K34",
+        "title": "多组学对象分数＋特征相关投影",
+        "size_pt": [
+          1140,
+          610
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              20,
+              70,
+              675,
+              530
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              715,
+              45,
+              1120,
+              565
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K35",
+      "title": "色谱读出＋实测与参考碎片谱",
+      "relation": "峰形、保留时间和不同条件的曲线位置；实测与参考碎片的位置和强度分布",
+      "bundles": [
+        {
+          "name": "M07",
+          "prefix": "figures/M07/M07",
+          "metadata": "metadata/M07.json",
+          "table_sha256": "d8742cfa0fa3e40c6a4bc53e74301ccf5e8df762145768fb1b5ae83e7855763e"
+        },
+        {
+          "name": "M06",
+          "prefix": "figures/M06/M06",
+          "metadata": "metadata/M06.json",
+          "table_sha256": "a68c4670b9548758c5dac979ccb61ebb04f21d83310c7745fd49f271ec9ed6cd"
+        }
+      ],
+      "layout": {
+        "id": "K35",
+        "title": "色谱读出＋实测与参考碎片谱",
+        "size_pt": [
+          1080,
+          570
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              20,
+              45,
+              530,
+              525
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              570,
+              45,
+              1060,
+              525
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K36",
+      "title": "通路数量底图＋标记组成",
+      "relation": "将数量变化定位到功能图中的位置；各样本标记组成",
+      "bundles": [
+        {
+          "name": "M09",
+          "prefix": "figures/M09/M09",
+          "metadata": "metadata/M09.json",
+          "table_sha256": "bce2b60cd33080d2dec4b3ece8925cdc0b1f4c88ad2269baf2e6d0596144876c"
+        },
+        {
+          "name": "M10",
+          "prefix": "figures/M10/M10",
+          "metadata": "metadata/M10.json",
+          "table_sha256": "314fcb38df709ac3a0c2d20e9f52dcaf37ae91f680e262aa56799fd5450a40c6"
+        }
+      ],
+      "layout": {
+        "id": "K36",
+        "title": "通路数量底图＋标记组成",
+        "size_pt": [
+          1080,
+          610
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "1",
+            "label": "A",
+            "rect_pt": [
+              20,
+              45,
+              610,
+              565
+            ],
+            "crop_software_labels": true
+          },
+          {
+            "id": "2",
+            "label": "B",
+            "rect_pt": [
+              655,
+              75,
+              1060,
+              535
+            ],
+            "crop_software_labels": true
+          }
+        ]
+      }
+    }
+  ],
+  "supplemental_components": [
+    {
+      "id": "marker_matrix",
+      "prefix": "components/marker_matrix/marker_matrix",
+      "metadata": "components/marker_matrix/marker_matrix.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "marker_coordinates",
+      "prefix": "components/marker_coordinates/marker_coordinates",
+      "metadata": "components/marker_coordinates/marker_coordinates.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "point_interval",
+      "prefix": "components/point_interval/point_interval",
+      "metadata": "components/point_interval/point_interval.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "raincloud",
+      "prefix": "components/raincloud/raincloud",
+      "metadata": "components/raincloud/raincloud.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "estimate_forest",
+      "prefix": "components/estimate_forest/estimate_forest",
+      "metadata": "components/estimate_forest/estimate_forest.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "marker_counts",
+      "prefix": "components/marker_counts/marker_counts",
+      "metadata": "components/marker_counts/marker_counts.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "marker_fraction",
+      "prefix": "components/marker_fraction/marker_fraction",
+      "metadata": "components/marker_fraction/marker_fraction.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "marker_profiles",
+      "prefix": "components/marker_profiles/marker_profiles",
+      "metadata": "components/marker_profiles/marker_profiles.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "subgroup_counts",
+      "prefix": "components/subgroup_counts/subgroup_counts",
+      "metadata": "components/subgroup_counts/subgroup_counts.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "subgroup_shares",
+      "prefix": "components/subgroup_shares/subgroup_shares",
+      "metadata": "components/subgroup_shares/subgroup_shares.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "paired",
+      "prefix": "components/paired/paired",
+      "metadata": "components/paired/paired.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "paired_deltas",
+      "prefix": "components/paired_deltas/paired_deltas",
+      "metadata": "components/paired_deltas/paired_deltas.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "delta_estimate",
+      "prefix": "components/delta_estimate/delta_estimate",
+      "metadata": "components/delta_estimate/delta_estimate.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "bubble_hex",
+      "prefix": "components/bubble_hex/bubble_hex",
+      "metadata": "components/bubble_hex/bubble_hex.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "adjacency",
+      "prefix": "components/adjacency/adjacency",
+      "metadata": "components/adjacency/adjacency.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "membership",
+      "prefix": "components/membership/membership",
+      "metadata": "components/membership/membership.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "membership_upset",
+      "prefix": "components/membership_upset/membership_upset",
+      "metadata": "components/membership_upset/membership_upset.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "term_scores",
+      "prefix": "components/term_scores/term_scores",
+      "metadata": "components/term_scores/term_scores.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "stage_composition",
+      "prefix": "components/stage_composition/stage_composition",
+      "metadata": "components/stage_composition/stage_composition.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "flow_matrix",
+      "prefix": "components/flow_matrix/flow_matrix",
+      "metadata": "components/flow_matrix/flow_matrix.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "hit_window",
+      "prefix": "components/hit_window/hit_window",
+      "metadata": "components/hit_window/hit_window.json",
+      "source_script_saved": true
+    },
+    {
+      "id": "event_counts",
+      "prefix": "components/event_counts/event_counts",
+      "metadata": "components/event_counts/event_counts.json",
+      "source_script_saved": true
+    }
+  ]
+}
