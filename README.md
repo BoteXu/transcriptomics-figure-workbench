@@ -2,9 +2,9 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-当前版本 **v0.2.0**。名称保留历史兼容性；支持的数据表达已经扩展至多组学、统计结果、关联网络、模型解释与计算生物学。
+当前版本 **v0.2.1**。名称保留历史兼容性；支持的数据表达已经扩展至多组学、统计结果、关联网络、模型解释与计算生物学。
 
-[下载安装包](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/latest) · [全部图PDF示意总览](examples/overview/all-previews.pdf) · [全部图长图](examples/overview/all-previews.jpg) · [通用画法总览](examples/overview/general-patterns.jpg) · [数据需求索引](examples/overview/index.tsv)
+[下载安装包](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/latest) · [去重画法与组合PDF](examples/overview/visualization-overview.pdf) · [去重示意长图](examples/overview/visualization-overview.jpg) · [通用画法总览](examples/overview/general-patterns.jpg) · [数据需求索引](examples/overview/index.tsv)
 
 ![通用画法总览](examples/overview/general-patterns.jpg)
 
@@ -12,19 +12,21 @@
 
 | 内容 | 数量与含义 |
 |---|---|
-| 通用导航入口 | 45：43 个数据绘图/组合入口、原生结构入口、色卡库入口 |
-| 可查看预览 | 236：完整保留旧168个，另增52个独立示例、16个组合；共36个组合、15套纯色卡、3个真实公共坐标结构示例 |
-| Python 绘图函数 | 95：保留先前68个，新增27个冻结结果展示函数 |
+| 主目录 | 92 个画法与组合：68 个通用表达入口、24 个组合入口；另有15套色卡、3个结构示例和1个附表入口 |
+| 保留来源 | 244 个稳定编号；旧236个PNG/PDF原字节保留；包含40张实际组合、15套色卡、3个公共坐标结构示例 |
+| Python 绘图函数 | 100；28个历史R对应函数另行保留，函数数不等于入口数 |
 | 历史 R 对应函数 | 28；不宣称所有 Python 新功能都有 R 对应 |
-| 全部图 PDF | 20 页，包含全部 236 个稳定编号 |
+| 示意图总览 | 主总览只放各入口的唯一代表；[244个来源档案](examples/overview/source-archive-v021.pdf)另列重复与历史示例 |
 
-默认推荐177个示例；59个参数变体或旧样式可勾选查看。全部稳定编号、旧审美意见与文件保留。P19/P20旧森林图退出默认推荐，使用E21紧凑区间＋数字列。
+默认目录按视觉编码去重；数据标签、色卡、坐标尺度和重复分面不增加画法数量。T14/T18、P21a/P21b、M02/M03等归入通用入口，亚群与marker、网络与矩阵等组合变体放在入口内选择。原编号、输入契约、导出文件和浏览器意见键完整保留。
 
 这些数量是不同维度的清单，不能相加当作算法数。同类柱状图、折线图、热图合并到通用画法，保留有意义的变体与组合。雨云图、带堆积边际分布的火山图、精细森林图、相关性矩阵/网络、亚群与 marker 联合视图都保留。
 
 每个预览说明需要什么数据、能表达什么、怎么画、哪些审美参数可调，以及使用边界。全部图片是自行生成的示例；除明确标注的公共蛋白坐标外，数据用于合成演示。原始参考图片和私人研究结果不随包分发。
 
 ## 本版增量和完整检查
+
+本轮补充成员→条目曲线与评分气泡、双量值三角格、矩形/环形层次树、同对象可加量堆叠，以及4张集合/通路/网络/模块组合。14个独立panel都保存表格、参数与矢量导出。[WGCNA绘图路由](skills/transcriptomics-figure-workbench/references/wgcna-visualization-router.md)列出诊断、树、模块性状、TOM/adjacency、MM/GS及模块网络需要的数据；不执行这些上游分析。
 
 新增富集点阵、GO成员效应环形、成员弦/矩阵/重叠网络、ECDF/QQ、协变量平衡、Bland–Altman、已有生存与个体随访、分析规格、已有向量场、三元组成、全局/局部关联轨道、漏斗、数量层级、嵌套区间与四种冻结模型诊断。
 
@@ -36,7 +38,7 @@
 
 任选一种方式：
 
-1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.2.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
+1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.2.1.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
 2. 在 Codex 中使用 skill-installer，指定仓库 `BoteXu/transcriptomics-figure-workbench` 和路径 `skills/transcriptomics-figure-workbench`。
 3. 克隆仓库，只复制 `skills/transcriptomics-figure-workbench/` 至自己的 skills 目录。
 
@@ -84,9 +86,9 @@ python skills/transcriptomics-figure-workbench/scripts/render_reference_table.py
 
 整批独立 panel 使用 `render_project_panels.py --manifest INPUT_MANIFEST --theme PROJECT_THEME --output NEW_OUTPUT_DIRECTORY`；输入结构见 [课题样式说明](skills/transcriptomics-figure-workbench/references/project-style.md)。组合使用 `compose_panels.py`，兼容关系见 [组合路由](skills/transcriptomics-figure-workbench/references/combinations-router.md)。R 基础函数见 [代码配方](skills/transcriptomics-figure-workbench/references/code-recipes.md)；原生蛋白结构使用已有结构查看器或 PyMOL，并明确来源、链与残基。
 
-新增固定适配器：`render_frozen_table.py ADAPTER --input INPUT.tsv --style STYLE.json --meta META.json --theme PROJECT_THEME.json --output NEW_OUTPUT_DIRECTORY --id FIGURE_ID`。38个注册适配器保持对象字符串与数值字段分离，不调用任意模块或执行科学分析。
+新增固定适配器：`render_frozen_table.py ADAPTER --input INPUT.tsv --style STYLE.json --meta META.json --theme PROJECT_THEME.json --output NEW_OUTPUT_DIRECTORY --id FIGURE_ID`。43个注册适配器保持对象字符串与数值字段分离，不调用任意模块或执行科学分析。
 
-36个组合均有已保存的 [布局与组件注册表](skills/transcriptomics-figure-workbench/references/combination-recipes.json)：`compose_catalog_examples.py --gallery examples/gallery --all --output NEW_OUTPUT_DIRECTORY` 可重建全部组合。原组合的22个辅助panel也保存了独立导出、输入表、设置和 `render_saved_components.py` 重绘入口。图库中的“单独Panel”链接分别打开各组件。
+40个组合均有已保存的 [布局与组件注册表](skills/transcriptomics-figure-workbench/references/combination-recipes.json)：`compose_catalog_examples.py --gallery examples/gallery --all --output NEW_OUTPUT_DIRECTORY` 可重建全部组合。组合的32个辅助panel也保存了独立导出、输入表、设置和 `render_saved_components.py` 重绘入口。图库中的“单独Panel”链接分别打开各组件。
 
 最小依赖版本是声明范围，不代表每个组合都已在所有版本验证。实际发布检查和历史测试范围见 [release-validation.md](docs/release-validation.md)。
 
@@ -102,4 +104,4 @@ python skills/transcriptomics-figure-workbench/scripts/render_reference_table.py
 
 ---
 
-**English:** A Codex skill and frozen-table scientific plotting workbench. Choose visualizations by input shape and intended expression, retain useful legacy forms and standalone/composite panels, apply one project palette and typography configuration, and export traceable bundles without silently rerunning upstream research. The gallery contains 236 stable previews (177 recommended; 59 optional parameter/old-style examples) and 15 attributed color cards. Python implements 95 plot functions; 28 historical R counterparts are retained. Native protein examples use explicit public coordinates. Installation and software tests do not establish scientific validity.
+**English:** A Codex skill for scientific figures from frozen results. The deduplicated primary directory contains 68 drawing families and 24 composition entries, with meaningful modes inside each entry. All 244 source IDs remain accessible, including 40 saved compositions, 15 attributed color cards and 3 native public-coordinate examples. Python saves 100 plot functions; 28 historical R counterparts remain. Fourteen new linked-display panels add membership curves, two-metric triangle cells and hierarchy tracks, with WGCNA-specific input guidance. Plotting, synthetic tests and visual quality do not establish scientific validity.

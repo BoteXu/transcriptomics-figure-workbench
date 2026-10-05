@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "baseline_count": 168,
   "entries": [
     {
@@ -9,7 +9,7 @@
       "role": "legacy",
       "decision": "parameter_variant",
       "canonical": "P04",
-      "reason": "同一原始点，可选中心/IQR概括；IQR不能当置信区间。",
+      "reason": "合并到 分组原始点与中心区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "sample_id",
         "group",
@@ -54,16 +54,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D01"
     },
     {
       "id": "P02",
       "family": "G01",
       "title": "分组质量／数值分布 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P02",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "T36",
+      "reason": "合并到 箱线概括；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "cell_id",
         "sample",
@@ -104,7 +105,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D02"
     },
     {
       "id": "P03",
@@ -113,7 +115,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P03",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "subject_id",
         "condition",
@@ -163,7 +165,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D08"
     },
     {
       "id": "P04",
@@ -172,7 +175,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P04",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "sample_id",
         "group",
@@ -224,7 +227,8 @@
         1440
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D01"
     },
     {
       "id": "P05",
@@ -233,7 +237,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P05",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "sample_id",
         "group",
@@ -292,7 +296,8 @@
         1440
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D03"
     },
     {
       "id": "P06",
@@ -300,8 +305,8 @@
       "title": "分类降维／坐标散点 · 默认形式",
       "role": "legacy",
       "decision": "replace_style",
-      "canonical": "E25",
-      "reason": "相同类别坐标散点，优先外置图例；椭圆/中心连线另保留。",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "cell_id",
         "x",
@@ -349,7 +354,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D09"
     },
     {
       "id": "P07",
@@ -358,7 +364,7 @@
       "role": "legacy",
       "decision": "replace_style",
       "canonical": "E26",
-      "reason": "同一坐标的连续特征分面，优先共用明确色限的统一主题。",
+      "reason": "合并到 相同坐标的连续特征分面；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "cell_id",
         "x",
@@ -410,7 +416,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D13"
     },
     {
       "id": "P08",
@@ -418,8 +425,8 @@
       "title": "基础火山图 · 默认形式",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "T24",
-      "reason": "基础火山图复用通用画法；侧标签、堆积边际为独立表达保留。",
+      "canonical": "P09",
+      "reason": "合并到 效应与证据火山；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "gene",
         "log2FC",
@@ -461,7 +468,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D54"
     },
     {
       "id": "P09",
@@ -470,7 +478,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P09",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "gene",
         "log2FC",
@@ -532,7 +540,8 @@
         1440
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D54"
     },
     {
       "id": "P10",
@@ -541,7 +550,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P10",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "gene",
         "log2FC",
@@ -614,7 +623,8 @@
         2190
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D55"
     },
     {
       "id": "P11a",
@@ -623,7 +633,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P11a",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "term",
         "score",
@@ -671,16 +681,17 @@
         1512
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D15"
     },
     {
       "id": "P11b",
       "family": "G18",
       "title": "富集／评分棒棒糖 · GSEA / NES",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P11b",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "P11a",
+      "reason": "合并到 棒棒糖评分；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "term",
         "score",
@@ -728,7 +739,8 @@
         1512
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D15"
     },
     {
       "id": "P12a",
@@ -736,8 +748,8 @@
       "title": "完整数值矩阵 · 正负色阶",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "T30",
-      "reason": "已有数值矩阵；顺序/发散、范围与单位是明确参数。",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -783,7 +795,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "P12b",
@@ -791,8 +804,8 @@
       "title": "完整数值矩阵 · 单向色阶",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "T30",
-      "reason": "已有数值矩阵；顺序/发散、范围与单位是明确参数。",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -838,16 +851,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "P13",
       "family": "G11",
       "title": "比例／均值气泡点图 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P13",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "E01",
+      "reason": "合并到 点阵：面积、颜色与状态；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "group",
@@ -910,16 +924,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D21"
     },
     {
       "id": "P14",
       "family": "G11",
       "title": "效应与证据矩阵 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P14",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "E01",
+      "reason": "合并到 点阵：面积、颜色与状态；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "contrast",
@@ -967,16 +982,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D21"
     },
     {
       "id": "P15",
       "family": "G10",
       "title": "注释条＋热图 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P15",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -1033,16 +1049,17 @@
         1680
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "P16a",
       "family": "G10",
       "title": "模块条＋矩阵＋行计数 · 方格＋模块＋计数",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P16a",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "R22",
+      "reason": "合并到 共享轴的矩阵与数量轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -1125,7 +1142,8 @@
         1512
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D20"
     },
     {
       "id": "P16b",
@@ -1133,8 +1151,8 @@
       "title": "模块条＋矩阵＋行计数 · 等面积气泡＋模块＋计数",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "P16a",
-      "reason": "同一矩阵叠加计数，不同外观不增加新的数据语义。",
+      "canonical": "R22",
+      "reason": "合并到 共享轴的矩阵与数量轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -1217,7 +1235,8 @@
         1512
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D20"
     },
     {
       "id": "P17a",
@@ -1225,8 +1244,8 @@
       "title": "精细矩阵：整版／分块／转置 · 矩阵",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "P17b",
-      "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -1357,16 +1376,17 @@
         1419
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "P17b",
       "family": "G10",
       "title": "精细矩阵：整版／分块／转置 · 分块",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P17b",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -1497,7 +1517,8 @@
         1419
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "P17c",
@@ -1505,8 +1526,8 @@
       "title": "精细矩阵：整版／分块／转置 · 转置",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "P17b",
-      "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -1637,16 +1658,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "P18",
       "family": "G12",
       "title": "关联／相关矩阵＋不可估计标识 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P18",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "modality",
@@ -1698,7 +1720,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "P19a",
@@ -1707,7 +1730,7 @@
       "role": "legacy",
       "decision": "replace_style",
       "canonical": "E21",
-      "reason": "旧森林图退出默认推荐；优先紧凑区间＋数字列，保留原编号回查。",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "label",
         "estimate",
@@ -1752,7 +1775,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D16"
     },
     {
       "id": "P19b",
@@ -1761,7 +1785,7 @@
       "role": "legacy",
       "decision": "replace_style",
       "canonical": "E21",
-      "reason": "旧森林图退出默认推荐；优先紧凑区间＋数字列，保留原编号回查。",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "label",
         "estimate",
@@ -1806,7 +1830,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D16"
     },
     {
       "id": "P20a",
@@ -1815,7 +1840,7 @@
       "role": "legacy",
       "decision": "replace_style",
       "canonical": "E21",
-      "reason": "旧森林图退出默认推荐；优先紧凑区间＋数字列，保留原编号回查。",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "label",
         "estimate",
@@ -1864,7 +1889,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D16"
     },
     {
       "id": "P20b",
@@ -1873,7 +1899,7 @@
       "role": "legacy",
       "decision": "replace_style",
       "canonical": "E21",
-      "reason": "旧森林图退出默认推荐；优先紧凑区间＋数字列，保留原编号回查。",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "label",
         "estimate",
@@ -1922,16 +1948,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D16"
     },
     {
       "id": "P21a",
       "family": "G16",
       "title": "多系列／队列效应区间 · 有符号效应",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P21a",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "E21",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "cohort",
@@ -1988,7 +2015,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D16"
     },
     {
       "id": "P21b",
@@ -1996,8 +2024,8 @@
       "title": "多系列／队列效应区间 · 比值／对数轴",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "P21a",
-      "reason": "已有区间的线性/比值尺度选项；零线必须分别为0/1。",
+      "canonical": "E21",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "cohort",
@@ -2054,7 +2082,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D16"
     },
     {
       "id": "P22",
@@ -2063,7 +2092,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P22",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "feature",
         "score_a",
@@ -2112,7 +2141,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D60"
     },
     {
       "id": "P23",
@@ -2121,7 +2151,7 @@
       "role": "legacy",
       "decision": "parameter_variant",
       "canonical": "T10",
-      "reason": "组成堆积的通用画法；计数→份额须明确分母与量纲。",
+      "reason": "合并到 组成堆叠柱；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "sample",
         "group",
@@ -2171,16 +2201,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D17"
     },
     {
       "id": "P24",
       "family": "G19",
       "title": "构成分面：样本点＋组概括 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P24",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "P04",
+      "reason": "合并到 分组原始点与中心区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "sample",
         "group",
@@ -2251,7 +2282,8 @@
         1920
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D01"
     },
     {
       "id": "P25a",
@@ -2259,8 +2291,8 @@
       "title": "已有 ROC／PR／校准曲线 · ROC",
       "role": "legacy",
       "decision": "replace_style",
-      "canonical": "P26a",
-      "reason": "同一ROC冻结结果，使用细化样式。",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "model",
         "x",
@@ -2302,7 +2334,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "P25b",
@@ -2310,8 +2343,8 @@
       "title": "已有 ROC／PR／校准曲线 · PR",
       "role": "legacy",
       "decision": "replace_style",
-      "canonical": "P26b",
-      "reason": "同一PR冻结结果，保持与ROC不同的基线和量纲。",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "model",
         "x",
@@ -2353,16 +2386,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "P25c",
       "family": "G22",
       "title": "已有 ROC／PR／校准曲线 · 校准",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P25c",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "model",
         "x",
@@ -2404,16 +2438,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "P26a",
       "family": "G21",
       "title": "阶梯 ROC／PR＋性能标签 · ROC阶梯曲线",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P26a",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "model",
         "x",
@@ -2470,16 +2505,17 @@
         1740
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "P26b",
       "family": "G21",
       "title": "阶梯 ROC／PR＋性能标签 · PR阶梯曲线",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P26b",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "model",
         "x",
@@ -2536,7 +2572,8 @@
         1740
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "P27",
@@ -2545,7 +2582,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P27",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "model",
         "bin_left",
@@ -2599,16 +2636,17 @@
         1740
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D57"
     },
     {
       "id": "P28",
       "family": "G26",
       "title": "多轨道区间信号 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P28",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "E29",
+      "reason": "合并到 共用位置轴的多轨道与连接；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "track",
         "start",
@@ -2666,7 +2704,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D48"
     },
     {
       "id": "P29",
@@ -2675,7 +2714,7 @@
       "role": "legacy",
       "decision": "parameter_variant",
       "canonical": "T31",
-      "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "series",
         "time",
@@ -2727,16 +2766,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "P30",
       "family": "G26",
       "title": "残基置信度轨道 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P30",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "E29",
+      "reason": "合并到 共用位置轴的多轨道与连接；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "residue",
         "plddt"
@@ -2782,16 +2822,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D48"
     },
     {
       "id": "P31a",
       "family": "G28",
       "title": "计数条＋数值表／矩阵组合 · 对齐",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P31a",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "R22",
+      "reason": "合并到 共享轴的矩阵与数量轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "cluster",
         "denominator",
@@ -2903,7 +2944,8 @@
         1594
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D20"
     },
     {
       "id": "P31b",
@@ -2911,8 +2953,8 @@
       "title": "计数条＋数值表／矩阵组合 · 数值表",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "P31a",
-      "reason": "对齐计数与证据矩阵的颜色、外观与转置变体。",
+      "canonical": "R22",
+      "reason": "合并到 共享轴的矩阵与数量轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "cluster",
         "denominator",
@@ -3024,7 +3066,8 @@
         1594
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D20"
     },
     {
       "id": "P31c",
@@ -3032,8 +3075,8 @@
       "title": "计数条＋数值表／矩阵组合 · 上下分面",
       "role": "legacy",
       "decision": "parameter_variant",
-      "canonical": "P31a",
-      "reason": "对齐计数与证据矩阵的颜色、外观与转置变体。",
+      "canonical": "R22",
+      "reason": "合并到 共享轴的矩阵与数量轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "cluster",
         "denominator",
@@ -3145,16 +3188,17 @@
         1948
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D20"
     },
     {
       "id": "P32",
       "family": "G28",
       "title": "可用性／缺失计数 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P32",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "T32",
+      "reason": "合并到 条形估计与给定误差线；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "display_cluster",
         "reports",
@@ -3236,7 +3280,8 @@
         1594
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "P33",
@@ -3244,8 +3289,8 @@
       "title": "通用关系散点 · 默认形式",
       "role": "legacy",
       "decision": "replace_style",
-      "canonical": "E24",
-      "reason": "同类单位ID＋XY关系散点，优先外置图例。",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "unit_id",
         "group",
@@ -3295,7 +3340,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D09"
     },
     {
       "id": "P34",
@@ -3304,7 +3350,7 @@
       "role": "legacy",
       "decision": "parameter_variant",
       "canonical": "T32",
-      "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。",
+      "reason": "合并到 条形估计与给定误差线；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "category",
         "group",
@@ -3356,7 +3402,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "P35",
@@ -3365,7 +3412,7 @@
       "role": "legacy",
       "decision": "recommended",
       "canonical": "P35",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "group",
         "left",
@@ -3414,16 +3461,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D05"
     },
     {
       "id": "P36",
       "family": "G10",
       "title": "计数混淆矩阵 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P36",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "actual",
         "predicted",
@@ -3466,16 +3514,17 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "P37",
       "family": "G01",
       "title": "已有密度山脊图 · 默认形式",
       "role": "legacy",
-      "decision": "recommended",
-      "canonical": "P37",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "E12",
+      "reason": "合并到 密度山脊；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "group",
         "x",
@@ -3524,7 +3573,8 @@
         1358
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D06"
     },
     {
       "id": "R01",
@@ -3533,7 +3583,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R01",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "category",
@@ -3570,7 +3620,8 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D34"
     },
     {
       "id": "R02",
@@ -3579,7 +3630,7 @@
       "role": "reference",
       "decision": "parameter_variant",
       "canonical": "R01",
-      "reason": "相同环形轮廓和气泡双量，仅色卡改变。",
+      "reason": "合并到 环形轮廓与分层气泡；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "category",
@@ -3616,7 +3667,8 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D34"
     },
     {
       "id": "R03",
@@ -3625,7 +3677,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R03",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "state",
@@ -3728,7 +3780,8 @@
         2700
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D63"
     },
     {
       "id": "R04",
@@ -3737,7 +3790,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R04",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -3966,7 +4019,8 @@
         4500
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D62"
     },
     {
       "id": "R05",
@@ -3975,7 +4029,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R05",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "a",
@@ -4012,16 +4066,17 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D22"
     },
     {
       "id": "R06",
       "family": "G14",
       "title": "圆形带符号网络",
       "role": "reference",
-      "decision": "recommended",
-      "canonical": "R06",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "R25",
+      "reason": "合并到 节点关系网络；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "node",
@@ -4069,7 +4124,8 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D23"
     },
     {
       "id": "R07",
@@ -4078,7 +4134,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R07",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "a",
@@ -4129,16 +4185,17 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D58"
     },
     {
       "id": "R08",
       "family": "G17",
       "title": "散点＋二维密度＋边缘直方图",
       "role": "reference",
-      "decision": "recommended",
-      "canonical": "R08",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "R13",
+      "reason": "合并到 散点与边际分布；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -4188,7 +4245,8 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D56"
     },
     {
       "id": "R09",
@@ -4197,7 +4255,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R09",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "trial_id",
@@ -4255,7 +4313,8 @@
         1500
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D35"
     },
     {
       "id": "R10",
@@ -4264,7 +4323,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R10",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -4316,7 +4375,8 @@
         2400
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D36"
     },
     {
       "id": "R11",
@@ -4325,7 +4385,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R11",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -4482,16 +4542,17 @@
         2700
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D59"
     },
     {
       "id": "R12",
       "family": "G17",
       "title": "一致性散点＋边缘密度＋残差摘要",
       "role": "reference",
-      "decision": "recommended",
-      "canonical": "R12",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "R13",
+      "reason": "合并到 散点与边际分布；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -4546,7 +4607,8 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D56"
     },
     {
       "id": "R13",
@@ -4555,7 +4617,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R13",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -4604,7 +4666,8 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D56"
     },
     {
       "id": "R14",
@@ -4613,7 +4676,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R14",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "series",
@@ -4648,16 +4711,17 @@
         1800
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D64"
     },
     {
       "id": "R15",
       "family": "G10",
       "title": "带边缘统计的块状矩阵",
       "role": "reference",
-      "decision": "recommended",
-      "canonical": "R15",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "R22",
+      "reason": "合并到 共享轴的矩阵与数量轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "row",
@@ -4893,7 +4957,8 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D20"
     },
     {
       "id": "R16",
@@ -4902,7 +4967,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R16",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "panel",
@@ -4973,16 +5038,17 @@
         2700
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D61"
     },
     {
       "id": "R17",
       "family": "G01",
       "title": "组间蜂群＋中心值",
       "role": "reference",
-      "decision": "recommended",
-      "canonical": "R17",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "P04",
+      "reason": "合并到 分组原始点与中心区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -5022,16 +5088,17 @@
         1500
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D01"
     },
     {
       "id": "R18",
       "family": "G05",
       "title": "坐标散点＋质心连线＋椭圆",
       "role": "reference",
-      "decision": "recommended",
-      "canonical": "R18",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -5080,16 +5147,17 @@
         1800
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D09"
     },
     {
       "id": "R19",
       "family": "G05",
       "title": "坐标景观＋形状分组＋边缘短线",
       "role": "reference",
-      "decision": "recommended",
-      "canonical": "R19",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "unit_id",
@@ -5138,16 +5206,17 @@
         1800
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D09"
     },
     {
       "id": "R20",
       "family": "G11",
       "title": "分面气泡矩阵",
       "role": "reference",
-      "decision": "recommended",
-      "canonical": "R20",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "E01",
+      "reason": "合并到 点阵：面积、颜色与状态；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "row_facet",
@@ -5206,7 +5275,8 @@
         2400
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D21"
     },
     {
       "id": "R21",
@@ -5215,7 +5285,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R21",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "feature",
@@ -5263,7 +5333,8 @@
         1500
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D38"
     },
     {
       "id": "R22",
@@ -5272,7 +5343,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R22",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "category",
@@ -5379,7 +5450,8 @@
         2100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D20"
     },
     {
       "id": "R23",
@@ -5388,7 +5460,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R23",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "x",
@@ -5425,7 +5497,8 @@
         1800
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D30"
     },
     {
       "id": "R24",
@@ -5434,7 +5507,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R24",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "node_id",
@@ -5508,7 +5581,8 @@
         2700
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D65"
     },
     {
       "id": "R25",
@@ -5517,7 +5591,7 @@
       "role": "reference",
       "decision": "recommended",
       "canonical": "R25",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "record_type",
@@ -5559,7 +5633,8 @@
         1980
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D23"
     },
     {
       "id": "T01",
@@ -5568,7 +5643,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T01",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -5762,16 +5837,17 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D31"
     },
     {
       "id": "T02",
       "family": "G33",
       "title": "区域数值场 · 例子C01/B",
       "role": "panel",
-      "decision": "recommended",
-      "canonical": "T02",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T01",
+      "reason": "合并到 地理数值场；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -5965,16 +6041,17 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D31"
     },
     {
       "id": "T03",
       "family": "G10",
       "title": "数值热图 · 例子C01/C",
       "role": "panel",
-      "decision": "recommended",
-      "canonical": "T03",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -6161,7 +6238,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "T04",
@@ -6170,7 +6248,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T04",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -6365,16 +6443,17 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D32"
     },
     {
       "id": "T05",
       "family": "G17",
       "title": "关系散点＋已有拟合 · 例子C01/E",
       "role": "panel",
-      "decision": "recommended",
-      "canonical": "T05",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -6560,7 +6639,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D09"
     },
     {
       "id": "T06",
@@ -6569,7 +6649,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T32",
-      "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。",
+      "reason": "合并到 条形估计与给定误差线；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -6751,16 +6831,17 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "T07",
       "family": "G05",
       "title": "坐标分组＋椭圆 · 例子C02/A",
       "role": "panel",
-      "decision": "recommended",
-      "canonical": "T07",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -6952,7 +7033,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D09"
     },
     {
       "id": "T08",
@@ -6961,7 +7043,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T08",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -7145,7 +7227,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D04"
     },
     {
       "id": "T09",
@@ -7154,7 +7237,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T31",
-      "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -7338,7 +7421,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "T10",
@@ -7347,7 +7431,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T10",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -7529,16 +7613,17 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D17"
     },
     {
       "id": "T11",
       "family": "G11",
       "title": "有符号气泡矩阵 · 例子C02/E",
       "role": "panel",
-      "decision": "recommended",
-      "canonical": "T11",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "E01",
+      "reason": "合并到 点阵：面积、颜色与状态；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -7725,7 +7810,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D21"
     },
     {
       "id": "T12",
@@ -7734,7 +7820,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T12",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -7911,7 +7997,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D18"
     },
     {
       "id": "T13",
@@ -7920,7 +8007,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T32",
-      "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。",
+      "reason": "合并到 条形估计与给定误差线；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -8099,7 +8186,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "T14",
@@ -8108,7 +8196,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T31",
-      "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -8294,7 +8382,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "T15",
@@ -8303,7 +8392,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T29",
-      "reason": "相同XY＋第三数量面积编码，点数与颜色仅参数。",
+      "reason": "合并到 三变量气泡散点；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -8484,7 +8573,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D10"
     },
     {
       "id": "T16",
@@ -8492,8 +8582,8 @@
       "title": "数值热图 · 例子C03/D",
       "role": "panel",
       "decision": "parameter_variant",
-      "canonical": "T30",
-      "reason": "已有数值矩阵；顺序/发散、范围与单位是明确参数。",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -8680,7 +8770,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "T17",
@@ -8689,7 +8780,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T10",
-      "reason": "组成堆积的通用画法；计数→份额须明确分母与量纲。",
+      "reason": "合并到 组成堆叠柱；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -8868,7 +8959,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D17"
     },
     {
       "id": "T18",
@@ -8877,7 +8969,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T31",
-      "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -9063,7 +9155,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "T19",
@@ -9071,8 +9164,8 @@
       "title": "分类坐标／降维图 · 例子C04/A",
       "role": "panel",
       "decision": "replace_style",
-      "canonical": "E25",
-      "reason": "相同类别坐标散点，优先外置图例；椭圆/中心连线另保留。",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -9253,7 +9346,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D09"
     },
     {
       "id": "T20",
@@ -9262,7 +9356,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T20",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -9454,7 +9548,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D11"
     },
     {
       "id": "T21",
@@ -9463,7 +9558,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T20",
-      "reason": "同一已有对数密度/给定门界；样本与条件更换属于输入。",
+      "reason": "合并到 连续密度着色与固定门；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -9655,7 +9750,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D11"
     },
     {
       "id": "T22",
@@ -9664,7 +9760,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T20",
-      "reason": "同一已有对数密度/给定门界；样本与条件更换属于输入。",
+      "reason": "合并到 连续密度着色与固定门；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -9856,7 +9952,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D11"
     },
     {
       "id": "T23",
@@ -9865,7 +9962,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T20",
-      "reason": "同一已有对数密度/给定门界；样本与条件更换属于输入。",
+      "reason": "合并到 连续密度着色与固定门；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -10057,16 +10154,17 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D11"
     },
     {
       "id": "T24",
       "family": "G08",
       "title": "效应－证据火山图 · 例子C04/F",
       "role": "panel",
-      "decision": "recommended",
-      "canonical": "T24",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "P09",
+      "reason": "合并到 效应与证据火山；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -10246,7 +10344,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D54"
     },
     {
       "id": "T25",
@@ -10255,7 +10354,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T32",
-      "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。",
+      "reason": "合并到 条形估计与给定误差线；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -10433,7 +10532,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "T26",
@@ -10442,7 +10542,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T12",
-      "reason": "份额环形的同一画法，组数属于参数。",
+      "reason": "合并到 整体组成环形图；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -10619,7 +10719,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D18"
     },
     {
       "id": "T27",
@@ -10628,7 +10729,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T32",
-      "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。",
+      "reason": "合并到 条形估计与给定误差线；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -10807,7 +10908,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "T28",
@@ -10816,7 +10918,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T31",
-      "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -11000,7 +11102,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "T29",
@@ -11009,7 +11112,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T29",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -11190,16 +11293,17 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D10"
     },
     {
       "id": "T30",
       "family": "G10",
       "title": "数值热图 · 例子C05/D",
       "role": "panel",
-      "decision": "recommended",
-      "canonical": "T30",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -11386,7 +11490,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "T31",
@@ -11395,7 +11500,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T31",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -11585,7 +11690,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "T32",
@@ -11594,7 +11700,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T32",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -11776,7 +11882,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "T33",
@@ -11785,7 +11892,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T33",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -11963,7 +12070,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D09"
     },
     {
       "id": "T34",
@@ -11972,7 +12080,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T34",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -12163,16 +12271,17 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "T35",
       "family": "G25",
       "title": "多系列谱线／偏移曲线 · 例子C06/E",
       "role": "panel",
-      "decision": "recommended",
-      "canonical": "T35",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -12366,7 +12475,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "T36",
@@ -12375,7 +12485,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T36",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -12558,7 +12668,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D02"
     },
     {
       "id": "T37",
@@ -12567,7 +12678,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T37",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -12747,7 +12858,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D37"
     },
     {
       "id": "T38",
@@ -12756,7 +12868,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T32",
-      "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。",
+      "reason": "合并到 条形估计与给定误差线；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -12936,7 +13048,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "T39",
@@ -12945,7 +13058,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T31",
-      "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -13131,7 +13244,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "T40",
@@ -13140,7 +13254,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T29",
-      "reason": "相同XY＋第三数量面积编码，点数与颜色仅参数。",
+      "reason": "合并到 三变量气泡散点；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -13321,7 +13435,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D10"
     },
     {
       "id": "T41",
@@ -13329,8 +13444,8 @@
       "title": "数值热图 · 例子C07/E",
       "role": "panel",
       "decision": "parameter_variant",
-      "canonical": "T30",
-      "reason": "已有数值矩阵；顺序/发散、范围与单位是明确参数。",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -13517,7 +13632,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D19"
     },
     {
       "id": "T42",
@@ -13526,7 +13642,7 @@
       "role": "panel",
       "decision": "recommended",
       "canonical": "T42",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -13716,7 +13832,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D39"
     },
     {
       "id": "T43",
@@ -13725,7 +13842,7 @@
       "role": "panel",
       "decision": "parameter_variant",
       "canonical": "T32",
-      "reason": "同类类别×组别×已有估计/区间；组数和误差外观属于参数。",
+      "reason": "合并到 条形估计与给定误差线；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "panel",
         "record_type",
@@ -13905,7 +14022,8 @@
         1530
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D14"
     },
     {
       "id": "C01",
@@ -13914,7 +14032,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C01",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -13927,7 +14045,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C01"
     },
     {
       "id": "C02",
@@ -13936,7 +14055,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C02",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -13949,7 +14068,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C02"
     },
     {
       "id": "C03",
@@ -13958,7 +14078,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C03",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -13971,7 +14091,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C03"
     },
     {
       "id": "C04",
@@ -13980,7 +14101,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C04",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -13993,7 +14114,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C04"
     },
     {
       "id": "C05",
@@ -14002,7 +14124,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C05",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14015,7 +14137,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C05"
     },
     {
       "id": "C06",
@@ -14024,7 +14147,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C06",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14037,7 +14160,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C06"
     },
     {
       "id": "C07",
@@ -14046,7 +14170,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C07",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14059,7 +14183,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C07"
     },
     {
       "id": "C08",
@@ -14068,7 +14193,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C08",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14081,7 +14206,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C08"
     },
     {
       "id": "C09",
@@ -14090,7 +14216,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C09",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14103,7 +14229,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C09"
     },
     {
       "id": "C10",
@@ -14112,7 +14239,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C10",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14125,7 +14252,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C10"
     },
     {
       "id": "C11",
@@ -14134,7 +14262,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C11",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14147,7 +14275,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C11"
     },
     {
       "id": "C12",
@@ -14156,7 +14285,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C12",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14169,7 +14298,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C12"
     },
     {
       "id": "C13",
@@ -14178,7 +14308,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C13",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14191,7 +14321,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C13"
     },
     {
       "id": "C14",
@@ -14200,7 +14331,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C14",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14213,7 +14344,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C14"
     },
     {
       "id": "C15",
@@ -14222,7 +14354,7 @@
       "role": "palette",
       "decision": "recommended",
       "canonical": "C15",
-      "reason": "明确色卡色值及来源；整课题选择一种，普通图不登记为色卡。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
@@ -14235,7 +14367,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "CARD-C15"
     },
     {
       "id": "S01",
@@ -14244,7 +14377,7 @@
       "role": "protein",
       "decision": "recommended",
       "canonical": "S01",
-      "reason": "实际公共原子坐标；丝带、表面和局部原子保留不同表示。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
@@ -14257,7 +14390,8 @@
         1100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "STRUCT-S01"
     },
     {
       "id": "S02",
@@ -14266,7 +14400,7 @@
       "role": "protein",
       "decision": "recommended",
       "canonical": "S02",
-      "reason": "实际公共原子坐标；丝带、表面和局部原子保留不同表示。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
@@ -14279,7 +14413,8 @@
         1100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "STRUCT-S02"
     },
     {
       "id": "S03",
@@ -14288,7 +14423,7 @@
       "role": "protein",
       "decision": "recommended",
       "canonical": "S03",
-      "reason": "实际公共原子坐标；丝带、表面和局部原子保留不同表示。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [],
       "input_rows": 0,
       "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
@@ -14301,7 +14436,8 @@
         1100
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "STRUCT-S03"
     },
     {
       "id": "K01",
@@ -14310,7 +14446,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K01",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "panel",
@@ -14339,16 +14475,17 @@
         1855
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B01"
     },
     {
       "id": "K02",
       "family": "G07",
       "title": "亚群坐标＋marker 原位置分面",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K02",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K01",
+      "reason": "合并到 亚群坐标＋marker 矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "panel",
@@ -14377,16 +14514,17 @@
         1855
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B01"
     },
     {
       "id": "K03",
       "family": "G07",
       "title": "亚群＋marker＋组成",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K03",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K01",
+      "reason": "合并到 亚群坐标＋marker 矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "panel",
@@ -14424,7 +14562,8 @@
         1855
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B01"
     },
     {
       "id": "K04",
@@ -14433,7 +14572,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K04",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "sample_id",
@@ -14457,7 +14596,8 @@
         1855
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B04"
     },
     {
       "id": "K05",
@@ -14466,7 +14606,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K05",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "sample_id",
@@ -14492,7 +14632,8 @@
         1855
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B05"
     },
     {
       "id": "K06",
@@ -14501,7 +14642,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K06",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "panel",
@@ -14533,16 +14674,17 @@
         1855
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B06"
     },
     {
       "id": "K07",
       "family": "G07",
       "title": "亚群＋marker 分面＋marker 汇总",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K07",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K01",
+      "reason": "合并到 亚群坐标＋marker 矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "panel",
@@ -14578,16 +14720,17 @@
         2667
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B01"
     },
     {
       "id": "K08",
       "family": "G07",
       "title": "亚群＋marker＋对象数量",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K08",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K01",
+      "reason": "合并到 亚群坐标＋marker 矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "panel",
@@ -14615,16 +14758,17 @@
         1855
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B01"
     },
     {
       "id": "K09",
       "family": "G07",
       "title": "同对象坐标＋特征均值／比例点阵",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K09",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K01",
+      "reason": "合并到 亚群坐标＋marker 矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "panel",
@@ -14652,7 +14796,8 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B01"
     },
     {
       "id": "K10",
@@ -14661,7 +14806,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K10",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "row",
@@ -14693,7 +14838,8 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B10"
     },
     {
       "id": "K11",
@@ -14702,7 +14848,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K11",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "panel",
@@ -14739,7 +14885,8 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B11"
     },
     {
       "id": "K12",
@@ -14748,7 +14895,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K12",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "subject_id",
@@ -14779,7 +14926,8 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B12"
     },
     {
       "id": "K13",
@@ -14788,7 +14936,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K13",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "panel",
@@ -14820,7 +14968,8 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B13"
     },
     {
       "id": "K14",
@@ -14829,7 +14978,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K14",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "record_type",
@@ -14864,16 +15013,17 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B14"
     },
     {
       "id": "K15",
       "family": "G15",
       "title": "同成员关系：二部网络＋矩阵＋UpSet",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K15",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K14",
+      "reason": "合并到 多实体网络＋同一邻接矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "record_type",
@@ -14917,16 +15067,17 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B14"
     },
     {
       "id": "K16",
       "family": "G15",
       "title": "集合重叠网络＋同集合条件分数",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K16",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K14",
+      "reason": "合并到 多实体网络＋同一邻接矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "record_type",
@@ -14961,7 +15112,8 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B14"
     },
     {
       "id": "K17",
@@ -14970,7 +15122,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K17",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "path_id",
@@ -15000,7 +15152,8 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B17"
     },
     {
       "id": "K18",
@@ -15009,7 +15162,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K18",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "source",
@@ -15035,16 +15188,17 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "B18"
     },
     {
       "id": "K19",
       "family": "G47",
       "title": "已有富集三层图＋命中窗口",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K19",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "N08",
+      "reason": "合并到 排序曲线、命中与排名量；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "record_type",
@@ -15071,16 +15225,17 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D53"
     },
     {
       "id": "K20",
       "family": "G10",
       "title": "多状态矩阵＋同对象事件数量",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K20",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "N07",
+      "reason": "合并到 多状态事件矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "row",
@@ -15108,16 +15263,17 @@
         1917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D28"
     },
     {
       "id": "N01",
       "family": "G14",
       "title": "多实体有符号网络",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "N01",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "R25",
+      "reason": "合并到 节点关系网络；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "node_id",
@@ -15242,7 +15398,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D23"
     },
     {
       "id": "N02",
@@ -15250,8 +15407,8 @@
       "title": "集合／通路重叠网络",
       "role": "extension",
       "decision": "replace_style",
-      "canonical": "E23",
-      "reason": "同类给定重叠网络，优先可核对成员集合与Jaccard的完整示例。",
+      "canonical": "R25",
+      "reason": "合并到 节点关系网络；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "node_id",
@@ -15376,16 +15533,17 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D23"
     },
     {
       "id": "N03",
       "family": "G14",
       "title": "实体—集合二部网络",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "N03",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "R25",
+      "reason": "合并到 节点关系网络；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "node_id",
@@ -15510,7 +15668,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D23"
     },
     {
       "id": "N04",
@@ -15519,7 +15678,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "N04",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "source",
         "target",
@@ -15633,7 +15792,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D24"
     },
     {
       "id": "N05",
@@ -15642,7 +15802,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "N05",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "path_id",
         "Stage1",
@@ -15755,7 +15915,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D25"
     },
     {
       "id": "N06",
@@ -15764,7 +15925,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "N06",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "object_id",
         "G1",
@@ -15925,7 +16086,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D26"
     },
     {
       "id": "N07",
@@ -15934,7 +16096,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "N07",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "row",
         "column",
@@ -16049,7 +16211,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D28"
     },
     {
       "id": "N08",
@@ -16058,7 +16221,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "N08",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "group",
@@ -16168,16 +16331,17 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D53"
     },
     {
       "id": "N09",
       "family": "G48",
       "title": "排名变化 Bump",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "N09",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "group",
         "stage",
@@ -16288,7 +16452,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D07"
     },
     {
       "id": "N10",
@@ -16297,7 +16462,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "N10",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "object_id",
         "x",
@@ -16404,7 +16569,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D12"
     },
     {
       "id": "N11",
@@ -16413,7 +16579,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "N11",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "x",
         "y",
@@ -16536,16 +16702,17 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D29"
     },
     {
       "id": "N12",
       "family": "G14",
       "title": "给定层次的节点关系图",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "N12",
-      "reason": "保留不同的数量语义、缺失/显著性、原始/汇总输入或参考视觉表达；不能只因外观相近合并。",
+      "decision": "parameter_variant",
+      "canonical": "R25",
+      "reason": "合并到 节点关系网络；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "node_id",
@@ -16670,7 +16837,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": true
+      "source_baseline": true,
+      "method": "D23"
     },
     {
       "id": "E01",
@@ -16679,7 +16847,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E01",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "term_id",
         "term_label",
@@ -16856,7 +17024,8 @@
         1968
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D21"
     },
     {
       "id": "E02",
@@ -16865,7 +17034,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E02",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "term_id",
@@ -17011,7 +17180,8 @@
         2070
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D40"
     },
     {
       "id": "E03",
@@ -17020,7 +17190,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "E02",
-      "reason": "相同术语环形轨道；BP/MF/CC/通路属于集合标签和输入差异。",
+      "reason": "合并到 条目与成员效应环形轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "term_id",
@@ -17166,7 +17336,8 @@
         2070
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D40"
     },
     {
       "id": "E04",
@@ -17175,7 +17346,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "E02",
-      "reason": "相同术语环形轨道；BP/MF/CC/通路属于集合标签和输入差异。",
+      "reason": "合并到 条目与成员效应环形轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "term_id",
@@ -17321,7 +17492,8 @@
         2070
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D40"
     },
     {
       "id": "E05",
@@ -17330,7 +17502,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "E02",
-      "reason": "相同术语环形轨道；BP/MF/CC/通路属于集合标签和输入差异。",
+      "reason": "合并到 条目与成员效应环形轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "term_id",
@@ -17476,7 +17648,8 @@
         2070
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D40"
     },
     {
       "id": "E06a",
@@ -17485,7 +17658,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E06a",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "term_id",
         "description"
@@ -17617,7 +17790,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "H01"
     },
     {
       "id": "E06b",
@@ -17626,7 +17800,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "E06a",
-      "reason": "同一独立术语对照表，标题和行数可参数化。",
+      "reason": "合并到 条目ID与说明对照表；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "term_id",
         "description"
@@ -17758,7 +17932,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "H01"
     },
     {
       "id": "E06c",
@@ -17767,7 +17942,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "E06a",
-      "reason": "同一独立术语对照表，标题和行数可参数化。",
+      "reason": "合并到 条目ID与说明对照表；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "term_id",
         "description"
@@ -17899,7 +18074,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "H01"
     },
     {
       "id": "E06d",
@@ -17908,7 +18084,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "E06a",
-      "reason": "同一独立术语对照表，标题和行数可参数化。",
+      "reason": "合并到 条目ID与说明对照表；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "term_id",
         "description"
@@ -18040,7 +18216,8 @@
         1044
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "H01"
     },
     {
       "id": "E07",
@@ -18049,7 +18226,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E07",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "object_id",
         "Set A",
@@ -18182,16 +18359,17 @@
         1380
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D27"
     },
     {
       "id": "E08",
       "family": "G15",
       "title": "成员－术语弦图：关系＋成员效应色",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E08",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "N04",
+      "reason": "合并到 弦图：关系与数量带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "gene_id",
         "term_id",
@@ -18350,7 +18528,8 @@
         1980
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D24"
     },
     {
       "id": "E09",
@@ -18358,8 +18537,8 @@
       "title": "成员关系矩阵＋方向条＋成员覆盖数",
       "role": "extension",
       "decision": "parameter_variant",
-      "canonical": "P17b",
-      "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。",
+      "canonical": "R22",
+      "reason": "合并到 共享轴的矩阵与数量轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -18534,16 +18713,17 @@
         2322
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D20"
     },
     {
       "id": "E10",
       "family": "G01",
       "title": "已有经验累积分布 ECDF",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E10",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "group",
         "x",
@@ -18670,16 +18850,17 @@
         1410
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D07"
     },
     {
       "id": "E11",
       "family": "G01",
       "title": "已有分位数对照 QQ",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E11",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "group",
         "x",
@@ -18806,7 +18987,8 @@
         1410
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "E12",
@@ -18815,7 +18997,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E12",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "group",
         "x",
@@ -18946,16 +19128,17 @@
         1350
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D06"
     },
     {
       "id": "E13",
       "family": "G16",
       "title": "协变量平衡 Love 图",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E13",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "E21",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "covariate",
         "group",
@@ -19082,16 +19265,17 @@
         1110
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D16"
     },
     {
       "id": "E14",
       "family": "G17",
       "title": "Bland–Altman：差值＋已有限界",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E14",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "object_id",
         "group",
@@ -19221,7 +19405,8 @@
         1440
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "E15",
@@ -19230,7 +19415,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E15",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "group",
@@ -19360,7 +19545,8 @@
         1800
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D41"
     },
     {
       "id": "E16",
@@ -19369,7 +19555,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E16",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "object_id",
@@ -19514,7 +19700,8 @@
         1566
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D42"
     },
     {
       "id": "E17",
@@ -19523,7 +19710,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E17",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "spec_id",
@@ -19675,7 +19862,8 @@
         1830
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D43"
     },
     {
       "id": "E18",
@@ -19684,7 +19872,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E18",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "object_id",
         "group",
@@ -19812,7 +20000,8 @@
         1680
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D44"
     },
     {
       "id": "E19",
@@ -19821,7 +20010,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E19",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "row",
         "column",
@@ -20006,7 +20195,8 @@
         1620
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D45"
     },
     {
       "id": "E20",
@@ -20015,7 +20205,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "N07",
-      "reason": "多状态矩阵的可用性示例，不是新的矩阵算法。",
+      "reason": "合并到 多状态事件矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "row",
         "column",
@@ -20147,7 +20337,8 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D28"
     },
     {
       "id": "E21",
@@ -20156,7 +20347,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E21",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "label",
         "group",
@@ -20290,7 +20481,8 @@
         1128
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D16"
     },
     {
       "id": "E22",
@@ -20299,7 +20491,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "E21",
-      "reason": "紧凑森林通用引擎；比值/差值尺度和研究表是参数。",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "label",
         "group",
@@ -20433,16 +20625,17 @@
         1128
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D16"
     },
     {
       "id": "E23",
       "family": "G15",
       "title": "已核验集合重叠网络：复用通用网络",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E23",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "R25",
+      "reason": "合并到 节点关系网络；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "node_id",
@@ -20579,16 +20772,17 @@
         1860
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D23"
     },
     {
       "id": "E24",
       "family": "G17",
       "title": "配对测量的XY位置：复用通用散点",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E24",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "unit_id",
         "group",
@@ -20719,16 +20913,17 @@
         1350
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "E25",
       "family": "G07",
       "title": "相同对象的身份坐标：复用分类坐标",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E25",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "cell_id",
         "x",
@@ -20856,7 +21051,8 @@
         1350
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "E26",
@@ -20865,7 +21061,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E26",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "cell_id",
         "x",
@@ -21002,7 +21198,8 @@
         780
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D13"
     },
     {
       "id": "E27",
@@ -21011,7 +21208,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E27",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "A",
         "B",
@@ -21142,7 +21339,8 @@
         1740
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D46"
     },
     {
       "id": "E28",
@@ -21151,7 +21349,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E28",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "variant_id",
         "chromosome",
@@ -21302,7 +21500,8 @@
         1380
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D47"
     },
     {
       "id": "E29",
@@ -21311,7 +21510,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E29",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "variant_id",
@@ -21451,16 +21650,17 @@
         2070
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D48"
     },
     {
       "id": "E30",
       "family": "G16",
       "title": "效应与精度：漏斗图",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E30",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "study_id",
@@ -21589,7 +21789,8 @@
         1500
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "E30b",
@@ -21598,7 +21799,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "E21",
-      "reason": "紧凑森林通用引擎；比值/差值尺度和研究表是参数。",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "study_id",
         "group",
@@ -21734,7 +21935,8 @@
         2058
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D16"
     },
     {
       "id": "E31",
@@ -21743,7 +21945,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E31",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "node_id",
         "parent_id",
@@ -21872,16 +22074,17 @@
         1740
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D49"
     },
     {
       "id": "E32",
       "family": "G25",
       "title": "多层不确定性：扇形区间",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E32",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "group",
         "x",
@@ -22014,16 +22217,17 @@
         1560
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D07"
     },
     {
       "id": "E33a",
       "family": "G33",
       "title": "空间背景＋类别",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "E33a",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "E33b",
+      "reason": "合并到 配准背景上的测量叠加；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "x",
@@ -22161,7 +22365,8 @@
         1680
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D33"
     },
     {
       "id": "E33b",
@@ -22170,7 +22375,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "E33b",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "record_type",
         "x",
@@ -22308,16 +22513,17 @@
         1680
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D33"
     },
     {
       "id": "M01",
       "family": "G17",
       "title": "跨层效应一致性：四证据状态",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "M01",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature_id",
         "status",
@@ -22447,7 +22653,8 @@
         1680
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "M02",
@@ -22455,8 +22662,8 @@
       "title": "多组学因子：各层解释方差",
       "role": "extension",
       "decision": "parameter_variant",
-      "canonical": "P17b",
-      "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -22605,7 +22812,8 @@
         1140
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D19"
     },
     {
       "id": "M03",
@@ -22613,8 +22821,8 @@
       "title": "因子载荷：模态分块矩阵",
       "role": "extension",
       "decision": "parameter_variant",
-      "canonical": "P17b",
-      "reason": "矩阵通用引擎；载荷、解释量、成员0/1的单位/色限/缺失状态分别声明。",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "feature",
         "sample",
@@ -22778,7 +22986,8 @@
         1512
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D19"
     },
     {
       "id": "M04",
@@ -22787,7 +22996,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "M04",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "object_id",
         "group",
@@ -22918,7 +23127,8 @@
         1650
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D50"
     },
     {
       "id": "M05",
@@ -22927,7 +23137,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "M05",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "feature_id",
         "group",
@@ -23052,7 +23262,8 @@
         1740
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D51"
     },
     {
       "id": "M06",
@@ -23061,7 +23272,7 @@
       "role": "extension",
       "decision": "recommended",
       "canonical": "M06",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         "peak_id",
         "spectrum",
@@ -23192,7 +23403,8 @@
         1620
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D52"
     },
     {
       "id": "M07",
@@ -23201,7 +23413,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "T31",
-      "reason": "有序横轴上的已有曲线/给定区间；时间与保留时间改标签和单位。",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "series",
         "time",
@@ -23335,16 +23547,17 @@
         1230
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D07"
     },
     {
       "id": "M08",
       "family": "G26",
       "title": "基因组多轨道＋候选连接弧",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "M08",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "E29",
+      "reason": "合并到 共用位置轴的多轨道与连接；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "track",
@@ -23484,16 +23697,17 @@
         1920
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D48"
     },
     {
       "id": "M09",
       "family": "G14",
       "title": "通路底图叠加分子数量",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "M09",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "R25",
+      "reason": "合并到 节点关系网络；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "record_type",
         "node_id",
@@ -23628,7 +23842,8 @@
         1800
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D23"
     },
     {
       "id": "M10",
@@ -23637,7 +23852,7 @@
       "role": "extension",
       "decision": "parameter_variant",
       "canonical": "T10",
-      "reason": "组成堆积的通用画法；计数→份额须明确分母与量纲。",
+      "reason": "合并到 组成堆叠柱；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "sample",
         "celltype",
@@ -23767,16 +23982,17 @@
         1350
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D17"
     },
     {
       "id": "M11a",
       "family": "G17",
       "title": "同一模型诊断：residual",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "M11a",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "unit_id",
         "group",
@@ -23908,16 +24124,17 @@
         1560
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "M11b",
       "family": "G17",
       "title": "同一模型诊断：qq",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "M11b",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "unit_id",
         "group",
@@ -24049,16 +24266,17 @@
         1560
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "M11c",
       "family": "G17",
       "title": "同一模型诊断：scale_location",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "M11c",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "unit_id",
         "group",
@@ -24190,16 +24408,17 @@
         1560
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "M11d",
       "family": "G17",
       "title": "同一模型诊断：influence",
       "role": "extension",
-      "decision": "recommended",
-      "canonical": "M11d",
-      "reason": "按输入列、编码与组合关系检查；保留此数据表达或有意义的面板模式。",
+      "decision": "parameter_variant",
+      "canonical": "T29",
+      "reason": "合并到 三变量气泡散点；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         "unit_id",
         "group",
@@ -24331,7 +24550,8 @@
         1560
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D10"
     },
     {
       "id": "K21",
@@ -24340,7 +24560,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K21",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "term_id",
@@ -24377,7 +24597,8 @@
         2834
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B21"
     },
     {
       "id": "K22",
@@ -24386,7 +24607,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K22",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "object_id",
@@ -24453,16 +24674,17 @@
         4334
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B22"
     },
     {
       "id": "K23",
       "family": "G15",
       "title": "相同成员关系的弦图＋精确矩阵＋集合冗余网络",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K23",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K18",
+      "reason": "合并到 同关系：带宽弦图＋数量矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "gene_id",
@@ -24502,7 +24724,8 @@
         2750
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B18"
     },
     {
       "id": "K24",
@@ -24511,7 +24734,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K24",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "group",
@@ -24540,7 +24763,8 @@
         2292
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B24"
     },
     {
       "id": "K25",
@@ -24549,7 +24773,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K25",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "unit_id",
@@ -24575,16 +24799,17 @@
         2459
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B25"
     },
     {
       "id": "K26",
       "family": "G16",
       "title": "协变量平衡诊断＋调整阶段的已有模型估计",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K26",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "E21",
+      "reason": "合并到 森林与多系列区间；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "covariate",
@@ -24610,7 +24835,8 @@
         2292
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D16"
     },
     {
       "id": "K27",
@@ -24619,7 +24845,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K27",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "record_type",
@@ -24651,16 +24877,17 @@
         2709
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B27"
     },
     {
       "id": "K28",
       "family": "G07",
       "title": "相同对象的亚群＋marker＋已有向量场",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K28",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "K01",
+      "reason": "合并到 亚群坐标＋marker 矩阵；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "cell_id",
@@ -24695,7 +24922,8 @@
         3667
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B01"
     },
     {
       "id": "K29",
@@ -24704,7 +24932,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K29",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "variant_id",
@@ -24737,16 +24965,17 @@
         2709
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B29"
     },
     {
       "id": "K30",
       "family": "G17",
       "title": "同一模型的四种诊断视角",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K30",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "T33",
+      "reason": "合并到 XY散点与给定参考层；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "unit_id",
@@ -24804,7 +25033,8 @@
         3459
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D09"
     },
     {
       "id": "K31",
@@ -24813,7 +25043,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K31",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "study_id",
@@ -24844,16 +25074,17 @@
         2917
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B31"
     },
     {
       "id": "K32",
       "family": "G33",
       "title": "同一空间背景的身份＋分子数量",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K32",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "E33b",
+      "reason": "合并到 配准背景上的测量叠加；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "record_type",
@@ -24891,16 +25122,17 @@
         2292
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D33"
     },
     {
       "id": "K33",
       "family": "G56",
       "title": "多组学因子的层间解释量＋特征载荷",
       "role": "combination",
-      "decision": "recommended",
-      "canonical": "K33",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
       "input_columns": [
         [
           "feature",
@@ -24925,7 +25157,8 @@
         2334
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "D19"
     },
     {
       "id": "K34",
@@ -24934,7 +25167,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K34",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "object_id",
@@ -24961,7 +25194,8 @@
         2542
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B34"
     },
     {
       "id": "K35",
@@ -24970,7 +25204,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K35",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "series",
@@ -24997,7 +25231,8 @@
         2375
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B35"
     },
     {
       "id": "K36",
@@ -25006,7 +25241,7 @@
       "role": "combination",
       "decision": "recommended",
       "canonical": "K36",
-      "reason": "保留单独面板和整版；各组件的身份、尺度和互补关系明确。",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
       "input_columns": [
         [
           "record_type",
@@ -25036,7 +25271,699 @@
         2542
       ],
       "visual_review": "preview_reviewed_not_journal_size_acceptance",
-      "source_baseline": false
+      "source_baseline": false,
+      "method": "B36"
+    },
+    {
+      "id": "E34",
+      "family": "G15",
+      "title": "成员流线、条目与评分点阵",
+      "role": "extension",
+      "decision": "recommended",
+      "canonical": "E34",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "D66",
+      "input_columns": [
+        "record_type",
+        "member_id",
+        "effect",
+        "term_id",
+        "label",
+        "block",
+        "ratio",
+        "padj",
+        "count"
+      ],
+      "input_rows": 75,
+      "data_required": "成员与条目ID、二元关系、成员效应、条目类别、已给比例/校正p/成员数",
+      "expression": "共享成员连接到哪些条目，并对齐读取条目的量值与覆盖数",
+      "render_kind": "membership_ribbons",
+      "semantic_settings": {
+        "kind": "membership_ribbons",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "member_order": [
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "F05",
+          "F06",
+          "F07",
+          "F08",
+          "F09",
+          "F10",
+          "F11",
+          "F12",
+          "F13",
+          "F14",
+          "F15",
+          "F16",
+          "F17",
+          "F18",
+          "F19",
+          "F20"
+        ],
+        "term_order": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08"
+        ],
+        "block_slots": {
+          "BP": "G1",
+          "CC": "G3",
+          "MF": "G7"
+        },
+        "effect_limits": [
+          -2,
+          2
+        ],
+        "significance_limits": [
+          0,
+          4
+        ],
+        "ratio_max": 0.4,
+        "ratio_definition": "Ratio = displayed members / 20 supplied background members",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "2cd139e4abfab4512b547929aa9fa5a62ab7a39b777003128de622dd61136dc8"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+      },
+      "png_dimensions": [
+        4200,
+        2100
+      ],
+      "png_sha256": "8a78bf3e1561912bee62df78a87c6d660d20a333e17e2c3468f3386ddbda2240"
+    },
+    {
+      "id": "E36",
+      "family": "G14",
+      "title": "层次树与对齐分类条",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "E37",
+      "reason": "合并到 已有层次树、叶端标记与量值轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D68",
+      "input_columns": [
+        "record_type",
+        "node_id",
+        "group",
+        "metric",
+        "outer_value",
+        "area_value",
+        "left",
+        "right",
+        "height"
+      ],
+      "input_rows": 31,
+      "data_required": "唯一叶ID、已有二叉树合并记录、合并高度、固定叶序和分类",
+      "expression": "树结构与对象分类逐一对齐",
+      "render_kind": "hierarchy_tracks",
+      "semantic_settings": {
+        "kind": "hierarchy_tracks",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "leaf_order": [
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "F05",
+          "F06",
+          "F07",
+          "F08",
+          "F09",
+          "F10",
+          "F11",
+          "F12",
+          "F13",
+          "F14",
+          "F15",
+          "F16"
+        ],
+        "height_definition": "Supplied merge height",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "8643ba45d500cfe4c3b6d7da2ccd57aa2f034ecacdad076daa11a572cb42dae4"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+      },
+      "png_dimensions": [
+        3300,
+        1680
+      ],
+      "png_sha256": "8e09e1d81216184691b0eccfed33751bcd18bbe9e638abd627d6e396f497a350"
+    },
+    {
+      "id": "E37",
+      "family": "G14",
+      "title": "环形层次树与叶端量值",
+      "role": "extension",
+      "decision": "recommended",
+      "canonical": "E37",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "D68",
+      "input_columns": [
+        "record_type",
+        "node_id",
+        "group",
+        "metric",
+        "outer_value",
+        "area_value",
+        "left",
+        "right",
+        "height"
+      ],
+      "input_rows": 31,
+      "data_required": "已有层次树、叶序、叶端连续量/比例和独立外圈量值",
+      "expression": "同时看层级、叶端指标与外圈数量",
+      "render_kind": "radial_hierarchy",
+      "semantic_settings": {
+        "kind": "radial_hierarchy",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "leaf_order": [
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "F05",
+          "F06",
+          "F07",
+          "F08",
+          "F09",
+          "F10",
+          "F11",
+          "F12",
+          "F13",
+          "F14",
+          "F15",
+          "F16"
+        ],
+        "height_definition": "Supplied merge height",
+        "metric_limits": [
+          -8,
+          -2
+        ],
+        "metric_definition": "Supplied signed metric",
+        "outer_definition": "Given quantity",
+        "area_definition": "Given fraction [0,1]",
+        "label_ids": [
+          "F01",
+          "F04",
+          "F07",
+          "F10",
+          "F13",
+          "F16"
+        ],
+        "area_mapping": "12 + 120 * supplied area_value",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "60ca166b2a91cd40f5f2923aeb9aca75d8d82f100fa238f9c2557faa4268b222"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+      },
+      "png_dimensions": [
+        2700,
+        2400
+      ],
+      "png_sha256": "4e81aca7d5437728a664d666463090794aad8d234e014d7905286791a77e1325"
+    },
+    {
+      "id": "E35",
+      "family": "G11",
+      "title": "三角单元双量值矩阵",
+      "role": "extension",
+      "decision": "recommended",
+      "canonical": "E35",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "D67",
+      "input_columns": [
+        "row_id",
+        "column_id",
+        "association",
+        "pvalue"
+      ],
+      "input_rows": 12,
+      "data_required": "完整行×列的两种量值；各自单位、范围、检验和缺失定义",
+      "expression": "同格分别读取关联方向与证据量",
+      "render_kind": "split_metric_matrix",
+      "semantic_settings": {
+        "kind": "split_metric_matrix",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "row_order": [
+          "G1",
+          "G3",
+          "G5",
+          "G7"
+        ],
+        "column_order": [
+          "Trait A",
+          "Trait B",
+          "Trait C"
+        ],
+        "row_slots": {
+          "G1": "G1",
+          "G3": "G3",
+          "G5": "G5",
+          "G7": "G7"
+        },
+        "association_limits": [
+          -1,
+          1
+        ],
+        "significance_limits": [
+          0,
+          4
+        ],
+        "association_definition": "Supplied module-trait association coefficient",
+        "probability_definition": "Supplied nominal p; no multiple testing performed here",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "d3169ccf038fb23ded0ab3534d203b5851b8ed6298c051babf8161670bc51fab"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+      },
+      "png_dimensions": [
+        2700,
+        1800
+      ],
+      "png_sha256": "4c1549c98ba65a17192b01d54585f41835682f01dec9bda0d8c91623a6de90df"
+    },
+    {
+      "id": "K37",
+      "family": "G15",
+      "title": "集合、条目、成员与整体／局部网络",
+      "role": "combination",
+      "decision": "recommended",
+      "canonical": "K37",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "B37",
+      "input_columns": [
+        "separately_saved_component_tables"
+      ],
+      "input_rows": 5,
+      "data_required": "完整对象与两集合0/1关系；条目、分类和已给得分；成员与条目ID、二元关系、成员效应、条目类别、已给比例/校正p/成员数；节点ID、固定位置、显示面积、已给边与权重；节点ID、固定位置、显示面积、已给边与权重",
+      "expression": "同一成员ID与条目结果对应；局部网络是明确节点集合诱导的子图，不重新估计边。",
+      "render_kind": null,
+      "semantic_settings": {},
+      "png_dimensions": [
+        6250,
+        4709
+      ],
+      "png_sha256": "714c1b25b92aedaa17c6114bcd5eb5e9f41227f9a4e3f92af38054aedfd62609"
+    },
+    {
+      "id": "K38",
+      "family": "G56",
+      "title": "已有诊断、层次树、关联矩阵与成员评分",
+      "role": "combination",
+      "decision": "recommended",
+      "canonical": "K38",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "B38",
+      "input_columns": [
+        "separately_saved_component_tables"
+      ],
+      "input_rows": 5,
+      "data_required": "候选参数与已有诊断值；候选参数与已有诊断值；唯一叶ID、已有二叉树合并记录、合并高度、固定叶序和分类；完整行×列的两种量值；各自单位、范围、检验和缺失定义；成员ID与两个已有评分",
+      "expression": "诊断值、树、模块身份、性状关系和成员评分均为已有结果；对象ID与模块身份有显式对应。",
+      "render_kind": null,
+      "semantic_settings": {},
+      "png_dimensions": [
+        5000,
+        5709
+      ],
+      "png_sha256": "e0497e86dc59155385b607888b201558f3b7615efe1dc6f39ec357c3b28583a7"
+    },
+    {
+      "id": "K39",
+      "family": "G14",
+      "title": "环形层级量值与同对象堆叠贡献",
+      "role": "combination",
+      "decision": "recommended",
+      "canonical": "K39",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "B39",
+      "input_columns": [
+        "separately_saved_component_tables"
+      ],
+      "input_rows": 2,
+      "data_required": "已有层次树、叶序、叶端连续量/比例和独立外圈量值；对象×可加成分量值与明确显示顺序",
+      "expression": "两个panel共用叶端ID；标记指标与可加数量分别保留单位，不能把独立对接能量相加解释亲和力。",
+      "render_kind": null,
+      "semantic_settings": {},
+      "png_dimensions": [
+        5209,
+        3250
+      ],
+      "png_sha256": "b9f3d1ea0ad4385056b1ef7424f4e96e16f3c1ef304d3f80411403ac4be6d3fe"
+    },
+    {
+      "id": "K40",
+      "family": "G56",
+      "title": "模块结构、相似矩阵、代表值网络与性状",
+      "role": "combination",
+      "decision": "parameter_variant",
+      "canonical": "K38",
+      "reason": "合并到 已有诊断、层次树、关联矩阵与成员评分；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "B38",
+      "input_columns": [
+        "separately_saved_component_tables"
+      ],
+      "input_rows": 5,
+      "data_required": "唯一叶ID、已有二叉树合并记录、合并高度、固定叶序和分类；同一叶ID顺序下的完整相似矩阵与版本；模块ID、已有代表值关系、权重和符号；完整行×列的两种量值；各自单位、范围、检验和缺失定义；成员ID与两个已有评分",
+      "expression": "叶ID、矩阵行列与成员评分对应；模块ID对应条目关联与代表值网络。TOM/adjacency/kME定义与网络版本由上游明确给定。",
+      "render_kind": null,
+      "semantic_settings": {},
+      "png_dimensions": [
+        6042,
+        5000
+      ],
+      "png_sha256": "ea508b3298a8b85aebe0e676adf2dd04a727005e95f62fe315abc9a4e3e945d7"
     }
   ]
 }

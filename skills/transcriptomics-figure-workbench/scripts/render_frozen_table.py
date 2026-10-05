@@ -17,11 +17,17 @@ import figure_network_extensions as network
 import figure_multiscale as multiscale
 import figure_multiomics_views as multiomics
 import figure_multimodal as multimodal
+import figure_linked_evidence as linked
 from project_theme import validate_theme, render_with_theme
 from panel_layout_audit import audit_panel_layout
 
 # Fixed functions, not user-supplied import paths or executable expressions.
 ADAPTERS={
+    'membership_ribbons':(linked.plot_membership_ribbons,'effect ratio padj count','argument'),
+    'split_metric_matrix':(linked.plot_split_metric_matrix,'association pvalue','argument'),
+    'hierarchy_tracks':(linked.plot_hierarchy_tracks,'height','argument'),
+    'radial_hierarchy':(linked.plot_radial_hierarchy,'height metric outer_value area_value','argument'),
+    'stacked_values':(linked.plot_stacked_values,'value','argument'),
     'frozen_dynamics':(multimodal.plot_frozen_dynamics,'time estimate lower upper','wrapper'),
     'composition':(core.plot_composition,'count','wrapper'),
     'ternary':(multiscale.plot_ternary_composition,'','argument'),

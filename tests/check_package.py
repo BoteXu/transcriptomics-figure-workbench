@@ -6,7 +6,7 @@ import ast, collections, hashlib, json, re, sys
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT/'skills/transcriptomics-figure-workbench'
 GALLERY = ROOT/'examples/gallery'
-TEXT_SUFFIXES = {'.md','.py','.R','.json','.yaml','.yml','.txt','.tsv','.html','.svg'}
+TEXT_SUFFIXES = {'.md','.py','.R','.json','.yaml','.yml','.txt','.tsv','.html','.svg','.js'}
 PRIVATE = re.compile(r'(?:(?<![A-Za-z0-9])[A-Za-z]:[\\/]|(?<![:A-Za-z0-9./])/(?:home|Users)/[^/\s]+/|wxid_[a-z0-9_]+|viewer-file:[/]{2}|https?://(?:localhost|127\.0\.0\.1):876[67])')
 SECRET = re.compile(r'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|AKIA[A-Z0-9]{16}|sk-[A-Za-z0-9_-]{40,})\b')
 
@@ -23,7 +23,7 @@ def main():
     entry=(SKILL/'SKILL.md').read_text(encoding='utf8')
     assert entry.startswith('---\n') and 'name: transcriptomics-figure-workbench' in entry
     assert (ROOT/'LICENSE').is_file() and (SKILL/'references/colorbrewer-license.txt').is_file()
-    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.2.0'
+    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.2.1'
     files=[p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and 'dist' not in p.parts]
     for p in files:
         assert p.stat().st_size < 100_000_000, 'GitHub file size exceeded'
@@ -36,15 +36,22 @@ def main():
         if p.suffix=='.json': json.loads(p.read_text(encoding='utf8'))
     catalog=json.loads((GALLERY/'catalog.json').read_text(encoding='utf8'))
     items=catalog['preserved_examples']; groups=catalog['general_entries']
-    assert len(items)==236 and len(groups)==45
+    assert len(items)==244 and len(groups)==45
     ids=[i['id'] for i in items]; assert len(ids)==len(set(ids))
     flattened=[id_ for g in groups for id_ in g['members']]
     assert sorted(flattened)==sorted(ids), 'Lost or duplicate catalog member'
     assert {'P05','P10','P20a','R05','R25','K07','K15','C15','S03','T43','N12'} <= set(ids)
     for g in groups: assert g['default'] in g['members']
     counts=collections.Counter(i['role'] for i in items)
-    assert counts['palette']==15 and counts['protein']==3 and counts['combination']==36
-    assert sum(i['curation']['decision']=='recommended' for i in items)==177
+    assert counts['palette']==15 and counts['protein']==3 and counts['combination']==40
+    methods=catalog['drawing_methods'];assert len(methods)==111
+    assert sorted(i for m in methods for i in m['members'])==sorted(ids)
+    assert len({m['id'] for m in methods})==len(methods)
+    assert sum(m['role'] in ['figure','combination'] for m in methods)==92
+    assert sum(i['curation']['decision']=='recommended' for i in items)==len(methods)
+    for m in methods:
+        assert m['default'] in m['members']
+        assert all(p['example'] in m['members'] for p in m['modes'])
     by_id={i['id']:i for i in items}
     for item in items:
         assert item['curation']['canonical'] in by_id
@@ -55,6 +62,12 @@ def main():
         now=by_id[old['id']]
         assert now['png_sha256']==old['png_sha256'], 'Original preview removed or changed'
         if old['pdf_sha256']: assert now['pdf_sha256']==old['pdf_sha256']
+    for old in json.loads((ROOT/'docs/baseline-preservation-v021.json').read_text(encoding='utf8'))['ids']:
+        now=by_id[old['id']]
+        assert now['png_sha256']==old['png_sha256']
+        if old['pdf_sha256']:assert now['pdf_sha256']==old['pdf_sha256']
+    for a,b in [('T14','T18'),('P21a','P21b'),('M02','M03'),('T10','M10'),('K01','K07'),('K14','K15'),('K38','K40')]:
+        assert by_id[a]['method']==by_id[b]['method'], 'Structural duplicates remain separate'
     ledger=json.loads((SKILL/'references/catalog-audit.json').read_text(encoding='utf8'))['entries']
     assert sorted(x['id'] for x in ledger)==sorted(ids)
     for row in ledger:
@@ -77,7 +90,7 @@ def main():
             assert meta['synthetic'] is False and meta['structure_source']['pdb_id']=='1EMA'
         elif item['role']!='palette': assert meta['synthetic'] is True
     recipes=json.loads((SKILL/'references/combination-recipes.json').read_text(encoding='utf8'))
-    assert len(recipes['recipes'])==36 and len(recipes['supplemental_components'])==22
+    assert len(recipes['recipes'])==40 and len(recipes['supplemental_components'])==32
     assert {r['id'] for r in recipes['recipes']}=={i['id'] for i in items if i['role']=='combination'}
     for recipe in recipes['recipes']:
         item=by_id[recipe['id']]
@@ -97,7 +110,9 @@ def main():
     assert inline==items, 'Gallery and manifest diverge'
     marker=re.search(r'const\s+groups\s*=\s*',html)
     assert marker and json.JSONDecoder().raw_decode(html[marker.end():])[0]==groups, 'Navigation groups diverge'
-    assert 'figure-workbench-public-v0.1-notes' in html
+    assert 'figure-workbench-public-v0.1-notes' in (GALLERY/'workbench.js').read_text(encoding='utf8')
+    marker=re.search(r'const\s+methods\s*=\s*',html)
+    assert marker and json.JSONDecoder().raw_decode(html[marker.end():])[0]==methods
     assert not list(GALLERY.glob('references/*')), 'Private source pictures bundled'
     for p in ROOT.rglob('*.md'):
         if '.git' in p.parts or 'dist' in p.parts: continue
@@ -111,11 +126,14 @@ def main():
             target=(p.parent/link).resolve()
             assert target.exists(), 'Broken document link: '+str(p.relative_to(ROOT))+' -> '+link
     overview=ROOT/'examples/overview'
-    for name in ['all-previews.png','all-previews.jpg','all-previews.pdf','general-patterns.png','general-patterns.jpg','index.tsv']:
+    for name in ['all-previews.png','all-previews.jpg','source-archive-v021.pdf','visualization-overview.pdf','visualization-overview.png','visualization-overview.jpg','general-patterns.png','general-patterns.jpg','index.tsv','methods.tsv','overview-index.json']:
         assert (overview/name).is_file()
     lines=(overview/'index.tsv').read_text(encoding='utf8').splitlines()
-    assert len(lines)==237
+    assert len(lines)==245
     for line in lines[1:]: checked_path('overview/'+line.split('\t')[-1],ROOT/'examples')
+    overview_manifest=json.loads((overview/'overview-index.json').read_text(encoding='utf8'))
+    assert sorted(i for p in overview_manifest['primary_pages'] for i in p['examples'])==sorted(m['default'] for m in methods)
+    assert sorted(i for p in overview_manifest['archive_pages'] for i in p['examples'])==sorted(ids)
     plots={}
     for p in (SKILL/'scripts').glob('figure_*.py'):
         tree=ast.parse(p.read_text(encoding='utf8'))

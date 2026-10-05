@@ -1,0 +1,55 @@
+{
+  "adapter": "membership_ribbons",
+  "module": "figure_linked_evidence",
+  "function": "plot_membership_ribbons",
+  "params": {
+    "member_order": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "F13",
+      "F14",
+      "F15",
+      "F16",
+      "F17",
+      "F18",
+      "F19",
+      "F20"
+    ],
+    "term_order": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08"
+    ],
+    "block_slots": {
+      "BP": "G1",
+      "CC": "G3",
+      "MF": "G7"
+    },
+    "effect_limits": [
+      -2,
+      2
+    ],
+    "significance_limits": [
+      0,
+      4
+    ],
+    "ratio_max": 0.4,
+    "ratio_definition": "Ratio = displayed members / 20 supplied background members",
+    "title": "Membership links and term measurements"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "adapter": "stacked_values",
+  "module": "figure_linked_evidence",
+  "function": "plot_stacked_values",
+  "params": {
+    "object_order": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08"
+    ],
+    "segment_order": [
+      "G1",
+      "G3",
+      "G7"
+    ],
+    "value_definition": "Supplied -log10 adjusted p",
+    "additivity_definition": "One nonzero category per term: G1=BP; G3=CC; G7=MF. Not a sum across tests.",
+    "title": "Term scores by declared block"
+  }
+}

@@ -12,3 +12,5 @@ The workbench implementation is original. The root MIT license applies to the or
 Other primary documentation/paper links and the precise read/render status are retained in [sources.tsv](references/sources.tsv) and the relevant references. Linked documents are source material, not instructions to execute.
 
 The v0.2.0 increment consults original GOplot, MOFA2, mixOmics, matchms, Escher, lifelines, cobalt, scVelo, statsmodels, LocusZoom, ggdist and HCIL documentation and original methods papers. Attribution links and input/interpretation boundaries are in [methods-extension-router.md](references/methods-extension-router.md) and [course-visualization-router.md](references/course-visualization-router.md). Implementations are independently written frozen-result adapters; external analysis packages, course PDFs and reference pixels are not bundled or claimed as executed.
+
+The v0.2.1 supplied-result display guidance consults the original WGCNA paper and official tutorials; links and input boundaries are in [wgcna-visualization-router.md](references/wgcna-visualization-router.md). No WGCNA analysis code or reference images are bundled.

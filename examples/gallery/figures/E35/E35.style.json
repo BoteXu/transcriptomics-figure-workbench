@@ -1,0 +1,35 @@
+{
+  "adapter": "split_metric_matrix",
+  "module": "figure_linked_evidence",
+  "function": "plot_split_metric_matrix",
+  "params": {
+    "row_order": [
+      "G1",
+      "G3",
+      "G5",
+      "G7"
+    ],
+    "column_order": [
+      "Trait A",
+      "Trait B",
+      "Trait C"
+    ],
+    "row_slots": {
+      "G1": "G1",
+      "G3": "G3",
+      "G5": "G5",
+      "G7": "G7"
+    },
+    "association_limits": [
+      -1,
+      1
+    ],
+    "significance_limits": [
+      0,
+      4
+    ],
+    "association_definition": "Supplied module-trait association coefficient",
+    "probability_definition": "Supplied nominal p; no multiple testing performed here",
+    "title": "Two supplied metrics in every cell"
+  }
+}

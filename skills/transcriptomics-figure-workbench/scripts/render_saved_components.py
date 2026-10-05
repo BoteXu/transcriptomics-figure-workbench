@@ -1,4 +1,4 @@
-"""Redraw the 22 saved auxiliary panels of the original composition examples.
+"""Redraw registered saved auxiliary panels from the composition examples.
 
 Uses shipped frozen tables and explicit fixed adapters. Component export files
 remain independently accessible, while composition recipes control placement.
@@ -78,10 +78,17 @@ def rebuild(gallery,output,ids,theme=None):
         component=components[name];source=safe_file(gallery,component['prefix']+'.tsv');metadata=safe_file(gallery,component['metadata'])
         meta=json.loads(metadata.read_text(encoding='utf8'));spec=meta['figure_spec'];project=theme or spec['project_theme']
         if hashlib.sha256(source.read_bytes()).hexdigest()!=meta['input_hash']:raise ValueError('Saved component input changed')
-        data=pd.read_csv(source,sep='\t',dtype=str,keep_default_na=False).replace('',np.nan)
-        numeric=NUMERIC|set(spec.get('set_columns',[]))
-        for column in numeric&set(data.columns):data[column]=pd.to_numeric(data[column],errors='raise')
-        fig=draw(name,data,spec,project)
+        if component.get('adapter'):
+            from render_frozen_table import load_table,render,ADAPTERS
+            style=json.loads(safe_file(gallery,component['style']).read_text(encoding='utf8'))
+            adapter=component['adapter'];fn=ADAPTERS[adapter][0]
+            if style.get('module')!=fn.__module__ or style.get('function')!=fn.__name__:raise ValueError('Component style/adapter mismatch')
+            data=load_table(source,adapter,style['params']);fig,audit=render(adapter,data,style['params'],project)
+        else:
+            data=pd.read_csv(source,sep='\t',dtype=str,keep_default_na=False).replace('',np.nan)
+            numeric=NUMERIC|set(spec.get('set_columns',[]))
+            for column in numeric&set(data.columns):data[column]=pd.to_numeric(data[column],errors='raise')
+            fig=draw(name,data,spec,project)
         context=copy.deepcopy(meta)
         for field in ('figure_spec','input_hash','input_hash_algorithm','input_hash_scope','output_sha256','source_file','source_file_sha256','schema_version','status','figure_id'):
             context.pop(field,None)

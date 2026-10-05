@@ -1,0 +1,4078 @@
+{
+  "schema_version": 1,
+  "version": "0.2.1",
+  "source_examples": 244,
+  "counts": {
+    "figure": 68,
+    "combination": 24,
+    "support": 1,
+    "protein": 3,
+    "palette": 15
+  },
+  "policy": "One main preview per visual grammar. Source IDs and contracts are preserved. Different data labels, palettes, scales and repeat facets never create new methods.",
+  "methods": [
+    {
+      "id": "D01",
+      "title": "分组原始点与中心区间",
+      "role": "figure",
+      "default": "P04",
+      "grammar": "category-positioned observations; optional jitter/swarm and supplied summary",
+      "members": [
+        "P01",
+        "P04",
+        "R17",
+        "P24"
+      ],
+      "modes": [
+        {
+          "example": "P04",
+          "label": "原始点与中心/IQR"
+        },
+        {
+          "example": "R17",
+          "label": "蜂群排布"
+        },
+        {
+          "example": "P24",
+          "label": "分面比例点"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P01",
+          "data_required": "对象ID×组别×一个数值",
+          "expression": "比较原始数值、组间差异和离散",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。每个独立单位一行",
+          "metadata": "metadata/P01.json"
+        },
+        {
+          "example": "P04",
+          "data_required": "对象ID×组别×数值",
+          "expression": "同时表达完整观测与中心、离散",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。IQR不是置信区间",
+          "metadata": "metadata/P04.json"
+        },
+        {
+          "example": "R17",
+          "data_required": "单位 ID、组和值；每组已计算中心值，以及中心值的定义。",
+          "expression": "看分布形状、离群范围和组中心；点密集的宽处表示局部观测多。",
+          "limitations": "黑点到底是平均数还是中位数由输入定义；图形宽度不等同置信区间。",
+          "metadata": "metadata/R17.json"
+        },
+        {
+          "example": "P24",
+          "data_required": "对象×组别×组成项×计数，明确单位",
+          "expression": "表达每对象比例与组内离散，不混淆对象与组概括",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。保留样本单位和统一比例尺度",
+          "metadata": "metadata/P24.json"
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "title": "箱线概括",
+      "role": "figure",
+      "default": "T36",
+      "grammar": "five-number boxes, whiskers and optional outliers",
+      "members": [
+        "P02",
+        "T36"
+      ],
+      "modes": [
+        {
+          "example": "T36",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P02",
+          "data_required": "对象ID×分组×一个非负数值",
+          "expression": "比较数值分布及异常范围",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。只展示已有指标，不选择过滤阈值",
+          "metadata": "metadata/P02.json"
+        },
+        {
+          "example": "T36",
+          "data_required": "组别×Q1/中位数/Q3/上下须；离群点另表提供",
+          "expression": "表达中心与离散概括；不能替代全体观测",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T36.json"
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "title": "雨云：半密度、箱线与原始点",
+      "role": "figure",
+      "default": "P05",
+      "grammar": "half-density + box + individual observations",
+      "members": [
+        "P05"
+      ],
+      "modes": [
+        {
+          "example": "P05",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P05",
+          "data_required": "对象ID×组别×数值，独立单位说明",
+          "expression": "同时表达分布形状、箱线概括和全部原始点",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。默认n>=20且>=5个不同值才显示密度，n>=5才显示箱线",
+          "metadata": "metadata/P05.json"
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "title": "小提琴与箱线",
+      "role": "figure",
+      "default": "T08",
+      "grammar": "full mirrored density + box",
+      "members": [
+        "T08"
+      ],
+      "modes": [
+        {
+          "example": "T08",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "T08",
+          "data_required": "组别×已有密度网格，另有五数概括",
+          "expression": "表达分布形状、中心和离散",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T08.json"
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "title": "分箱数量分布",
+      "role": "figure",
+      "default": "P35",
+      "grammar": "fixed-bin rectangles",
+      "members": [
+        "P35"
+      ],
+      "modes": [
+        {
+          "example": "P35",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P35",
+          "data_required": "组别×箱左界/右界×计数",
+          "expression": "表达已定分箱中的数量分布，不重新分箱",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。上游已定分箱；不重新分箱",
+          "metadata": "metadata/P35.json"
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "title": "密度山脊",
+      "role": "figure",
+      "default": "E12",
+      "grammar": "aligned offset densities on a shared value axis",
+      "members": [
+        "P37",
+        "E12"
+      ],
+      "modes": [
+        {
+          "example": "E12",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P37",
+          "data_required": "组别×共同X网格×密度",
+          "expression": "表达多组密度形状，保留共同显示尺度",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已计算密度；共同显示缩放",
+          "metadata": "metadata/P37.json"
+        },
+        {
+          "example": "E12",
+          "data_required": "组别×共用x网格×已有非负密度，密度定义与带宽",
+          "expression": "多组的位置、宽度及分布形状",
+          "limitations": "本例为生成E10/E11样本的解析模型密度，不是样本拟合；不同归一化或带宽不直接比较。",
+          "metadata": "metadata/E12.json"
+        }
+      ]
+    },
+    {
+      "id": "D07",
+      "title": "有序曲线与区间带",
+      "role": "figure",
+      "default": "T31",
+      "grammar": "ordered series; line/step/offset; supplied single or nested bands",
+      "members": [
+        "P29",
+        "T09",
+        "T14",
+        "T18",
+        "T28",
+        "T31",
+        "T35",
+        "T39",
+        "M07",
+        "E10",
+        "E32",
+        "P25a",
+        "P25b",
+        "P25c",
+        "P26a",
+        "P26b",
+        "N09"
+      ],
+      "modes": [
+        {
+          "example": "T31",
+          "label": "曲线与一层区间"
+        },
+        {
+          "example": "P26a",
+          "label": "阶梯曲线"
+        },
+        {
+          "example": "T35",
+          "label": "偏移谱线"
+        },
+        {
+          "example": "E32",
+          "label": "多层嵌套区间"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P29",
+          "data_required": "系列×时间×值/上下界",
+          "expression": "表达记录的变化和已提供的范围",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不运行模拟、平滑或生成区间",
+          "metadata": "metadata/P29.json"
+        },
+        {
+          "example": "T09",
+          "data_required": "系列×有序X×Y/上下界",
+          "expression": "表达随时间、剂量或位置变化及给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T09.json"
+        },
+        {
+          "example": "T14",
+          "data_required": "系列×有序X×Y/上下界",
+          "expression": "表达随时间、剂量或位置变化及给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T14.json"
+        },
+        {
+          "example": "T18",
+          "data_required": "系列×有序X×Y/上下界",
+          "expression": "表达随时间、剂量或位置变化及给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T18.json"
+        },
+        {
+          "example": "T28",
+          "data_required": "系列×有序X×Y/上下界",
+          "expression": "表达随时间、剂量或位置变化及给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T28.json"
+        },
+        {
+          "example": "T31",
+          "data_required": "系列×有序X×Y/上下界",
+          "expression": "表达随时间、剂量或位置变化及给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T31.json"
+        },
+        {
+          "example": "T35",
+          "data_required": "系列×有序坐标×强度，可有明确记录的偏移",
+          "expression": "表达曲线形状、峰位和系列差异",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T35.json"
+        },
+        {
+          "example": "T39",
+          "data_required": "系列×有序X×Y/上下界",
+          "expression": "表达随时间、剂量或位置变化及给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T39.json"
+        },
+        {
+          "example": "M07",
+          "data_required": "曲线ID、有序保留时间及强度/明确已给区间",
+          "expression": "峰形、保留时间和不同条件的曲线位置",
+          "limitations": "复用有序曲线；不提峰、积分、对齐或平滑。",
+          "metadata": "metadata/M07.json"
+        },
+        {
+          "example": "E10",
+          "data_required": "组别×升序量值×已有累计概率",
+          "expression": "全分布位置、尾部和跨组差异；不依赖分箱",
+          "limitations": "重复观测和权重须在上游处理；有删失的数据不能冒充普通经验CDF。",
+          "metadata": "metadata/E10.json"
+        },
+        {
+          "example": "E32",
+          "data_required": "组×有序X×区间覆盖率；已有中心和相互嵌套上下界",
+          "expression": "中央轨迹与不同覆盖范围",
+          "limitations": "区分CI/预测区间/可信区间；不估计或预测。",
+          "metadata": "metadata/E32.json"
+        },
+        {
+          "example": "P25a",
+          "data_required": "模型×按阈值顺序的X/Y，曲线语义",
+          "expression": "表达已有性能曲线，不训练或改阈值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型",
+          "metadata": "metadata/P25a.json"
+        },
+        {
+          "example": "P25b",
+          "data_required": "模型×按阈值顺序的X/Y，曲线语义",
+          "expression": "表达已有性能曲线，不训练或改阈值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型",
+          "metadata": "metadata/P25b.json"
+        },
+        {
+          "example": "P25c",
+          "data_required": "模型×按阈值顺序的X/Y，曲线语义",
+          "expression": "表达已有性能曲线，不训练或改阈值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有曲线坐标；不训练或评估模型",
+          "metadata": "metadata/P25c.json"
+        },
+        {
+          "example": "P26a",
+          "data_required": "模型×已有X/Y＋已有AUC/AP标签",
+          "expression": "表达多个模型性能曲线及给定指标",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。PR需提供阳性比例；不重算AUC/AP",
+          "metadata": "metadata/P26a.json"
+        },
+        {
+          "example": "P26b",
+          "data_required": "模型×已有X/Y＋已有AUC/AP标签",
+          "expression": "表达多个模型性能曲线及给定指标",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。PR需提供阳性比例；不重算AUC/AP",
+          "metadata": "metadata/P26b.json"
+        },
+        {
+          "example": "N09",
+          "data_required": "类别／实体ID×阶段的已提供rank，阶段顺序",
+          "expression": "看同一实体在阶段间排名怎样上升、下降、交叉",
+          "limitations": "原创合成演示；不重新排名；保留并列；反向纵轴明确1最高；排名不能表达原量值差",
+          "metadata": "metadata/N09.json"
+        }
+      ]
+    },
+    {
+      "id": "D08",
+      "title": "配对点与主体连线",
+      "role": "figure",
+      "default": "P03",
+      "grammar": "same-ID observations joined across conditions",
+      "members": [
+        "P03"
+      ],
+      "modes": [
+        {
+          "example": "P03",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P03",
+          "data_required": "同一对象ID×条件×数值",
+          "expression": "表达同一对象在条件间的变化",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。仅两个条件的完整配对",
+          "metadata": "metadata/P03.json"
+        }
+      ]
+    },
+    {
+      "id": "D09",
+      "title": "XY散点与给定参考层",
+      "role": "figure",
+      "default": "T33",
+      "grammar": "XY points; supplied fit, reference lines, boundaries, group overlays or aligned diagnostic facets",
+      "members": [
+        "P06",
+        "P33",
+        "T05",
+        "T07",
+        "T19",
+        "T33",
+        "R18",
+        "R19",
+        "E11",
+        "E14",
+        "E24",
+        "E25",
+        "E30",
+        "M01",
+        "M11a",
+        "M11b",
+        "M11c",
+        "K30"
+      ],
+      "modes": [
+        {
+          "example": "T33",
+          "label": "点与给定拟合"
+        },
+        {
+          "example": "R19",
+          "label": "分类点与给定范围"
+        },
+        {
+          "example": "R18",
+          "label": "质心连线"
+        },
+        {
+          "example": "E11",
+          "label": "分位数对照"
+        },
+        {
+          "example": "E14",
+          "label": "差值与给定相合限界"
+        },
+        {
+          "example": "M01",
+          "label": "四种已给证据状态"
+        },
+        {
+          "example": "M11a",
+          "label": "给定残差参考层"
+        },
+        {
+          "example": "M11c",
+          "label": "给定尺度参考层"
+        },
+        {
+          "example": "E30",
+          "label": "给定精度边界"
+        },
+        {
+          "example": "K30",
+          "label": "同模型四个诊断分面"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P06",
+          "data_required": "对象ID×已有X/Y坐标×组别",
+          "expression": "表达已有几何与分组",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不计算坐标；PCA轴方差需另外说明",
+          "metadata": "metadata/P06.json"
+        },
+        {
+          "example": "P33",
+          "data_required": "对象ID×组别×X/Y",
+          "expression": "表达两变量关系和离散",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。每个独立单位一行；不拟合回归",
+          "metadata": "metadata/P33.json"
+        },
+        {
+          "example": "T05",
+          "data_required": "对象×X/Y；可加组别、已计算拟合曲线及上下界",
+          "expression": "表达两变量关联、离散和已有拟合；不推出因果或一致性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T05.json"
+        },
+        {
+          "example": "T07",
+          "data_required": "对象×已有二维坐标×组别，另有已计算椭圆参数",
+          "expression": "表达组间位置和给定范围；椭圆含义由上游定义",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T07.json"
+        },
+        {
+          "example": "T19",
+          "data_required": "对象×已有二维坐标×组别",
+          "expression": "表达已有几何与亚群分布；坐标距离不自动等于生物距离",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T19.json"
+        },
+        {
+          "example": "T33",
+          "data_required": "对象×X/Y；可加组别、已计算拟合曲线及上下界",
+          "expression": "表达两变量关联、离散和已有拟合；不推出因果或一致性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T33.json"
+        },
+        {
+          "example": "R18",
+          "data_required": "每单位两维坐标、组；给定质心；给定椭圆中心、宽高和角度。",
+          "expression": "显示样本到组中心的离散、方向及组间位置。",
+          "limitations": "PCA 解释方差及椭圆含义由上游提供；不把散布椭圆默认叫 95% CI。",
+          "metadata": "metadata/R18.json"
+        },
+        {
+          "example": "R19",
+          "data_required": "与 R18 同一张表；附给定的轴解释和分组颜色、符号。",
+          "expression": "强调分组重叠、象限位置以及各轴的投影分布。",
+          "limitations": "R18/R19 示例输入哈希一致；背景象限不会改变数据，也不能产生类别分界结论。",
+          "metadata": "metadata/R19.json"
+        },
+        {
+          "example": "E11",
+          "data_required": "参考分位数与观测分位数的配对坐标；参考分布定义",
+          "expression": "偏移、尺度差异和尾部偏离",
+          "limitations": "图本身不进行正态性检验；坐标已标准化与否需明确。",
+          "metadata": "metadata/E11.json"
+        },
+        {
+          "example": "E14",
+          "data_required": "同对象配对平均值、差值；已有偏倚、上下相合限界和单位定义",
+          "expression": "量程相关偏差与个体差值分布",
+          "limitations": "相关不等于相合；重复测量的限界需匹配其设计，不在绘图时重算。",
+          "metadata": "metadata/E14.json"
+        },
+        {
+          "example": "E24",
+          "data_required": "每个配对对象的两种已有量值、身份和唯一ID",
+          "expression": "两种测量的取值范围与关系，和差值相合图联合查看",
+          "limitations": "XY关系不能代替相合性，散点不构成独立样本设计。",
+          "metadata": "metadata/E24.json"
+        },
+        {
+          "example": "E25",
+          "data_required": "对象ID×同一x/y×明确身份",
+          "expression": "向量和marker数据对应哪个已有亚群或身份",
+          "limitations": "本图不计算PCA/UMAP，也不重新注释亚群。",
+          "metadata": "metadata/E25.json"
+        },
+        {
+          "example": "E30",
+          "data_required": "研究ID、效应、SE；给定参考值和两条参考边界坐标",
+          "expression": "效应估计与精度分布，核对小样本与不对称结构",
+          "limitations": "不做合并估计、Egger或补齐；不对称不等于发表偏倚。",
+          "metadata": "metadata/E30.json"
+        },
+        {
+          "example": "M01",
+          "data_required": "映射后共同特征ID、两层效应及各自q、相同对比方向",
+          "expression": "同向/异向与每层独立的显著证据状态",
+          "limitations": "不同层单位要明示；不把共有名单或同向作为因果。",
+          "metadata": "metadata/M01.json"
+        },
+        {
+          "example": "M11a",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "limitations": "四个模式复用同一表；不拟合模型或平滑，不自动删除高影响对象。",
+          "metadata": "metadata/M11a.json"
+        },
+        {
+          "example": "M11b",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "limitations": "四个模式复用同一表；不拟合模型或平滑，不自动删除高影响对象。",
+          "metadata": "metadata/M11b.json"
+        },
+        {
+          "example": "M11c",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "limitations": "四个模式复用同一表；不拟合模型或平滑，不自动删除高影响对象。",
+          "metadata": "metadata/M11c.json"
+        },
+        {
+          "example": "K30",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "limitations": "四个panel使用完全相同48对象、拟合值、残差、标准残差、leverage、Cook；QQ排序值与原标准残差相等。没有实际研究拟合或自动筛除。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K30.json"
+        }
+      ]
+    },
+    {
+      "id": "D10",
+      "title": "三变量气泡散点",
+      "role": "figure",
+      "default": "T29",
+      "grammar": "XY position + an independently declared area variable",
+      "members": [
+        "T15",
+        "T29",
+        "T40",
+        "M11d"
+      ],
+      "modes": [
+        {
+          "example": "T29",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "T15",
+          "data_required": "对象×X/Y×非负大小值×组别",
+          "expression": "表达两坐标与第三值；大小按面积编码",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T15.json"
+        },
+        {
+          "example": "T29",
+          "data_required": "对象×X/Y×非负大小值×组别",
+          "expression": "表达两坐标与第三值；大小按面积编码",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T29.json"
+        },
+        {
+          "example": "T40",
+          "data_required": "对象×X/Y×非负大小值×组别",
+          "expression": "表达两坐标与第三值；大小按面积编码",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T40.json"
+        },
+        {
+          "example": "M11d",
+          "data_required": "对象ID、已有拟合值/残差/标准残差、leverage、Cook、参考分位与已排序残差",
+          "expression": "同时检查残差形态、分布、尺度和高影响对象",
+          "limitations": "四个模式复用同一表；不拟合模型或平滑，不自动删除高影响对象。",
+          "metadata": "metadata/M11d.json"
+        }
+      ]
+    },
+    {
+      "id": "D11",
+      "title": "连续密度着色与固定门",
+      "role": "figure",
+      "default": "T20",
+      "grammar": "positive XY with supplied density colors and explicit gate boundaries",
+      "members": [
+        "T20",
+        "T21",
+        "T22",
+        "T23"
+      ],
+      "modes": [
+        {
+          "example": "T20",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "T20",
+          "data_required": "对象×正X/Y×已有密度值；提供门界线",
+          "expression": "表达密集区与固定门的关系",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T20.json"
+        },
+        {
+          "example": "T21",
+          "data_required": "对象×正X/Y×已有密度值；提供门界线",
+          "expression": "表达密集区与固定门的关系",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T21.json"
+        },
+        {
+          "example": "T22",
+          "data_required": "对象×正X/Y×已有密度值；提供门界线",
+          "expression": "表达密集区与固定门的关系",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T22.json"
+        },
+        {
+          "example": "T23",
+          "data_required": "对象×正X/Y×已有密度值；提供门界线",
+          "expression": "表达密集区与固定门的关系",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T23.json"
+        }
+      ]
+    },
+    {
+      "id": "D12",
+      "title": "六边形支持量",
+      "role": "figure",
+      "default": "N10",
+      "grammar": "hexagonal bins with count color",
+      "members": [
+        "N10"
+      ],
+      "modes": [
+        {
+          "example": "N10",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "N10",
+          "data_required": "对象ID、X、Y、对象单位、给定分箱粒度",
+          "expression": "减少密集点重叠，同时用颜色看每个空间格内的记录量",
+          "limitations": "原创合成演示；描述性显示分箱，非独立性证据；计数不是其他变量均值或概率密度",
+          "metadata": "metadata/N10.json"
+        }
+      ]
+    },
+    {
+      "id": "D13",
+      "title": "相同坐标的连续特征分面",
+      "role": "figure",
+      "default": "E26",
+      "grammar": "registered XY repeated for continuous feature colors",
+      "members": [
+        "P07",
+        "E26"
+      ],
+      "modes": [
+        {
+          "example": "E26",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P07",
+          "data_required": "对象ID×同一X/Y×特征×非负数值",
+          "expression": "在相同几何上比较多个marker或特征值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。完整细胞×feature网格与一致坐标；不插补表达",
+          "metadata": "metadata/P07.json"
+        },
+        {
+          "example": "E26",
+          "data_required": "完整对象×特征表；同对象每个特征坐标完全一致、已有非负特征值",
+          "expression": "每个身份中的已有连续特征位置，与分类/向量图共同查询",
+          "limitations": "不从颜色判断注释真实性；不插补表达，不计算向量或新坐标。",
+          "metadata": "metadata/E26.json"
+        }
+      ]
+    },
+    {
+      "id": "D14",
+      "title": "条形估计与给定误差线",
+      "role": "figure",
+      "default": "T32",
+      "grammar": "category rectangles + optional supplied intervals; orientation is a setting",
+      "members": [
+        "P34",
+        "T06",
+        "T13",
+        "T25",
+        "T27",
+        "T32",
+        "T38",
+        "T43",
+        "P32"
+      ],
+      "modes": [
+        {
+          "example": "T32",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P34",
+          "data_required": "类别×组别×估计/上下界",
+          "expression": "表达条件间已有估计及区间",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。原有估计和区间；完整唯一网格",
+          "metadata": "metadata/P34.json"
+        },
+        {
+          "example": "T06",
+          "data_required": "类别×组别×估计值/上下界",
+          "expression": "表达各条件水平与给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T06.json"
+        },
+        {
+          "example": "T13",
+          "data_required": "类别×组别×估计值/上下界",
+          "expression": "表达各条件水平与给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T13.json"
+        },
+        {
+          "example": "T25",
+          "data_required": "类别×组别×估计值/上下界",
+          "expression": "表达各条件水平与给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T25.json"
+        },
+        {
+          "example": "T27",
+          "data_required": "类别×组别×估计值/上下界",
+          "expression": "表达各条件水平与给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T27.json"
+        },
+        {
+          "example": "T32",
+          "data_required": "类别×组别×估计值/上下界",
+          "expression": "表达各条件水平与给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T32.json"
+        },
+        {
+          "example": "T38",
+          "data_required": "类别×组别×估计值/上下界",
+          "expression": "表达各条件水平与给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T38.json"
+        },
+        {
+          "example": "T43",
+          "data_required": "类别×组别×估计值/上下界",
+          "expression": "表达各条件水平与给定不确定性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T43.json"
+        },
+        {
+          "example": "P32",
+          "data_required": "分类×全部数量×已记录数量×额外来源计数",
+          "expression": "表达支持量与缺失，不将记录数当效应",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；报告不是患者，可重叠分组不能直接相加",
+          "metadata": "metadata/P32.json"
+        }
+      ]
+    },
+    {
+      "id": "D15",
+      "title": "棒棒糖评分",
+      "role": "figure",
+      "default": "P11a",
+      "grammar": "stem length + endpoint; optional independent color/area",
+      "members": [
+        "P11a",
+        "P11b"
+      ],
+      "modes": [
+        {
+          "example": "P11a",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P11a",
+          "data_required": "项目×评分×校正p值×计数及量纲",
+          "expression": "表达项目评分、方向、证据及数量",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不运行富集，也不生成GSEA running-score曲线",
+          "metadata": "metadata/P11a.json"
+        },
+        {
+          "example": "P11b",
+          "data_required": "项目×评分×校正p值×计数及量纲",
+          "expression": "表达项目评分、方向、证据及数量",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不运行富集，也不生成GSEA running-score曲线",
+          "metadata": "metadata/P11b.json"
+        }
+      ]
+    },
+    {
+      "id": "D16",
+      "title": "森林与多系列区间",
+      "role": "figure",
+      "default": "E21",
+      "grammar": "row-positioned estimates + optional intervals, numeric columns and series offsets",
+      "members": [
+        "P19a",
+        "P19b",
+        "P20a",
+        "P20b",
+        "P21a",
+        "P21b",
+        "E13",
+        "E21",
+        "E22",
+        "E30b",
+        "K26"
+      ],
+      "modes": [
+        {
+          "example": "E21",
+          "label": "单系列与数字列"
+        },
+        {
+          "example": "E22",
+          "label": "比值与对数轴"
+        },
+        {
+          "example": "P21a",
+          "label": "多系列并排"
+        },
+        {
+          "example": "E13",
+          "label": "多阶段点估计"
+        },
+        {
+          "example": "K26",
+          "label": "两种量值独立分面"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P19a",
+          "data_required": "项目×效应/上下界，差值或比值尺度",
+          "expression": "表达方向、大小和已有不确定性",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。明确效应尺度和区间含义；不拟合模型",
+          "metadata": "metadata/P19a.json"
+        },
+        {
+          "example": "P19b",
+          "data_required": "项目×效应/上下界，差值或比值尺度",
+          "expression": "表达方向、大小和已有不确定性",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。明确效应尺度和区间含义；不拟合模型",
+          "metadata": "metadata/P19b.json"
+        },
+        {
+          "example": "P20a",
+          "data_required": "项目×组别×效应/上下界，差值或比值尺度",
+          "expression": "表达分组效应，数值与区间可直接读取",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。区间意义由上游提供",
+          "metadata": "metadata/P20a.json"
+        },
+        {
+          "example": "P20b",
+          "data_required": "项目×组别×效应/上下界，差值或比值尺度",
+          "expression": "表达分组效应，数值与区间可直接读取",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。区间意义由上游提供",
+          "metadata": "metadata/P20b.json"
+        },
+        {
+          "example": "P21a",
+          "data_required": "项目×系列×效应/上下界",
+          "expression": "表达多个系列方向和幅度的一致或冲突",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；相同比较/单位；不自动合并效应",
+          "metadata": "metadata/P21a.json"
+        },
+        {
+          "example": "P21b",
+          "data_required": "项目×系列×效应/上下界",
+          "expression": "表达多个系列方向和幅度的一致或冲突",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；相同比较/单位；不自动合并效应",
+          "metadata": "metadata/P21b.json"
+        },
+        {
+          "example": "E13",
+          "data_required": "协变量×调整阶段×已有SMD，SMD分母与参考阈值",
+          "expression": "逐协变量诊断调整前后的观测平衡变化",
+          "limitations": "只诊断已观测变量；不能证明不存在未观测混杂或因果可识别。",
+          "metadata": "metadata/E13.json"
+        },
+        {
+          "example": "E21",
+          "data_required": "每行标签、身份、已有点估计和上下界；差值/对数比值/比值尺度",
+          "expression": "逐行对比效应方向、大小与区间，精确读出所有数值",
+          "limitations": "区间定义必须已给；森林图不自动做meta分析或替换统计模型。",
+          "metadata": "metadata/E21.json"
+        },
+        {
+          "example": "E22",
+          "data_required": "每行标签、身份、已有点估计和上下界；差值/对数比值/比值尺度",
+          "expression": "逐行对比效应方向、大小与区间，精确读出所有数值",
+          "limitations": "区间定义必须已给；森林图不自动做meta分析或替换统计模型。",
+          "metadata": "metadata/E22.json"
+        },
+        {
+          "example": "E30b",
+          "data_required": "同一研究ID、分组、效应及已有区间",
+          "expression": "精度图可回到每一研究的完整估计与区间",
+          "limitations": "仅为已有通用森林图的配套输入示例。",
+          "metadata": "metadata/E30b.json"
+        },
+        {
+          "example": "K26",
+          "data_required": "协变量×调整阶段×已有SMD，SMD分母与参考阈值；每行标签、身份、已有点估计和上下界；差值/对数比值/比值尺度",
+          "expression": "逐协变量诊断调整前后的观测平衡变化；逐行对比效应方向、大小与区间，精确读出所有数值",
+          "limitations": "同一Before/After阶段身份与色槽；SMD与估计区间都是独立给定的合成输出，未声称运行了匹配、加权或因果模型。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K26.json"
+        }
+      ]
+    },
+    {
+      "id": "D17",
+      "title": "组成堆叠柱",
+      "role": "figure",
+      "default": "T10",
+      "grammar": "stacked category fractions or declared counts",
+      "members": [
+        "P23",
+        "T10",
+        "T17",
+        "M10"
+      ],
+      "modes": [
+        {
+          "example": "T10",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P23",
+          "data_required": "对象×组成项×非负整数计数",
+          "expression": "表达每对象构成；分母来自完整计数",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。捕获组成；零/缺项规则需解释",
+          "metadata": "metadata/P23.json"
+        },
+        {
+          "example": "T10",
+          "data_required": "类别×组成项×非负比例，每类总和为1",
+          "expression": "表达各对象或条件内部构成",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T10.json"
+        },
+        {
+          "example": "T17",
+          "data_required": "类别×组成项×非负比例，每类总和为1",
+          "expression": "表达各对象或条件内部构成",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T17.json"
+        },
+        {
+          "example": "M10",
+          "data_required": "样本×M+i已给数量；总计数和分母、校正状态",
+          "expression": "各样本标记组成",
+          "limitations": "仅示意通用组成；M+i份额不等于绝对浓度或代谢通量。",
+          "metadata": "metadata/M10.json"
+        }
+      ]
+    },
+    {
+      "id": "D18",
+      "title": "整体组成环形图",
+      "role": "figure",
+      "default": "T12",
+      "grammar": "annular sectors for one declared denominator",
+      "members": [
+        "T12",
+        "T26"
+      ],
+      "modes": [
+        {
+          "example": "T12",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "T12",
+          "data_required": "少量组成项×非负比例，总和为1",
+          "expression": "表达一个整体的组成；精确跨组比较优先柱或点",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T12.json"
+        },
+        {
+          "example": "T26",
+          "data_required": "少量组成项×非负比例，总和为1",
+          "expression": "表达一个整体的组成；精确跨组比较优先柱或点",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T26.json"
+        }
+      ]
+    },
+    {
+      "id": "D19",
+      "title": "数值热图与可选注释",
+      "role": "figure",
+      "default": "T34",
+      "grammar": "rectangular cell colors; optional supplied hierarchy, labels, masks and facets",
+      "members": [
+        "P12a",
+        "P12b",
+        "P15",
+        "P17a",
+        "P17b",
+        "P17c",
+        "P18",
+        "P36",
+        "T03",
+        "T16",
+        "T30",
+        "T34",
+        "T41",
+        "M02",
+        "M03",
+        "K33"
+      ],
+      "modes": [
+        {
+          "example": "T34",
+          "label": "已有层次树"
+        },
+        {
+          "example": "T30",
+          "label": "普通矩阵"
+        },
+        {
+          "example": "P15",
+          "label": "分类注释条"
+        },
+        {
+          "example": "P17b",
+          "label": "分块与分面"
+        },
+        {
+          "example": "P18",
+          "label": "三角区域与缺失状态"
+        },
+        {
+          "example": "P36",
+          "label": "格内数值"
+        },
+        {
+          "example": "K33",
+          "label": "不同量值独立色标"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P12a",
+          "data_required": "行×列×数值，色阶语义与顺序",
+          "expression": "表达二维模式和数值强弱",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不缩放、补值或聚类",
+          "metadata": "metadata/P12a.json"
+        },
+        {
+          "example": "P12b",
+          "data_required": "行×列×数值，色阶语义与顺序",
+          "expression": "表达二维模式和数值强弱",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不缩放、补值或聚类",
+          "metadata": "metadata/P12b.json"
+        },
+        {
+          "example": "P15",
+          "data_required": "矩阵＋列分组＋行模块",
+          "expression": "表达数值模式与两侧分类注释",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。固定输入顺序；R需要patchwork",
+          "metadata": "metadata/P15.json"
+        },
+        {
+          "example": "P17a",
+          "data_required": "完整矩阵＋明确别名字典与连续行分块",
+          "expression": "表达稠密矩阵并改善阅读，保留顺序与原值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形",
+          "metadata": "metadata/P17a.json"
+        },
+        {
+          "example": "P17b",
+          "data_required": "完整矩阵＋明确别名字典与连续行分块",
+          "expression": "表达稠密矩阵并改善阅读，保留顺序与原值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形",
+          "metadata": "metadata/P17b.json"
+        },
+        {
+          "example": "P17c",
+          "data_required": "完整矩阵＋明确别名字典与连续行分块",
+          "expression": "表达稠密矩阵并改善阅读，保留顺序与原值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不重排/聚类；矩阵单元为矢量图形",
+          "metadata": "metadata/P17c.json"
+        },
+        {
+          "example": "P18",
+          "data_required": "项目×维度×关联系数×校正p×样本量×状态",
+          "expression": "表达方向、强度、证据与缺测边界",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；输入完整状态网格，不重新计算相关/FDR",
+          "metadata": "metadata/P18.json"
+        },
+        {
+          "example": "P36",
+          "data_required": "真实类别×预测类别×整数计数",
+          "expression": "表达已有分类结果的正确与误分位置",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。行观测列预测；不拟合模型",
+          "metadata": "metadata/P36.json"
+        },
+        {
+          "example": "T03",
+          "data_required": "完整行×列×数值；固定顺序和色限",
+          "expression": "表达模式、强弱与成块结构",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T03.json"
+        },
+        {
+          "example": "T16",
+          "data_required": "完整行×列×数值；固定顺序和色限",
+          "expression": "表达模式、强弱与成块结构",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T16.json"
+        },
+        {
+          "example": "T30",
+          "data_required": "完整行×列×数值；固定顺序和色限",
+          "expression": "表达模式、强弱与成块结构",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T30.json"
+        },
+        {
+          "example": "T34",
+          "data_required": "完整行×列×数值，提供两侧树坐标与矩阵索引映射",
+          "expression": "表达矩阵模式及已有层次关系",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T34.json"
+        },
+        {
+          "example": "T41",
+          "data_required": "完整行×列×数值；固定顺序和色限",
+          "expression": "表达模式、强弱与成块结构",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T41.json"
+        },
+        {
+          "example": "M02",
+          "data_required": "模态×因子完整已给方差比例表、模型版本与缺失策略",
+          "expression": "每个因子在哪些层解释更多变异",
+          "limitations": "复用通用矩阵；方差份额不作为各因子无条件可加量。",
+          "metadata": "metadata/M02.json"
+        },
+        {
+          "example": "M03",
+          "data_required": "特征×因子权重、模态归属和固定因子方向",
+          "expression": "因子由哪些分子特征共同构成",
+          "limitations": "复用通用块矩阵；因子符号任意，比较前冻结方向。",
+          "metadata": "metadata/M03.json"
+        },
+        {
+          "example": "K33",
+          "data_required": "模态×因子完整已给方差比例表、模型版本与缺失策略；特征×因子权重、模态归属和固定因子方向",
+          "expression": "每个因子在哪些层解释更多变异；因子由哪些分子特征共同构成",
+          "limitations": "4个相同Factor ID对应3模态方差表与12特征载荷；两个结果是固定合成模型输出，未声称运行MOFA。载荷方向和范围固定。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K33.json"
+        }
+      ]
+    },
+    {
+      "id": "D20",
+      "title": "共享轴的矩阵与数量轨道",
+      "role": "figure",
+      "default": "R22",
+      "grammar": "aligned colored matrices, bars and optional marginal densities",
+      "members": [
+        "P16a",
+        "P16b",
+        "P31a",
+        "P31b",
+        "P31c",
+        "R15",
+        "R22",
+        "E09"
+      ],
+      "modes": [
+        {
+          "example": "R22",
+          "label": "多矩阵与计数轨道"
+        },
+        {
+          "example": "R15",
+          "label": "矩阵与边际密度"
+        },
+        {
+          "example": "P16a",
+          "label": "矩阵与侧计数"
+        },
+        {
+          "example": "P31b",
+          "label": "计数与数值表"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P16a",
+          "data_required": "完整矩阵＋可选行模块、行计数",
+          "expression": "表达矩阵模式及对齐的数量；方块和气泡两种画法",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。此处bubble面积恒定，不编码第二变量",
+          "metadata": "metadata/P16a.json"
+        },
+        {
+          "example": "P16b",
+          "data_required": "完整矩阵＋可选行模块、行计数",
+          "expression": "表达矩阵模式及对齐的数量；方块和气泡两种画法",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。此处bubble面积恒定，不编码第二变量",
+          "metadata": "metadata/P16b.json"
+        },
+        {
+          "example": "P31a",
+          "data_required": "分类×记录计数×明确共同分母，缺失状态",
+          "expression": "表达对齐计数证据；并排、数值表、上下分面均保留",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计",
+          "metadata": "metadata/P31a.json"
+        },
+        {
+          "example": "P31b",
+          "data_required": "分类×记录计数×明确共同分母，缺失状态",
+          "expression": "表达对齐计数证据；并排、数值表、上下分面均保留",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计",
+          "metadata": "metadata/P31b.json"
+        },
+        {
+          "example": "P31c",
+          "data_required": "分类×记录计数×明确共同分母，缺失状态",
+          "expression": "表达对齐计数证据；并排、数值表、上下分面均保留",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；记录计数，不是药物风险/患者效应估计",
+          "metadata": "metadata/P31c.json"
+        },
+        {
+          "example": "R15",
+          "data_required": "完整矩阵、行所属组、冻结行列顺序、每列柱值与线值、各组给定密度。",
+          "expression": "显示模块块结构，并同时看列尺度和各组分布。",
+          "limitations": "不聚类或行标准化；两个顶部量量纲不同时须明确双轴，不能通过缩放营造相关。",
+          "metadata": "metadata/R15.json"
+        },
+        {
+          "example": "R22",
+          "data_required": "类别顺序与连续块归属；每个轨道×类别的整数计数；每个矩阵×行×类别的值；各矩阵范围。",
+          "expression": "把同一批类别的数量与多种关联/比例量上下对齐。",
+          "limitations": "不按跨物种等领域归类；可以迁移到任意共同类别轴；每种矩阵的量纲和范围保持独立。",
+          "metadata": "metadata/R22.json"
+        },
+        {
+          "example": "E09",
+          "data_required": "完整成员×术语的0/1矩阵；方向标签与已计数的覆盖数",
+          "expression": "弦图中相同关系的精确逐格查询和成员覆盖度",
+          "limitations": "零必须是已知不属于该集合；缺失成员关系不能填成零。",
+          "metadata": "metadata/E09.json"
+        }
+      ]
+    },
+    {
+      "id": "D21",
+      "title": "点阵：面积、颜色与状态",
+      "role": "figure",
+      "default": "E01",
+      "grammar": "row/column-positioned symbols with declared independent area/color/status; optional facets",
+      "members": [
+        "P13",
+        "P14",
+        "T11",
+        "R20",
+        "E01"
+      ],
+      "modes": [
+        {
+          "example": "E01",
+          "label": "分类条、形状与状态"
+        },
+        {
+          "example": "P13",
+          "label": "颜色与独立面积"
+        },
+        {
+          "example": "R20",
+          "label": "多条件分面"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P13",
+          "data_required": "特征×组别×比例×平均值或已有量值",
+          "expression": "面积表达比例，颜色表达明确量值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。必须提供颜色语义与检出分母",
+          "metadata": "metadata/P13.json"
+        },
+        {
+          "example": "P14",
+          "data_required": "项目×比较×效应/上下界/校正p",
+          "expression": "同时表达效应方向与证据，保留不可估计状态",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。完整可估计网格；不生成统计量",
+          "metadata": "metadata/P14.json"
+        },
+        {
+          "example": "T11",
+          "data_required": "完整行×列×有符号值",
+          "expression": "颜色表达方向，面积表达绝对大小",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T11.json"
+        },
+        {
+          "example": "R20",
+          "data_required": "两种分面键、特征、时间/窗口坐标、已算关联 r；完整组合网格。",
+          "expression": "比较不同条件和窗口的关联方向、大小及一致性。",
+          "limitations": "这里面积是效应大小，不能误读为比例或显著性；偏相关的控制变量需记录。",
+          "metadata": "metadata/R20.json"
+        },
+        {
+          "example": "E01",
+          "data_required": "完整术语×组别/亚类点阵；term_id、block、status、校正p、GeneRatio及列身份",
+          "expression": "同一术语在各条件是否报告、报告的比例和证据量；显式区分未报告与未检验",
+          "limitations": "本例G1/CT1的BP/MF/PW术语ID、p与环形图对应，GeneRatio=7/40；其他列另给合成结果。不计算富集或FDR。",
+          "metadata": "metadata/E01.json"
+        }
+      ]
+    },
+    {
+      "id": "D22",
+      "title": "椭圆与数值相关矩阵",
+      "role": "figure",
+      "default": "R05",
+      "grammar": "ellipse angle/eccentricity + signed color + lower-triangle numbers",
+      "members": [
+        "R05"
+      ],
+      "modes": [
+        {
+          "example": "R05",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R05",
+          "data_required": "变量顺序及每个无重复变量对的相关系数，范围 [-1,1]。",
+          "expression": "上三角直观显示关联方向和强度，下三角提供准确数值。",
+          "limitations": "相关不说明因果；沿用参考黄紫色时数字改深色以保证可读性。",
+          "metadata": "metadata/R05.json"
+        }
+      ]
+    },
+    {
+      "id": "D23",
+      "title": "节点关系网络",
+      "role": "figure",
+      "default": "R25",
+      "grammar": "explicit nodes/edges; shape, color, width; circular/bipartite/layered/pathway layouts are settings",
+      "members": [
+        "R06",
+        "R25",
+        "N01",
+        "N02",
+        "N03",
+        "N12",
+        "E23",
+        "M09"
+      ],
+      "modes": [
+        {
+          "example": "R25",
+          "label": "多实体形状与符号边"
+        },
+        {
+          "example": "R06",
+          "label": "圆形布局"
+        },
+        {
+          "example": "N03",
+          "label": "二部布局"
+        },
+        {
+          "example": "N12",
+          "label": "已有层级布局"
+        },
+        {
+          "example": "M09",
+          "label": "功能底图数量叠加"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R06",
+          "data_required": "节点 ID 与展示顺序；无自环、无重复无向边的端点与带符号权重。",
+          "expression": "显示对象间连接方向符号、强弱以及网络分布。",
+          "limitations": "不推断网络、真实方向或作用机制；密集边可迁移为矩阵或分面。",
+          "metadata": "metadata/R06.json"
+        },
+        {
+          "example": "R25",
+          "data_required": "节点ID、类型、类别、固定XY、面积；边的端点、符号、权重及关系来源；不同条件共享布局与比例。",
+          "expression": "形状区分实体类型，颜色固定类别，线色表达正负，线宽表达给定权重；找跨类型关联和中心连接；并排比较不同输入网络。",
+          "limitations": "仅有截图，原边表和原统计方法不可恢复。当前使用合成网络复现形状／颜色／关系／比较语言；关联不是因果或生化通路。",
+          "metadata": "metadata/R25.json"
+        },
+        {
+          "example": "N01",
+          "data_required": "节点ID、类型、类别、固定XY、面积；边的端点、符号、权重及关系来源",
+          "expression": "形状区分实体类型，颜色固定类别，线色表达正负，线宽表达给定权重；找跨类型关联和中心连接",
+          "limitations": "原创合成演示；关联不画因果箭头；面积若只是排版强调必须注明；位置来自显式输入",
+          "metadata": "metadata/N01.json"
+        },
+        {
+          "example": "N02",
+          "data_required": "集合节点表＋已提供的集合间相似／重叠权重及定义",
+          "expression": "看哪些集合成模块、共享关系是否密集",
+          "limitations": "原创合成演示；重叠／相似不代表通路间反应；不自动计算相似度或筛选弱边",
+          "metadata": "metadata/N02.json"
+        },
+        {
+          "example": "N03",
+          "data_required": "实体与集合节点表＋明确成员关系；类别／量值另列",
+          "expression": "看一个实体属于哪些集合、哪些实体被多个集合共享",
+          "limitations": "原创合成演示；成员关系不等同调控；未知成员不能当0；高密度优先并排矩阵",
+          "metadata": "metadata/N03.json"
+        },
+        {
+          "example": "N12",
+          "data_required": "明确parent→child关系、节点类型／值／位置",
+          "expression": "看已有层级与父子关系，节点形状／颜色可增加类型信息",
+          "limitations": "原创合成演示；不是新聚类、祖先重建或调控推断；箭头只表达声明的父子关系",
+          "metadata": "metadata/N12.json"
+        },
+        {
+          "example": "E23",
+          "data_required": "已有term集合两两Jaccard边表、固定坐标、身份和显示面积",
+          "expression": "选定条目的成员重叠与冗余，保留所有条目",
+          "limitations": "与E08/E09同一BP成员边表，合成集合的Jaccard另通过Biomni实算核对；不提供富集检验，不删冗余term。",
+          "metadata": "metadata/E23.json"
+        },
+        {
+          "example": "M09",
+          "data_required": "明确节点ID/坐标/已有数值和已知拓扑、边证据",
+          "expression": "将数量变化定位到功能图中的位置",
+          "limitations": "箭头为已有底图；不把丰度画成通量或补完整机制。",
+          "metadata": "metadata/M09.json"
+        }
+      ]
+    },
+    {
+      "id": "D24",
+      "title": "弦图：关系与数量带",
+      "role": "figure",
+      "default": "N04",
+      "grammar": "annular nodes + ribbons; weighted quantity or explicit equal-width membership",
+      "members": [
+        "N04",
+        "E08"
+      ],
+      "modes": [
+        {
+          "example": "N04",
+          "label": "带宽表达数量"
+        },
+        {
+          "example": "E08",
+          "label": "等宽表达成员关系"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "N04",
+          "data_required": "source、target、非负weight、明确扇区次序与类别字典",
+          "expression": "带宽看关系量、扇区长度看输入量合计，比较数量在类别间怎样分配",
+          "limitations": "原创合成演示；与细线圆形相关网络区分；当前无方向；不能把负值直接当宽度",
+          "metadata": "metadata/N04.json"
+        },
+        {
+          "example": "E08",
+          "data_required": "去重的成员-术语边表，每个成员已有效应与明确显示顺序",
+          "expression": "看哪些术语共享成员，并查出这些成员的效应方向",
+          "limitations": "弦宽不表示作用强度，关系不代表因果；最多24成员、8术语，过密改矩阵。",
+          "metadata": "metadata/E08.json"
+        }
+      ]
+    },
+    {
+      "id": "D25",
+      "title": "跨阶段流带",
+      "role": "figure",
+      "default": "N05",
+      "grammar": "categorical stages joined by quantity-height paths",
+      "members": [
+        "N05"
+      ],
+      "modes": [
+        {
+          "example": "N05",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "N05",
+          "data_required": "路径ID、各阶段的类别、同一路径weight和阶段次序",
+          "expression": "带的高度表达数量，追踪输入已经记录的跨阶段类别路径",
+          "limitations": "原创合成演示；边缘比例无法恢复个体迁移；不是从横断面推断轨迹；路径数量每阶段守恒",
+          "metadata": "metadata/N05.json"
+        }
+      ]
+    },
+    {
+      "id": "D26",
+      "title": "集合交集 UpSet",
+      "role": "figure",
+      "default": "N06",
+      "grammar": "intersection bars + membership dot matrix + set-size bars",
+      "members": [
+        "N06"
+      ],
+      "modes": [
+        {
+          "example": "N06",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "N06",
+          "data_required": "对象ID×集合的完整0/1成员表、对象单位",
+          "expression": "顶柱为互斥交集数量，点阵为参与集合，侧柱为各集合总量",
+          "limitations": "原创合成演示；完整成员表才能表示0；全0对象保留；互斥交集与包容性交集定义需明确",
+          "metadata": "metadata/N06.json"
+        }
+      ]
+    },
+    {
+      "id": "D27",
+      "title": "两集合交集",
+      "role": "figure",
+      "default": "E07",
+      "grammar": "two overlapping regions with unique/intersection counts",
+      "members": [
+        "E07"
+      ],
+      "modes": [
+        {
+          "example": "E07",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E07",
+          "data_required": "完整对象ID×两个集合的0/1成员关系；并集中的对象一行一次",
+          "expression": "读出两个集合的独有项和共同项数量",
+          "limitations": "面积不是比例；三个以上集合用现有UpSet；全零对象应另声明背景总体。",
+          "metadata": "metadata/E07.json"
+        }
+      ]
+    },
+    {
+      "id": "D28",
+      "title": "多状态事件矩阵",
+      "role": "figure",
+      "default": "N07",
+      "grammar": "multiple categorical states within a cell; optional aligned counts",
+      "members": [
+        "N07",
+        "E20",
+        "K20"
+      ],
+      "modes": [
+        {
+          "example": "N07",
+          "label": "格内多状态"
+        },
+        {
+          "example": "E20",
+          "label": "缺失与未检测状态"
+        },
+        {
+          "example": "K20",
+          "label": "矩阵与对象计数"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "N07",
+          "data_required": "行×对象的完整表、可并存的状态清单、明确None与未知",
+          "expression": "一个格内分层色块看状态共现、哪些对象具有多个事件",
+          "limitations": "原创合成演示；状态不是连续量；None须确认为测量后无事件；多事件不能重复计为多人",
+          "metadata": "metadata/N07.json"
+        },
+        {
+          "example": "E20",
+          "data_required": "完整对象×变量的已记录状态；Observed/Missing/Not tested明确区分",
+          "expression": "检查缺失聚集和未检验的范围",
+          "limitations": "图不判断MCAR/MAR/MNAR；状态定义和对象总体由上游提供。",
+          "metadata": "metadata/E20.json"
+        },
+        {
+          "example": "K20",
+          "data_required": "完整对象×特征状态、None／未知、计数去重规则",
+          "expression": "矩阵看共现，数量看支持量；按对象去重避免事件累加",
+          "limitations": "Any-event counts use unique objects, never sum overlapping states as separate people.",
+          "metadata": "metadata/K20.json"
+        }
+      ]
+    },
+    {
+      "id": "D29",
+      "title": "二维连续场与等值线",
+      "role": "figure",
+      "default": "N11",
+      "grammar": "registered two-dimensional field + isovalue contours",
+      "members": [
+        "N11"
+      ],
+      "modes": [
+        {
+          "example": "N11",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "N11",
+          "data_required": "完整X×Y数值网格、量值单位、色限、中心与等值层",
+          "expression": "同时看连续量的空间分布、梯度方向与相同量值区域",
+          "limitations": "原创合成演示；不拟合响应面；已知网格缺口不填0；只有比较同量纲场才共用色限",
+          "metadata": "metadata/N11.json"
+        }
+      ]
+    },
+    {
+      "id": "D30",
+      "title": "三维数值曲面",
+      "role": "figure",
+      "default": "R23",
+      "grammar": "height surface over two declared coordinates",
+      "members": [
+        "R23"
+      ],
+      "modes": [
+        {
+          "example": "R23",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R23",
+          "data_required": "完整、无重复的 (x,y,z) 网格；x/y 真正量纲、z 数值定义及范围。",
+          "expression": "显示两个维度变化下的数值地形、峰谷与梯度。",
+          "limitations": "3D 可能遮挡数值，精确比较可配二维热图；原截图未提供原始网格。",
+          "metadata": "metadata/R23.json"
+        }
+      ]
+    },
+    {
+      "id": "D31",
+      "title": "地理数值场",
+      "role": "figure",
+      "default": "T01",
+      "grammar": "projected geographic field; global/regional extent is a setting",
+      "members": [
+        "T01",
+        "T02"
+      ],
+      "modes": [
+        {
+          "example": "T01",
+          "label": "全球范围"
+        },
+        {
+          "example": "T02",
+          "label": "区域范围"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "T01",
+          "data_required": "经度×纬度×数值网格，另有海岸轮廓",
+          "expression": "表达地理分布与区域差异",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T01.json"
+        },
+        {
+          "example": "T02",
+          "data_required": "区域经纬度网格×数值，另有地理轮廓",
+          "expression": "表达指定区域已有数值场",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T02.json"
+        }
+      ]
+    },
+    {
+      "id": "D32",
+      "title": "地理连接路径",
+      "role": "figure",
+      "default": "T04",
+      "grammar": "projected endpoints with explicit route edges",
+      "members": [
+        "T04"
+      ],
+      "modes": [
+        {
+          "example": "T04",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "T04",
+          "data_required": "路径ID×有序经纬度点×边值，另有地理轮廓",
+          "expression": "表达记录的连接路径与边属性",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T04.json"
+        }
+      ]
+    },
+    {
+      "id": "D33",
+      "title": "配准背景上的测量叠加",
+      "role": "figure",
+      "default": "E33b",
+      "grammar": "registered background pixels + categorical/continuous marks; optional aligned facets",
+      "members": [
+        "E33a",
+        "E33b",
+        "K32"
+      ],
+      "modes": [
+        {
+          "example": "E33b",
+          "label": "连续量叠加"
+        },
+        {
+          "example": "E33a",
+          "label": "分类叠加"
+        },
+        {
+          "example": "K32",
+          "label": "同背景独立分面"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E33a",
+          "data_required": "RGB像素、同一配准体系的对象中心与物理半径、像素尺度、类别/特征",
+          "expression": "同一物理位置的身份与测量",
+          "limitations": "此背景不是H&E；不做配准、分割或反卷积。",
+          "metadata": "metadata/E33a.json"
+        },
+        {
+          "example": "E33b",
+          "data_required": "RGB像素、同一配准体系的对象中心与物理半径、像素尺度、类别/特征",
+          "expression": "同一物理位置的身份与测量",
+          "limitations": "此背景不是H&E；不做配准、分割或反卷积。",
+          "metadata": "metadata/E33b.json"
+        },
+        {
+          "example": "K32",
+          "data_required": "RGB像素、同一配准体系的对象中心与物理半径、像素尺度、类别/特征",
+          "expression": "同一物理位置的身份与测量",
+          "limitations": "完整RGB像素、56对象ID、中心、物理半径和尺度完全相同；两种图只切换类别与已有特征值。背景为程序生成中性图，非H&E。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K32.json"
+        }
+      ]
+    },
+    {
+      "id": "D34",
+      "title": "环形轮廓与分层气泡",
+      "role": "figure",
+      "default": "R01",
+      "grammar": "radial multiseries profile + independently sized bubbles",
+      "members": [
+        "R01",
+        "R02"
+      ],
+      "modes": [
+        {
+          "example": "R01",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R01",
+          "data_required": "每个类别、系列一行：主数值和非负第二数值；给定类别顺序、系列顺序及量纲。",
+          "expression": "一个圆内同时比较多系列主值轮廓和第二数值的规模。",
+          "limitations": "无序类别默认不连成连续曲线；示例平滑仅为有界显示连接，不生成新观测。",
+          "metadata": "metadata/R01.json"
+        },
+        {
+          "example": "R02",
+          "data_required": "与 R01 完全相同；可直接替换 palette，不改表。",
+          "expression": "同一种数据的另一种视觉气质，可强调一个系列。",
+          "limitations": "R01/R02 示例输入哈希一致；柔和颜色不适合作为白底细小文字。",
+          "metadata": "metadata/R02.json"
+        }
+      ]
+    },
+    {
+      "id": "D35",
+      "title": "平行坐标",
+      "role": "figure",
+      "default": "R09",
+      "grammar": "multiple declared axes joined by one record per path",
+      "members": [
+        "R09"
+      ],
+      "modes": [
+        {
+          "example": "R09",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R09",
+          "data_required": "试次 ID、维度名、各维数值、每试次固定评价值；各轴真实上下限。",
+          "expression": "同时看多参数组合如何对应评价表现。",
+          "limitations": "平滑线只是连接；评价来自上游，绘图不执行调参，也不决定测试集选优。",
+          "metadata": "metadata/R09.json"
+        }
+      ]
+    },
+    {
+      "id": "D36",
+      "title": "多行贡献蜂群",
+      "role": "figure",
+      "default": "R10",
+      "grammar": "row-positioned contribution swarms + continuous feature-value color",
+      "members": [
+        "R10"
+      ],
+      "modes": [
+        {
+          "example": "R10",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R10",
+          "data_required": "单位 ID、特征、已计算贡献值，以及用于着色的特征值（本适配器要求已声明为 [0,1] 展示尺度）。",
+          "expression": "看每个特征的正负贡献、贡献分布与高低特征值的关系。",
+          "limitations": "不会算 SHAP/GeoShapley；名称中包含交互项并不能代替真正的交互贡献。",
+          "metadata": "metadata/R10.json"
+        }
+      ]
+    },
+    {
+      "id": "D37",
+      "title": "雷达轮廓",
+      "role": "figure",
+      "default": "T37",
+      "grammar": "radial declared indicator axes joined per series",
+      "members": [
+        "T37"
+      ],
+      "modes": [
+        {
+          "example": "T37",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "T37",
+          "data_required": "组别×固定有序指标×可比较尺度的数值",
+          "expression": "表达指标画像；面积不是可靠总分",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T37.json"
+        }
+      ]
+    },
+    {
+      "id": "D38",
+      "title": "多比较有符号条带",
+      "role": "figure",
+      "default": "R21",
+      "grammar": "comparison strips with signed effects and declared qualifying counts",
+      "members": [
+        "R21"
+      ],
+      "modes": [
+        {
+          "example": "R21",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R21",
+          "data_required": "特征 ID、比较、面板、效应、padj、已固定的水平展示抖动。",
+          "expression": "在多个比较中同时显示正负变化及符合声明条件的特征数。",
+          "limitations": "全输入保留在 TSV；显示计数是符合条件的特征记录数，不是受试者数；不重算差异或 FDR。",
+          "metadata": "metadata/R21.json"
+        }
+      ]
+    },
+    {
+      "id": "D39",
+      "title": "对象与流程箭头示意",
+      "role": "figure",
+      "default": "T42",
+      "grammar": "explicit illustrative objects, connections and steps",
+      "members": [
+        "T42"
+      ],
+      "modes": [
+        {
+          "example": "T42",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "T42",
+          "data_required": "对象×位置/半径/类别，另有箭头或关系",
+          "expression": "表达构成和流程；几何为示意时明确标注",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。 T42保留对象、支持层和方向箭头；当前不含参考的材质高光和局部过程小窗，不是原子结构。",
+          "metadata": "metadata/T42.json"
+        }
+      ]
+    },
+    {
+      "id": "D40",
+      "title": "条目与成员效应环形轨道",
+      "role": "figure",
+      "default": "E02",
+      "grammar": "term significance/direction ring + member-effect distributions",
+      "members": [
+        "E02",
+        "E03",
+        "E04",
+        "E05"
+      ],
+      "modes": [
+        {
+          "example": "E02",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E02",
+          "data_required": "术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值",
+          "expression": "内圈显著性高度与方向色；外圈每个成员的效应分布",
+          "limitations": "方向分数不是默认统计检验；零p不接受，不补生成员或推断leading-edge。",
+          "metadata": "metadata/E02.json"
+        },
+        {
+          "example": "E03",
+          "data_required": "术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值",
+          "expression": "内圈显著性高度与方向色；外圈每个成员的效应分布",
+          "limitations": "方向分数不是默认统计检验；零p不接受，不补生成员或推断leading-edge。",
+          "metadata": "metadata/E03.json"
+        },
+        {
+          "example": "E04",
+          "data_required": "术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值",
+          "expression": "内圈显著性高度与方向色；外圈每个成员的效应分布",
+          "limitations": "方向分数不是默认统计检验；零p不接受，不补生成员或推断leading-edge。",
+          "metadata": "metadata/E04.json"
+        },
+        {
+          "example": "E05",
+          "data_required": "术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值",
+          "expression": "内圈显著性高度与方向色；外圈每个成员的效应分布",
+          "limitations": "方向分数不是默认统计检验；零p不接受，不补生成员或推断leading-edge。",
+          "metadata": "metadata/E05.json"
+        }
+      ]
+    },
+    {
+      "id": "D41",
+      "title": "阶梯概率、区间与支持人数",
+      "role": "figure",
+      "default": "E15",
+      "grammar": "supplied probability steps + intervals + aligned at-risk table",
+      "members": [
+        "E15"
+      ],
+      "modes": [
+        {
+          "example": "E15",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E15",
+          "data_required": "阶梯时间、S(t)、上下界；指定时点风险人数；删失标记另行提供",
+          "expression": "随时间的概率变化、不确定性与仍被随访的人数",
+          "limitations": "不拟合KM或log-rank；本入口不支持风险集重新进入。",
+          "metadata": "metadata/E15.json"
+        }
+      ]
+    },
+    {
+      "id": "D42",
+      "title": "个体区间与事件时间",
+      "role": "figure",
+      "default": "E16",
+      "grammar": "one row per object with duration segments and event symbols",
+      "members": [
+        "E16"
+      ],
+      "modes": [
+        {
+          "example": "E16",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E16",
+          "data_required": "对象ID、组、随访开始/结束；事件时间、类型与显示顺序",
+          "expression": "个体随访长度、断续区间和事件时序",
+          "limitations": "不从区间拟合生存模型；断续区间不是连续暴露，删失类型须声明。",
+          "metadata": "metadata/E16.json"
+        }
+      ]
+    },
+    {
+      "id": "D43",
+      "title": "规格曲线与选择矩阵",
+      "role": "figure",
+      "default": "E17",
+      "grammar": "ordered estimates/intervals aligned with a decision matrix",
+      "members": [
+        "E17"
+      ],
+      "modes": [
+        {
+          "example": "E17",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E17",
+          "data_required": "规格ID、已有估计/区间，以及完整规格×模型决策0/1表",
+          "expression": "查看分析选择与结果变动的对应关系",
+          "limitations": "展示不等于联合稳健性推断；备选规格应科学合理并提前界定。",
+          "metadata": "metadata/E17.json"
+        }
+      ]
+    },
+    {
+      "id": "D44",
+      "title": "已有向量场",
+      "role": "figure",
+      "default": "E18",
+      "grammar": "XY locations + supplied vector direction/magnitude",
+      "members": [
+        "E18"
+      ],
+      "modes": [
+        {
+          "example": "E18",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E18",
+          "data_required": "对象ID、已有x/y、vx/vy、身份，以及投影与向量单位定义",
+          "expression": "坐标中已计算局部方向与幅度",
+          "limitations": "二维方向不能单独证明轨迹、时间顺序或因果；RNA velocity另需其分析输入与模型。",
+          "metadata": "metadata/E18.json"
+        }
+      ]
+    },
+    {
+      "id": "D45",
+      "title": "双变量色块与二维色键",
+      "role": "figure",
+      "default": "E19",
+      "grammar": "two independent values per registered tile + two-dimensional key",
+      "members": [
+        "E19"
+      ],
+      "modes": [
+        {
+          "example": "E19",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E19",
+          "data_required": "完整行×列单元；两种连续量及各自明确分箱边界",
+          "expression": "识别两个指标同时高、低或不一致的位置",
+          "limitations": "混合色是另行说明的扩展，不是原色卡；不能代替精确数值或显著性。",
+          "metadata": "metadata/E19.json"
+        }
+      ]
+    },
+    {
+      "id": "D46",
+      "title": "三元组成坐标",
+      "role": "figure",
+      "default": "E27",
+      "grammar": "three parts of one denominator on a simplex",
+      "members": [
+        "E27"
+      ],
+      "modes": [
+        {
+          "example": "E27",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E27",
+          "data_required": "对象ID、组别、同一分母的三个非负比例，和为1",
+          "expression": "三种成分的相对平衡和组间位置",
+          "limitations": "闭合组成不可直接当独立相关；不归一化输入。",
+          "metadata": "metadata/E27.json"
+        }
+      ]
+    },
+    {
+      "id": "D47",
+      "title": "分段位置与关联信号",
+      "role": "figure",
+      "default": "E28",
+      "grammar": "ordered segment positions + signal height + declared thresholds",
+      "members": [
+        "E28"
+      ],
+      "modes": [
+        {
+          "example": "E28",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E28",
+          "data_required": "变异ID、染色体、位置、已有p；明确版本、段长度及阈值",
+          "expression": "全基因组已有信号位置与局部聚集",
+          "limitations": "不做GWAS、LD计算、clumping或自动挑选lead。",
+          "metadata": "metadata/E28.json"
+        }
+      ]
+    },
+    {
+      "id": "D48",
+      "title": "共用位置轴的多轨道与连接",
+      "role": "figure",
+      "default": "E29",
+      "grammar": "position-linked point/line/interval tracks + optional given connection arcs",
+      "members": [
+        "P28",
+        "P30",
+        "E29",
+        "M08"
+      ],
+      "modes": [
+        {
+          "example": "E29",
+          "label": "关联、区间与信号轨道"
+        },
+        {
+          "example": "P28",
+          "label": "已有区间信号"
+        },
+        {
+          "example": "M08",
+          "label": "轨道与候选连接弧"
+        },
+        {
+          "example": "P30",
+          "label": "单条位置轨道"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P28",
+          "data_required": "轨道×起止位置×已有数值，参考版本",
+          "expression": "表达同一位置轴上的多种记录信号",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不直接解析BAM/bigWig/GTF",
+          "metadata": "metadata/P28.json"
+        },
+        {
+          "example": "P30",
+          "data_required": "残基号×pLDDT，结构版本与链",
+          "expression": "表达局部预测置信度和缺口，不表达亲和力",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；不画PAE或3D结构，pLDDT不是亲和力",
+          "metadata": "metadata/P30.json"
+        },
+        {
+          "example": "E29",
+          "data_required": "同一位置体系中的关联、已有LD、重组率与基因跨度/方向",
+          "expression": "局部信号与多条轨道对应；未知LD单独标识",
+          "limitations": "不把邻近基因当作用靶点，不推断共定位、外显子或调控。",
+          "metadata": "metadata/E29.json"
+        },
+        {
+          "example": "M08",
+          "data_required": "已分箱不重叠信号、共同版本/坐标/单位、已有连接端点和分数",
+          "expression": "峰信号和候选跨位点连接",
+          "limitations": "同图不同测量若单位不一致应分轴；不把弧线当调控因果。",
+          "metadata": "metadata/M08.json"
+        }
+      ]
+    },
+    {
+      "id": "D49",
+      "title": "层级数量矩形树图",
+      "role": "figure",
+      "default": "E31",
+      "grammar": "given hierarchical area partitions for additive amounts",
+      "members": [
+        "E31"
+      ],
+      "modes": [
+        {
+          "example": "E31",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E31",
+          "data_required": "唯一节点/父节点、正的可加数量和已给面积布局",
+          "expression": "各叶子占整体份额与层级归属",
+          "limitations": "面积编码可加量；不可把父子值重复累加，不新做聚类。",
+          "metadata": "metadata/E31.json"
+        }
+      ]
+    },
+    {
+      "id": "D50",
+      "title": "同对象多视图与身份连线",
+      "role": "figure",
+      "default": "M04",
+      "grammar": "separate coordinate views with matched-ID gutter connections",
+      "members": [
+        "M04"
+      ],
+      "modes": [
+        {
+          "example": "M04",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "M04",
+          "data_required": "对象ID×2/3模态已有坐标、组别、明确配对/非配对",
+          "expression": "各模态的组间位置及对象对应",
+          "limitations": "轴空间各自独立；连线只表示相同对象，不表示位移。",
+          "metadata": "metadata/M04.json"
+        }
+      ]
+    },
+    {
+      "id": "D51",
+      "title": "特征相关投影圆",
+      "role": "figure",
+      "default": "M05",
+      "grammar": "unit circle + origin rays + supplied feature projections",
+      "members": [
+        "M05"
+      ],
+      "modes": [
+        {
+          "example": "M05",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "M05",
+          "data_required": "特征ID、模态、与两个已给成分的相关坐标",
+          "expression": "不同模态特征指向哪些成分方向",
+          "limitations": "坐标为相关而非任意载荷；不推断因果边或显著性。",
+          "metadata": "metadata/M05.json"
+        }
+      ]
+    },
+    {
+      "id": "D52",
+      "title": "离散峰棒与镜像",
+      "role": "figure",
+      "default": "M06",
+      "grammar": "peak positions/intensities as sticks; optional mirrored reference spectrum",
+      "members": [
+        "M06"
+      ],
+      "modes": [
+        {
+          "example": "M06",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "M06",
+          "data_required": "谱图ID、峰ID、m/z、非负强度、归一化/仪器/匹配说明",
+          "expression": "实测与参考碎片的位置和强度分布",
+          "limitations": "不自动归一化、匹配、定结构；镜像负号仅排版。",
+          "metadata": "metadata/M06.json"
+        }
+      ]
+    },
+    {
+      "id": "D53",
+      "title": "排序曲线、命中与排名量",
+      "role": "figure",
+      "default": "N08",
+      "grammar": "aligned running curve, hit ticks and ranked metric; optional zoom window",
+      "members": [
+        "N08",
+        "K19"
+      ],
+      "modes": [
+        {
+          "example": "N08",
+          "label": "排序三层图"
+        },
+        {
+          "example": "K19",
+          "label": "三层图与局部窗口"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "N08",
+          "data_required": "相同排名索引的运行分数、命中位置、排序量、集合ID",
+          "expression": "同时看已有曲线起伏、命中集中在哪段，以及对应排名量值",
+          "limitations": "原创合成演示；只画已算结果；不计算富集、NES或显著性；排名位置不是基因编号",
+          "metadata": "metadata/N08.json"
+        },
+        {
+          "example": "K19",
+          "data_required": "相同排名索引的已有曲线／命中／排序量、明确窗口",
+          "expression": "全景看已有信号，局部窗口看命中结构；窗口范围明示",
+          "limitations": "Second panel displays ranks 1-60 only; full 300-rank curve and inputs preserved.",
+          "metadata": "metadata/K19.json"
+        }
+      ]
+    },
+    {
+      "id": "D54",
+      "title": "效应与证据火山",
+      "role": "figure",
+      "default": "P09",
+      "grammar": "effect/evidence XY + declared status and optional side labels",
+      "members": [
+        "P08",
+        "P09",
+        "T24"
+      ],
+      "modes": [
+        {
+          "example": "P09",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P08",
+          "data_required": "对象ID×已有效应×已校正p值",
+          "expression": "表达效应方向、大小及证据",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。已有差异统计；不计算DE/FDR",
+          "metadata": "metadata/P08.json"
+        },
+        {
+          "example": "P09",
+          "data_required": "火山图表＋明确标注对象列表",
+          "expression": "表达整体效应和选定对象的位置",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。标签每侧最多6个；不改变原坐标",
+          "metadata": "metadata/P09.json"
+        },
+        {
+          "example": "T24",
+          "data_required": "对象×效应×已有证据量×分组；固定阈值",
+          "expression": "表达方向、幅度与证据强弱",
+          "limitations": "独立合成 panel。所有 T 示例共享 C06／Arial 预览主题；原色卡来源只是参考归属，不是各自重新选色。统计量、已有曲线、树与区间的定义由上游输入。",
+          "metadata": "metadata/T24.json"
+        }
+      ]
+    },
+    {
+      "id": "D55",
+      "title": "火山与堆积边际分布",
+      "role": "figure",
+      "default": "P10",
+      "grammar": "same-point volcano + stacked marginal counts",
+      "members": [
+        "P10"
+      ],
+      "modes": [
+        {
+          "example": "P10",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P10",
+          "data_required": "火山图表＋固定阈值、分箱和标注列表",
+          "expression": "表达效应－证据全景，同时显示同一批点的边缘计数构成",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。R需要patchwork；保留原差异数值",
+          "metadata": "metadata/P10.json"
+        }
+      ]
+    },
+    {
+      "id": "D56",
+      "title": "散点与边际分布",
+      "role": "figure",
+      "default": "R13",
+      "grammar": "same XY + two aligned marginal distributions; optional supplied fits/residual summary",
+      "members": [
+        "R08",
+        "R12",
+        "R13"
+      ],
+      "modes": [
+        {
+          "example": "R13",
+          "label": "散点与边际密度"
+        },
+        {
+          "example": "R08",
+          "label": "散点与边际直方图"
+        },
+        {
+          "example": "R12",
+          "label": "增加给定残差摘要"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R08",
+          "data_required": "每单位 x、y、组；给定相同边界的边缘计数；二维密度网格及可选统计文字。",
+          "expression": "同时看组间位置、重叠范围与两个变量各自的分布。",
+          "limitations": "图中边缘为 Count；只有值确为概率密度时才标 Density；不自动算 KDE、rho 或 p。",
+          "metadata": "metadata/R08.json"
+        },
+        {
+          "example": "R12",
+          "data_required": "单位 ID、组、两方法测量；给定边缘密度；给定差值箱线摘要和比较文字。",
+          "expression": "看两种测量与 y=x 的偏离，以及各组误差和分布。",
+          "limitations": "相关强不代表一致；统计结论需另外提供；箱线不能替代正式一致性分析。",
+          "metadata": "metadata/R12.json"
+        },
+        {
+          "example": "R13",
+          "data_required": "单位 x/y 与组；拟合 x/y、lower/upper；边缘密度；显示用统计文字。",
+          "expression": "比较组间线性趋势与分布差异。",
+          "limitations": "不拟合回归或计算 R²/RMSE/p；带的 CI/PI/SD 含义必须写明。",
+          "metadata": "metadata/R13.json"
+        }
+      ]
+    },
+    {
+      "id": "D57",
+      "title": "曲线与分箱支持量",
+      "role": "figure",
+      "default": "P27",
+      "grammar": "aligned calibration values, supplied intervals and bin-support rectangles",
+      "members": [
+        "P27"
+      ],
+      "modes": [
+        {
+          "example": "P27",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P27",
+          "data_required": "模型×分箱边界×预测/观测值/区间×计数",
+          "expression": "同时表达校准形状、已有不确定性与各箱支持量",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；已有互斥分箱，不重新拟合校准",
+          "metadata": "metadata/P27.json"
+        }
+      ]
+    },
+    {
+      "id": "D58",
+      "title": "关联矩阵与外接检验网络",
+      "role": "figure",
+      "default": "R07",
+      "grammar": "triangle pairwise association matrix + cross-set tested edges",
+      "members": [
+        "R07"
+      ],
+      "modes": [
+        {
+          "example": "R07",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R07",
+          "data_required": "完整上三角 r、p；集合 ID 到目标变量的检验 r、p；明确原始或校正 p。",
+          "expression": "同时呈现变量内部相关与另一组对象对这些变量的关联。",
+          "limitations": "Mantel 等检验需要上游的距离矩阵和置换方案；本函数仅显示已有结果。",
+          "metadata": "metadata/R07.json"
+        }
+      ]
+    },
+    {
+      "id": "D59",
+      "title": "多类贡献与份额组合",
+      "role": "figure",
+      "default": "R11",
+      "grammar": "aligned class contribution swarms, rose insets and multiring shares",
+      "members": [
+        "R11"
+      ],
+      "modes": [
+        {
+          "example": "R11",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R11",
+          "data_required": "各类单位×特征贡献和特征值；各类特征非负份额且每类合计 1；各类特征顺序。",
+          "expression": "比较各类别的贡献分布和已定义的整体贡献份额。",
+          "limitations": "有符号单位贡献与绝对贡献份额是两种量，份额计算定义必须提供；示例小字需按最终版面放大或拆图。",
+          "metadata": "metadata/R11.json"
+        }
+      ]
+    },
+    {
+      "id": "D60",
+      "title": "配对评分与差值区间",
+      "role": "figure",
+      "default": "P22",
+      "grammar": "paired XY + independently supplied difference intervals",
+      "members": [
+        "P22"
+      ],
+      "modes": [
+        {
+          "example": "P22",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "P22",
+          "data_required": "项目×评分A/B×已计算差值/区间",
+          "expression": "同时表达两评分关系和已有差值",
+          "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。分数范围0到1，delta须与两分数一致",
+          "metadata": "metadata/P22.json"
+        }
+      ]
+    },
+    {
+      "id": "D61",
+      "title": "效应分布与森林摘要",
+      "role": "figure",
+      "default": "R16",
+      "grammar": "aligned individual-effect clouds + supplied summary intervals",
+      "members": [
+        "R16"
+      ],
+      "modes": [
+        {
+          "example": "R16",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R16",
+          "data_required": "每行每面板的效应记录；给定汇总效应、上下界、样本数字标签和 p；给定行顺序。",
+          "expression": "同时看汇总方向、区间宽度和原始效应分散程度。",
+          "limitations": "不合并效应或做元分析；n(k) 的两个数字各是什么必须定义；相关效应不自动成为独立研究。",
+          "metadata": "metadata/R16.json"
+        }
+      ]
+    },
+    {
+      "id": "D62",
+      "title": "环形坐标、计数与层次点阵",
+      "role": "figure",
+      "default": "R04",
+      "grammar": "embedding atlas + radial counts + hierarchical marker matrix",
+      "members": [
+        "R04"
+      ],
+      "modes": [
+        {
+          "example": "R04",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R04",
+          "data_required": "二维坐标和类别；类别×段的整数计数；给定树线段和叶顺序；类别×特征的表达比例及平均值。",
+          "expression": "从整体类别分布看到组成数量，再对齐层次、数量和特征特征。",
+          "limitations": "不重新拟合坐标或聚类；70 类示例应在最终论文尺寸下考虑分图，颜色不独自承担识别。",
+          "metadata": "metadata/R04.json"
+        }
+      ]
+    },
+    {
+      "id": "D63",
+      "title": "坐标小窗与证据双矩阵",
+      "role": "figure",
+      "default": "R03",
+      "grammar": "aligned state-coordinate windows + dot evidence + two value matrices",
+      "members": [
+        "R03"
+      ],
+      "modes": [
+        {
+          "example": "R03",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R03",
+          "data_required": "已有二维坐标及所属块；状态顺序表；状态×条件的效应与证据强度；状态×特征的两种数值矩阵。",
+          "expression": "把群体位置、条件关联、平均值及标准化得分按共同状态对齐。",
+          "limitations": "不计算降维、效应或标准化；mean、evidence 和 score 的定义必须上游提供。",
+          "metadata": "metadata/R03.json"
+        }
+      ]
+    },
+    {
+      "id": "D64",
+      "title": "训练曲线与运行诊断",
+      "role": "figure",
+      "default": "R14",
+      "grammar": "loss curves + run heatmap + gradient curve",
+      "members": [
+        "R14"
+      ],
+      "modes": [
+        {
+          "example": "R14",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R14",
+          "data_required": "训练/验证等系列的阶段值与上下界；运行×阶段矩阵；正值梯度及界限；已选阶段。",
+          "expression": "看收敛过程、运行间波动和梯度尺度。",
+          "limitations": "不训练、不自动早停；区间必须解释是重复运行范围还是统计不确定性。",
+          "metadata": "metadata/R14.json"
+        }
+      ]
+    },
+    {
+      "id": "D65",
+      "title": "流程、对象、矩阵与评价地形",
+      "role": "figure",
+      "default": "R24",
+      "grammar": "process diagram + object views + candidate matrices + landscapes + stage counts",
+      "members": [
+        "R24"
+      ],
+      "modes": [
+        {
+          "example": "R24",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "R24",
+          "data_required": "流程节点和有类型连线；对象轮廓或真实结构渲染；给定候选矩阵；三份二维数值网格和峰标记；两组阶段计数。",
+          "expression": "把方法逻辑、对象外观、评价地形及阶段数量放在同一页。",
+          "limitations": "R24 的轮廓仅是示意，没有原始 PDB/mmCIF；真实蛋白必须走结构可视化入口，不用随机轮廓冒充结构。",
+          "metadata": "metadata/R24.json"
+        }
+      ]
+    },
+    {
+      "id": "D66",
+      "title": "成员流线、条目与评分点阵",
+      "role": "figure",
+      "default": "E34",
+      "grammar": "binary membership ribbons aligned to term rows and quantitative bubbles",
+      "members": [
+        "E34"
+      ],
+      "modes": [
+        {
+          "example": "E34",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E34",
+          "data_required": "成员与条目ID、二元关系、成员效应、条目类别、已给比例/校正p/成员数",
+          "expression": "共享成员连接到哪些条目，并对齐读取条目的量值与覆盖数",
+          "limitations": "等宽连接不表示流量或作用强度；不计算富集。",
+          "metadata": "metadata/E34.json"
+        }
+      ]
+    },
+    {
+      "id": "D67",
+      "title": "双量值三角单元矩阵",
+      "role": "figure",
+      "default": "E35",
+      "grammar": "two separately colored triangles per cell with independent quantitative keys",
+      "members": [
+        "E35"
+      ],
+      "modes": [
+        {
+          "example": "E35",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E35",
+          "data_required": "完整行×列的两种量值；各自单位、范围、检验和缺失定义",
+          "expression": "同格分别读取关联方向与证据量",
+          "limitations": "p不是关联强度；名义p与调整p应按上游定义标注。",
+          "metadata": "metadata/E35.json"
+        }
+      ]
+    },
+    {
+      "id": "D68",
+      "title": "已有层次树、叶端标记与量值轨道",
+      "role": "figure",
+      "default": "E37",
+      "grammar": "given hierarchy in rectangular/radial mode with categorical or quantitative leaf tracks",
+      "members": [
+        "E36",
+        "E37"
+      ],
+      "modes": [
+        {
+          "example": "E37",
+          "label": "环形树与叶端量值"
+        },
+        {
+          "example": "E36",
+          "label": "矩形树与分类色条"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E36",
+          "data_required": "唯一叶ID、已有二叉树合并记录、合并高度、固定叶序和分类",
+          "expression": "树结构与对象分类逐一对齐",
+          "limitations": "不执行聚类；模块名称和颜色分别指定。",
+          "metadata": "metadata/E36.json"
+        },
+        {
+          "example": "E37",
+          "data_required": "已有层次树、叶序、叶端连续量/比例和独立外圈量值",
+          "expression": "同时看层级、叶端指标与外圈数量",
+          "limitations": "树结构不是亲和力；独立对接能量不可默认相加为总亲和力。",
+          "metadata": "metadata/E37.json"
+        }
+      ]
+    },
+    {
+      "id": "B01",
+      "title": "亚群坐标＋marker 矩阵",
+      "role": "combination",
+      "default": "K01",
+      "grammar": "explicit saved panel relationship: 同时看亚群位置与marker概括",
+      "members": [
+        "K01",
+        "K02",
+        "K03",
+        "K07",
+        "K08",
+        "K09",
+        "K28"
+      ],
+      "modes": [
+        {
+          "example": "K01",
+          "label": "坐标与矩阵"
+        },
+        {
+          "example": "K02",
+          "label": "坐标与原位置特征分面"
+        },
+        {
+          "example": "K03",
+          "label": "增加同对象组成"
+        },
+        {
+          "example": "K07",
+          "label": "原位置分面与汇总矩阵"
+        },
+        {
+          "example": "K09",
+          "label": "坐标与颜色/面积点阵"
+        },
+        {
+          "example": "K08",
+          "label": "增加给定数量"
+        },
+        {
+          "example": "K28",
+          "label": "增加已有向量场"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K01",
+          "data_required": "同一对象ID的坐标／亚群＋亚群×特征量值矩阵",
+          "expression": "同时看亚群位置与marker概括",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "metadata": "metadata/K01.json"
+        },
+        {
+          "example": "K02",
+          "data_required": "同一对象ID的坐标／亚群＋对象×特征值",
+          "expression": "在相同位置同时看分类与多个连续特征",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "metadata": "metadata/K02.json"
+        },
+        {
+          "example": "K03",
+          "data_required": "坐标／亚群＋特征矩阵＋条件×组成比例与分母",
+          "expression": "展示位置、特征与明确条件构成三个层次",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "metadata": "metadata/K03.json"
+        },
+        {
+          "example": "K07",
+          "data_required": "同一对象ID的坐标、亚群和特征值；冻结的分组概括",
+          "expression": "在同一几何和汇总层次比较分类与特征",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "metadata": "metadata/K07.json"
+        },
+        {
+          "example": "K08",
+          "data_required": "同一对象坐标／亚群＋同亚群特征量值与记录数量",
+          "expression": "同时看位置、特征模式与每组支持量",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "metadata": "metadata/K08.json"
+        },
+        {
+          "example": "K09",
+          "data_required": "对象ID、固定XY、类别、对象×特征值；检测阈值与分母",
+          "expression": "分类位置与同一批对象的特征强度、覆盖比例同时展示",
+          "limitations": "Same unit IDs; detection threshold fixed at 1 only in the synthetic fixture.",
+          "metadata": "metadata/K09.json"
+        },
+        {
+          "example": "K28",
+          "data_required": "对象ID×同一x/y×明确身份；对象ID、已有x/y、vx/vy、身份，以及投影与向量单位定义；完整对象×特征表；同对象每个特征坐标完全一致、已有非负特征值",
+          "expression": "向量和marker数据对应哪个已有亚群或身份；坐标中已计算局部方向与幅度；每个身份中的已有连续特征位置，与分类/向量图共同查询",
+          "limitations": "三panel共享140个对象ID与完全相同x/y；marker值和已投影向量是另外给定的合成输入，不重做降维或velocity分析。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K28.json"
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "title": "同一观测：点／IQR＋雨云",
+      "role": "combination",
+      "default": "K04",
+      "grammar": "explicit saved panel relationship: 比较同一数据的原始观测、中心与完整分布",
+      "members": [
+        "K04"
+      ],
+      "modes": [
+        {
+          "example": "K04",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K04",
+          "data_required": "同一对象×组别×数值",
+          "expression": "比较同一数据的原始观测、中心与完整分布",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "metadata": "metadata/K04.json"
+        }
+      ]
+    },
+    {
+      "id": "B05",
+      "title": "雨云＋已有估计区间",
+      "role": "combination",
+      "default": "K05",
+      "grammar": "explicit saved panel relationship: 对照分布与已经提供的估计范围",
+      "members": [
+        "K05"
+      ],
+      "modes": [
+        {
+          "example": "K05",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K05",
+          "data_required": "对象×组别×值＋同组别估计及上下界",
+          "expression": "对照分布与已经提供的估计范围",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "metadata": "metadata/K05.json"
+        }
+      ]
+    },
+    {
+      "id": "B06",
+      "title": "分组条件估计＋有序响应",
+      "role": "combination",
+      "default": "K06",
+      "grammar": "explicit saved panel relationship: 互补展示各条件水平和有序变化",
+      "members": [
+        "K06"
+      ],
+      "modes": [
+        {
+          "example": "K06",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K06",
+          "data_required": "共同组别×条件估计／上下界＋有序X／Y／上下界",
+          "expression": "互补展示各条件水平和有序变化",
+          "limitations": "合成布局示例。K03 组成来自独立条件表，不是坐标点的计数推断；K05 界限为固定演示值，不是研究置信区间；K06 为共同组别的互补条件，不宣称逐对象配对。",
+          "metadata": "metadata/K06.json"
+        }
+      ]
+    },
+    {
+      "id": "B10",
+      "title": "同一矩阵：热图＋趋势轮廓",
+      "role": "combination",
+      "default": "K10",
+      "grammar": "explicit saved panel relationship: 色块比较整体模式，曲线比较行的相对轮廓与转折",
+      "members": [
+        "K10"
+      ],
+      "modes": [
+        {
+          "example": "K10",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K10",
+          "data_required": "同一行×列矩阵、行身份、列顺序",
+          "expression": "色块比较整体模式，曲线比较行的相对轮廓与转折",
+          "limitations": "Rows/columns and values agree exactly; no new means fitted for aesthetics.",
+          "metadata": "metadata/K10.json"
+        }
+      ]
+    },
+    {
+      "id": "B11",
+      "title": "同对象位置＋数量＋组成",
+      "role": "combination",
+      "default": "K11",
+      "grammar": "explicit saved panel relationship: 同时看位置、支持量、类别构成；位置重叠不会隐藏数量",
+      "members": [
+        "K11"
+      ],
+      "modes": [
+        {
+          "example": "K11",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K11",
+          "data_required": "同一对象ID与类别／坐标；明确计数单位与总体分母",
+          "expression": "同时看位置、支持量、类别构成；位置重叠不会隐藏数量",
+          "limitations": "Counts and denominator both derived descriptively from the exact displayed unit IDs.",
+          "metadata": "metadata/K11.json"
+        }
+      ]
+    },
+    {
+      "id": "B12",
+      "title": "配对值＋同主体差值雨云＋已有估计",
+      "role": "combination",
+      "default": "K12",
+      "grammar": "explicit saved panel relationship: 展示个体变化、差值分布与估计范围三个层次",
+      "members": [
+        "K12"
+      ],
+      "modes": [
+        {
+          "example": "K12",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K12",
+          "data_required": "完整subject×condition值、同主体delta、已有estimate／bounds定义",
+          "expression": "展示个体变化、差值分布与估计范围三个层次",
+          "limitations": "All 48 subject IDs retained; example bounds fixed, not inferential CI.",
+          "metadata": "metadata/K12.json"
+        }
+      ]
+    },
+    {
+      "id": "B13",
+      "title": "同XY：气泡量值＋六边形支持量",
+      "role": "combination",
+      "default": "K13",
+      "grammar": "explicit saved panel relationship: 气泡看附加量值，六边形看重叠区域到底有多少记录",
+      "members": [
+        "K13"
+      ],
+      "modes": [
+        {
+          "example": "K13",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K13",
+          "data_required": "同一对象X、Y、独立size变量、对象单位",
+          "expression": "气泡看附加量值，六边形看重叠区域到底有多少记录",
+          "limitations": "Second panel counts objects, not the independent bubble-size variable.",
+          "metadata": "metadata/K13.json"
+        }
+      ]
+    },
+    {
+      "id": "B14",
+      "title": "多实体网络＋同一邻接矩阵",
+      "role": "combination",
+      "default": "K14",
+      "grammar": "explicit saved panel relationship: 网络看拓扑，矩阵精确定位边；两者可以互相核对",
+      "members": [
+        "K14",
+        "K15",
+        "K16"
+      ],
+      "modes": [
+        {
+          "example": "K14",
+          "label": "网络与邻接矩阵"
+        },
+        {
+          "example": "K16",
+          "label": "网络与对应条件矩阵"
+        },
+        {
+          "example": "K15",
+          "label": "成员网络、矩阵与UpSet"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K14",
+          "data_required": "同一节点清单、带符号权重的边、已知无边／未知规则",
+          "expression": "网络看拓扑，矩阵精确定位边；两者可以互相核对",
+          "limitations": "Known absent fixture edges are zero; real unknown relationships must remain missing.",
+          "metadata": "metadata/K14.json"
+        },
+        {
+          "example": "K15",
+          "data_required": "同一完整对象×集合成员表",
+          "expression": "同时看共享对象、成员逐项关系与集合交集量",
+          "limitations": "All views use the same complete membership table; gene-term membership is not regulatory effect.",
+          "metadata": "metadata/K15.json"
+        },
+        {
+          "example": "K16",
+          "data_required": "共同集合ID的重叠权重、条件×集合已有分数",
+          "expression": "同时看集合之间关系和各条件的响应模式",
+          "limitations": "Common term IDs; overlap weights and condition scores are separate supplied quantities.",
+          "metadata": "metadata/K16.json"
+        }
+      ]
+    },
+    {
+      "id": "B17",
+      "title": "同路径流带＋阶段边缘组成",
+      "role": "combination",
+      "default": "K17",
+      "grammar": "explicit saved panel relationship: 流带看对应路径，堆叠看各阶段总体构成；分母一致",
+      "members": [
+        "K17"
+      ],
+      "modes": [
+        {
+          "example": "K17",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K17",
+          "data_required": "同一已记录路径ID、各阶段类别与固定路径量",
+          "expression": "流带看对应路径，堆叠看各阶段总体构成；分母一致",
+          "limitations": "The same path quantities are conserved; marginal compositions alone do not identify transitions.",
+          "metadata": "metadata/K17.json"
+        }
+      ]
+    },
+    {
+      "id": "B18",
+      "title": "同关系：带宽弦图＋数量矩阵",
+      "role": "combination",
+      "default": "K18",
+      "grammar": "explicit saved panel relationship: 宏观看分配，矩阵读局部数值；同一数量两种视角",
+      "members": [
+        "K18",
+        "K23"
+      ],
+      "modes": [
+        {
+          "example": "K18",
+          "label": "数量弦图与矩阵"
+        },
+        {
+          "example": "K23",
+          "label": "成员弦图、矩阵与集合关系网络"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K18",
+          "data_required": "同一source×target非负weight完整表",
+          "expression": "宏观看分配，矩阵读局部数值；同一数量两种视角",
+          "limitations": "Same unsigned quantities; widths indicate weight, without causal direction.",
+          "metadata": "metadata/K18.json"
+        },
+        {
+          "example": "K23",
+          "data_required": "去重的成员-术语边表，每个成员已有效应与明确显示顺序；完整成员×术语的0/1矩阵；方向标签与已计数的覆盖数；已有term集合两两Jaccard边表、固定坐标、身份和显示面积",
+          "expression": "看哪些术语共享成员，并查出这些成员的效应方向；弦图中相同关系的精确逐格查询和成员覆盖度；选定条目的成员重叠与冗余，保留所有条目",
+          "limitations": "42条去重BP成员边逐项对应E09的42个1；E23从同一成员集合计算Jaccard，实算结果另有校验。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K23.json"
+        }
+      ]
+    },
+    {
+      "id": "B21",
+      "title": "多组富集点阵＋对应条件的环形成员轨道＋术语表",
+      "role": "combination",
+      "default": "K21",
+      "grammar": "explicit saved panel relationship: 同一术语在各条件是否报告、报告的比例和证据量；显式区分未报告与未检验；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+      "members": [
+        "K21"
+      ],
+      "modes": [
+        {
+          "example": "K21",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K21",
+          "data_required": "完整术语×组别/亚类点阵；term_id、block、status、校正p、GeneRatio及列身份；术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值；一行一个唯一术语ID和已有完整说明",
+          "expression": "同一术语在各条件是否报告、报告的比例和证据量；显式区分未报告与未检验；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "limitations": "E01的G1/CT1 BP术语p与E02逐ID相等，术语说明与E06a相等；其他矩阵列另给固定合成结果。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K21.json"
+        }
+      ]
+    },
+    {
+      "id": "B22",
+      "title": "集合交集＋四类环形轨道＋独立术语表",
+      "role": "combination",
+      "default": "K22",
+      "grammar": "explicit saved panel relationship: 读出两个集合的独有项和共同项数量；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+      "members": [
+        "K22"
+      ],
+      "modes": [
+        {
+          "example": "K22",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K22",
+          "data_required": "完整对象ID×两个集合的0/1成员关系；并集中的对象一行一次；术语ID、校正p、方向分数；明确术语-成员关系和每个成员的效应值；一行一个唯一术语ID和已有完整说明",
+          "expression": "读出两个集合的独有项和共同项数量；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "limitations": "交集计数由明确成员表得到；BP/MF/CC/PW分别保留其term/member/统计表、相同效应色限和术语对照，不把集合数当作显著性。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K22.json"
+        }
+      ]
+    },
+    {
+      "id": "B24",
+      "title": "相同观测的ECDF＋QQ与明确的生成密度",
+      "role": "combination",
+      "default": "K24",
+      "grammar": "explicit saved panel relationship: 全分布位置、尾部和跨组差异；不依赖分箱；偏移、尺度差异和尾部偏离；多组的位置、宽度及分布形状",
+      "members": [
+        "K24"
+      ],
+      "modes": [
+        {
+          "example": "K24",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K24",
+          "data_required": "组别×升序量值×已有累计概率；参考分位数与观测分位数的配对坐标；参考分布定义；组别×共用x网格×已有非负密度，密度定义与带宽",
+          "expression": "全分布位置、尾部和跨组差异；不依赖分箱；偏移、尺度差异和尾部偏离；多组的位置、宽度及分布形状",
+          "limitations": "E10/E11各组相同28个值，QQ参考为标准正态j/29分位数。E12是生成这些合成样本的解析密度，不是样本KDE拟合。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K24.json"
+        }
+      ]
+    },
+    {
+      "id": "B25",
+      "title": "相同配对对象的XY＋Bland–Altman差值",
+      "role": "combination",
+      "default": "K25",
+      "grammar": "explicit saved panel relationship: 两种测量的取值范围与关系，和差值相合图联合查看；量程相关偏差与个体差值分布",
+      "members": [
+        "K25"
+      ],
+      "modes": [
+        {
+          "example": "K25",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K25",
+          "data_required": "每个配对对象的两种已有量值、身份和唯一ID；同对象配对平均值、差值；已有偏倚、上下相合限界和单位定义",
+          "expression": "两种测量的取值范围与关系，和差值相合图联合查看；量程相关偏差与个体差值分布",
+          "limitations": "同一76对象，A=mean-difference/2、B=mean+difference/2；偏倚与限界为固定示例输入。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K25.json"
+        }
+      ]
+    },
+    {
+      "id": "B27",
+      "title": "相同十二对象的生存结果＋个体随访",
+      "role": "combination",
+      "default": "K27",
+      "grammar": "explicit saved panel relationship: 随时间的概率变化、不确定性与仍被随访的人数；个体随访长度、断续区间和事件时序",
+      "members": [
+        "K27"
+      ],
+      "modes": [
+        {
+          "example": "K27",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K27",
+          "data_required": "阶梯时间、S(t)、上下界；指定时点风险人数；删失标记另行提供；对象ID、组、随访开始/结束；事件时间、类型与显示顺序",
+          "expression": "随时间的概率变化、不确定性与仍被随访的人数；个体随访长度、断续区间和事件时序",
+          "limitations": "两组各6个对象，逐时点期末风险人数与E16结束时间核对；删失位置与已有阶梯一致，区间为明确合成示意。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K27.json"
+        }
+      ]
+    },
+    {
+      "id": "B29",
+      "title": "全局关联＋同一变异的局部轨道",
+      "role": "combination",
+      "default": "K29",
+      "grammar": "explicit saved panel relationship: 全基因组已有信号位置与局部聚集；局部信号与多条轨道对应；未知LD单独标识",
+      "members": [
+        "K29"
+      ],
+      "modes": [
+        {
+          "example": "K29",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K29",
+          "data_required": "变异ID、染色体、位置、已有p；明确版本、段长度及阈值；同一位置体系中的关联、已有LD、重组率与基因跨度/方向",
+          "expression": "全基因组已有信号位置与局部聚集；局部信号与多条轨道对应；未知LD单独标识",
+          "limitations": "E29关联表是E28的第2段220000–480000子集；ID、位置与p逐行对应。LD、重组率与基因跨度是单独明确给定的合成轨道。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K29.json"
+        }
+      ]
+    },
+    {
+      "id": "B31",
+      "title": "同一研究的完整区间＋效应精度",
+      "role": "combination",
+      "default": "K31",
+      "grammar": "explicit saved panel relationship: 精度图可回到每一研究的完整估计与区间；效应估计与精度分布，核对小样本与不对称结构",
+      "members": [
+        "K31"
+      ],
+      "modes": [
+        {
+          "example": "K31",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K31",
+          "data_required": "同一研究ID、分组、效应及已有区间；研究ID、效应、SE；给定参考值和两条参考边界坐标",
+          "expression": "精度图可回到每一研究的完整估计与区间；效应估计与精度分布，核对小样本与不对称结构",
+          "limitations": "18研究的ID、分组和效应逐项相等；森林区间与漏斗示意参考为固定输入，未合并研究。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K31.json"
+        }
+      ]
+    },
+    {
+      "id": "B34",
+      "title": "多组学对象分数＋特征相关投影",
+      "role": "combination",
+      "default": "K34",
+      "grammar": "explicit saved panel relationship: 各模态的组间位置及对象对应；不同模态特征指向哪些成分方向",
+      "members": [
+        "K34"
+      ],
+      "modes": [
+        {
+          "example": "K34",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K34",
+          "data_required": "对象ID×2/3模态已有坐标、组别、明确配对/非配对；特征ID、模态、与两个已给成分的相关坐标",
+          "expression": "各模态的组间位置及对象对应；不同模态特征指向哪些成分方向",
+          "limitations": "按RNA/Protein/ATAC身份关联对象分数与特征投影；两类对象不同、ID不混同，各轴独立。全为固定合成说明，不从图形反推整合成功。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K34.json"
+        }
+      ]
+    },
+    {
+      "id": "B35",
+      "title": "色谱读出＋实测与参考碎片谱",
+      "role": "combination",
+      "default": "K35",
+      "grammar": "explicit saved panel relationship: 峰形、保留时间和不同条件的曲线位置；实测与参考碎片的位置和强度分布",
+      "members": [
+        "K35"
+      ],
+      "modes": [
+        {
+          "example": "K35",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K35",
+          "data_required": "曲线ID、有序保留时间及强度/明确已给区间；谱图ID、峰ID、m/z、非负强度、归一化/仪器/匹配说明",
+          "expression": "峰形、保留时间和不同条件的曲线位置；实测与参考碎片的位置和强度分布",
+          "limitations": "两图展示互补测量通道的输入结构。此示例分别提供软件曲线与峰表，未声称来自同一已鉴定化合物；实际项目须绑定样本/前体/RT/仪器/归一化记录。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K35.json"
+        }
+      ]
+    },
+    {
+      "id": "B36",
+      "title": "通路数量底图＋标记组成",
+      "role": "combination",
+      "default": "K36",
+      "grammar": "explicit saved panel relationship: 将数量变化定位到功能图中的位置；各样本标记组成",
+      "members": [
+        "K36"
+      ],
+      "modes": [
+        {
+          "example": "K36",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K36",
+          "data_required": "明确节点ID/坐标/已有数值和已知拓扑、边证据；样本×M+i已给数量；总计数和分母、校正状态",
+          "expression": "将数量变化定位到功能图中的位置；各样本标记组成",
+          "limitations": "底图的数量与M+i组成是不同物理读出，保留各自单位与分母。示例不声明节点对应M+i对象，不从丰度或组成推断通量。 合成展示，不建立统计或因果结论。",
+          "metadata": "metadata/K36.json"
+        }
+      ]
+    },
+    {
+      "id": "B37",
+      "title": "集合、条目、成员与整体／局部网络",
+      "role": "combination",
+      "default": "K37",
+      "grammar": "explicit saved panel relationship: 同一成员ID与条目结果对应；局部网络是明确节点集合诱导的子图，不重新估计边。",
+      "members": [
+        "K37"
+      ],
+      "modes": [
+        {
+          "example": "K37",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K37",
+          "data_required": "完整对象与两集合0/1关系；条目、分类和已给得分；成员与条目ID、二元关系、成员效应、条目类别、已给比例/校正p/成员数；节点ID、固定位置、显示面积、已给边与权重；节点ID、固定位置、显示面积、已给边与权重",
+          "expression": "同一成员ID与条目结果对应；局部网络是明确节点集合诱导的子图，不重新估计边。",
+          "limitations": "同一成员ID与条目结果对应；局部网络是明确节点集合诱导的子图，不重新估计边。 合成示例仅演示图形表达。",
+          "metadata": "metadata/K37.json"
+        }
+      ]
+    },
+    {
+      "id": "B38",
+      "title": "已有诊断、层次树、关联矩阵与成员评分",
+      "role": "combination",
+      "default": "K38",
+      "grammar": "explicit saved panel relationship: 诊断值、树、模块身份、性状关系和成员评分均为已有结果；对象ID与模块身份有显式对应。",
+      "members": [
+        "K38",
+        "K40"
+      ],
+      "modes": [
+        {
+          "example": "K38",
+          "label": "已有诊断与模块性状"
+        },
+        {
+          "example": "K40",
+          "label": "增加相似矩阵与模块网络"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K38",
+          "data_required": "候选参数与已有诊断值；候选参数与已有诊断值；唯一叶ID、已有二叉树合并记录、合并高度、固定叶序和分类；完整行×列的两种量值；各自单位、范围、检验和缺失定义；成员ID与两个已有评分",
+          "expression": "诊断值、树、模块身份、性状关系和成员评分均为已有结果；对象ID与模块身份有显式对应。",
+          "limitations": "诊断值、树、模块身份、性状关系和成员评分均为已有结果；对象ID与模块身份有显式对应。 合成示例仅演示图形表达。",
+          "metadata": "metadata/K38.json"
+        },
+        {
+          "example": "K40",
+          "data_required": "唯一叶ID、已有二叉树合并记录、合并高度、固定叶序和分类；同一叶ID顺序下的完整相似矩阵与版本；模块ID、已有代表值关系、权重和符号；完整行×列的两种量值；各自单位、范围、检验和缺失定义；成员ID与两个已有评分",
+          "expression": "叶ID、矩阵行列与成员评分对应；模块ID对应条目关联与代表值网络。TOM/adjacency/kME定义与网络版本由上游明确给定。",
+          "limitations": "叶ID、矩阵行列与成员评分对应；模块ID对应条目关联与代表值网络。TOM/adjacency/kME定义与网络版本由上游明确给定。 合成示例仅演示图形表达。",
+          "metadata": "metadata/K40.json"
+        }
+      ]
+    },
+    {
+      "id": "B39",
+      "title": "环形层级量值与同对象堆叠贡献",
+      "role": "combination",
+      "default": "K39",
+      "grammar": "explicit saved panel relationship: 两个panel共用叶端ID；标记指标与可加数量分别保留单位，不能把独立对接能量相加解释亲和力。",
+      "members": [
+        "K39"
+      ],
+      "modes": [
+        {
+          "example": "K39",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K39",
+          "data_required": "已有层次树、叶序、叶端连续量/比例和独立外圈量值；对象×可加成分量值与明确显示顺序",
+          "expression": "两个panel共用叶端ID；标记指标与可加数量分别保留单位，不能把独立对接能量相加解释亲和力。",
+          "limitations": "两个panel共用叶端ID；标记指标与可加数量分别保留单位，不能把独立对接能量相加解释亲和力。 合成示例仅演示图形表达。",
+          "metadata": "metadata/K39.json"
+        }
+      ]
+    },
+    {
+      "id": "H01",
+      "title": "条目ID与说明对照表",
+      "role": "support",
+      "default": "E06a",
+      "grammar": "supporting ID/description key",
+      "members": [
+        "E06a",
+        "E06b",
+        "E06c",
+        "E06d"
+      ],
+      "modes": [
+        {
+          "example": "E06a",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E06a",
+          "data_required": "一行一个唯一术语ID和已有完整说明",
+          "expression": "读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "limitations": "描述来自上游；长内容拆为附表，不缩成不可读的小字。",
+          "metadata": "metadata/E06a.json"
+        },
+        {
+          "example": "E06b",
+          "data_required": "一行一个唯一术语ID和已有完整说明",
+          "expression": "读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "limitations": "描述来自上游；长内容拆为附表，不缩成不可读的小字。",
+          "metadata": "metadata/E06b.json"
+        },
+        {
+          "example": "E06c",
+          "data_required": "一行一个唯一术语ID和已有完整说明",
+          "expression": "读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "limitations": "描述来自上游；长内容拆为附表，不缩成不可读的小字。",
+          "metadata": "metadata/E06c.json"
+        },
+        {
+          "example": "E06d",
+          "data_required": "一行一个唯一术语ID和已有完整说明",
+          "expression": "读出环形轨道、网络或点阵使用的ID对应何种条目",
+          "limitations": "描述来自上游；长内容拆为附表，不缩成不可读的小字。",
+          "metadata": "metadata/E06d.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C01",
+      "title": "用户提供色卡 C01",
+      "role": "palette",
+      "default": "C01",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C01"
+      ],
+      "modes": [
+        {
+          "example": "C01",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C01",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C01.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C02",
+      "title": "用户提供色卡 C02",
+      "role": "palette",
+      "default": "C02",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C02"
+      ],
+      "modes": [
+        {
+          "example": "C02",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C02",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C02.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C03",
+      "title": "用户提供色卡 C03",
+      "role": "palette",
+      "default": "C03",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C03"
+      ],
+      "modes": [
+        {
+          "example": "C03",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C03",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C03.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C04",
+      "title": "用户提供色卡 C04",
+      "role": "palette",
+      "default": "C04",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C04"
+      ],
+      "modes": [
+        {
+          "example": "C04",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C04",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C04.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C05",
+      "title": "用户提供色卡 C05",
+      "role": "palette",
+      "default": "C05",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C05"
+      ],
+      "modes": [
+        {
+          "example": "C05",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C05",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C05.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C06",
+      "title": "用户提供色卡 C06",
+      "role": "palette",
+      "default": "C06",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C06"
+      ],
+      "modes": [
+        {
+          "example": "C06",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C06",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C06.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C07",
+      "title": "用户提供色卡 C07",
+      "role": "palette",
+      "default": "C07",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C07"
+      ],
+      "modes": [
+        {
+          "example": "C07",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C07",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices. 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C07.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C08",
+      "title": "Paul Tol · High contrast",
+      "role": "palette",
+      "default": "C08",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C08"
+      ],
+      "modes": [
+        {
+          "example": "C08",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C08",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "作者为灰度区分优化的三色方案；实际图仍需按最终尺寸检查。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C08.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C09",
+      "title": "Paul Tol · Bright",
+      "role": "palette",
+      "default": "C09",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C09"
+      ],
+      "modes": [
+        {
+          "example": "C09",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C09",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "黄色和浅青色在白底细线中需加粗；类别同时用形状或标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C09.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C10",
+      "title": "Paul Tol · Muted",
+      "role": "palette",
+      "default": "C10",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C10"
+      ],
+      "modes": [
+        {
+          "example": "C10",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C10",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "九色容量不等于九条细线都清晰；多系列优先分面。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C10.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C11",
+      "title": "Paul Tol · Vibrant",
+      "role": "palette",
+      "default": "C11",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C11"
+      ],
+      "modes": [
+        {
+          "example": "C11",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C11",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "红与洋红等相近组仍加形状或线型；灰色组保持明确标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C11.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C12",
+      "title": "ColorBrewer · Set2",
+      "role": "palette",
+      "default": "C12",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C12"
+      ],
+      "modes": [
+        {
+          "example": "C12",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C12",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "八色完整集合不默认声称通过色觉缺陷测试。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C12.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C13",
+      "title": "ColorBrewer · Dark2",
+      "role": "palette",
+      "default": "C13",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C13"
+      ],
+      "modes": [
+        {
+          "example": "C13",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C13",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "八色集合可有难分辨色对；细图要加符号、线型和标签。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C13.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C14",
+      "title": "ColorBrewer · Blues",
+      "role": "palette",
+      "default": "C14",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C14"
+      ],
+      "modes": [
+        {
+          "example": "C14",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C14",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "颜色顺序为低到高；不能拿不同深浅隐含无序组别等级。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C14.json"
+        }
+      ]
+    },
+    {
+      "id": "CARD-C15",
+      "title": "ColorBrewer · RdBu",
+      "role": "palette",
+      "default": "C15",
+      "grammar": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+      "members": [
+        "C15"
+      ],
+      "modes": [
+        {
+          "example": "C15",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "C15",
+          "data_required": "课题类别清单，或具有明确范围／中心的连续数值；按卡的类别／顺序／发散类型使用。",
+          "expression": "类别保持固定身份颜色；顺序表达量值增减；发散表达相对给定中心的方向。",
+          "limitations": "原顺序为红→白→蓝；示例负值红、正值蓝。反转必须显式记录。 色卡容量不足不能循环复用；浅色需要边线、形状等冗余编码。",
+          "metadata": "metadata/C15.json"
+        }
+      ]
+    },
+    {
+      "id": "STRUCT-S01",
+      "title": "真实结构丝带",
+      "role": "protein",
+      "default": "S01",
+      "grammar": "整体折叠及二级结构走向",
+      "members": [
+        "S01"
+      ],
+      "modes": [
+        {
+          "example": "S01",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "S01",
+          "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
+          "expression": "整体折叠及二级结构走向",
+          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。",
+          "metadata": "metadata/S01.json"
+        }
+      ]
+    },
+    {
+      "id": "STRUCT-S02",
+      "title": "真实结构表面",
+      "role": "protein",
+      "default": "S02",
+      "grammar": "外形、凹凸与轮廓",
+      "members": [
+        "S02"
+      ],
+      "modes": [
+        {
+          "example": "S02",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "S02",
+          "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
+          "expression": "外形、凹凸与轮廓",
+          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。",
+          "metadata": "metadata/S02.json"
+        }
+      ]
+    },
+    {
+      "id": "STRUCT-S03",
+      "title": "透明背景＋局部原子",
+      "role": "protein",
+      "default": "S03",
+      "grammar": "指定残基范围的原子细节",
+      "members": [
+        "S03"
+      ],
+      "modes": [
+        {
+          "example": "S03",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "S03",
+          "data_required": "实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。",
+          "expression": "指定残基范围的原子细节",
+          "limitations": "实际公共 GFP 坐标示例；局部为示例链 A author 65–67。不是用户参考蛋白的原坐标复现，也不是本次全主题自动替换验证的一部分。",
+          "metadata": "metadata/S03.json"
+        }
+      ]
+    }
+  ]
+}
