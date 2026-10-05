@@ -1,0 +1,13 @@
+# Historical validation scope
+
+This is a publication-safe summary of recorded development checks. Private research results, local installation paths and local output receipts are not distributed. Historical checks are not a claim that every backend was rerun for the GitHub release.
+
+- 2026-09-22: core R/Python synthetic smoke checks, invalid-input checks, exact export hashes and basic skill structure were recorded. Only a subset of previews had an explicit visual inspection; universal Chinese-label and print-size acceptance was not claimed.
+- 2026-09-26: API v2 and frozen-table extensions recorded 17 synthetic figure bundles per language, 9 baseline rejection cases and 18 additional refusal/immutability/export cases. Ratios use reference 1; differences and log ratios use reference 0. A small CC0 public-object example was used only for descriptive plotting, without establishing donor independence.
+- 2026-09-26 style extension: 8 comparison bundles per language, 14 rejection cases and preservation of source coordinates/counts were recorded. Small-n suppression of descriptive IQR was checked; no inferential p values were calculated for aesthetics.
+- 2026-09-27: marginal volcano forms recorded 9 synthetic bundles per language and 14 rejection checks. Original coordinates, category totals and supplied thresholds were preserved. The circular-point and light-gray target outline variants remain available.
+- 2026-10-01 publication forms: 7 synthetic bundles and 10 rejection cases per language were recorded for supplied ROC/PR, aligned matrices, point intervals, feature facets and rainclouds. Failed intermediate renderings were preserved privately and were not treated as accepted outputs. Raw curve coordinates and PR step semantics require separate review.
+
+Recorded checks for native third-party objects, inferred networks, enrichment/trajectory reconstruction, arbitrary data sizes, all fonts, all platforms, complete color-vision simulation and journal-specific print acceptance remain limited. Source links and code reading do not prove runtime availability. Synthetic software tests do not establish scientific accuracy.
+
+For later implementations and limits, read [validation-20261002.md](validation-20261002.md), [validation-increments-20261005.md](validation-increments-20261005.md), and [validation-reference-20261005.md](validation-reference-20261005.md). Current publication checks are described in the repository release-validation document. Use scripts/smoke_test.py and scripts/regression_test.py with a fresh output directory for local validation. Do not overwrite prior results.

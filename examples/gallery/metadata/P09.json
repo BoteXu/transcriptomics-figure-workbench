@@ -1,0 +1,68 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic volcano rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "volcano_editorial",
+    "alpha": 0.05,
+    "fc": 1,
+    "labels": [
+      "Gene003",
+      "Gene018",
+      "Gene045",
+      "Gene067",
+      "Gene120",
+      "Gene200"
+    ],
+    "label_layout": "fixed side lanes; points unchanged",
+    "palette": {
+      "Down": "#35618F",
+      "Up": "#B84E35",
+      "Below cutoffs": "#BFC5CB"
+    },
+    "point_count": 420,
+    "status_counts": {
+      "Below cutoffs": 279,
+      "Up": 78,
+      "Down": 63
+    },
+    "design": {
+      "width_mm": 198.11999999999998,
+      "height_mm": 121.91999999999999,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "89b28819e56d9be604f1579bbd1f2030f5e61a508302d79597613d5d134b8092"
+    }
+  },
+  "example_id": "P09",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P09.png": "7c9c3fd9cff616113ad5fb54af0321ab2613b740ef68964fc7220a4ae7ef86a0",
+    "P09.pdf": "a1f127b3eb55dffad6b8e5d5402483806d41d33e6b4f796eef3f8ad173975191",
+    "P09.svg": "b9a6409f1258f5a18d270e11f8c6ce9342a20179ba59ed0cb57197ff8c778cb1",
+    "P09.tsv": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10"
+  }
+}

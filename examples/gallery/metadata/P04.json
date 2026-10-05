@@ -1,0 +1,58 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic samples rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "sample_distribution",
+    "palette": {
+      "Control": "#35618F",
+      "Treated": "#C45A2D"
+    },
+    "y_label": "Demo expression (log2 units)",
+    "summary": "median and Q1-Q3; linear quantiles; only n>=5; not CI",
+    "offsets": "deterministic horizontal first-appearance offsets; not a density estimate",
+    "sample_n": {
+      "Control": 24,
+      "Treated": 24
+    },
+    "inference": "none",
+    "design": {
+      "width_mm": 180.33999999999997,
+      "height_mm": 121.91999999999999,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "d9b791f3bfd7380973bcbe976942f91b67ecb78b99acf723d764bd23ee9bdb0f"
+    }
+  },
+  "example_id": "P04",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P04.png": "13d87228fb130c95e7f64eade4a3c1dd06f8f2235f6020c10d309f6b9ed20b34",
+    "P04.pdf": "2858e0fc491d5d04ca2f45c7326f24d7ea4b71948b1bb224181d8d0b7e6488b4",
+    "P04.svg": "ce0e48e50756e5b26dadec6b3d46ce13f7208802eb1ef699780b90a5040bbe98",
+    "P04.tsv": "2ce476ea016ae09310ade42a49137860681c3d473963e38009ecccd0b9811e40"
+  }
+}

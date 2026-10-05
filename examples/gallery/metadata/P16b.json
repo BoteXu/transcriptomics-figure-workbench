@@ -1,0 +1,86 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic matrix rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "publication_aligned_matrix",
+    "limits": [
+      -1.5,
+      1.5
+    ],
+    "center": 0,
+    "signed": true,
+    "value_label": "Demo signed score",
+    "geometry": "bubble",
+    "bubble_area": "constant_not_detection",
+    "row_order": [
+      "Feature 01",
+      "Feature 02",
+      "Feature 03",
+      "Feature 04",
+      "Feature 05",
+      "Feature 06",
+      "Feature 07",
+      "Feature 08",
+      "Feature 09",
+      "Feature 10",
+      "Feature 11",
+      "Feature 12"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08"
+    ],
+    "count_label": "Supplied feature count",
+    "block_palette": {
+      "Module A": "#2D9C95",
+      "Module B": "#7562A5",
+      "Module C": "#E98B2A"
+    },
+    "clustering": "none_frozen_input_order",
+    "design": {
+      "width_mm": 200,
+      "height_mm": 128.016,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": 30,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "ea05bcb59e30d17bfd82f54949f649a9253b9ac6d1079987419cd8f657adfb97"
+    }
+  },
+  "example_id": "P16b",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P16b.png": "5f1c3cb2fa78fc1e4e81f7ffcc7e82ac4c1bbb2b3602b90eb5a9680a8095ce40",
+    "P16b.pdf": "829870efef876e5695fcffd9236ef78b669defed5e922e4fb8490ce299913d96",
+    "P16b.svg": "d1fedd6f1239b4722d8f7860a1bae2603df314f14cda2bb81161124f70a22b12",
+    "P16b.tsv": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288"
+  }
+}

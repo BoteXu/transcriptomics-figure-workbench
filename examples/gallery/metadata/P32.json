@@ -1,0 +1,87 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic availability rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "availability_counts",
+    "row_aliases": {
+      "Cluster A": "Cluster A",
+      "Cluster B": "Cluster B",
+      "Cluster C": "Cluster C",
+      "Cluster D": "Cluster D"
+    },
+    "count_fields": [
+      "reports",
+      "any_therapy_rows",
+      "nonempty_literature_reference"
+    ],
+    "zero": "retained",
+    "width_mm": 180,
+    "palette": {
+      "recorded": "#35618F",
+      "absent": "#B87822"
+    },
+    "inference": "none",
+    "design": {
+      "width_mm": 180,
+      "height_mm": 135,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {
+        "0": [
+          0.27,
+          0.28,
+          0.68,
+          0.48
+        ]
+      },
+      "figure_text_positions": {
+        "Record availability": [
+          0.27,
+          0.93
+        ],
+        "Availability, not assigned target-drug duration. Reports are not patients; clusters overlap.\nNo risk estimate or confidence interval. All returned clusters and literature zeroes retained.": [
+          0.27,
+          0.06
+        ]
+      },
+      "figure_text_wraps": {
+        "Availability, not assigned target-drug duration. Reports are not patients; clusters overlap.\nNo risk estimate or confidence interval. All returned clusters and literature zeroes retained.": 80
+      },
+      "legend_zone": [
+        0.25,
+        0.8,
+        0.72,
+        0.065
+      ],
+      "legend_columns": 2,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "7062b10111522f784d94ad8cc3b5c2d30925fe1f4a20192e9720d4d8c97b156d"
+    }
+  },
+  "example_id": "P32",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P32.png": "c2026d2ae5ac7f912db168075cda36dd66682ffa4a02192e2d496702ace35bd2",
+    "P32.pdf": "73900adb6af7fc800d0514d154932da0ab15bcdd7bc3e79a753a4ccf33011e4c",
+    "P32.svg": "ee4d7f55846f7b6edd963e261242f01100b87b5e232247c51bf4ff71f09047ec",
+    "P32.tsv": "ca8bcf126bc6d38dc1a26d703916f9d4ab94dd864c33071f6499397b9fd493cf"
+  }
+}

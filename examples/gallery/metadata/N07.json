@@ -1,0 +1,121 @@
+{
+  "source": "Original bounded synthetic visualization fixture, seed 20261005. No biological analysis or external results.",
+  "palette": "Defined in project_theme.json",
+  "input_unit": "Provided panel table rows",
+  "experimental_unit": "Synthetic units; no research inference",
+  "contrast": "Independent panel aesthetic demonstration",
+  "denominator": "Complete supplied panel table",
+  "model": "No fitting, testing or analysis",
+  "limits": "Explicit visual parameters: {\"state_order\": [\"Event A\", \"Event B\", \"Event C\"], \"state_slots\": {\"Event A\": \"G1\", \"Event B\": \"G3\", \"Event C\": \"G6\"}, \"title\": \"Multiple recorded categorical states per object\"}",
+  "filtering": "No implicit filtering; explicit fixture panels and views only.",
+  "uncertainty": "Upstream fixed demonstration bounds or density; not new inference",
+  "interpretation_limit": "Synthetic visual example; suitable real inputs must be independently reviewed",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "multistate_matrix",
+    "analysis": "none; supplied results with explicitly stated display summaries",
+    "state_order": [
+      "Event A",
+      "Event B",
+      "Event C"
+    ],
+    "state_slots": {
+      "Event A": "G1",
+      "Event B": "G3",
+      "Event C": "G6"
+    },
+    "missing_policy": "Missing rows/cells rejected; explicit None only",
+    "design": {
+      "width_mm": null,
+      "height_mm": null,
+      "font_family": "Arial",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "Arial",
+      "geometry_sha256": "0a0c5aa95972fe1f669616506131f3824193fc9cccd1070bb482818748601edf"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "aesthetic-library-preview",
+      "palette_name": "card_06",
+      "palette_colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "group_slots": {
+        "G1": 0,
+        "G2": 1,
+        "G3": 2,
+        "G4": 3,
+        "G5": 4,
+        "G6": 5,
+        "G7": 6,
+        "All points": 0,
+        "Support": 1,
+        "Site": 6,
+        "Input": 2,
+        "Output": 0
+      },
+      "roles": {
+        "primary": "#506AAA",
+        "negative": "#506AAA",
+        "positive": "#E17692",
+        "accent": "#E17692",
+        "neutral": "#A8ADB3",
+        "significant": "#E17692",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "diverging": [
+          "#506AAA",
+          "#F7F7F7",
+          "#E17692"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "Arial",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+  },
+  "example_id": "N07",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "N07.png": "1b6d5a338f99eb6bc8830b64cb35d0ce570612c20b4f197a8fece0b57ca50282",
+    "N07.pdf": "8050dd4f39e801558b0acaf1b6994b737650c8f5868b3534cedf920b544990bb",
+    "N07.svg": "c5f41acdd376cca96d1dc447f69e29a0a8803d5e54f58d08070c9c58b5c8ad33",
+    "N07.tsv": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0"
+  }
+}

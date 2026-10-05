@@ -1,0 +1,55 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic association rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "association_matrix",
+    "value_label": "Demo correlation",
+    "method_label": "Synthetic matched-unit values",
+    "limits": [
+      -1,
+      1
+    ],
+    "alpha": 0.05,
+    "missing": "explicit_hatched_not_zero",
+    "statistics": "frozen_no_fit",
+    "design": {
+      "width_mm": 200,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": 30,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "a6e988d499f4c0cf02cd6c7593884d9e6443370dbfe3b5515cb89aef2b59255a"
+    }
+  },
+  "example_id": "P18",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P18.png": "df1e077b5f751e2f5a31cb8fc62c676d24d8c8cc86c7b7627808a0c8100be8af",
+    "P18.pdf": "21ebf6f1d23312f3c4c72efaa21827bb9edba48f25044eba0de8e8a6863fd1d0",
+    "P18.svg": "5806ac4b754815f704d9de672e8b4d6a164c202404664f6c880869a93d2f6612",
+    "P18.tsv": "bd956854ab851b778ebda369e5ef53e1251b788b5ea55e6d89bd8524036c6ba2"
+  }
+}

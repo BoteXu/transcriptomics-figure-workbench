@@ -1,0 +1,63 @@
+{
+  "source": "User-supplied reference appearance; independently generated synthetic data",
+  "palette": "reference registry",
+  "input_unit": "Record_type-specific frozen software fixture rows; see input schema",
+  "experimental_unit": "Synthetic identifiers; no real biological observations",
+  "contrast": "Synthetic demonstration; comparison definitions are display labels",
+  "denominator": "Supplied groups/eligible rows; no population inference",
+  "model": "No model fitted; all statistics/densities/embeddings supplied by fixture generator",
+  "limits": "recorded in figure_spec",
+  "filtering": "Only explicitly declared display filters; complete supplied table exported",
+  "uncertainty": "Synthetic supplied bounds and summaries; not validated inferential intervals",
+  "interpretation_limit": "Visual/software reproduction only, not original quantitative reconstruction or scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "reference_facet_bubble_matrix",
+    "adapter_version": 1,
+    "analysis": "none; frozen supplied tables",
+    "row_facets": [
+      "Condition A",
+      "Condition B"
+    ],
+    "column_facets": [
+      "Set 1",
+      "Set 2",
+      "Set 3"
+    ],
+    "feature_order": [
+      "Feature A",
+      "Feature B",
+      "Feature C",
+      "Feature D",
+      "Feature E",
+      "Feature F",
+      "Feature G",
+      "Feature H"
+    ],
+    "window_order": [
+      15,
+      30,
+      45,
+      60,
+      75,
+      90,
+      105,
+      120
+    ],
+    "color_limits": [
+      -0.5,
+      0.5
+    ],
+    "value_label": "Supplied signed association",
+    "area": "abs supplied r times 520"
+  },
+  "example_id": "R20",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "R20.png": "a53ac4dc3e645fe2d1664c0dd0276c56f4457068f0e1f00389b201405639c0c7",
+    "R20.pdf": "0016a368ca28aae60cb5f1dfedce092314a123de0987403ab6678406ae38345f",
+    "R20.svg": "9df24299d045323d8ef65dd957948f94caa6449df6de82771a77225c0ada9b2d",
+    "R20.tsv": "47a5ec510f6c91944e50656e78d8dc837312ce0ed7b6160644f69869adbfcf4e",
+    "R20.style.json": "6475f2d345ff84b4348e2c0716494ab9e8523de893953a0d74718d21f0630a74"
+  }
+}

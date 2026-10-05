@@ -1,0 +1,46 @@
+{
+  "source": "User-supplied reference appearance; independently generated synthetic data",
+  "palette": {
+    "2020": "#77DEFF",
+    "2010": "#FF72AC",
+    "2000": "#FF9E7B"
+  },
+  "input_unit": "Record_type-specific frozen software fixture rows; see input schema",
+  "experimental_unit": "Synthetic identifiers; no real biological observations",
+  "contrast": "Synthetic demonstration; comparison definitions are display labels",
+  "denominator": "Supplied groups/eligible rows; no population inference",
+  "model": "No model fitted; all statistics/densities/embeddings supplied by fixture generator",
+  "limits": "recorded in figure_spec",
+  "filtering": "Only explicitly declared display filters; complete supplied table exported",
+  "uncertainty": "Synthetic supplied bounds and summaries; not validated inferential intervals",
+  "interpretation_limit": "Visual/software reproduction only, not original quantitative reconstruction or scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "reference_annular_profile",
+    "adapter_version": 1,
+    "analysis": "none; frozen supplied tables",
+    "palette": {
+      "2020": "#77DEFF",
+      "2010": "#FF72AC",
+      "2000": "#FF9E7B"
+    },
+    "value_label": "Primary value\n(original units)",
+    "area_label": "Secondary value",
+    "value_max": 7000,
+    "area_scale": 0.022,
+    "connect_categories": true,
+    "radial_zero": "inner boundary",
+    "curve_mode": "smooth_display",
+    "smoothing": "optional bounded smoothstep connectors only; exact category vertices preserved; no intermediate observations",
+    "bubble_area": "original area times area_scale"
+  },
+  "example_id": "R01",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "R01.png": "9d923c9e516173860927d0127fb2894455c6b6d1f51464f80e6ce3ce6bf1393c",
+    "R01.pdf": "3ce259b4ff9d46f33192cfbc63e55c227226334855a9e3ce34e48ea04c827fac",
+    "R01.svg": "e470a4d19b0cc1fd32bd46ceb8da1e97f516df42878f9fd94f29cd890283d5b0",
+    "R01.tsv": "6d496a06cab5d151394294ba1395eec9db07c8bcc2a0aa55716e2ad4a5bd8df4",
+    "R01.style.json": "b86e3d55a880ef6923e65feb93ef74e2fbde3ebbe829c189be12a1bf733487db"
+  }
+}

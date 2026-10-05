@@ -1,0 +1,55 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic calibration rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "calibration_counts",
+    "palette": {
+      "Model A": "#E98B2A",
+      "Model B": "#7562A5",
+      "Model C": "#2D9C95"
+    },
+    "interval_label": "Illustrative supplied bounds",
+    "evaluation_label": "Synthetic held-out units",
+    "binning": "frozen",
+    "count_semantics": "within_model_evaluation_units",
+    "design": {
+      "width_mm": 180,
+      "height_mm": 147.32,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "8a43806e600c98fa337fcc03f93a0e0b0a297ac0bc9c938f9d289eb921def0cf"
+    }
+  },
+  "example_id": "P27",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P27.png": "36c4441e9a288c64892d7398f28c78fd442e4cfd18bcc998e9e2d941736f0b85",
+    "P27.pdf": "3482791fda17639d3b79598c2cb31ed190069cb146827864e9e390bd71906d70",
+    "P27.svg": "033f99af52491485e910b26381094a1b23d2576569f6f3f09d00a783263ff141",
+    "P27.tsv": "1ce5698c07b8d49ebeff11554da3437b5eabb3bf37979ab27d27bb5083d9f213"
+  }
+}

@@ -1,0 +1,13 @@
+# Local visual polish validation (2026-10-02)
+
+Additive Python renderers were tested against isolated copies of four LPS heatmaps (882 exact cells/layout) and two drug PNG inputs containing three panels (90 therapy/co-medication rows plus 15 availability rows). Three real layout alternatives per matrix/evidence family; one availability layout. No third drug file invented. Original projects and LPS evidence profile were not edited; full original captions and exact alias maps accompany selected results.
+
+Executed software checks: seven explicitly synthetic bundles, 32 invariants/refusal checks (complete grid, exact values/order, sign glyph, theme restoration, input immutability, category sums, matched denominator, role hierarchy, missing-vs-zero and geometry). Existing Python regression passed 18 rejection cases plus ratio reference/hash/retry/overwrite/Unicode invariants. Existing six multimodal families re-rendered eight synthetic bundles with 20 refusals, geometry/hash/theme/immutability checks. Existing R code remained byte-identical; full R smoke was run in the first upgrade, not repeated for this Python-only addition.
+
+Actual export QA covers all 16 final real candidates: bundle SHA256, exact plotted TSV receipt, 180-mm PDF width, parseable SVG, PNG dimensions, embedded PDF fonts and page text bounds. Six selected designs receive actual PNG/PDF, 50-percent and grayscale pixel inspection and isolated-browser SVG inspection. Software success and visual review are separate; source receipts remain RENDERED_UNREVIEWED, and local visual QA is not scientific acceptance. Failed/intermediate versions are retained outside the final release.
+
+Selected: grouped response matrices; contiguous condition/time blocks for 39-chip arrays; aligned therapy/co-medication evidence; availability count bars. Matrix transposition was rejected as default because it loses condition grouping or creates a very tall panel. Split evidence is valid but long; numeric table is a useful supplementary alternative.
+
+Not implemented: new R adapters; arbitrary native ComplexHeatmap object handling; sparse/incomplete matrix imputation; drug deduplication/exposure mapping; automated statistical inference; raw genomic parsing; networks, PAE or 3D structure rendering. Not tested: full color-vision simulations, arbitrary non-Latin captions, extreme aliases/cardinality, all widths from 150 to 240 mm, journal single-column certification. Gray and half-size checks are readability stress tests, not a claim of full accessibility.
+
+Source-backed design references and rights distinctions are in [visual-polish.md](visual-polish.md) and [visual-sources-20261002.md](visual-sources-20261002.md). All this round's results stay local; no Library/site/third-party upload.

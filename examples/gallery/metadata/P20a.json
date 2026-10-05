@@ -1,0 +1,53 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic group_forest rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "publication_grouped_forest",
+    "palette": {
+      "Control": "#35618F",
+      "Treated": "#C45A2D"
+    },
+    "effect_scale": "difference",
+    "interval_label": "Illustrative supplied bounds",
+    "group_gaps": 0.45,
+    "design": {
+      "width_mm": 218.43999999999997,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "5e426737f5ead751148ea38651f042dc2169e3e407b6ce011ebc3a9d796864e0"
+    }
+  },
+  "example_id": "P20a",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P20a.png": "8f2d717d7194bbca52da9db7ef39539b621eae943415921a287664a8492e8a45",
+    "P20a.pdf": "76df273391b99a3fca651bfa4f6195e8fc27127c7f739839ce91c3aecb398ba4",
+    "P20a.svg": "5dfe0ca77e71d55e0f059f2f7d23ac317cbfdf5eaea91b7c4bae203a7c7b34ed",
+    "P20a.tsv": "c35b52213a37f582e395e0c8a70e68ba95998518ce26a75593584349d20c1075"
+  }
+}

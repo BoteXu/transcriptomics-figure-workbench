@@ -1,0 +1,63 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic pr rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "publication_curve",
+    "curve_type": "PR",
+    "labels": {
+      "Model A": "Model A (DEMO)",
+      "Model B": "Model B (DEMO)",
+      "Model C": "Model C (DEMO)"
+    },
+    "palette": {
+      "Model A": "#E98B2A",
+      "Model B": "#7562A5",
+      "Model C": "#2D9C95"
+    },
+    "step_by_model": {
+      "Model A": "pre",
+      "Model B": "pre",
+      "Model C": "pre"
+    },
+    "prevalence": 0.4,
+    "design": {
+      "width_mm": 180,
+      "height_mm": 147.32,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "df865c3db05b983673db2927c4853eb8555dc39c8568481c9e0252d6fb9ed21f"
+    }
+  },
+  "example_id": "P26b",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P26b.png": "db2367956f8e2e424f016fa38ba23bdb1267a7aff35ce098c46379984cf129b7",
+    "P26b.pdf": "b818b9264ac5b81680be34af0715da920ff18cb9c7ecad54f06f05915ce5f0aa",
+    "P26b.svg": "6d1acc88e954fa0e32bd4d4c867453dfca4c37d749dc93ff6bea3e364b187c69",
+    "P26b.tsv": "1dd97354d7be17124b4c8790140d435efc22b8edcdac84dfc271fe61eb551338"
+  }
+}

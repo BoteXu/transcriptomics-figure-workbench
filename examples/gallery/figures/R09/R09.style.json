@@ -1,0 +1,36 @@
+{
+  "axis_order": [
+    "learning_rate",
+    "max_depth",
+    "min_samples_split",
+    "n_estimators",
+    "heldout_score"
+  ],
+  "axis_ranges": {
+    "learning_rate": [
+      0.05,
+      0.45
+    ],
+    "max_depth": [
+      5,
+      12
+    ],
+    "min_samples_split": [
+      5,
+      12
+    ],
+    "n_estimators": [
+      50,
+      290
+    ],
+    "heldout_score": [
+      0.73,
+      0.88
+    ]
+  },
+  "score_label": "Supplied held-out score",
+  "score_limits": [
+    0.73,
+    0.88
+  ]
+}

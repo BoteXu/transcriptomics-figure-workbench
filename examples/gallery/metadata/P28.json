@@ -1,0 +1,63 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic tracks rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "interval_tracks",
+    "assembly": "DEMO assembly",
+    "chromosome": "chrDemo",
+    "region": [
+      10000,
+      11200
+    ],
+    "coordinate_system": "zero_based_half_open",
+    "value_label": "Demo normalized signal",
+    "palette": {
+      "RNA signal": "#0072B2",
+      "ATAC signal": "#009E73"
+    },
+    "y_limits": [
+      -0.64,
+      8.64
+    ],
+    "gap": "unmeasured_not_zero",
+    "design": {
+      "width_mm": 180.33999999999997,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "88ca49b8c8a087c19c099910e5483e62b15c7e73cf548c9312aeb4ab6187097a"
+    }
+  },
+  "example_id": "P28",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P28.png": "cae1d03b96e657e6f6d0d8160f5124e2d04795d8e5f87ff717fa74fb9b9b0201",
+    "P28.pdf": "49a730751fb60752c43a1c4f7c07363c6b5feb6ecdef53442e3752eb982108e7",
+    "P28.svg": "7c778ff2f0e44391bd4c3806c75e3fa587888b167e5bec05982e0451c16d2f09",
+    "P28.tsv": "31daee5b612aa41d93c90609a45d844df0e5dd2b5315a73b76ed1038e4ecb9bd"
+  }
+}

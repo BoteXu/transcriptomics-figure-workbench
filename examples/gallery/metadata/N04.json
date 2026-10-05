@@ -1,0 +1,120 @@
+{
+  "source": "Original bounded synthetic visualization fixture, seed 20261005. No biological analysis or external results.",
+  "palette": "Defined in project_theme.json",
+  "input_unit": "Provided panel table rows",
+  "experimental_unit": "Synthetic units; no research inference",
+  "contrast": "Independent panel aesthetic demonstration",
+  "denominator": "Complete supplied panel table",
+  "model": "No fitting, testing or analysis",
+  "limits": "Explicit visual parameters: {\"weight_label\": \"Supplied quantity\", \"order\": [\"G1\", \"G2\", \"G3\", \"G4\", \"G5\", \"G6\"], \"title\": \"Weighted ribbon widths and sector totals\"}",
+  "filtering": "No implicit filtering; explicit fixture panels and views only.",
+  "uncertainty": "Upstream fixed demonstration bounds or density; not new inference",
+  "interpretation_limit": "Synthetic visual example; suitable real inputs must be independently reviewed",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "weighted_chord",
+    "analysis": "none; supplied results with explicitly stated display summaries",
+    "weight_label": "Supplied quantity",
+    "sector_order": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "directed": false,
+    "design": {
+      "width_mm": null,
+      "height_mm": null,
+      "font_family": "Arial",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "Arial",
+      "geometry_sha256": "8ed076912c6b17fd368c393e05f68f7b37802e22fbb418a1b59447c068944566"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "aesthetic-library-preview",
+      "palette_name": "card_06",
+      "palette_colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "group_slots": {
+        "G1": 0,
+        "G2": 1,
+        "G3": 2,
+        "G4": 3,
+        "G5": 4,
+        "G6": 5,
+        "G7": 6,
+        "All points": 0,
+        "Support": 1,
+        "Site": 6,
+        "Input": 2,
+        "Output": 0
+      },
+      "roles": {
+        "primary": "#506AAA",
+        "negative": "#506AAA",
+        "positive": "#E17692",
+        "accent": "#E17692",
+        "neutral": "#A8ADB3",
+        "significant": "#E17692",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "diverging": [
+          "#506AAA",
+          "#F7F7F7",
+          "#E17692"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "Arial",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6"
+  },
+  "example_id": "N04",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "N04.png": "9d6b2e66b293844176b68b29dc982c3f25f29f794aa5197935659c559a546333",
+    "N04.pdf": "d0e701eda7d7a6ed36fd6659dc998f720e00ffb58bfbc5c945a9aecb4cdb0b77",
+    "N04.svg": "063f48e3493dd363690d59b65876ad7eeaee6b4bad81db462cf3dcbc69f8ae6a",
+    "N04.tsv": "c92072adec8cc59a5cc1e4e40edfbcab509ac8069a6009d2e88eb8f78116f4a3"
+  }
+}

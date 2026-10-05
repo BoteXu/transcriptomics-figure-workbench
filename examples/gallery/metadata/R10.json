@@ -1,0 +1,57 @@
+{
+  "source": "User-supplied reference appearance; independently generated synthetic data",
+  "palette": "shap_teal_red",
+  "input_unit": "Record_type-specific frozen software fixture rows; see input schema",
+  "experimental_unit": "Synthetic identifiers; no real biological observations",
+  "contrast": "Synthetic demonstration; comparison definitions are display labels",
+  "denominator": "Supplied groups/eligible rows; no population inference",
+  "model": "No model fitted; all statistics/densities/embeddings supplied by fixture generator",
+  "limits": "[-0.065, 0.08]",
+  "filtering": "Only explicitly declared display filters; complete supplied table exported",
+  "uncertainty": "Synthetic supplied bounds and summaries; not validated inferential intervals",
+  "interpretation_limit": "Visual/software reproduction only, not original quantitative reconstruction or scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "reference_contribution_swarm",
+    "adapter_version": 1,
+    "analysis": "none; frozen supplied tables",
+    "feature_order": [
+      "Feature A",
+      "Feature B",
+      "Feature C",
+      "Feature D",
+      "Feature E",
+      "Feature F",
+      "Feature G",
+      "Feature H",
+      "A × F",
+      "B × F",
+      "D × F",
+      "C × F",
+      "Feature I",
+      "E × F",
+      "G × F",
+      "Feature J",
+      "H × F",
+      "I × F",
+      "J × F"
+    ],
+    "limits": [
+      -0.065,
+      0.08
+    ],
+    "cmap": "shap_teal_red",
+    "color": "supplied feature_value on [0,1]",
+    "x_label": "Supplied prediction contribution",
+    "packing": "display offsets only"
+  },
+  "example_id": "R10",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "R10.png": "5ae2c0123be6f7d86fdd5a95874658b496920171e294f155206b513e126ac2e8",
+    "R10.pdf": "232f8f1e8728deffaf755b15d61d52fd94e62d55812b04c346c045cc5a2127ec",
+    "R10.svg": "4103b939f58a5f9c6ae938daa5c0ca97013d090f6de7c3b771d9087ac7d9fb52",
+    "R10.tsv": "5a30ac9de883658a9c58c83547ae4063e711cba1af563478a03877a628421372",
+    "R10.style.json": "f1209f4ebf148e1208b967890d530d58292e829039d59d9db76d40f4e8a4f7a6"
+  }
+}

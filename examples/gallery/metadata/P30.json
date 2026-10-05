@@ -1,0 +1,53 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic confidence rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "residue_confidence",
+    "sequence_label": "Synthetic chain A; artificial residues",
+    "scale": [
+      0,
+      100
+    ],
+    "missing_residues": "gaps_not_connected",
+    "interpretation": "predicted_local_confidence_only",
+    "design": {
+      "width_mm": 180.33999999999997,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "9cff89ba592ce22f0820cafb6f496932427f3013d452accd6244b9c05a808bbf"
+    }
+  },
+  "example_id": "P30",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P30.png": "e9a1ea1f793d43a3a34c6a3b426ed5ce74daa2f3d8d0393643e98d1a90903d79",
+    "P30.pdf": "0980c37901f1573998e3344d638f6ef3b0016a272f8e952465e4e7569757d227",
+    "P30.svg": "bbc812abc4a3e11c840f73868105f86fd3b9319b134fa8a0bb46b311aae60ab3",
+    "P30.tsv": "2632b5e1be9101df876c962caf6d0619ddee54f93b00e21493250fb6321fbf68"
+  }
+}

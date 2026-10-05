@@ -1,0 +1,68 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic dot rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "dot",
+    "value_label": "Demo mean expression",
+    "value_semantics": "mean_all",
+    "denominator_label": "All synthetic entries per state",
+    "area": "fraction",
+    "design": {
+      "width_mm": 200,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": 30,
+      "axis_bounds": {
+        "0": [
+          0.18,
+          0.22,
+          0.34,
+          0.62
+        ],
+        "1": [
+          0.6,
+          0.22,
+          0.025,
+          0.62
+        ]
+      },
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": [
+        0.76,
+        0.26,
+        0.23,
+        0.5
+      ],
+      "legend_columns": 1,
+      "legend_title_width": 22,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "6d4db122640633e86ff3cbada33c582b7ad57d8f99f956886ed29bf5de9454c7"
+    }
+  },
+  "example_id": "P13",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P13.png": "2e7b54de8b7da3b9f5ad7524b49d93b2786d3a78af8d655cc88637aae821ebdc",
+    "P13.pdf": "5daa117e385d9ae229dde6a7e4b7da2a8d0eefd7cbb865b5b8f291460f426e7c",
+    "P13.svg": "45b789f94375c03e416eab4435dfdccf2b75fe345f95971e2330b903456ca759",
+    "P13.tsv": "f8c8f6ed37afc3deca8619ba9fbed5b42df2fbcf376739019cc0da08074fd1ed"
+  }
+}

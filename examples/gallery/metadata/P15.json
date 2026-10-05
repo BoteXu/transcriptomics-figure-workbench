@@ -1,0 +1,60 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic matrix rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "annotated_heatmap",
+    "value_label": "Demo signed score",
+    "scale_type": "signed",
+    "group_palette": {
+      "Control": "#35618F",
+      "Treated": "#C45A2D"
+    },
+    "block_palette": {
+      "Module A": "#2D9C95",
+      "Module B": "#7562A5",
+      "Module C": "#E98B2A"
+    },
+    "column_annotation_label": "Column group",
+    "row_annotation_label": "Feature block",
+    "ordering": "first appearance; no clustering",
+    "design": {
+      "width_mm": 203.2,
+      "height_mm": 142.23999999999998,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": 30,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "d19ab5567bf755ff45477cf20d6aa3023d6952615047782a05b5cdfd6cf4201e"
+    }
+  },
+  "example_id": "P15",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P15.png": "ee40acfd3fd4f7080351319a03d7f0b50734d7c73cf3b121471052f51de2251f",
+    "P15.pdf": "6ef722146d14ead49912b09e2f161e6c86c6d33b7a9dfe01e7f72b2bded3a8d5",
+    "P15.svg": "0dbcf956660955cf812dda3160f268bab4b950882f086e33a6345ca33fcec970",
+    "P15.tsv": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288"
+  }
+}

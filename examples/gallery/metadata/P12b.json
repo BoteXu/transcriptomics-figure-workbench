@@ -1,0 +1,49 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic magnitude rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "heatmap",
+    "value_label": "Demo nonnegative magnitude",
+    "scale_type": "sequential",
+    "center": 0,
+    "design": {
+      "width_mm": 200,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": 30,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "c436641cbb086ecd8618af942aa989dec1c1f555f7e540102c4f0962982b1e95"
+    }
+  },
+  "example_id": "P12b",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P12b.png": "5732d79b1c8a33eaf98fc1682c04da9ca27417a72c84a2892bc252e9cb23523a",
+    "P12b.pdf": "6888687d7bdbdd136aa5d62f2aaf1f7b6d85d4d9e5d3eca7746afa038f523205",
+    "P12b.svg": "875dbd8b8e5a04bdceb28e53f7a3698670606d9b8d0b135114d61dc07aee4c8f",
+    "P12b.tsv": "4fa770cdde44ca6482db490c93974cbb5005c632150785271a2e2e918bc0aeb6"
+  }
+}

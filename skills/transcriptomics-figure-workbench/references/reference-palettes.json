@@ -1,0 +1,1240 @@
+{
+  "schema_version": 1,
+  "access_note": "All four supplied WeChat pages were inaccessible. Browser safety blocked access to the palette page. No article palette list is claimed. Screenshot hex values are visual approximations; three pasted hex values are exact. Seven later user-supplied color cards provide exact visible Hex values, independent of unavailable article text.",
+  "palettes": {
+    "radar_bright": {
+      "semantic": "categorical",
+      "colors": [
+        "#77DEFF",
+        "#FF72AC",
+        "#FF9E7B"
+      ],
+      "references": [
+        "R01"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "radar_soft": {
+      "semantic": "categorical",
+      "colors": [
+        "#F3485D",
+        "#EDF7EC",
+        "#A7DDE1"
+      ],
+      "references": [
+        "R02"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Pale middle series requires a darker outline or shape redundancy."
+    },
+    "atlas_cells": {
+      "semantic": "categorical",
+      "colors": [
+        "#D52C28",
+        "#407CA5",
+        "#62A743",
+        "#835DA6",
+        "#E6912A",
+        "#E8CD46",
+        "#A06430",
+        "#CF71A6",
+        "#9CA1A0",
+        "#69AAA8",
+        "#DD9CBE",
+        "#A4C66A",
+        "#F78762",
+        "#969ABB",
+        "#F4DC6A",
+        "#CFBFA1",
+        "#157C90",
+        "#B66074",
+        "#6D713C",
+        "#677587",
+        "#DC533C",
+        "#276D6F",
+        "#A75787",
+        "#7163AA"
+      ],
+      "references": [
+        "R03",
+        "R04"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Use numbered IDs and full labels; do not cycle colors for 70 categories."
+    },
+    "expression_blue_red": {
+      "semantic": "diverging",
+      "colors": [
+        "#2166AC",
+        "#F7F4F0",
+        "#B2182B"
+      ],
+      "references": [
+        "R03"
+      ],
+      "provenance": "reference_inspired_original",
+      "note": "Center only signed/scaled values at zero. Mean expression uses a separate sequential scale."
+    },
+    "expression_warm": {
+      "semantic": "sequential",
+      "colors": [
+        "#FFF7EC",
+        "#FCB58F",
+        "#CA282A"
+      ],
+      "references": [
+        "R03",
+        "R04"
+      ],
+      "provenance": "reference_inspired_original"
+    },
+    "ellipse_yellow_purple": {
+      "semantic": "diverging",
+      "colors": [
+        "#FFF843",
+        "#FFCEB3",
+        "#F2A5EA",
+        "#7A37FA"
+      ],
+      "references": [
+        "R05"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Reference-look option. Zero is pale pink, not white. Use charcoal numbers for contrast."
+    },
+    "network_teal_red": {
+      "semantic": "diverging",
+      "colors": [
+        "#00A78E",
+        "#F7F7F5",
+        "#EE4A36"
+      ],
+      "references": [
+        "R06"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "mantel_p": {
+      "semantic": "categorical",
+      "colors": [
+        "#DF3450",
+        "#6C6092",
+        "#91DD6F"
+      ],
+      "references": [
+        "R07"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Ordered p bins: <0.01, 0.01–0.05, >=0.05; p type must be declared."
+    },
+    "pearson_purple_cyan": {
+      "semantic": "diverging",
+      "colors": [
+        "#5430DD",
+        "#FFFFFF",
+        "#8DE9FF"
+      ],
+      "references": [
+        "R07"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "joint_pastel": {
+      "semantic": "categorical",
+      "colors": [
+        "#AEDFCB",
+        "#FFD0AF",
+        "#C9D4EB"
+      ],
+      "references": [
+        "R08"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "performance_blue_red": {
+      "semantic": "sequential",
+      "colors": [
+        "#14639D",
+        "#9AC5F2",
+        "#F1F1E8",
+        "#FFAE78",
+        "#B60824"
+      ],
+      "references": [
+        "R09"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Ordered performance, not a signed effect. Set explicit metric limits."
+    },
+    "shap_teal_red": {
+      "semantic": "sequential",
+      "colors": [
+        "#007383",
+        "#39B7C3",
+        "#D5D8D6",
+        "#FFAA95",
+        "#D51A28"
+      ],
+      "references": [
+        "R10"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Color means feature value; horizontal position means signed contribution."
+    },
+    "shap_reference_rainbow": {
+      "semantic": "sequential",
+      "colors": [
+        "#257BAA",
+        "#6BCAB7",
+        "#EDE969",
+        "#FED044",
+        "#EF8D25",
+        "#DC432F",
+        "#4D0625"
+      ],
+      "references": [
+        "R11"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Reference-look only; multihue luminance is not monotonic. Teal-red is the default alternative."
+    },
+    "agreement_groups": {
+      "semantic": "categorical",
+      "colors": [
+        "#949796",
+        "#FFAB61",
+        "#2286BD"
+      ],
+      "references": [
+        "R12"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "day_night": {
+      "semantic": "categorical",
+      "colors": [
+        "#7C8D9E",
+        "#BF9293"
+      ],
+      "references": [
+        "R13"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "training_categories": {
+      "semantic": "categorical",
+      "colors": [
+        "#3B578F",
+        "#EF4831",
+        "#00A78D",
+        "#EDA019",
+        "#8257C4"
+      ],
+      "references": [
+        "R14",
+        "R15"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "activity_blue": {
+      "semantic": "sequential",
+      "colors": [
+        "#F4F7F6",
+        "#AFD4E3",
+        "#3C9BBC",
+        "#142A40"
+      ],
+      "references": [
+        "R15"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "meta_purple_green": {
+      "semantic": "diverging",
+      "colors": [
+        "#9573A9",
+        "#F4F2F4",
+        "#80A374"
+      ],
+      "references": [
+        "R16"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Effect direction colors need an explicit favorable/unfavorable definition."
+    },
+    "swarm_four": {
+      "semantic": "categorical",
+      "colors": [
+        "#91A0C4",
+        "#FF8D80",
+        "#60CBBB",
+        "#FFC2AF"
+      ],
+      "references": [
+        "R17"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "pca_two": {
+      "semantic": "categorical",
+      "colors": [
+        "#3976A3",
+        "#C35B71"
+      ],
+      "references": [
+        "R18",
+        "R19"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "partial_blue_red": {
+      "semantic": "diverging",
+      "colors": [
+        "#1B559B",
+        "#FAFAFA",
+        "#BD1525"
+      ],
+      "references": [
+        "R20"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "strip_direction": {
+      "semantic": "categorical",
+      "colors": [
+        "#FF6A3D",
+        "#7CCD14",
+        "#F8BA3E",
+        "#64BAD7",
+        "#F45439",
+        "#2CC379"
+      ],
+      "references": [
+        "R21"
+      ],
+      "provenance": "screenshot_approximation"
+    },
+    "pasted_trio": {
+      "semantic": "categorical",
+      "colors": [
+        "#77B5FE",
+        "#C79FEF",
+        "#77DD77"
+      ],
+      "references": [
+        "pasted_text"
+      ],
+      "provenance": "exact_pasted_hex",
+      "note": "Only this trio was present; no evidence for a complete 60-scheme list."
+    },
+    "card_01": {
+      "semantic": "categorical",
+      "colors": [
+        "#3F3770",
+        "#3C5397",
+        "#3573A1",
+        "#D6456C",
+        "#F57065",
+        "#FEB37B"
+      ],
+      "references": [
+        "C01"
+      ],
+      "provenance": "exact_visible_hex",
+      "rgb_from_hex": [
+        [
+          63,
+          55,
+          112
+        ],
+        [
+          60,
+          83,
+          151
+        ],
+        [
+          53,
+          115,
+          161
+        ],
+        [
+          214,
+          69,
+          108
+        ],
+        [
+          245,
+          112,
+          101
+        ],
+        [
+          254,
+          179,
+          123
+        ]
+      ],
+      "note": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices."
+    },
+    "card_02": {
+      "semantic": "categorical",
+      "colors": [
+        "#E5A08A",
+        "#F0C0A8",
+        "#EBD8C4",
+        "#C8D0D0",
+        "#B2CDD8",
+        "#D2E8EE"
+      ],
+      "references": [
+        "C02"
+      ],
+      "provenance": "exact_visible_hex",
+      "rgb_from_hex": [
+        [
+          229,
+          160,
+          138
+        ],
+        [
+          240,
+          192,
+          168
+        ],
+        [
+          235,
+          216,
+          196
+        ],
+        [
+          200,
+          208,
+          208
+        ],
+        [
+          178,
+          205,
+          216
+        ],
+        [
+          210,
+          232,
+          238
+        ]
+      ],
+      "note": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices.",
+      "label_conflicts": [
+        {
+          "color_index_1based": 2,
+          "visible_hex": "#F0C0A8",
+          "hex_rgb": [
+            240,
+            192,
+            168
+          ],
+          "visible_rgb": [
+            240,
+            192,
+            198
+          ],
+          "rgb_implied_hex": "#F0C0C6",
+          "decision": "Retain visible Hex as default, flag conflict; do not silently claim both agree."
+        }
+      ]
+    },
+    "card_03": {
+      "semantic": "categorical",
+      "colors": [
+        "#FACC8F",
+        "#F3962F",
+        "#A3D8F4",
+        "#EF898E",
+        "#DD656D",
+        "#61A7D0",
+        "#036EAD",
+        "#8798C9"
+      ],
+      "references": [
+        "C03"
+      ],
+      "provenance": "exact_visible_hex",
+      "rgb_from_hex": [
+        [
+          250,
+          204,
+          143
+        ],
+        [
+          243,
+          150,
+          47
+        ],
+        [
+          163,
+          216,
+          244
+        ],
+        [
+          239,
+          137,
+          142
+        ],
+        [
+          221,
+          101,
+          109
+        ],
+        [
+          97,
+          167,
+          208
+        ],
+        [
+          3,
+          110,
+          173
+        ],
+        [
+          135,
+          152,
+          201
+        ]
+      ],
+      "note": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices."
+    },
+    "card_04": {
+      "semantic": "categorical",
+      "colors": [
+        "#F87A72",
+        "#00B0F6",
+        "#13C487",
+        "#C5C75F",
+        "#2666B8",
+        "#FF7F07"
+      ],
+      "references": [
+        "C04"
+      ],
+      "provenance": "exact_visible_hex",
+      "rgb_from_hex": [
+        [
+          248,
+          122,
+          114
+        ],
+        [
+          0,
+          176,
+          246
+        ],
+        [
+          19,
+          196,
+          135
+        ],
+        [
+          197,
+          199,
+          95
+        ],
+        [
+          38,
+          102,
+          184
+        ],
+        [
+          255,
+          127,
+          7
+        ]
+      ],
+      "note": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices."
+    },
+    "card_05": {
+      "semantic": "categorical",
+      "colors": [
+        "#90A4C4",
+        "#ADC9E4",
+        "#C0D8E8",
+        "#DBDDEF",
+        "#EBF0FC",
+        "#FCEDE9",
+        "#F7DAD4",
+        "#F5C9B6",
+        "#F3B8AC",
+        "#F29F95"
+      ],
+      "references": [
+        "C05"
+      ],
+      "provenance": "exact_visible_hex",
+      "rgb_from_hex": [
+        [
+          144,
+          164,
+          196
+        ],
+        [
+          173,
+          201,
+          228
+        ],
+        [
+          192,
+          216,
+          232
+        ],
+        [
+          219,
+          221,
+          239
+        ],
+        [
+          235,
+          240,
+          252
+        ],
+        [
+          252,
+          237,
+          233
+        ],
+        [
+          247,
+          218,
+          212
+        ],
+        [
+          245,
+          201,
+          182
+        ],
+        [
+          243,
+          184,
+          172
+        ],
+        [
+          242,
+          159,
+          149
+        ]
+      ],
+      "note": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices."
+    },
+    "card_06": {
+      "semantic": "categorical",
+      "colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "references": [
+        "C06"
+      ],
+      "provenance": "exact_visible_hex",
+      "rgb_from_hex": [
+        [
+          80,
+          106,
+          170
+        ],
+        [
+          114,
+          141,
+          193
+        ],
+        [
+          145,
+          187,
+          223
+        ],
+        [
+          182,
+          219,
+          241
+        ],
+        [
+          246,
+          211,
+          217
+        ],
+        [
+          231,
+          159,
+          191
+        ],
+        [
+          225,
+          118,
+          146
+        ]
+      ],
+      "note": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices."
+    },
+    "card_07": {
+      "semantic": "categorical",
+      "colors": [
+        "#FACC8F",
+        "#F3962F",
+        "#A3D8F4",
+        "#EF898E",
+        "#DD656D",
+        "#61A7D0",
+        "#036EAD",
+        "#F4AD9D",
+        "#8798C9"
+      ],
+      "references": [
+        "C07"
+      ],
+      "provenance": "exact_visible_hex",
+      "rgb_from_hex": [
+        [
+          250,
+          204,
+          143
+        ],
+        [
+          243,
+          150,
+          47
+        ],
+        [
+          163,
+          216,
+          244
+        ],
+        [
+          239,
+          137,
+          142
+        ],
+        [
+          221,
+          101,
+          109
+        ],
+        [
+          97,
+          167,
+          208
+        ],
+        [
+          3,
+          110,
+          173
+        ],
+        [
+          244,
+          173,
+          157
+        ],
+        [
+          135,
+          152,
+          201
+        ]
+      ],
+      "note": "Exact transcription of visible labels; gradients and subsets in the poster are separate design choices."
+    },
+    "card_01_signed": {
+      "semantic": "diverging",
+      "colors": [
+        "#3F3770",
+        "#FFFFFF",
+        "#D6456C"
+      ],
+      "references": [
+        "C01"
+      ],
+      "provenance": "original_semantic_extension_from_visible_hex",
+      "note": "New zero-centered mapping using supplied colors; not an extracted article prescription."
+    },
+    "card_02_signed": {
+      "semantic": "diverging",
+      "colors": [
+        "#B2CDD8",
+        "#FFFFFF",
+        "#E5A08A"
+      ],
+      "references": [
+        "C02"
+      ],
+      "provenance": "original_semantic_extension_from_visible_hex",
+      "note": "New zero-centered mapping using supplied colors; not an extracted article prescription."
+    },
+    "card_03_signed": {
+      "semantic": "diverging",
+      "colors": [
+        "#036EAD",
+        "#FFFFFF",
+        "#DD656D"
+      ],
+      "references": [
+        "C03"
+      ],
+      "provenance": "original_semantic_extension_from_visible_hex",
+      "note": "New zero-centered mapping using supplied colors; not an extracted article prescription."
+    },
+    "card_05_signed": {
+      "semantic": "diverging",
+      "colors": [
+        "#90A4C4",
+        "#FCEDE9",
+        "#F29F95"
+      ],
+      "references": [
+        "C05"
+      ],
+      "provenance": "original_semantic_extension_from_visible_hex",
+      "note": "New zero-centered mapping using supplied colors; not an extracted article prescription."
+    },
+    "card_06_signed": {
+      "semantic": "diverging",
+      "colors": [
+        "#506AAA",
+        "#FFFFFF",
+        "#E17692"
+      ],
+      "references": [
+        "C06"
+      ],
+      "provenance": "original_semantic_extension_from_visible_hex",
+      "note": "New zero-centered mapping using supplied colors; not an extracted article prescription."
+    },
+    "surface_terrain": {
+      "semantic": "sequential",
+      "colors": [
+        "#1F4E73",
+        "#368EAC",
+        "#9ADCDD",
+        "#FAFBE3",
+        "#F4C270",
+        "#E56F43"
+      ],
+      "references": [
+        "R23"
+      ],
+      "provenance": "screenshot_approximation",
+      "note": "Ordered Z-value map with explicit asymmetric min/max; no zero-centered correlation claim."
+    },
+    "process_blue_mauve": {
+      "semantic": "categorical",
+      "colors": [
+        "#9FC7D0",
+        "#BD94B8",
+        "#789AB6",
+        "#D1D3DE",
+        "#C71872"
+      ],
+      "references": [
+        "R24"
+      ],
+      "provenance": "screenshot_approximation",
+      "source_role": "figure_style_not_palette_card",
+      "note": "Pipeline module, object and stage categories; approximate appearance colors."
+    },
+    "tol_high_contrast": {
+      "id": "C08",
+      "registry_name": "tol_high_contrast",
+      "title": "Paul Tol · High contrast",
+      "semantic": "categorical",
+      "colors": [
+        "#004488",
+        "#DDAA33",
+        "#BB5566"
+      ],
+      "use": "三组比较；少量线条和摘要标记",
+      "note": "作者为灰度区分优化的三色方案；实际图仍需按最终尺寸检查。",
+      "author": "Paul Tol",
+      "source": "https://sronpersonalpages.nl/~pault/",
+      "source_sha256": "2e5ffd3899469ef86ba41c0dddbbb5b13fbe7aa1b0be0756c7c8a75133f027e0",
+      "access_date": "2026-10-05",
+      "provenance": "author_page_exact_hex",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "Author-described design; current full exported figures not independently certified"
+    },
+    "tol_bright": {
+      "id": "C09",
+      "registry_name": "tol_bright",
+      "title": "Paul Tol · Bright",
+      "semantic": "categorical",
+      "colors": [
+        "#4477AA",
+        "#EE6677",
+        "#228833",
+        "#CCBB44",
+        "#66CCEE",
+        "#AA3377",
+        "#BBBBBB"
+      ],
+      "use": "分组折线、散点和柱图",
+      "note": "黄色和浅青色在白底细线中需加粗；类别同时用形状或标签。",
+      "author": "Paul Tol",
+      "source": "https://sronpersonalpages.nl/~pault/",
+      "source_sha256": "2e5ffd3899469ef86ba41c0dddbbb5b13fbe7aa1b0be0756c7c8a75133f027e0",
+      "access_date": "2026-10-05",
+      "provenance": "author_page_exact_hex",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "Author-described design; current full exported figures not independently certified"
+    },
+    "tol_muted": {
+      "id": "C10",
+      "registry_name": "tol_muted",
+      "title": "Paul Tol · Muted",
+      "semantic": "categorical",
+      "colors": [
+        "#CC6677",
+        "#332288",
+        "#DDCC77",
+        "#117733",
+        "#88CCEE",
+        "#882255",
+        "#44AA99",
+        "#999933",
+        "#AA4499"
+      ],
+      "use": "较多组别；低饱和填充与系列比较",
+      "note": "九色容量不等于九条细线都清晰；多系列优先分面。",
+      "author": "Paul Tol",
+      "source": "https://sronpersonalpages.nl/~pault/",
+      "source_sha256": "2e5ffd3899469ef86ba41c0dddbbb5b13fbe7aa1b0be0756c7c8a75133f027e0",
+      "access_date": "2026-10-05",
+      "provenance": "author_page_exact_hex",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "Author-described design; current full exported figures not independently certified"
+    },
+    "tol_vibrant": {
+      "id": "C11",
+      "registry_name": "tol_vibrant",
+      "title": "Paul Tol · Vibrant",
+      "semantic": "categorical",
+      "colors": [
+        "#EE7733",
+        "#0077BB",
+        "#33BBEE",
+        "#EE3377",
+        "#CC3311",
+        "#009988",
+        "#BBBBBB"
+      ],
+      "use": "重点对比；曲线、点与分组摘要",
+      "note": "红与洋红等相近组仍加形状或线型；灰色组保持明确标签。",
+      "author": "Paul Tol",
+      "source": "https://sronpersonalpages.nl/~pault/",
+      "source_sha256": "2e5ffd3899469ef86ba41c0dddbbb5b13fbe7aa1b0be0756c7c8a75133f027e0",
+      "access_date": "2026-10-05",
+      "provenance": "author_page_exact_hex",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "Author-described design; current full exported figures not independently certified"
+    },
+    "brewer_set2": {
+      "id": "C12",
+      "registry_name": "brewer_set2",
+      "title": "ColorBrewer · Set2",
+      "semantic": "categorical",
+      "colors": [
+        "#66C2A5",
+        "#FC8D62",
+        "#8DA0CB",
+        "#E78AC3",
+        "#A6D854",
+        "#FFD92F",
+        "#E5C494",
+        "#B3B3B3"
+      ],
+      "use": "较大填充区域；箱线、组成与分组点",
+      "note": "八色完整集合不默认声称通过色觉缺陷测试。",
+      "author": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University; maintained by Axis Maps",
+      "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/master/colorbrewer_schemes.js",
+      "source_sha256": "52e6a6edbbe4bbb95467cb84fb7db8fcbb1d6d219c975851c4c9d79334f00a41",
+      "access_date": "2026-10-05",
+      "provenance": "official_rgb_exact_hex_conversion",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "No blanket claim for the selected class count"
+    },
+    "brewer_dark2": {
+      "id": "C13",
+      "registry_name": "brewer_dark2",
+      "title": "ColorBrewer · Dark2",
+      "semantic": "categorical",
+      "colors": [
+        "#1B9E77",
+        "#D95F02",
+        "#7570B3",
+        "#E7298A",
+        "#66A61E",
+        "#E6AB02",
+        "#A6761D",
+        "#666666"
+      ],
+      "use": "分组曲线和散点；白底上较深的系列",
+      "note": "八色集合可有难分辨色对；细图要加符号、线型和标签。",
+      "author": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University; maintained by Axis Maps",
+      "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/master/colorbrewer_schemes.js",
+      "source_sha256": "52e6a6edbbe4bbb95467cb84fb7db8fcbb1d6d219c975851c4c9d79334f00a41",
+      "access_date": "2026-10-05",
+      "provenance": "official_rgb_exact_hex_conversion",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "No blanket claim for the selected class count"
+    },
+    "brewer_blues9": {
+      "id": "C14",
+      "registry_name": "brewer_blues9",
+      "title": "ColorBrewer · Blues",
+      "semantic": "sequential",
+      "colors": [
+        "#F7FBFF",
+        "#DEEBF7",
+        "#C6DBEF",
+        "#9ECAE1",
+        "#6BAED6",
+        "#4292C6",
+        "#2171B5",
+        "#08519C",
+        "#08306B"
+      ],
+      "use": "非负幅度、计数、密度、表达量矩阵",
+      "note": "颜色顺序为低到高；不能拿不同深浅隐含无序组别等级。",
+      "author": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University; maintained by Axis Maps",
+      "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/master/colorbrewer_schemes.js",
+      "source_sha256": "52e6a6edbbe4bbb95467cb84fb7db8fcbb1d6d219c975851c4c9d79334f00a41",
+      "access_date": "2026-10-05",
+      "provenance": "official_rgb_exact_hex_conversion",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "No blanket claim for the selected class count"
+    },
+    "brewer_rdbu11": {
+      "id": "C15",
+      "registry_name": "brewer_rdbu11",
+      "title": "ColorBrewer · RdBu",
+      "semantic": "diverging",
+      "colors": [
+        "#67001F",
+        "#B2182B",
+        "#D6604D",
+        "#F4A582",
+        "#FDDBC7",
+        "#F7F7F7",
+        "#D1E5F0",
+        "#92C5DE",
+        "#4393C3",
+        "#2166AC",
+        "#053061"
+      ],
+      "use": "相关系数、差值、标准化值与正负效应",
+      "note": "原顺序为红→白→蓝；示例负值红、正值蓝。反转必须显式记录。",
+      "author": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University; maintained by Axis Maps",
+      "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/master/colorbrewer_schemes.js",
+      "source_sha256": "52e6a6edbbe4bbb95467cb84fb7db8fcbb1d6d219c975851c4c9d79334f00a41",
+      "access_date": "2026-10-05",
+      "provenance": "official_rgb_exact_hex_conversion",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "No blanket claim for the selected class count"
+    }
+  },
+  "additional_cards": [
+    {
+      "id": "C08",
+      "registry_name": "tol_high_contrast",
+      "title": "Paul Tol · High contrast",
+      "semantic": "categorical",
+      "colors": [
+        "#004488",
+        "#DDAA33",
+        "#BB5566"
+      ],
+      "use": "三组比较；少量线条和摘要标记",
+      "note": "作者为灰度区分优化的三色方案；实际图仍需按最终尺寸检查。",
+      "author": "Paul Tol",
+      "source": "https://sronpersonalpages.nl/~pault/",
+      "source_sha256": "2e5ffd3899469ef86ba41c0dddbbb5b13fbe7aa1b0be0756c7c8a75133f027e0",
+      "access_date": "2026-10-05",
+      "provenance": "author_page_exact_hex",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "Author-described design; current full exported figures not independently certified"
+    },
+    {
+      "id": "C09",
+      "registry_name": "tol_bright",
+      "title": "Paul Tol · Bright",
+      "semantic": "categorical",
+      "colors": [
+        "#4477AA",
+        "#EE6677",
+        "#228833",
+        "#CCBB44",
+        "#66CCEE",
+        "#AA3377",
+        "#BBBBBB"
+      ],
+      "use": "分组折线、散点和柱图",
+      "note": "黄色和浅青色在白底细线中需加粗；类别同时用形状或标签。",
+      "author": "Paul Tol",
+      "source": "https://sronpersonalpages.nl/~pault/",
+      "source_sha256": "2e5ffd3899469ef86ba41c0dddbbb5b13fbe7aa1b0be0756c7c8a75133f027e0",
+      "access_date": "2026-10-05",
+      "provenance": "author_page_exact_hex",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "Author-described design; current full exported figures not independently certified"
+    },
+    {
+      "id": "C10",
+      "registry_name": "tol_muted",
+      "title": "Paul Tol · Muted",
+      "semantic": "categorical",
+      "colors": [
+        "#CC6677",
+        "#332288",
+        "#DDCC77",
+        "#117733",
+        "#88CCEE",
+        "#882255",
+        "#44AA99",
+        "#999933",
+        "#AA4499"
+      ],
+      "use": "较多组别；低饱和填充与系列比较",
+      "note": "九色容量不等于九条细线都清晰；多系列优先分面。",
+      "author": "Paul Tol",
+      "source": "https://sronpersonalpages.nl/~pault/",
+      "source_sha256": "2e5ffd3899469ef86ba41c0dddbbb5b13fbe7aa1b0be0756c7c8a75133f027e0",
+      "access_date": "2026-10-05",
+      "provenance": "author_page_exact_hex",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "Author-described design; current full exported figures not independently certified"
+    },
+    {
+      "id": "C11",
+      "registry_name": "tol_vibrant",
+      "title": "Paul Tol · Vibrant",
+      "semantic": "categorical",
+      "colors": [
+        "#EE7733",
+        "#0077BB",
+        "#33BBEE",
+        "#EE3377",
+        "#CC3311",
+        "#009988",
+        "#BBBBBB"
+      ],
+      "use": "重点对比；曲线、点与分组摘要",
+      "note": "红与洋红等相近组仍加形状或线型；灰色组保持明确标签。",
+      "author": "Paul Tol",
+      "source": "https://sronpersonalpages.nl/~pault/",
+      "source_sha256": "2e5ffd3899469ef86ba41c0dddbbb5b13fbe7aa1b0be0756c7c8a75133f027e0",
+      "access_date": "2026-10-05",
+      "provenance": "author_page_exact_hex",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "Author-described design; current full exported figures not independently certified"
+    },
+    {
+      "id": "C12",
+      "registry_name": "brewer_set2",
+      "title": "ColorBrewer · Set2",
+      "semantic": "categorical",
+      "colors": [
+        "#66C2A5",
+        "#FC8D62",
+        "#8DA0CB",
+        "#E78AC3",
+        "#A6D854",
+        "#FFD92F",
+        "#E5C494",
+        "#B3B3B3"
+      ],
+      "use": "较大填充区域；箱线、组成与分组点",
+      "note": "八色完整集合不默认声称通过色觉缺陷测试。",
+      "author": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University; maintained by Axis Maps",
+      "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/master/colorbrewer_schemes.js",
+      "source_sha256": "52e6a6edbbe4bbb95467cb84fb7db8fcbb1d6d219c975851c4c9d79334f00a41",
+      "access_date": "2026-10-05",
+      "provenance": "official_rgb_exact_hex_conversion",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "No blanket claim for the selected class count"
+    },
+    {
+      "id": "C13",
+      "registry_name": "brewer_dark2",
+      "title": "ColorBrewer · Dark2",
+      "semantic": "categorical",
+      "colors": [
+        "#1B9E77",
+        "#D95F02",
+        "#7570B3",
+        "#E7298A",
+        "#66A61E",
+        "#E6AB02",
+        "#A6761D",
+        "#666666"
+      ],
+      "use": "分组曲线和散点；白底上较深的系列",
+      "note": "八色集合可有难分辨色对；细图要加符号、线型和标签。",
+      "author": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University; maintained by Axis Maps",
+      "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/master/colorbrewer_schemes.js",
+      "source_sha256": "52e6a6edbbe4bbb95467cb84fb7db8fcbb1d6d219c975851c4c9d79334f00a41",
+      "access_date": "2026-10-05",
+      "provenance": "official_rgb_exact_hex_conversion",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "No blanket claim for the selected class count"
+    },
+    {
+      "id": "C14",
+      "registry_name": "brewer_blues9",
+      "title": "ColorBrewer · Blues",
+      "semantic": "sequential",
+      "colors": [
+        "#F7FBFF",
+        "#DEEBF7",
+        "#C6DBEF",
+        "#9ECAE1",
+        "#6BAED6",
+        "#4292C6",
+        "#2171B5",
+        "#08519C",
+        "#08306B"
+      ],
+      "use": "非负幅度、计数、密度、表达量矩阵",
+      "note": "颜色顺序为低到高；不能拿不同深浅隐含无序组别等级。",
+      "author": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University; maintained by Axis Maps",
+      "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/master/colorbrewer_schemes.js",
+      "source_sha256": "52e6a6edbbe4bbb95467cb84fb7db8fcbb1d6d219c975851c4c9d79334f00a41",
+      "access_date": "2026-10-05",
+      "provenance": "official_rgb_exact_hex_conversion",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "No blanket claim for the selected class count"
+    },
+    {
+      "id": "C15",
+      "registry_name": "brewer_rdbu11",
+      "title": "ColorBrewer · RdBu",
+      "semantic": "diverging",
+      "colors": [
+        "#67001F",
+        "#B2182B",
+        "#D6604D",
+        "#F4A582",
+        "#FDDBC7",
+        "#F7F7F7",
+        "#D1E5F0",
+        "#92C5DE",
+        "#4393C3",
+        "#2166AC",
+        "#053061"
+      ],
+      "use": "相关系数、差值、标准化值与正负效应",
+      "note": "原顺序为红→白→蓝；示例负值红、正值蓝。反转必须显式记录。",
+      "author": "Cynthia Brewer, Mark Harrower and The Pennsylvania State University; maintained by Axis Maps",
+      "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/master/colorbrewer_schemes.js",
+      "source_sha256": "52e6a6edbbe4bbb95467cb84fb7db8fcbb1d6d219c975851c4c9d79334f00a41",
+      "access_date": "2026-10-05",
+      "provenance": "official_rgb_exact_hex_conversion",
+      "card_artwork": "Original application card; explicitly labeled 科研配色方案",
+      "color_vision_status": "No blanket claim for the selected class count"
+    }
+  ]
+}

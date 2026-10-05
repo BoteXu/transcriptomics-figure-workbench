@@ -1,0 +1,79 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic volcano rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "volcano_marginal",
+    "alpha": 0.05,
+    "fc": 1,
+    "labels": [
+      "Gene003",
+      "Gene018",
+      "Gene045",
+      "Gene067",
+      "Gene120",
+      "Gene200"
+    ],
+    "palette": {
+      "Down": "#9AC65B",
+      "Up": "#E58B7D",
+      "Below cutoffs": "#92999D"
+    },
+    "point_marker": "circle",
+    "point_count": 420,
+    "status_counts": {
+      "Below cutoffs": 279,
+      "Up": 78,
+      "Down": 63
+    },
+    "histogram_universe": "all displayed genes; stacked categories",
+    "x_histogram_bins": 42,
+    "y_histogram_bins": 36,
+    "x_limits": [
+      -4.013024043630988,
+      4.013024043630988
+    ],
+    "y_limits": [
+      0,
+      5.284517464374754
+    ],
+    "design": {
+      "width_mm": 205.73999999999998,
+      "height_mm": 185.42,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "d5b0b75e4ecac24f280c3f5417100bb7b4b1bf771f44b02563a5ffa934f16f63"
+    }
+  },
+  "example_id": "P10",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P10.png": "28cc4ca7a4810d39f3a5e23853e697adb6790ca90c3db9b43c95ca5471696db7",
+    "P10.pdf": "dda9501e9e3c78710a717ce555db21e83054c2e4c44a69c53dd044eaf9aa8a00",
+    "P10.svg": "5489c36ad80940879f24dd4369c2898daff43cb210b987544bb2d83629280acf",
+    "P10.tsv": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10"
+  }
+}

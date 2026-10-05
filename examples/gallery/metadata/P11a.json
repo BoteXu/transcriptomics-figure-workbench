@@ -1,0 +1,53 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic ora rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "enrichment_lollipop",
+    "score_type": "GeneRatio",
+    "denominator_label": "Synthetic ORA; 200 query genes",
+    "count_label": "Supplied overlap count",
+    "color": "-log10(FDR); sequential; zero included",
+    "area": "count; zero anchored",
+    "selection": "all supplied rows; first appearance order",
+    "score_baseline": 0,
+    "design": {
+      "width_mm": 213.35999999999999,
+      "height_mm": 128.016,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "823ddb8d21130a72348593a99ae6a432a8dd9adf3749d8dc917d90d4e20c9bce"
+    }
+  },
+  "example_id": "P11a",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P11a.png": "6f3d05e811784c42071c700687fac4caf4fddde81e8f0afd57d36215b4696fbc",
+    "P11a.pdf": "2a99f1b3c96d7c122ff5718931323b1c28fc6080fefe87374edb19c5d30190ec",
+    "P11a.svg": "7ae067dfdfd837bd7417a46dad1b56d5f7cc3ecb3ebc821af27aef947ac377da",
+    "P11a.tsv": "f72a08f71dc1c42880f6417542028af6f74bcbb6068de21dba15885c77499f4f"
+  }
+}

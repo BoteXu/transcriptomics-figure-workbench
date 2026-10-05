@@ -1,0 +1,76 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic composition rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "composition_panels",
+    "palette": {
+      "Control": "#35618F",
+      "Treated": "#C45A2D"
+    },
+    "unit_label": "synthetic sample",
+    "denominator": "all supplied celltype counts per sample; no pooling",
+    "shared_y_max": 0.5,
+    "sample_n": {
+      "Control": 6,
+      "Treated": 6
+    },
+    "inference": "none",
+    "sample_order_offsets": {
+      "S01": -0.13,
+      "S02": -0.078,
+      "S03": -0.025999999999999995,
+      "S04": 0.026000000000000023,
+      "S05": 0.07800000000000001,
+      "S06": 0.13,
+      "S07": -0.13,
+      "S08": -0.078,
+      "S09": -0.025999999999999995,
+      "S10": 0.026000000000000023,
+      "S11": 0.07800000000000001,
+      "S12": 0.13
+    },
+    "marker_by_group": {
+      "Control": "o",
+      "Treated": "s"
+    },
+    "design": {
+      "width_mm": 201.92999999999998,
+      "height_mm": 162.56,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "22cd6d80c53fdfeb651725a0b3cf853381100f1c3bce146f5e038dffd18ef6fe"
+    }
+  },
+  "example_id": "P24",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P24.png": "e86c508137940aeae6aff8771a7a068a8db97b22b9aae806e8422e54e064d1be",
+    "P24.pdf": "7fc4d310691bae654b90d41107b9d5f33e4d5d19c01b231ea72b0c9c91829dda",
+    "P24.svg": "4cb69ad5f47fa769e6bf5b2ddcadde808839df4f2f56497b3cb4b47ada7bdf60",
+    "P24.tsv": "550245618ff02a55b77fb3c68810e2461804cc13fed948423de391f2e7ceec54"
+  }
+}

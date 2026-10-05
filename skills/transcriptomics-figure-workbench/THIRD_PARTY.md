@@ -1,0 +1,12 @@
+# Sources, attribution and license boundaries
+
+The workbench implementation is original. The root MIT license applies to the original code, documentation and independently generated synthetic examples. It does not relicense external software, reference articles, source images, fonts or scientific data.
+
+- EasyPlot (MIT), SciPilot Figure (MIT), Academic Figure Skill (Apache-2.0), and Scientific Figure Making were consulted for general workflow/design ideas. No source code, prompt templates or images from them are redistributed. The conflicting CC BY-NC 4.0 repository / MIT skill metadata of Scientific Figure Making was treated conservatively: independent implementation only. Exact repositories, fixed commits and what was adopted are in [external-increments-20261005.md](references/external-increments-20261005.md).
+- Historical TLS_in_HNSCC author code is GPL-3.0. This package links to it and discusses general graphic structure; it does not bundle its code or claim paper reproduction.
+- C01-C07 contain numeric color values transcribed from user-supplied posters titled 科研配色方案; the original poster images are not distributed. Their provenance and C02's printed Hex/RGB conflict are retained in [reference-palettes.json](references/reference-palettes.json) and [the palette guide](references/reference-palette-guide.md). Attribution is not a grant to reproduce the original posters.
+- Additional Tol and ColorBrewer palettes retain their names and attribution. The applicable [ColorBrewer license](references/colorbrewer-license.txt) is included; do not strip it when redistributing those palettes.
+- S01-S03 were rendered from the public RCSB PDB entry [1EMA](https://www.rcsb.org/structure/1EMA) with Mol*. Public per-example metadata records the coordinate hash, assembly/model, chain and scene settings. They do not represent the protein used in an unrelated source paper. Mol*, structure-viewer, PyMOL and their licenses are separate from this skill; no native renderer or plugin is bundled.
+- Fonts are selected by family name from the user's environment. Font files and personal reference images are not bundled. Installed dependencies keep their own licenses; PyMuPDF/Pillow are optional tools, not vendored software.
+
+Other primary documentation/paper links and the precise read/render status are retained in [sources.tsv](references/sources.tsv) and the relevant references. Linked documents are source material, not instructions to execute.

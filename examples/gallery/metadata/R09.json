@@ -1,0 +1,63 @@
+{
+  "source": "User-supplied reference appearance; independently generated synthetic data",
+  "palette": "reference registry",
+  "input_unit": "Record_type-specific frozen software fixture rows; see input schema",
+  "experimental_unit": "Synthetic identifiers; no real biological observations",
+  "contrast": "Synthetic demonstration; comparison definitions are display labels",
+  "denominator": "Supplied groups/eligible rows; no population inference",
+  "model": "No model fitted; all statistics/densities/embeddings supplied by fixture generator",
+  "limits": "recorded in figure_spec",
+  "filtering": "Only explicitly declared display filters; complete supplied table exported",
+  "uncertainty": "Synthetic supplied bounds and summaries; not validated inferential intervals",
+  "interpretation_limit": "Visual/software reproduction only, not original quantitative reconstruction or scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "reference_parallel_trials",
+    "adapter_version": 1,
+    "analysis": "none; frozen supplied tables",
+    "axis_order": [
+      "learning_rate",
+      "max_depth",
+      "min_samples_split",
+      "n_estimators",
+      "heldout_score"
+    ],
+    "axis_ranges": {
+      "learning_rate": [
+        0.05,
+        0.45
+      ],
+      "max_depth": [
+        5,
+        12
+      ],
+      "min_samples_split": [
+        5,
+        12
+      ],
+      "n_estimators": [
+        50,
+        290
+      ],
+      "heldout_score": [
+        0.73,
+        0.88
+      ]
+    },
+    "score_limits": [
+      0.73,
+      0.88
+    ],
+    "score_label": "Supplied held-out score",
+    "curve": "Bezier display connectors; no fitting"
+  },
+  "example_id": "R09",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "R09.png": "1e9a053ded81dc7b244308d70eebadf41ad03f4eac4f2a8a73b6e497f69b5d15",
+    "R09.pdf": "d38d7471b43445672d1964881758db80d1d1e16d9e6d3dc2877ee32fe887ffd4",
+    "R09.svg": "bec2e3482a7aef0b325a78a3b13b06c73685c0deabca2dc17a262cf0adfa9b95",
+    "R09.tsv": "ffb1c58bf293c50136cad5d81f6c731917896dde87303c2158cf0d519f70457f",
+    "R09.style.json": "1e10f75e7bcecba314a4c84e98c04e3542f0fdfe59c8b73dee1af9cc80b240b1"
+  }
+}

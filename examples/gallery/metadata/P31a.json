@@ -1,0 +1,111 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic evidence rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "recorded_evidence",
+    "layout": "aligned",
+    "row_aliases": {
+      "Cluster A": "Cluster A",
+      "Cluster B": "Cluster B",
+      "Cluster C": "Cluster C",
+      "Cluster D": "Cluster D"
+    },
+    "cluster_order": [
+      "Cluster A",
+      "Cluster B",
+      "Cluster C",
+      "Cluster D"
+    ],
+    "medication_order": [
+      "Drug A",
+      "Drug B",
+      "Drug C"
+    ],
+    "denominator": "per-cluster n displayed once; rows may overlap",
+    "zero": "explicit 0 / 0",
+    "missing": "N/A or ? with hatching",
+    "fields": [
+      "single_complete_nonnegative_pair",
+      "missing_multiple_invalid_or_negative_dates",
+      "no_linked_therapy"
+    ],
+    "width_mm": 180,
+    "font_size": 8.5,
+    "palette": {
+      "complete": "#35618F",
+      "unresolved": "#B87822",
+      "none": "#7A838B"
+    },
+    "inference": "none",
+    "design": {
+      "width_mm": 180,
+      "height_mm": 135,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {
+        "0": [
+          0.27,
+          0.28,
+          0.28451212181927477,
+          0.42
+        ],
+        "1": [
+          0.6101342416349429,
+          0.28,
+          0.3698657583650572,
+          0.42
+        ]
+      },
+      "figure_text_positions": {
+        "Recorded evidence": [
+          0.27,
+          0.93
+        ],
+        "A counts: complete / dates unresolved / none.  B cells: suspect / any.": [
+          0.27,
+          0.77
+        ],
+        "N/A = index drug; ? = unavailable. Zero = not recorded; co-recording is not simultaneous\nexposure.": [
+          0.27,
+          0.065
+        ]
+      },
+      "figure_text_wraps": {},
+      "legend_zone": [
+        0.25,
+        0.81,
+        0.74,
+        0.065
+      ],
+      "legend_columns": 3,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "ad635fb6538f5fa26edeb332c9a94944947bd6669387b70983d321a65542512c"
+    }
+  },
+  "example_id": "P31a",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P31a.png": "ac7d893935bbecc0ac6da49220192f2386b90ee70234357fadf42961b16bf659",
+    "P31a.pdf": "08b8b40f6090f1450107e8abe3ac479b7515a380d829e82c64136d053d14237b",
+    "P31a.svg": "906927fb27c94f2f2a6940fe393b74bc8475db356e08fc7f113ef2fd11170952",
+    "P31a.tsv": "1fa1119170a89eb559e4b68f012d8f5faf4b31c82d61389f94499452c9028aa3"
+  }
+}

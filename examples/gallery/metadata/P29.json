@@ -1,0 +1,56 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic dynamics rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "frozen_dynamics",
+    "palette": {
+      "Start A": "#0072B2",
+      "Start B": "#D55E00"
+    },
+    "time_label": "Demo time (ns)",
+    "value_label": "Demo RMSD (nm)",
+    "unit_label": "synthetic independent-start summaries",
+    "interval_label": "Illustrative supplied bounds",
+    "smoothing": "none",
+    "inference": "none",
+    "design": {
+      "width_mm": 180.33999999999997,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "96b133d78aeab0996058f0bbbe433fa0c5b752e17452d7234809af82c2acbf9d"
+    }
+  },
+  "example_id": "P29",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P29.png": "f5d00172b31143dd1a98f000a8d1a5e81b22570f4bcaaeb893d0dd017f64d68d",
+    "P29.pdf": "117ddca23c04461ccc49c43057ce22b7aeee192ea8e76b4d418ac755868db846",
+    "P29.svg": "3293e6207b0eb854da17a7c59b2c9219b84f2d30ab70e65a2df41bbf9078ef80",
+    "P29.tsv": "b864f85f697834c324eb0ada254a073cacb89cd99a3e2934902ec8d5e2862978"
+  }
+}

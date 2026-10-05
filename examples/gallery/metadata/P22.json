@@ -1,0 +1,52 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic scores rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "score_comparison",
+    "score_label": "Demo AUC",
+    "conditions": [
+      "Condition A",
+      "Condition B"
+    ],
+    "uncertainty": "supplied delta intervals; never derived from marginal AUC intervals",
+    "design": {
+      "width_mm": 228.6,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "5209988d388ae14b1608aeb7a9483a5fcabe52048b546070428d07b8d2d6d719"
+    }
+  },
+  "example_id": "P22",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P22.png": "e0282d506db67a3d6bf9d006d0c4e0547ecc6e5b6ec276dff9d3653ed5b6092a",
+    "P22.pdf": "1b38913e8c45363b776fac750f46bd02a33b3179b7369bf56411df516837da93",
+    "P22.svg": "eb68bb1658140a95b8fe8a0077c4e422087728a05501bc1e742ad44533779c76",
+    "P22.tsv": "e5c3075e8819b9944aad6b2a4812c80dd9bd7b20b52a973994e8b0b7e2650ae7"
+  }
+}

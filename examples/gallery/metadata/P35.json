@@ -1,0 +1,54 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic P35 rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "binned_distribution",
+    "palette": {
+      "Group A": "#35618F",
+      "Group B": "#C45A2D",
+      "Group C": "#67A9A2"
+    },
+    "x_label": "Frozen bin boundaries",
+    "denominator_label": "Demo units per group",
+    "binning": "Frozen input boundaries; no rebinning, normalization or density fit",
+    "design": {
+      "width_mm": 180.33999999999997,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "43ab0e6ac78a0bdda283729894fae4edf986ed8d0ffb6c68a0d2430ff2f45b33"
+    }
+  },
+  "example_id": "P35",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P35.png": "692a9f21281d516f067272bb719488996b0ba799d926a928c3e5206ffa690e86",
+    "P35.pdf": "99ae39cc0fce9e729db78f66877165f2d3517ee4da904893b59aae1905981ff3",
+    "P35.svg": "d93b0cbf86f02e77216cc9ff5adad7d84c4feb2a5f6077385a67c4d4545bac5c",
+    "P35.tsv": "06a29e82665b88fd86ed211762f61b33e2abffb66d5947db4e8183dcd3c089b6"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "source": "User-supplied reference appearance; independently generated synthetic data",
+  "palette": "reference registry",
+  "input_unit": "Record_type-specific frozen software fixture rows; see input schema",
+  "experimental_unit": "Synthetic identifiers; no real biological observations",
+  "contrast": "Synthetic demonstration; comparison definitions are display labels",
+  "denominator": "Supplied groups/eligible rows; no population inference",
+  "model": "No model fitted; all statistics/densities/embeddings supplied by fixture generator",
+  "limits": "recorded in figure_spec",
+  "filtering": "Only explicitly declared display filters; complete supplied table exported",
+  "uncertainty": "Synthetic supplied bounds and summaries; not validated inferential intervals",
+  "interpretation_limit": "Visual/software reproduction only, not original quantitative reconstruction or scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "reference_mantel_matrix",
+    "adapter_version": 1,
+    "analysis": "none; frozen supplied tables",
+    "labels": [
+      "N",
+      "P",
+      "K",
+      "Ca",
+      "Mg",
+      "S",
+      "Al",
+      "Fe",
+      "Mn",
+      "Zn",
+      "Mo",
+      "Variable12",
+      "Variable13",
+      "pH"
+    ],
+    "specimen_order": [
+      "Set 1",
+      "Set 2",
+      "Set 3",
+      "Set 4"
+    ],
+    "p_type": "raw",
+    "pearson_p_type": "adjusted",
+    "area": "absolute Pearson r",
+    "tests": "none; supplied statistics"
+  },
+  "example_id": "R07",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "R07.png": "315e38c7f2a84476c44afcde26991cd32f55ae9f473b21f03c34883eba657456",
+    "R07.pdf": "8f085858e6e482d2f4584e195c87dcf676df4e0584ededc42b18d8ef02986bc4",
+    "R07.svg": "f4a97a5638085c63d45240f7b5b46d237c33bd8064da4584e5a948080d6218af",
+    "R07.tsv": "6d37fe1625dca5d201d1a8df4c4a5121fca653866a107851c1efaebba25e6209",
+    "R07.style.json": "2194058efa384aed591f0cc3d9a12d6a17bc0f8cd05bb0b9a3e95250683b8f37"
+  }
+}

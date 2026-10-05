@@ -1,0 +1,51 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic effects rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "effect_matrix",
+    "effect_scale": "log_ratio",
+    "effect_label": "Demo log odds ratio",
+    "area": "min(-log10(padj), evidence_cap)",
+    "evidence_cap": 6,
+    "empty_square": "supplied estimable comparison with zero-sized evidence dot possible",
+    "design": {
+      "width_mm": 200,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": 30,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "173b888f3f77d1f72ef5b5c9ece0b1d56a0ad178b2bff89ad6d9a8ad4ab3d8e8"
+    }
+  },
+  "example_id": "P14",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P14.png": "43f24b84aa30ab03afe86d7b301c5a7fb2c3e1d0e81538b30415753bdf7a0b81",
+    "P14.pdf": "c68c609ee73b0d5f3e3da24bbbea900723f691823aba30c62667334343f822c7",
+    "P14.svg": "523206627cd46a35af567f3b6b19d202e29437a29bac9dc2790b338fa508a7ea",
+    "P14.tsv": "a166f8b8110d0b0a26af521b37f1afe90bc513bb5041145bd3a292e90a8bdeb4"
+  }
+}

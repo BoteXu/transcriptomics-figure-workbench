@@ -1,0 +1,89 @@
+{
+  "example_id": "S03",
+  "example_kind": "public_coordinate_structure",
+  "output_sha256": {
+    "S03.png": "a87f58dd96208d9feff744f27d33c1c15c42e10cda9fb1eaf4f38006ea4d01d3"
+  },
+  "synthetic": false,
+  "structure_source": {
+    "pdb_id": "1EMA",
+    "source_url": "https://www.rcsb.org/structure/1EMA",
+    "coordinate_sha256": "f1b9fdc2b871cc41f21f645a21b4948ce12d79b29197256330b108c9b503b088",
+    "model_index": 0,
+    "assembly_id": "1",
+    "chain": "A"
+  },
+  "renderer": "Mol* 5.11.0",
+  "scene": {
+    "antialiasing": "quality",
+    "background": "#FFFFFF",
+    "camera": {
+      "clippingRadius": 29.910020818262474,
+      "fovDegrees": 45,
+      "mode": "perspective",
+      "nearClip": 1,
+      "orientation": "current",
+      "position": [
+        -38.78767850000001,
+        81.80160950000001,
+        -6.248806500000001
+      ],
+      "target": [
+        25.646914,
+        29.009681,
+        38.043042
+      ],
+      "up": [
+        -0.707155,
+        -0.345577,
+        0.616854
+      ]
+    },
+    "clearExisting": true,
+    "density": [],
+    "layers": [
+      {
+        "color": {
+          "kind": "chain"
+        },
+        "labels": false,
+        "opacity": 0.42,
+        "representation": "cartoon",
+        "target": {
+          "expression": {
+            "component": "polymer",
+            "kind": "component"
+          },
+          "kind": "expression"
+        },
+        "visible": true
+      },
+      {
+        "color": {
+          "kind": "element"
+        },
+        "labels": false,
+        "opacity": 1,
+        "representation": "ball_and_stick",
+        "target": {
+          "expression": {
+            "chain": "A",
+            "end": 67,
+            "kind": "residue_range",
+            "objectId": "primary",
+            "start": 65
+          },
+          "kind": "expression"
+        },
+        "visible": true
+      }
+    ],
+    "lighting": "studio",
+    "scientificAnnotations": {
+      "guides": [],
+      "quality": [],
+      "symmetry": []
+    }
+  },
+  "interpretation_limit": "Actual public coordinates; a display example, not a binder-design result or a reproduction of the supplied paper protein. S03 highlights author residue numbers 65-67."
+}

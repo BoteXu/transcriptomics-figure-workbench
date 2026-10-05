@@ -1,0 +1,55 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic P37 rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "density_ridges",
+    "palette": {
+      "Group A": "#35618F",
+      "Group B": "#C45A2D",
+      "Group C": "#67A9A2"
+    },
+    "x_label": "Supplied score",
+    "density_label": "Precomputed demo density",
+    "shared_display_scale": 1.6042420957638406,
+    "density_estimation": "Upstream only; no KDE, bandwidth choice or per-group rescaling",
+    "design": {
+      "width_mm": 180.33999999999997,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "1e3b3cba1243799dfe5cc6f2a2e798b449ad79af082be9613ef9e847b3662df6"
+    }
+  },
+  "example_id": "P37",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P37.png": "44127c27080f3061a2e77e783a2a04dad5da1bcb39072cfff7a5c8633e8eac1a",
+    "P37.pdf": "c7cb967ac167dc39b18bc3a565d4f212f520615132346e3d0321190100d7bb42",
+    "P37.svg": "6370e21371a5b21a77ddcb296130b11c8340775a232c0b3f9db45480fe78c22e",
+    "P37.tsv": "3015fb354d2aed7966060dcb8745827b8adb64dabb9217b382b15228e0243b50"
+  }
+}

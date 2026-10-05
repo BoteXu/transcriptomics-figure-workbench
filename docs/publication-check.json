@@ -1,0 +1,42 @@
+{
+  "status": "PUBLICATION_COPY_VERIFIED",
+  "version": "0.1.0",
+  "source_skill_files_preserved_locally": 86,
+  "plotting_source_files_unchanged": 47,
+  "stable_preview_ids": 168,
+  "preview_png_bytes_unchanged": 168,
+  "general_navigation_entries": 50,
+  "color_cards": 15,
+  "python_plot_functions": 68,
+  "historical_R_counterparts": 28,
+  "pdf_files_metadata_or_link_sanitized": 181,
+  "pdf_pages_actual_pixels_identical": 204,
+  "all_preview_overview_pages": 24,
+  "all_preview_overview_ids_linked": 168,
+  "current_actual_execution": {
+    "skill_creator_structure": "PASS",
+    "core_python_smoke": "17 synthetic figure bundles, 9 rejection cases, verified exact output hashes; PASS",
+    "reference_R05_CLI": "PASS: public TSV/style/metadata render as PDF/SVG/PNG bundle"
+  },
+  "static_candidate_manual_review": {
+    "counts": {
+      "network_or_upload": 63,
+      "destructive_operation": 6,
+      "credential_access": 1
+    },
+    "review": "Network candidates are attribution/documentation URLs. Destructive candidates clean only exporter-owned staging/lock files or explicit synthetic-test locks. Credential candidate is R new.env(), not a credential read. No dynamic execution or process-launch candidate in the distributable skill."
+  },
+  "private_materials_excluded": [
+    "original reference images",
+    "private research profiles and results",
+    "machine installation paths",
+    "private runtime receipts and viewer resource IDs",
+    "browser notes and local configurations",
+    "font files and installed dependencies"
+  ],
+  "limits": [
+    "Current release did not rerun R or every external/native backend.",
+    "Synthetic execution and byte integrity do not establish scientific validity.",
+    "A single Windows environment does not establish universal platform/font/print-size compatibility."
+  ]
+}

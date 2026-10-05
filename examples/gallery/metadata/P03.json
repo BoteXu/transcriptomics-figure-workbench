@@ -1,0 +1,56 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic paired rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "paired",
+    "condition_order": [
+      "Control",
+      "Treated"
+    ],
+    "palette": {
+      "Control": "#35618F",
+      "Treated": "#C45A2D"
+    },
+    "y_label": "Demo paired value",
+    "n_subjects": 12,
+    "design": {
+      "width_mm": 180.33999999999997,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "ff325ad8e70a29af7e2043407067e2e0111c8af66c280bdfa531fd8a9997facb"
+    }
+  },
+  "example_id": "P03",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P03.png": "b7500891d411c078abbee976c9dc9c07e8a2ff8de94de41125e56680c2a89e8d",
+    "P03.pdf": "9d017be2e0cc4a9d9a46743075de03672fab0e461bb6bde1864c6eddd0bf832d",
+    "P03.svg": "370bf430a19246b5c727acdfa5836eca7934ce0c437677b71a9f7d5113729f1f",
+    "P03.tsv": "74b6486c65b97f4898c62837bcdadd550414ffb2cd6feba0610ade65e016fd6e"
+  }
+}

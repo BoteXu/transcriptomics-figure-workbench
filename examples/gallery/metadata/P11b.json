@@ -1,0 +1,53 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic nes rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "enrichment_lollipop",
+    "score_type": "NES",
+    "denominator_label": "Synthetic GSEA summary",
+    "count_label": "Supplied leading-edge count",
+    "color": "-log10(FDR); sequential; zero included",
+    "area": "count; zero anchored",
+    "selection": "all supplied rows; first appearance order",
+    "score_baseline": 0,
+    "design": {
+      "width_mm": 213.35999999999999,
+      "height_mm": 128.016,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "af9ed80afe5886bc5b2377fb6c48efed0e6598d09c19ed6b6e801ca27a52bf7d"
+    }
+  },
+  "example_id": "P11b",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P11b.png": "1e7b42c46b955bd239b6ffc941d3fe9da81216566579247f55583dcdc15a4c55",
+    "P11b.pdf": "287be68c0734d4eb98691c86fc918e78ea7020d6fb7f10b9810484e00b51235e",
+    "P11b.svg": "177e3bd74e49e6568d4ea4f361dca04bc319566bc79eccfd01be618ff529230b",
+    "P11b.tsv": "5d1352666a633b3c0e6c254d3f5d404587f441ad84a066141e7ae4b1420bfbb9"
+  }
+}

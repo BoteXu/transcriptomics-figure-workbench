@@ -1,0 +1,65 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic samples rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "publication_raincloud",
+    "palette": {
+      "Control": "#35618F",
+      "Treated": "#C45A2D"
+    },
+    "unit_label": "synthetic independent observations",
+    "y_label": "Demo expression (log2 units)",
+    "density_groups": [
+      "Control",
+      "Treated"
+    ],
+    "density_min_n": 20,
+    "density": "Scott Gaussian KDE restricted to observed min/max; area visually normalized within group",
+    "box": "Q1/Q3 linear, median; whiskers at observations within1.5IQR; all raw points retained",
+    "counts": {
+      "Control": 24,
+      "Treated": 24
+    },
+    "point_offsets": "deterministic input-order sequence",
+    "sampling": "none",
+    "design": {
+      "width_mm": 180,
+      "height_mm": 121.91999999999999,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "f6ba9f5152aed52629b06f19f6920af5115d6e02683f06224f503cfdf0db5d96"
+    }
+  },
+  "example_id": "P05",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P05.png": "108e738beff3fc39d01c1c4673b73481060b0ef810e2b73d401b5f2e4bf033bb",
+    "P05.pdf": "6fa3e8b53e170cc7b6cb1dc1dc0b83ff3cf05485ec9517c5f4c290eab1b22af6",
+    "P05.svg": "860ed144e11091e6c2008d2da6c85937848f1124f5ddd576a6a3d31154f48fa8",
+    "P05.tsv": "2ce476ea016ae09310ade42a49137860681c3d473963e38009ecccd0b9811e40"
+  }
+}

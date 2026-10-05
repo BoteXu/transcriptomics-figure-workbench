@@ -1,0 +1,51 @@
+{
+  "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+  "palette": "Current renderer defaults and explicitly supplied demo palettes; see figure_spec",
+  "input_unit": "synthetic samples rows",
+  "experimental_unit": "No biological units; software display fixture",
+  "contrast": "DEMO; not a biological contrast",
+  "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+  "model": "No analysis model fitted; illustrative frozen numbers",
+  "limits": "Renderer defaults or explicit limits in figure_spec",
+  "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+  "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+  "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+  "synthetic": true,
+  "figure_spec": {
+    "kind": "samples",
+    "palette": {
+      "Control": "#35618F",
+      "Treated": "#C45A2D"
+    },
+    "y_label": "Demo expression (log2 units)",
+    "design": {
+      "width_mm": 180.33999999999997,
+      "height_mm": 115,
+      "font_family": "DejaVu Sans",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "DejaVu Sans",
+      "geometry_sha256": "2240f99dddd0a36d5d1b95b64f3f5e01d8be58d1fc078699abed8adf9bf09dcc"
+    }
+  },
+  "example_id": "P01",
+  "example_kind": "synthetic_demonstration",
+  "output_sha256": {
+    "P01.png": "d2f25711b40c9b7d4bf5b1e27dbc34c042b2da63b3be0a777c8331925f6904b9",
+    "P01.pdf": "0c4c16cf1af5e2141c8d2d4c7897a66842d8b53e95efa537166d26d37a8b900f",
+    "P01.svg": "104c91a9e4f7ac69bfce0cbd368793911e5b1a692bdf99097bd6ac2278e154e5",
+    "P01.tsv": "2ce476ea016ae09310ade42a49137860681c3d473963e38009ecccd0b9811e40"
+  }
+}

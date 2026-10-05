@@ -1,0 +1,26 @@
+record_type	node_id	label	entity_type	group	x	y	area	source	target	weight	sign
+node	Root	Root	root	G1	0.0	2.0	130.0				
+node	T1	T1	term	G1	-3.0	0.5	90.0				
+node	L1	L1	feature	G1	-4.0	-1.0	50.0				
+node	L2	L2	feature	G1	-3.0	-1.0	50.0				
+node	L3	L3	feature	G1	-2.0	-1.0	50.0				
+node	T2	T2	term	G2	0.0	0.5	90.0				
+node	L4	L4	feature	G2	-1.0	-1.0	50.0				
+node	L5	L5	feature	G2	0.0	-1.0	50.0				
+node	L6	L6	feature	G2	1.0	-1.0	50.0				
+node	T3	T3	term	G3	3.0	0.5	90.0				
+node	L7	L7	feature	G3	2.0	-1.0	50.0				
+node	L8	L8	feature	G3	3.0	-1.0	50.0				
+node	L9	L9	feature	G3	4.0	-1.0	50.0				
+edge								Root	T1	0.5	0.0
+edge								T1	L1	0.3	0.0
+edge								T1	L2	0.3	0.0
+edge								T1	L3	0.3	0.0
+edge								Root	T2	0.5	0.0
+edge								T2	L4	0.3	0.0
+edge								T2	L5	0.3	0.0
+edge								T2	L6	0.3	0.0
+edge								Root	T3	0.5	0.0
+edge								T3	L7	0.3	0.0
+edge								T3	L8	0.3	0.0
+edge								T3	L9	0.3	0.0
