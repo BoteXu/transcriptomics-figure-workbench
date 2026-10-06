@@ -46,22 +46,22 @@ def plot_cohort_intervals(data,palette,*,effect_scale,effect_label,interval_labe
     d=checked(data,['feature','cohort','estimate','lower','upper'],['estimate','lower','upper'])
     bounds(d);palette_check(d.cohort,palette);null=effect_reference(effect_scale)
     rows=list(dict.fromkeys(d.feature));cohorts=list(dict.fromkeys(d.cohort))
-    if len(rows)>16 or len(cohorts)>6 or d.duplicated(['feature','cohort']).any() or len(d)!=len(rows)*len(cohorts):
-        raise ValueError('Complete unique grid, max16 features/6 cohorts; split incompatible cohorts')
+    if d.duplicated(['feature','cohort']).any() or len(d)!=len(rows)*len(cohorts):
+        raise ValueError('Complete unique feature-by-cohort grid required; split incompatible cohorts')
     if effect_scale=='ratio' and (d[['estimate','lower','upper']]<=0).any().any():
         raise ValueError('Ratio bounds must be positive')
-    fig,ax=plt.subplots(figsize=(7.1,max(3.6,len(rows)*.55+1.6)))
+    fig,ax=plt.subplots(figsize=(max(7.1,6.2+len(cohorts)*.45),max(3.6,len(rows)*.55+1.6)))
     fig.subplots_adjust(left=.29,right=.97,bottom=.25,top=.86)
     ax.axvline(null,color='#AEB7BF',ls='--',lw=.8)
     offsets=np.linspace(-.27,.27,len(cohorts)) if len(cohorts)>1 else [0]
     for i,c in enumerate(cohorts):
         z=d[d.cohort==c].set_index('feature').loc[rows];yy=np.arange(len(rows))+offsets[i]
         ax.errorbar(z.estimate,yy,xerr=np.array([z.estimate-z.lower,z.upper-z.estimate]),
-                    fmt=['o','s','D','^','v','P'][i],ms=4,color=palette[c],lw=1,capsize=2,label=c)
+                    fmt=['o','s','D','^','v','P','X','*'][i%8],ms=4,color=palette[c],lw=1,capsize=2,label=c)
     ax.set_yticks(range(len(rows)),[textwrap.fill(str(x),25) for x in rows]);ax.invert_yaxis()
     if effect_scale=='ratio':ax.set_xscale('log')
     ax.set(xlabel=effect_label,title=title)
-    ax.legend(loc='upper center',bbox_to_anchor=(.5,-.18),ncol=min(3,len(cohorts)),frameon=False)
+    ax.legend(loc='upper center',bbox_to_anchor=(.5,-.18),ncol=min(4,len(cohorts)),frameon=False)
     axis(ax)
     return stamp(fig,data,'cohort_intervals',effect_scale=effect_scale,effect_label=effect_label,
                  interval_label=interval_label,null_value=null,palette=palette,pooling='none',cohort_order=cohorts)

@@ -17,6 +17,7 @@ from figure_general import plot_confusion_counts
 from figure_publication import plot_aligned_matrix
 from figure_polish import plot_polished_matrix
 from figure_multimodal import plot_association_matrix
+from figure_reference import plot_activity_dashboard
 
 
 def close(fig):
@@ -100,6 +101,29 @@ def main():
         row_order=['e', 'd', 'c', 'b', 'a'], column_aliases={'x': 'X', 'y': 'Y', 'z': 'Z'}
     ))
     assert spec['row_order'] == ['e', 'd', 'c', 'b', 'a']
+
+    activity = pd.DataFrame([
+        (row, col, float(i + j) / 10)
+        for i, row in enumerate(['row A with a long label', 'row B with a long label'])
+        for j, col in enumerate(['column 01', 'column 02', 'column 03', 'column 04', 'column 05', 'column 06', 'column 07', 'column 08', 'column 09'])
+    ], columns=['row', 'column', 'value'])
+    activity_rows = pd.DataFrame({'row': ['row A with a long label', 'row B with a long label'], 'group': ['A', 'B']})
+    activity_top = pd.DataFrame({'column': [f'column {i:02d}' for i in range(1, 10)], 'bar': range(9), 'line': range(9)})
+    activity_density = pd.DataFrame([
+        (g, x, .2 + .01 * x) for g in ['A', 'B'] for x in range(5)
+    ], columns=['group', 'coordinate', 'value'])
+    activity = pd.concat([
+        activity.assign(record_type='matrix'),
+        activity_rows.assign(record_type='row'),
+        activity_top.assign(record_type='top'),
+        activity_density.assign(record_type='density'),
+    ], ignore_index=True, sort=False)
+    spec = close(plot_activity_dashboard(
+        activity,
+        {'A': '#336699', 'B': '#CC6677'}, row_order=list(activity_rows.row), column_order=list(activity_top.column),
+        value_label='value', bar_label='bar', line_label='line', row_label_wrap=10, column_label_wrap=8,
+    ))
+    assert spec['column_order'] == list(activity_top.column)
 
     incomplete = long[~((long.gene == 'r2') & (long.assay == 'c2'))].copy()
     try:

@@ -484,15 +484,16 @@ def plot_training_dashboard(data,palette,*,selected_epoch,selection_label,loss_l
     _unique(loss,['series','epoch']); _unique(grad,['epoch']); _unique(reference,['epoch']); _intervals(loss); _intervals(grad); palette_check(loss.series,palette)
     if (grad[['lower','value','upper']]<=0).any().any() or (reference.value<=0).any(): raise ValueError('Log gradient requires positive values and bounds')
     if selected_epoch not in set(loss.epoch): raise ValueError('Selected epoch absent')
-    fig=_new(size); ax=_ax(fig,[.09,.15,.61,.72]); ax.set_xticks([1,20,40,60,80,100,120])
+    fig=_new(size); ax=_ax(fig,[.09,.15,.61,.72])
     for g,sub in loss.groupby('series',sort=False):
         sub=sub.sort_values('epoch'); ax.fill_between(sub.epoch,sub.lower,sub.upper,color=palette[g],alpha=.16); ax.plot(sub.epoch,sub.value,color=palette[g],lw=2,label=g)
     ax.axvline(selected_epoch,color='#697780',ls='--',lw=1); chosen=loss[(loss.epoch==selected_epoch)&(loss.series==loss.series.iloc[-1])]
+    epochs=sorted(loss.epoch.unique()); eticks=np.unique(np.linspace(0,len(epochs)-1,min(7,len(epochs))).astype(int)); ax.set_xticks([epochs[i] for i in eticks])
     ax.scatter(chosen.epoch,chosen.value,s=48,fc='white',ec=INK,zorder=6); ax.set(xlabel='Epoch',ylabel=loss_label,title='A  Recorded loss and uncertainty'); ax.legend(frameon=False,fontsize=8)
     mat,rs,es=_grid(heat,'run','epoch','value'); hax=_ax(fig,[.77,.61,.13,.26]); cm=reference_cmap('expression_warm',semantic='sequential')
-    im=hax.imshow(mat,aspect='auto',cmap=cm,origin='upper',extent=[min(es),max(es),len(rs)-.5,-.5]); hax.set(xlabel='Epoch',ylabel='Run',title='B'); hax.set_yticks([0,len(rs)-1],[rs[0],rs[-1]]); hax.axvline(selected_epoch,color='#54636E',ls='--',lw=.7)
+    im=hax.imshow(mat,aspect='auto',cmap=cm,origin='upper',extent=[min(es),max(es),len(rs)-.5,-.5]); hax.set(xlabel='Epoch',ylabel='Run',title='B'); hax.set_yticks(range(len(rs)),[str(r) for r in rs],fontsize=max(4,min(7,9-len(rs)*.12))); hax.axvline(selected_epoch,color='#54636E',ls='--',lw=.7)
     _colorbar(fig,[.92,.62,.012,.24],cm,im.norm,heat_label)
-    gax=_ax(fig,[.80,.16,.18,.28]); grad=grad.sort_values('epoch'); reference=reference.sort_values('epoch'); gax.fill_between(grad.epoch,grad.lower,grad.upper,color=semantic_color('primary','#00A78D'),alpha=.20); gax.plot(grad.epoch,grad.value,color=semantic_color('primary','#00A78D'),lw=1.7); gax.plot(reference.epoch,reference.value,color=semantic_color('accent','#EDA019'),ls='--',lw=1.2); gax.set(xlabel='Epoch',ylabel=gradient_label,yscale='log',title='C'); gax.set_xticks([1,60,120])
+    gax=_ax(fig,[.80,.16,.18,.28]); grad=grad.sort_values('epoch'); reference=reference.sort_values('epoch'); gax.fill_between(grad.epoch,grad.lower,grad.upper,color=semantic_color('primary','#00A78D'),alpha=.20); gax.plot(grad.epoch,grad.value,color=semantic_color('primary','#00A78D'),lw=1.7); gax.plot(reference.epoch,reference.value,color=semantic_color('accent','#EDA019'),ls='--',lw=1.2); gticks=np.unique(np.linspace(0,len(grad)-1,min(5,len(grad))).astype(int)); gax.set_xticks(grad.epoch.iloc[gticks])
     fig.text(.09,.065,selection_label,fontsize=8)
     return _finish(fig,data,'training_dashboard',palette=palette,selected_epoch=selected_epoch,selection_label=selection_label,loss_label=loss_label,heat_label=heat_label,gradient_label=gradient_label,uncertainty='supplied intervals; repeated runs not independent subjects')
 
@@ -510,9 +511,9 @@ def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,ba
     if row_label_wrap is not None and (type(row_label_wrap) is not int or row_label_wrap<1): raise ValueError('row_label_wrap must be a positive integer or None')
     if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap<1): raise ValueError('column_label_wrap must be a positive integer or None')
     rlabels=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in rlabels]; clabels=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in clabels]
-    if size==(10,7): size=(max(10,7+max((len(x.replace('\n','')) for x in rlabels),default=0)*.025),max(7,4+len(row_order)*.16))
+    if size==(10,7): size=(max(10,7+len(column_order)*.34+max((len(x.replace('\n','')) for x in clabels),default=0)*.025),max(7,4+len(row_order)*.16))
     fig=_new(size); ax=_ax(fig,[.10,.16,.62,.61]); cm=reference_cmap('activity_blue',semantic='sequential')
-    im=ax.imshow(mat,aspect='auto',cmap=cm,vmin=float(matrix.value.min()),vmax=float(matrix.value.max())); ticks=np.linspace(0,len(cs)-1,min(8,len(cs))).astype(int); ax.set_xticks(ticks,[clabels[i] for i in ticks],rotation=45,ha='right'); ax.set_yticks(range(len(row_order)),rlabels if row_label_mode=='all' else []); ax.set_xlabel('Supplied column order'); ax.set_title('A  Frozen matrix',loc='left',fontsize=10)
+    im=ax.imshow(mat,aspect='auto',cmap=cm,vmin=float(matrix.value.min()),vmax=float(matrix.value.max())); ax.set_xticks(range(len(cs)),clabels,rotation=45,ha='right'); ax.set_yticks(range(len(row_order)),rlabels if row_label_mode=='all' else []); ax.set_xlabel('Supplied column order'); ax.set_title('A  Frozen matrix',loc='left',fontsize=10)
     strip=_ax(fig,[.04,.16,.026,.61]); strip.axis('off')
     start=0
     for stop in range(1,len(groups)+1):

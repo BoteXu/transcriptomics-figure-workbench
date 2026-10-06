@@ -1,5 +1,10 @@
 # Change log
 
+## 0.2.3
+
+- Remove remaining display caps in the activity dashboard and cohort interval adapter: all supplied columns, runs, features, and cohorts are retained with dynamic ticks, canvas sizing, and marker cycling.
+- Derive training and diagnostic ticks from supplied epochs and runs rather than fixed epoch values or endpoint-only run labels; extend regression coverage for long activity labels and nine-column panels.
+
 ## 0.2.2
 
 - Make matrix inputs dimension-agnostic: shared long/wide normalization, explicit row/column fields and orders, aliases, dynamic canvas sizing, and an explicit masked-missing mode for heatmap, aligned, polished, effect and association matrices.

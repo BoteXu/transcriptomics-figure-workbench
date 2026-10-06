@@ -16,4 +16,4 @@ The downloadable skill ZIP includes only the installable skill, license/attribut
 
 ## Subsequent release
 
-This document preserves the v0.1.0 history. Previous v0.2.0 scope is [release-validation-v020.md](release-validation-v020.md); v0.2.1 scope is [release-validation-v021.md](release-validation-v021.md). Current checks are documented in [release-validation-v022.md](release-validation-v022.md).
+This document preserves the v0.1.0 history. Previous v0.2.0 scope is [release-validation-v020.md](release-validation-v020.md); v0.2.1 scope is [release-validation-v021.md](release-validation-v021.md). v0.2.2 scope is [release-validation-v022.md](release-validation-v022.md); current checks are documented in [release-validation-v023.md](release-validation-v023.md).

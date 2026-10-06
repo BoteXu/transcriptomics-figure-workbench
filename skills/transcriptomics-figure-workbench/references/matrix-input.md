@@ -31,12 +31,16 @@ absence in the figure specification. Missing values are not converted to
 zero. An incomplete table with the default `missing='error'` is rejected so a
 plot cannot imply a measured zero or a complete comparison.
 
-The heatmap, annotated/aligned/polished matrix, effect matrix, association
-matrix and multistate matrix routes all derive canvas size from the declared
-number of rows and columns. Row names are shown in full by default; long names can be wrapped
-with `row_label_wrap`, and the canvas margin grows with the longest displayed
-name. `figsize`, cell-size and label-size controls are available where labels
-need more room. Labels can be hidden only with an explicit `*_label_mode` or
-`show_labels=False`, and that choice is stored in the figure specification.
+The heatmap, dot, annotated/aligned/polished matrix, effect matrix, association
+matrix, multistate matrix, activity panel and palette-panel matrix routes all
+derive canvas size from the declared number of rows and columns. Row and
+column labels are shown in full by default; long names can be wrapped with
+`row_label_wrap` or `column_label_wrap`, and the canvas margin grows with the
+longest displayed name. Training panels and cohort interval views likewise
+derive ticks and panel height from the supplied runs, epochs, features and
+cohorts rather than a fixed display subset. `figsize`, cell-size and label-size
+controls are available where labels need more room. Labels can be hidden only
+with an explicit `*_label_mode` or `show_labels=False`, and that choice is
+stored in the figure specification.
 Matrix dimensions, identifiers, order and missing-cell policy are recorded in
 the exported figure specification and can be replayed from the same table.
