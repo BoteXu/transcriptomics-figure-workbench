@@ -4,6 +4,7 @@ No fitting, PCA, SHAP calculation, Mantel test, clustering, KDE or model trainin
 Composite inputs use one long table with record_type; the complete table is stamped.
 """
 import math
+import textwrap
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -14,6 +15,7 @@ from matplotlib.lines import Line2D
 from matplotlib.cm import ScalarMappable
 from figure_core import checked, stamp, palette_check
 from figure_reference_palettes import reference_cmap,semantic_color
+from matrix_input import axis_labels
 
 INK='#25313A'
 
@@ -494,15 +496,23 @@ def plot_training_dashboard(data,palette,*,selected_epoch,selection_label,loss_l
     fig.text(.09,.065,selection_label,fontsize=8)
     return _finish(fig,data,'training_dashboard',palette=palette,selected_epoch=selected_epoch,selection_label=selection_label,loss_label=loss_label,heat_label=heat_label,gradient_label=gradient_label,uncertainty='supplied intervals; repeated runs not independent subjects')
 
-def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,bar_label,line_label,size=(10,7)):
+def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,bar_label,line_label,size=(10,7),
+                            row_aliases=None,column_aliases=None,row_label_wrap=18,column_label_wrap=13,
+                            row_label_mode='all'):
     _types(data,['matrix','row','top','density'])
     matrix=_records(data,'matrix',['row','column','value'],['value']); rows=_records(data,'row',['row','group']); top=_records(data,'top',['column','bar','line'],['bar','line']); density=_records(data,'density',['group','coordinate','value'],['coordinate','value'])
     _unique(rows,['row']); _unique(top,['column']); _unique(density,['group','coordinate']); palette_check(rows.group,palette)
     mat,rs,cs=_grid(matrix,'row','column','value')
     if set(rs)!=set(row_order) or set(cs)!=set(column_order) or set(rows.row)!=set(row_order) or set(top.column)!=set(column_order) or set(density.group)!=set(rows.group) or (density.value<0).any(): raise ValueError('Activity alignment mismatch')
     mat=mat.reindex(index=row_order,columns=column_order); groups=rows.set_index('row').reindex(row_order).group.tolist()
+    if row_label_mode not in ('all','none'): raise ValueError("row_label_mode must be 'all' or 'none'")
+    rlabels=axis_labels(row_order,row_aliases,'row'); clabels=axis_labels(column_order,column_aliases,'column')
+    if row_label_wrap is not None and (type(row_label_wrap) is not int or row_label_wrap<1): raise ValueError('row_label_wrap must be a positive integer or None')
+    if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap<1): raise ValueError('column_label_wrap must be a positive integer or None')
+    rlabels=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in rlabels]; clabels=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in clabels]
+    if size==(10,7): size=(max(10,7+max((len(x.replace('\n','')) for x in rlabels),default=0)*.025),max(7,4+len(row_order)*.16))
     fig=_new(size); ax=_ax(fig,[.10,.16,.62,.61]); cm=reference_cmap('activity_blue',semantic='sequential')
-    im=ax.imshow(mat,aspect='auto',cmap=cm,vmin=float(matrix.value.min()),vmax=float(matrix.value.max())); ticks=np.linspace(0,len(cs)-1,5).astype(int); ax.set_xticks(ticks,[column_order[i] for i in ticks]); ax.set_yticks([]); ax.set_xlabel('Supplied column order'); ax.set_title('A  Frozen matrix',loc='left',fontsize=10)
+    im=ax.imshow(mat,aspect='auto',cmap=cm,vmin=float(matrix.value.min()),vmax=float(matrix.value.max())); ticks=np.linspace(0,len(cs)-1,min(8,len(cs))).astype(int); ax.set_xticks(ticks,[clabels[i] for i in ticks],rotation=45,ha='right'); ax.set_yticks(range(len(row_order)),rlabels if row_label_mode=='all' else []); ax.set_xlabel('Supplied column order'); ax.set_title('A  Frozen matrix',loc='left',fontsize=10)
     strip=_ax(fig,[.04,.16,.026,.61]); strip.axis('off')
     start=0
     for stop in range(1,len(groups)+1):
@@ -516,7 +526,7 @@ def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,ba
         dy=.61/len(cats); dax=_ax(fig,[.82,.16+(len(cats)-1-i)*dy,.16,dy*.85]); sub=density[density.group==g].sort_values('coordinate'); dax.fill_between(sub.coordinate,0,sub.value,color=palette[g],alpha=.35); dax.plot(sub.coordinate,sub.value,color=palette[g],lw=1.2); dax.set_yticks([]); dax.set_title(g,loc='left',fontsize=7,pad=1)
         if i<len(cats)-1: dax.set_xticks([])
         else: dax.set_xlabel('Supplied density coordinate',fontsize=7)
-    return _finish(fig,data,'activity_dashboard',palette=palette,row_order=list(row_order),column_order=list(column_order),value_label=value_label,bar_label=bar_label,line_label=line_label,density='supplied, no KDE',top_scales='separate labelled axes')
+    return _finish(fig,data,'activity_dashboard',palette=palette,row_order=list(row_order),column_order=list(column_order),row_aliases=dict(zip(row_order,rlabels)),column_aliases=dict(zip(column_order,clabels)),row_label_mode=row_label_mode,value_label=value_label,bar_label=bar_label,line_label=line_label,density='supplied, no KDE',top_scales='separate labelled axes')
 
 def plot_effect_distribution_forest(data,*,row_order,panel_order,panel_labels,limits,
                                     interval_label,count_label,p_type,size=(12,9)):

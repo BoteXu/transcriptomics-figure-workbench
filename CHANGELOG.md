@@ -1,5 +1,10 @@
 # Change log
 
+## 0.2.2
+
+- Make matrix inputs dimension-agnostic: shared long/wide normalization, explicit row/column fields and orders, aliases, dynamic canvas sizing, and an explicit masked-missing mode for heatmap, aligned, polished, effect and association matrices.
+- Preserve identifiers and annotation columns separately from numeric matrix values; extend label/order controls to dot, confusion, activity and palette-panel matrices; add a focused flexibility regression check without changing archived reference assets.
+
 ## 0.2.1
 
 - Replace the previous 177 recommended source previews with one main preview per drawing family: 68 drawing entries and 24 composition entries. Keep all 244 stable source IDs and each input contract; meaningful modes remain selectable inside an entry.

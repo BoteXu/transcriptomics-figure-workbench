@@ -111,23 +111,34 @@ def plot_upset(data,theme,*,set_columns,unit_label,title=''):
     mat.set(xlim=(-.5,len(pats)-.5),ylim=(len(set_columns)-.5,-.5));mat.set_yticks(range(len(set_columns)),set_columns);mat.set_xticks([]);right.barh(range(len(set_columns)),d[set_columns].sum(),color=color);right.set(ylim=(len(set_columns)-.5,-.5),xlabel='Set count');right.set_yticks([]);fig.text(.17,.04,unit_label+'; complete membership, disjoint pattern counts; all-zero objects retained',fontsize=8)
     return _done(fig,data,'upset',theme,set_columns=set_columns,unit_label=unit_label,display_summary='Exact binary-pattern counts; inclusive set totals',intersection_counts=[dict(pattern=list(p),count=int(c)) for p,c in zip(pats,counts)])
 
-def plot_multistate_matrix(data,theme,*,state_order,state_slots,title=''):
-    d=checked(data,['row','column','states']);_unique(d,['row','column']);rows=list(pd.unique(d.row));cols=list(pd.unique(d.column))
+def plot_multistate_matrix(data,theme,*,state_order,state_slots,title='',row_field='row',column_field='column',
+                           row_order=None,column_order=None,row_aliases=None,column_aliases=None):
+    d=checked(data,[row_field,column_field,'states']);d=d.rename(columns={row_field:'row',column_field:'column'});_unique(d,['row','column']);rows=list(pd.unique(d.row));cols=list(pd.unique(d.column))
+    if row_order is not None:
+        row_order=list(row_order)
+        if len(row_order)!=len(set(row_order)) or set(row_order)!=set(rows):raise ValueError('row_order must cover every row')
+        rows=row_order
+    if column_order is not None:
+        column_order=list(column_order)
+        if len(column_order)!=len(set(column_order)) or set(column_order)!=set(cols):raise ValueError('column_order must cover every column')
+        cols=column_order
     if len(d)!=len(rows)*len(cols) or len(state_order)!=len(set(state_order)):raise ValueError('Complete known state grid required')
     palette=group_palette(theme,list(state_slots.values()));colors={s:palette[state_slots[s]] for s in state_order};tokens={}
     for r in d.itertuples():
         values=r.states.split(';') if r.states!='None' else []
         if set(values)-set(state_order) or len(values)!=len(set(values)):raise ValueError('Unknown/duplicate state; None means measured absence, not missing')
         tokens[(r.row,r.column)]=values
-    fig=_start(theme);ax=_ax(fig,[.16,.20,.59,.63]);ax.set(xlim=(0,len(cols)),ylim=(len(rows),0));
+    fig=_start(theme,size=(max(8.5,len(cols)*.44+4),max(6.2,len(rows)*.30+3)));ax=_ax(fig,[.16,.20,.59,.63]);ax.set(xlim=(0,len(cols)),ylim=(len(rows),0));
     for y,row in enumerate(rows):
         for x,col in enumerate(cols):
             ax.add_patch(Rectangle((x+.04,y+.04),.92,.92,fc='#F0F3F6',ec='white'))
             active=tokens[(row,col)]
             for k,s in enumerate(active):ax.add_patch(Rectangle((x+.08,y+.08+k*.84/len(active)),.84,.84/len(active),fc=colors[s],ec='none'))
-    ax.set_xticks(np.arange(len(cols))+.5,cols,rotation=45,ha='right');ax.set_yticks(np.arange(len(rows))+.5,rows);ax.set_title(title,loc='left');fig.legend(handles=[Rectangle((0,0),1,1,fc=colors[s],label=s) for s in state_order],title='Supplied event states',loc='upper left',bbox_to_anchor=(.78,.84),frameon=False)
+    xl=[str((column_aliases or {}).get(x,x)) for x in cols];yl=[str((row_aliases or {}).get(x,x)) for x in rows]
+    if len(set(xl))!=len(xl) or len(set(yl))!=len(yl):raise ValueError('Axis aliases must be unique')
+    ax.set_xticks(np.arange(len(cols))+.5,xl,rotation=45,ha='right');ax.set_yticks(np.arange(len(rows))+.5,yl);ax.set_title(title,loc='left');fig.legend(handles=[Rectangle((0,0),1,1,fc=colors[s],label=s) for s in state_order],title='Supplied event states',loc='upper left',bbox_to_anchor=(.78,.84),frameon=False)
     fig.text(.16,.05,'Multiple states may coexist; grey = explicit measured None',fontsize=8)
-    return _done(fig,data,'multistate_matrix',theme,state_order=state_order,state_slots=state_slots,missing_policy='Missing rows/cells rejected; explicit None only')
+    return _done(fig,data,'multistate_matrix',theme,state_order=state_order,state_slots=state_slots,row_field=row_field,column_field=column_field,row_order=rows,column_order=cols,row_aliases=dict(zip(rows,yl)),column_aliases=dict(zip(cols,xl)),missing_policy='Missing rows/cells rejected; explicit None only')
 
 def plot_running_enrichment(data,theme,*,curve_groups,rank_label,title=''):
     _types(data,['running','hit','metric']);d=_records(data,'running',['group','rank','value'],['rank','value']);h=_records(data,'hit',['group','rank'],['rank']);m=_records(data,'metric',['rank','value'],['rank','value']);_unique(d,['group','rank']);_unique(h,['group','rank']);_unique(m,['rank'])

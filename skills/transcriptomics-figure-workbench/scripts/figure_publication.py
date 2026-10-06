@@ -1,5 +1,6 @@
 """Original reference-led layouts; render frozen inputs without biological analysis."""
 import numpy as np
+import pandas as pd
 import textwrap
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, Normalize, TwoSlopeNorm
@@ -7,6 +8,7 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Rectangle
 from matplotlib.mlab import GaussianKDE
 from figure_core import checked, palette_check, stamp, effect_reference
+from matrix_input import normalize_matrix, axis_labels, matrix_frame
 
 PAPER_COLORS = {'orange':'#E98B2A','purple':'#7562A5','teal':'#2D9C95','blue':'#4B88B5'}
 SIGNED = LinearSegmentedColormap.from_list('paper_signed',['#7562A5','#FAF8F3','#E98B2A'])
@@ -38,45 +40,73 @@ def plot_publication_curve(data,palette,*,curve_type,labels,title='',prevalence=
     ax.legend(loc='upper center',bbox_to_anchor=(.5,-.17),ncol=2,frameon=False,fontsize=8.5,handlelength=2.7,columnspacing=1.7)
     return stamp(fig,data,'publication_curve',curve_type=curve_type,labels=labels,palette=palette,step_by_model=steps,prevalence=prevalence)
 
-def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry='tile',block_palette=None,count_label='Supplied count',title='',continuous_colors=None):
-    d=checked(data,['feature','sample','value'],['value']);rows=list(dict.fromkeys(d.feature));cols=list(dict.fromkeys(d['sample']))
-    if d.duplicated(['feature','sample']).any() or len(d)!=len(rows)*len(cols):raise ValueError('Complete matrix required')
+def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry='tile',block_palette=None,count_label='Supplied count',title='',continuous_colors=None,
+                        row_field='feature',column_field='sample',value_field='value',value_columns=None,
+                        row_order=None,column_order=None,row_aliases=None,column_aliases=None,
+                        row_block_field='feature_block',row_count_field='row_count',missing='error',figsize=None,
+                        cell_width=.44,cell_height=.27,label_rotation=35,row_label_wrap=None,
+                        column_label_wrap=None,label_fontsize=9):
+    """Publication matrix accepting either a long or an explicit wide table."""
+    d,rows,cols=normalize_matrix(data,row_field=row_field,column_field=column_field,value_field=value_field,
+                                 value_columns=value_columns,row_order=row_order,column_order=column_order,missing=missing)
     if len(limits)!=2 or not np.isfinite(limits).all() or limits[0]>=limits[1] or d.value.min()<limits[0] or d.value.max()>limits[1]:raise ValueError('Limits must include every supplied value')
     if geometry not in ('tile','bubble') or (signed and not limits[0]<center<limits[1]):raise ValueError('Invalid matrix scale/geometry')
-    for field in ['feature_block','row_count']:
-        if field in d and (d[field].isna().any() or (d.groupby('feature')[field].nunique()!=1).any()):raise ValueError('Row annotation mismatch')
-    has_count='row_count' in d;has_block='feature_block' in d
-    if has_count and ((d.row_count<0)|(d.row_count%1!=0)).any():raise ValueError('Counts must be nonnegative integers')
-    if has_block:palette_check(d.feature_block,block_palette or {})
-    mat=d.pivot(index='feature',columns='sample',values='value').reindex(index=rows,columns=cols).to_numpy()
-    fig=plt.figure(figsize=(max(6.8,len(cols)*.44+4),max(3.8,len(rows)*.27+1.8)))
+    raw=data
+    if not isinstance(raw,pd.DataFrame):raise ValueError('Expected DataFrame')
+    def row_annotation(field):
+        if field is None or field not in raw.columns:return None
+        if row_field not in raw.columns:raise ValueError('Row annotation requires the declared row_field')
+        z=raw[[row_field,field]].drop_duplicates()
+        if z[row_field].duplicated().any() or z[field].isna().any():raise ValueError('Row annotation mismatch')
+        return z.rename(columns={row_field:'feature'}).set_index('feature').reindex(rows)[field]
+    block=row_annotation(row_block_field);count=row_annotation(row_count_field)
+    has_count=count is not None;has_block=block is not None
+    if has_count:
+        count=pd.to_numeric(count,errors='raise').astype(float)
+        if (count<0).any() or (count%1!=0).any():raise ValueError('Counts must be nonnegative integers')
+    if has_block:palette_check(block.dropna().tolist(),block_palette or {})
+    mat=matrix_frame(d,rows,cols).to_numpy(dtype=float)
+    labels_x=axis_labels(cols,column_aliases,'column');labels_y=axis_labels(rows,row_aliases,'row')
+    if row_label_wrap is not None and (type(row_label_wrap) is not int or row_label_wrap<1):raise ValueError('row_label_wrap must be a positive integer or None')
+    if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap<1):raise ValueError('column_label_wrap must be a positive integer or None')
+    labels_x_display=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in labels_x]
+    labels_y_display=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in labels_y]
+    if figsize is None:
+        row_lines=max((x.count('\n')+1 for x in labels_y_display),default=1)
+        row_width=max((len(x.replace('\n','')) for x in labels_y_display),default=0)
+        row_stride=max(float(cell_height),row_lines*.18)
+        figsize=(max(6.8+min(max(row_width-16,0),80)*.025,len(cols)*float(cell_width)+4+min(max(len(x) for x in labels_x),48)*.015),max(3.8,len(rows)*row_stride+1.8))
+    if not isinstance(figsize,(tuple,list)) or len(figsize)!=2 or any(float(x)<=0 for x in figsize):raise ValueError('figsize must be a positive (width, height) pair')
+    fig=plt.figure(figsize=tuple(map(float,figsize)))
     ratios=([.10] if has_block else [])+[max(2,len(cols)*.55)]+([1.8] if has_count else [])+[.13]
     gs=fig.add_gridspec(1,len(ratios),width_ratios=ratios,wspace=.18)
-    fig.subplots_adjust(left=.27,right=.91,top=.88,bottom=.20)
-    k=0;annot=d.drop_duplicates('feature').set_index('feature').loc[rows]
+    left=min(.52,max(.20,.20+max((len(x.replace('\n','')) for x in labels_y_display),default=0)*.0045))
+    fig.subplots_adjust(left=left,right=.91,top=.88,bottom=.20 if label_rotation else .14)
+    k=0
     if has_block:
         strip=fig.add_subplot(gs[0,k]);k+=1
-        for i,r in enumerate(annot.itertuples()):strip.add_patch(Rectangle((0,i-.5),1,1,color=block_palette[r.feature_block],lw=0))
+        for i,r in enumerate(block):strip.add_patch(Rectangle((0,i-.5),1,1,color=block_palette[r],lw=0))
         strip.set(xlim=(0,1),ylim=(len(rows)-.5,-.5));strip.axis('off')
     ax=fig.add_subplot(gs[0,k]);k+=1
     norm=TwoSlopeNorm(center,limits[0],limits[1]) if signed else Normalize(*limits)
     cmap=LinearSegmentedColormap.from_list('project_matrix',continuous_colors) if continuous_colors is not None else SIGNED if signed else SEQUENTIAL
-    if geometry=='tile':im=ax.imshow(mat,norm=norm,cmap=cmap,aspect='auto',interpolation='nearest')
+    shown=np.ma.masked_invalid(mat) if missing=='mask' else mat
+    if geometry=='tile':im=ax.imshow(shown,norm=norm,cmap=cmap,aspect='auto',interpolation='nearest')
     else:
-        xx,yy=np.meshgrid(np.arange(len(cols)),np.arange(len(rows)));im=ax.scatter(xx.ravel(),yy.ravel(),c=mat.ravel(),norm=norm,cmap=cmap,s=105,edgecolors='none');ax.set(xlim=(-.5,len(cols)-.5),ylim=(len(rows)-.5,-.5))
-    ax.set_xticks(np.arange(len(cols)),cols,rotation=35,ha='right');ax.set_yticks(np.arange(len(rows)),rows);ax.tick_params(length=0,labelsize=9,pad=5)
+        xx,yy=np.meshgrid(np.arange(len(cols)),np.arange(len(rows)));valid=np.isfinite(mat).ravel();im=ax.scatter(xx.ravel()[valid],yy.ravel()[valid],c=mat.ravel()[valid],norm=norm,cmap=cmap,s=105,edgecolors='none');ax.set(xlim=(-.5,len(cols)-.5),ylim=(len(rows)-.5,-.5))
+    ax.set_xticks(np.arange(len(cols)),labels_x_display,rotation=label_rotation,ha='right' if label_rotation else 'center');ax.set_yticks(np.arange(len(rows)),labels_y_display);ax.tick_params(length=0,pad=5,labelsize=label_fontsize)
     if has_block: ax.tick_params(axis='y',pad=28)
     for spine in ax.spines.values():spine.set_visible(False)
     if geometry=='tile':
         ax.set_xticks(np.arange(len(cols)+1)-.5,minor=True);ax.set_yticks(np.arange(len(rows)+1)-.5,minor=True);ax.grid(which='minor',color='white',linewidth=.8);ax.tick_params(which='minor',length=0)
     if has_count:
-        side=fig.add_subplot(gs[0,k],sharey=ax);k+=1;side.barh(np.arange(len(rows)),annot.row_count,color='#BEC5CC',height=.72)
-        upper=max(float(annot.row_count.max()),1);side.set(xlim=(0,upper*1.42),xlabel=count_label);side.tick_params(axis='y',left=False,labelleft=False)
-        for i,v in enumerate(annot.row_count):side.text(v+upper*.035,i,f'{int(v):,}',va='center',fontsize=8,color='#58626D')
+        side=fig.add_subplot(gs[0,k],sharey=ax);k+=1;side.barh(np.arange(len(rows)),count,color='#BEC5CC',height=.72)
+        upper=max(float(count.max()),1);side.set(xlim=(0,upper*1.42),xlabel=count_label);side.tick_params(axis='y',left=False,labelleft=False)
+        for i,v in enumerate(count):side.text(v+upper*.035,i,f'{int(v):,}',va='center',fontsize=8,color='#58626D')
         paper_axis(side)
     cb=fig.add_subplot(gs[0,k]);fig.colorbar(im,cax=cb,label=value_label);cb.tick_params(labelsize=8);cb.set_box_aspect(20)
-    fig.suptitle(title,x=.27,ha='left',fontsize=12,y=.97)
-    return stamp(fig,data,'publication_aligned_matrix',limits=list(limits),center=center,signed=signed,value_label=value_label,geometry=geometry,bubble_area='constant_not_detection',row_order=rows,column_order=cols,count_label=count_label,block_palette=block_palette,continuous_colors=continuous_colors,clustering='none_frozen_input_order')
+    fig.suptitle(title,x=left,ha='left',fontsize=12,y=.97)
+    return stamp(fig,data,'publication_aligned_matrix',limits=list(limits),center=center,signed=signed,value_label=value_label,geometry=geometry,bubble_area='constant_not_detection',row_order=rows,column_order=cols,row_aliases=dict(zip(rows,labels_y)),column_aliases=dict(zip(cols,labels_x)),count_label=count_label,block_palette=block_palette,continuous_colors=continuous_colors,clustering='none_frozen_input_order',row_field=row_field,column_field=column_field,value_field=value_field,value_columns=list(value_columns) if value_columns is not None else None,missing=missing,figsize=list(map(float,figsize)),row_block_field=row_block_field if has_block else None,row_count_field=row_count_field if has_count else None,row_label_wrap=row_label_wrap,column_label_wrap=column_label_wrap,label_fontsize=label_fontsize)
 
 def plot_publication_forest(data,palette,*,x_label,interval_label,effect_scale,title='',compact=True,decimals=2):
     d=checked(data,['label','group','estimate','lower','upper'],['estimate','lower','upper']);palette_check(d.group,palette);null=effect_reference(effect_scale)

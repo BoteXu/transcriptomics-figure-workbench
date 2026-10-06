@@ -1,6 +1,7 @@
 """Original general-purpose frozen-table renderers; no statistics are fitted."""
 import numpy as np
 import pandas as pd
+import textwrap
 from figure_core import checked, palette_check, canvas, stamp
 
 
@@ -69,20 +70,30 @@ def plot_binned_distribution(data,palette,x_label,*,denominator_label):
                  binning='Frozen input boundaries; no rebinning, normalization or density fit')
 
 
-def plot_confusion_counts(data,*,unit_label):
+def plot_confusion_counts(data,*,unit_label,label_order=None,label_aliases=None,label_wrap=None,figsize=None):
     text_required(unit=unit_label)
     d=checked(data,['actual','predicted','count'],['count'])
     labels=list(pd.unique(d.actual))
+    if label_order is not None:
+        labels=list(label_order)
+        if len(labels)!=len(set(labels)) or set(labels)!=set(d.actual): raise ValueError('label_order must cover every observed class exactly once')
     if set(labels)!=set(d.predicted) or d.duplicated(['actual','predicted']).any() or len(d)!=len(labels)**2:
         raise ValueError('Complete unique square class grid required')
     if ((d['count']<0)|(d['count']%1!=0)).any() or d['count'].sum()==0: raise ValueError('Nonnegative integer counts and positive total required')
     matrix=d.pivot(index='actual',columns='predicted',values='count').loc[labels,labels]
-    fig,ax=canvas();image=ax.imshow(matrix,cmap='Blues',vmin=0,aspect='equal')
+    if label_wrap is not None and (type(label_wrap) is not int or label_wrap<1): raise ValueError('label_wrap must be a positive integer or None')
+    shown=[str((label_aliases or {}).get(x,x)) for x in labels]
+    if len(set(shown))!=len(shown) or any(not x.strip() for x in shown): raise ValueError('label_aliases must be nonempty and unique')
+    shown=[textwrap.fill(x,label_wrap) if label_wrap else x for x in shown]
+    if figsize is None: figsize=(max(5.4,len(labels)*.55+3.2),max(4.3,len(labels)*.46+1.8))
+    if not isinstance(figsize,(tuple,list)) or len(figsize)!=2 or any(float(x)<=0 for x in figsize): raise ValueError('figsize must be a positive (width, height) pair')
+    fig,ax=canvas(); fig.set_layout_engine(None); fig.set_size_inches(float(figsize[0]),float(figsize[1])); image=ax.imshow(matrix,cmap='Blues',vmin=0,aspect='equal')
     for i,row in enumerate(matrix.to_numpy()):
         for j,n in enumerate(row): ax.text(j,i,str(int(n)),ha='center',va='center',color='white' if n>matrix.to_numpy().max()*.6 else '#243947')
-    ax.set_xticks(range(len(labels)),labels);ax.set_yticks(range(len(labels)),labels)
+    ax.set_xticks(range(len(labels)),shown,rotation=45,ha='right');ax.set_yticks(range(len(labels)),shown)
+    fig.subplots_adjust(left=min(.42,max(.12,.12+max(len(x.replace('\n','')) for x in shown)*.004)),bottom=.25,right=.84)
     ax.set(xlabel='Predicted class',ylabel='Observed class');fig.colorbar(image,ax=ax,label='Count: '+unit_label)
-    return stamp(fig,data,'confusion_counts',unit_label=unit_label,total=int(d['count'].sum()),
+    return stamp(fig,data,'confusion_counts',unit_label=unit_label,total=int(d['count'].sum()),label_order=labels,label_aliases=dict(zip(labels,shown)),figsize=list(map(float,figsize)),
                  semantics='Rows observed, columns predicted; no model fitting, threshold choice or accuracy calculation')
 
 

@@ -10,6 +10,7 @@ from matplotlib.colors import Normalize,TwoSlopeNorm,LinearSegmentedColormap
 from matplotlib.patches import Rectangle,Patch
 from figure_core import checked,stamp,palette_check
 from figure_multimodal import themed,axis,required_text,SIGNED
+from matrix_input import normalize_matrix, axis_labels, matrix_frame
 
 BLUE='#35618F';AMBER='#B87822';GREY='#7A838B'
 SEQ=LinearSegmentedColormap.from_list('polished_magnitude',['#FAFAF7','#C1D8E6',BLUE])
@@ -35,20 +36,21 @@ def contiguous_blocks(keys,mapping):
 @themed
 def plot_polished_matrix(data,*,value_label,limits,signed,row_aliases=None,
                          column_aliases=None,row_blocks=None,column_blocks=None,
-                         layout='matrix',width_mm=180,font_size=8.5,title='',note='',sign_marks=True):
+                         layout='matrix',width_mm=180,font_size=8.5,title='',note='',sign_marks=True,
+                         row_field='feature',column_field='sample',value_field='value',value_columns=None,
+                         row_order=None,column_order=None,missing='error',label_rotation=None,
+                         row_label_wrap=None,column_label_wrap=None):
     """All values/order retained; layout matrix, blocks or transpose; exact alias mapping."""
     required_text(value_label=value_label)
     if type(sign_marks) is not bool:raise ValueError('sign_marks must be boolean')
-    d=checked(data,['feature','sample','value'],['value'])
-    rows=list(dict.fromkeys(d.feature));cols=list(dict.fromkeys(d['sample']))
-    if d.duplicated(['feature','sample']).any() or len(d)!=len(rows)*len(cols):raise ValueError('Complete unique matrix required')
-    if len(rows)>100 or len(cols)>100:raise ValueError('Split oversized matrices without filtering')
+    d,rows,cols=normalize_matrix(data,row_field=row_field,column_field=column_field,value_field=value_field,
+                                 value_columns=value_columns,row_order=row_order,column_order=column_order,missing=missing)
     if layout not in ('matrix','blocks','transpose') or not 150<=width_mm<=240 or not 8<=font_size<=11:raise ValueError('Unsupported layout or final-size geometry')
     if len(limits)!=2 or not np.isfinite(limits).all() or limits[0]>=limits[1] or d.value.min()<limits[0] or d.value.max()>limits[1]:raise ValueError('Limits must contain every value')
     if type(signed) is not bool or (signed and not limits[0]<0<limits[1]):raise ValueError('Declare signed zero-centered or sequential scale')
     ra=display_map(rows,row_aliases);ca=display_map(cols,column_aliases)
     rb=contiguous_blocks(rows,row_blocks);cb=contiguous_blocks(cols,column_blocks)
-    mat=d.pivot(index='feature',columns='sample',values='value').reindex(index=rows,columns=cols).to_numpy()
+    mat=matrix_frame(d,rows,cols).to_numpy(dtype=float)
     norm=TwoSlopeNorm(0,*limits) if signed else Normalize(*limits)
     cmap=SIGNED if signed else SEQ
     if layout=='transpose':
@@ -59,7 +61,12 @@ def plot_polished_matrix(data,*,value_label,limits,signed,row_aliases=None,
         shown=mat;ykeys=rows;xkeys=cols;ylab=ra;xlab=ca
         groups=cb if layout=='blocks' else [('All',xkeys)]
         horizontal_blocks=rb
-    height=max(4.4,len(ykeys)*.215+2.15)
+    if row_label_wrap is not None and (type(row_label_wrap) is not int or row_label_wrap<1): raise ValueError('row_label_wrap must be a positive integer or None')
+    if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap<1): raise ValueError('column_label_wrap must be a positive integer or None')
+    ylab_display={k:textwrap.fill(v,row_label_wrap) if row_label_wrap else v for k,v in ylab.items()}
+    xlab_display={k:textwrap.fill(v,column_label_wrap) if column_label_wrap else v for k,v in xlab.items()}
+    row_lines=max((v.count('\n')+1 for v in ylab_display.values()),default=1)
+    height=max(4.4,len(ykeys)*max(.215,row_lines*.18)+2.15)
     fig=plt.figure(figsize=(width_mm/25.4,height))
     gs=fig.add_gridspec(1,len(groups),width_ratios=[len(k) for _,k in groups],wspace=.10 if layout=='blocks' else .0)
     fig.subplots_adjust(left=.22,right=.97,bottom=1.65/height,top=1-.75/height)
@@ -72,8 +79,9 @@ def plot_polished_matrix(data,*,value_label,limits,signed,row_aliases=None,
         ax.set_xlim(-.5,len(keys)-.5);ax.set_ylim(len(ykeys)-.5,-.5)
         if signed and sign_marks:
             for row,col in np.argwhere(values<0):ax.text(col,row,'−',ha='center',va='center',fontsize=font_size,color='#27323C')
-        ax.set_xticks(range(len(keys)),[xlab[k] for k in keys],rotation=90 if len(xkeys)>20 else 40,ha='center' if len(xkeys)>20 else 'right')
-        ax.set_yticks(range(len(ykeys)),[ylab[k] for k in ykeys]);ax.tick_params(length=0,labelsize=font_size,pad=4)
+        rotation=(90 if len(xkeys)>20 else 40) if label_rotation is None else label_rotation
+        ax.set_xticks(range(len(keys)),[xlab_display[k] for k in keys],rotation=rotation,ha='center' if rotation in (0,90) else 'right')
+        ax.set_yticks(range(len(ykeys)),[ylab_display[k] for k in ykeys]);ax.tick_params(length=0,labelsize=font_size,pad=4)
         if i:ax.tick_params(labelleft=False)
         for s in ax.spines.values():s.set_visible(False)
         ax.set_xticks(np.arange(len(keys)+1)-.5,minor=True)
@@ -105,7 +113,10 @@ def plot_polished_matrix(data,*,value_label,limits,signed,row_aliases=None,
     return stamp(fig,data,'polished_matrix',layout=layout,limits=list(limits),signed=signed,
                  value_label=value_label,sign_marks=bool(signed and sign_marks),palette={'low':'#0072B2','center':'#FAFAF7','high':'#D55E00'} if signed else {'low':'#FAFAF7','middle':'#C1D8E6','high':BLUE},row_aliases=ra,column_aliases=ca,row_blocks=row_blocks,
                  column_blocks=column_blocks,row_order=rows,column_order=cols,
-                 width_mm=width_mm,font_size=font_size,selection='all supplied rows; no reorder or transform')
+                 width_mm=width_mm,font_size=font_size,selection='all supplied rows; no reorder or transform',
+                 row_field=row_field,column_field=column_field,value_field=value_field,
+                 value_columns=list(value_columns) if value_columns is not None else None,missing=missing,
+                 label_rotation=rotation,row_label_wrap=row_label_wrap,column_label_wrap=column_label_wrap)
 
 def recorded_evidence_table(therapy,comedication):
     """Reversible union of exact input columns; table_kind identifies each source."""

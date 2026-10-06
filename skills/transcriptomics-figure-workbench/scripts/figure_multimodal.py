@@ -5,6 +5,7 @@ Python-only additive API. Existing R/Python interfaces are unchanged.
 from functools import wraps
 import textwrap
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 from figure_core import checked, stamp, palette_check, effect_reference
@@ -66,21 +67,32 @@ def plot_cohort_intervals(data,palette,*,effect_scale,effect_label,interval_labe
                  interval_label=interval_label,null_value=null,palette=palette,pooling='none',cohort_order=cohorts)
 
 @themed
-def plot_association_matrix(data,*,value_label,method_label,alpha=.05,title=''):
+def plot_association_matrix(data,*,value_label,method_label,alpha=.05,title='',
+                            row_field='feature',column_field='modality',row_order=None,column_order=None,
+                            row_aliases=None,column_aliases=None,cell_width=.7,cell_height=.36,label_rotation=25):
     """Frozen signed correlation with supplied FDR marks; missing entries hatch."""
     required_text(value_label=value_label,method_label=method_label)
-    d=checked(data,['feature','modality','status'])
+    d=checked(data,[row_field,column_field,'status'])
+    d=d.rename(columns={row_field:'feature',column_field:'modality'})
     if not {'value','q','n'}.issubset(d.columns) or not set(d.status).issubset({'estimable','unavailable'}):
         raise ValueError('Require status, value, q and matched n')
-    rows=list(dict.fromkeys(d.feature));cols=list(dict.fromkeys(d.modality))
-    if len(rows)>24 or len(cols)>12 or d.duplicated(['feature','modality']).any() or len(d)!=len(rows)*len(cols):
-        raise ValueError('Explicit complete grid required (max24x12)')
+    rows=list(pd.unique(d.feature));cols=list(pd.unique(d.modality))
+    if row_order is not None:
+        row_order=list(row_order)
+        if len(row_order)!=len(set(row_order)) or set(row_order)!=set(rows):raise ValueError('row_order must cover every row')
+        rows=row_order
+    if column_order is not None:
+        column_order=list(column_order)
+        if len(column_order)!=len(set(column_order)) or set(column_order)!=set(cols):raise ValueError('column_order must cover every column')
+        cols=column_order
+    if d.duplicated(['feature','modality']).any() or len(d)!=len(rows)*len(cols):
+        raise ValueError('Explicit complete grid required')
     z=d[d.status=='estimable'];checked(z,['value','q','n'],['value','q','n'])
     if not 0<alpha<1 or ((z.value.abs()>1)|(z.q<0)|(z.q>1)|(z.n<3)|(z.n%1!=0)).any():
         raise ValueError('Correlation [-1,1], FDR [0,1], integer matched n>=3 required')
     if d.loc[d.status=='unavailable',['value','q','n']].notna().any().any():
         raise ValueError('Unavailable values must remain missing, never zero')
-    fig,ax=plt.subplots(figsize=(max(5.5,len(cols)*.7+2.8),max(3.6,len(rows)*.36+1.8)))
+    fig,ax=plt.subplots(figsize=(max(5.5,len(cols)*float(cell_width)+2.8),max(3.6,len(rows)*float(cell_height)+1.8)))
     fig.subplots_adjust(left=.30,right=.86,bottom=.27,top=.85)
     values=d.pivot(index='feature',columns='modality',values='value').reindex(index=rows,columns=cols).to_numpy(dtype=float)
     im=ax.imshow(np.ma.masked_invalid(values),cmap=SIGNED,norm=TwoSlopeNorm(0,-1,1),aspect='auto')
@@ -96,13 +108,18 @@ def plot_association_matrix(data,*,value_label,method_label,alpha=.05,title=''):
             label=f'{r.value:+.2f}' if len(rows)<=12 and len(cols)<=8 else ('+' if r.value>0 else '−' if r.value<0 else '0')
             ax.text(j,i,label,ha='center',va='center',fontsize=8,color=ink)
             if r.q<=alpha:ax.text(j+.30,i-.27,'•',ha='center',va='center',fontsize=8,color=ink)
-    ax.set_xticks(range(len(cols)),[textwrap.fill(str(x),13) for x in cols],rotation=25,ha='right')
-    ax.set_yticks(range(len(rows)),[textwrap.fill(str(x),25) for x in rows]);ax.tick_params(length=0)
+    xlabels=[str((column_aliases or {}).get(x,x)) for x in cols];ylabels=[str((row_aliases or {}).get(x,x)) for x in rows]
+    if len(set(xlabels))!=len(xlabels) or len(set(ylabels))!=len(ylabels):raise ValueError('Axis aliases must be unique')
+    ax.set_xticks(range(len(cols)),[textwrap.fill(x,13) for x in xlabels],rotation=label_rotation,ha='right' if label_rotation else 'center')
+    ax.set_yticks(range(len(rows)),[textwrap.fill(x,25) for x in ylabels]);ax.tick_params(length=0)
     for s in ax.spines.values():s.set_visible(False)
     ax.set_title(title,pad=12);fig.colorbar(im,ax=ax,fraction=.04,pad=.04,label=value_label)
     fig.text(.30,.09,f'• supplied FDR ≤ {alpha:g}; hatching = unavailable\n{method_label}; matched n in source table',fontsize=8)
     return stamp(fig,data,'association_matrix',value_label=value_label,method_label=method_label,
-                 limits=[-1,1],alpha=alpha,missing='explicit_hatched_not_zero',statistics='frozen_no_fit')
+                 limits=[-1,1],alpha=alpha,missing='explicit_hatched_not_zero',statistics='frozen_no_fit',
+                 row_field=row_field,column_field=column_field,row_order=rows,column_order=cols,
+                 row_aliases=dict(zip(rows,ylabels)),column_aliases=dict(zip(cols,xlabels)),
+                 label_rotation=label_rotation)
 
 @themed
 def plot_calibration_counts(data,palette,*,interval_label,evaluation_label,title=''):

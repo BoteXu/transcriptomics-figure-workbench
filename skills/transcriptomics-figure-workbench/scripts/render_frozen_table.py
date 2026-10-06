@@ -74,6 +74,13 @@ def load_table(path,adapter,params):
     numeric=ADAPTERS[adapter][1].split()
     if adapter=='two_set_overlap':numeric+=list(params.get('set_columns',[]))
     if adapter=='ternary':numeric+=list(params.get('components',[]))
+    # Matrix renderers may rename their axes/value field or accept an explicit
+    # wide value-column list.  Parse only declared numeric channels; identifier
+    # columns remain strings (including leading-zero IDs).
+    for key in ('value_field','value_column','row_count_field','effect_field','estimate_field','lower_field','upper_field','padj_field'):
+        value=params.get(key)
+        if isinstance(value,str):numeric.append(value)
+    if isinstance(params.get('value_columns'),(list,tuple)):numeric.extend(params['value_columns'])
     for c in set(numeric)&set(data.columns):data[c]=pd.to_numeric(data[c],errors='raise')
     return data
 

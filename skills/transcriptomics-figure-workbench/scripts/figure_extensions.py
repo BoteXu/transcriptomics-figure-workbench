@@ -5,6 +5,7 @@ See references/expanded-patterns.md for provenance and interpretation limits.
 """
 import numpy as np
 import pandas as pd
+import textwrap
 import matplotlib.pyplot as plt
 from matplotlib.colors import TwoSlopeNorm, to_rgba
 from matplotlib.patches import Patch
@@ -27,8 +28,11 @@ def plot_paired(data, palette, condition_order, y_label):
     return stamp(fig,data,'paired',condition_order=list(condition_order),palette=palette,y_label=y_label,n_subjects=len(mat))
 
 
-def plot_effect_matrix(data, effect_label, *, effect_scale, evidence_cap=6):
-    d=checked(data,['feature','contrast','estimate','lower','upper','padj'],['estimate','lower','upper','padj'])
+def plot_effect_matrix(data, effect_label, *, effect_scale, evidence_cap=6,
+                       row_field='feature',column_field='contrast',row_order=None,column_order=None,
+                       row_aliases=None,column_aliases=None,cell_width=1.1,cell_height=.4):
+    d=checked(data,[row_field,column_field,'estimate','lower','upper','padj'],['estimate','lower','upper','padj'])
+    d=d.rename(columns={row_field:'feature',column_field:'contrast'})
     effect_reference(effect_scale)
     if d.duplicated(['feature','contrast']).any() or len(d)!=d.feature.nunique()*d.contrast.nunique():
         raise ValueError('Effect matrix must be a complete unique grid; unestimable comparisons belong in a separate table')
@@ -38,8 +42,16 @@ def plot_effect_matrix(data, effect_label, *, effect_scale, evidence_cap=6):
     colors=np.log2(d.estimate) if effect_scale=='ratio' else d.estimate
     score=np.minimum(-np.log10(d.padj),evidence_cap)
     rows=list(pd.unique(d.feature)); cols=list(pd.unique(d.contrast))
+    if row_order is not None:
+        row_order=list(row_order)
+        if len(row_order)!=len(set(row_order)) or set(row_order)!=set(rows):raise ValueError('row_order must cover every row')
+        rows=row_order
+    if column_order is not None:
+        column_order=list(column_order)
+        if len(column_order)!=len(set(column_order)) or set(column_order)!=set(cols):raise ValueError('column_order must cover every column')
+        cols=column_order
     x=[cols.index(v) for v in d.contrast]; y=[rows.index(v) for v in d.feature]
-    fig,ax=canvas(); fig.set_size_inches(max(7.1,len(cols)*1.1),max(4.5,len(rows)*.4+1.5))
+    fig,ax=canvas(); fig.set_size_inches(max(7.1,len(cols)*float(cell_width)),max(4.5,len(rows)*float(cell_height)+1.5))
     ax.scatter(x,y,s=180,facecolors='none',edgecolors='#D8DDE2',marker='s',linewidths=.6)
     extent=max(abs(colors).max(),1e-9)
     dots=ax.scatter(x,y,s=score/evidence_cap*160,c=colors,cmap='RdBu_r',norm=TwoSlopeNorm(0,-extent,extent))
@@ -47,26 +59,47 @@ def plot_effect_matrix(data, effect_label, *, effect_scale, evidence_cap=6):
     levels=sorted(set([min(1,evidence_cap),min(3,evidence_cap),evidence_cap]))
     ax.legend(handles=[ax.scatter([],[],s=v/evidence_cap*160,color='#5D6975',label=f'{v:g}') for v in levels],
               title=f'-log10(FDR)\ncapped at {evidence_cap:g}',loc='upper left',bbox_to_anchor=(1.3,1),frameon=False)
-    ax.set_xticks(range(len(cols)),cols,rotation=30,ha='right'); ax.set_yticks(range(len(rows)),rows)
+    xl=[str((column_aliases or {}).get(x,x)) for x in cols];yl=[str((row_aliases or {}).get(x,x)) for x in rows]
+    if len(set(xl))!=len(xl) or len(set(yl))!=len(yl):raise ValueError('Axis aliases must be unique')
+    ax.set_xticks(range(len(cols)),xl,rotation=30,ha='right'); ax.set_yticks(range(len(rows)),yl)
     ax.invert_yaxis(); ax.margins(.15)
     return stamp(fig,data,'effect_matrix',effect_scale=effect_scale,effect_label=effect_label,
                  area='min(-log10(padj), evidence_cap)',evidence_cap=evidence_cap,
-                 empty_square='supplied estimable comparison with zero-sized evidence dot possible')
+                 empty_square='supplied estimable comparison with zero-sized evidence dot possible',
+                 row_field=row_field,column_field=column_field,row_order=rows,column_order=cols,
+                 row_aliases=dict(zip(rows,yl)),column_aliases=dict(zip(cols,xl)))
 
 
 def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, scale_type,
-                           column_annotation_label='Column group', row_annotation_label='Feature block'):
-    d=checked(data,['feature','sample','value','sample_group','feature_block'],['value'])
+                           column_annotation_label='Column group', row_annotation_label='Feature block',
+                           row_field='feature',column_field='sample',value_field='value',
+                           column_annotation_field='sample_group',row_annotation_field='feature_block',
+                           row_order=None,column_order=None,row_aliases=None,column_aliases=None,
+                           cell_width=.45,cell_height=.30,row_label_wrap=None,column_label_wrap=None):
+    d=checked(data,[row_field,column_field,value_field,column_annotation_field,row_annotation_field],[value_field])
+    d=d.rename(columns={row_field:'feature',column_field:'sample',value_field:'value',column_annotation_field:'sample_group',row_annotation_field:'feature_block'})
     if d.duplicated(['feature','sample']).any() or len(d)!=d.feature.nunique()*d['sample'].nunique(): raise ValueError('Incomplete or duplicate heatmap grid')
     if (d.groupby('sample').sample_group.nunique()!=1).any() or (d.groupby('feature').feature_block.nunique()!=1).any(): raise ValueError('Annotation ID mismatch')
     if scale_type not in ('signed','sequential'): raise ValueError('Declare signed or sequential scale')
     palette_check(d.sample_group,group_palette); palette_check(d.feature_block,block_palette)
     rows=list(pd.unique(d.feature)); cols=list(pd.unique(d['sample']))
+    if row_order is not None:
+        row_order=list(row_order)
+        if len(row_order)!=len(set(row_order)) or set(row_order)!=set(rows):raise ValueError('row_order must cover every row')
+        rows=row_order
+    if column_order is not None:
+        column_order=list(column_order)
+        if len(column_order)!=len(set(column_order)) or set(column_order)!=set(cols):raise ValueError('column_order must cover every column')
+        cols=column_order
     mat=d.pivot(index='feature',columns='sample',values='value').reindex(index=rows,columns=cols)
     groups=d.drop_duplicates('sample').set_index('sample').loc[cols,'sample_group']
     blocks=d.drop_duplicates('feature').set_index('feature').loc[rows,'feature_block']
     # Explicit panels reserve room for shared titles/captions and annotation legends.
-    fig=plt.figure(figsize=(max(8,len(cols)*.45+3),max(5,len(rows)*.3+2)))
+    xlabels=[str((column_aliases or {}).get(x,x)) for x in cols];ylabels=[str((row_aliases or {}).get(x,x)) for x in rows]
+    if len(set(xlabels))!=len(xlabels) or len(set(ylabels))!=len(ylabels):raise ValueError('Axis aliases must be unique')
+    xlabels=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in xlabels]
+    ylabels=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in ylabels]
+    fig=plt.figure(figsize=(max(8,len(cols)*float(cell_width)+3+min(max(len(x) for x in ylabels)-16,0)*.025),max(5,len(rows)*float(cell_height)+2)))
     grid=fig.add_gridspec(2,1,height_ratios=[.035,1],
                          left=.22,right=.69,bottom=.24,top=.88,hspace=.04)
     ax=fig.add_subplot(grid[1,0]); top=fig.add_subplot(grid[0,0])
@@ -79,7 +112,7 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
     top.imshow(np.array([[to_rgba(group_palette[g]) for g in groups]]),aspect='auto')
     left.imshow(np.array([[to_rgba(block_palette[g])] for g in blocks]),aspect='auto')
     top.set_axis_off(); left.set_axis_off()
-    ax.set_xticks(range(len(cols)),cols,rotation=45,ha='right'); ax.set_yticks(range(len(rows)),rows)
+    ax.set_xticks(range(len(cols)),xlabels,rotation=45,ha='right'); ax.set_yticks(range(len(rows)),ylabels)
     cax=fig.add_axes([.75,.18,.20,.025])
     colorbar=fig.colorbar(im,cax=cax,orientation='horizontal'); colorbar.set_label(value_label,fontsize=8)
     colorbar.ax.tick_params(labelsize=8)
@@ -93,7 +126,9 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
     return stamp(fig,data,'annotated_heatmap',value_label=value_label,scale_type=scale_type,
                  group_palette=group_palette,block_palette=block_palette,
                  column_annotation_label=column_annotation_label,row_annotation_label=row_annotation_label,
-                 ordering='first appearance; no clustering')
+                 ordering='declared order or first appearance; no clustering',row_field=row_field,column_field=column_field,value_field=value_field,
+                 column_annotation_field=column_annotation_field,row_annotation_field=row_annotation_field,row_order=rows,column_order=cols,
+                 row_aliases=dict(zip(rows,ylabels)),column_aliases=dict(zip(cols,xlabels)))
 
 
 def plot_score_comparison(data, score_label, condition_labels):

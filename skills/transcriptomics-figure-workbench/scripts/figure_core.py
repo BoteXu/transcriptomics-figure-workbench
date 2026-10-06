@@ -10,6 +10,7 @@ import re
 import os
 import shutil
 import tempfile
+import textwrap
 
 import matplotlib
 matplotlib.use('Agg')
@@ -17,6 +18,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm, to_rgba
 import numpy as np
 import pandas as pd
+from matrix_input import normalize_matrix, axis_labels, matrix_frame
 
 def table_bytes(data):
     """Hash and export exactly the same UTF-8 TSV bytes, including row order."""
@@ -121,45 +123,126 @@ def plot_volcano(data, alpha=.05, fc=1):
     ax.legend(handles=[Line2D([],[],marker='o',linestyle='',color=c,label=l) for l,c in [('Up','#B84E35'),('Down','#35618F'),('Other','#BFC5CB')]],frameon=False)
     return stamp(fig, data, 'volcano', alpha=alpha, fc=fc)
 
-def plot_dot(data, value_label, *, value_semantics, denominator_label):
-    d = checked(data,['feature','group','fraction','value'],['fraction','value'])
-    if d.duplicated(['feature','group']).any() or ((d.fraction<0)|(d.fraction>1)).any():
+def plot_dot(data, value_label, *, value_semantics, denominator_label,
+             row_field='feature', column_field='group', fraction_field='fraction',
+             value_field='value', row_order=None, column_order=None,
+             row_aliases=None, column_aliases=None, row_label_wrap=None,
+             column_label_wrap=None, label_rotation=None, figsize=None):
+    required=[row_field,column_field,fraction_field,value_field]
+    d0=checked(data,required,[fraction_field,value_field])
+    if d0.duplicated([row_field,column_field]).any() or ((d0[fraction_field]<0)|(d0[fraction_field]>1)).any():
         raise ValueError('Invalid dot table')
     if value_semantics not in ('mean_all', 'mean_detected', 'scaled', 'signed_effect'):
         raise ValueError('Declare dot color semantics')
     if not isinstance(denominator_label, str) or not denominator_label.strip():
         raise ValueError('A detection denominator label is required')
-    groups = list(pd.unique(d.group)); features = list(pd.unique(d.feature))
-    fig,ax=canvas()
+    d,features,groups=normalize_matrix(d0,row_field=row_field,column_field=column_field,value_field=value_field,
+                                        row_order=row_order,column_order=column_order)
+    fraction=d0[[row_field,column_field,fraction_field]].rename(columns={row_field:'feature',column_field:'sample',fraction_field:'fraction'})
+    fraction=fraction.drop_duplicates(['feature','sample']).set_index(['feature','sample']).reindex(
+        pd.MultiIndex.from_product([features,groups],names=['feature','sample']))['fraction'].to_numpy()
+    labels_x=axis_labels(groups,column_aliases,'column'); labels_y=axis_labels(features,row_aliases,'row')
+    if row_label_wrap is not None and (type(row_label_wrap) is not int or row_label_wrap<1): raise ValueError('row_label_wrap must be a positive integer or None')
+    if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap<1): raise ValueError('column_label_wrap must be a positive integer or None')
+    labels_x=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in labels_x]
+    labels_y=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in labels_y]
+    if figsize is None:
+        row_lines=max((x.count('\n')+1 for x in labels_y),default=1)
+        figsize=(max(7.1,len(groups)*.55+3.6),max(4.5,len(features)*max(.27,row_lines*.18)+1.8))
+    if not isinstance(figsize,(tuple,list)) or len(figsize)!=2 or any(float(x)<=0 for x in figsize): raise ValueError('figsize must be a positive (width, height) pair')
+    fig,ax=canvas(); fig.set_layout_engine(None); fig.set_size_inches(float(figsize[0]),float(figsize[1]))
     color_args = dict(cmap='Blues')
     if value_semantics in ('scaled','signed_effect'):
         extent = max(abs(d.value).max(), 1e-9)
         color_args = dict(cmap='RdBu_r', norm=TwoSlopeNorm(0,-extent,extent))
-    dots=ax.scatter([groups.index(g) for g in d.group],[features.index(g) for g in d.feature],s=d.fraction*150,c=d.value,edgecolors='none',**color_args)
-    ax.set_xticks(range(len(groups)),groups,rotation=45 if len(groups)>4 else 0,
-                  ha='right' if len(groups)>4 else 'center')
-    ax.set_yticks(range(len(features)),features)
+    dots=ax.scatter([groups.index(g) for g in d['sample']],[features.index(g) for g in d['feature']],s=fraction*150,c=d['value'],edgecolors='none',**color_args)
+    rotation=(45 if len(groups)>4 else 0) if label_rotation is None else label_rotation
+    ax.set_xticks(range(len(groups)),labels_x,rotation=rotation,ha='right' if rotation else 'center')
+    ax.set_yticks(range(len(features)),labels_y)
     fig.colorbar(dots,ax=ax,label=value_label)
     handles=[ax.scatter([],[],s=f*150,color='#35618F',label=f'{f:.0%}') for f in [.25,.5,1]]
     ax.legend(handles=handles,title=denominator_label,loc='upper left',bbox_to_anchor=(1.3,1),frameon=False)
     ax.margins(.2)
+    fig.subplots_adjust(left=min(.52,max(.12,.12+max((len(x.replace('\n','')) for x in labels_y),default=0)*.0045)),bottom=.23 if rotation else .16,right=.84)
     return stamp(fig, data, 'dot', value_label=value_label, value_semantics=value_semantics,
-                 denominator_label=denominator_label, area='fraction')
+                 denominator_label=denominator_label, area='fraction',row_field=row_field,column_field=column_field,
+                 fraction_field=fraction_field,value_field=value_field,row_order=features,column_order=groups,
+                 row_aliases=dict(zip(features,labels_y)),column_aliases=dict(zip(groups,labels_x)),figsize=list(map(float,figsize)))
 
-def plot_heatmap(data, value_label, center=0, *, scale_type='signed'):
-    d=checked(data,['feature','sample','value'],['value'])
-    if d.duplicated(['feature','sample']).any(): raise ValueError('Duplicate matrix cells')
-    if len(d)!=d.feature.nunique()*d['sample'].nunique(): raise ValueError('Incomplete heatmap grid')
-    features=list(pd.unique(d.feature)); samples=list(pd.unique(d['sample']))
-    mat=d.pivot(index='feature',columns='sample',values='value').reindex(index=features,columns=samples)
-    fig,ax=canvas(); extent=max(abs(d.value.min()-center),abs(d.value.max()-center),1e-9)
+def plot_heatmap(data, value_label, center=0, *, scale_type='signed',
+                 row_field='feature', column_field='sample', value_field='value',
+                 value_columns=None, row_order=None, column_order=None,
+                 row_aliases=None, column_aliases=None, missing='error',
+                 figsize=None, cell_width=.44, cell_height=.27,
+                 label_rotation=45, show_labels=True, row_label_mode='all',
+                 column_label_mode='all', row_label_wrap=None, column_label_wrap=None,
+                 label_fontsize=None, title=''):
+    """Draw a signed/sequential heatmap from a long or wide matrix.
+
+    The original three-column ``feature/sample/value`` call remains valid.
+    For a wide table pass ``row_field`` and (when annotations are present)
+    ``value_columns``.  Orders are display orders only and must include every
+    supplied ID; absent cells can be explicitly rendered as masked cells with
+    ``missing='mask'``.  No row/column count is fixed in the renderer.
+    """
+    d,features,samples=normalize_matrix(data,row_field=row_field,column_field=column_field,
+                                        value_field=value_field,value_columns=value_columns,
+                                        row_order=row_order,column_order=column_order,missing=missing)
+    labels_x=axis_labels(samples,column_aliases,'column');labels_y=axis_labels(features,row_aliases,'row')
+    if row_label_mode not in ('all','none') or column_label_mode not in ('all','none'):
+        raise ValueError("row_label_mode and column_label_mode must be 'all' or 'none'")
+    if row_label_wrap is not None and (type(row_label_wrap) is not int or row_label_wrap < 1):
+        raise ValueError('row_label_wrap must be a positive integer or None')
+    if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap < 1):
+        raise ValueError('column_label_wrap must be a positive integer or None')
+    labels_x_display=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in labels_x]
+    labels_y_display=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in labels_y]
+    mat=matrix_frame(d,features,samples)
+    fig,ax=canvas()
+    fig.set_layout_engine(None)
+    if figsize is None:
+        # Keep every row name visible by default. Width tracks long column
+        # labels; height tracks rows and wrapped row-label lines.
+        row_lines=max((x.count('\n')+1 for x in labels_y_display),default=1)
+        row_width=max((len(x.replace('\n','')) for x in labels_y_display),default=0)
+        row_stride=max(float(cell_height),row_lines*.18)
+        figsize=(max(7.1+min(max(row_width-16,0),80)*.025,len(samples)*float(cell_width)+3.6+min(max(len(x) for x in labels_x),48)*.015),
+                 max(4.5,len(features)*row_stride+1.8))
+    if not isinstance(figsize,(tuple,list)) or len(figsize)!=2 or any(float(x)<=0 for x in figsize):
+        raise ValueError('figsize must be a positive (width, height) pair')
+    fig.set_size_inches(float(figsize[0]),float(figsize[1]))
+    finite=d.value.to_numpy(dtype=float)
+    extent=max(abs(finite.min()-center),abs(finite.max()-center),1e-9)
     cmap=LinearSegmentedColormap.from_list('omics',['#35618F','#F7F7F5','#B84E35'])
     if scale_type not in ('signed','sequential'): raise ValueError('Unknown heatmap scale')
-    im=ax.imshow(mat,aspect='auto',cmap=cmap if scale_type=='signed' else 'Blues',
+    shown=np.ma.masked_invalid(mat.to_numpy(dtype=float)) if missing=='mask' else mat.to_numpy(dtype=float)
+    im=ax.imshow(shown,aspect='auto',cmap=cmap if scale_type=='signed' else 'Blues',
                  norm=TwoSlopeNorm(center,center-extent,center+extent) if scale_type=='signed' else None)
-    ax.set_xticks(range(len(samples)),samples,rotation=45,ha='right'); ax.set_yticks(range(len(features)),features)
+    font_kwargs={} if label_fontsize is None else {'fontsize':label_fontsize}
+    if show_labels and row_label_mode=='all' and column_label_mode=='all':
+        ax.set_xticks(range(len(samples)),labels_x_display,rotation=label_rotation,ha='right' if label_rotation else 'center',**font_kwargs)
+        ax.set_yticks(range(len(features)),labels_y_display,**font_kwargs)
+    elif show_labels:
+        ax.set_xticks(range(len(samples)),labels_x_display if column_label_mode=='all' else [],rotation=label_rotation,ha='right' if label_rotation else 'center',**font_kwargs)
+        ax.set_yticks(range(len(features)),labels_y_display if row_label_mode=='all' else [],**font_kwargs)
+    else:
+        ax.set_xticks([]);ax.set_yticks([])
     fig.colorbar(im,ax=ax,label=value_label)
-    return stamp(fig, data, 'heatmap', value_label=value_label, scale_type=scale_type, center=center)
+    if title: ax.set_title(title,loc='left')
+    # A long identity label needs a real left margin; never clip it merely
+    # because an example happened to use short gene symbols.
+    if show_labels and row_label_mode=='all':
+        left=min(.52,max(.12,.12+max((len(x.replace('\n','')) for x in labels_y_display),default=0)*.0045))
+        bottom=.23 if label_rotation else .16
+        fig.subplots_adjust(left=left,bottom=bottom,right=.86,top=.91)
+    return stamp(fig, data, 'heatmap', value_label=value_label, scale_type=scale_type, center=center,
+                 row_field=row_field,column_field=column_field,value_field=value_field,
+                 value_columns=list(value_columns) if value_columns is not None else None,
+                 row_order=features,column_order=samples,row_aliases=dict(zip(features,labels_y)),
+                 column_aliases=dict(zip(samples,labels_x)),missing=missing,figsize=list(map(float,figsize)),
+                 label_rotation=label_rotation,show_labels=bool(show_labels),row_label_mode=row_label_mode,
+                 column_label_mode=column_label_mode,row_label_wrap=row_label_wrap,column_label_wrap=column_label_wrap,
+                 label_fontsize=label_fontsize,title=title)
 
 def plot_qc(data,y_label):
     d=checked(data,['cell_id','sample','value'],['value'])

@@ -109,19 +109,34 @@ plot_dot <- function(d,value_label,value_semantics,denominator_label) {
   if(length(unique(d$group))>4) p <- p+ggplot2::theme(axis.text.x=ggplot2::element_text(angle=45,hjust=1))
   stamp(p,d,'dot',value_label=value_label,value_semantics=value_semantics,denominator_label=denominator_label,area='fraction')
 }
-plot_heatmap <- function(d,value_label,center=0,scale_type='signed') {
-  cols_ok(d,c('feature','sample','value')); finite_ok(d,'value')
-  if (anyDuplicated(d[c('feature','sample')])) stop('Duplicate matrix cells')
-  # Require an explicit complete grid to avoid treating absent tiles as zeros.
-  if (nrow(d)!=length(unique(d$feature))*length(unique(d$sample))) stop('Incomplete heatmap grid')
+plot_heatmap <- function(d,value_label,center=0,scale_type='signed',
+                         row_field='feature',column_field='sample',value_field='value',
+                         row_order=NULL,column_order=NULL,row_aliases=NULL,column_aliases=NULL,
+                         missing='error',label_wrap=NULL) {
+  cols_ok(d,c(row_field,column_field,value_field)); finite_ok(d,value_field)
+  if (anyDuplicated(d[c(row_field,column_field)])) stop('Duplicate matrix cells')
+  rows <- unique(d[[row_field]]); cols <- unique(d[[column_field]])
+  if (!is.null(row_order)) { if (length(row_order)!=length(unique(row_order)) || !setequal(row_order,rows)) stop('row_order must cover every supplied row'); rows <- row_order }
+  if (!is.null(column_order)) { if (length(column_order)!=length(unique(column_order)) || !setequal(column_order,cols)) stop('column_order must cover every supplied column'); cols <- column_order }
+  if (!missing %in% c('error','mask')) stop("missing must be 'error' or 'mask'")
+  if (nrow(d)!=length(rows)*length(cols) && missing=='error') stop("Incomplete heatmap grid; use missing='mask' to display absent cells")
   need('ggplot2')
   if(!scale_type %in% c('signed','sequential')) stop('Unknown heatmap scale')
-  p <- ggplot2::ggplot(d,ggplot2::aes(sample,feature,fill=value)) + ggplot2::geom_tile() +
+  aliases <- function(keys,map,label) {
+    out <- as.character(keys)
+    if (!is.null(map)) { if (is.null(names(map)) || !setequal(names(map),as.character(keys))) stop(paste0(label,'_aliases must cover every supplied identifier')); out <- as.character(map[as.character(keys)]) }
+    if (any(!nzchar(out)) || anyDuplicated(out)) stop(paste0(label,'_aliases must be nonempty and unique'))
+    if (!is.null(label_wrap)) out <- vapply(out,function(x) paste(strwrap(x,width=label_wrap),collapse='\n'),character(1))
+    out
+  }
+  d[[row_field]] <- factor(d[[row_field]],levels=rows,labels=aliases(rows,row_aliases,'row'))
+  d[[column_field]] <- factor(d[[column_field]],levels=cols,labels=aliases(cols,column_aliases,'column'))
+  p <- ggplot2::ggplot(d,ggplot2::aes(.data[[column_field]],.data[[row_field]],fill=.data[[value_field]])) + ggplot2::geom_tile() +
     theme_omics() + ggplot2::theme(axis.text.x=ggplot2::element_text(angle=45,hjust=1)) +
-    ggplot2::labs(x=NULL,y=NULL,fill=value_label)
+    ggplot2::labs(x=NULL,y=NULL,fill=value_label) + ggplot2::scale_x_discrete(drop=FALSE) + ggplot2::scale_y_discrete(drop=FALSE)
   if(scale_type=='signed') p <- p+ggplot2::scale_fill_gradient2(low='#35618F',mid='#F7F7F5',high='#B84E35',midpoint=center)
   else p <- p+ggplot2::scale_fill_gradient(low='#F7FBFF',high='#173F70')
-  stamp(p,d,'heatmap',value_label=value_label,scale_type=scale_type,center=center)
+  stamp(p,d,'heatmap',value_label=value_label,scale_type=scale_type,center=center,row_field=row_field,column_field=column_field,value_field=value_field,row_order=rows,column_order=cols,missing=missing)
 }
 plot_qc <- function(d,y_label) {
   cols_ok(d,c('cell_id','sample','value')); finite_ok(d,'value'); need('ggplot2')

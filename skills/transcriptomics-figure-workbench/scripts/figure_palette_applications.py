@@ -5,6 +5,7 @@ All panel types can be used with different palettes without changing table value
 """
 import numpy as np
 import pandas as pd
+import textwrap
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize, LinearSegmentedColormap
 from matplotlib.patches import Polygon, Ellipse, Rectangle, Circle, FancyArrowPatch
@@ -93,14 +94,34 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=(10,13),font_family=
                 else: ax.bar(range(len(cats)),sub.value,bottom=bottom_values,width=.7,color=pal[g],label=g); bottom_values+=sub.value.to_numpy()
             ax.set_xticks(range(len(cats)),cats,fontsize=7); ax.legend(frameon=False,fontsize=6,ncols=1 if layout=='panel' else min(3,len(groups)),loc='upper left' if layout=='panel' else 'best',bbox_to_anchor=(1.03,1) if layout=='panel' else None)
         elif typ in ('matrix','bubble_matrix','clustered_matrix'):
-            d=_records(src,'matrix',['row','column','value'],['value']); mat,rs,cs=_grid(d,'row','column','value'); lo,hi=spec['color_limits']
-            if ((d.value<lo)|(d.value>hi)).any(): raise ValueError('Clipped matrix values')
+            row_field=spec.get('row_field','row'); column_field=spec.get('column_field','column'); value_field=spec.get('value_field','value')
+            d=_records(src,'matrix',[row_field,column_field,value_field],[value_field]); mat,rs,cs=_grid(d,row_field,column_field,value_field)
+            row_order=spec.get('row_order'); column_order=spec.get('column_order')
+            if row_order is not None:
+                row_order=list(row_order)
+                if len(row_order)!=len(set(row_order)) or set(row_order)!=set(rs): raise ValueError('row_order must cover every matrix row')
+                rs=row_order; mat=mat.reindex(index=rs)
+            if column_order is not None:
+                column_order=list(column_order)
+                if len(column_order)!=len(set(column_order)) or set(column_order)!=set(cs): raise ValueError('column_order must cover every matrix column')
+                cs=column_order; mat=mat.reindex(columns=cs)
+            lo,hi=spec['color_limits']
+            if ((d[value_field]<lo)|(d[value_field]>hi)).any(): raise ValueError('Clipped matrix values')
             cmap=LinearSegmentedColormap.from_list('plate_signed',spec.get('continuous_colors',[spec.get('negative',colors[0]),spec.get('neutral','#FFFFFF'),spec.get('positive',colors[-1])]))
             if typ in ('matrix','clustered_matrix'): im=ax.imshow(mat,cmap=cmap,vmin=lo,vmax=hi,aspect='auto')
             else:
-                im=ax.scatter([cs.index(c) for c in d.column],[rs.index(r) for r in d.row],s=d.value.abs()*180,c=d.value,cmap=cmap,vmin=lo,vmax=hi,lw=0); ax.set(xlim=(-.5,len(cs)-.5),ylim=(len(rs)-.5,-.5)); ax.grid(color='#E5E8EB',lw=.4); ax.set_axisbelow(True)
-            xt=np.linspace(0,len(cs)-1,min(8,len(cs))).astype(int); yt=np.linspace(0,len(rs)-1,min(8,len(rs))).astype(int)
-            ax.set_xticks(xt,[cs[i] for i in xt],fontsize=6); ax.set_yticks(yt,[rs[i] for i in yt],fontsize=6)
+                im=ax.scatter([cs.index(c) for c in d[column_field]],[rs.index(r) for r in d[row_field]],s=d[value_field].abs()*180,c=d[value_field],cmap=cmap,vmin=lo,vmax=hi,lw=0); ax.set(xlim=(-.5,len(cs)-.5),ylim=(len(rs)-.5,-.5)); ax.grid(color='#E5E8EB',lw=.4); ax.set_axisbelow(True)
+            row_aliases=spec.get('row_aliases',{}); column_aliases=spec.get('column_aliases',{})
+            if set(row_aliases)!=set(rs) or set(column_aliases)!=set(cs):
+                if row_aliases or column_aliases: raise ValueError('Matrix aliases must cover every displayed row and column')
+            xlabels=[str(column_aliases.get(x,x)) for x in cs]; ylabels=[str(row_aliases.get(x,x)) for x in rs]
+            if len(set(xlabels))!=len(xlabels) or len(set(ylabels))!=len(ylabels): raise ValueError('Matrix aliases must be unique')
+            wrap_x=spec.get('column_label_wrap'); wrap_y=spec.get('row_label_wrap')
+            if wrap_x is not None and (type(wrap_x) is not int or wrap_x<1): raise ValueError('column_label_wrap must be a positive integer or None')
+            if wrap_y is not None and (type(wrap_y) is not int or wrap_y<1): raise ValueError('row_label_wrap must be a positive integer or None')
+            xlabels=[textwrap.fill(x,wrap_x) if wrap_x else x for x in xlabels]; ylabels=[textwrap.fill(x,wrap_y) if wrap_y else x for x in ylabels]
+            rotation=spec.get('label_rotation',90 if len(cs)>12 else 45)
+            ax.set_xticks(range(len(cs)),xlabels,rotation=rotation,ha='right' if rotation else 'center',fontsize=spec.get('label_fontsize',6)); ax.set_yticks(range(len(rs)),ylabels,fontsize=spec.get('label_fontsize',6))
             cb=fig.colorbar(im,ax=ax,fraction=.035,pad=.04); cb.set_label(spec['color_label'],fontsize=7); cb.ax.tick_params(labelsize=6)
             if typ=='bubble_matrix' and layout=='panel':
                 levels=[max(abs(lo),abs(hi))*f for f in (.2,.5,1)]
