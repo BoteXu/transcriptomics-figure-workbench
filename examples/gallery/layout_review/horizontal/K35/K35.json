@@ -1,0 +1,113 @@
+{
+  "status": "COMPOSED_UNREVIEWED",
+  "layout": {
+    "id": "K35",
+    "title": "色谱读出＋实测与参考碎片谱",
+    "size_pt": [
+      964,
+      416
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          28,
+          40,
+          468,
+          380
+        ],
+        "crop_software_labels": true,
+        "crop_white_margins": true
+      },
+      {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          496,
+          40,
+          936,
+          380
+        ],
+        "crop_software_labels": true,
+        "crop_white_margins": true
+      }
+    ],
+    "arrangement": "horizontal"
+  },
+  "panels": [
+    {
+      "id": "1",
+      "source_pdf_sha256": "7b9c0d07f0012b566c27d89896ba919c1ce6115b82aa238cd9ab405545ea99ae",
+      "source_table_sha256": "d8742cfa0fa3e40c6a4bc53e74301ccf5e8df762145768fb1b5ae83e7855763e",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "1",
+        "label": "A",
+        "rect_pt": [
+          28,
+          40,
+          468,
+          380
+        ],
+        "crop_software_labels": true,
+        "crop_white_margins": true
+      },
+      "fitted_rect_pt": [
+        28.0,
+        40.0,
+        468.0,
+        293.70325693606753
+      ],
+      "source_clip_pt": [
+        22.5,
+        39.0,
+        437.0,
+        278.0
+      ]
+    },
+    {
+      "id": "2",
+      "source_pdf_sha256": "10c29deb8763574db134ebbf266f5de64c4d8f4f841b7d582d94b3e1d1bad904",
+      "source_table_sha256": "a68c4670b9548758c5dac979ccb61ebb04f21d83310c7745fd49f271ec9ed6cd",
+      "source_theme_sha256": "f8d940278d796f716226f45c143217b33124b8b145841979a98aeb20f366fcb7",
+      "cell": {
+        "id": "2",
+        "label": "B",
+        "rect_pt": [
+          496,
+          40,
+          936,
+          380
+        ],
+        "crop_software_labels": true,
+        "crop_white_margins": true
+      },
+      "fitted_rect_pt": [
+        496.0,
+        40.0,
+        936.0,
+        296.83079677708145
+      ],
+      "source_clip_pt": [
+        25.0,
+        45.5,
+        583.5,
+        371.5
+      ]
+    }
+  ],
+  "data_alignment": [],
+  "font_family": "Arial",
+  "synthetic": true,
+  "scientific_inference": false,
+  "shared_legends": "none; each supplied guide preserved",
+  "files": {
+    "1.tsv": "d8742cfa0fa3e40c6a4bc53e74301ccf5e8df762145768fb1b5ae83e7855763e",
+    "2.tsv": "a68c4670b9548758c5dac979ccb61ebb04f21d83310c7745fd49f271ec9ed6cd",
+    "K35.pdf": "42cc65ab228e0eae8c94c94d0cf068d99cbfd615d644ac8d77585f008ac8b174",
+    "K35.png": "332738758e46ababa124bcf5e32404164eaf6d32107d5b4953c05ad9c4d7db50",
+    "K35.svg": "3b24ee2978f3ad18181650a4f3c2761c26fbc725e7c002b83c3b0db00e102084"
+  }
+}

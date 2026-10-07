@@ -104,6 +104,10 @@ def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry=
         upper=max(float(count.max()),1);side.set(xlim=(0,upper*1.42),xlabel=count_label);side.tick_params(axis='y',left=False,labelleft=False)
         for i,v in enumerate(count):side.text(v+upper*.035,i,f'{int(v):,}',va='center',fontsize=8,color='#58626D')
         paper_axis(side)
+    if has_block or has_count:
+        from indexed_alignment import bind_index_axes
+        if has_block:bind_index_axes(fig,ax,strip,'y',rows)
+        if has_count:bind_index_axes(fig,ax,side,'y',rows)
     cb=fig.add_subplot(gs[0,k]);fig.colorbar(im,cax=cb,label=value_label);cb.tick_params(labelsize=8);cb.set_box_aspect(20)
     fig.suptitle(title,x=left,ha='left',fontsize=12,y=.97)
     return stamp(fig,data,'publication_aligned_matrix',limits=list(limits),center=center,signed=signed,value_label=value_label,geometry=geometry,bubble_area='constant_not_detection',row_order=rows,column_order=cols,row_aliases=dict(zip(rows,labels_y)),column_aliases=dict(zip(cols,labels_x)),count_label=count_label,block_palette=block_palette,continuous_colors=continuous_colors,clustering='none_frozen_input_order',row_field=row_field,column_field=column_field,value_field=value_field,value_columns=list(value_columns) if value_columns is not None else None,missing=missing,figsize=list(map(float,figsize)),row_block_field=row_block_field if has_block else None,row_count_field=row_count_field if has_count else None,row_label_wrap=row_label_wrap,column_label_wrap=column_label_wrap,label_fontsize=label_fontsize)

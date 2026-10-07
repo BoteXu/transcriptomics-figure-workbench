@@ -1,0 +1,52 @@
+{
+  "example_id": "K42",
+  "synthetic": true,
+  "scientific_inference": false,
+  "relationship": "矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。",
+  "component_ids": [
+    "E47",
+    "E51"
+  ],
+  "layout": {
+    "id": "K42",
+    "title": "调控活性矩阵与指定样本的完整贡献",
+    "size_pt": [
+      1260,
+      600
+    ],
+    "require_same_theme": true,
+    "panels": [
+      {
+        "id": "A",
+        "label": "A",
+        "rect_pt": [
+          25,
+          45,
+          610,
+          555
+        ],
+        "crop_white_margins": true,
+        "crop_software_labels": true
+      },
+      {
+        "id": "B",
+        "label": "B",
+        "rect_pt": [
+          650,
+          45,
+          1235,
+          555
+        ],
+        "crop_white_margins": true,
+        "crop_software_labels": true
+      }
+    ]
+  },
+  "output_sha256": {
+    "A.tsv": "6112589d125beff9504430c0a72f1e1c7fb0869fb053057f08b7c531435da858",
+    "B.tsv": "a0a50217649ef1fe054afdb25462d21bb9dfec6c2afdd2552862689ecac257a3",
+    "K42.pdf": "ab95cb42700435db4d9cd5b9c59b185ec897aa38c774e91a9e89711b80311807",
+    "K42.png": "366a6e59564cd58839f39608fb5795bc3976bbe9c531cd309dc31ccdb1aad343",
+    "K42.svg": "dda27221ed27eecd2b4dba84a1c7bf3346a1c2fc38ecd0e3e2365befb1968156"
+  }
+}

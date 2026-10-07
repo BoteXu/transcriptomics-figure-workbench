@@ -1,0 +1,39 @@
+{
+  "adapter": "heatmap",
+  "module": "figure_core",
+  "function": "plot_heatmap",
+  "params": {
+    "row_order": [
+      "Regulator A",
+      "Regulator B",
+      "Regulator C",
+      "Regulator D"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ],
+    "value_label": "Supplied signed activity score",
+    "title": "Frozen regulator activity by sample",
+    "column_annotations": {
+      "Condition": {
+        "S01": "G1",
+        "S02": "G1",
+        "S03": "G1",
+        "S04": "G7",
+        "S05": "G7",
+        "S06": "G7"
+      }
+    },
+    "annotation_palettes": {
+      "Condition": {
+        "G1": "#506AAA",
+        "G7": "#E17692"
+      }
+    }
+  }
+}

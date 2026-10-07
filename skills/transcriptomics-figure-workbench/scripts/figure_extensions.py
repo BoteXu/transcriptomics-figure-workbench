@@ -112,6 +112,8 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
     top.imshow(np.array([[to_rgba(group_palette[g]) for g in groups]]),aspect='auto')
     left.imshow(np.array([[to_rgba(block_palette[g])] for g in blocks]),aspect='auto')
     top.set_axis_off(); left.set_axis_off()
+    from indexed_alignment import bind_index_axes
+    bind_index_axes(fig,ax,top,'x',cols);bind_index_axes(fig,ax,left,'y',rows)
     ax.set_xticks(range(len(cols)),xlabels,rotation=45,ha='right'); ax.set_yticks(range(len(rows)),ylabels)
     cax=fig.add_axes([.75,.18,.20,.025])
     colorbar=fig.colorbar(im,cax=cax,orientation='horizontal'); colorbar.set_label(value_label,fontsize=8)

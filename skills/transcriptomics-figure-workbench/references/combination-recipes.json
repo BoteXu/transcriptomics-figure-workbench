@@ -2539,6 +2539,114 @@
           }
         ]
       }
+    },
+    {
+      "id": "K41",
+      "title": "预测校准、评价支持量与决策价值",
+      "relation": "两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。",
+      "bundles": [
+        {
+          "name": "E45",
+          "prefix": "figures/E45/E45",
+          "metadata": "metadata/E45.json",
+          "table_sha256": "9827fc9f0360874b14aa1e3e644079b1257b2d78ec834e984070ab3420ee26fa"
+        },
+        {
+          "name": "E46",
+          "prefix": "figures/E46/E46",
+          "metadata": "metadata/E46.json",
+          "table_sha256": "5cbda8be61d8ed94ff1a17eb4e2fb9ecc68435e43e15db0956c9173215c895ec"
+        }
+      ],
+      "layout": {
+        "id": "K41",
+        "title": "预测校准、评价支持量与决策价值",
+        "size_pt": [
+          1260,
+          600
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              610,
+              555
+            ],
+            "crop_white_margins": true,
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              650,
+              45,
+              1235,
+              555
+            ],
+            "crop_white_margins": true,
+            "crop_software_labels": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "K42",
+      "title": "调控活性矩阵与指定样本的完整贡献",
+      "relation": "矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。",
+      "bundles": [
+        {
+          "name": "E47",
+          "prefix": "figures/E47/E47",
+          "metadata": "metadata/E47.json",
+          "table_sha256": "6112589d125beff9504430c0a72f1e1c7fb0869fb053057f08b7c531435da858"
+        },
+        {
+          "name": "E51",
+          "prefix": "figures/E51/E51",
+          "metadata": "metadata/E51.json",
+          "table_sha256": "a0a50217649ef1fe054afdb25462d21bb9dfec6c2afdd2552862689ecac257a3"
+        }
+      ],
+      "layout": {
+        "id": "K42",
+        "title": "调控活性矩阵与指定样本的完整贡献",
+        "size_pt": [
+          1260,
+          600
+        ],
+        "require_same_theme": true,
+        "panels": [
+          {
+            "id": "A",
+            "label": "A",
+            "rect_pt": [
+              25,
+              45,
+              610,
+              555
+            ],
+            "crop_white_margins": true,
+            "crop_software_labels": true
+          },
+          {
+            "id": "B",
+            "label": "B",
+            "rect_pt": [
+              650,
+              45,
+              1235,
+              555
+            ],
+            "crop_white_margins": true,
+            "crop_software_labels": true
+          }
+        ]
+      }
     }
   ],
   "supplemental_components": [

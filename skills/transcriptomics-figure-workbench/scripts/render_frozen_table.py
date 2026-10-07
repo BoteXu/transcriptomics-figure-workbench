@@ -18,11 +18,27 @@ import figure_multiscale as multiscale
 import figure_multiomics_views as multiomics
 import figure_multimodal as multimodal
 import figure_linked_evidence as linked
+import figure_biomni_views as biomni_views
+import figure_analysis_results as analysis_views
 from project_theme import validate_theme, render_with_theme
 from panel_layout_audit import audit_panel_layout
 
 # Fixed functions, not user-supplied import paths or executable expressions.
 ADAPTERS={
+    'splice_tracks':(analysis_views.plot_splice_tracks,'start end value count lane','argument'),
+    'variant_posteriors':(analysis_views.plot_variant_posteriors,'position pip','argument'),
+    'contribution_waterfall':(analysis_views.plot_contribution_waterfall,'contribution','argument'),
+    'calibration_counts':(multimodal.plot_calibration_counts,'bin_left bin_right predicted estimate lower upper n','wrapper'),
+    'sequence_logo':(biomni_views.plot_sequence_logo,'height','argument'),
+    'contact_tracks':(biomni_views.plot_contact_tracks,'start end value','argument'),
+    'branch_tree':(biomni_views.plot_branch_tree,'branch_length','argument'),
+    'slice_overlay':(biomni_views.plot_slice_overlay,'u v intensity label','argument'),
+    'registration_check':(biomni_views.plot_registration_check,'u v fixed registered','argument'),
+    'alluvial':(network.plot_alluvial,'weight','argument'),
+    'weighted_chord':(network.plot_weighted_chord,'weight','argument'),
+    'heatmap':(core.plot_heatmap,'value','wrapper'),
+    'dot_matrix':(core.plot_dot,'fraction value','wrapper'),
+    'polished_matrix':(__import__('figure_polish').plot_polished_matrix,'value','wrapper'),
     'membership_ribbons':(linked.plot_membership_ribbons,'effect ratio padj count','argument'),
     'split_metric_matrix':(linked.plot_split_metric_matrix,'association pvalue','argument'),
     'hierarchy_tracks':(linked.plot_hierarchy_tracks,'height','argument'),
@@ -77,7 +93,7 @@ def load_table(path,adapter,params):
     # Matrix renderers may rename their axes/value field or accept an explicit
     # wide value-column list.  Parse only declared numeric channels; identifier
     # columns remain strings (including leading-zero IDs).
-    for key in ('value_field','value_column','row_count_field','effect_field','estimate_field','lower_field','upper_field','padj_field'):
+    for key in ('value_field','value_column','row_count_field','effect_field','estimate_field','lower_field','upper_field','padj_field','weight_field','fraction_field'):
         value=params.get(key)
         if isinstance(value,str):numeric.append(value)
     if isinstance(params.get('value_columns'),(list,tuple)):numeric.extend(params['value_columns'])
@@ -87,7 +103,7 @@ def load_table(path,adapter,params):
 
 def render(adapter,data,params,theme):
     if adapter not in ADAPTERS:raise ValueError('Unknown fixed renderer')
-    validate_theme(theme);fn,_,mode=ADAPTERS[adapter]
+    validate_theme(theme);fn,_,mode=ADAPTERS[adapter];params=dict(params);page_layout=params.pop('page_layout',None)
     accepted=set(inspect.signature(fn).parameters)-{'data','theme'}
     if set(params)-accepted:raise ValueError('Unknown drawing parameters: '+str(sorted(set(params)-accepted)))
     if mode=='wrapper':fig=render_with_theme(fn,data,params,theme)
@@ -97,6 +113,9 @@ def render(adapter,data,params,theme):
         if legend:legend.set_bbox_to_anchor((1.07,1));legend.set_loc('upper left')
     if fig._suptitle is not None and fig._suptitle.get_text().startswith('SYNTHETIC DEMO'):fig._suptitle.set_text('')
     fig._omics_spec['demo_label_style']='compact'
+    if page_layout:
+        from figure_layout import apply_page_layout
+        fig=apply_page_layout(fig,page_layout)
     audit=audit_panel_layout(fig)
     if audit['issues']:plt.close(fig);raise ValueError('Guide layout requires repair: '+str(audit['issues']))
     return fig,audit

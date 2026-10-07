@@ -132,7 +132,6 @@ def plot_calibration_counts(data,palette,*,interval_label,evaluation_label,title
     if ((d[prob]<0)|(d[prob]>1)).any().any() or ((d.n<=0)|(d.n%1!=0)|(d.bin_left>=d.bin_right)|(d.predicted<d.bin_left)|(d.predicted>d.bin_right)).any():
         raise ValueError('Invalid probability bin, bound or count')
     models=list(dict.fromkeys(d.model))
-    if len(models)>4:raise ValueError('Split more than four models')
     for m in models:
         z=d[d.model==m]
         if z.duplicated(['bin_left','bin_right']).any() or (np.diff(z.bin_left)<0).any() or (z.bin_left.to_numpy()[1:]<z.bin_right.to_numpy()[:-1]).any():
@@ -141,9 +140,9 @@ def plot_calibration_counts(data,palette,*,interval_label,evaluation_label,title
     fig.subplots_adjust(left=.15,right=.96,bottom=.20,top=.86)
     ax.plot([0,1],[0,1],ls='--',lw=.8,color='#AEB7BF')
     for i,m in enumerate(models):
-        z=d[d.model==m];ls=['-','--','-.',':'][i]
+        z=d[d.model==m];ls=['-','--','-.',':'][i%4]
         ax.errorbar(z.predicted,z.estimate,yerr=np.array([z.estimate-z.lower,z.upper-z.estimate]),
-                    fmt=['o','s','D','^'][i],ls=ls,color=palette[m],ms=4,lw=1,capsize=2,label=m)
+                    fmt=['o','s','D','^'][i%4],ls=ls,color=palette[m],ms=4,lw=1,capsize=2,label=m)
         for r in z.itertuples():bx.plot([r.bin_left,r.bin_left,r.bin_right,r.bin_right],[0,r.n,r.n,0],color=palette[m],ls=ls,lw=1)
     ax.set(xlim=(0,1),ylim=(0,1),ylabel='Observed event fraction',title=title)
     bx.set(xlabel='Mean predicted probability',ylabel='Bin n');ax.legend(frameon=False,loc='upper left')
@@ -163,7 +162,6 @@ def plot_interval_tracks(data,palette,*,assembly,chromosome,region,value_label,
     if ((d.start<region[0])|(d.end>region[1])|(d.start>=d.end)|(d.start%1!=0)|(d.end%1!=0)).any():
         raise ValueError('Intervals must be valid and wholly inside region')
     tracks=list(dict.fromkeys(d.track))
-    if len(tracks)>8:raise ValueError('Split more than eight tracks')
     for t in tracks:
         z=d[d.track==t]
         if (np.diff(z.start)<0).any() or (z.start.to_numpy()[1:]<z.end.to_numpy()[:-1]).any():raise ValueError('Sorted disjoint intervals required')
@@ -186,12 +184,12 @@ def plot_frozen_dynamics(data,palette,*,time_label,value_label,unit_label,interv
     required_text(time_label=time_label,value_label=value_label,unit_label=unit_label,interval_label=interval_label)
     d=checked(data,['series','time','estimate','lower','upper'],['time','estimate','lower','upper'])
     bounds(d);palette_check(d.series,palette);names=list(dict.fromkeys(d.series))
-    if len(names)>6 or d.duplicated(['series','time']).any():raise ValueError('Unique series/time required (max6 series)')
+    if d.duplicated(['series','time']).any():raise ValueError('Unique series/time required')
     if any((np.diff(d[d.series==s].time)<=0).any() for s in names):raise ValueError('Time order must be strictly increasing')
     fig,ax=plt.subplots(figsize=(7.1,4.1));fig.subplots_adjust(left=.14,right=.96,bottom=.25,top=.86)
     for i,s in enumerate(names):
         z=d[d.series==s];ax.fill_between(z.time,z.lower,z.upper,color=palette[s],alpha=.13,lw=0)
-        ax.plot(z.time,z.estimate,color=palette[s],ls=['-','--','-.',':','-','--'][i],lw=1.5,label=s)
+        ax.plot(z.time,z.estimate,color=palette[s],ls=['-','--','-.',':'][i%4],lw=1.5,label=s)
     ax.set(xlabel=time_label,ylabel=value_label,title=title);axis(ax,True);ax.legend(frameon=False)
     fig.text(.14,.085,textwrap.fill(f'{unit_label}; {interval_label}; frozen summaries, no smoothing.',95),fontsize=8)
     return stamp(fig,data,'frozen_dynamics',palette=palette,time_label=time_label,value_label=value_label,

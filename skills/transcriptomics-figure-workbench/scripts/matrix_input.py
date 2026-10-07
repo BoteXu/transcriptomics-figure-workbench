@@ -80,6 +80,8 @@ def normalize_matrix(
     row_field = _text_name(row_field, "row_field")
     column_field = _text_name(column_field, "column_field")
     value_field = _text_name(value_field, "value_field")
+    if len({row_field,column_field,value_field})!=3 or data.columns.duplicated().any():
+        raise ValueError('Distinct matrix field names and unique table columns required')
     cols = set(data.columns)
     is_long = {row_field, column_field, value_field}.issubset(cols)
     if is_long:

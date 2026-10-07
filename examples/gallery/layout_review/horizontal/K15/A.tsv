@@ -1,0 +1,48 @@
+record_type	node_id	label	entity_type	group	x	y	area	source	target	weight	sign
+node	F01	F01	gene	G1	-1.0	5.5	45.0				
+node	F02	F02	gene	G1	-1.0	4.5	45.0				
+node	F03	F03	gene	G1	-1.0	3.5	45.0				
+node	F04	F04	gene	G1	-1.0	2.5	45.0				
+node	F05	F05	gene	G1	-1.0	1.5	45.0				
+node	F06	F06	gene	G1	-1.0	0.5	45.0				
+node	F07	F07	gene	G1	-1.0	-0.5	45.0				
+node	F08	F08	gene	G1	-1.0	-1.5	45.0				
+node	F09	F09	gene	G1	-1.0	-2.5	45.0				
+node	F10	F10	gene	G1	-1.0	-3.5	45.0				
+node	F11	F11	gene	G1	-1.0	-4.5	45.0				
+node	F12	F12	gene	G1	-1.0	-5.5	45.0				
+node	G1	Term 1	term	G1	1.0	5.0	100.0				
+node	G2	Term 2	term	G2	1.0	3.0	100.0				
+node	G3	Term 3	term	G3	1.0	1.0	100.0				
+node	G4	Term 4	term	G4	1.0	-1.0	100.0				
+node	G5	Term 5	term	G5	1.0	-3.0	100.0				
+node	G6	Term 6	term	G6	1.0	-5.0	100.0				
+edge								F01	G1	0.5	0.0
+edge								F01	G5	0.5	0.0
+edge								F01	G6	0.5	0.0
+edge								F02	G4	0.5	0.0
+edge								F03	G2	0.5	0.0
+edge								F03	G3	0.5	0.0
+edge								F04	G2	0.5	0.0
+edge								F04	G5	0.5	0.0
+edge								F04	G6	0.5	0.0
+edge								F05	G1	0.5	0.0
+edge								F05	G3	0.5	0.0
+edge								F05	G5	0.5	0.0
+edge								F06	G1	0.5	0.0
+edge								F06	G4	0.5	0.0
+edge								F06	G6	0.5	0.0
+edge								F07	G3	0.5	0.0
+edge								F07	G4	0.5	0.0
+edge								F08	G2	0.5	0.0
+edge								F08	G6	0.5	0.0
+edge								F09	G1	0.5	0.0
+edge								F09	G5	0.5	0.0
+edge								F10	G3	0.5	0.0
+edge								F10	G4	0.5	0.0
+edge								F11	G1	0.5	0.0
+edge								F11	G3	0.5	0.0
+edge								F11	G6	0.5	0.0
+edge								F12	G2	0.5	0.0
+edge								F12	G4	0.5	0.0
+edge								F12	G6	0.5	0.0

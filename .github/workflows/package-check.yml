@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Prepare the explicitly scoped plotting test environment
-        run: python -m pip install -r requirements.txt
+        run: python -m pip install -r requirements.txt -r requirements-review.txt
       - name: Check synthetic contracts, cross-panel identity and theme replacement
         env:
           MPLBACKEND: Agg
@@ -32,3 +32,7 @@ jobs:
           python tests/check_increment_runtime.py
           python tests/check_matrix_flexibility.py
           python tests/check_linked_runtime.py
+          python tests/check_flow_alignment.py
+          python tests/check_guide_spacing.py
+          python tests/check_biomni_views.py
+          python tests/check_analysis_results.py

@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.2.4",
   "baseline_count": 168,
   "entries": [
     {
@@ -25964,6 +25964,2181 @@
         5000
       ],
       "png_sha256": "ea508b3298a8b85aebe0e676adf2dd04a727005e95f62fe315abc9a4e3e945d7"
+    },
+    {
+      "id": "E38",
+      "family": "G20",
+      "title": "序列位点：字母高度堆叠",
+      "role": "extension",
+      "decision": "recommended",
+      "canonical": "E38",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "D69",
+      "input_columns": [
+        "position_id",
+        "symbol",
+        "height"
+      ],
+      "input_rows": 48,
+      "data_required": "位置ID×字母完整表、非负高度、字母顺序及高度定义/单位",
+      "expression": "每个位点的字符偏好和总量，字母高度精确对应输入值",
+      "render_kind": "sequence_logo",
+      "semantic_settings": {
+        "kind": "sequence_logo",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "position_order": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "alphabet": [
+          "A",
+          "C",
+          "G",
+          "T"
+        ],
+        "symbol_slots": {
+          "A": "G1",
+          "C": "G3",
+          "G": "G5",
+          "T": "G7"
+        },
+        "height_definition": "Frozen illustrative symbol heights in bits; no information-content estimation performed.",
+        "height_unit": "Supplied height (bits)",
+        "position_label": "Supplied position",
+        "title": "Position-wise sequence logo",
+        "inference": "none; individual glyph height equals supplied height",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "db9061daa8b8fd53b1645ec39567a64430b0a6b5d1f28a76cf00a56b740b5a44"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "db9061daa8b8fd53b1645ec39567a64430b0a6b5d1f28a76cf00a56b740b5a44"
+        }
+      },
+      "png_dimensions": [
+        2112,
+        1470
+      ],
+      "png_sha256": "254ce0f4b5ced8b8eb92764e38064d79a4c7645d6b058ff9828a9d76b966a1f1"
+    },
+    {
+      "id": "E39",
+      "family": "G26",
+      "title": "接触矩阵：物理分箱与对齐轨道",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D19",
+      "input_columns": [
+        "record_type",
+        "bin_id",
+        "start",
+        "end",
+        "bin_i",
+        "bin_j",
+        "value",
+        "track"
+      ],
+      "input_rows": 184,
+      "data_required": "有序物理区间、上三角分箱对数值（含显式缺失）、相同分箱的轨道",
+      "expression": "位置对关系与同一基因组坐标上的局部信号",
+      "render_kind": "contact_tracks",
+      "semantic_settings": {
+        "kind": "contact_tracks",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "bin_order": [
+          "B00",
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07",
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15"
+        ],
+        "track_order": [
+          "Track A",
+          "Track B"
+        ],
+        "region_definition": "Synthetic segment, 0-based half-open bins; frozen upper-triangle measurements.",
+        "coordinate_unit": "Position (bp)",
+        "value_definition": "Supplied contact intensity",
+        "value_limits": [
+          0,
+          2.1
+        ],
+        "track_unit": "Supplied signal",
+        "title": "Physical contact bins and aligned signal tracks",
+        "coordinate_map": "x=(u+v)/2; y=(v-u)/2; physical bin intervals retained",
+        "missing": "neutral mask; explicit zero remains zero",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "4168dd62faa1e4d9da550ed6811e4dae4585c94a26b1da1291681ef94741c010"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "4168dd62faa1e4d9da550ed6811e4dae4585c94a26b1da1291681ef94741c010"
+        }
+      },
+      "png_dimensions": [
+        2400,
+        2340
+      ],
+      "png_sha256": "a0b21a6b0d9c94689fd89f74a5fb65baef8719a988bd8948eeb849cfb10a1002"
+    },
+    {
+      "id": "E40",
+      "family": "G56",
+      "title": "树图：已给拓扑与真实枝长",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "E37",
+      "reason": "合并到 已有层次树、叶端标记与量值轨道；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D68",
+      "input_columns": [
+        "node_id",
+        "parent_id",
+        "branch_length",
+        "label"
+      ],
+      "input_rows": 8,
+      "data_required": "节点ID、父节点ID、非负枝长、根、叶顺序、标签",
+      "expression": "共同祖先结构、累计枝长与叶端身份",
+      "render_kind": "branch_tree",
+      "semantic_settings": {
+        "kind": "branch_tree",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "root_id": "root",
+        "leaf_order": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "branch_unit": "Supplied branch length",
+        "tree_definition": "Frozen synthetic topology and branch lengths; distances are not linkage heights.",
+        "title": "Supplied branch-length tree",
+        "inference": "none; x is supplied cumulative branch length, not clustering height",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "319eeefb16aa12c441874ac0efdaa28020adfe794e16658f10d9804c060988f7"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "319eeefb16aa12c441874ac0efdaa28020adfe794e16658f10d9804c060988f7"
+        }
+      },
+      "png_dimensions": [
+        2400,
+        1350
+      ],
+      "png_sha256": "123068f676ea7a7cf1740c6c1b390c689b660ce4ec62ff1a61dcc740b476a1a6"
+    },
+    {
+      "id": "E41",
+      "family": "G23",
+      "title": "影像切片：正交视图与分割叠加",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "E33b",
+      "reason": "合并到 配准背景上的测量叠加；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D33",
+      "input_columns": [
+        "view",
+        "u",
+        "v",
+        "intensity",
+        "label"
+      ],
+      "input_rows": 2016,
+      "data_required": "各切面物理像素网格、背景强度、同坐标整数标签、方向与配准说明",
+      "expression": "既有区域标签在三个切面的空间位置和边界",
+      "render_kind": "slice_overlay",
+      "semantic_settings": {
+        "kind": "slice_overlay",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "view_order": [
+          "Axial",
+          "Coronal",
+          "Sagittal"
+        ],
+        "axis_labels": {
+          "Axial": [
+            "Supplied u (mm)",
+            "Supplied v (mm)"
+          ],
+          "Coronal": [
+            "Supplied u (mm)",
+            "Supplied v (mm)"
+          ],
+          "Sagittal": [
+            "Supplied u (mm)",
+            "Supplied v (mm)"
+          ]
+        },
+        "label_slots": {
+          "1": "G3",
+          "2": "G7"
+        },
+        "intensity_limits": [
+          0,
+          1
+        ],
+        "registration_definition": "Already registered synthetic orthogonal pixel grids, no patient images.",
+        "orientation_definition": "Explicit supplied slice planes and u/v orientation; procedural background, not clinical anatomy.",
+        "arrangement": "horizontal",
+        "title": "Frozen orthogonal slice labels",
+        "inference": "none; frozen registered slice labels, not generated segmentations",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "b6841ea811550107557fc29cd72d62a053d7fc4273e5af23fca7c91c08e29651"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "b6841ea811550107557fc29cd72d62a053d7fc4273e5af23fca7c91c08e29651"
+        }
+      },
+      "png_dimensions": [
+        4410,
+        1680
+      ],
+      "png_sha256": "e110906adcd89ac59ac814ba642fbc7b68410e5161a4ff0f240b09ad18f478ee"
+    },
+    {
+      "id": "E42",
+      "family": "G23",
+      "title": "影像对照：棋盘拼接与差值",
+      "role": "extension",
+      "decision": "recommended",
+      "canonical": "E42",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "D70",
+      "input_columns": [
+        "u",
+        "v",
+        "fixed",
+        "registered"
+      ],
+      "input_rows": 672,
+      "data_required": "共同物理网格上的固定图/配准结果、共同强度尺度、棋盘块大小",
+      "expression": "图像边界接续与逐像素差值的空间分布",
+      "render_kind": "registration_check",
+      "semantic_settings": {
+        "kind": "registration_check",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "intensity_limits": [
+          0,
+          1
+        ],
+        "difference_limits": [
+          -0.15,
+          0.15
+        ],
+        "tile_pixels": 4,
+        "coordinate_labels": [
+          "Supplied u (mm)",
+          "Supplied v (mm)"
+        ],
+        "registration_definition": "Two already aligned procedural arrays in one physical pixel system and one intensity scale.",
+        "arrangement": "horizontal",
+        "title": "Registered image comparison",
+        "difference_definition": "registered minus fixed at identical frozen physical pixel coordinates; no normalization",
+        "inference": "none; no registration or performance metric estimation",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "d0f9987012a88900f728a7e4b30c7ffb46032d06b177f7914f9bc335abd30acc"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "d0f9987012a88900f728a7e4b30c7ffb46032d06b177f7914f9bc335abd30acc"
+        }
+      },
+      "png_dimensions": [
+        4650,
+        1650
+      ],
+      "png_sha256": "395d2e8c63e48c39d931589bb61471bfef7e735e686f4dbd34e73fef8802650d"
+    },
+    {
+      "id": "E43",
+      "family": "G26",
+      "title": "剪接：覆盖、连接弧与异构体",
+      "role": "extension",
+      "decision": "recommended",
+      "canonical": "E43",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "D71",
+      "input_columns": [
+        "record_type",
+        "sample_id",
+        "group",
+        "start",
+        "end",
+        "value",
+        "count",
+        "lane",
+        "transcript_id",
+        "exon_id"
+      ],
+      "input_rows": 173,
+      "data_required": "混合表：样本分箱覆盖、连接起止/整数计数/布局层、转录本外显子区间；明确参考坐标",
+      "expression": "同一位置轴上的覆盖模式、连接支持量与已给异构体结构",
+      "render_kind": "splice_tracks",
+      "semantic_settings": {
+        "kind": "splice_tracks",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "sample_order": [
+          "G1",
+          "G7"
+        ],
+        "transcript_order": [
+          "Isoform A",
+          "Isoform B"
+        ],
+        "region": [
+          100,
+          900
+        ],
+        "coordinate_definition": "Synthetic segment; 0-based half-open intervals; increasing position, strand not inferred",
+        "coverage_definition": "Supplied coverage in a common scale for both samples",
+        "junction_definition": "Supplied junction read count; zero counts retained; arc height is layout only",
+        "width_per_count": 0.045,
+        "title": "Coverage, splice junctions and isoforms",
+        "zero_junctions": [
+          [
+            "G1",
+            540.0,
+            720.0
+          ],
+          [
+            "G7",
+            540.0,
+            720.0
+          ]
+        ],
+        "inference": "none; input bins/counts/annotation retained, no BAM parsing or differential splicing",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "ab7346c569303e450db1169a88dc7bd846f1fd38baa286002b2618b6eb5d1c37"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "ab7346c569303e450db1169a88dc7bd846f1fd38baa286002b2618b6eb5d1c37"
+        }
+      },
+      "png_dimensions": [
+        3000,
+        1887
+      ],
+      "png_sha256": "844f92777e10f269bf2cffce9d0d68d4edf9cc1361b397e399ade712e0435072"
+    },
+    {
+      "id": "E44",
+      "family": "G26",
+      "title": "精细定位：多信号PIP与可信集",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "P11a",
+      "reason": "合并到 棒棒糖评分；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D15",
+      "input_columns": [
+        "signal",
+        "variant_id",
+        "position",
+        "pip",
+        "credible_set"
+      ],
+      "input_rows": 48,
+      "data_required": "信号×变异完整表、共同位置、已给PIP、可信集身份、坐标版本",
+      "expression": "每个信号的候选分布及已给可信集；共用位置便于比较",
+      "render_kind": "variant_posteriors",
+      "semantic_settings": {
+        "kind": "variant_posteriors",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "signal_order": [
+          "G1",
+          "G7"
+        ],
+        "region": [
+          99500,
+          112000
+        ],
+        "coordinate_definition": "Synthetic assembly and segment; supplied one-based variant positions",
+        "posterior_definition": "Frozen multi-signal PIPs and supplied credible-set membership; no probability normalization",
+        "label_ids": [
+          "v08",
+          "v16"
+        ],
+        "title": "Variant posteriors across supplied signals",
+        "inference": "none; multi-signal PIPs need not sum to one; overlapping PIPs do not establish colocalization",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "ff6a245a4be3a5990850c8666ea3e5dcef3132463f84515114281a9917f888f6"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "ff6a245a4be3a5990850c8666ea3e5dcef3132463f84515114281a9917f888f6"
+        }
+      },
+      "png_dimensions": [
+        2807,
+        1710
+      ],
+      "png_sha256": "7aec65d30477e3b500e3475309e0fc88f479053b376da4e122db92366b87eca1"
+    },
+    {
+      "id": "E45",
+      "family": "G22",
+      "title": "预测评价：校准与分箱支持人数",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "P27",
+      "reason": "合并到 曲线与分箱支持量；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D57",
+      "input_columns": [
+        "model",
+        "bin_left",
+        "bin_right",
+        "predicted",
+        "estimate",
+        "lower",
+        "upper",
+        "n"
+      ],
+      "input_rows": 16,
+      "data_required": "模型×固定概率分箱、平均预测概率、观察比例、给定区间和实际分箱n",
+      "expression": "概率与发生比例是否接近，以及各段受多少独立评价单位支持",
+      "render_kind": "calibration_counts",
+      "semantic_settings": {
+        "kind": "calibration_counts",
+        "palette": {
+          "G1": "#506AAA",
+          "G7": "#E17692"
+        },
+        "interval_label": "Supplied illustrative bin bounds, not fitted confidence intervals",
+        "evaluation_label": "Synthetic held-out evaluation records; counts are per model and cannot be summed",
+        "binning": "frozen",
+        "count_semantics": "within_model_evaluation_units",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "7c4fdfea896e42fbeadec84a35fc9b7bac775aeebc9e8a9586c568a48e0ec05c"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "7c4fdfea896e42fbeadec84a35fc9b7bac775aeebc9e8a9586c568a48e0ec05c"
+        },
+        "theme_adapter": "figure_multimodal.plot_calibration_counts",
+        "colour_scope": "Explicit category arguments and semantic reference adapters; unsupported legacy internal colours require a reviewed adapter",
+        "demo_label_style": "compact"
+      },
+      "png_dimensions": [
+        2106,
+        1890
+      ],
+      "png_sha256": "277a0ee44e36940302db3fa7e2acc2148e691bb877bf653913d37789aa7ca98d"
+    },
+    {
+      "id": "E46",
+      "family": "G25",
+      "title": "决策曲线：净获益与参考策略",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D07",
+      "input_columns": [
+        "series",
+        "time",
+        "estimate",
+        "lower",
+        "upper"
+      ],
+      "input_rows": 80,
+      "data_required": "策略×概率阈值×已算净获益、给定区间、同评价群体与决策约定",
+      "expression": "不同阈值下的净获益，并和全部/无人策略比较",
+      "render_kind": "frozen_dynamics",
+      "semantic_settings": {
+        "kind": "frozen_dynamics",
+        "palette": {
+          "G1": "#506AAA",
+          "G7": "#E17692",
+          "G3": "#91BBDF",
+          "G4": "#B6DBF1"
+        },
+        "time_label": "Risk threshold",
+        "value_label": "Supplied net benefit",
+        "unit_label": "Same synthetic evaluation cohort; G1/G7=model, G3=treat all, G4=treat none",
+        "interval_label": "No uncertainty supplied: bounds equal the frozen curves; opt-in decision convention",
+        "smoothing": "none",
+        "inference": "none",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "b3039fefd137068135dd2d08d794b78b03c3d83f890922a3c5e2dd93ed68c24f"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "b3039fefd137068135dd2d08d794b78b03c3d83f890922a3c5e2dd93ed68c24f"
+        },
+        "theme_adapter": "figure_multimodal.plot_frozen_dynamics",
+        "colour_scope": "Explicit category arguments and semantic reference adapters; unsupported legacy internal colours require a reviewed adapter",
+        "demo_label_style": "compact"
+      },
+      "png_dimensions": [
+        2406,
+        1380
+      ],
+      "png_sha256": "1d67dfbcc373418876833947dcb5c58a3b1548c766be949904bddde0686e27e7"
+    },
+    {
+      "id": "E47",
+      "family": "G10",
+      "title": "调控活性：完整评分矩阵",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D19",
+      "input_columns": [
+        "feature",
+        "sample",
+        "value"
+      ],
+      "input_rows": 24,
+      "data_required": "调控因子×样本已给有符号评分、样本身份/条件、评分版本与覆盖说明",
+      "expression": "调控活性评分跨样本的模式与异质性",
+      "render_kind": "heatmap",
+      "semantic_settings": {
+        "kind": "heatmap",
+        "value_label": "Supplied signed activity score",
+        "scale_type": "signed",
+        "center": 0,
+        "row_field": "feature",
+        "column_field": "sample",
+        "value_field": "value",
+        "value_columns": null,
+        "row_order": [
+          "Regulator A",
+          "Regulator B",
+          "Regulator C",
+          "Regulator D"
+        ],
+        "column_order": [
+          "S01",
+          "S02",
+          "S03",
+          "S04",
+          "S05",
+          "S06"
+        ],
+        "row_aliases": {
+          "Regulator A": "Regulator A",
+          "Regulator B": "Regulator B",
+          "Regulator C": "Regulator C",
+          "Regulator D": "Regulator D"
+        },
+        "column_aliases": {
+          "S01": "S01",
+          "S02": "S02",
+          "S03": "S03",
+          "S04": "S04",
+          "S05": "S05",
+          "S06": "S06"
+        },
+        "missing": "error",
+        "figsize": [
+          7.1,
+          4.5
+        ],
+        "label_rotation": 45,
+        "show_labels": true,
+        "row_label_mode": "all",
+        "column_label_mode": "all",
+        "row_label_wrap": null,
+        "column_label_wrap": null,
+        "label_fontsize": null,
+        "title": "Frozen regulator activity by sample",
+        "matrix_annotations": [
+          {
+            "name": "Condition",
+            "dimension": "x",
+            "keys": [
+              "S01",
+              "S02",
+              "S03",
+              "S04",
+              "S05",
+              "S06"
+            ],
+            "groups": [
+              "G1",
+              "G1",
+              "G1",
+              "G7",
+              "G7",
+              "G7"
+            ],
+            "palette": {
+              "G1": "#506AAA",
+              "G7": "#E17692"
+            }
+          }
+        ],
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "8a3f7326d65c53956b5cc765a3a8ed17e84b965b836166d72b5aafbb48d6df52"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "8a3f7326d65c53956b5cc765a3a8ed17e84b965b836166d72b5aafbb48d6df52"
+        },
+        "theme_adapter": "figure_core.plot_heatmap",
+        "colour_scope": "Explicit category arguments and semantic reference adapters; unsupported legacy internal colours require a reviewed adapter",
+        "demo_label_style": "compact"
+      },
+      "png_dimensions": [
+        2130,
+        1500
+      ],
+      "png_sha256": "694ed61ed7cfbb87db0db2ce0e5e834942558ef86392b38bbf4a27191beb525e"
+    },
+    {
+      "id": "E48",
+      "family": "G10",
+      "title": "通路冗余：共享成员相似矩阵",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D19",
+      "input_columns": [
+        "feature",
+        "sample",
+        "value"
+      ],
+      "input_rows": 36,
+      "data_required": "条目ID×条目ID完整已给相似量、成员全集和相似定义",
+      "expression": "条目之间的共享程度和成组冗余",
+      "render_kind": "heatmap",
+      "semantic_settings": {
+        "kind": "heatmap",
+        "value_label": "Supplied Jaccard overlap [0,1]",
+        "scale_type": "sequential",
+        "center": 0,
+        "row_field": "feature",
+        "column_field": "sample",
+        "value_field": "value",
+        "value_columns": null,
+        "row_order": [
+          "Term 1",
+          "Term 2",
+          "Term 3",
+          "Term 4",
+          "Term 5",
+          "Term 6"
+        ],
+        "column_order": [
+          "Term 1",
+          "Term 2",
+          "Term 3",
+          "Term 4",
+          "Term 5",
+          "Term 6"
+        ],
+        "row_aliases": {
+          "Term 1": "Term 1",
+          "Term 2": "Term 2",
+          "Term 3": "Term 3",
+          "Term 4": "Term 4",
+          "Term 5": "Term 5",
+          "Term 6": "Term 6"
+        },
+        "column_aliases": {
+          "Term 1": "Term 1",
+          "Term 2": "Term 2",
+          "Term 3": "Term 3",
+          "Term 4": "Term 4",
+          "Term 5": "Term 5",
+          "Term 6": "Term 6"
+        },
+        "missing": "error",
+        "figsize": [
+          7.1,
+          4.5
+        ],
+        "label_rotation": 35,
+        "show_labels": true,
+        "row_label_mode": "all",
+        "column_label_mode": "all",
+        "row_label_wrap": null,
+        "column_label_wrap": null,
+        "label_fontsize": null,
+        "title": "Pathway redundancy in explicit term order",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "fe25fb245c00294a3defc5cafaba179182e23fee784446cf5fc159660c80565c"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "fe25fb245c00294a3defc5cafaba179182e23fee784446cf5fc159660c80565c"
+        },
+        "theme_adapter": "figure_core.plot_heatmap",
+        "colour_scope": "Explicit category arguments and semantic reference adapters; unsupported legacy internal colours require a reviewed adapter",
+        "demo_label_style": "compact"
+      },
+      "png_dimensions": [
+        2130,
+        1500
+      ],
+      "png_sha256": "7ad46b75faac94cf28ecca801d7a32c0be1b204ae781a30abe31d5fd4de25d6d"
+    },
+    {
+      "id": "E49",
+      "family": "G56",
+      "title": "网络稳定性：双参数敏感性矩阵",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "T34",
+      "reason": "合并到 数值热图与可选注释；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D19",
+      "input_columns": [
+        "feature",
+        "sample",
+        "value"
+      ],
+      "input_rows": 30,
+      "data_required": "阈值×分辨率×已有稳定性指标、固定节点全集与对照分区定义",
+      "expression": "网络分区对两种设置的敏感区间",
+      "render_kind": "heatmap",
+      "semantic_settings": {
+        "kind": "heatmap",
+        "value_label": "Supplied partition agreement [0,1]",
+        "scale_type": "sequential",
+        "center": 0,
+        "row_field": "feature",
+        "column_field": "sample",
+        "value_field": "value",
+        "value_columns": null,
+        "row_order": [
+          "Resolution 0.5",
+          "Resolution 0.7",
+          "Resolution 0.9",
+          "Resolution 1.1",
+          "Resolution 1.3"
+        ],
+        "column_order": [
+          "Threshold 0.2",
+          "Threshold 0.3",
+          "Threshold 0.4",
+          "Threshold 0.5",
+          "Threshold 0.6",
+          "Threshold 0.7"
+        ],
+        "row_aliases": {
+          "Resolution 0.5": "Resolution 0.5",
+          "Resolution 0.7": "Resolution 0.7",
+          "Resolution 0.9": "Resolution 0.9",
+          "Resolution 1.1": "Resolution 1.1",
+          "Resolution 1.3": "Resolution 1.3"
+        },
+        "column_aliases": {
+          "Threshold 0.2": "Threshold 0.2",
+          "Threshold 0.3": "Threshold 0.3",
+          "Threshold 0.4": "Threshold 0.4",
+          "Threshold 0.5": "Threshold 0.5",
+          "Threshold 0.6": "Threshold 0.6",
+          "Threshold 0.7": "Threshold 0.7"
+        },
+        "missing": "error",
+        "figsize": [
+          7.1,
+          4.5
+        ],
+        "label_rotation": 35,
+        "show_labels": true,
+        "row_label_mode": "all",
+        "column_label_mode": "all",
+        "row_label_wrap": null,
+        "column_label_wrap": null,
+        "label_fontsize": null,
+        "title": "Network sensitivity across two settings",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "aa044a51a6aa00a83ff14077f506993140e6cea6c79c78e51552bb7c3fffebf0"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "aa044a51a6aa00a83ff14077f506993140e6cea6c79c78e51552bb7c3fffebf0"
+        },
+        "theme_adapter": "figure_core.plot_heatmap",
+        "colour_scope": "Explicit category arguments and semantic reference adapters; unsupported legacy internal colours require a reviewed adapter",
+        "demo_label_style": "compact"
+      },
+      "png_dimensions": [
+        2130,
+        1500
+      ],
+      "png_sha256": "cff1a388afa8499894cd13d0487cf703ee8ed2f1c62abe9d023606f36d294ac5"
+    },
+    {
+      "id": "E50",
+      "family": "G25",
+      "title": "动力学：时间分块摘要与独立运行",
+      "role": "extension",
+      "decision": "parameter_variant",
+      "canonical": "T31",
+      "reason": "合并到 有序曲线与区间带；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。",
+      "method": "D07",
+      "input_columns": [
+        "series",
+        "time",
+        "estimate",
+        "lower",
+        "upper"
+      ],
+      "input_rows": 42,
+      "data_required": "运行ID×真实时间×已有指标/分块范围、单位与参考结构",
+      "expression": "各独立运行的时间变化、瞬态与已有分块范围",
+      "render_kind": "frozen_dynamics",
+      "semantic_settings": {
+        "kind": "frozen_dynamics",
+        "palette": {
+          "G1": "#506AAA",
+          "G7": "#E17692"
+        },
+        "time_label": "Supplied time (ns)",
+        "value_label": "Frozen block RMSD (nm)",
+        "unit_label": "Synthetic independent run IDs G1/G7; frames and time blocks are not independent runs",
+        "interval_label": "Supplied block ranges, not confidence intervals across independent trajectories",
+        "smoothing": "none",
+        "inference": "none",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "a6ab95e3c6abbdeebeeeea0e96ad200460e78581f34fada1ee2ad9c5c33d8f8a"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "a6ab95e3c6abbdeebeeeea0e96ad200460e78581f34fada1ee2ad9c5c33d8f8a"
+        },
+        "theme_adapter": "figure_multimodal.plot_frozen_dynamics",
+        "colour_scope": "Explicit category arguments and semantic reference adapters; unsupported legacy internal colours require a reviewed adapter",
+        "demo_label_style": "compact"
+      },
+      "png_dimensions": [
+        2406,
+        1380
+      ],
+      "png_sha256": "73aa37db9fef18a62763ab1ba15ef538359c6bddfcc38d4bb5a0c7f045bd71f8"
+    },
+    {
+      "id": "E51",
+      "family": "G23",
+      "title": "贡献分解：有符号瀑布与总量",
+      "role": "extension",
+      "decision": "recommended",
+      "canonical": "E51",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "D72",
+      "input_columns": [
+        "component_id",
+        "label",
+        "contribution"
+      ],
+      "input_rows": 8,
+      "data_required": "明确顺序的完整贡献表、基线、同单位总量及可加性定义",
+      "expression": "各正负项如何从基线逐项累积到一个总量",
+      "render_kind": "contribution_waterfall",
+      "semantic_settings": {
+        "kind": "contribution_waterfall",
+        "scientific_analysis": "none; supplied results only",
+        "demo_label_style": "compact",
+        "component_order": [
+          "Target 1",
+          "Target 2",
+          "Target 3",
+          "Target 4",
+          "Target 5",
+          "Target 6",
+          "Target 7",
+          "Target 8"
+        ],
+        "baseline": 0.0,
+        "total": 0.62,
+        "quantity_definition": "Supplied activity-score contribution",
+        "contribution_definition": "Synthetic Regulator A / S01 decomposition; complete additive weighted target terms; no attribution calculation",
+        "title": "Complete signed contributions to one score",
+        "levels": [
+          {
+            "component": "Target 1",
+            "start": 0.0,
+            "end": 0.24,
+            "contribution": 0.24
+          },
+          {
+            "component": "Target 2",
+            "start": 0.24,
+            "end": 0.10999999999999999,
+            "contribution": -0.13
+          },
+          {
+            "component": "Target 3",
+            "start": 0.10999999999999999,
+            "end": 0.42,
+            "contribution": 0.31
+          },
+          {
+            "component": "Target 4",
+            "start": 0.42,
+            "end": 0.6,
+            "contribution": 0.18
+          },
+          {
+            "component": "Target 5",
+            "start": 0.6,
+            "end": 0.49,
+            "contribution": -0.11
+          },
+          {
+            "component": "Target 6",
+            "start": 0.49,
+            "end": 0.57,
+            "contribution": 0.08
+          },
+          {
+            "component": "Target 7",
+            "start": 0.57,
+            "end": 0.5299999999999999,
+            "contribution": -0.04
+          },
+          {
+            "component": "Target 8",
+            "start": 0.5299999999999999,
+            "end": 0.6199999999999999,
+            "contribution": 0.09
+          }
+        ],
+        "inference": "none; additive inputs required, no attribution or mechanistic decomposition calculated",
+        "design": {
+          "width_mm": null,
+          "height_mm": null,
+          "font_family": "Arial",
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep",
+          "x_tick_rotation": null,
+          "axis_bounds": {},
+          "figure_text_positions": {},
+          "figure_text_wraps": {},
+          "legend_zone": null,
+          "legend_columns": 1,
+          "legend_title_width": null,
+          "resolved_font": "Arial",
+          "geometry_sha256": "6e31b4afd001b1e026e42fb7f0eabb49e8b0a23308123a6d30a633c0b1f15011"
+        },
+        "project_theme": {
+          "schema_version": 1,
+          "project_id": "aesthetic-library-preview",
+          "palette_name": "card_06",
+          "palette_colors": [
+            "#506AAA",
+            "#728DC1",
+            "#91BBDF",
+            "#B6DBF1",
+            "#F6D3D9",
+            "#E79FBF",
+            "#E17692"
+          ],
+          "group_slots": {
+            "G1": 0,
+            "G2": 1,
+            "G3": 2,
+            "G4": 3,
+            "G5": 4,
+            "G6": 5,
+            "G7": 6,
+            "All points": 0,
+            "Support": 1,
+            "Site": 6,
+            "Input": 2,
+            "Output": 0
+          },
+          "roles": {
+            "primary": "#506AAA",
+            "negative": "#506AAA",
+            "positive": "#E17692",
+            "accent": "#E17692",
+            "neutral": "#A8ADB3",
+            "significant": "#E17692",
+            "border": "#526272"
+          },
+          "continuous": {
+            "sequential": [
+              "#F7F9FC",
+              "#506AAA"
+            ],
+            "diverging": [
+              "#506AAA",
+              "#F7F7F7",
+              "#E17692"
+            ]
+          },
+          "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+          "font_family": "Arial",
+          "design": {
+            "label_pt": 10,
+            "tick_pt": 9,
+            "title_pt": 11,
+            "note_pt": 8,
+            "spine_width": 0.7,
+            "spine_mode": "keep",
+            "grid": "keep"
+          },
+          "line_width": 1.4,
+          "point_edge_width": 0.4,
+          "preview_only": true
+        },
+        "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+        "guide_layout": {
+          "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+          "legends_relocated": 0,
+          "geometry_sha256": "6e31b4afd001b1e026e42fb7f0eabb49e8b0a23308123a6d30a633c0b1f15011"
+        }
+      },
+      "png_dimensions": [
+        2636,
+        1740
+      ],
+      "png_sha256": "4c194b74859e496ba4f4669cd0daf9328b944c62652104d5c2470a5a2a14b8d9"
+    },
+    {
+      "id": "K41",
+      "family": "G22",
+      "title": "预测校准、评价支持量与决策价值",
+      "role": "combination",
+      "decision": "recommended",
+      "canonical": "K41",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "B41",
+      "input_columns": [
+        "separately_saved_component_tables"
+      ],
+      "input_rows": 2,
+      "data_required": "模型×固定概率分箱、平均预测概率、观察比例、给定区间和实际分箱n；策略×概率阈值×已算净获益、给定区间、同评价群体与决策约定",
+      "expression": "两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。",
+      "render_kind": null,
+      "semantic_settings": {},
+      "png_dimensions": [
+        2625,
+        1250
+      ],
+      "png_sha256": "d11e6861aa521a77145d8a1cc60deae28d5cd908af937f482a008231de0e9060"
+    },
+    {
+      "id": "K42",
+      "family": "G23",
+      "title": "调控活性矩阵与指定样本的完整贡献",
+      "role": "combination",
+      "decision": "recommended",
+      "canonical": "K42",
+      "reason": "该画法的唯一主预览；来源与数据契约分别保留。",
+      "method": "B42",
+      "input_columns": [
+        "separately_saved_component_tables"
+      ],
+      "input_rows": 2,
+      "data_required": "调控因子×样本已给有符号评分、样本身份/条件、评分版本与覆盖说明；明确顺序的完整贡献表、基线、同单位总量及可加性定义",
+      "expression": "矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。",
+      "render_kind": null,
+      "semantic_settings": {},
+      "png_dimensions": [
+        2625,
+        1250
+      ],
+      "png_sha256": "366a6e59564cd58839f39608fb5795bc3976bbe9c531cd309dc31ccdb1aad343"
     }
   ]
 }

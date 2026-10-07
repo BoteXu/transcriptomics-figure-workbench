@@ -1,0 +1,275 @@
+{
+  "source": "Original deterministic software fixture; current renderer",
+  "palette": "card_06",
+  "input_unit": "每行每面板的效应记录；给定汇总效应、上下界、样本数字标签和 p；给定行顺序。",
+  "experimental_unit": "Synthetic display records",
+  "contrast": "Frozen display",
+  "denominator": "All records",
+  "model": "No upstream analysis",
+  "limits": "Explicit",
+  "filtering": "None",
+  "uncertainty": "Supplied only",
+  "interpretation_limit": "不合并效应或做元分析；n(k) 的两个数字各是什么必须定义；相关效应不自动成为独立研究。",
+  "synthetic": true,
+  "example_id": "R16",
+  "schema_version": 2,
+  "figure_id": "R16",
+  "status": "RENDERED_UNREVIEWED",
+  "input_hash": "d3859263a355de8643f687e6d9a454336f016e12c7d3ea5e5fe6bb1d7b23401a",
+  "input_hash_algorithm": "SHA256",
+  "input_hash_scope": "exact exported TSV bytes",
+  "source_file": null,
+  "source_file_sha256": null,
+  "figure_spec": {
+    "kind": "reference_effect_distribution_forest",
+    "adapter_version": 1,
+    "analysis": "none; frozen supplied tables",
+    "row_order": [
+      "Outcome 01",
+      "Outcome 02",
+      "Outcome 03",
+      "Outcome 04",
+      "Outcome 05",
+      "Outcome 06",
+      "Outcome 07",
+      "Outcome 08",
+      "Outcome 09",
+      "Outcome 10",
+      "Outcome 11",
+      "Outcome 12",
+      "Outcome 13",
+      "Outcome 14",
+      "Outcome 15",
+      "Outcome 16",
+      "Outcome 17",
+      "Outcome 18",
+      "Outcome 19",
+      "Outcome 20",
+      "Outcome 21",
+      "Outcome 22",
+      "Outcome 23",
+      "Outcome 24",
+      "Outcome 25",
+      "Outcome 26"
+    ],
+    "panel_order": [
+      "Metric A",
+      "Metric B"
+    ],
+    "panel_labels": {
+      "Metric A": "Supplied effect A",
+      "Metric B": "Supplied effect B"
+    },
+    "limits": [
+      -4,
+      4
+    ],
+    "interval_label": "Supplied interval",
+    "count_label": "n(k) labels are fixture values; meanings must be supplied",
+    "summary": "provided, not pooled by renderer",
+    "p_semantics": "raw supplied p; threshold glyph only",
+    "design": {
+      "width_mm": null,
+      "height_mm": null,
+      "font_family": "Arial",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "Arial",
+      "geometry_sha256": "101e24c2eb35e49867cc8ace512098e4826c23ac833d37fff2d79cd9bd7ce216"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "aesthetic-library-preview",
+      "palette_name": "card_06",
+      "palette_colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "group_slots": {
+        "G1": 0,
+        "G2": 1,
+        "G3": 2,
+        "G4": 3,
+        "G5": 4,
+        "G6": 5,
+        "G7": 6,
+        "All points": 0,
+        "Support": 1,
+        "Site": 6,
+        "Input": 2,
+        "Output": 0
+      },
+      "roles": {
+        "primary": "#506AAA",
+        "negative": "#506AAA",
+        "positive": "#E17692",
+        "accent": "#E17692",
+        "neutral": "#A8ADB3",
+        "significant": "#E17692",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "diverging": [
+          "#506AAA",
+          "#F7F7F7",
+          "#E17692"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "Arial",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+    "guide_layout": {
+      "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+      "legends_relocated": 0,
+      "tick_canvas_scale": [
+        1.0,
+        1.0
+      ],
+      "geometry_sha256": "101e24c2eb35e49867cc8ace512098e4826c23ac833d37fff2d79cd9bd7ce216"
+    },
+    "theme_adapter": "figure_reference.plot_effect_distribution_forest",
+    "colour_scope": "Explicit category arguments and semantic reference adapters; unsupported legacy internal colours require a reviewed adapter"
+  },
+  "width_inches": 12.0,
+  "height_inches": 9.539396430121528,
+  "layout_geometry": [
+    {
+      "axis": 0,
+      "bounds": [
+        0.22,
+        0.16242080318930507,
+        0.37,
+        0.6887228189044137
+      ],
+      "xlim": [
+        -4.0,
+        4.0
+      ],
+      "ylim": [
+        25.5,
+        -0.5
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear"
+    },
+    {
+      "axis": 1,
+      "bounds": [
+        0.61,
+        0.16242080318930507,
+        0.37,
+        0.6887228189044137
+      ],
+      "xlim": [
+        -4.0,
+        4.0
+      ],
+      "ylim": [
+        25.5,
+        -0.5
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear"
+    },
+    {
+      "axis": 2,
+      "bounds": [
+        0.67,
+        0.08222705030317468,
+        0.27,
+        0.011321470995689004
+      ],
+      "xlim": [
+        -4.0,
+        4.0
+      ],
+      "ylim": [
+        0.0,
+        1.0
+      ],
+      "xscale": "function",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": true,
+      "projection": "rectilinear"
+    }
+  ],
+  "index_alignment": {
+    "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+    "bindings": [],
+    "issues": []
+  },
+  "renderer_sha256": {
+    "figure_analysis_results.py": "c60940ec4a5499a2c56dd7bd76503d0523f0bd0c36a7ad515d774afb58a2f795",
+    "figure_biomni_views.py": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+    "figure_core.py": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+    "figure_design.py": "d59c451c587e8151ed5939b1f6bbb31341a2ece2ea706ca81508601ca5b55c8c",
+    "figure_extensions.py": "8df606b112cf247eb880c8cfda5bf05b0124e744caa8d078b60cbf8f2d99f26e",
+    "figure_general.py": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+    "figure_layout.py": "866995c6cdd619a20b333ebbb7affd519aecdfafa36362e12102f5215e5d870e",
+    "figure_linked_evidence.py": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+    "figure_method_extensions.py": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+    "figure_multimodal.py": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+    "figure_multiomics_views.py": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+    "figure_multiscale.py": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+    "figure_network_extensions.py": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+    "figure_palette_applications.py": "30968482e47951aa89fb78669450b94759be8401515832fa9e32d3c71680887a",
+    "figure_polish.py": "1dd1e7849ea89bc67071cef0c2cf01193837c23bae09c20fa98afe1b366e8484",
+    "figure_process_dashboard.py": "f05172abf504690d97c8df546684056a3afbd04c0283fac6d3d66c6eb9184afb",
+    "figure_publication.py": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+    "figure_reference.py": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+    "figure_reference_palettes.py": "b9880e9ab9e0a452b65650526c1be388cbcf61e5fec7ac7cff72dbe21ef060c4",
+    "figure_styles.py": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+    "alluvial_geometry.py": "bcb5c01aaac0013ba6b5b253b6cbe77d7ed12b30f0c33b16aa8833fe53ef7e70",
+    "indexed_alignment.py": "2f94ad6f9af88e54dcb8074cde40b87a7c0d3fdb0da851969947ac430542f9a2",
+    "matrix_input.py": "1deecb5ee1feee518b9ab389ea4ed15b091ad8b29051ee3f69cfa00c63c887eb",
+    "project_theme.py": "94cd8b08047032d81a08b065edc1ab48feebaf52fd608cd07cfbff6d56513f25"
+  },
+  "output_sha256": {
+    "R16.svg": "c224fca16495dda58a2b713f0403edb27a2bfdfbe7f82da3913e2f63c792bbe8",
+    "R16.pdf": "92e4d00d3d3b45352b1e43ec43ebadc78e739d0fd63efeba43d5763f1ac2f03f",
+    "R16.png": "319a6b58a8b4921388f8f502f1dae2bcc0509372bc3d095d331155492dae87ba",
+    "R16.tsv": "d3859263a355de8643f687e6d9a454336f016e12c7d3ea5e5fe6bb1d7b23401a",
+    "R16_session.txt": "9bec742b602fc06c99cbaeb75be7c2a405797d048b83e76a178c80fc09dcf79e"
+  }
+}

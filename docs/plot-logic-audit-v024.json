@@ -1,0 +1,5749 @@
+{
+  "status": "DRAWING_RUNTIME_AND_LAYOUT_AUDIT",
+  "functions": 108,
+  "executed": 108,
+  "failures": [],
+  "uncovered": [],
+  "scope": "Synthetic runtime/input/page geometry checks; advisory warnings and visual acceptance remain separate",
+  "records": [
+    {
+      "module": "figure_analysis_results",
+      "function": "plot_contribution_waterfall",
+      "line": 81,
+      "signature": "(data, theme, *, component_order, baseline, total, quantity_definition, contribution_definition, title='')",
+      "source_sha256": "c60940ec4a5499a2c56dd7bd76503d0523f0bd0c36a7ad515d774afb58a2f795",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "contribution_waterfall",
+      "quantitative_geometry_sha256": "6e31b4afd001b1e026e42fb7f0eabb49e8b0a23308123a6d30a633c0b1f15011",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_analysis_results",
+      "function": "plot_splice_tracks",
+      "line": 14,
+      "signature": "(data, theme, *, sample_order, transcript_order, region, coordinate_definition, coverage_definition, junction_definition, width_per_count=0.045, title='')",
+      "source_sha256": "c60940ec4a5499a2c56dd7bd76503d0523f0bd0c36a7ad515d774afb58a2f795",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "splice_tracks",
+      "quantitative_geometry_sha256": "ab7346c569303e450db1169a88dc7bd846f1fd38baa286002b2618b6eb5d1c37",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_analysis_results",
+      "function": "plot_variant_posteriors",
+      "line": 58,
+      "signature": "(data, theme, *, signal_order, region, coordinate_definition, posterior_definition, label_ids=None, title='')",
+      "source_sha256": "c60940ec4a5499a2c56dd7bd76503d0523f0bd0c36a7ad515d774afb58a2f795",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "variant_posteriors",
+      "quantitative_geometry_sha256": "ff6a245a4be3a5990850c8666ea3e5dcef3132463f84515114281a9917f888f6",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_biomni_views",
+      "function": "plot_branch_tree",
+      "line": 119,
+      "signature": "(data, theme, *, root_id, leaf_order, branch_unit, tree_definition, title='')",
+      "source_sha256": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "branch_tree",
+      "quantitative_geometry_sha256": "319eeefb16aa12c441874ac0efdaa28020adfe794e16658f10d9804c060988f7",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_biomni_views",
+      "function": "plot_contact_tracks",
+      "line": 72,
+      "signature": "(data, theme, *, bin_order, track_order, region_definition, coordinate_unit, value_definition, value_limits, track_unit, title='')",
+      "source_sha256": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "contact_tracks",
+      "quantitative_geometry_sha256": "4168dd62faa1e4d9da550ed6811e4dae4585c94a26b1da1291681ef94741c010",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_biomni_views",
+      "function": "plot_registration_check",
+      "line": 192,
+      "signature": "(data, theme, *, intensity_limits, difference_limits, tile_pixels, coordinate_labels, registration_definition, arrangement='horizontal', title='')",
+      "source_sha256": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "registration_check",
+      "quantitative_geometry_sha256": "d0f9987012a88900f728a7e4b30c7ffb46032d06b177f7914f9bc335abd30acc",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_biomni_views",
+      "function": "plot_sequence_logo",
+      "line": 38,
+      "signature": "(data, theme, *, position_order, alphabet, symbol_slots, height_definition, height_unit, position_label='Supplied position', title='')",
+      "source_sha256": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "sequence_logo",
+      "quantitative_geometry_sha256": "db9061daa8b8fd53b1645ec39567a64430b0a6b5d1f28a76cf00a56b740b5a44",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_biomni_views",
+      "function": "plot_slice_overlay",
+      "line": 166,
+      "signature": "(data, theme, *, view_order, axis_labels, label_slots, intensity_limits, registration_definition, orientation_definition, arrangement='horizontal', title='')",
+      "source_sha256": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "slice_overlay",
+      "quantitative_geometry_sha256": "b6841ea811550107557fc29cd72d62a053d7fc4273e5af23fca7c91c08e29651",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_composition",
+      "line": 268,
+      "signature": "(data, palette, *, y_label='Fraction of included cells')",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "composition",
+      "quantitative_geometry_sha256": "df88bdc2015ea148bcd9fdf892b3168ce6133a2ecc730c83c6b4189fba24ea37",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_curve",
+      "line": 284,
+      "signature": "(data, kind='ROC')",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "curve",
+      "quantitative_geometry_sha256": "73b1358bb24aabc239a9b0bebf9d71a7043af58661d504646d157a91e61fb800",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_dot",
+      "line": 126,
+      "signature": "(data, value_label, *, value_semantics, denominator_label, row_field='feature', column_field='group', fraction_field='fraction', value_field='value', row_order=None, column_order=None, row_aliases=None, column_aliases=None, row_label_wrap=None, column_label_wrap=None, label_rotation=None, figsize=None, continuous_colors=None)",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "dot",
+      "quantitative_geometry_sha256": "948548af10bb1e087bfae7a87df49df39671b68c25e1ab4c6ca5575f345d76d9",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_embedding",
+      "line": 69,
+      "signature": "(data, palette, axis_prefix='UMAP')",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "embedding",
+      "quantitative_geometry_sha256": "b42adb0c2084d2d301e619ee4358b06ac5544597ca77960bf622e212afa979b3",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_forest",
+      "line": 95,
+      "signature": "(data, x_label, interval_label, *, effect_scale)",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "forest",
+      "quantitative_geometry_sha256": "3898f8673daeec8de8b8512e3e8def1cb605a2cd252d3a4ad0219c4a76a9b26e",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_heatmap",
+      "line": 174,
+      "signature": "(data, value_label, center=0, *, scale_type='signed', row_field='feature', column_field='sample', value_field='value', value_columns=None, row_order=None, column_order=None, row_aliases=None, column_aliases=None, missing='error', figsize=None, cell_width=0.44, cell_height=0.27, label_rotation=45, show_labels=True, row_label_mode='all', column_label_mode='all', row_label_wrap=None, column_label_wrap=None, label_fontsize=None, title='', row_annotations=None, column_annotations=None, annotation_palettes=None, continuous_colors=None)",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "heatmap",
+      "quantitative_geometry_sha256": "9b9f1185578acf7ba7ae9481d6408ee234e387212aa73ec89a0f0e4c3c353a48",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_qc",
+      "line": 260,
+      "signature": "(data, y_label)",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "qc",
+      "quantitative_geometry_sha256": "cefdc37c6cfe5dbf93117a4ef5ac12607b07a61c20a557ac2048b289c9209c9e",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_samples",
+      "line": 82,
+      "signature": "(data, palette, y_label)",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "samples",
+      "quantitative_geometry_sha256": "b8ebe4edbb006c5338e863b3cd5cdeac5435fefef7e2eff2bf74ca39b9adba85",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_core",
+      "function": "plot_volcano",
+      "line": 111,
+      "signature": "(data, alpha=0.05, fc=1)",
+      "source_sha256": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "volcano",
+      "quantitative_geometry_sha256": "f47099f6d45980d94319029597c3931d3518238c8236319b6f7ce353fee287f8",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_extensions",
+      "function": "plot_annotated_heatmap",
+      "line": 73,
+      "signature": "(data, value_label, group_palette, block_palette, *, scale_type, column_annotation_label='Column group', row_annotation_label='Feature block', row_field='feature', column_field='sample', value_field='value', column_annotation_field='sample_group', row_annotation_field='feature_block', row_order=None, column_order=None, row_aliases=None, column_aliases=None, cell_width=0.45, cell_height=0.3, row_label_wrap=None, column_label_wrap=None)",
+      "source_sha256": "8df606b112cf247eb880c8cfda5bf05b0124e744caa8d078b60cbf8f2d99f26e",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "annotated_heatmap",
+      "quantitative_geometry_sha256": "641274b25629b2567e36cf7dc5c5da255713a5099720f8db045ed4374e4ccc69",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [
+          {
+            "dimension": "x",
+            "keys": [
+              "sample0",
+              "sample1",
+              "sample2",
+              "sample3",
+              "sample4",
+              "sample5"
+            ],
+            "max_center_error_px": 0.0
+          },
+          {
+            "dimension": "y",
+            "keys": [
+              "gene0",
+              "gene1",
+              "gene2",
+              "gene3",
+              "gene4",
+              "gene5",
+              "gene6",
+              "gene7"
+            ],
+            "max_center_error_px": 0.0
+          }
+        ],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_extensions",
+      "function": "plot_effect_matrix",
+      "line": 31,
+      "signature": "(data, effect_label, *, effect_scale, evidence_cap=6, row_field='feature', column_field='contrast', row_order=None, column_order=None, row_aliases=None, column_aliases=None, cell_width=1.1, cell_height=0.4)",
+      "source_sha256": "8df606b112cf247eb880c8cfda5bf05b0124e744caa8d078b60cbf8f2d99f26e",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "effect_matrix",
+      "quantitative_geometry_sha256": "c659077f7c715c34630806489c3aded39c4bc3b0ccc15414d5bcb9b5515484fc",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_extensions",
+      "function": "plot_paired",
+      "line": 15,
+      "signature": "(data, palette, condition_order, y_label)",
+      "source_sha256": "8df606b112cf247eb880c8cfda5bf05b0124e744caa8d078b60cbf8f2d99f26e",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "paired",
+      "quantitative_geometry_sha256": "7345cb5e4984f018bf506140b674ad6325b14a34d8bcec1e835ba2b7351165b6",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_extensions",
+      "function": "plot_score_comparison",
+      "line": 136,
+      "signature": "(data, score_label, condition_labels)",
+      "source_sha256": "8df606b112cf247eb880c8cfda5bf05b0124e744caa8d078b60cbf8f2d99f26e",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "score_comparison",
+      "quantitative_geometry_sha256": "7409d06d63d5b0f5051ca05687f7f30a611e6f1e62b09528cfd63f92c64aac33",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_general",
+      "function": "plot_binned_distribution",
+      "line": 49,
+      "signature": "(data, palette, x_label, *, denominator_label)",
+      "source_sha256": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "binned_distribution",
+      "quantitative_geometry_sha256": "43ab0e6ac78a0bdda283729894fae4edf986ed8d0ffb6c68a0d2430ff2f45b33",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_general",
+      "function": "plot_confusion_counts",
+      "line": 73,
+      "signature": "(data, *, unit_label, label_order=None, label_aliases=None, label_wrap=None, figsize=None)",
+      "source_sha256": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "confusion_counts",
+      "quantitative_geometry_sha256": "6866706fde7e5ae55e92ba72d9cf818689487a48d536149b5d752d531934a01b",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_general",
+      "function": "plot_density_ridges",
+      "line": 100,
+      "signature": "(data, palette, x_label, *, density_label, amplitude=0.8, height_scale=None, title='')",
+      "source_sha256": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "density_ridges",
+      "quantitative_geometry_sha256": "fd328925a1704546f9ee73df142c15e05358266b93aa3b6af756a6f9dc3bb11e",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_general",
+      "function": "plot_grouped_estimates",
+      "line": 30,
+      "signature": "(data, palette, y_label, *, interval_label)",
+      "source_sha256": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "grouped_estimates",
+      "quantitative_geometry_sha256": "94e1eb4abfbd8cc62d267af222d4e6036bddf9f06a8c06335b205b5e4b9ca599",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_general",
+      "function": "plot_xy_points",
+      "line": 13,
+      "signature": "(data, palette, x_label, y_label, *, unit_label, connect_order=False)",
+      "source_sha256": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "xy_points",
+      "quantitative_geometry_sha256": "ecbdb769d72c5559fb04679aaf9d0a604fb3e993962cbc6914d3341717ab2861",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_linked_evidence",
+      "function": "plot_hierarchy_tracks",
+      "line": 91,
+      "signature": "(data, theme, *, leaf_order, height_definition, title='')",
+      "source_sha256": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "hierarchy_tracks",
+      "quantitative_geometry_sha256": "8643ba45d500cfe4c3b6d7da2ccd57aa2f034ecacdad076daa11a572cb42dae4",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_linked_evidence",
+      "function": "plot_membership_ribbons",
+      "line": 18,
+      "signature": "(data, theme, *, member_order, term_order, block_slots, effect_limits, significance_limits, ratio_max, ratio_definition, title='')",
+      "source_sha256": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "membership_ribbons",
+      "quantitative_geometry_sha256": "0468b443537e666e31230b30acb720b183b4001c5ea62eb172a15f9fb7a6f7df",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_linked_evidence",
+      "function": "plot_radial_hierarchy",
+      "line": 103,
+      "signature": "(data, theme, *, leaf_order, height_definition, metric_limits, metric_definition, outer_definition, area_definition, label_ids=(), title='')",
+      "source_sha256": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "radial_hierarchy",
+      "quantitative_geometry_sha256": "173a1e2e65011edc8b54b0f59c1270a14f41c826d58ba404d5f30d732adc9925",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_linked_evidence",
+      "function": "plot_split_metric_matrix",
+      "line": 57,
+      "signature": "(data, theme, *, row_order, column_order, row_slots, association_limits, significance_limits, association_definition, probability_definition, title='')",
+      "source_sha256": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "split_metric_matrix",
+      "quantitative_geometry_sha256": "d3169ccf038fb23ded0ab3534d203b5851b8ed6298c051babf8161670bc51fab",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_linked_evidence",
+      "function": "plot_stacked_values",
+      "line": 126,
+      "signature": "(data, theme, *, object_order, segment_order, value_definition, additivity_definition, title='')",
+      "source_sha256": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "stacked_values",
+      "quantitative_geometry_sha256": "c2309704f3076a5a8921900d6e8045ee0e14dc93fcf2c8bb4ec3a47380b44e49",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_agreement",
+      "line": 210,
+      "signature": "(data, theme, *, bias, loa, unit_label, difference_definition, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "bland_altman_supplied",
+      "quantitative_geometry_sha256": "17379f53650f58d8ceed2bc755c083aac0e7523f214b855446acc5dfab606099",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_balance",
+      "line": 197,
+      "signature": "(data, theme, *, stage_order, threshold, metric_definition, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "covariate_balance",
+      "quantitative_geometry_sha256": "f2b1f8f9973472d66ef0888802626fc421f2128b257d36bc4e3ae8ab11485917",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_bivariate_tiles",
+      "line": 298,
+      "signature": "(data, theme, *, x_breaks, y_breaks, x_label, y_label, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "bivariate_tiles",
+      "quantitative_geometry_sha256": "2a7a33bdcb46544f97162ee5fa82747c62cedc388f3325aebd95c57b366034c2",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_distribution_result",
+      "line": 179,
+      "signature": "(data, theme, *, mode, x_label, y_label, title='', reference_distribution=None)",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "distribution_ecdf",
+      "quantitative_geometry_sha256": "2da8c0bd4ab75f35266a8f8db81f70d920036b1b4a5f8e54eb0d3e6c60770041",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_enrichment_grid",
+      "line": 49,
+      "signature": "(data, theme, *, significance_limits, ratio_max, block_slots, column_order, term_order, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "multi_group_enrichment_grid",
+      "quantitative_geometry_sha256": "e005be14db86bad976b17c1705f5fb84914c431ea6619c564e402a060527c866",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_gene_term_chord",
+      "line": 158,
+      "signature": "(data, theme, *, gene_order, term_order, effect_limits, effect_label, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "gene_term_membership_chord",
+      "quantitative_geometry_sha256": "779afa79e02b29686f8873b579abed7746f3a85299cb255b849ab2667722da18",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_specification_curve",
+      "line": 273,
+      "signature": "(data, theme, *, spec_order, decision_order, effect_scale, interval_definition, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "specification_curve",
+      "quantitative_geometry_sha256": "77ef7d371b163acb2db1f34b1b57ab95199b2ead8d802ae886a64bec57224f3c",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_survival_result",
+      "line": 222,
+      "signature": "(data, theme, *, time_label, risk_convention, interval_definition, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "survival_steps_at_risk",
+      "quantitative_geometry_sha256": "924838b4944444b81d8d16e08e2b071f9c52407fefbd89be4f30f69ae08a9c8b",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_swimmer",
+      "line": 252,
+      "signature": "(data, theme, *, time_label, event_shapes, object_order, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "swimmer_followup",
+      "quantitative_geometry_sha256": "a32330be17373980a8aaecc74e6f71846254b24cf620094f94b2022eaff5c7f5",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_term_effect_circle",
+      "line": 105,
+      "signature": "(data, theme, *, term_order, effect_limits, zscore_limits, significance_max, zscore_definition, effect_label, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "term_effect_circle",
+      "quantitative_geometry_sha256": "50517c5ea4158f9e3ced28d91e90af86d4b6adca5c4f34da55f81d1c0a12d9c3",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_term_key",
+      "line": 134,
+      "signature": "(data, theme, *, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "term_key",
+      "quantitative_geometry_sha256": "baf3cef9d22c787fd5892aaa32db63465279b19c6ca01dc57582d1d75015f538",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_two_set_overlap",
+      "line": 146,
+      "signature": "(data, theme, *, set_columns, unit_label, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "two_set_overlap",
+      "quantitative_geometry_sha256": "b599e335fe75f227fdbfab05c0aba1a7d52e43a91bb93f7675acfb44e2ddc3d2",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_method_extensions",
+      "function": "plot_vector_field",
+      "line": 288,
+      "signature": "(data, theme, *, arrow_scale, vector_definition, coordinate_definition, title='')",
+      "source_sha256": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "supplied_vector_field",
+      "quantitative_geometry_sha256": "45747e8f8c864dc5bbb23d6fbf27f7ed5d985c336876ff0771ca6e415fe77846",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multimodal",
+      "function": "plot_association_matrix",
+      "line": 70,
+      "signature": "(data, *, value_label, method_label, alpha=0.05, title='', row_field='feature', column_field='modality', row_order=None, column_order=None, row_aliases=None, column_aliases=None, cell_width=0.7, cell_height=0.36, label_rotation=25)",
+      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "association_matrix",
+      "quantitative_geometry_sha256": "fd193286111202b89a4b628cfb33a4a6576c68a40cbd541a56a0921f2c974df4",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multimodal",
+      "function": "plot_calibration_counts",
+      "line": 125,
+      "signature": "(data, palette, *, interval_label, evaluation_label, title='')",
+      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "calibration_counts",
+      "quantitative_geometry_sha256": "6f27086991cc733a235f08a924bf5555ba6f4e6f0d2b20cc1ab742efc9b9c1cf",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multimodal",
+      "function": "plot_cohort_intervals",
+      "line": 43,
+      "signature": "(data, palette, *, effect_scale, effect_label, interval_label, title='')",
+      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "cohort_intervals",
+      "quantitative_geometry_sha256": "87a25851c5c16d67ca8062e12bda5158d24b9240d6d12dc4d52b34b1f9a45e13",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multimodal",
+      "function": "plot_frozen_dynamics",
+      "line": 182,
+      "signature": "(data, palette, *, time_label, value_label, unit_label, interval_label, title='')",
+      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "frozen_dynamics",
+      "quantitative_geometry_sha256": "303e89b06e962764e6e67ce1fb4479b21c2e894a9486be6a53e177681179f1dc",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multimodal",
+      "function": "plot_interval_tracks",
+      "line": 155,
+      "signature": "(data, palette, *, assembly, chromosome, region, value_label, coordinate_system='zero_based_half_open', title='')",
+      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "interval_tracks",
+      "quantitative_geometry_sha256": "4378208226214e6dd5ebd3350658fd5167f11b3b45c1c2d2dcd821b425e1e713",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multimodal",
+      "function": "plot_residue_confidence",
+      "line": 199,
+      "signature": "(data, *, sequence_label, title='')",
+      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "residue_confidence",
+      "quantitative_geometry_sha256": "cbd948ffa698c6a81d92c466714e02bb19d83cd75180e67bff0ca29b33d796f5",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiomics_views",
+      "function": "plot_aligned_views",
+      "line": 35,
+      "signature": "(data, theme, *, view_order, coordinate_definition, draw_links=True, title='')",
+      "source_sha256": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "aligned_coordinate_views",
+      "quantitative_geometry_sha256": "6f23959c7a6739a524bb141c7d40c85beb5f48810059ed0466e03fc1248c9b8e",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiomics_views",
+      "function": "plot_cross_effects",
+      "line": 16,
+      "signature": "(data, theme, *, x_label, y_label, comparison_definition, alpha=0.05, label_ids=(), title='')",
+      "source_sha256": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "cross_layer_effects",
+      "quantitative_geometry_sha256": "cd9135bb0cbcaedeee0e487e1376da3dc153fb039f5df5d1d25cc358e1830afc",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiomics_views",
+      "function": "plot_diagnostic_panel",
+      "line": 124,
+      "signature": "(data, theme, *, mode, model_definition, reference_definition, cook_area_scale=180, title='')",
+      "source_sha256": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "model_diagnostic_residual",
+      "quantitative_geometry_sha256": "03a526074d9fad3feea567654be33c84aa33499ce93f0f16009403ac4d30d528",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiomics_views",
+      "function": "plot_genomic_links",
+      "line": 87,
+      "signature": "(data, theme, *, track_order, region, assembly, chromosome, coordinate_definition, value_definition, link_definition, title='')",
+      "source_sha256": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "genomic_links_and_signal",
+      "quantitative_geometry_sha256": "f5eea8c3f2106f6a9eda79d5cca8c5d400d5c1351d947f0c4c50eb1e790edd69",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiomics_views",
+      "function": "plot_loading_projection",
+      "line": 60,
+      "signature": "(data, theme, *, x_label, y_label, projection_definition, title='')",
+      "source_sha256": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "feature_correlation_projection",
+      "quantitative_geometry_sha256": "c6931fca4f0a01b08e780a3305614bac7e54442426677af94ec3df6cc093123d",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiomics_views",
+      "function": "plot_mass_spectrum",
+      "line": 70,
+      "signature": "(data, theme, *, spectrum_order, mass_definition, intensity_definition, normalization_definition, mirror=False, label_peak_ids=(), title='')",
+      "source_sha256": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "mass_spectrum_mirror",
+      "quantitative_geometry_sha256": "acdc688d0e9c003f90f09e1b6296497960a29abd96d3a034dd56907cc71af72b",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiomics_views",
+      "function": "plot_pathway_overlay",
+      "line": 110,
+      "signature": "(data, theme, *, node_limits, node_value_definition, edge_definition, title='')",
+      "source_sha256": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "pathway_quantity_overlay",
+      "quantitative_geometry_sha256": "ac625c963c0dae61b8b614042e331a2273b66cadc75bcb10c8469276a77beba6",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiscale",
+      "function": "plot_funnel_result",
+      "line": 84,
+      "signature": "(data, theme, *, reference_estimate, effect_definition, precision_definition, guide_definition, title='')",
+      "source_sha256": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "funnel_supplied_results",
+      "quantitative_geometry_sha256": "9c3c90a753c3bc070679daff088b386a873e3672ed7efe010a6de43a2416c441",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiscale",
+      "function": "plot_genome_overview",
+      "line": 37,
+      "signature": "(data, theme, *, chromosome_order, chromosome_lengths, segment_slots, assembly, coordinate_definition, thresholds, title='')",
+      "source_sha256": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "genome_association_overview",
+      "quantitative_geometry_sha256": "0cc80a59842af4930b433a0525ea9fdb53c1fcf27d478625bbd09ee495a55071",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiscale",
+      "function": "plot_hierarchy_partition",
+      "line": 96,
+      "signature": "(data, theme, *, root_id, quantity_definition, title='')",
+      "source_sha256": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "hierarchy_area_partition",
+      "quantitative_geometry_sha256": "cfbf8647948521059c5ded62387e7766350293368d8f2fdae21c1950c4e05598",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiscale",
+      "function": "plot_locus_tracks",
+      "line": 58,
+      "signature": "(data, theme, *, position_limits, chromosome, assembly, coordinate_definition, ld_reference, ld_definition, recombination_unit, title='')",
+      "source_sha256": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "local_association_tracks",
+      "quantitative_geometry_sha256": "7acbcc48e1af0d6aee54e6f9c7bbfd5ebd5e70412d5de91ef05344ac8486e5b3",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiscale",
+      "function": "plot_spatial_overlay",
+      "line": 144,
+      "signature": "(data, theme, *, mode, pixel_size, physical_unit, background_definition, value_limits=None, value_label='Supplied value', title='')",
+      "source_sha256": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "registered_spatial_categorical",
+      "quantitative_geometry_sha256": "386f51bb28138392c03e624d775717b6d1f76411a1ce8c01cdb28d81a1e0d5d8",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiscale",
+      "function": "plot_ternary_composition",
+      "line": 17,
+      "signature": "(data, theme, *, components, denominator_definition, title='')",
+      "source_sha256": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "ternary_composition",
+      "quantitative_geometry_sha256": "4a6357439b112b54a42a2eaf91434ae6e3515d47edad8a19ac06d3abb5b46535",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_multiscale",
+      "function": "plot_uncertainty_fan",
+      "line": 126,
+      "signature": "(data, theme, *, coverage_order, interval_definition, x_label, y_label, title='')",
+      "source_sha256": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "nested_uncertainty_fan",
+      "quantitative_geometry_sha256": "3458c7b644f85a09f4f072f966f77dbe8529baaa30ee277252a879c16a0e27a3",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_alluvial",
+      "line": 83,
+      "signature": "(data, theme, *, stage_columns, weight_label, title='', orientation='horizontal', stage_orders=None, path_order=None, gap_fraction=0.045, path_field='path_id', weight_field='weight', category_aliases=None, stage_aliases=None, color_stage=None)",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "alluvial",
+      "quantitative_geometry_sha256": "ad655975079542b8c8da8ee2b5efbed55d38e36abe7197acf3edf19f6965fa84",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_contour_field",
+      "line": 219,
+      "signature": "(data, theme, *, value_label, limits, levels, x_label, y_label, title='')",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "contour_field",
+      "quantitative_geometry_sha256": "38fe9be4907ad3a31cfc968306c8fcccb71d648860fda0c22cd33c31ffba0aa7",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_hex_density",
+      "line": 213,
+      "signature": "(data, theme, *, x_label, y_label, unit_label, gridsize=24, title='')",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "hex_density",
+      "quantitative_geometry_sha256": "ba96f68fb2e054a408e4ac4aea763c025c95744f7204f40b1ca8f8415403d344",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_multistate_matrix",
+      "line": 161,
+      "signature": "(data, theme, *, state_order, state_slots, title='', row_field='row', column_field='column', row_order=None, column_order=None, row_aliases=None, column_aliases=None)",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "multistate_matrix",
+      "quantitative_geometry_sha256": "137c97c5c351f41066d3a4fe253072dd8d822c9a43ce28db27e0b5d839c34ab5",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_rank_bump",
+      "line": 204,
+      "signature": "(data, theme, *, stage_order, title='')",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "rank_bump",
+      "quantitative_geometry_sha256": "fdb6c0a0bcdb8c7a82d02ebcf80813c285f309c08eb1912ecca383df2b92d39a",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_running_enrichment",
+      "line": 190,
+      "signature": "(data, theme, *, curve_groups, rank_label, title='')",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "running_enrichment",
+      "quantitative_geometry_sha256": "aed524d2cc87aac06ffe8bc621c8995615d7559a5b1b982cdd6fd904e4ea2cb3",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_typed_network",
+      "line": 34,
+      "signature": "(data, theme, *, edge_label, node_area_label, relation_semantics, directed=False, shape_map=None, title='', size=(8.5, 6.2))",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "typed_network",
+      "quantitative_geometry_sha256": "2ab53d6a16975c8d16e72f2c810a2c98d529cbb9cf083895a28dd9dd0cb0f85a",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_upset",
+      "line": 149,
+      "signature": "(data, theme, *, set_columns, unit_label, title='')",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "upset",
+      "quantitative_geometry_sha256": "5110e184321dd48df0831ec951b7368b8b93d272dba73b9bd32effdc5e3d6e67",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_network_extensions",
+      "function": "plot_weighted_chord",
+      "line": 64,
+      "signature": "(data, theme, *, weight_label, order, title='')",
+      "source_sha256": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "weighted_chord",
+      "quantitative_geometry_sha256": "8ed076912c6b17fd368c393e05f68f7b37802e22fbb418a1b59447c068944566",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_palette_applications",
+      "function": "plot_palette_panel",
+      "line": 214,
+      "signature": "(data, *, palette_name, panel_spec, size=(6.7, 5.1), font_family='Arial')",
+      "source_sha256": "30968482e47951aa89fb78669450b94759be8401515832fa9e32d3c71680887a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_palette_plate",
+      "quantitative_geometry_sha256": "0b7b74a660c6d6c3b87cc0a3fbd291a03c02f15ef4cd2453f1d9ffc6c5facc56",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "Negative",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Positive",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Other",
+            "pt": 6.0
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_palette_applications",
+      "function": "plot_palette_plate",
+      "line": 17,
+      "signature": "(data, *, palette_name, panel_specs, size=(10, 13), font_family='DejaVu Sans', layout='plate')",
+      "source_sha256": "30968482e47951aa89fb78669450b94759be8401515832fa9e32d3c71680887a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_palette_plate",
+      "quantitative_geometry_sha256": "0b7b74a660c6d6c3b87cc0a3fbd291a03c02f15ef4cd2453f1d9ffc6c5facc56",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "Negative",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Positive",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Other",
+            "pt": 6.0
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_polish",
+      "function": "plot_availability_counts",
+      "line": 215,
+      "signature": "(data, *, row_aliases=None, title='Record availability', width_mm=180)",
+      "source_sha256": "1dd1e7849ea89bc67071cef0c2cf01193837c23bae09c20fa98afe1b366e8484",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "availability_counts",
+      "quantitative_geometry_sha256": "ae6fa19f1c33f30db8051fe639b6a595371d3a3fe6dc781458b3f227c6fe386c",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_polish",
+      "function": "plot_polished_matrix",
+      "line": 39,
+      "signature": "(data, *, value_label, limits, signed, row_aliases=None, column_aliases=None, row_blocks=None, column_blocks=None, layout='matrix', width_mm=180, font_size=8.5, title='', note='', sign_marks=True, row_field='feature', column_field='sample', value_field='value', value_columns=None, row_order=None, column_order=None, missing='error', label_rotation=None, row_label_wrap=None, column_label_wrap=None)",
+      "source_sha256": "1dd1e7849ea89bc67071cef0c2cf01193837c23bae09c20fa98afe1b366e8484",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "polished_matrix",
+      "quantitative_geometry_sha256": "b84adef8155650fc902e6f90067b245f12f02609232a602d7db634706793f075",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_polish",
+      "function": "plot_recorded_evidence",
+      "line": 148,
+      "signature": "(data, *, row_aliases=None, layout='aligned', width_mm=180, font_size=8.5, title='Recorded evidence', note='')",
+      "source_sha256": "1dd1e7849ea89bc67071cef0c2cf01193837c23bae09c20fa98afe1b366e8484",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "recorded_evidence",
+      "quantitative_geometry_sha256": "88445c8d9586ef5bbb993897c91a5b51f1c1815885e8e609a7bea5f87d8e1d51",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_process_dashboard",
+      "function": "plot_process_dashboard",
+      "line": 14,
+      "signature": "(data, palette, *, surface_order, bar_group_order, stage_order, geometry_label, count_label, size=(12, 9))",
+      "source_sha256": "f05172abf504690d97c8df546684056a3afbd04c0283fac6d3d66c6eb9184afb",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_process_dashboard",
+      "quantitative_geometry_sha256": "80b90dc91bb5a131d843165fa38b9fd1cee8245537a9a6d9b4644c35ac7701ee",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "22",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "9",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "20",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "21",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "23",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "17",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "5",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "20",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C1",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C3",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "20",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "30",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "40",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "50",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "60",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "70",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "21",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "20",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "17",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "23",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "3",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C1",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "20",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "30",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "40",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "50",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "60",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "70",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Stage1",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Stage2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Stage3",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Stage4",
+            "pt": 6.0
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_publication",
+      "function": "plot_aligned_matrix",
+      "line": 43,
+      "signature": "(data, *, value_label, limits, signed=True, center=0, geometry='tile', block_palette=None, count_label='Supplied count', title='', continuous_colors=None, row_field='feature', column_field='sample', value_field='value', value_columns=None, row_order=None, column_order=None, row_aliases=None, column_aliases=None, row_block_field='feature_block', row_count_field='row_count', missing='error', figsize=None, cell_width=0.44, cell_height=0.27, label_rotation=35, row_label_wrap=None, column_label_wrap=None, label_fontsize=9)",
+      "source_sha256": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "publication_aligned_matrix",
+      "quantitative_geometry_sha256": "dfc48d33b882fe4d6bab63683b91db952874461d25e104cbbd8fc7da894d56a8",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [
+          {
+            "dimension": "y",
+            "keys": [
+              "geneA",
+              "geneB",
+              "geneC"
+            ],
+            "max_center_error_px": 0.0
+          },
+          {
+            "dimension": "y",
+            "keys": [
+              "geneA",
+              "geneB",
+              "geneC"
+            ],
+            "max_center_error_px": 0.0
+          }
+        ],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_publication",
+      "function": "plot_feature_facets",
+      "line": 160,
+      "signature": "(data, *, value_label, limits, title='', ncols=3, point_size=2, continuous_colors=None)",
+      "source_sha256": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "publication_stored_feature_facets",
+      "quantitative_geometry_sha256": "89689f60bca01d27ed03b4fbf67962a69b3221faa3230c7fb1c8f940aca91028",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_publication",
+      "function": "plot_publication_curve",
+      "line": 23,
+      "signature": "(data, palette, *, curve_type, labels, title='', prevalence=None)",
+      "source_sha256": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "publication_curve",
+      "quantitative_geometry_sha256": "8d771a9c771342fd2a391e5cccbb1a77373a6c2907b08461cf8f78fae7184fc1",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_publication",
+      "function": "plot_publication_forest",
+      "line": 115,
+      "signature": "(data, palette, *, x_label, interval_label, effect_scale, title='', compact=True, decimals=2)",
+      "source_sha256": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "publication_grouped_forest",
+      "quantitative_geometry_sha256": "8bbaaf0d086b58395bc0b98f75edbcb79fac398740b2c0179c439c93044c6005",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_publication",
+      "function": "plot_raincloud",
+      "line": 178,
+      "signature": "(data, palette, *, y_label, unit_label, title='', density_min_n=20)",
+      "source_sha256": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "publication_raincloud",
+      "quantitative_geometry_sha256": "6a3f66227cd0218f685954e8927eecbaa38d4cce95612b3ad24cd675038d916c",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_activity_dashboard",
+      "line": 503,
+      "signature": "(data, palette, *, row_order, column_order, value_label, bar_label, line_label, size=(10, 7), row_aliases=None, column_aliases=None, row_label_wrap=18, column_label_wrap=13, row_label_mode='all')",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_activity_dashboard",
+      "quantitative_geometry_sha256": "0e7c8019db07a8cfa6ad03fbed9b04f0595a0c816b01fdaabb6fbfe16d74daae",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [
+          {
+            "dimension": "y",
+            "keys": [
+              "Row000",
+              "Row001",
+              "Row002",
+              "Row003",
+              "Row004",
+              "Row005",
+              "Row006",
+              "Row007",
+              "Row008",
+              "Row009",
+              "Row010",
+              "Row011",
+              "Row012",
+              "Row013",
+              "Row014",
+              "Row015",
+              "Row016",
+              "Row017",
+              "Row018",
+              "Row019",
+              "Row020",
+              "Row021",
+              "Row022",
+              "Row023",
+              "Row024",
+              "Row025",
+              "Row026",
+              "Row027",
+              "Row028",
+              "Row029",
+              "Row030",
+              "Row031",
+              "Row032",
+              "Row033",
+              "Row034",
+              "Row035",
+              "Row036",
+              "Row037",
+              "Row038",
+              "Row039",
+              "Row040",
+              "Row041",
+              "Row042",
+              "Row043",
+              "Row044",
+              "Row045",
+              "Row046",
+              "Row047",
+              "Row048",
+              "Row049",
+              "Row050",
+              "Row051",
+              "Row052",
+              "Row053",
+              "Row054",
+              "Row055",
+              "Row056",
+              "Row057",
+              "Row058",
+              "Row059",
+              "Row060",
+              "Row061",
+              "Row062",
+              "Row063",
+              "Row064",
+              "Row065",
+              "Row066",
+              "Row067",
+              "Row068",
+              "Row069",
+              "Row070",
+              "Row071",
+              "Row072",
+              "Row073",
+              "Row074",
+              "Row075",
+              "Row076",
+              "Row077",
+              "Row078",
+              "Row079",
+              "Row080",
+              "Row081",
+              "Row082",
+              "Row083",
+              "Row084",
+              "Row085",
+              "Row086",
+              "Row087",
+              "Row088",
+              "Row089",
+              "Row090",
+              "Row091",
+              "Row092",
+              "Row093",
+              "Row094",
+              "Row095",
+              "Row096",
+              "Row097",
+              "Row098",
+              "Row099",
+              "Row100",
+              "Row101",
+              "Row102",
+              "Row103",
+              "Row104",
+              "Row105",
+              "Row106",
+              "Row107",
+              "Row108",
+              "Row109",
+              "Row110",
+              "Row111",
+              "Row112",
+              "Row113",
+              "Row114",
+              "Row115",
+              "Row116",
+              "Row117",
+              "Row118",
+              "Row119",
+              "Row120",
+              "Row121",
+              "Row122",
+              "Row123",
+              "Row124",
+              "Row125",
+              "Row126",
+              "Row127",
+              "Row128",
+              "Row129",
+              "Row130",
+              "Row131",
+              "Row132",
+              "Row133",
+              "Row134",
+              "Row135",
+              "Row136",
+              "Row137",
+              "Row138",
+              "Row139",
+              "Row140",
+              "Row141",
+              "Row142",
+              "Row143",
+              "Row144",
+              "Row145",
+              "Row146",
+              "Row147",
+              "Row148",
+              "Row149"
+            ],
+            "max_center_error_px": 0.0
+          },
+          {
+            "dimension": "x",
+            "keys": [
+              "Column01",
+              "Column02",
+              "Column03",
+              "Column04",
+              "Column05",
+              "Column06",
+              "Column07",
+              "Column08",
+              "Column09",
+              "Column10",
+              "Column11",
+              "Column12",
+              "Column13",
+              "Column14",
+              "Column15",
+              "Column16",
+              "Column17",
+              "Column18",
+              "Column19",
+              "Column20",
+              "Column21",
+              "Column22",
+              "Column23",
+              "Column24",
+              "Column25",
+              "Column26",
+              "Column27",
+              "Column28",
+              "Column29",
+              "Column30",
+              "Column31",
+              "Column32",
+              "Column33",
+              "Column34",
+              "Column35",
+              "Column36",
+              "Column37",
+              "Column38",
+              "Column39",
+              "Column40",
+              "Column41",
+              "Column42",
+              "Column43",
+              "Column44"
+            ],
+            "max_center_error_px": 0.0
+          },
+          {
+            "dimension": "x",
+            "keys": [
+              "Column01",
+              "Column02",
+              "Column03",
+              "Column04",
+              "Column05",
+              "Column06",
+              "Column07",
+              "Column08",
+              "Column09",
+              "Column10",
+              "Column11",
+              "Column12",
+              "Column13",
+              "Column14",
+              "Column15",
+              "Column16",
+              "Column17",
+              "Column18",
+              "Column19",
+              "Column20",
+              "Column21",
+              "Column22",
+              "Column23",
+              "Column24",
+              "Column25",
+              "Column26",
+              "Column27",
+              "Column28",
+              "Column29",
+              "Column30",
+              "Column31",
+              "Column32",
+              "Column33",
+              "Column34",
+              "Column35",
+              "Column36",
+              "Column37",
+              "Column38",
+              "Column39",
+              "Column40",
+              "Column41",
+              "Column42",
+              "Column43",
+              "Column44"
+            ],
+            "max_center_error_px": 0.0
+          }
+        ],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "0.60",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.65",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.70",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.75",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.80",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.85",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.90",
+            "pt": 6.0
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_aligned_tracks",
+      "line": 608,
+      "signature": "(data, palette, *, category_order, track_order, matrix_order, block_order, matrix_labels, matrix_limits, count_label, size=(12, 7))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_aligned_tracks",
+      "quantitative_geometry_sha256": "82a031a65046207e62f4023115ed60b0a2d0c2ba8caf2c55e211df0213f804b8",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "C01",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C02",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C03",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C04",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C05",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C06",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C07",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C08",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C09",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C11",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C12",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C13",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C15",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C17",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C19",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C20",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C21",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C22",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C23",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C24",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C25",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C26",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C27",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C28",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C29",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C30",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C31",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C32",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C33",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C34",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C35",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C36",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C37",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C38",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C39",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C40",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C41",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C42",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C43",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C44",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C45",
+            "pt": 6.0
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_annular_profile",
+      "line": 94,
+      "signature": "(data, palette, *, value_label, area_label, value_max, area_scale=0.045, connect_categories=False, curve_mode='vertices', size=(8, 7), font_size=9)",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_annular_profile",
+      "quantitative_geometry_sha256": "632ec71a09f0ad928b460ce74c84547822437347350e017243cc452d408a9dfe",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_contribution_swarm",
+      "line": 240,
+      "signature": "(data, *, feature_order, contribution_label, limits, cmap_name='shap_teal_red', size=(8, 8))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_contribution_swarm",
+      "quantitative_geometry_sha256": "dff17acd2f0dcaf414c54091e153d8be309db16cda84d9836b3862021cc3af29",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_effect_distribution_forest",
+      "line": 539,
+      "signature": "(data, *, row_order, panel_order, panel_labels, limits, interval_label, count_label, p_type, size=(12, 9))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_effect_distribution_forest",
+      "quantitative_geometry_sha256": "101e24c2eb35e49867cc8ace512098e4826c23ac833d37fff2d79cd9bd7ce216",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_ellipse_correlation",
+      "line": 145,
+      "signature": "(data, *, labels, cmap_name='ellipse_yellow_purple', size=(7, 7))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_ellipse_correlation",
+      "quantitative_geometry_sha256": "98dc04f008fa41fb8d87a9d64fb9de21e6a5fc0561f07bb5845cec15ad0b46cf",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_embedding_atlas",
+      "line": 422,
+      "signature": "(data, palette, stack_palette, *, atlas_order, main_order, marker_label, count_label, fraction_label, radial_count_max, size=(10, 15))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_embedding_atlas",
+      "quantitative_geometry_sha256": "c911299d87460ba7aabd2b6400d019a8749e92ba19af8e0f3ebe311bd9eff807",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "1",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "2",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "3",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "4",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "5",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "6",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "7",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "8",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "9",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "10",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "11",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "12",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "13",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "14",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "15",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "16",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "17",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "18",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "19",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "20",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "21",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "22",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "23",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "24",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "25",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "26",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "27",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "28",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "29",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "30",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "31",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "32",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "33",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "34",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "35",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "36",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "37",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "38",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "39",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "40",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "41",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "42",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "43",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "44",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "45",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "46",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "47",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "48",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "49",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "50",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "51",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "52",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "53",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "54",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "55",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "56",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "57",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "58",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "59",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "60",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "61",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "62",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "63",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "64",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "65",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "66",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "67",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "68",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "69",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "70",
+            "pt": 5.0
+          },
+          {
+            "kind": "small_font",
+            "text": "01 Type 01",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "02 Type 02",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "03 Type 03",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "04 Type 04",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "05 Type 05",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "06 Type 06",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "07 Type 07",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "08 Type 08",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "09 Type 09",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "10 Type 10",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "11 Type 11",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "12 Type 12",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "13 Type 13",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "14 Type 14",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "15 Type 15",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "16 Type 16",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "17 Type 17",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "18 Type 18",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "19 Type 19",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "20 Type 20",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "21 Type 21",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "22 Type 22",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "23 Type 23",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "24 Type 24",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "25 Type 25",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "26 Type 26",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "27 Type 27",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "28 Type 28",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "29 Type 29",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "30 Type 30",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "31 Type 31",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "32 Type 32",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "33 Type 33",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "34 Type 34",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "35 Type 35",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "36 Type 36",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "37 Type 37",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "38 Type 38",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "39 Type 39",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "40 Type 40",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "41 Type 41",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "42 Type 42",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "43 Type 43",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "44 Type 44",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "45 Type 45",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "46 Type 46",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "47 Type 47",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "48 Type 48",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "49 Type 49",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "50 Type 50",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "51 Type 51",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "52 Type 52",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "53 Type 53",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "54 Type 54",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "55 Type 55",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "56 Type 56",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "57 Type 57",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "58 Type 58",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "59 Type 59",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "60 Type 60",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "61 Type 61",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "62 Type 62",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "63 Type 63",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "64 Type 64",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "65 Type 65",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "66 Type 66",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "67 Type 67",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "68 Type 68",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "69 Type 69",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "70 Type 70",
+            "pt": 5.6
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 01",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 02",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 03",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 04",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 05",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 06",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 07",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 08",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 09",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 11",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 12",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 13",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 15",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "500",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "1000",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "1500",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "2000",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 01",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 02",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 03",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 04",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 05",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 06",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 07",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 08",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 09",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 10",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 11",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 12",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 13",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 14",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 15",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Class 16",
+            "pt": 5.5
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 1",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 3",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 5",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 7",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Feature 9",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Fraction of units",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "25%",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "50%",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "100%",
+            "pt": 6.0
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_facet_bubble_matrix",
+      "line": 565,
+      "signature": "(data, *, row_facets, column_facets, feature_order, window_order, value_label, size=(10, 8))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_facet_bubble_matrix",
+      "quantitative_geometry_sha256": "8567de166330f4485f8af7ccd3762de6c4cf302715498d27368eddec9f7e9026",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_group_beeswarm",
+      "line": 249,
+      "signature": "(data, palette, *, group_order, value_label, summary_label, limits, size=(9, 5))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_group_beeswarm",
+      "quantitative_geometry_sha256": "78a592a729450a7991039674cc08e925d1beb15fa16ee7b301965a88ee2fa3d1",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_joint_reference",
+      "line": 265,
+      "signature": "(data, palette, *, x_label, y_label, limits, marginal_mode='density', identity=False, residual_label=None, size=(8, 7))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_joint",
+      "quantitative_geometry_sha256": "1ae442c07f2f3fde21bdfb672e9a21166246f01b71d4e432d0fad3916e17ee76",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_mantel_matrix",
+      "line": 181,
+      "signature": "(data, *, labels, specimen_order, p_type, pearson_p_type, size=(9, 7))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_mantel_matrix",
+      "quantitative_geometry_sha256": "25f75594d7e846252bfa4ed2e13c95dfd2e4facf09c8d2c7690584e04c1c6aec",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_multiclass_contributions",
+      "line": 395,
+      "signature": "(data, palette, *, class_order, feature_orders, limits, size=(12, 9))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_multiclass_contributions",
+      "quantitative_geometry_sha256": "c90d0b0e8b5caeb4ade69a39fcc000c5eaa3288261a21f144777e1bfc6b1d383",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "−0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.0",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 01",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 02",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 03",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 04",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 05",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 06",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 07",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 08",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 09",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 11",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 12",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 13",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 15",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 17",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 19",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.0",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 17",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 19",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 01",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 02",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 03",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 04",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 05",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 06",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 07",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 08",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 09",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 11",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 12",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 13",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 15",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.0",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 15",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 17",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 19",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 01",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 02",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 03",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 04",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 05",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 06",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 07",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 08",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 09",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 11",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 12",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 13",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.0",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 11",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 12",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 13",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 15",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 17",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 19",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 01",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 02",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 03",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 04",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 05",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 06",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 07",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 08",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 09",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "−0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.0",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.2",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.4",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.6",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "0.8",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 08",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 09",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 10",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 11",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 12",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 13",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 14",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 15",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 16",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 17",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 18",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 19",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 01",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 02",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 03",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 04",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 05",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 06",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "Variable 07",
+            "pt": 6.0
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_parallel_trials",
+      "line": 211,
+      "signature": "(data, *, axis_order, axis_ranges, score_label, score_limits, size=(10, 5))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_parallel_trials",
+      "quantitative_geometry_sha256": "53c608c78f81f66ed0f82eddf5954f3706a747c45e4186a89a6a2340ded5ade8",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_pca_reference",
+      "line": 333,
+      "signature": "(data, palette, *, group_order, axis_labels, limits, ellipse_label, spider=False, landscape=False, size=(8, 6))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_pca",
+      "quantitative_geometry_sha256": "d2ff7a4a79548c52fb426f562a051ae7096cc9f02edbacd91c629c4d9e38be8d",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_signed_network",
+      "line": 160,
+      "signature": "(data, *, palette_name='network_teal_red', node_color='#45B0C8', size=(7, 7))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_signed_network",
+      "quantitative_geometry_sha256": "f7d437c7fd0a4433337512eae291749b7571d017d69bdd069fe3d7f4073da483",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_state_dashboard",
+      "line": 361,
+      "signature": "(data, palette, *, family_order, condition_order, mean_label, program_label, size=(9, 9))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_state_dashboard",
+      "quantitative_geometry_sha256": "1f2ecd90e0da89615450132270a7c5ac566a43a12aad065998bff74350dcff53",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "1.1 state 1",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "1.2 state 2",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "1.3 state 3",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "1.4 state 4",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "1.5 state 5",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "1.6 state 6",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "1.7 state 7",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "2.1 state 1",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "2.2 state 2",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "2.3 state 3",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "2.4 state 4",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "2.5 state 5",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "2.6 state 6",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "2.7 state 7",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "3.1 state 1",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "3.2 state 2",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "3.3 state 3",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "3.4 state 4",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "3.5 state 5",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "3.6 state 6",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "3.7 state 7",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "4.1 state 1",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "4.2 state 2",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "4.3 state 3",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "4.4 state 4",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "4.5 state 5",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "4.6 state 6",
+            "pt": 6.8
+          },
+          {
+            "kind": "small_font",
+            "text": "4.7 state 7",
+            "pt": 6.8
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_strip_effects",
+      "line": 587,
+      "signature": "(data, palette, *, panel_order, contrast_order, up_color='#FF6A3D', down_color='#7CCD14', eligibility_label, alpha=0.05, fc=1, size=(10, 5))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_strip_effects",
+      "quantitative_geometry_sha256": "e8f931c01454eaff73761a1474c287b3190a9ec8b6aba055b6c087347b9c8c94",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "A",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "B",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "D",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "A",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "B",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "C",
+            "pt": 6.0
+          },
+          {
+            "kind": "small_font",
+            "text": "D",
+            "pt": 6.0
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_surface_grid",
+      "line": 639,
+      "signature": "(data, *, axis_labels, value_label, limits, view=(32, -132), size=(9, 6))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_surface_grid",
+      "quantitative_geometry_sha256": "b9b918a14e72bf033fbb00cbfbe2a3ffc03e62d1b19731968bd449eccef8e466",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_reference",
+      "function": "plot_training_dashboard",
+      "line": 480,
+      "signature": "(data, palette, *, selected_epoch, selection_label, loss_label, heat_label, gradient_label, size=(10, 6))",
+      "source_sha256": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "reference_training_dashboard",
+      "quantitative_geometry_sha256": "0016664e38e7354ac409fcee553f01dc38ede10dfd03291c4f0016c54d244eb0",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [
+          {
+            "kind": "small_font",
+            "text": "Run1",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run2",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run3",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run4",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run5",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run6",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run7",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run8",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run9",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run10",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run11",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run12",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run13",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run14",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run15",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run16",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run17",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run18",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run19",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run20",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run21",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run22",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run23",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run24",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run25",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run26",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run27",
+            "pt": 5.640000000000001
+          },
+          {
+            "kind": "small_font",
+            "text": "Run28",
+            "pt": 5.640000000000001
+          }
+        ],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_styles",
+      "function": "plot_composition_panels",
+      "line": 184,
+      "signature": "(data, palette, *, unit_label, y_max=1)",
+      "source_sha256": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "composition_panels",
+      "quantitative_geometry_sha256": "1ec870a06f2337d43c1ac82c07d79b33038da5c7d3f8f335ac6b2165b71e101e",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_styles",
+      "function": "plot_enrichment_lollipop",
+      "line": 148,
+      "signature": "(data, *, score_type, denominator_label, count_label)",
+      "source_sha256": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "enrichment_lollipop",
+      "quantitative_geometry_sha256": "6d1089693d46fdb9005f7cb5e4d965b3e683cd72abab4f5fd13ceb0904ab9904",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_styles",
+      "function": "plot_sample_distribution",
+      "line": 223,
+      "signature": "(data, palette, y_label)",
+      "source_sha256": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "sample_distribution",
+      "quantitative_geometry_sha256": "8f0ed33788be45c8499fc2736b39073cf43a58fc08bc4f79f5e8e6c264382cf9",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_styles",
+      "function": "plot_volcano_editorial",
+      "line": 17,
+      "signature": "(data, *, labels=(), alpha=0.05, fc=1)",
+      "source_sha256": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "volcano_editorial",
+      "quantitative_geometry_sha256": "0c43f7f045d21548f916f154e0054dcad60e6eb696d7fa0d9b20e62ece424282",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    },
+    {
+      "module": "figure_styles",
+      "function": "plot_volcano_marginal",
+      "line": 67,
+      "signature": "(data, *, labels=(), alpha=0.05, fc=1, x_bins=42, y_bins=36)",
+      "source_sha256": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+      "runtime": "PASS",
+      "page_layouts": {
+        "horizontal": "PASS",
+        "vertical": "PASS"
+      },
+      "visual_review": "NOT_MANUALLY_APPROVED",
+      "input_immutable": true,
+      "kind": "volcano_marginal",
+      "quantitative_geometry_sha256": "23b113c41246370f77b54d6f74967c08c40d706bde2feeae588ccdb2a97d06e9",
+      "index_alignment": {
+        "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+        "bindings": [],
+        "issues": []
+      },
+      "advisory_layout": {
+        "status": "LAYOUT_CHECKS_ONLY",
+        "issues": [],
+        "manual_review_required": true,
+        "limits": "Cannot establish data correctness, legend occlusion, perceptual quality or exported-file acceptance"
+      }
+    }
+  ]
+}

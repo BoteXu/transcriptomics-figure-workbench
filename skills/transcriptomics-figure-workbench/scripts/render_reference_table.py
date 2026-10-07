@@ -11,6 +11,7 @@ def main():
     parser.add_argument('figure_id'); parser.add_argument('--input',required=True,type=Path)
     parser.add_argument('--style',required=True,type=Path); parser.add_argument('--meta',required=True,type=Path)
     parser.add_argument('--output',required=True,type=Path); parser.add_argument('--design',type=Path)
+    parser.add_argument('--page-layout',choices=['landscape','portrait'])
     args=parser.parse_args(); registry=json.loads((Path(__file__).parent.parent/'references/reference-patterns.json').read_text(encoding='utf8'))
     patterns={r['id']:r for r in registry['patterns']}
     if args.figure_id in patterns:
@@ -25,8 +26,11 @@ def main():
     settings=json.loads(args.style.read_text(encoding='utf8')); meta=json.loads(args.meta.read_text(encoding='utf8'))
     fig=fn(data,**settings)
     if args.design:
-        from figure_design import apply_design
-        fig=apply_design(fig,json.loads(args.design.read_text(encoding='utf8')))
+        from figure_design import apply_design,DesignSpec
+        fig=apply_design(fig,DesignSpec(**json.loads(args.design.read_text(encoding='utf8'))))
+    if args.page_layout:
+        from figure_layout import apply_page_layout
+        fig=apply_page_layout(fig,args.page_layout)
     paths=export_figure(fig,data,args.output,args.figure_id,meta,source_file=args.input,expected_source_sha256=file_sha256(args.input))
     plt.close(fig)
     print(json.dumps({'figure_id':args.figure_id,'files':[str(p) for p in paths]},ensure_ascii=True))

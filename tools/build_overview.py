@@ -39,7 +39,7 @@ def book(sections,path,title):
 
 def main():
     O.mkdir(exist_ok=True);c=json.loads((G/'catalog.json').read_text(encoding='utf8'));items=c['preserved_examples'];by={x['id']:x for x in items};methods=c['drawing_methods']
-    primary=[dict(by[m['default']],entry_id=m['id'],entry_title=m['title'],entry_role=m['role']) for m in methods]
+    primary=[dict(by[m['default']],entry_id=m['id'],entry_title=m['title'],entry_role=m['role'],png=by[m['default']].get('current_preview',{}).get('png',by[m['default']]['png'])) for m in methods]
     sections=[(label,[x for x in primary if x['entry_role'] in roles]) for roles,label in [(['figure'],'通用画法'),(['combination'],'具有明确数据关系的组合'),(['protein','support'],'原生结构与说明附表'),(['palette'],'课题色卡库（15套）')]]
     for name,values,title,cols in [('visualization-overview',primary,f"v{c['version']} 去重目录：{len(methods)}个入口；15套色卡单独归入库",3),('all-previews',items,f"v{c['version']} 来源档案：{len(items)}个原编号；包含重复与参数示例",4)]:
         im=contact(values,cols,title);im.save(O/(name+'.png'),optimize=True);im.save(O/(name+'.jpg'),quality=90)
@@ -53,7 +53,9 @@ def main():
     with (O/'methods.tsv').open('w',encoding='utf8',newline='') as f:
         w=csv.writer(f,delimiter='\t');w.writerow(['entry','primary_example','title','role','sources','modes'])
         for m in methods:w.writerow([m['id'],m['default'],m['title'],m['role'],' '.join(m['members']),' '.join(x['example'] for x in m['modes'])])
-    receipt=dict(version=c['version'],primary_entries=len(primary),drawing_entries=len(drawn),source_examples=len(items),primary_pages=pages,archive_pages=archive)
+    import hashlib
+    receipt=dict(version=c['version'],primary_entries=len(primary),drawing_entries=len(drawn),source_examples=len(items),primary_pages=pages,archive_pages=archive,
+                 primary_assets=[dict(id=x['id'],png=x['png'],sha256=hashlib.sha256((G/x['png']).read_bytes()).hexdigest()) for x in primary])
     (O/'overview-index.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     print(json.dumps(dict(primary_entries=len(primary),drawing_entries=len(drawn),sources=len(items),primary_pdf_pages=len(pages),archive_pdf_pages=len(archive))))
 if __name__=='__main__':main()

@@ -1,0 +1,16 @@
+{
+  "adapter": "frozen_dynamics",
+  "module": "figure_multimodal",
+  "function": "plot_frozen_dynamics",
+  "params": {
+    "palette": {
+      "G1": null,
+      "G7": null
+    },
+    "time_label": "Supplied time (ns)",
+    "value_label": "Frozen block RMSD (nm)",
+    "unit_label": "Synthetic independent run IDs G1/G7; frames and time blocks are not independent runs",
+    "interval_label": "Supplied block ranges, not confidence intervals across independent trajectories",
+    "title": "Returned trajectory blocks in physical time"
+  }
+}

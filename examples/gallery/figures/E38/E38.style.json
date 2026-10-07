@@ -1,0 +1,36 @@
+{
+  "adapter": "sequence_logo",
+  "module": "figure_biomni_views",
+  "function": "plot_sequence_logo",
+  "params": {
+    "position_order": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "alphabet": [
+      "A",
+      "C",
+      "G",
+      "T"
+    ],
+    "symbol_slots": {
+      "A": "G1",
+      "C": "G3",
+      "G": "G5",
+      "T": "G7"
+    },
+    "height_definition": "Frozen illustrative symbol heights in bits; no information-content estimation performed.",
+    "height_unit": "Supplied height (bits)",
+    "title": "Position-wise sequence logo"
+  }
+}

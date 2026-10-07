@@ -18,7 +18,7 @@ RULES = [
  ('T08','小提琴与箱线','full mirrored density + box','T08'),
  ('P35','分箱数量分布','fixed-bin rectangles','P35'),
  ('E12','密度山脊','aligned offset densities on a shared value axis','P37 E12'),
- ('T31','有序曲线与区间带','ordered series; line/step/offset; supplied single or nested bands','P29 T09 T14 T18 T28 T31 T35 T39 M07 E10 E32 P25a P25b P25c P26a P26b N09'),
+ ('T31','有序曲线与区间带','ordered series; line/step/offset; supplied single or nested bands','P29 T09 T14 T18 T28 T31 T35 T39 M07 E10 E32 P25a P25b P25c P26a P26b N09 E46 E50'),
  ('P03','配对点与主体连线','same-ID observations joined across conditions','P03'),
  ('T33','XY散点与给定参考层','XY points; supplied fit, reference lines, boundaries, group overlays or aligned diagnostic facets','P06 P33 T05 T07 T19 T33 R18 R19 E11 E14 E24 E25 E30 M01 M11a M11b M11c K30'),
  ('T29','三变量气泡散点','XY position + an independently declared area variable','T15 T29 T40 M11d'),
@@ -26,11 +26,11 @@ RULES = [
  ('N10','六边形支持量','hexagonal bins with count color','N10'),
  ('E26','相同坐标的连续特征分面','registered XY repeated for continuous feature colors','P07 E26'),
  ('T32','条形估计与给定误差线','category rectangles + optional supplied intervals; orientation is a setting','P34 T06 T13 T25 T27 T32 T38 T43 P32'),
- ('P11a','棒棒糖评分','stem length + endpoint; optional independent color/area','P11a P11b'),
+ ('P11a','棒棒糖评分','stem length + endpoint; optional independent color/area','P11a P11b E44'),
  ('E21','森林与多系列区间','row-positioned estimates + optional intervals, numeric columns and series offsets','P19a P19b P20a P20b P21a P21b E13 E21 E22 E30b K26'),
  ('T10','组成堆叠柱','stacked category fractions or declared counts','P23 T10 T17 M10'),
  ('T12','整体组成环形图','annular sectors for one declared denominator','T12 T26'),
- ('T34','数值热图与可选注释','rectangular cell colors; optional supplied hierarchy, labels, masks and facets','P12a P12b P15 P17a P17b P17c P18 P36 T03 T16 T30 T34 T41 M02 M03 K33'),
+ ('T34','数值热图与可选注释','rectangular or coordinate-transformed cell colors; optional supplied hierarchy, labels, masks and facets','P12a P12b P15 P17a P17b P17c P18 P36 T03 T16 T30 T34 T41 M02 M03 K33 E39 E47 E48 E49'),
  ('R22','共享轴的矩阵与数量轨道','aligned colored matrices, bars and optional marginal densities','P16a P16b P31a P31b P31c R15 R22 E09'),
  ('E01','点阵：面积、颜色与状态','row/column-positioned symbols with declared independent area/color/status; optional facets','P13 P14 T11 R20 E01'),
  ('R05','椭圆与数值相关矩阵','ellipse angle/eccentricity + signed color + lower-triangle numbers','R05'),
@@ -44,7 +44,7 @@ RULES = [
  ('R23','三维数值曲面','height surface over two declared coordinates','R23'),
  ('T01','地理数值场','projected geographic field; global/regional extent is a setting','T01 T02'),
  ('T04','地理连接路径','projected endpoints with explicit route edges','T04'),
- ('E33b','配准背景上的测量叠加','registered background pixels + categorical/continuous marks; optional aligned facets','E33a E33b K32'),
+ ('E33b','配准背景上的测量叠加','registered background pixels + categorical/continuous marks; optional aligned facets','E33a E33b K32 E41'),
  ('R01','环形轮廓与分层气泡','radial multiseries profile + independently sized bubbles','R01 R02'),
  ('R09','平行坐标','multiple declared axes joined by one record per path','R09'),
  ('R10','多行贡献蜂群','row-positioned contribution swarms + continuous feature-value color','R10'),
@@ -68,7 +68,7 @@ RULES = [
  ('P09','效应与证据火山','effect/evidence XY + declared status and optional side labels','P08 P09 T24'),
  ('P10','火山与堆积边际分布','same-point volcano + stacked marginal counts','P10'),
  ('R13','散点与边际分布','same XY + two aligned marginal distributions; optional supplied fits/residual summary','R08 R12 R13'),
- ('P27','曲线与分箱支持量','aligned calibration values, supplied intervals and bin-support rectangles','P27'),
+ ('P27','曲线与分箱支持量','aligned calibration values, supplied intervals and bin-support rectangles','P27 E45'),
  ('R07','关联矩阵与外接检验网络','triangle pairwise association matrix + cross-set tested edges','R07'),
  ('R11','多类贡献与份额组合','aligned class contribution swarms, rose insets and multiring shares','R11'),
  ('P22','配对评分与差值区间','paired XY + independently supplied difference intervals','P22'),
@@ -79,26 +79,32 @@ RULES = [
  ('R24','流程、对象、矩阵与评价地形','process diagram + object views + candidate matrices + landscapes + stage counts','R24'),
  ('E34','成员流线、条目与评分点阵','binary membership ribbons aligned to term rows and quantitative bubbles','E34'),
  ('E35','双量值三角单元矩阵','two separately colored triangles per cell with independent quantitative keys','E35'),
- ('E37','已有层次树、叶端标记与量值轨道','given hierarchy in rectangular/radial mode with categorical or quantitative leaf tracks','E36 E37'),
+ ('E37','已有层次树、叶端标记与量值轨道','given hierarchy in rectangular/radial mode; declared linkage height or branch length, categorical or quantitative leaf tracks','E36 E37 E40'),
+ ('E38','序列位点字母堆叠','position-wise character glyphs whose heights equal explicit supplied quantities','E38'),
+ ('E42','图像棋盘拼接与像素差值','alternating co-registered image tiles with separately scaled pixel differences','E42'),
+ ('E43','剪接覆盖、连接弧与转录本结构','physical interval coverage + count-width junction arcs + aligned exon annotation','E43'),
+ ('E51','有符号贡献瀑布','ordered signed increments joining an explicit baseline to the exact additive total','E51'),
 ]
 
 # A second matrix, axis scale or added marginal count alone is a preset, not a
 # new recipe. Distinct component relationships remain independently selectable.
 COMBINATION_ALIASES = {'K02':'K01','K03':'K01','K07':'K01','K08':'K01','K09':'K01','K28':'K01','K15':'K14','K16':'K14','K23':'K18','K40':'K38'}
 MODE_EXAMPLES = {
- 'E37':[('E37','环形树与叶端量值'),('E36','矩形树与分类色条')],
+ 'E37':[('E37','环形树与叶端量值'),('E36','矩形树与分类色条'),('E40','已给拓扑和累计枝长')],
  'P04':[('P04','原始点与中心/IQR'),('R17','蜂群排布'),('P24','分面比例点')],
- 'T31':[('T31','曲线与一层区间'),('P26a','阶梯曲线'),('T35','偏移谱线'),('E32','多层嵌套区间')],
+ 'T31':[('T31','曲线与一层区间'),('P26a','阶梯曲线'),('T35','偏移谱线'),('E32','多层嵌套区间'),('E46','决策净获益与参考策略'),('E50','独立运行的物理时间与分块范围')],
+ 'P11a':[('P11a','分类棒棒糖'),('E44','共同位置的多信号PIP与可信集')],
+ 'P27':[('P27','校准与分箱支持量'),('E45','同评价群体多模型校准')],
  'T33':[('T33','点与给定拟合'),('R19','分类点与给定范围'),('R18','质心连线'),('E11','分位数对照'),('E14','差值与给定相合限界'),('M01','四种已给证据状态'),('M11a','给定残差参考层'),('M11c','给定尺度参考层'),('E30','给定精度边界'),('K30','同模型四个诊断分面')],
  'E21':[('E21','单系列与数字列'),('E22','比值与对数轴'),('P21a','多系列并排'),('E13','多阶段点估计'),('K26','两种量值独立分面')],
- 'T34':[('T34','已有层次树'),('T30','普通矩阵'),('P15','分类注释条'),('P17b','分块与分面'),('P18','三角区域与缺失状态'),('P36','格内数值'),('K33','不同量值独立色标')],
+ 'T34':[('T34','已有层次树'),('T30','普通矩阵'),('P15','分类注释条'),('P17b','分块与分面'),('P18','三角区域与缺失状态'),('P36','格内数值'),('K33','不同量值独立色标'),('E39','物理接触矩阵与对齐轨道'),('E47','调控评分与精确样本注释'),('E48','通路冗余相似矩阵'),('E49','双参数网络敏感性')],
  'R22':[('R22','多矩阵与计数轨道'),('R15','矩阵与边际密度'),('P16a','矩阵与侧计数'),('P31b','计数与数值表')],
  'E01':[('E01','分类条、形状与状态'),('P13','颜色与独立面积'),('R20','多条件分面')],
  'R25':[('R25','多实体形状与符号边'),('R06','圆形布局'),('N03','二部布局'),('N12','已有层级布局'),('M09','功能底图数量叠加')],
  'N04':[('N04','带宽表达数量'),('E08','等宽表达成员关系')],
  'N07':[('N07','格内多状态'),('E20','缺失与未检测状态'),('K20','矩阵与对象计数')],
  'T01':[('T01','全球范围'),('T02','区域范围')],
- 'E33b':[('E33b','连续量叠加'),('E33a','分类叠加'),('K32','同背景独立分面')],
+ 'E33b':[('E33b','连续量叠加'),('E33a','分类叠加'),('K32','同背景独立分面'),('E41','正交切面与区域标签')],
  'E29':[('E29','关联、区间与信号轨道'),('P28','已有区间信号'),('M08','轨道与候选连接弧'),('P30','单条位置轨道')],
  'N08':[('N08','排序三层图'),('K19','三层图与局部窗口')],
  'R13':[('R13','散点与边际密度'),('R08','散点与边际直方图'),('R12','增加给定残差摘要')],
@@ -145,7 +151,7 @@ def build():
         reason='该画法的唯一主预览；来源与数据契约分别保留。' if decision=='recommended' else '合并到 '+m['title']+'；数据名称、色卡、轴尺度、注释或重复分面作为设置，原表格和科学定义保留。'
         x['curation']=dict(decision=decision,canonical=m['default'],reason=reason)
         x['method']=m['id']
-    c['schema_version']=3;c['version']='0.2.1';c['drawing_methods']=methods
+    c['schema_version']=3;c['version']=(ROOT/'VERSION').read_text().strip();c['drawing_methods']=methods
     c['curation_policy']='One main preview per visual grammar. Source IDs and contracts are preserved. Different data labels, palettes, scales and repeat facets never create new methods.'
     write_json(G/'catalog.json',c)
     counts={role:sum(m['role']==role for m in methods) for role in ['figure','combination','support','protein','palette']}
@@ -156,6 +162,11 @@ def build():
     for row in ledger['entries']:
         x=by[row['id']];row.update(x['curation']);row['method']=x['method']
         row['png_sha256']=x['png_sha256']
+        if x['id'] in {f'E{i}' for i in range(38,52)}:
+            from PIL import Image
+            meta=json.loads((G/x['meta']).read_text(encoding='utf8'))
+            row['semantic_settings']=meta.get('figure_spec',{});row['render_kind']=meta.get('figure_spec',{}).get('kind')
+            row['png_dimensions']=list(Image.open(G/x['png']).size)
     # New examples are audited from their actual saved table and metadata.
     old_ids={x['id'] for x in ledger['entries']}
     for x in items:

@@ -1,0 +1,38 @@
+{
+  "adapter": "contact_tracks",
+  "module": "figure_biomni_views",
+  "function": "plot_contact_tracks",
+  "params": {
+    "bin_order": [
+      "B00",
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "B13",
+      "B14",
+      "B15"
+    ],
+    "track_order": [
+      "Track A",
+      "Track B"
+    ],
+    "region_definition": "Synthetic segment, 0-based half-open bins; frozen upper-triangle measurements.",
+    "coordinate_unit": "Position (bp)",
+    "value_definition": "Supplied contact intensity",
+    "value_limits": [
+      0,
+      2.1
+    ],
+    "track_unit": "Supplied signal",
+    "title": "Physical contact bins and aligned signal tracks"
+  }
+}

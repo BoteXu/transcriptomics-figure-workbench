@@ -16,6 +16,8 @@ BLUE='#35618F';AMBER='#B87822';GREY='#7A838B'
 SEQ=LinearSegmentedColormap.from_list('polished_magnitude',['#FAFAF7','#C1D8E6',BLUE])
 
 def display_map(keys,mapping):
+    if mapping is not None and set(mapping)!=set(keys):
+        raise ValueError('Display aliases must cover exactly the displayed axis IDs')
     result={k:str((mapping or {}).get(k,k)) for k in keys}
     if any(not v.strip() for v in result.values()) or len(set(result.values()))!=len(keys):
         raise ValueError('Display aliases must be nonempty and unique within axis')
@@ -45,7 +47,7 @@ def plot_polished_matrix(data,*,value_label,limits,signed,row_aliases=None,
     if type(sign_marks) is not bool:raise ValueError('sign_marks must be boolean')
     d,rows,cols=normalize_matrix(data,row_field=row_field,column_field=column_field,value_field=value_field,
                                  value_columns=value_columns,row_order=row_order,column_order=column_order,missing=missing)
-    if layout not in ('matrix','blocks','transpose') or not 150<=width_mm<=240 or not 8<=font_size<=11:raise ValueError('Unsupported layout or final-size geometry')
+    if layout not in ('matrix','blocks','transpose') or not np.isfinite(width_mm) or width_mm<=0 or not np.isfinite(font_size) or font_size<=0:raise ValueError('Unsupported layout or nonpositive final-size geometry')
     if len(limits)!=2 or not np.isfinite(limits).all() or limits[0]>=limits[1] or d.value.min()<limits[0] or d.value.max()>limits[1]:raise ValueError('Limits must contain every value')
     if type(signed) is not bool or (signed and not limits[0]<0<limits[1]):raise ValueError('Declare signed zero-centered or sequential scale')
     ra=display_map(rows,row_aliases);ca=display_map(cols,column_aliases)
@@ -92,9 +94,9 @@ def plot_polished_matrix(data,*,value_label,limits,signed,row_aliases=None,
             y+=len(items);ax.axhline(y-.5,color='white',lw=1.8)
         if layout=='blocks':
             ax.set_title(block,fontsize=font_size,pad=8)
-        elif layout=='matrix' and column_blocks:
+        elif (layout=='matrix' and column_blocks) or (layout=='transpose' and row_blocks):
             cursor=0
-            for label,items in cb:
+            for label,items in (rb if layout=='transpose' else cb):
                 length=len(items)
                 ax.add_patch(Rectangle((cursor-.5,1.01),length,.075,transform=ax.get_xaxis_transform(),
                                       facecolor='#EAF0F3',edgecolor='white',lw=1,clip_on=False))
@@ -219,7 +221,7 @@ def plot_availability_counts(data,*,row_aliases=None,title='Record availability'
     if not 150<=width_mm<=240:raise ValueError('Print width must be150-240mm')
     rows=list(d.display_cluster);aliases=display_map(rows,row_aliases)
     fig,ax=plt.subplots(figsize=(width_mm/25.4,max(3.5,len(rows)*.28+1.8)))
-    fig.subplots_adjust(left=.27,right=.95,bottom=.17,top=.84)
+    fig.subplots_adjust(left=.27,right=.95,bottom=.27,top=.84)
     y=np.arange(len(d));missing=d.reports-d.any_therapy_rows
     ax.barh(y,d.any_therapy_rows,color=BLUE,height=.60)
     ax.barh(y,missing,left=d.any_therapy_rows,color=AMBER,hatch='///',edgecolor='white',lw=.4,height=.60)

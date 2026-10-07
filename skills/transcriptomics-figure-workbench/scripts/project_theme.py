@@ -59,12 +59,15 @@ def bind_panel(theme,spec,data):
     spec.pop('bounds',None)
     return spec
 
-def render_panel(data,spec,theme,*,size=(6.7,5.1)):
+def render_panel(data,spec,theme,*,size=(6.7,5.1),page_layout=None):
     from figure_palette_applications import plot_palette_panel
     theme=validate_theme(theme); bound=bind_panel(theme,spec,data)
     with palette_scope(theme),plt.rc_context({'font.family':theme['font_family']}):
         fig=plot_palette_panel(data,palette_name=theme['palette_name'],panel_spec=bound,size=size,font_family=theme['font_family'])
         fig=apply_project_style(fig,theme)
+    if page_layout:
+        from figure_layout import apply_page_layout
+        fig=apply_page_layout(fig,page_layout)
     return fig
 
 def apply_project_style(fig,theme):
@@ -80,6 +83,8 @@ def apply_project_style(fig,theme):
         legend.get_title().set_fontsize(theme['design']['label_pt'])
     canonical=json.dumps(theme,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode('utf8')
     fig._omics_spec['project_theme']=copy.deepcopy(theme); fig._omics_spec['project_theme_sha256']=hashlib.sha256(canonical).hexdigest()
+    from figure_layout import optimize_guide_layout
+    fig=optimize_guide_layout(fig)
     return fig
 
 def render_with_theme(renderer,data,params,theme):
@@ -90,16 +95,22 @@ def render_with_theme(renderer,data,params,theme):
     """
     import inspect
     theme=validate_theme(theme); settings=copy.deepcopy(params); signature=inspect.signature(renderer)
-    for field in ('palette','stack_palette'):
+    for field in ('palette','stack_palette','group_palette'):
         if field in settings:
             if not isinstance(settings[field],dict): raise ValueError('Explicit named category map required')
             settings[field]=group_palette(theme,list(settings[field]))
     for field,role in [('node_color','primary'),('up_color','positive'),('down_color','negative')]:
         if field in signature.parameters: settings[field]=theme['roles'][role]
     if 'continuous_colors' in signature.parameters:
-        settings['continuous_colors']=theme['continuous']['diverging' if settings.get('signed',False) else 'sequential']
+        scale_parameter=signature.parameters.get('scale_type')
+        default_scale=scale_parameter.default if scale_parameter else None
+        signed=settings.get('signed',False) or settings.get('scale_type',default_scale)=='signed' or settings.get('value_semantics') in ('scaled','signed_effect')
+        settings['continuous_colors']=theme['continuous']['diverging' if signed else 'sequential']
     if isinstance(settings.get('block_palette'),dict) and set(settings['block_palette'])<=set(theme['group_slots']):
         settings['block_palette']=group_palette(theme,list(settings['block_palette']))
+    if isinstance(settings.get('annotation_palettes'),dict):
+        for name,palette in settings['annotation_palettes'].items():
+            if set(palette)<=set(theme['group_slots']):settings['annotation_palettes'][name]=group_palette(theme,list(palette))
     if 'font_family' in signature.parameters: settings['font_family']=theme['font_family']
     with palette_scope(theme),plt.rc_context({'font.family':theme['font_family']}): fig=renderer(data,**settings); fig=apply_project_style(fig,theme)
     fig._omics_spec['theme_adapter']=renderer.__module__+'.'+renderer.__name__

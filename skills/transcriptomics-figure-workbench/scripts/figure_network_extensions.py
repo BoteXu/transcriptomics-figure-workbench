@@ -64,6 +64,8 @@ def plot_typed_network(data,theme,*,edge_label,node_area_label,relation_semantic
 def plot_weighted_chord(data,theme,*,weight_label,order,title=''):
     """Nonnegative quantitative relationships: widths carry the supplied weights."""
     d=checked(data,['source','target','weight'],['weight']); _unique(d,['source','target'])
+    if pd.Series([frozenset((a,b)) for a,b in zip(d.source,d.target)]).duplicated().any():
+        raise ValueError('Unsigned chord pairs cannot be supplied in both directions')
     if (d.weight<=0).any() or (d.source==d.target).any() or not 2<=len(order)<=12 or len(order)!=len(set(order)) or (set(d.source)|set(d.target))!=set(order): raise ValueError('Positive weights, 2–12 complete explicit sectors and no self links required')
     pal=group_palette(theme,order); totals={s:float(d.loc[(d.source==s)|(d.target==s),'weight'].sum()) for s in order}; scale=(2*np.pi-len(order)*.10)/sum(totals.values()); starts={}; cursor=np.pi/2
     fig=_start(theme);ax=_ax(fig,[.07,.10,.72,.79]); ax.axis('off'); ax.set_aspect('equal'); ax.set(xlim=(-1.28,1.28),ylim=(-1.22,1.28));ax.set_title(title,loc='left')
@@ -78,26 +80,71 @@ def plot_weighted_chord(data,theme,*,weight_label,order,title=''):
     fig.text(.80,.65,'Ribbon width\n'+weight_label,fontsize=9);fig.text(.80,.39,'Unsigned weights\nNo inferred direction',fontsize=8)
     return _done(fig,data,'weighted_chord',theme,weight_label=weight_label,sector_order=order,directed=False)
 
-def plot_alluvial(data,theme,*,stage_columns,weight_label,title=''):
-    """A wide path table: one route per row, nonnegative count/weight per path."""
-    d=checked(data,['path_id','weight']+stage_columns,['weight']);_unique(d,['path_id'])
-    if len(stage_columns)<2 or len(stage_columns)>5 or (d.weight<=0).any():raise ValueError('Use 2–5 stages and positive weights')
-    groups=list(pd.unique(d[stage_columns].to_numpy().ravel()));pal=group_palette(theme,groups);total=float(d.weight.sum());fig=_start(theme);ax=_ax(fig,[.12,.16,.64,.70]);positions={};starts={};gap=total*.045
-    for j,col in enumerate(stage_columns):
-        cursor=0
-        for g in pd.unique(d[col]):
-            weight=float(d.loc[d[col]==g,'weight'].sum());positions[(j,g)]=(cursor,weight);starts[(j,g)]=0.;ax.add_patch(Rectangle((j-.035,cursor),.07,weight,fc=pal[g],ec='white'));ax.text(j,cursor+weight/2,g,ha='center',va='center',fontsize=8);cursor+=weight+gap
-    # Every path retains its quantity at every stage; no aggregated association is called a trajectory.
-    slots={}
-    for j,col in enumerate(stage_columns):
-        for r in d.to_dict('records'):
-            g=r[col];base=positions[(j,g)][0]+starts[(j,g)];slots[(r['path_id'],j)]=(base,base+r['weight']);starts[(j,g)]+=r['weight']
-    for r in d.to_dict('records'):
-        color=pal[r[stage_columns[0]]]
-        for j in range(len(stage_columns)-1):
-            lo,hi=slots[(r['path_id'],j)];bl,bh=slots[(r['path_id'],j+1)];v=[(j+.035,lo),(j+.5,lo),(j+.5,bl),(j+1-.035,bl),(j+1-.035,bh),(j+.5,bh),(j+.5,hi),(j+.035,hi),(j+.035,lo)];c=[Path.MOVETO]+[Path.CURVE4]*3+[Path.LINETO]+[Path.CURVE4]*3+[Path.CLOSEPOLY];ax.add_patch(PathPatch(Path(v,c),fc=color,ec='none',alpha=.4,zorder=0))
-    ax.set_xlim(-.2,len(stage_columns)-.8);ax.set_ylim(0,total+gap*(max(d[c].nunique() for c in stage_columns)));ax.set_xticks(range(len(stage_columns)),stage_columns);ax.set_ylabel(weight_label);ax.set_title(title,loc='left');fig.text(.80,.70,'Band height = weight\nSame path ID across stages',fontsize=8)
-    return _done(fig,data,'alluvial',theme,stage_columns=stage_columns,weight_label=weight_label,denominator=total)
+def plot_alluvial(data,theme,*,stage_columns,weight_label,title='',orientation='horizontal',
+                  stage_orders=None,path_order=None,gap_fraction=.045,path_field='path_id',
+                  weight_field='weight',category_aliases=None,stage_aliases=None,color_stage=None):
+    """Conserved path bands, with left-to-right or top-to-bottom stage direction.
+
+    Full category labels and totals occupy dedicated per-stage guide lanes;
+    tiny/zero bands never receive an invented minimum weight for legibility.
+    """
+    import textwrap
+    from alluvial_geometry import layout_paths
+    from matrix_input import axis_labels
+    if orientation not in ('horizontal','vertical') or not isinstance(weight_label,str) or not weight_label.strip():
+        raise ValueError('Declare flow orientation and the weight unit')
+    ledger=layout_paths(data,stage_columns,stage_orders=stage_orders,path_order=path_order,
+                        gap_fraction=gap_fraction,path_field=path_field,weight_field=weight_field)
+    stages=ledger['stages'];n=len(stages);groups=list(dict.fromkeys(g for c in stages for g in ledger['stage_orders'][c]))
+    pal=group_palette(theme,groups);labels=dict(zip(groups,axis_labels(groups,category_aliases,'category')))
+    stage_labels=axis_labels(stages,stage_aliases,'stage');color_stage=color_stage or stages[0]
+    if color_stage not in stages:raise ValueError('color_stage must be a supplied stage')
+    color_by_path=data.set_index(path_field)[color_stage].to_dict()
+    maximum=max(len(ledger['stage_orders'][c]) for c in stages)
+    if orientation=='horizontal':
+        size=(max(8.5,n*2.2),max(6.2,4.5+maximum*.36));main=[.08,.42,.87,.44]
+    else:
+        size=(8.5,max(7.6,n*(1+maximum*.25)));main=[.10,.12,.57,.74]
+    fig=_start(theme,size);ax=_ax(fig,main);thickness=.12
+    def xy(points):
+        a=np.asarray(points,float)
+        return a if orientation=='horizontal' else a[:,::-1]
+    for node in ledger['nodes']:
+        if node['weight']==0:continue
+        j,lo,hi=node['stage_index'],node['lo'],node['hi']
+        origin=(j-thickness/2,lo) if orientation=='horizontal' else (lo,j-thickness/2)
+        width,height=(thickness,hi-lo) if orientation=='horizontal' else (hi-lo,thickness)
+        patch=Rectangle(origin,width,height,fc=pal[node['category']],ec='white',lw=.6,zorder=2)
+        patch.set_gid('node:'+node['stage']+':'+node['category']);ax.add_patch(patch)
+    for segment in ledger['segments']:
+        if segment['weight']==0:continue
+        j=segment['stage_index'];lo,hi=segment['source_interval'];bl,bh=segment['target_interval']
+        v=[(j+thickness/2,lo),(j+.5,lo),(j+.5,bl),(j+1-thickness/2,bl),
+           (j+1-thickness/2,bh),(j+.5,bh),(j+.5,hi),(j+thickness/2,hi),(j+thickness/2,lo)]
+        c=[Path.MOVETO]+[Path.CURVE4]*3+[Path.LINETO]+[Path.CURVE4]*3+[Path.CLOSEPOLY]
+        patch=PathPatch(Path(xy(v),c),fc=pal[color_by_path[segment['path_id']]],ec='none',alpha=.38,zorder=0)
+        patch.set_gid('flow:'+segment['path_id']+':'+str(j));ax.add_patch(patch)
+    if orientation=='horizontal':
+        ax.set(xlim=(-.15,n-.85),ylim=(0,ledger['extent']),ylabel=weight_label)
+        ax.set_xticks(range(n),stage_labels);ax.set_yticks([])
+    else:
+        ax.set(xlim=(0,ledger['extent']),ylim=(n-.85,-.15),xlabel=weight_label)
+        ax.set_yticks(range(n),stage_labels);ax.set_xticks([])
+    ax.set_title(title,loc='left',pad=12)
+    for j,col in enumerate(stages):
+        bounds=[.08+j*.87/n,.12,.87/n-.01,.23] if orientation=='horizontal' else [.72,.12+(n-j-1)*.74/n,.26,.74/n-.015]
+        guide=fig.add_axes(bounds);guide.axis('off')
+        guide.text(0,1,stage_labels[j],va='top',weight='bold',fontsize=9)
+        nodes=[x for x in ledger['nodes'] if x['stage_index']==j]
+        for i,node in enumerate(nodes):
+            y=.77-i*.72/max(len(nodes),1)
+            guide.add_patch(Rectangle((0,y-.045),.045,.055,fc=pal[node['category']],ec='none'))
+            guide.text(.065,y,textwrap.fill(labels[node['category']],22)+'  ('+f"{node['weight']:g}"+')',
+                       va='center',fontsize=8,linespacing=1.1)
+    fig.text(.08,.045,'Band width = '+weight_label+'; total = '+f"{ledger['total']:g}"+'; colour = '+color_stage+' identity.\nGaps carry no quantity; zero-weight paths retained in the source and ledger.',fontsize=8)
+    return _done(fig,data,'alluvial',theme,stage_columns=stages,weight_label=weight_label,
+                 denominator=ledger['total'],orientation=orientation,color_stage=color_stage,
+                 category_aliases=labels,stage_aliases=dict(zip(stages,stage_labels)),geometry_ledger=ledger)
 
 def plot_upset(data,theme,*,set_columns,unit_label,title=''):
     d=checked(data,['object_id']+set_columns,set_columns);_unique(d,['object_id'])

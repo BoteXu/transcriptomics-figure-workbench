@@ -21,7 +21,7 @@ def main():
         for c in set(item['numeric_columns'])&set(data.columns): data[c]=pd.to_numeric(data[c],errors='raise')
         spec=json.loads(style.read_text(encoding='utf8'))['panel_spec']; meta=json.loads(metadata.read_text(encoding='utf8')); meta['palette']=theme['palette_name']; meta['project_theme_source_sha256']=file_sha256(a.theme)
         with plt.rc_context({'font.family':theme['font_family'],'font.size':9}):
-            fig=render_panel(data,spec,theme); audit=audit_panel_layout(fig)
+            fig=render_panel(data,spec,theme,page_layout=item.get('page_layout',manifest.get('page_layout'))); audit=audit_panel_layout(fig)
             if audit['issues']: raise ValueError('Guide lane needs revision: '+str(audit['issues']))
             meta['layout_audit']=audit; paths=export_figure(fig,data,out/'figures',item['id'],meta,source_file=source,expected_source_sha256=file_sha256(source)); plt.close(fig)
         records.append(dict(id=item['id'],source_card=item.get('source_card'),source_panel=item.get('source_panel'),input_file_sha256=file_sha256(source),output={f.name:file_sha256(f) for f in paths},theme_sha256=file_sha256(a.theme)))

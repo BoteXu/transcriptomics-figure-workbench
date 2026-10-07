@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "version": "0.2.1",
-  "source_examples": 244,
+  "version": "0.2.4",
+  "source_examples": 260,
   "counts": {
-    "figure": 68,
-    "combination": 24,
+    "figure": 72,
+    "combination": 26,
     "support": 1,
     "protein": 3,
     "palette": 15
@@ -232,7 +232,9 @@
         "P25c",
         "P26a",
         "P26b",
-        "N09"
+        "N09",
+        "E46",
+        "E50"
       ],
       "modes": [
         {
@@ -250,6 +252,14 @@
         {
           "example": "E32",
           "label": "多层嵌套区间"
+        },
+        {
+          "example": "E46",
+          "label": "决策净获益与参考策略"
+        },
+        {
+          "example": "E50",
+          "label": "独立运行的物理时间与分块范围"
         }
       ],
       "contracts": [
@@ -371,6 +381,20 @@
           "expression": "看同一实体在阶段间排名怎样上升、下降、交叉",
           "limitations": "原创合成演示；不重新排名；保留并列；反向纵轴明确1最高；排名不能表达原量值差",
           "metadata": "metadata/N09.json"
+        },
+        {
+          "example": "E46",
+          "data_required": "策略×概率阈值×已算净获益、给定区间、同评价群体与决策约定",
+          "expression": "不同阈值下的净获益，并和全部/无人策略比较",
+          "limitations": "不计算DCA、不推导临床阈值；净获益定义、患病率与评价群体需明确。",
+          "metadata": "metadata/E46.json"
+        },
+        {
+          "example": "E50",
+          "data_required": "运行ID×真实时间×已有指标/分块范围、单位与参考结构",
+          "expression": "各独立运行的时间变化、瞬态与已有分块范围",
+          "limitations": "不计算RMSD或自由能、不宣称收敛；帧和分块不充当独立重复。",
+          "metadata": "metadata/E50.json"
         }
       ]
     },
@@ -849,12 +873,17 @@
       "grammar": "stem length + endpoint; optional independent color/area",
       "members": [
         "P11a",
-        "P11b"
+        "P11b",
+        "E44"
       ],
       "modes": [
         {
           "example": "P11a",
-          "label": "通用形式"
+          "label": "分类棒棒糖"
+        },
+        {
+          "example": "E44",
+          "label": "共同位置的多信号PIP与可信集"
         }
       ],
       "contracts": [
@@ -871,6 +900,13 @@
           "expression": "表达项目评分、方向、证据及数量",
           "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。不运行富集，也不生成GSEA running-score曲线",
           "metadata": "metadata/P11b.json"
+        },
+        {
+          "example": "E44",
+          "data_required": "信号×变异完整表、共同位置、已给PIP、可信集身份、坐标版本",
+          "expression": "每个信号的候选分布及已给可信集；共用位置便于比较",
+          "limitations": "不运行精细定位或共定位；多信号PIP不要求总和为1，位置重叠不等于同一因果变异。",
+          "metadata": "metadata/E44.json"
         }
       ]
     },
@@ -1082,7 +1118,7 @@
       "title": "数值热图与可选注释",
       "role": "figure",
       "default": "T34",
-      "grammar": "rectangular cell colors; optional supplied hierarchy, labels, masks and facets",
+      "grammar": "rectangular or coordinate-transformed cell colors; optional supplied hierarchy, labels, masks and facets",
       "members": [
         "P12a",
         "P12b",
@@ -1099,7 +1135,11 @@
         "T41",
         "M02",
         "M03",
-        "K33"
+        "K33",
+        "E39",
+        "E47",
+        "E48",
+        "E49"
       ],
       "modes": [
         {
@@ -1129,6 +1169,22 @@
         {
           "example": "K33",
           "label": "不同量值独立色标"
+        },
+        {
+          "example": "E39",
+          "label": "物理接触矩阵与对齐轨道"
+        },
+        {
+          "example": "E47",
+          "label": "调控评分与精确样本注释"
+        },
+        {
+          "example": "E48",
+          "label": "通路冗余相似矩阵"
+        },
+        {
+          "example": "E49",
+          "label": "双参数网络敏感性"
         }
       ],
       "contracts": [
@@ -1243,6 +1299,34 @@
           "expression": "每个因子在哪些层解释更多变异；因子由哪些分子特征共同构成",
           "limitations": "4个相同Factor ID对应3模态方差表与12特征载荷；两个结果是固定合成模型输出，未声称运行MOFA。载荷方向和范围固定。 合成展示，不建立统计或因果结论。",
           "metadata": "metadata/K33.json"
+        },
+        {
+          "example": "E39",
+          "data_required": "有序物理区间、上三角分箱对数值（含显式缺失）、相同分箱的轨道",
+          "expression": "位置对关系与同一基因组坐标上的局部信号",
+          "limitations": "不执行Hi-C校正、TAD/环路识别；缺失不填零，线性尺度明确。",
+          "metadata": "metadata/E39.json"
+        },
+        {
+          "example": "E47",
+          "data_required": "调控因子×样本已给有符号评分、样本身份/条件、评分版本与覆盖说明",
+          "expression": "调控活性评分跨样本的模式与异质性",
+          "limitations": "不把评分当因果活性；缺失靶标覆盖和正负权重定义必须由上游保留。",
+          "metadata": "metadata/E47.json"
+        },
+        {
+          "example": "E48",
+          "data_required": "条目ID×条目ID完整已给相似量、成员全集和相似定义",
+          "expression": "条目之间的共享程度和成组冗余",
+          "limitations": "不重算富集、不自动删条目；背景、成员ID版本和筛选全集需保留。",
+          "metadata": "metadata/E48.json"
+        },
+        {
+          "example": "E49",
+          "data_required": "阈值×分辨率×已有稳定性指标、固定节点全集与对照分区定义",
+          "expression": "网络分区对两种设置的敏感区间",
+          "limitations": "不推断生物稳定性；算法重复、重采样或空模型不能当生物学重复。",
+          "metadata": "metadata/E49.json"
         }
       ]
     },
@@ -1808,7 +1892,8 @@
       "members": [
         "E33a",
         "E33b",
-        "K32"
+        "K32",
+        "E41"
       ],
       "modes": [
         {
@@ -1822,6 +1907,10 @@
         {
           "example": "K32",
           "label": "同背景独立分面"
+        },
+        {
+          "example": "E41",
+          "label": "正交切面与区域标签"
         }
       ],
       "contracts": [
@@ -1845,6 +1934,13 @@
           "expression": "同一物理位置的身份与测量",
           "limitations": "完整RGB像素、56对象ID、中心、物理半径和尺度完全相同；两种图只切换类别与已有特征值。背景为程序生成中性图，非H&E。 合成展示，不建立统计或因果结论。",
           "metadata": "metadata/K32.json"
+        },
+        {
+          "example": "E41",
+          "data_required": "各切面物理像素网格、背景强度、同坐标整数标签、方向与配准说明",
+          "expression": "既有区域标签在三个切面的空间位置和边界",
+          "limitations": "不分割、不配准、不作诊断；方向必须由输入定义。",
+          "metadata": "metadata/E41.json"
         }
       ]
     },
@@ -2550,12 +2646,17 @@
       "default": "P27",
       "grammar": "aligned calibration values, supplied intervals and bin-support rectangles",
       "members": [
-        "P27"
+        "P27",
+        "E45"
       ],
       "modes": [
         {
           "example": "P27",
-          "label": "通用形式"
+          "label": "校准与分箱支持量"
+        },
+        {
+          "example": "E45",
+          "label": "同评价群体多模型校准"
         }
       ],
       "contracts": [
@@ -2565,6 +2666,13 @@
           "expression": "同时表达校准形状、已有不确定性与各箱支持量",
           "limitations": "保留的旧版合成示例，原样式未改动。正式课题统一主题重绘后重新检查。Python；已有互斥分箱，不重新拟合校准",
           "metadata": "metadata/P27.json"
+        },
+        {
+          "example": "E45",
+          "data_required": "模型×固定概率分箱、平均预测概率、观察比例、给定区间和实际分箱n",
+          "expression": "概率与发生比例是否接近，以及各段受多少独立评价单位支持",
+          "limitations": "不重分箱或拟合；模型间人数不可加总，训练表现不能当外部验证。",
+          "metadata": "metadata/E45.json"
         }
       ]
     },
@@ -2823,10 +2931,11 @@
       "title": "已有层次树、叶端标记与量值轨道",
       "role": "figure",
       "default": "E37",
-      "grammar": "given hierarchy in rectangular/radial mode with categorical or quantitative leaf tracks",
+      "grammar": "given hierarchy in rectangular/radial mode; declared linkage height or branch length, categorical or quantitative leaf tracks",
       "members": [
         "E36",
-        "E37"
+        "E37",
+        "E40"
       ],
       "modes": [
         {
@@ -2836,6 +2945,10 @@
         {
           "example": "E36",
           "label": "矩形树与分类色条"
+        },
+        {
+          "example": "E40",
+          "label": "已给拓扑和累计枝长"
         }
       ],
       "contracts": [
@@ -2852,6 +2965,113 @@
           "expression": "同时看层级、叶端指标与外圈数量",
           "limitations": "树结构不是亲和力；独立对接能量不可默认相加为总亲和力。",
           "metadata": "metadata/E37.json"
+        },
+        {
+          "example": "E40",
+          "data_required": "节点ID、父节点ID、非负枝长、根、叶顺序、标签",
+          "expression": "共同祖先结构、累计枝长与叶端身份",
+          "limitations": "不建树、不比对、不估计演化；枝长与聚类高度分别定义。",
+          "metadata": "metadata/E40.json"
+        }
+      ]
+    },
+    {
+      "id": "D69",
+      "title": "序列位点字母堆叠",
+      "role": "figure",
+      "default": "E38",
+      "grammar": "position-wise character glyphs whose heights equal explicit supplied quantities",
+      "members": [
+        "E38"
+      ],
+      "modes": [
+        {
+          "example": "E38",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E38",
+          "data_required": "位置ID×字母完整表、非负高度、字母顺序及高度定义/单位",
+          "expression": "每个位点的字符偏好和总量，字母高度精确对应输入值",
+          "limitations": "高度不是自动估计的频率、信息量或富集；不同定义不可混称。",
+          "metadata": "metadata/E38.json"
+        }
+      ]
+    },
+    {
+      "id": "D70",
+      "title": "图像棋盘拼接与像素差值",
+      "role": "figure",
+      "default": "E42",
+      "grammar": "alternating co-registered image tiles with separately scaled pixel differences",
+      "members": [
+        "E42"
+      ],
+      "modes": [
+        {
+          "example": "E42",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E42",
+          "data_required": "共同物理网格上的固定图/配准结果、共同强度尺度、棋盘块大小",
+          "expression": "图像边界接续与逐像素差值的空间分布",
+          "limitations": "不估计变换、相似度或注册成功；差值不能替代已定义的质量指标。",
+          "metadata": "metadata/E42.json"
+        }
+      ]
+    },
+    {
+      "id": "D71",
+      "title": "剪接覆盖、连接弧与转录本结构",
+      "role": "figure",
+      "default": "E43",
+      "grammar": "physical interval coverage + count-width junction arcs + aligned exon annotation",
+      "members": [
+        "E43"
+      ],
+      "modes": [
+        {
+          "example": "E43",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E43",
+          "data_required": "混合表：样本分箱覆盖、连接起止/整数计数/布局层、转录本外显子区间；明确参考坐标",
+          "expression": "同一位置轴上的覆盖模式、连接支持量与已给异构体结构",
+          "limitations": "不读取BAM、不估计PSI或差异剪接；弧高是排版，宽度才对应计数。",
+          "metadata": "metadata/E43.json"
+        }
+      ]
+    },
+    {
+      "id": "D72",
+      "title": "有符号贡献瀑布",
+      "role": "figure",
+      "default": "E51",
+      "grammar": "ordered signed increments joining an explicit baseline to the exact additive total",
+      "members": [
+        "E51"
+      ],
+      "modes": [
+        {
+          "example": "E51",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "E51",
+          "data_required": "明确顺序的完整贡献表、基线、同单位总量及可加性定义",
+          "expression": "各正负项如何从基线逐项累积到一个总量",
+          "limitations": "总量必须等于基线加完整贡献；无可加定义不能堆积，不等于机制证明。",
+          "metadata": "metadata/E51.json"
         }
       ]
     },
@@ -3572,6 +3792,56 @@
           "expression": "两个panel共用叶端ID；标记指标与可加数量分别保留单位，不能把独立对接能量相加解释亲和力。",
           "limitations": "两个panel共用叶端ID；标记指标与可加数量分别保留单位，不能把独立对接能量相加解释亲和力。 合成示例仅演示图形表达。",
           "metadata": "metadata/K39.json"
+        }
+      ]
+    },
+    {
+      "id": "B41",
+      "title": "预测校准、评价支持量与决策价值",
+      "role": "combination",
+      "default": "K41",
+      "grammar": "explicit saved panel relationship: 两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。",
+      "members": [
+        "K41"
+      ],
+      "modes": [
+        {
+          "example": "K41",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K41",
+          "data_required": "模型×固定概率分箱、平均预测概率、观察比例、给定区间和实际分箱n；策略×概率阈值×已算净获益、给定区间、同评价群体与决策约定",
+          "expression": "两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。",
+          "limitations": "两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。 软件构造示例不构成分析证据。",
+          "metadata": "metadata/K41.json"
+        }
+      ]
+    },
+    {
+      "id": "B42",
+      "title": "调控活性矩阵与指定样本的完整贡献",
+      "role": "combination",
+      "default": "K42",
+      "grammar": "explicit saved panel relationship: 矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。",
+      "members": [
+        "K42"
+      ],
+      "modes": [
+        {
+          "example": "K42",
+          "label": "通用形式"
+        }
+      ],
+      "contracts": [
+        {
+          "example": "K42",
+          "data_required": "调控因子×样本已给有符号评分、样本身份/条件、评分版本与覆盖说明；明确顺序的完整贡献表、基线、同单位总量及可加性定义",
+          "expression": "矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。",
+          "limitations": "矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。 软件构造示例不构成分析证据。",
+          "metadata": "metadata/K42.json"
         }
       ]
     },

@@ -112,8 +112,8 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=(10,13),font_family=
             else:
                 im=ax.scatter([cs.index(c) for c in d[column_field]],[rs.index(r) for r in d[row_field]],s=d[value_field].abs()*180,c=d[value_field],cmap=cmap,vmin=lo,vmax=hi,lw=0); ax.set(xlim=(-.5,len(cs)-.5),ylim=(len(rs)-.5,-.5)); ax.grid(color='#E5E8EB',lw=.4); ax.set_axisbelow(True)
             row_aliases=spec.get('row_aliases',{}); column_aliases=spec.get('column_aliases',{})
-            if set(row_aliases)!=set(rs) or set(column_aliases)!=set(cs):
-                if row_aliases or column_aliases: raise ValueError('Matrix aliases must cover every displayed row and column')
+            if (row_aliases and set(row_aliases)!=set(rs)) or (column_aliases and set(column_aliases)!=set(cs)):
+                raise ValueError('Each supplied alias map must cover its own displayed axis')
             xlabels=[str(column_aliases.get(x,x)) for x in cs]; ylabels=[str(row_aliases.get(x,x)) for x in rs]
             if len(set(xlabels))!=len(xlabels) or len(set(ylabels))!=len(ylabels): raise ValueError('Matrix aliases must be unique')
             wrap_x=spec.get('column_label_wrap'); wrap_y=spec.get('row_label_wrap')
@@ -128,12 +128,20 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=(10,13),font_family=
                 handles=[Line2D([],[],ls='',marker='o',color='#91989E',ms=np.sqrt(v*180),label=f'{v:g}') for v in levels]
                 fig.legend(handles=handles,title='Absolute value (area)',loc='lower center',bbox_to_anchor=(.45,.07),ncols=3,frameon=False,fontsize=7,title_fontsize=7)
             if typ=='clustered_matrix':
+                # Coordinates are indexed to the supplied tree leaf order. A
+                # reordered matrix cannot silently retain the old tree indices.
+                original_rows=list(pd.unique(d[row_field]));original_columns=list(pd.unique(d[column_field]))
+                tree_rows=spec.get('tree_row_order',original_rows);tree_columns=spec.get('tree_column_order',original_columns)
+                if list(tree_rows)!=rs or list(tree_columns)!=cs:
+                    raise ValueError('Matrix order differs from supplied tree order; supply corresponding tree coordinates and explicit tree_*_order')
                 pos=ax.get_position(); rt=_records(src,'row_tree',['x0','y0','x1','y1'],['x0','y0','x1','y1']); ct=_records(src,'column_tree',['x0','y0','x1','y1'],['x0','y0','x1','y1'])
                 if ((rt[['y0','y1']]<-.5)|(rt[['y0','y1']]>len(rs)-.5)).any().any() or ((ct[['x0','x1']]<-.5)|(ct[['x0','x1']]>len(cs)-.5)).any().any(): raise ValueError('Supplied tree coordinates outside indexed matrix')
                 lefttree=fig.add_axes([pos.x0-(.18 if layout=='panel' else .11),pos.y0,.08,pos.height]); toptree=fig.add_axes([pos.x0,pos.y1+.02,pos.width,.09])
                 for r in rt.itertuples(): lefttree.plot([r.x0,r.x1],[r.y0,r.y1],color='#647582',lw=.8)
                 for r in ct.itertuples(): toptree.plot([r.x0,r.x1],[r.y0,r.y1],color='#647582',lw=.8)
                 lefttree.set_ylim(len(rs)-.5,-.5); lefttree.invert_xaxis(); toptree.set_xlim(-.5,len(cs)-.5); lefttree.axis('off'); toptree.axis('off'); ax.set_title('',loc='left'); toptree.set_title(spec['title'],loc='left',fontsize=9,pad=5)
+                from indexed_alignment import bind_index_axes
+                bind_index_axes(fig,ax,lefttree,'y',rs);bind_index_axes(fig,ax,toptree,'x',cs)
         elif typ=='donut':
             d=_records(src,'share',['group','value'],['value']); _unique(d,['group'])
             if (d.value<0).any() or not np.isclose(d.value.sum(),1): raise ValueError('Invalid donut fractions')

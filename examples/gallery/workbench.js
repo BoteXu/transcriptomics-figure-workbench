@@ -5,6 +5,7 @@ const methodByExample = new Map(methods.flatMap(m => m.members.map(id => [id, m]
 const key = 'figure-workbench-public-v0.1-notes';
 const $ = s => document.querySelector(s);
 const labels = ['配色', '字体', '布局与留白', '点线与图例', '其他要求'];
+const imageVersion = x => x.current_preview?.png_sha256 || x.png_sha256;
 let notes = {}, selected = null, backupUrl;
 try { notes = JSON.parse(localStorage.getItem(key) || '{}'); } catch {}
 
@@ -16,7 +17,7 @@ function resolveToken(token) {
 }
 function collect() {
   if (!selected) return;
-  const n = { image_sha256: selected.png_sha256 };
+  const n = { image_sha256: imageVersion(selected) };
   labels.forEach((k, i) => n[k] = $('#n' + i).value);
   notes[selected.id] = n;
 }
@@ -69,16 +70,22 @@ function show(x) {
     const a = document.createElement('a'); a.href = '#' + m.id; a.textContent = ' 返回主示意'; $('#curation').append(a);
   }
   $('#links').replaceChildren();
+  if (x.current_preview) {
+    for (const [field, label] of [['pdf','本版PDF'],['svg','本版SVG'],['tsv','本版示例表'],['meta','本版设置']])
+      if (x.current_preview[field]) addLink(label, x.current_preview[field]);
+  }
   for (const [field, label] of [['pdf','PDF'],['svg','SVG'],['png','PNG'],['tsv','示例数据'],['style','绘图参数'],['meta','来源与设置']])
     if (x[field]) addLink(label, x[field]);
   (x.component_links || []).forEach(c => addLink('单独 ' + c.label, c.url));
   (x.component_tables || []).forEach((url, i) => addLink('Panel ' + String.fromCharCode(65+i) + ' 数据', url));
+  (x.layout_alternatives || []).forEach(a => addLink(a.orientation === 'horizontal' ? '横向完整排版PDF' : '纵向完整排版PDF', a.pdf));
+  if (x.layout_alternatives) addLink('横纵示意对照', 'layout_review/index.html#'+x.id);
   if (['T08','T15','T24','T31','T34','T36','N01','N04','N05','N06','N07','N08','N09','N10','N11'].includes(x.id))
     addLink('同数据：更换色卡与字体', 'theme_alternative/' + x.id + '/' + x.id + '.pdf');
   $('#reference').classList.toggle('hidden', !x.reference);
   $('.images').classList.toggle('solo', !x.reference);
   if (x.reference) { $('#refimage').src = x.reference; $('#refimage').alt = x.id + ' 用户参考'; }
-  $('#outputimage').src = x.png; $('#outputimage').alt = x.id + ' ' + x.title;
+  $('#outputimage').src = x.current_preview?.png || x.png; $('#outputimage').alt = x.id + ' ' + x.title;
   $('#outputcaption').textContent = x.role === 'protein' ? '真实公共坐标 · 原生渲染示例' : x.role === 'palette' ? '准确色值 · 纯色卡' : '已保存的绘图示意 · 合成数据；课题图按统一主题重绘';
   $('#facts').replaceChildren();
   for (const [field, label] of [['data_required','需要的数据'],['expression','能表达什么'],['how_to_draw','怎么画'],['aesthetic_controls','可以调整'],['limitations','使用边界']]) {
@@ -90,7 +97,7 @@ function show(x) {
   $('#notegrid').replaceChildren();
   labels.forEach((k, i) => { const l = document.createElement('label'), t = document.createElement('textarea');
     l.textContent = k; t.id = 'n'+i; t.value = notes[x.id]?.[k] || ''; l.append(t); $('#notegrid').append(l); });
-  $('#status').textContent = notes[x.id]?.image_sha256 && notes[x.id].image_sha256 !== x.png_sha256 ? '此条意见关联旧版本图片，请重新核对。' : '';
+  $('#status').textContent = notes[x.id]?.image_sha256 && notes[x.id].image_sha256 !== imageVersion(x) ? '此条意见关联旧版本图片，请重新核对。' : '';
   renderList(); history.replaceState(null, '', '#' + x.id);
 }
 $('#mode').onchange = () => { collect(); show(byId.get($('#mode').value)); };

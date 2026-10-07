@@ -1,0 +1,37 @@
+{
+  "adapter": "slice_overlay",
+  "module": "figure_biomni_views",
+  "function": "plot_slice_overlay",
+  "params": {
+    "view_order": [
+      "Axial",
+      "Coronal",
+      "Sagittal"
+    ],
+    "axis_labels": {
+      "Axial": [
+        "Supplied u (mm)",
+        "Supplied v (mm)"
+      ],
+      "Coronal": [
+        "Supplied u (mm)",
+        "Supplied v (mm)"
+      ],
+      "Sagittal": [
+        "Supplied u (mm)",
+        "Supplied v (mm)"
+      ]
+    },
+    "label_slots": {
+      "1": "G3",
+      "2": "G7"
+    },
+    "intensity_limits": [
+      0,
+      1
+    ],
+    "registration_definition": "Already registered synthetic orthogonal pixel grids, no patient images.",
+    "orientation_definition": "Explicit supplied slice planes and u/v orientation; procedural background, not clinical anatomy.",
+    "title": "Frozen orthogonal slice labels"
+  }
+}

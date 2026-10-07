@@ -127,7 +127,7 @@ def plot_dot(data, value_label, *, value_semantics, denominator_label,
              row_field='feature', column_field='group', fraction_field='fraction',
              value_field='value', row_order=None, column_order=None,
              row_aliases=None, column_aliases=None, row_label_wrap=None,
-             column_label_wrap=None, label_rotation=None, figsize=None):
+             column_label_wrap=None, label_rotation=None, figsize=None,continuous_colors=None):
     required=[row_field,column_field,fraction_field,value_field]
     d0=checked(data,required,[fraction_field,value_field])
     if d0.duplicated([row_field,column_field]).any() or ((d0[fraction_field]<0)|(d0[fraction_field]>1)).any():
@@ -140,7 +140,7 @@ def plot_dot(data, value_label, *, value_semantics, denominator_label,
                                         row_order=row_order,column_order=column_order)
     fraction=d0[[row_field,column_field,fraction_field]].rename(columns={row_field:'feature',column_field:'sample',fraction_field:'fraction'})
     fraction=fraction.drop_duplicates(['feature','sample']).set_index(['feature','sample']).reindex(
-        pd.MultiIndex.from_product([features,groups],names=['feature','sample']))['fraction'].to_numpy()
+        pd.MultiIndex.from_frame(d[['feature','sample']]))['fraction'].to_numpy()
     labels_x=axis_labels(groups,column_aliases,'column'); labels_y=axis_labels(features,row_aliases,'row')
     if row_label_wrap is not None and (type(row_label_wrap) is not int or row_label_wrap<1): raise ValueError('row_label_wrap must be a positive integer or None')
     if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap<1): raise ValueError('column_label_wrap must be a positive integer or None')
@@ -155,6 +155,8 @@ def plot_dot(data, value_label, *, value_semantics, denominator_label,
     if value_semantics in ('scaled','signed_effect'):
         extent = max(abs(d.value).max(), 1e-9)
         color_args = dict(cmap='RdBu_r', norm=TwoSlopeNorm(0,-extent,extent))
+    if continuous_colors is not None:
+        color_args['cmap']=LinearSegmentedColormap.from_list('project_dot',continuous_colors)
     dots=ax.scatter([groups.index(g) for g in d['sample']],[features.index(g) for g in d['feature']],s=fraction*150,c=d['value'],edgecolors='none',**color_args)
     rotation=(45 if len(groups)>4 else 0) if label_rotation is None else label_rotation
     ax.set_xticks(range(len(groups)),labels_x,rotation=rotation,ha='right' if rotation else 'center')
@@ -176,7 +178,8 @@ def plot_heatmap(data, value_label, center=0, *, scale_type='signed',
                  figsize=None, cell_width=.44, cell_height=.27,
                  label_rotation=45, show_labels=True, row_label_mode='all',
                  column_label_mode='all', row_label_wrap=None, column_label_wrap=None,
-                 label_fontsize=None, title=''):
+                 label_fontsize=None, title='',row_annotations=None,column_annotations=None,
+                 annotation_palettes=None,continuous_colors=None):
     """Draw a signed/sequential heatmap from a long or wide matrix.
 
     The original three-column ``feature/sample/value`` call remains valid.
@@ -216,7 +219,8 @@ def plot_heatmap(data, value_label, center=0, *, scale_type='signed',
     cmap=LinearSegmentedColormap.from_list('omics',['#35618F','#F7F7F5','#B84E35'])
     if scale_type not in ('signed','sequential'): raise ValueError('Unknown heatmap scale')
     shown=np.ma.masked_invalid(mat.to_numpy(dtype=float)) if missing=='mask' else mat.to_numpy(dtype=float)
-    im=ax.imshow(shown,aspect='auto',cmap=cmap if scale_type=='signed' else 'Blues',
+    if continuous_colors is not None:cmap=LinearSegmentedColormap.from_list('project_heatmap',continuous_colors)
+    im=ax.imshow(shown,aspect='auto',cmap=cmap if continuous_colors is not None or scale_type=='signed' else 'Blues',
                  norm=TwoSlopeNorm(center,center-extent,center+extent) if scale_type=='signed' else None)
     font_kwargs={} if label_fontsize is None else {'fontsize':label_fontsize}
     if show_labels and row_label_mode=='all' and column_label_mode=='all':
@@ -235,7 +239,7 @@ def plot_heatmap(data, value_label, center=0, *, scale_type='signed',
         left=min(.52,max(.12,.12+max((len(x.replace('\n','')) for x in labels_y_display),default=0)*.0045))
         bottom=.23 if label_rotation else .16
         fig.subplots_adjust(left=left,bottom=bottom,right=.86,top=.91)
-    return stamp(fig, data, 'heatmap', value_label=value_label, scale_type=scale_type, center=center,
+    fig=stamp(fig, data, 'heatmap', value_label=value_label, scale_type=scale_type, center=center,
                  row_field=row_field,column_field=column_field,value_field=value_field,
                  value_columns=list(value_columns) if value_columns is not None else None,
                  row_order=features,column_order=samples,row_aliases=dict(zip(features,labels_y)),
@@ -243,6 +247,15 @@ def plot_heatmap(data, value_label, center=0, *, scale_type='signed',
                  label_rotation=label_rotation,show_labels=bool(show_labels),row_label_mode=row_label_mode,
                  column_label_mode=column_label_mode,row_label_wrap=row_label_wrap,column_label_wrap=column_label_wrap,
                  label_fontsize=label_fontsize,title=title)
+    if row_annotations or column_annotations:
+        from indexed_alignment import add_matrix_annotations
+        if column_annotations:
+            b=list(ax.get_position().bounds);b[3]-=len(column_annotations)*.32/fig.get_figheight();ax.set_position(b)
+            for position in ('left','center','right'):ax.set_title('',loc=position)
+            if title:fig.text(b[0],.955,title,ha='left',va='top',fontsize=11)
+        fig=add_matrix_annotations(fig,ax,features,samples,row_annotations=row_annotations,
+                                   column_annotations=column_annotations,palettes=annotation_palettes)
+    return fig
 
 def plot_qc(data,y_label):
     d=checked(data,['cell_id','sample','value'],['value'])
@@ -301,6 +314,8 @@ def export_figure(fig,data,out_dir,figure_id,meta, *, source_file=None, expected
     raw=table_bytes(data); plotted_hash=hashlib.sha256(raw).hexdigest()
     if getattr(fig,'_omics_input_sha256',None)!=plotted_hash:
         raise ValueError('Export table does not match the renderer input; use a reviewed adapter')
+    from figure_layout import optimize_guide_layout
+    fig=optimize_guide_layout(fig)
     source_hash=None
     if source_file is not None:
         source_file=Path(source_file).resolve(strict=True)
@@ -321,16 +336,9 @@ def export_figure(fig,data,out_dir,figure_id,meta, *, source_file=None, expected
         stage=Path(tempfile.mkdtemp(prefix='.'+figure_id+'-staging-',dir=out))
         files=[stage/(figure_id+ext) for ext in extensions]
         if meta['synthetic']:
-            if fig._omics_spec.get('demo_label_style') == 'compact':
-                # A separate reserved band preserves the scientific title and guides.
-                fig.text(.02,.987,'SYNTHETIC DEMO | '+figure_id,fontsize=8,
-                         va='top',color='#66727D',fontfamily=fig._omics_spec.get('project_theme',{}).get('font_family','sans-serif'))
-                fig.text(.02,.008,'Software test fixture; not biological evidence',fontsize=7,
-                         va='bottom',color='#66727D',fontfamily=fig._omics_spec.get('project_theme',{}).get('font_family','sans-serif'))
-            else:
-                fig.suptitle('SYNTHETIC DEMO - '+figure_id,weight='bold')
-                fig.supxlabel('Software test fixture; not biological evidence',fontsize=8)
-        with plt.rc_context({'svg.fonttype':'none','pdf.fonttype':42}):
+            from figure_layout import add_software_bands
+            fig=add_software_bands(fig,figure_id,fig._omics_spec.get('project_theme',{}).get('font_family','sans-serif'))
+        with plt.rc_context({'svg.fonttype':'none','pdf.fonttype':42,'savefig.bbox':None}):
             for file in files[:3]: fig.savefig(file,dpi=300,facecolor='white')
         files[3].write_bytes(raw)
         files[5].write_text(f'Python {platform.python_version()}\nmatplotlib {matplotlib.__version__}\npandas {pd.__version__}\nnumpy {np.__version__}\n',encoding='utf-8')
@@ -338,8 +346,17 @@ def export_figure(fig,data,out_dir,figure_id,meta, *, source_file=None, expected
                      input_hash=plotted_hash,input_hash_algorithm='SHA256',input_hash_scope='exact exported TSV bytes',
                      source_file=str(source_file) if source_file else None,source_file_sha256=source_hash,
                      figure_spec=fig._omics_spec,width_inches=float(fig.get_figwidth()),height_inches=float(fig.get_figheight()))
+        fig.canvas.draw()
+        receipt['layout_geometry']=[dict(axis=i,bounds=list(ax.get_position().bounds),
+            xlim=list(ax.get_xlim()),ylim=list(ax.get_ylim()),xscale=ax.get_xscale(),yscale=ax.get_yscale(),
+            gid=ax.get_gid(),colourbar=hasattr(ax,'_colorbar'),projection=ax.name) for i,ax in enumerate(fig.axes)]
+        from indexed_alignment import audit_index_alignment
+        receipt['index_alignment']=audit_index_alignment(fig)
+        if receipt['index_alignment']['issues']:raise ValueError('Indexed tracks do not align in final export')
         receipt['renderer_sha256']={p.name:file_sha256(p) for p in
                                    Path(__file__).parent.glob('figure_*.py')}
+        for name in ('alluvial_geometry.py','indexed_alignment.py','matrix_input.py','project_theme.py'):
+            helper=Path(__file__).parent/name;receipt['renderer_sha256'][name]=file_sha256(helper)
         receipt['output_sha256']={p.name:file_sha256(p) for p in files[:4]+files[5:]}
         files[4].write_text(json.dumps(receipt,ensure_ascii=False,indent=2),encoding='utf-8')
         if dest.exists(): raise FileExistsError('Destination appeared before publish')

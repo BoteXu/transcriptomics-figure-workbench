@@ -13,6 +13,8 @@ else:
 html=html.replace('<a href="../overview/all-previews.pdf">全部236图PDF总览</a> · <a href="../overview/all-previews.jpg">全部示意图长图</a> · <a href="../overview/general-patterns.jpg">通用画法总览</a>',
  '<a href="../overview/visualization-overview.pdf">去重后的画法与组合PDF</a> · <a href="../overview/visualization-overview.jpg">去重示意长图</a> · <a href="../../skills/transcriptomics-figure-workbench/references/drawing-methods.md">逐项合并索引</a><p><a href="../overview/all-previews.pdf">来源档案（包含重复示例）</a> · <a href="../../skills/transcriptomics-figure-workbench/references/wgcna-visualization-router.md">WGCNA数据与绘图路由</a></p>')
 html=html.replace('显示参数示例与旧样式','查看原编号来源档案')
+if 'href="analysis_modules.html"' not in html:
+    html=html.replace('<main>','<main><p><a href="analysis_modules.html">按分析结果模块查看新模式与组合</a> · <a href="layout_review/index.html">全部组合横纵排版</a></p>',1)
 html=html.replace('href="../overview/all-previews.pdf"','href="../overview/source-archive-v021.pdf"')
 import re
 html=re.sub(r'<option value="support">说明附表</option>','',html)

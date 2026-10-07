@@ -1,5 +1,18 @@
 # Change log
 
+## 0.2.4
+
+- Add nine frozen analysis-result modes and two linked combinations: splice coverage/junctions/isoforms, multi-signal variant PIPs, calibration support, decision curves, regulator activity/contributions, pathway overlap, network sensitivity and trajectory blocks. Only splice/waterfall add drawing families; matrix/curve/stem/calibration modes reuse existing entries.
+- Retain 260 stable sources and 42 full compositions; primary catalog has 72 drawing families and 26 composition entries. Ship 84 complete composition arrangements and 57 fixed table adapters.
+- Remove example-specific calibration/model/track count limits; bind annotation colors to the selected project theme and respect default signed matrix scales. Clear all title positions before placing a heatmap title above annotation tracks.
+- Grow dense tick layouts from actual text extents; repair caption/header collisions in availability, forest and process panels. Save refreshed historical previews separately and verify five guide regressions without dropping labels or changing quantities.
+
+- Discover additional result types through the live Biomni catalog and plan-only network specialist. Add five original frozen-table renderers: symbol-height logos, physical-bin contacts/tracks, branch-length trees, registered slice labels and image checkerboards/differences. Add E38–E42; merge matrix/tree/overlay modes into existing families. Preserve all prior 244 image hashes and scripts; current total 260 sources, 72 drawing families, 26 composition entries, 108 Python functions and 57 fixed adapters.
+- Rebuild alluvial geometry using one scale and an inspectable path/node/slot ledger; preserve nonnegative weights, zero entries and both flow directions without fixed stage caps. Reject reverse duplicate undirected chord pairs.
+- Fix dot-size/color cell correspondence, matrix/annotation/count axis positions, dendrogram order binding and nonuniform epoch cells. Validate complete aliases and duplicate input fields.
+- Add guide lanes, dedicated software-label bands, orientation-preserving canvas expansion, explicit shared-data-axis PDF alignment and 84 complete horizontal/vertical alternatives for the 42 saved compositions. Archived sources remain separate from current previews.
+- Exercise the full Python plotting inventory using synthetic input/geometry/page-layout checks, plus independent flow/channel/index/PDF-axis oracles and five new rendering/replay contracts. Preserve historical R/native backend scope; no upstream scientific analysis runs.
+
 ## 0.2.3
 
 - Remove remaining display caps in the activity dashboard and cohort interval adapter: all supplied columns, runs, features, and cohorts are retained with dynamic ticks, canvas sizing, and marker cycling.

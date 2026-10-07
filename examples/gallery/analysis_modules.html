@@ -1,0 +1,114 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>分析结果的可视化表达</title><style>body{font:16px Arial,sans-serif;max-width:1400px;margin:28px auto;padding:0 24px;color:#25364a}a{color:#395d9b}h1{font-size:28px}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px}article{border:1px solid #dce3ec;border-radius:8px;padding:18px;margin-bottom:24px}img{width:100%;height:290px;object-fit:contain}dt{font-weight:bold}dd{margin:4px 0 14px;line-height:1.5}</style><h1>分析结果的可视化表达</h1><p><a href="index.html">完整去重目录</a> · <a href="layout_review/index.html">完整横纵排版</a> · <a href="../../skills/transcriptomics-figure-workbench/references/analysis-modules-router.md">数据契约和组合路线</a></p><p>按结果结构与需要表达的量选图。相似画法复用已有入口；每个panel保存输入和参数。预览使用合成数据，结构示例使用标注的公共坐标。</p>
+<h2>剪接与异构体</h2><section>
+<article><h3><a href="index.html#E43">E43 剪接：覆盖、连接弧与异构体</a></h3><a href="index.html#E43"><img loading="lazy" src="figures/E43/E43.png" alt="剪接：覆盖、连接弧与异构体"></a><dl>
+<dt>需要的数据</dt><dd>混合表：样本分箱覆盖、连接起止/整数计数/布局层、转录本外显子区间；明确参考坐标</dd>
+<dt>能表达什么</dt><dd>同一位置轴上的覆盖模式、连接支持量与已给异构体结构</dd>
+</dl><a href="figures/E43/E43.pdf">完整PDF</a> · <a href="index.html#E43">参数、数据与独立panel</a></article>
+</section>
+<h2>精细定位与位置证据</h2><section>
+<article><h3><a href="index.html#E44">E44 精细定位：多信号PIP与可信集</a></h3><a href="index.html#E44"><img loading="lazy" src="figures/E44/E44.png" alt="精细定位：多信号PIP与可信集"></a><dl>
+<dt>需要的数据</dt><dd>信号×变异完整表、共同位置、已给PIP、可信集身份、坐标版本</dd>
+<dt>能表达什么</dt><dd>每个信号的候选分布及已给可信集；共用位置便于比较</dd>
+</dl><a href="figures/E44/E44.pdf">完整PDF</a> · <a href="index.html#E44">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E28">E28 全局位置关联：Manhattan形式</a></h3><a href="index.html#E28"><img loading="lazy" src="figures/E28/E28.png" alt="全局位置关联：Manhattan形式"></a><dl>
+<dt>需要的数据</dt><dd>变异ID、染色体、位置、已有p；明确版本、段长度及阈值</dd>
+<dt>能表达什么</dt><dd>全基因组已有信号位置与局部聚集</dd>
+</dl><a href="figures/E28/E28.pdf">完整PDF</a> · <a href="index.html#E28">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E29">E29 局部关联＋LD＋重组率＋基因位置</a></h3><a href="index.html#E29"><img loading="lazy" src="figures/E29/E29.png" alt="局部关联＋LD＋重组率＋基因位置"></a><dl>
+<dt>需要的数据</dt><dd>同一位置体系中的关联、已有LD、重组率与基因跨度/方向</dd>
+<dt>能表达什么</dt><dd>局部信号与多条轨道对应；未知LD单独标识</dd>
+</dl><a href="figures/E29/E29.pdf">完整PDF</a> · <a href="index.html#E29">参数、数据与独立panel</a></article>
+</section>
+<h2>校准与决策评价</h2><section>
+<article><h3><a href="index.html#K41">K41 预测校准、评价支持量与决策价值</a></h3><a href="index.html#K41"><img loading="lazy" src="figures/K41/K41.png" alt="预测校准、评价支持量与决策价值"></a><dl>
+<dt>需要的数据</dt><dd>模型×固定概率分箱、平均预测概率、观察比例、给定区间和实际分箱n；策略×概率阈值×已算净获益、给定区间、同评价群体与决策约定</dd>
+<dt>能表达什么</dt><dd>两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。</dd>
+</dl><a href="figures/K41/K41.pdf">完整PDF</a> · <a href="index.html#K41">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E45">E45 预测评价：校准与分箱支持人数</a></h3><a href="index.html#E45"><img loading="lazy" src="figures/E45/E45.png" alt="预测评价：校准与分箱支持人数"></a><dl>
+<dt>需要的数据</dt><dd>模型×固定概率分箱、平均预测概率、观察比例、给定区间和实际分箱n</dd>
+<dt>能表达什么</dt><dd>概率与发生比例是否接近，以及各段受多少独立评价单位支持</dd>
+</dl><a href="figures/E45/E45.pdf">完整PDF</a> · <a href="index.html#E45">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E46">E46 决策曲线：净获益与参考策略</a></h3><a href="index.html#E46"><img loading="lazy" src="figures/E46/E46.png" alt="决策曲线：净获益与参考策略"></a><dl>
+<dt>需要的数据</dt><dd>策略×概率阈值×已算净获益、给定区间、同评价群体与决策约定</dd>
+<dt>能表达什么</dt><dd>不同阈值下的净获益，并和全部/无人策略比较</dd>
+</dl><a href="figures/E46/E46.pdf">完整PDF</a> · <a href="index.html#E46">参数、数据与独立panel</a></article>
+</section>
+<h2>调控活性与完整贡献</h2><section>
+<article><h3><a href="index.html#K42">K42 调控活性矩阵与指定样本的完整贡献</a></h3><a href="index.html#K42"><img loading="lazy" src="figures/K42/K42.png" alt="调控活性矩阵与指定样本的完整贡献"></a><dl>
+<dt>需要的数据</dt><dd>调控因子×样本已给有符号评分、样本身份/条件、评分版本与覆盖说明；明确顺序的完整贡献表、基线、同单位总量及可加性定义</dd>
+<dt>能表达什么</dt><dd>矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。</dd>
+</dl><a href="figures/K42/K42.pdf">完整PDF</a> · <a href="index.html#K42">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E47">E47 调控活性：完整评分矩阵</a></h3><a href="index.html#E47"><img loading="lazy" src="figures/E47/E47.png" alt="调控活性：完整评分矩阵"></a><dl>
+<dt>需要的数据</dt><dd>调控因子×样本已给有符号评分、样本身份/条件、评分版本与覆盖说明</dd>
+<dt>能表达什么</dt><dd>调控活性评分跨样本的模式与异质性</dd>
+</dl><a href="figures/E47/E47.pdf">完整PDF</a> · <a href="index.html#E47">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E51">E51 贡献分解：有符号瀑布与总量</a></h3><a href="index.html#E51"><img loading="lazy" src="figures/E51/E51.png" alt="贡献分解：有符号瀑布与总量"></a><dl>
+<dt>需要的数据</dt><dd>明确顺序的完整贡献表、基线、同单位总量及可加性定义</dd>
+<dt>能表达什么</dt><dd>各正负项如何从基线逐项累积到一个总量</dd>
+</dl><a href="figures/E51/E51.pdf">完整PDF</a> · <a href="index.html#E51">参数、数据与独立panel</a></article>
+</section>
+<h2>通路共享与网络稳定性</h2><section>
+<article><h3><a href="index.html#E48">E48 通路冗余：共享成员相似矩阵</a></h3><a href="index.html#E48"><img loading="lazy" src="figures/E48/E48.png" alt="通路冗余：共享成员相似矩阵"></a><dl>
+<dt>需要的数据</dt><dd>条目ID×条目ID完整已给相似量、成员全集和相似定义</dd>
+<dt>能表达什么</dt><dd>条目之间的共享程度和成组冗余</dd>
+</dl><a href="figures/E48/E48.pdf">完整PDF</a> · <a href="index.html#E48">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E49">E49 网络稳定性：双参数敏感性矩阵</a></h3><a href="index.html#E49"><img loading="lazy" src="figures/E49/E49.png" alt="网络稳定性：双参数敏感性矩阵"></a><dl>
+<dt>需要的数据</dt><dd>阈值×分辨率×已有稳定性指标、固定节点全集与对照分区定义</dd>
+<dt>能表达什么</dt><dd>网络分区对两种设置的敏感区间</dd>
+</dl><a href="figures/E49/E49.pdf">完整PDF</a> · <a href="index.html#E49">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E34">E34 成员流线、条目与评分点阵</a></h3><a href="index.html#E34"><img loading="lazy" src="figures/E34/E34.png" alt="成员流线、条目与评分点阵"></a><dl>
+<dt>需要的数据</dt><dd>成员与条目ID、二元关系、成员效应、条目类别、已给比例/校正p/成员数</dd>
+<dt>能表达什么</dt><dd>共享成员连接到哪些条目，并对齐读取条目的量值与覆盖数</dd>
+</dl><a href="figures/E34/E34.pdf">完整PDF</a> · <a href="index.html#E34">参数、数据与独立panel</a></article>
+</section>
+<h2>WGCNA已有模块结果</h2><section>
+<article><h3><a href="index.html#K38">K38 已有诊断、层次树、关联矩阵与成员评分</a></h3><a href="index.html#K38"><img loading="lazy" src="figures/K38/K38.png" alt="已有诊断、层次树、关联矩阵与成员评分"></a><dl>
+<dt>需要的数据</dt><dd>候选参数与已有诊断值；候选参数与已有诊断值；唯一叶ID、已有二叉树合并记录、合并高度、固定叶序和分类；完整行×列的两种量值；各自单位、范围、检验和缺失定义；成员ID与两个已有评分</dd>
+<dt>能表达什么</dt><dd>诊断值、树、模块身份、性状关系和成员评分均为已有结果；对象ID与模块身份有显式对应。</dd>
+</dl><a href="figures/K38/K38.pdf">完整PDF</a> · <a href="index.html#K38">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#K40">K40 模块结构、相似矩阵、代表值网络与性状</a></h3><a href="index.html#K40"><img loading="lazy" src="figures/K40/K40.png" alt="模块结构、相似矩阵、代表值网络与性状"></a><dl>
+<dt>需要的数据</dt><dd>唯一叶ID、已有二叉树合并记录、合并高度、固定叶序和分类；同一叶ID顺序下的完整相似矩阵与版本；模块ID、已有代表值关系、权重和符号；完整行×列的两种量值；各自单位、范围、检验和缺失定义；成员ID与两个已有评分</dd>
+<dt>能表达什么</dt><dd>叶ID、矩阵行列与成员评分对应；模块ID对应条目关联与代表值网络。TOM/adjacency/kME定义与网络版本由上游明确给定。</dd>
+</dl><a href="figures/K40/K40.pdf">完整PDF</a> · <a href="index.html#K40">参数、数据与独立panel</a></article>
+</section>
+<h2>独立轨迹与时间范围</h2><section>
+<article><h3><a href="index.html#E50">E50 动力学：时间分块摘要与独立运行</a></h3><a href="index.html#E50"><img loading="lazy" src="figures/E50/E50.png" alt="动力学：时间分块摘要与独立运行"></a><dl>
+<dt>需要的数据</dt><dd>运行ID×真实时间×已有指标/分块范围、单位与参考结构</dd>
+<dt>能表达什么</dt><dd>各独立运行的时间变化、瞬态与已有分块范围</dd>
+</dl><a href="figures/E50/E50.pdf">完整PDF</a> · <a href="index.html#E50">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E32">E32 多层不确定性：扇形区间</a></h3><a href="index.html#E32"><img loading="lazy" src="figures/E32/E32.png" alt="多层不确定性：扇形区间"></a><dl>
+<dt>需要的数据</dt><dd>组×有序X×区间覆盖率；已有中心和相互嵌套上下界</dd>
+<dt>能表达什么</dt><dd>中央轨迹与不同覆盖范围</dd>
+</dl><a href="figures/E32/E32.pdf">完整PDF</a> · <a href="index.html#E32">参数、数据与独立panel</a></article>
+</section>
+<h2>染色质接触与序列位点</h2><section>
+<article><h3><a href="index.html#E39">E39 接触矩阵：物理分箱与对齐轨道</a></h3><a href="index.html#E39"><img loading="lazy" src="figures/E39/E39.png" alt="接触矩阵：物理分箱与对齐轨道"></a><dl>
+<dt>需要的数据</dt><dd>有序物理区间、上三角分箱对数值（含显式缺失）、相同分箱的轨道</dd>
+<dt>能表达什么</dt><dd>位置对关系与同一基因组坐标上的局部信号</dd>
+</dl><a href="figures/E39/E39.pdf">完整PDF</a> · <a href="index.html#E39">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E38">E38 序列位点：字母高度堆叠</a></h3><a href="index.html#E38"><img loading="lazy" src="figures/E38/E38.png" alt="序列位点：字母高度堆叠"></a><dl>
+<dt>需要的数据</dt><dd>位置ID×字母完整表、非负高度、字母顺序及高度定义/单位</dd>
+<dt>能表达什么</dt><dd>每个位点的字符偏好和总量，字母高度精确对应输入值</dd>
+</dl><a href="figures/E38/E38.pdf">完整PDF</a> · <a href="index.html#E38">参数、数据与独立panel</a></article>
+</section>
+<h2>已有树与真实蛋白结构</h2><section>
+<article><h3><a href="index.html#E40">E40 树图：已给拓扑与真实枝长</a></h3><a href="index.html#E40"><img loading="lazy" src="figures/E40/E40.png" alt="树图：已给拓扑与真实枝长"></a><dl>
+<dt>需要的数据</dt><dd>节点ID、父节点ID、非负枝长、根、叶顺序、标签</dd>
+<dt>能表达什么</dt><dd>共同祖先结构、累计枝长与叶端身份</dd>
+</dl><a href="figures/E40/E40.pdf">完整PDF</a> · <a href="index.html#E40">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#S01">S01 真实结构丝带</a></h3><a href="index.html#S01"><img loading="lazy" src="figures/S01/S01.png" alt="真实结构丝带"></a><dl>
+<dt>需要的数据</dt><dd>实际结构坐标、模型、assembly、链和残基选择；单独确认编号体系。</dd>
+<dt>能表达什么</dt><dd>整体折叠及二级结构走向</dd>
+</dl><a href="figures/S01/S01.png">高清PNG</a> · <a href="index.html#S01">参数、数据与独立panel</a></article>
+</section>
+<h2>影像切面与配准对照</h2><section>
+<article><h3><a href="index.html#E41">E41 影像切片：正交视图与分割叠加</a></h3><a href="index.html#E41"><img loading="lazy" src="figures/E41/E41.png" alt="影像切片：正交视图与分割叠加"></a><dl>
+<dt>需要的数据</dt><dd>各切面物理像素网格、背景强度、同坐标整数标签、方向与配准说明</dd>
+<dt>能表达什么</dt><dd>既有区域标签在三个切面的空间位置和边界</dd>
+</dl><a href="figures/E41/E41.pdf">完整PDF</a> · <a href="index.html#E41">参数、数据与独立panel</a></article>
+<article><h3><a href="index.html#E42">E42 影像对照：棋盘拼接与差值</a></h3><a href="index.html#E42"><img loading="lazy" src="figures/E42/E42.png" alt="影像对照：棋盘拼接与差值"></a><dl>
+<dt>需要的数据</dt><dd>共同物理网格上的固定图/配准结果、共同强度尺度、棋盘块大小</dd>
+<dt>能表达什么</dt><dd>图像边界接续与逐像素差值的空间分布</dd>
+</dl><a href="figures/E42/E42.pdf">完整PDF</a> · <a href="index.html#E42">参数、数据与独立panel</a></article>
+</section>
+</html>

@@ -1,0 +1,23 @@
+{
+  "adapter": "splice_tracks",
+  "module": "figure_analysis_results",
+  "function": "plot_splice_tracks",
+  "params": {
+    "sample_order": [
+      "G1",
+      "G7"
+    ],
+    "transcript_order": [
+      "Isoform A",
+      "Isoform B"
+    ],
+    "region": [
+      100,
+      900
+    ],
+    "coordinate_definition": "Synthetic segment; 0-based half-open intervals; increasing position, strand not inferred",
+    "coverage_definition": "Supplied coverage in a common scale for both samples",
+    "junction_definition": "Supplied junction read count; zero counts retained; arc height is layout only",
+    "title": "Coverage, splice junctions and isoforms"
+  }
+}

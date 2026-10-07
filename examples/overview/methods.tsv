@@ -5,7 +5,7 @@ D03	P05	雨云：半密度、箱线与原始点	figure	P05	P05
 D04	T08	小提琴与箱线	figure	T08	T08
 D05	P35	分箱数量分布	figure	P35	P35
 D06	E12	密度山脊	figure	P37 E12	E12
-D07	T31	有序曲线与区间带	figure	P29 T09 T14 T18 T28 T31 T35 T39 M07 E10 E32 P25a P25b P25c P26a P26b N09	T31 P26a T35 E32
+D07	T31	有序曲线与区间带	figure	P29 T09 T14 T18 T28 T31 T35 T39 M07 E10 E32 P25a P25b P25c P26a P26b N09 E46 E50	T31 P26a T35 E32 E46 E50
 D08	P03	配对点与主体连线	figure	P03	P03
 D09	T33	XY散点与给定参考层	figure	P06 P33 T05 T07 T19 T33 R18 R19 E11 E14 E24 E25 E30 M01 M11a M11b M11c K30	T33 R19 R18 E11 E14 M01 M11a M11c E30 K30
 D10	T29	三变量气泡散点	figure	T15 T29 T40 M11d	T29
@@ -13,11 +13,11 @@ D11	T20	连续密度着色与固定门	figure	T20 T21 T22 T23	T20
 D12	N10	六边形支持量	figure	N10	N10
 D13	E26	相同坐标的连续特征分面	figure	P07 E26	E26
 D14	T32	条形估计与给定误差线	figure	P34 T06 T13 T25 T27 T32 T38 T43 P32	T32
-D15	P11a	棒棒糖评分	figure	P11a P11b	P11a
+D15	P11a	棒棒糖评分	figure	P11a P11b E44	P11a E44
 D16	E21	森林与多系列区间	figure	P19a P19b P20a P20b P21a P21b E13 E21 E22 E30b K26	E21 E22 P21a E13 K26
 D17	T10	组成堆叠柱	figure	P23 T10 T17 M10	T10
 D18	T12	整体组成环形图	figure	T12 T26	T12
-D19	T34	数值热图与可选注释	figure	P12a P12b P15 P17a P17b P17c P18 P36 T03 T16 T30 T34 T41 M02 M03 K33	T34 T30 P15 P17b P18 P36 K33
+D19	T34	数值热图与可选注释	figure	P12a P12b P15 P17a P17b P17c P18 P36 T03 T16 T30 T34 T41 M02 M03 K33 E39 E47 E48 E49	T34 T30 P15 P17b P18 P36 K33 E39 E47 E48 E49
 D20	R22	共享轴的矩阵与数量轨道	figure	P16a P16b P31a P31b P31c R15 R22 E09	R22 R15 P16a P31b
 D21	E01	点阵：面积、颜色与状态	figure	P13 P14 T11 R20 E01	E01 P13 R20
 D22	R05	椭圆与数值相关矩阵	figure	R05	R05
@@ -31,7 +31,7 @@ D29	N11	二维连续场与等值线	figure	N11	N11
 D30	R23	三维数值曲面	figure	R23	R23
 D31	T01	地理数值场	figure	T01 T02	T01 T02
 D32	T04	地理连接路径	figure	T04	T04
-D33	E33b	配准背景上的测量叠加	figure	E33a E33b K32	E33b E33a K32
+D33	E33b	配准背景上的测量叠加	figure	E33a E33b K32 E41	E33b E33a K32 E41
 D34	R01	环形轮廓与分层气泡	figure	R01 R02	R01
 D35	R09	平行坐标	figure	R09	R09
 D36	R10	多行贡献蜂群	figure	R10	R10
@@ -55,7 +55,7 @@ D53	N08	排序曲线、命中与排名量	figure	N08 K19	N08 K19
 D54	P09	效应与证据火山	figure	P08 P09 T24	P09
 D55	P10	火山与堆积边际分布	figure	P10	P10
 D56	R13	散点与边际分布	figure	R08 R12 R13	R13 R08 R12
-D57	P27	曲线与分箱支持量	figure	P27	P27
+D57	P27	曲线与分箱支持量	figure	P27 E45	P27 E45
 D58	R07	关联矩阵与外接检验网络	figure	R07	R07
 D59	R11	多类贡献与份额组合	figure	R11	R11
 D60	P22	配对评分与差值区间	figure	P22	P22
@@ -66,7 +66,11 @@ D64	R14	训练曲线与运行诊断	figure	R14	R14
 D65	R24	流程、对象、矩阵与评价地形	figure	R24	R24
 D66	E34	成员流线、条目与评分点阵	figure	E34	E34
 D67	E35	双量值三角单元矩阵	figure	E35	E35
-D68	E37	已有层次树、叶端标记与量值轨道	figure	E36 E37	E37 E36
+D68	E37	已有层次树、叶端标记与量值轨道	figure	E36 E37 E40	E37 E36 E40
+D69	E38	序列位点字母堆叠	figure	E38	E38
+D70	E42	图像棋盘拼接与像素差值	figure	E42	E42
+D71	E43	剪接覆盖、连接弧与转录本结构	figure	E43	E43
+D72	E51	有符号贡献瀑布	figure	E51	E51
 B01	K01	亚群坐标＋marker 矩阵	combination	K01 K02 K03 K07 K08 K09 K28	K01 K02 K03 K07 K09 K08 K28
 B04	K04	同一观测：点／IQR＋雨云	combination	K04	K04
 B05	K05	雨云＋已有估计区间	combination	K05	K05
@@ -91,6 +95,8 @@ B36	K36	通路数量底图＋标记组成	combination	K36	K36
 B37	K37	集合、条目、成员与整体／局部网络	combination	K37	K37
 B38	K38	已有诊断、层次树、关联矩阵与成员评分	combination	K38 K40	K38 K40
 B39	K39	环形层级量值与同对象堆叠贡献	combination	K39	K39
+B41	K41	预测校准、评价支持量与决策价值	combination	K41	K41
+B42	K42	调控活性矩阵与指定样本的完整贡献	combination	K42	K42
 H01	E06a	条目ID与说明对照表	support	E06a E06b E06c E06d	E06a
 CARD-C01	C01	用户提供色卡 C01	palette	C01	C01
 CARD-C02	C02	用户提供色卡 C02	palette	C02	C02

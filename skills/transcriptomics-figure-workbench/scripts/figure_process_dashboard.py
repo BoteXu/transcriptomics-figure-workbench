@@ -55,9 +55,8 @@ def plot_process_dashboard(data,palette,*,surface_order,bar_group_order,stage_or
             for j,v in enumerate(d.value):
                 if v>0: ax.text(j,bottom[j]+v/2,str(int(v)),ha='center',va='center',fontsize=6)
             bottom+=d.value.to_numpy()
-        ax.set_xticks(range(len(cats)),cats,fontsize=6); ax.set_ylabel(count_label,fontsize=7); ax.set_title(bg,fontsize=8); ax.tick_params(labelsize=6)
+        ax.set_xticks(range(len(cats)),cats,fontsize=6); ax.set_ylabel(count_label,fontsize=7); ax.set_title(('d  ' if i==0 else '')+str(bg),fontsize=8,loc='left'); ax.tick_params(labelsize=6)
     fig.legend(handles=[Line2D([],[],ls='',marker='s',color=palette[s],label=s) for s in stage_order],loc='lower right',bbox_to_anchor=(.985,.073),frameon=False,ncols=2,fontsize=6)
-    fig.text(.64,.32,'d  Supplied stage counts',fontsize=10,weight='bold')
     return stamp(fig,data,'reference_process_dashboard',palette=palette,surface_order=list(surface_order),bar_group_order=list(bar_group_order),stage_order=list(stage_order),geometry_label=geometry_label,count_label=count_label,analysis='none; no scoring/design/prediction/validation inferred',adapter_version=1)
 
 INK='#25313A'

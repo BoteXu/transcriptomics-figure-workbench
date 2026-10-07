@@ -1,0 +1,256 @@
+{
+  "source": "Original procedural software fixture",
+  "palette": "card_06",
+  "input_unit": "各切面物理像素网格、背景强度、同坐标整数标签、方向与配准说明",
+  "experimental_unit": "Synthetic display records",
+  "contrast": "Frozen display",
+  "denominator": "All records",
+  "model": "No upstream model executed",
+  "limits": "Explicit",
+  "filtering": "None",
+  "uncertainty": "None",
+  "interpretation_limit": "不分割、不配准、不作诊断；方向必须由输入定义。",
+  "synthetic": true,
+  "example_id": "E41",
+  "schema_version": 2,
+  "figure_id": "E41",
+  "status": "RENDERED_UNREVIEWED",
+  "input_hash": "46a92708af4bc5d4227f3490c3e81cd26233d373dcbfe340da8a7f75ad3e8504",
+  "input_hash_algorithm": "SHA256",
+  "input_hash_scope": "exact exported TSV bytes",
+  "source_file": null,
+  "source_file_sha256": null,
+  "figure_spec": {
+    "kind": "slice_overlay",
+    "scientific_analysis": "none; supplied results only",
+    "demo_label_style": "compact",
+    "view_order": [
+      "Axial",
+      "Coronal",
+      "Sagittal"
+    ],
+    "axis_labels": {
+      "Axial": [
+        "Supplied u (mm)",
+        "Supplied v (mm)"
+      ],
+      "Coronal": [
+        "Supplied u (mm)",
+        "Supplied v (mm)"
+      ],
+      "Sagittal": [
+        "Supplied u (mm)",
+        "Supplied v (mm)"
+      ]
+    },
+    "label_slots": {
+      "1": "G3",
+      "2": "G7"
+    },
+    "intensity_limits": [
+      0,
+      1
+    ],
+    "registration_definition": "Already registered synthetic orthogonal pixel grids, no patient images.",
+    "orientation_definition": "Explicit supplied slice planes and u/v orientation; procedural background, not clinical anatomy.",
+    "arrangement": "horizontal",
+    "title": "Frozen orthogonal slice labels",
+    "inference": "none; frozen registered slice labels, not generated segmentations",
+    "design": {
+      "width_mm": null,
+      "height_mm": null,
+      "font_family": "Arial",
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep",
+      "x_tick_rotation": null,
+      "axis_bounds": {},
+      "figure_text_positions": {},
+      "figure_text_wraps": {},
+      "legend_zone": null,
+      "legend_columns": 1,
+      "legend_title_width": null,
+      "resolved_font": "Arial",
+      "geometry_sha256": "b6841ea811550107557fc29cd72d62a053d7fc4273e5af23fca7c91c08e29651"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "aesthetic-library-preview",
+      "palette_name": "card_06",
+      "palette_colors": [
+        "#506AAA",
+        "#728DC1",
+        "#91BBDF",
+        "#B6DBF1",
+        "#F6D3D9",
+        "#E79FBF",
+        "#E17692"
+      ],
+      "group_slots": {
+        "G1": 0,
+        "G2": 1,
+        "G3": 2,
+        "G4": 3,
+        "G5": 4,
+        "G6": 5,
+        "G7": 6,
+        "All points": 0,
+        "Support": 1,
+        "Site": 6,
+        "Input": 2,
+        "Output": 0
+      },
+      "roles": {
+        "primary": "#506AAA",
+        "negative": "#506AAA",
+        "positive": "#E17692",
+        "accent": "#E17692",
+        "neutral": "#A8ADB3",
+        "significant": "#E17692",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F7F9FC",
+          "#506AAA"
+        ],
+        "diverging": [
+          "#506AAA",
+          "#F7F7F7",
+          "#E17692"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "Arial",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4043e686d71f022b3d87e0158396d6bd9a6d2357bc4d26b659c2aed5594ac7b6",
+    "guide_layout": {
+      "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+      "legends_relocated": 0,
+      "geometry_sha256": "b6841ea811550107557fc29cd72d62a053d7fc4273e5af23fca7c91c08e29651"
+    }
+  },
+  "width_inches": 14.700000000000001,
+  "height_inches": 5.6,
+  "layout_geometry": [
+    {
+      "axis": 0,
+      "bounds": [
+        0.075,
+        0.28410714285714295,
+        0.19999999999999996,
+        0.4499999999999999
+      ],
+      "xlim": [
+        -0.35,
+        19.25
+      ],
+      "ylim": [
+        -0.35,
+        16.45
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear"
+    },
+    {
+      "axis": 1,
+      "bounds": [
+        0.335,
+        0.28410714285714284,
+        0.2,
+        0.45
+      ],
+      "xlim": [
+        -0.35,
+        19.25
+      ],
+      "ylim": [
+        -0.35,
+        16.45
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear"
+    },
+    {
+      "axis": 2,
+      "bounds": [
+        0.595,
+        0.28410714285714295,
+        0.19999999999999996,
+        0.4499999999999999
+      ],
+      "xlim": [
+        -0.35,
+        19.25
+      ],
+      "ylim": [
+        -0.35,
+        16.45
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear"
+    }
+  ],
+  "index_alignment": {
+    "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+    "bindings": [],
+    "issues": []
+  },
+  "renderer_sha256": {
+    "figure_biomni_views.py": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+    "figure_core.py": "a475c3da30efb04d712f60bd833518388e2f5fbc4e0d03c75dc047a4e9296590",
+    "figure_design.py": "d59c451c587e8151ed5939b1f6bbb31341a2ece2ea706ca81508601ca5b55c8c",
+    "figure_extensions.py": "8df606b112cf247eb880c8cfda5bf05b0124e744caa8d078b60cbf8f2d99f26e",
+    "figure_general.py": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+    "figure_layout.py": "2cd9ea47e1dc1c4065fdc5c59aa6289f24694d1fdf66f9ae498c7153e53d9bb6",
+    "figure_linked_evidence.py": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+    "figure_method_extensions.py": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+    "figure_multimodal.py": "67e4f95e3df0f716d7d7118e96ba9e527220081e2d6c2f7af911c0c467547705",
+    "figure_multiomics_views.py": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+    "figure_multiscale.py": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+    "figure_network_extensions.py": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+    "figure_palette_applications.py": "30968482e47951aa89fb78669450b94759be8401515832fa9e32d3c71680887a",
+    "figure_polish.py": "936e16fe60033f25af7c98464ab769ffe63979bdbca2439252ac551da2b99dcb",
+    "figure_process_dashboard.py": "dab27ec5d24aefb1ab8052381cc982707388711680bfb30fef87da470d3bfed7",
+    "figure_publication.py": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+    "figure_reference.py": "0784648e76490371362b88f4517a7496ea2b5a8aa2da4e5e7994340120c67aee",
+    "figure_reference_palettes.py": "b9880e9ab9e0a452b65650526c1be388cbcf61e5fec7ac7cff72dbe21ef060c4",
+    "figure_styles.py": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+    "alluvial_geometry.py": "bcb5c01aaac0013ba6b5b253b6cbe77d7ed12b30f0c33b16aa8833fe53ef7e70",
+    "indexed_alignment.py": "2f94ad6f9af88e54dcb8074cde40b87a7c0d3fdb0da851969947ac430542f9a2",
+    "matrix_input.py": "1deecb5ee1feee518b9ab389ea4ed15b091ad8b29051ee3f69cfa00c63c887eb",
+    "project_theme.py": "d4a2bd7dc716ce0159df0b6483ded9ba142536146cc91773dc4bd7cf3576e1f4"
+  },
+  "output_sha256": {
+    "E41.svg": "d0ee65b03321c5c37279eaae55708f59b2c5347195b56f8912ebd4a5a706992a",
+    "E41.pdf": "f3a113ce713172786e48d2658a66ef194d91a9106a3d2922e2583f8b5cadacb7",
+    "E41.png": "e110906adcd89ac59ac814ba642fbc7b68410e5161a4ff0f240b09ad18f478ee",
+    "E41.tsv": "46a92708af4bc5d4227f3490c3e81cd26233d373dcbfe340da8a7f75ad3e8504",
+    "E41_session.txt": "9bec742b602fc06c99cbaeb75be7c2a405797d048b83e76a178c80fc09dcf79e"
+  }
+}

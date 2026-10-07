@@ -1,0 +1,22 @@
+{
+  "adapter": "registration_check",
+  "module": "figure_biomni_views",
+  "function": "plot_registration_check",
+  "params": {
+    "intensity_limits": [
+      0,
+      1
+    ],
+    "difference_limits": [
+      -0.15,
+      0.15
+    ],
+    "tile_pixels": 4,
+    "coordinate_labels": [
+      "Supplied u (mm)",
+      "Supplied v (mm)"
+    ],
+    "registration_definition": "Two already aligned procedural arrays in one physical pixel system and one intensity scale.",
+    "title": "Registered image comparison"
+  }
+}

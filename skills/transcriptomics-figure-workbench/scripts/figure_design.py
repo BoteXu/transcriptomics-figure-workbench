@@ -92,17 +92,49 @@ def geometry_signature(fig):
         if getattr(ax,'_figure_legend_zone',False): continue
         digest.update(str((ax.get_xscale(),ax.get_yscale())).encode())
         add(ax.get_xlim());add(ax.get_ylim())
-        for line in ax.lines: add(line.get_xydata())
+        is3d=hasattr(ax,'get_zlim')
+        if is3d:
+            add(ax.get_zlim());add([ax.elev,ax.azim,getattr(ax,'roll',0)])
+            add(ax.get_box_aspect());digest.update(ax.get_zscale().encode())
+        for line in ax.lines:
+            if hasattr(line,'get_data_3d'):
+                for coords in line.get_data_3d():add(coords)
+            else:add(line.get_xydata())
         for collection in ax.collections:
-            add(collection.get_offsets())
+            from matplotlib.quiver import Quiver
+            # 3D get_offsets/get_paths contain display projections which change
+            # with the canvas. Audit the underlying scientific XYZ instead.
+            xyz=getattr(collection,'_offsets3d',None)
+            vertices=getattr(collection,'_vec',None)
+            segments=getattr(collection,'_segments3d',None)
+            canonical3d=xyz is not None or vertices is not None or segments is not None
+            isvector=isinstance(collection,Quiver)
+            if isvector:
+                for key in ('X','Y','U','V'):add(getattr(collection,key))
+                digest.update(str((collection.scale,collection.scale_units,collection.angles,collection.pivot)).encode())
+            if xyz is not None:
+                for coords in xyz:add(coords)
+            if vertices is not None:add(vertices)
+            if segments is not None:
+                for seg in segments:add(seg)
+            if not canonical3d:add(collection.get_offsets())
             if collection.get_array() is not None: add(collection.get_array())
-            if hasattr(collection,'get_segments'):
+            if not canonical3d and not isvector and hasattr(collection,'get_segments'):
                 for seg in collection.get_segments(): add(seg)
-            for path in collection.get_paths(): add(path.vertices)
+            if not canonical3d and not isvector:
+                for path in collection.get_paths(): add(path.vertices)
+            if hasattr(collection,'get_sizes'):add(getattr(collection,'_sizes3d',collection.get_sizes()))
             digest.update(str(collection.get_clim()).encode())
         for im in ax.images:
             add(im.get_array());add(im.get_extent());digest.update(str(im.get_clim()).encode())
         for patch in ax.patches:
+            from matplotlib.patches import FancyArrowPatch
+            if isinstance(patch,FancyArrowPatch) and patch._posA_posB is not None:
+                # Arrowhead vertices are display-derived, with roundoff after
+                # resizing. Preserve the exact declared endpoints/curvature.
+                add(patch._posA_posB)
+                digest.update(str(sorted(vars(patch.get_connectionstyle()).items())).encode())
+                continue
             add(patch.get_path().vertices)
             add(patch.get_patch_transform().get_matrix())
     return digest.hexdigest()

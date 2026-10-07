@@ -23,7 +23,7 @@ def main():
     entry=(SKILL/'SKILL.md').read_text(encoding='utf8')
     assert entry.startswith('---\n') and 'name: transcriptomics-figure-workbench' in entry
     assert (ROOT/'LICENSE').is_file() and (SKILL/'references/colorbrewer-license.txt').is_file()
-    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.2.3'
+    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.2.4'
     files=[p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and 'dist' not in p.parts]
     for p in files:
         assert p.stat().st_size < 100_000_000, 'GitHub file size exceeded'
@@ -36,18 +36,20 @@ def main():
         if p.suffix=='.json': json.loads(p.read_text(encoding='utf8'))
     catalog=json.loads((GALLERY/'catalog.json').read_text(encoding='utf8'))
     items=catalog['preserved_examples']; groups=catalog['general_entries']
-    assert len(items)==244 and len(groups)==45
+    assert len(items)==260 and len(groups)==45
     ids=[i['id'] for i in items]; assert len(ids)==len(set(ids))
     flattened=[id_ for g in groups for id_ in g['members']]
     assert sorted(flattened)==sorted(ids), 'Lost or duplicate catalog member'
     assert {'P05','P10','P20a','R05','R25','K07','K15','C15','S03','T43','N12'} <= set(ids)
     for g in groups: assert g['default'] in g['members']
     counts=collections.Counter(i['role'] for i in items)
-    assert counts['palette']==15 and counts['protein']==3 and counts['combination']==40
-    methods=catalog['drawing_methods'];assert len(methods)==111
+    assert counts['palette']==15 and counts['protein']==3 and counts['combination']==42
+    methods=catalog['drawing_methods'];assert len(methods)==117
     assert sorted(i for m in methods for i in m['members'])==sorted(ids)
     assert len({m['id'] for m in methods})==len(methods)
-    assert sum(m['role'] in ['figure','combination'] for m in methods)==92
+    assert sum(m['role'] in ['figure','combination'] for m in methods)==98
+    adapters=next(n.value for n in ast.parse((SKILL/'scripts/render_frozen_table.py').read_text(encoding='utf8')).body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='ADAPTERS' for t in n.targets))
+    assert isinstance(adapters,ast.Dict) and len(adapters.keys)==57
     assert sum(i['curation']['decision']=='recommended' for i in items)==len(methods)
     for m in methods:
         assert m['default'] in m['members']
@@ -66,6 +68,9 @@ def main():
         now=by_id[old['id']]
         assert now['png_sha256']==old['png_sha256']
         if old['pdf_sha256']:assert now['pdf_sha256']==old['pdf_sha256']
+    for old in json.loads((ROOT/'docs/baseline-preservation-v023.json').read_text(encoding='utf8'))['ids']:
+        assert by_id[old['id']]['png_sha256']==old['png_sha256']
+        if old['pdf_sha256']:assert by_id[old['id']]['pdf_sha256']==old['pdf_sha256']
     for a,b in [('T14','T18'),('P21a','P21b'),('M02','M03'),('T10','M10'),('K01','K07'),('K14','K15'),('K38','K40')]:
         assert by_id[a]['method']==by_id[b]['method'], 'Structural duplicates remain separate'
     ledger=json.loads((SKILL/'references/catalog-audit.json').read_text(encoding='utf8'))['entries']
@@ -85,12 +90,16 @@ def main():
         for relative in item.get('component_tables',[]):
             checked_path(relative); assets.add(relative)
         meta=json.loads(checked_path(item['meta']).read_text(encoding='utf8'))
+        for preview in item.get('layout_alternatives',[])+([item['current_preview']] if item.get('current_preview') else []):
+            for field in ('png','pdf','svg','meta','tsv'):
+                if preview.get(field):checked_path(preview[field]);assets.add(preview[field])
+            assert sha(checked_path(preview['png']))==preview['png_sha256']
         assert meta['example_id']==item['id']
         if item['role']=='protein':
             assert meta['synthetic'] is False and meta['structure_source']['pdb_id']=='1EMA'
         elif item['role']!='palette': assert meta['synthetic'] is True
     recipes=json.loads((SKILL/'references/combination-recipes.json').read_text(encoding='utf8'))
-    assert len(recipes['recipes'])==40 and len(recipes['supplemental_components'])==32
+    assert len(recipes['recipes'])==42 and len(recipes['supplemental_components'])==32
     assert {r['id'] for r in recipes['recipes']}=={i['id'] for i in items if i['role']=='combination'}
     for recipe in recipes['recipes']:
         item=by_id[recipe['id']]
@@ -129,11 +138,18 @@ def main():
     for name in ['all-previews.png','all-previews.jpg','source-archive-v021.pdf','visualization-overview.pdf','visualization-overview.png','visualization-overview.jpg','general-patterns.png','general-patterns.jpg','index.tsv','methods.tsv','overview-index.json']:
         assert (overview/name).is_file()
     lines=(overview/'index.tsv').read_text(encoding='utf8').splitlines()
-    assert len(lines)==245
+    assert len(lines)==261
     for line in lines[1:]: checked_path('overview/'+line.split('\t')[-1],ROOT/'examples')
     overview_manifest=json.loads((overview/'overview-index.json').read_text(encoding='utf8'))
     assert sorted(i for p in overview_manifest['primary_pages'] for i in p['examples'])==sorted(m['default'] for m in methods)
     assert sorted(i for p in overview_manifest['archive_pages'] for i in p['examples'])==sorted(ids)
+    for record in overview_manifest['primary_assets']:
+        item=by_id[record['id']];preview=item.get('current_preview',item)
+        assert record['png']==preview['png'] and record['sha256']==sha(checked_path(preview['png']))
+    audit=json.loads((ROOT/'docs/plot-logic-audit-v024.json').read_text(encoding='utf8'))
+    assert audit['functions']==audit['executed']==108 and not audit['failures'] and not audit['uncovered']
+    for record in audit['records']:
+        assert record['source_sha256']==sha(SKILL/'scripts'/(record['module']+'.py'))
     plots={}
     for p in (SKILL/'scripts').glob('figure_*.py'):
         tree=ast.parse(p.read_text(encoding='utf8'))

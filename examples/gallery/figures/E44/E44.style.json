@@ -1,0 +1,22 @@
+{
+  "adapter": "variant_posteriors",
+  "module": "figure_analysis_results",
+  "function": "plot_variant_posteriors",
+  "params": {
+    "signal_order": [
+      "G1",
+      "G7"
+    ],
+    "region": [
+      99500,
+      112000
+    ],
+    "coordinate_definition": "Synthetic assembly and segment; supplied one-based variant positions",
+    "posterior_definition": "Frozen multi-signal PIPs and supplied credible-set membership; no probability normalization",
+    "label_ids": [
+      "v08",
+      "v16"
+    ],
+    "title": "Variant posteriors across supplied signals"
+  }
+}

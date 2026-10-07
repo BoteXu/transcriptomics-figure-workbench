@@ -19,6 +19,8 @@ def audit_panel_layout(fig):
             width=min(box.x1,ab.x1)-max(box.x0,ab.x0)
             height=min(box.y1,ab.y1)-max(box.y0,ab.y0)
             if width>2 and height>2: issues.append({'kind':'legend_over_data_region','legend':i,'axis':j})
-    return {'status':'LAYOUT_CHECKS_ONLY','issues':issues,'manual_export_review_required':True,
+    from indexed_alignment import audit_index_alignment
+    alignment=audit_index_alignment(fig);issues.extend(alignment['issues'])
+    return {'status':'LAYOUT_CHECKS_ONLY','issues':issues,'index_alignment':alignment,'manual_export_review_required':True,
             'scope':'Legend/canvas and legend/data-region bounding boxes only; titles, labels, contrast and colorbars still need inspection'}
 

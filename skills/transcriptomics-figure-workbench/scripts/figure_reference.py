@@ -491,7 +491,10 @@ def plot_training_dashboard(data,palette,*,selected_epoch,selection_label,loss_l
     epochs=sorted(loss.epoch.unique()); eticks=np.unique(np.linspace(0,len(epochs)-1,min(7,len(epochs))).astype(int)); ax.set_xticks([epochs[i] for i in eticks])
     ax.scatter(chosen.epoch,chosen.value,s=48,fc='white',ec=INK,zorder=6); ax.set(xlabel='Epoch',ylabel=loss_label,title='A  Recorded loss and uncertainty'); ax.legend(frameon=False,fontsize=8)
     mat,rs,es=_grid(heat,'run','epoch','value'); hax=_ax(fig,[.77,.61,.13,.26]); cm=reference_cmap('expression_warm',semantic='sequential')
-    im=hax.imshow(mat,aspect='auto',cmap=cm,origin='upper',extent=[min(es),max(es),len(rs)-.5,-.5]); hax.set(xlabel='Epoch',ylabel='Run',title='B'); hax.set_yticks(range(len(rs)),[str(r) for r in rs],fontsize=max(4,min(7,9-len(rs)*.12))); hax.axvline(selected_epoch,color='#54636E',ls='--',lw=.7)
+    es=sorted(es);mat=mat.reindex(columns=es)
+    epoch_values=np.asarray(es,float)
+    edges=np.r_[epoch_values[0]-.5,epoch_values[0]+.5] if len(es)==1 else np.r_[epoch_values[0]-(epoch_values[1]-epoch_values[0])/2,(epoch_values[:-1]+epoch_values[1:])/2,epoch_values[-1]+(epoch_values[-1]-epoch_values[-2])/2]
+    im=hax.pcolormesh(edges,np.arange(len(rs)+1)-.5,mat.to_numpy(),cmap=cm,shading='flat');hax.set_ylim(len(rs)-.5,-.5); hax.set(xlabel='Epoch',ylabel='Run',title='B'); hax.set_yticks(range(len(rs)),[str(r) for r in rs],fontsize=max(4,min(7,9-len(rs)*.12))); hax.axvline(selected_epoch,color='#54636E',ls='--',lw=.7)
     _colorbar(fig,[.92,.62,.012,.24],cm,im.norm,heat_label)
     gax=_ax(fig,[.80,.16,.18,.28]); grad=grad.sort_values('epoch'); reference=reference.sort_values('epoch'); gax.fill_between(grad.epoch,grad.lower,grad.upper,color=semantic_color('primary','#00A78D'),alpha=.20); gax.plot(grad.epoch,grad.value,color=semantic_color('primary','#00A78D'),lw=1.7); gax.plot(reference.epoch,reference.value,color=semantic_color('accent','#EDA019'),ls='--',lw=1.2); gticks=np.unique(np.linspace(0,len(grad)-1,min(5,len(grad))).astype(int)); gax.set_xticks(grad.epoch.iloc[gticks])
     fig.text(.09,.065,selection_label,fontsize=8)
@@ -519,8 +522,12 @@ def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,ba
     for stop in range(1,len(groups)+1):
         if stop==len(groups) or groups[stop]!=groups[start]:
             strip.add_patch(Rectangle((0,start-.5),1,stop-start,fc=palette[groups[start]],ec='none',antialiased=False)); start=stop
-    strip.set(xlim=(0,1),ylim=(len(rs)-.5,-.5)); tops=_ax(fig,[.10,.81,.62,.10]); t=top.set_index('column').reindex(column_order); tops.bar(range(len(t)),t.bar,color=semantic_color('primary','#2CB29F'),width=.8); tops.set_xticks([]); tops.set_ylabel(bar_label,fontsize=7); tops.set_title('B',loc='left',fontsize=10)
+    strip.set(xlim=(0,1),ylim=(len(rs)-.5,-.5)); tops=_ax(fig,[.10,.81,.62,.10]); t=top.set_index('column').reindex(column_order); tops.bar(range(len(t)),t.bar,color=semantic_color('primary','#2CB29F'),width=.8);tops.set_xlim(-.5,len(column_order)-.5); tops.set_xticks([]); tops.set_ylabel(bar_label,fontsize=7); tops.set_title('B',loc='left',fontsize=10)
     twin=tops.twinx(); twin.plot(range(len(t)),t.line,color=semantic_color('accent','#EF4831'),lw=1.2); twin.set_ylabel(line_label,fontsize=7); twin.tick_params(labelsize=6); twin.spines['top'].set_visible(False)
+    from indexed_alignment import bind_index_axes
+    bind_index_axes(fig,ax,strip,'y',row_order)
+    bind_index_axes(fig,ax,tops,'x',column_order)
+    bind_index_axes(fig,ax,twin,'x',column_order)
     _colorbar(fig,[.75,.25,.015,.42],cm,im.norm,value_label)
     cats=list(dict.fromkeys(groups))
     for i,g in enumerate(cats):
@@ -551,7 +558,7 @@ def plot_effect_distribution_forest(data,*,row_order,panel_order,panel_labels,li
             star='***' if s.p<.001 else '**' if s.p<.01 else '*' if s.p<.05 else ''
             ax.text(limits[1]-.18,i,star,ha='right',va='center',fontsize=7)
         ax.axvline(0,ls='--',color='#8A949B',lw=.8); ax.set(xlim=limits,ylim=(n-.5,-.5),xlabel=panel_labels[p],title=str(p)); ax.set_yticks(range(n),[f'{r}  {sums[(sums.panel==p)&(sums.row==r)].count_text.iloc[0]}' for r in row_order] if k==0 else [],fontsize=7)
-    fig.text(.22,.09,interval_label+'; '+count_label,fontsize=8)
+    fig.text(.22,.02,interval_label+'; '+count_label,fontsize=8)
     _colorbar(fig,[.67,.055,.27,.012],cm,norm,'Supplied effect value',orientation='horizontal')
     return _finish(fig,data,'effect_distribution_forest',row_order=list(row_order),panel_order=list(panel_order),panel_labels=panel_labels,limits=list(limits),interval_label=interval_label,count_label=count_label,summary='provided, not pooled by renderer',p_semantics=p_type+' supplied p; threshold glyph only')
 
