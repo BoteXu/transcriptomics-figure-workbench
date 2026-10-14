@@ -48,6 +48,7 @@ def cases():
 
 
 def main(output):
+    output = output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     theme = create_theme('synthetic-qc-de', 'card_06', {'p1': 0, 'p2': 1}, font_family='DejaVu Sans')
     records = []; negative = 0
