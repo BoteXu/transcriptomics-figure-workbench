@@ -76,7 +76,8 @@ def plot_frozen_qc_de(data, theme, *, mode, contract, order=None, marker_map=Non
         fig = _new(theme, (max(9, 3 + len(d) * .32), 5.5)); ax = _axis(fig, [.13, .30, .61, .54])
         stats = [dict(label=s, med=r['median'], q1=r.q1, q3=r.q3, whislo=r.whislo, whishi=r.whishi)
                  for s, r in d.iterrows()]
-        artists = ax.bxp(stats, showfliers=False, patch_artist=True, widths=.55)
+        artists = ax.bxp(stats, showfliers=False, patch_artist=True, widths=.55,
+                         medianprops={'color': theme['roles']['border'], 'linewidth': 1.1})
         for patch, (_, row) in zip(artists['boxes'], d.iterrows()):
             patch.set_facecolor(pal[row.project]); patch.set_alpha(.85)
         ax.tick_params(axis='x', rotation=60); ax.set_ylabel(contract['expression_scale'])
@@ -131,18 +132,23 @@ def plot_frozen_qc_de(data, theme, *, mode, contract, order=None, marker_map=Non
             _declarations(contract, ['rank_definition'])
             fig = _new(theme, (9, 5.5)); ax = _axis(fig, [.13, .23, .60, .60])
             for status in pd.unique(d.status):
-                q = d[d.status == status]; ax.scatter(q['rank'], q.effect, c=colors[status], s=18, ec='none')
+                q = d[d.status == status]
+                ax.scatter(q['rank'], q.effect, c=colors[status], s=18,
+                           ec=theme['roles']['border'] if status == 'untested' else 'none', lw=.8)
             ax.set(xlabel=contract['rank_definition'], ylabel=contract['effect_definition']); ax.axhline(0, color=theme['roles']['border'], lw=.7)
         else:
             order = _exact_order(d.feature_id, order); d = d.set_index('feature_id').loc[order]
-            fig = _new(theme, (9, 7)); ax = fig.add_axes([.10, .20, .60, .62], projection='polar')
-            angles = np.arange(len(d)) * 2 * math.pi / len(d)
-            ax.bar(angles, d.effect.abs(), width=2 * math.pi / len(d) * .76, bottom=0,
-                   color=[colors[x] for x in d.status], ec='white', lw=.5)
-            ax.set_xticks(angles, order, fontsize=8); ax.set_theta_offset(math.pi / 2); ax.set_theta_direction(-1)
-            ax.set_ylabel('Absolute ' + contract['effect_definition'], labelpad=30)
             if len(d) > 40:
                 raise ValueError('Select an explicit reviewed <=40-feature radial view, retaining its full source index')
+            fig = _new(theme, (9, 7)); ax = fig.add_axes([.10, .20, .60, .62], projection='polar')
+            angles = np.arange(len(d)) * 2 * math.pi / len(d)
+            bars = ax.bar(angles, d.effect.abs(), width=2 * math.pi / len(d) * .76, bottom=0,
+                          color=[colors[x] for x in d.status], ec='white', lw=.5)
+            for patch, status in zip(bars, d.status):
+                if status == 'untested':
+                    patch.set_edgecolor(theme['roles']['border']); patch.set_linewidth(.8); patch.set_hatch('///')
+            ax.set_xticks(angles, order, fontsize=8); ax.set_theta_offset(math.pi / 2); ax.set_theta_direction(-1)
+            ax.set_ylabel('Absolute ' + contract['effect_definition'], labelpad=30)
         _status_key(fig, colors, list(pd.unique(d.status)))
     elif mode in {'deg_counts', 'deg_donut'}:
         d = checked(data, ['status', 'count'], ['count']); _numbers(d, ['count']); _unique(d, ['status'])

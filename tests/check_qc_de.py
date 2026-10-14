@@ -63,8 +63,11 @@ def main(output):
         if mode == 'ranked_effects':
             offsets = [tuple(x) for collection in ax.collections for x in collection.get_offsets()]
             assert sorted(offsets) == sorted(zip(source['rank'], source.effect))
+            untested = ax.collections[list(pd.unique(source.status)).index('untested')]
+            assert len(untested.get_edgecolors()) and untested.get_edgecolors()[0, 3] > 0
         if mode == 'radial_effects':
             assert [p.get_height() for p in ax.patches] == list(abs(source.effect))
+            assert ax.patches[list(source.status).index('untested')].get_hatch() == '///'
         if mode in {'deg_counts', 'pvalue_hist'}:
             assert [p.get_height() for p in ax.patches] == list(source['count'])
         meta = {k: 'synthetic fixture' for k in ['source', 'input_unit', 'experimental_unit', 'contrast', 'denominator', 'model', 'limits', 'filtering', 'uncertainty', 'interpretation_limit']}
