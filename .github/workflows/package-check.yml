@@ -36,3 +36,11 @@ jobs:
           python tests/check_guide_spacing.py
           python tests/check_biomni_views.py
           python tests/check_analysis_results.py
+      - name: Validate and render the new frozen QC and DE modes
+        env:
+          MPLBACKEND: Agg
+        run: python tests/check_qc_de.py qc-de-ci
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: qc-de-previews
+          path: qc-de-ci

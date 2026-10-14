@@ -20,11 +20,13 @@ import figure_multimodal as multimodal
 import figure_linked_evidence as linked
 import figure_biomni_views as biomni_views
 import figure_analysis_results as analysis_views
+import figure_qc_de as qc_de
 from project_theme import validate_theme, render_with_theme
 from panel_layout_audit import audit_panel_layout
 
 # Fixed functions, not user-supplied import paths or executable expressions.
 ADAPTERS={
+    'qc_de':(qc_de.plot_frozen_qc_de,'q1 median q3 whislo whishi n x y width height angle coverage effect average rank count left right','argument'),
     'splice_tracks':(analysis_views.plot_splice_tracks,'start end value count lane','argument'),
     'variant_posteriors':(analysis_views.plot_variant_posteriors,'position pip','argument'),
     'contribution_waterfall':(analysis_views.plot_contribution_waterfall,'contribution','argument'),

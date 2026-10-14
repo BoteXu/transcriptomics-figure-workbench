@@ -23,7 +23,7 @@ def main():
     entry=(SKILL/'SKILL.md').read_text(encoding='utf8')
     assert entry.startswith('---\n') and 'name: transcriptomics-figure-workbench' in entry
     assert (ROOT/'LICENSE').is_file() and (SKILL/'references/colorbrewer-license.txt').is_file()
-    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.2.4'
+    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.2.5'
     files=[p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and 'dist' not in p.parts]
     for p in files:
         assert p.stat().st_size < 100_000_000, 'GitHub file size exceeded'
@@ -49,7 +49,7 @@ def main():
     assert len({m['id'] for m in methods})==len(methods)
     assert sum(m['role'] in ['figure','combination'] for m in methods)==98
     adapters=next(n.value for n in ast.parse((SKILL/'scripts/render_frozen_table.py').read_text(encoding='utf8')).body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='ADAPTERS' for t in n.targets))
-    assert isinstance(adapters,ast.Dict) and len(adapters.keys)==57
+    assert isinstance(adapters,ast.Dict) and len(adapters.keys)==58
     assert sum(i['curation']['decision']=='recommended' for i in items)==len(methods)
     for m in methods:
         assert m['default'] in m['members']

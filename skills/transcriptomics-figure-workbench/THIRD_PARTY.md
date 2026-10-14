@@ -14,3 +14,7 @@ Other primary documentation/paper links and the precise read/render status are r
 The v0.2.0 increment consults original GOplot, MOFA2, mixOmics, matchms, Escher, lifelines, cobalt, scVelo, statsmodels, LocusZoom, ggdist and HCIL documentation and original methods papers. Attribution links and input/interpretation boundaries are in [methods-extension-router.md](references/methods-extension-router.md) and [course-visualization-router.md](references/course-visualization-router.md). Implementations are independently written frozen-result adapters; external analysis packages, course PDFs and reference pixels are not bundled or claimed as executed.
 
 The v0.2.1 supplied-result display guidance consults the original WGCNA paper and official tutorials; links and input boundaries are in [wgcna-visualization-router.md](references/wgcna-visualization-router.md). No WGCNA analysis code or reference images are bundled.
+
+## QC / DE article review (2026-10-14)
+
+Reference: https://mp.weixin.qq.com/s/Sb80ORHTXlLZdGkEDcyFpw. The user supplied code for review. No redistribution license accompanied that source; the original script and images are not included. figure_qc_de.py is independently authored for frozen summaries. Upstream statistical algorithms retain their attribution and are not executed by this adapter.
