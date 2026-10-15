@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "K30",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K30",
+  "arrangement": "default",
+  "relationship": "同时检查残差形态、分布、尺度和高影响对象",
+  "components": [
+    {
+      "id": "M11a",
+      "sha256": "bd6cd6c8159358198a0413a4be7c65714648338fe8260ec9620233f2559d7d8e",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11b",
+      "sha256": "7051301d158c8b75916a6ddef953f2b94a46167d3268f2231481269cc6ba74a3",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11c",
+      "sha256": "1696949f5c5dee063126bd70ea34f5f96714a2a67f9b7f286ecc15a33344d0ee",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11d",
+      "sha256": "1fc39c5c66ed830e060729fe37fd17ad69f872cebf4646124185a7aae00e8c90",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M11a",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 460.8315734863281,
+      "height_pt": 325.6106262207031,
+      "scale": 1
+    },
+    {
+      "id": "M11b",
+      "x_pt": 498.8315734863281,
+      "y_pt": 74,
+      "width_pt": 404.82611083984375,
+      "height_pt": 325.6106262207031,
+      "scale": 1
+    },
+    {
+      "id": "M11c",
+      "x_pt": 18,
+      "y_pt": 441.6106262207031,
+      "width_pt": 455.5751953125,
+      "height_pt": 327.13336181640625,
+      "scale": 1
+    },
+    {
+      "id": "M11d",
+      "x_pt": 498.8315734863281,
+      "y_pt": 441.6106262207031,
+      "width_pt": 453.7778625488281,
+      "height_pt": 334.6106262207031,
+      "scale": 1
+    }
+  ],
+  "width_pt": 970.6094360351562,
+  "height_pt": 803.2212524414062,
+  "output_sha256": {
+    "K30.svg": "f84210d5996688d28914755b45058e7b6fbfa0e0469788dfdb92ba2d5dd7d824",
+    "K30.png": "9604038d7e564000ffc023c44bb336e42d6f8615c349f549e9e141063c45f34f",
+    "K30.pdf": "e7d51c188ddbcebbed9fe05d4852e50e913fdc87276b1d4f33d62b4557380c0c"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 90,
+    "issues": [],
+    "width_pt": 970.6094360351562,
+    "height_pt": 803.2212524414062
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Four diagnostic views separated with full axes, guides and no-fit notes; large linear alternatives need zoom.",
+    "png_sha256": "9604038d7e564000ffc023c44bb336e42d6f8615c349f549e9e141063c45f34f",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K30.svg": "f84210d5996688d28914755b45058e7b6fbfa0e0469788dfdb92ba2d5dd7d824",
+      "K30.png": "9604038d7e564000ffc023c44bb336e42d6f8615c349f549e9e141063c45f34f",
+      "K30.pdf": "e7d51c188ddbcebbed9fe05d4852e50e913fdc87276b1d4f33d62b4557380c0c"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

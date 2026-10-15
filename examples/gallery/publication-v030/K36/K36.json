@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K36",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K36",
+  "arrangement": "default",
+  "relationship": "将数量变化定位到功能图中的位置；各样本标记组成",
+  "components": [
+    {
+      "id": "M09",
+      "sha256": "cf309e68357bde2514bd23f93c425874fae30dd124833ff41dc898a52546d2cf",
+      "input_sha256": "bce2b60cd33080d2dec4b3ece8925cdc0b1f4c88ad2269baf2e6d0596144876c"
+    },
+    {
+      "id": "M10",
+      "sha256": "a1f2ef25cbe3a1250dd5942ce1492f35a97a7349cdf40973bc4d7a96e75eda7a",
+      "input_sha256": "314fcb38df709ac3a0c2d20e9f52dcaf37ae91f680e262aa56799fd5450a40c6"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M09",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 529.8519897460938,
+      "height_pt": 319.5771484375,
+      "scale": 1
+    },
+    {
+      "id": "M10",
+      "x_pt": 567.8519897460938,
+      "y_pt": 74,
+      "width_pt": 439.0853576660156,
+      "height_pt": 262.1564025878906,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1024.9373474121094,
+  "height_pt": 420.5771484375,
+  "output_sha256": {
+    "K36.svg": "d805a944b2bad033e968192e0e66f028ed9a9dfac6d09ad598157e3a515600e0",
+    "K36.png": "313f1151093588585a67cadd0e8a98bb488d4d282911375b0558fdf859eece7e",
+    "K36.pdf": "1b7ded9244ce71f5733b2879f1af701b3416ebd9f7a9f738abdfdcf2f6a96747"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 35,
+    "issues": [],
+    "width_pt": 1024.9373779296875,
+    "height_pt": 420.5771484375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Known pathway topology and isotope composition separated; abundance-versus-flux boundary visible.",
+    "png_sha256": "313f1151093588585a67cadd0e8a98bb488d4d282911375b0558fdf859eece7e",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K36.svg": "d805a944b2bad033e968192e0e66f028ed9a9dfac6d09ad598157e3a515600e0",
+      "K36.png": "313f1151093588585a67cadd0e8a98bb488d4d282911375b0558fdf859eece7e",
+      "K36.pdf": "1b7ded9244ce71f5733b2879f1af701b3416ebd9f7a9f738abdfdcf2f6a96747"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

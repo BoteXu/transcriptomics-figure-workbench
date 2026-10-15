@@ -1,0 +1,40 @@
+"""Build one offline HTML Studio. No server, network client or plotting imports."""
+import json
+import os
+from pathlib import Path
+from .registry import SKILL,read_registry
+
+
+def build_studio(output,gallery=None,demo_svg=None):
+    output=Path(output)
+    if output.exists():raise FileExistsError('Choose a new Studio output file')
+    from .methods import catalog_methods
+    data={'registry':read_registry(),'examples':[],'methods':[],'method_entries':catalog_methods(),'demo_svg':None}
+    if gallery is not None:
+        gallery=Path(gallery).resolve()
+        manifest=gallery/'catalog.json'
+        if not manifest.is_file():raise ValueError('Select the existing complete gallery directory')
+        items=json.loads(manifest.read_text(encoding='utf8'))
+        if isinstance(items,dict):items=items['preserved_examples']
+        prefix=Path(os.path.relpath(gallery,output.resolve().parent)).as_posix()
+        for item in items:
+            current=item.get('current_preview',item)
+            data['examples'].append({'id':item['id'],'title':item.get('title',item['id']),
+                'input_shape':item.get('input_shape',''),'png':prefix+'/'+current['png'],
+                'source':prefix+'/index.html#'+item['id']})
+        methods=SKILL/'references/drawing-methods.json'
+        data['methods']=json.loads(methods.read_text(encoding='utf8'))['methods']
+    if demo_svg is not None:
+        path=Path(demo_svg)
+        if path.stat().st_size>5*1024**2:raise ValueError('Demo SVG exceeds the bounded preview limit')
+        data['demo_svg']=path.read_text(encoding='utf8')
+    assets=SKILL/'assets/studio'
+    template=(assets/'index.html').read_text(encoding='utf8')
+    content=template.replace('/*__STUDIO_CSS__*/',(assets/'studio.css').read_text(encoding='utf8'))
+    content=content.replace('/*__STUDIO_JS__*/',(assets/'publication-svg.js').read_text(encoding='utf8')+'\n'+(assets/'studio.js').read_text(encoding='utf8'))
+    encoded=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
+    content=content.replace('/*__STUDIO_DATA__*/',encoded)
+    output.parent.mkdir(parents=True,exist_ok=True)
+    with output.open('x',encoding='utf8') as stream:stream.write(content)
+    return {'status':'OFFLINE_STUDIO_BUILT','output':str(output),'renderer_count':len(data['registry']['renderers']),
+            'source_examples':len(data['examples']),'network_service_started':False,'private_data_uploaded':False}

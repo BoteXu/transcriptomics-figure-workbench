@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "S02",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/publication-inputs-v030/S02.svg",
+  "source_sha256": "7009b9b4b6d262fc9d7cbc060d5d044f05a1299a35135338a3c1e232113c4deb",
+  "source_metadata": "examples/gallery/metadata/S02.json",
+  "source_metadata_sha256": "011bb34cc4f34d217fc329186d8dba1b0f25d90d0a88ee753b2b56cf2c490589",
+  "input_table": null,
+  "input_sha256": null,
+  "frozen_graphical_geometry_sha256": "39afc0dfb89512b0b06e7c0b1acd6fa08e2b681604b44ffb0f13da548e2afa81",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 316,
+  "height_pt": 368.60427807486633,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "finishing_patch": {
+    "body_bounds": [
+      0,
+      0,
+      280,
+      291.60427807486633
+    ]
+  },
+  "finisher_sha256": "30aea7228da91c17318b348c0f6936f615e1eb2ed75f6f404077d1b19d17fb10",
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "explicit visible-body bounds: [0,0,280,291.60427807486633]"
+  ],
+  "removed_page_furniture": [],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      18,
+      53
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 3,
+    "issues": [],
+    "width_pt": 316,
+    "height_pt": 368.6042785644531
+  },
+  "output_sha256": {
+    "S02.svg": "167a953968c2f739361072357ff32929566c517cdbc44a6be51e1c7a5bccbc55",
+    "S02.png": "db6c15861c64921d3c687638ec60de614487bbbd2ad2827aa1f84dcdf19c4dcb",
+    "S02.pdf": "81b0d462fb06ece8c113e5b118f8c2f734b10fa9c7b2f9ec17b7f36e0c5a07f6"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Original surface raster fills the tightened viewport without clipped structure.",
+    "png_sha256": "db6c15861c64921d3c687638ec60de614487bbbd2ad2827aa1f84dcdf19c4dcb",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "S02.svg": "167a953968c2f739361072357ff32929566c517cdbc44a6be51e1c7a5bccbc55",
+      "S02.png": "db6c15861c64921d3c687638ec60de614487bbbd2ad2827aa1f84dcdf19c4dcb",
+      "S02.pdf": "81b0d462fb06ece8c113e5b118f8c2f734b10fa9c7b2f9ec17b7f36e0c5a07f6"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

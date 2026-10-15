@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "M04",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/figures/M04/M04.svg",
+  "source_sha256": "51e085e1d4f43a0d2e702e8342dc0a72d17c199bbbd84d91dffab1407141d614",
+  "source_metadata": "examples/gallery/metadata/M04.json",
+  "source_metadata_sha256": "deb5090c00260b5c84dbc539c90c228a2eaa2fdaee41a833022a3e2e02c3b4e5",
+  "input_table": "examples/gallery/figures/M04/M04.tsv",
+  "input_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d",
+  "frozen_graphical_geometry_sha256": "fee52d17b163cd07a3842bf60dec73b408a1619ef54ace95d5c9dc73de617cbe",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 726.631591796875,
+  "height_pt": 369.90655517578125,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "finishing_patch": {
+    "foreground_axis_text": true
+  },
+  "finisher_sha256": "ab77521d311cd876a7db90bfd72c86b972f568d592e941d2bf8232f3abeef640",
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "axis text painted above gutter links with white backing"
+  ],
+  "removed_page_furniture": [
+    "Matched objects in separate view spaces",
+    "SYNTHETIC DEMO | M04",
+    "Software test fixture; not biological evidence"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      9.455902099609375,
+      -10.199996948242188
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 45,
+    "issues": [],
+    "width_pt": 726.631591796875,
+    "height_pt": 369.90655517578125
+  },
+  "output_sha256": {
+    "M04.svg": "731fcf3d828b4170183b390bb3a18c88775683877299cc2ee32c3af13692b04c",
+    "M04.png": "7f58f913eb0fda838c85ce9c1ae81ff7d3f5895793e8928ab00159f0281ce854",
+    "M04.pdf": "1340b39c6389bcfc28f3587608eb847125830f9eb6dd0aadc2b880ef53ce208e"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Axis labels retain left anchoring and white backing above gutter links; separate coordinate spaces remain explicit.",
+    "png_sha256": "7f58f913eb0fda838c85ce9c1ae81ff7d3f5895793e8928ab00159f0281ce854",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "M04.svg": "731fcf3d828b4170183b390bb3a18c88775683877299cc2ee32c3af13692b04c",
+      "M04.png": "7f58f913eb0fda838c85ce9c1ae81ff7d3f5895793e8928ab00159f0281ce854",
+      "M04.pdf": "1340b39c6389bcfc28f3587608eb847125830f9eb6dd0aadc2b880ef53ce208e"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

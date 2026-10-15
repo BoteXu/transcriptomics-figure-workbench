@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "K12",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K12",
+  "arrangement": "default",
+  "relationship": "展示个体变化、差值分布与估计范围三个层次",
+  "components": [
+    {
+      "id": "AUX_paired",
+      "sha256": "d29edb57a54b1e47500d6a98a502ed0c0982bad5da02a69ecb384c1c028d894f",
+      "input_sha256": "29a401737bae3d319bc992e81c6a1154e8ab28a98f6c8a1d85f308602af09473"
+    },
+    {
+      "id": "AUX_paired_deltas",
+      "sha256": "9824ca07976bf09b72448b6f5a2267ff40a42ff12d50a84d9d77eaacb0ee8e97",
+      "input_sha256": "39dfa0b492e5363fb5868ebc7a863f8d03eaa42a035cd4a16531f1b6c1873b21"
+    },
+    {
+      "id": "AUX_delta_estimate",
+      "sha256": "046ad2cbf3f6d27273626dad44f8b60592d6426ce4e0da4cd3330b860424ac83",
+      "input_sha256": "345608a360c824864e3abe70c5ffee77defcf53d8c2f3ed3a40cb74156a1df19"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "AUX_paired",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 542.9194946289062,
+      "height_pt": 333.2378234863281,
+      "scale": 1
+    },
+    {
+      "id": "AUX_paired_deltas",
+      "x_pt": 580.9194946289062,
+      "y_pt": 74,
+      "width_pt": 433.9312438964844,
+      "height_pt": 313.6182556152344,
+      "scale": 1
+    },
+    {
+      "id": "AUX_delta_estimate",
+      "x_pt": 306.87049865722656,
+      "y_pt": 449.2378234863281,
+      "width_pt": 419.1097412109375,
+      "height_pt": 154.27511596679688,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1032.8507385253906,
+  "height_pt": 630.512939453125,
+  "output_sha256": {
+    "K12.svg": "a15cf3377aab5e1df57849f88cbcd00bfc1754c0a74cb533cd6c12e64fcc6b02",
+    "K12.png": "1395fcd847b76e49e4956a29cbe9feca10dba79b505cc442d510eaea2c38be17",
+    "K12.pdf": "2dbc8b140e0b4f1c0d97b8ec5df6c15431c8c5d417e5b0e2cdae9f57c093c80f"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 38,
+    "issues": [],
+    "width_pt": 1032.8507080078125,
+    "height_pt": 630.512939453125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Paired lines, same-unit delta distribution and compact stored interval are distinct; 48-pair density retained and illustrative interval note visible.",
+    "png_sha256": "1395fcd847b76e49e4956a29cbe9feca10dba79b505cc442d510eaea2c38be17",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K12.svg": "a15cf3377aab5e1df57849f88cbcd00bfc1754c0a74cb533cd6c12e64fcc6b02",
+      "K12.png": "1395fcd847b76e49e4956a29cbe9feca10dba79b505cc442d510eaea2c38be17",
+      "K12.pdf": "2dbc8b140e0b4f1c0d97b8ec5df6c15431c8c5d417e5b0e2cdae9f57c093c80f"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

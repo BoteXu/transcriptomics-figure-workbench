@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K33_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K33",
+  "arrangement": "vertical",
+  "relationship": "每个因子在哪些层解释更多变异；因子由哪些分子特征共同构成",
+  "components": [
+    {
+      "id": "M02",
+      "sha256": "ce6c69df7f5afa316994f8668198483940c75cd50c313b8f115892961ab511a5",
+      "input_sha256": "a2fdfaee95ad701f7bf719852d97056d5164b7eae43fd3e9ac8a3de4653fd5ba"
+    },
+    {
+      "id": "M03",
+      "sha256": "69d77ac0fc18abc8750a9237fca0bb43f0f7bdf6933a42770f0ace1102c76635",
+      "input_sha256": "d4455aa7078554a03c59d8817d97536b5734d6d09518de07f5e6595238eef6ab"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M02",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 417.25579833984375,
+      "height_pt": 281.7108154296875,
+      "scale": 1
+    },
+    {
+      "id": "M03",
+      "x_pt": 18,
+      "y_pt": 397.7108154296875,
+      "width_pt": 429.2664794921875,
+      "height_pt": 342.421142578125,
+      "scale": 1
+    }
+  ],
+  "width_pt": 465.2664794921875,
+  "height_pt": 767.1319580078125,
+  "output_sha256": {
+    "ALT_K33_vertical.svg": "33ed572cfc3ff19ec5e4ae94708b2438ef5b8b4b3d1ca783758a5596552b1590",
+    "ALT_K33_vertical.png": "fb329c590d26dec09b4b79eb47ad69913d8d3d3d8d3da173e02859eb430e335b",
+    "ALT_K33_vertical.pdf": "9df4ec1bcbc45af7e267a5af83f1357ce00aac75f6af46c90202b882ff5e9e53"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 50,
+    "issues": [],
+    "width_pt": 465.2664794921875,
+    "height_pt": 767.1319580078125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Factor variance and signed loadings have separate scales and full row identities.",
+    "png_sha256": "fb329c590d26dec09b4b79eb47ad69913d8d3d3d8d3da173e02859eb430e335b",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K33_vertical.svg": "33ed572cfc3ff19ec5e4ae94708b2438ef5b8b4b3d1ca783758a5596552b1590",
+      "ALT_K33_vertical.png": "fb329c590d26dec09b4b79eb47ad69913d8d3d3d8d3da173e02859eb430e335b",
+      "ALT_K33_vertical.pdf": "9df4ec1bcbc45af7e267a5af83f1357ce00aac75f6af46c90202b882ff5e9e53"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

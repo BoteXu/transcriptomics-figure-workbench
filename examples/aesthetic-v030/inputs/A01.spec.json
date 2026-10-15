@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "figure_id": "A01",
+  "renderer": "editorial",
+  "input": {
+    "path": "P08.tsv",
+    "sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-aesthetic-rebuild",
+    "palette_name": "tol_muted",
+    "palette_colors": [
+      "#CC6677",
+      "#332288",
+      "#DDCC77",
+      "#117733",
+      "#88CCEE",
+      "#882255",
+      "#44AA99",
+      "#999933",
+      "#AA4499"
+    ],
+    "group_slots": {
+      "Control": 1,
+      "Treated": 0,
+      "Before": 1,
+      "After": 0,
+      "Model A": 1,
+      "Model B": 0,
+      "Model C": 3,
+      "G1": 1,
+      "G2": 0,
+      "G3": 3,
+      "G4": 5,
+      "G5": 6,
+      "Coding": 1,
+      "Regulatory": 0,
+      "Intergenic": 3
+    },
+    "roles": {
+      "primary": "#CC6677",
+      "negative": "#332288",
+      "positive": "#CC6677",
+      "accent": "#AA4499",
+      "neutral": "#A9B1BA",
+      "significant": "#AA4499",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#CC6677"
+      ],
+      "diverging": [
+        "#332288",
+        "#F8F8F7",
+        "#CC6677"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "experimental_unit": "No biological units; software display fixture",
+    "filtering": "All supplied fixture rows; no data exclusions for aesthetics",
+    "denominator": "All supplied fixture rows; explicit denominators in table where applicable",
+    "uncertainty": "Illustrative synthetic bounds; not research confidence intervals",
+    "synthetic": true,
+    "contrast": "DEMO; not a biological contrast",
+    "input_unit": "synthetic volcano rows",
+    "limits": "Renderer defaults or explicit limits in figure_spec",
+    "interpretation_limit": "SYNTHETIC DEMO; visual design only, not scientific evidence",
+    "source": "Deterministic synthetic atlas fixtures; seed 20261005",
+    "model": "No analysis model fitted; illustrative frozen numbers"
+  },
+  "parameters": {
+    "kind": "volcano",
+    "options": {
+      "title": "Differential expression",
+      "alpha": 0.05,
+      "effect_cutoff": 1
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Deterministic synthetic atlas fixtures; seed 20261005",
+      "independent_unit": "Synthetic software display units only",
+      "denominator": "All rows in the bound fixture",
+      "value_definition": "Existing frozen values; no scientific analysis rerun",
+      "uncertainty_definition": "Supplied illustrative bounds where present; no interval calculated"
+    }
+  },
+  "appearance": {
+    "preset": "paper"
+  }
+}

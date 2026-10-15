@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K23_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K23",
+  "arrangement": "vertical",
+  "relationship": "看哪些术语共享成员，并查出这些成员的效应方向；弦图中相同关系的精确逐格查询和成员覆盖度；选定条目的成员重叠与冗余，保留所有条目",
+  "components": [
+    {
+      "id": "E08",
+      "sha256": "892760f1f13d66e9c68dadcba19648b6de00d737906bc4b18c7829a946d6dc7b",
+      "input_sha256": "553ee5a3570c439b9644dffea3f4ac02a54dacf4400174be3fa4675c9d0da354"
+    },
+    {
+      "id": "E09",
+      "sha256": "ee59fc6006400f2dcd309b8070f86fd3dbfcdb93581fd50e4e009c97bebb3b96",
+      "input_sha256": "90ffce26fe5840f5fd2ed1851b34c23e2bf4f3b4e0de1f3a5807a7a28a5a680e"
+    },
+    {
+      "id": "E23",
+      "sha256": "a612092781b343cdadeb4ccd28a9c557b0ea12ad34319e993282c8f9e2c7cab6",
+      "input_sha256": "bfd52c3481ca77d69e1e915ea991457884bc2fdf12007bef8ba9f5e7b825588e"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E08",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 476.21490478515625,
+      "height_pt": 349.0572814941406,
+      "scale": 1
+    },
+    {
+      "id": "E09",
+      "x_pt": 18,
+      "y_pt": 465.0572814941406,
+      "width_pt": 408.03179931640625,
+      "height_pt": 467.177001953125,
+      "scale": 1
+    },
+    {
+      "id": "E23",
+      "x_pt": 18,
+      "y_pt": 974.2342834472656,
+      "width_pt": 415.72283935546875,
+      "height_pt": 374.43255615234375,
+      "scale": 1
+    }
+  ],
+  "width_pt": 512.2149047851562,
+  "height_pt": 1375.6668395996094,
+  "output_sha256": {
+    "ALT_K23_vertical.svg": "d66e1b398dfc328e1243ed99b78f97814c0c0675314e62c6c912d16232ea07f4",
+    "ALT_K23_vertical.png": "6d1853efa4f61f9ab63d26504550b450a45c5357b5938a694365603b3e69fa30",
+    "ALT_K23_vertical.pdf": "a75e4ad9f8113f359b358c32d5cbb6b92c02ddd33845c83ff3471c7013610875"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 129,
+    "issues": [],
+    "width_pt": 512.2149047851562,
+    "height_pt": 1375.6668701171875
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Membership chord, exact matrix and overlap network remain complete with readable labels.",
+    "png_sha256": "6d1853efa4f61f9ab63d26504550b450a45c5357b5938a694365603b3e69fa30",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K23_vertical.svg": "d66e1b398dfc328e1243ed99b78f97814c0c0675314e62c6c912d16232ea07f4",
+      "ALT_K23_vertical.png": "6d1853efa4f61f9ab63d26504550b450a45c5357b5938a694365603b3e69fa30",
+      "ALT_K23_vertical.pdf": "a75e4ad9f8113f359b358c32d5cbb6b92c02ddd33845c83ff3471c7013610875"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

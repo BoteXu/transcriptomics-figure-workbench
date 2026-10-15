@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "N12",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/figures/N12/N12.svg",
+  "source_sha256": "ab690cbefecd99daba33b56f172ee4e104dbf972c00003a02357dfa2131e622c",
+  "source_metadata": "examples/gallery/metadata/N12.json",
+  "source_metadata_sha256": "00768687282c39970fb550fb912eec28f5029489ae3f4eda83b73cc7f3089e10",
+  "input_table": "examples/gallery/figures/N12/N12.tsv",
+  "input_sha256": "65599e091aa049d0de8739adb5539141dc223b607ecc110f9443f1f121fb59cf",
+  "frozen_graphical_geometry_sha256": "31c9e3a99f1cf497a424d0f650c8e83bd724668afefe161d5c04668e463d1ce3",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 412.0431823730469,
+  "height_pt": 271.5396423339844,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "independent compact guide lane"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO - N12",
+    "Software test fixture; not biological evidence",
+    "Given hierarchy; arrows encode recorded parent relation"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -63.188926696777344,
+      -61.1455078125
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 28,
+    "issues": [],
+    "width_pt": 412.0431823730469,
+    "height_pt": 271.5396423339844
+  },
+  "output_sha256": {
+    "N12.svg": "7e6942f6220a5bf845e9a0fb7b3cb4a81d81114ad9f4820a25783651e2b04ac6",
+    "N12.png": "4d08adad0aea9d173931544ead5470abefa5cffe59fbb129664e8feba77b51d4",
+    "N12.pdf": "73f73b7e9c673d6974b6a5e88c7ebdd040cd81c8258f7561b5a7a61476faa941"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Parent arrows, node labels and three distinct guides readable.",
+    "png_sha256": "4d08adad0aea9d173931544ead5470abefa5cffe59fbb129664e8feba77b51d4",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "N12.svg": "7e6942f6220a5bf845e9a0fb7b3cb4a81d81114ad9f4820a25783651e2b04ac6",
+      "N12.png": "4d08adad0aea9d173931544ead5470abefa5cffe59fbb129664e8feba77b51d4",
+      "N12.pdf": "73f73b7e9c673d6974b6a5e88c7ebdd040cd81c8258f7561b5a7a61476faa941"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

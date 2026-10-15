@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "figure_id": "A05",
+  "renderer": "editorial",
+  "input": {
+    "path": "N09.tsv",
+    "sha256": "9b0b7ea04240b452b05ccb95b83550dbfbe188cdd3f58ad1e8da1bdefb963ed9"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-aesthetic-rebuild",
+    "palette_name": "tol_muted",
+    "palette_colors": [
+      "#CC6677",
+      "#332288",
+      "#DDCC77",
+      "#117733",
+      "#88CCEE",
+      "#882255",
+      "#44AA99",
+      "#999933",
+      "#AA4499"
+    ],
+    "group_slots": {
+      "Control": 1,
+      "Treated": 0,
+      "Before": 1,
+      "After": 0,
+      "Model A": 1,
+      "Model B": 0,
+      "Model C": 3,
+      "G1": 1,
+      "G2": 0,
+      "G3": 3,
+      "G4": 5,
+      "G5": 6,
+      "Coding": 1,
+      "Regulatory": 0,
+      "Intergenic": 3
+    },
+    "roles": {
+      "primary": "#CC6677",
+      "negative": "#332288",
+      "positive": "#CC6677",
+      "accent": "#AA4499",
+      "neutral": "#A9B1BA",
+      "significant": "#AA4499",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#CC6677"
+      ],
+      "diverging": [
+        "#332288",
+        "#F8F8F7",
+        "#CC6677"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "experimental_unit": "Synthetic units; no research inference",
+    "filtering": "No implicit filtering; explicit fixture panels and views only.",
+    "denominator": "Complete supplied panel table",
+    "uncertainty": "Upstream fixed demonstration bounds or density; not new inference",
+    "synthetic": true,
+    "contrast": "Independent panel aesthetic demonstration",
+    "input_unit": "Provided panel table rows",
+    "limits": "Explicit visual parameters: {\"stage_order\": [\"Stage 1\", \"Stage 2\", \"Stage 3\", \"Stage 4\"], \"title\": \"Supplied rank changes; no ranking computation\"}",
+    "interpretation_limit": "Synthetic visual example; suitable real inputs must be independently reviewed",
+    "source": "Original bounded synthetic visualization fixture, seed 20261005. No biological analysis or external results.",
+    "model": "No fitting, testing or analysis"
+  },
+  "parameters": {
+    "kind": "rank",
+    "options": {
+      "title": "Rank trajectories",
+      "order": [
+        "Stage 1",
+        "Stage 2",
+        "Stage 3",
+        "Stage 4"
+      ]
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original bounded synthetic visualization fixture, seed 20261005. No biological analysis or external results.",
+      "independent_unit": "Synthetic software display units only",
+      "denominator": "All rows in the bound fixture",
+      "value_definition": "Existing frozen values; no scientific analysis rerun",
+      "uncertainty_definition": "Supplied illustrative bounds where present; no interval calculated"
+    }
+  },
+  "appearance": {
+    "preset": "paper"
+  }
+}

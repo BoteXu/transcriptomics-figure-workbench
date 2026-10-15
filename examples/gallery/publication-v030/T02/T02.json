@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "T02",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/figures/T02/T02.svg",
+  "source_sha256": "d2b887f3249d83829a704f3d9c37a065f8b66026d9f1cae21e8961c1330df8fd",
+  "source_metadata": "examples/gallery/metadata/T02.json",
+  "source_metadata_sha256": "8903ccf2f8297a11de58e2df794e43b6160e8a11b2b2de40fcda3d9ee9506ebb",
+  "input_table": "examples/gallery/figures/T02/T02.tsv",
+  "input_sha256": "432e30ff474db7a9490dc60b98221ab370eb0db58b31e58e695726af98a69b57",
+  "frozen_graphical_geometry_sha256": "03936cbb868693ecef0433bf29e21c04106c476ceb41176d99981db15b888347",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 508,
+  "height_pt": 387,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO - T02",
+    "Software test fixture; not biological evidence",
+    "Regional value map"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      13,
+      13
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 30,
+    "issues": [],
+    "width_pt": 508,
+    "height_pt": 387
+  },
+  "output_sha256": {
+    "T02.svg": "3ee0c228a43d82f04e2f5fae99c12ee9cf2fb363023b1a36e5c84b88ac268624",
+    "T02.png": "7d5995c3c5377f66c81231bb04d83d3831dd7a451d3f6fa4e467490bcb4444c5",
+    "T02.pdf": "fb11198ec7b499c9911daabec0d8c91e4a6233b855eccd2b3a0d3bb907e9892e"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Visible map bounds remove large blank area; regional ticks and scale readable.",
+    "png_sha256": "7d5995c3c5377f66c81231bb04d83d3831dd7a451d3f6fa4e467490bcb4444c5",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "T02.svg": "3ee0c228a43d82f04e2f5fae99c12ee9cf2fb363023b1a36e5c84b88ac268624",
+      "T02.png": "7d5995c3c5377f66c81231bb04d83d3831dd7a451d3f6fa4e467490bcb4444c5",
+      "T02.pdf": "fb11198ec7b499c9911daabec0d8c91e4a6233b855eccd2b3a0d3bb907e9892e"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

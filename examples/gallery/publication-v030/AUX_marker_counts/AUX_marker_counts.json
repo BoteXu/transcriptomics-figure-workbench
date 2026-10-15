@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "AUX_marker_counts",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/components/marker_counts/marker_counts.svg",
+  "source_sha256": "7ba1c9c3b5f3e6f255bb02ae0499dae106a95c7d3dfb8d23fc730039664c02f7",
+  "source_metadata": "examples/gallery/components/marker_counts/marker_counts.json",
+  "source_metadata_sha256": "4c11cdb59ccfa1f73a1d9b7e764a5cddeabc7051e39e74498c0a9d9a742aeb25",
+  "input_table": "examples/gallery/components/marker_counts/marker_counts.tsv",
+  "input_sha256": "c17c1220c6e7fdfd7159cff20f27959117085d2191bc07780c41bb3716e6e1dc",
+  "frozen_graphical_geometry_sha256": "1a29532b9a06f7f25de70986167e2b88c586d071fc94f77a25b731f93861be7d",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 391.62945556640625,
+  "height_pt": 299.6637725830078,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO - marker_counts",
+    "Software test fixture; not biological evidence"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -97.19172668457031,
+      24.41331672668457
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 29,
+    "issues": [],
+    "width_pt": 391.62945556640625,
+    "height_pt": 299.66375732421875
+  },
+  "output_sha256": {
+    "AUX_marker_counts.svg": "2f31a0c682d3458a8df188447501255b5cebea5a8cd2da4ac3d3a803a8305cb8",
+    "AUX_marker_counts.png": "cd485f8c89b4d608a3fb9ff14e43a9a53aa0daef82a89671d27319809659b802",
+    "AUX_marker_counts.pdf": "0f3232206ba4458d2831963ac98a218a67f76e28c6c9882ed6720458756a6a6b"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Marker matrix rows and displayed-object counts align.",
+    "png_sha256": "cd485f8c89b4d608a3fb9ff14e43a9a53aa0daef82a89671d27319809659b802",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "AUX_marker_counts.svg": "2f31a0c682d3458a8df188447501255b5cebea5a8cd2da4ac3d3a803a8305cb8",
+      "AUX_marker_counts.png": "cd485f8c89b4d608a3fb9ff14e43a9a53aa0daef82a89671d27319809659b802",
+      "AUX_marker_counts.pdf": "0f3232206ba4458d2831963ac98a218a67f76e28c6c9882ed6720458756a6a6b"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

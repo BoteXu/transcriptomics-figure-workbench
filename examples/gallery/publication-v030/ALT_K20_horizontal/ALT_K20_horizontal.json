@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K20_horizontal",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K20",
+  "arrangement": "horizontal",
+  "relationship": "矩阵看共现，数量看支持量；按对象去重避免事件累加",
+  "components": [
+    {
+      "id": "N07",
+      "sha256": "43d3ad5032f23ba1df542988702b28ac695c908ea3a73b36a22d9c4379528955",
+      "input_sha256": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0"
+    },
+    {
+      "id": "AUX_event_counts",
+      "sha256": "d392a39401b8ea1670acb20572bf6014696ddeac6e0d48f0cca13e42374c11ee",
+      "input_sha256": "3e32d3171211a5d391b2b63fbdd6fbbcd797ca5eec8c4ebe78945f91dfce557d"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N07",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 553.5984497070312,
+      "height_pt": 374.1022644042969,
+      "scale": 1
+    },
+    {
+      "id": "AUX_event_counts",
+      "x_pt": 591.5984497070312,
+      "y_pt": 74,
+      "width_pt": 409.1794128417969,
+      "height_pt": 295.94952392578125,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1018.7778625488281,
+  "height_pt": 475.1022644042969,
+  "output_sha256": {
+    "ALT_K20_horizontal.svg": "980c0492d6c2e8529ff244fa55ae2492cbbd96bf5d365df6acb6e8716742db7e",
+    "ALT_K20_horizontal.png": "5a2e2975e435ecafddcc677a33504a3c92aee50d448dab86eba41268ae3ca911",
+    "ALT_K20_horizontal.pdf": "157d199ee613ecd1193371131064885a7b5b3f3c91375638b4720b34e051ab1d"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 53,
+    "issues": [],
+    "width_pt": 1018.7778930664062,
+    "height_pt": 475.1022644042969
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Multistate matrix, event guide and object counts are readable; measured-none semantics retained.",
+    "png_sha256": "5a2e2975e435ecafddcc677a33504a3c92aee50d448dab86eba41268ae3ca911",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K20_horizontal.svg": "980c0492d6c2e8529ff244fa55ae2492cbbd96bf5d365df6acb6e8716742db7e",
+      "ALT_K20_horizontal.png": "5a2e2975e435ecafddcc677a33504a3c92aee50d448dab86eba41268ae3ca911",
+      "ALT_K20_horizontal.pdf": "157d199ee613ecd1193371131064885a7b5b3f3c91375638b4720b34e051ab1d"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

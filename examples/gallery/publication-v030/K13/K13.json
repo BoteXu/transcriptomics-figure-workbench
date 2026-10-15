@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K13",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K13",
+  "arrangement": "default",
+  "relationship": "气泡看附加量值，六边形看重叠区域到底有多少记录",
+  "components": [
+    {
+      "id": "T29",
+      "sha256": "fe27c135600aabe06858e94036ea9cf46da136e6e2b590efebadbb40b3416ed1",
+      "input_sha256": "1ab080a05132e6029978a2af999a43f948c59fd93958310787163fe60d7350a8"
+    },
+    {
+      "id": "AUX_bubble_hex",
+      "sha256": "5d0ea594fba5cd50ed5cdd033aa9fedf9a1c23735e90fe35fd2e18406469bbfc",
+      "input_sha256": "bc0c162070fa693864493290ab460db4e993a651d0313f1065f092c64c470a91"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T29",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 439.9766845703125,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_bubble_hex",
+      "x_pt": 477.9766845703125,
+      "y_pt": 74,
+      "width_pt": 513.5103759765625,
+      "height_pt": 403.3148193359375,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1009.487060546875,
+  "height_pt": 504.3148193359375,
+  "output_sha256": {
+    "K13.svg": "434c1dffba3014783b047ec349581b34b666387876d258db5ce913d7af8c477e",
+    "K13.png": "9f53770ab2c2de7e9b070a12702d3bf6cc8efddb28e141e6d4b40a4df0ece849",
+    "K13.pdf": "c8fba699ac053be729b4c3f4cfbc514a33f49c3f3f69d5c6d1454116225936e9"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 60,
+    "issues": [],
+    "width_pt": 1009.487060546875,
+    "height_pt": 504.3148193359375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Bubble area guide and occupied-bin color scale remain distinct; full descriptive limitation retained.",
+    "png_sha256": "9f53770ab2c2de7e9b070a12702d3bf6cc8efddb28e141e6d4b40a4df0ece849",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K13.svg": "434c1dffba3014783b047ec349581b34b666387876d258db5ce913d7af8c477e",
+      "K13.png": "9f53770ab2c2de7e9b070a12702d3bf6cc8efddb28e141e6d4b40a4df0ece849",
+      "K13.pdf": "c8fba699ac053be729b4c3f4cfbc514a33f49c3f3f69d5c6d1454116225936e9"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

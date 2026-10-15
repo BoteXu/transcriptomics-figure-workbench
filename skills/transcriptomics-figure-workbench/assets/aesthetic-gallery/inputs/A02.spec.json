@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "figure_id": "A02",
+  "renderer": "editorial",
+  "input": {
+    "path": "E21.tsv",
+    "sha256": "68cb15dc00ee3e89619c44d1791ade9feeae0b6bd25a015a5b3f19a30cf82f41"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-aesthetic-rebuild",
+    "palette_name": "tol_muted",
+    "palette_colors": [
+      "#CC6677",
+      "#332288",
+      "#DDCC77",
+      "#117733",
+      "#88CCEE",
+      "#882255",
+      "#44AA99",
+      "#999933",
+      "#AA4499"
+    ],
+    "group_slots": {
+      "Control": 1,
+      "Treated": 0,
+      "Before": 1,
+      "After": 0,
+      "Model A": 1,
+      "Model B": 0,
+      "Model C": 3,
+      "G1": 1,
+      "G2": 0,
+      "G3": 3,
+      "G4": 5,
+      "G5": 6,
+      "Coding": 1,
+      "Regulatory": 0,
+      "Intergenic": 3
+    },
+    "roles": {
+      "primary": "#CC6677",
+      "negative": "#332288",
+      "positive": "#CC6677",
+      "accent": "#AA4499",
+      "neutral": "#A9B1BA",
+      "significant": "#AA4499",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#CC6677"
+      ],
+      "diverging": [
+        "#332288",
+        "#F8F8F7",
+        "#CC6677"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "experimental_unit": "Synthetic display objects; no biological inference",
+    "filtering": "No aesthetic exclusions; complete fixture retained",
+    "denominator": "All supplied fixture records; explicit membership denominators where stated",
+    "uncertainty": "Supplied illustrative intervals, not research confidence intervals",
+    "synthetic": true,
+    "contrast": "Synthetic illustration of frozen-result visual grammar",
+    "input_unit": "\u6bcf\u884c\u6807\u7b7e\u3001\u8eab\u4efd\u3001\u5df2\u6709\u70b9\u4f30\u8ba1\u548c\u4e0a\u4e0b\u754c\uff1b\u5dee\u503c/\u5bf9\u6570\u6bd4\u503c/\u6bd4\u503c\u5c3a\u5ea6",
+    "limits": "Explicit renderer settings in figure_spec",
+    "interpretation_limit": "\u533a\u95f4\u5b9a\u4e49\u5fc5\u987b\u5df2\u7ed9\uff1b\u68ee\u6797\u56fe\u4e0d\u81ea\u52a8\u505ameta\u5206\u6790\u6216\u66ff\u6362\u7edf\u8ba1\u6a21\u578b\u3002",
+    "source": "Original deterministic software fixture; seed 2026100511",
+    "model": "No research analysis model fitted"
+  },
+  "parameters": {
+    "kind": "forest",
+    "options": {
+      "title": "Estimated effects",
+      "x_label": "Effect size",
+      "effect_scale": "difference"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original deterministic software fixture; seed 2026100511",
+      "independent_unit": "Synthetic software display units only",
+      "denominator": "All rows in the bound fixture",
+      "value_definition": "Existing frozen values; no scientific analysis rerun",
+      "uncertainty_definition": "Supplied illustrative bounds where present; no interval calculated"
+    }
+  },
+  "appearance": {
+    "preset": "paper"
+  }
+}

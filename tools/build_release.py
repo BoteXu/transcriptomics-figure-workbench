@@ -24,6 +24,38 @@ def main(output):
     assets=[archive]
     for source,name in [('visualization-overview.pdf','visualization-overview.pdf'),('source-archive-v021.pdf','all-previews.pdf'),('new-result-modes-v024.jpg','new-result-modes-v024.jpg')]:
         destination=output/name;shutil.copy2(ROOT/'examples/overview'/source,destination);assets.append(destination)
+    studio=output/f'figure-studio-v{version}.html'
+    shutil.copy2(SKILL/'assets/figure-studio.html',studio);assets.append(studio)
+    previews=output/f'workbench-previews-v{version}.zip'
+    with zipfile.ZipFile(previews,'x',compression=zipfile.ZIP_DEFLATED) as archive:
+        for file in sorted((ROOT/'examples/aesthetic-v030').rglob('*')):
+            if file.is_file():archive.write(file,file.relative_to(ROOT/'examples/aesthetic-v030').as_posix())
+    assets.append(previews)
+    atlas=output/f'reviewed-atlas-v{version}.zip'
+    # The optional atlas contains final exports, not duplicated historical pixels.
+    # Its standalone index rewrites source links to the versioned public repository.
+    with zipfile.ZipFile(atlas,'x',compression=zipfile.ZIP_DEFLATED) as archive:
+        folder=ROOT/'examples/gallery/publication-v030'
+        for file in sorted(folder.rglob('*')):
+            if file.is_file() and file.name!='index.html':
+                archive.write(file,'reviewed-atlas/'+file.relative_to(folder).as_posix())
+        page=(folder/'index.html').read_text(encoding='utf8')
+        start=page.index('const rows=')+len('const rows=')
+        rows,length=json.JSONDecoder().raw_decode(page[start:])
+        for row in rows:
+            for key in ('png','svg','pdf','meta'):row[key]=row[key].removeprefix('../publication-v030/')
+            source,_,fragment=row['original'].partition('#')
+            source=(folder/source).resolve().relative_to(ROOT).as_posix()
+            row['original']='https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/'+source+('#'+fragment if fragment else '')
+        page=page[:start]+json.dumps(rows,ensure_ascii=False).replace('<','\\u003c')+page[start+length:]
+        page=page.replace('href="../index.html"','href="https://github.com/BoteXu/transcriptomics-figure-workbench/tree/v'+version+'"')
+        archive.writestr('reviewed-atlas/index.html',page)
+        for file in sorted((ROOT/'examples/method-v030').rglob('*')):
+                if file.is_file() and '__pycache__' not in file.parts:
+                    archive.write(file,'reviewed-atlas/methods/'+file.relative_to(ROOT/'examples/method-v030').as_posix())
+        archive.writestr('reviewed-atlas/README.txt','Open index.html for 400 reviewed exports; open methods/index.html for 8 GSEA/ORA displays. Original source files and source-plan paths refer to the versioned public repository. Self-review is not scientific acceptance.\n')
+    assets.append(atlas)
+    full_pdf=output/'full-atlas-v030.pdf';shutil.copy2(ROOT/'examples/overview/full-atlas-v030.pdf',full_pdf);assets.append(full_pdf)
     (output/f'SHA256SUMS-v{version}.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in assets),encoding='utf8')
     print(json.dumps(dict(status='PUBLIC_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
 

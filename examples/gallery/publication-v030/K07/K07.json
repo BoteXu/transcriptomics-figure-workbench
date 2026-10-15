@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "K07",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K07",
+  "arrangement": "default",
+  "relationship": "在同一几何和汇总层次比较分类与特征",
+  "components": [
+    {
+      "id": "T19",
+      "sha256": "b359ad35e1768da1e8e602cb24310f46827220c6f2fc4c61df5c27dcd70166cd",
+      "input_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+    },
+    {
+      "id": "AUX_marker_coordinates",
+      "sha256": "96d49e8c28cecbd4faaec44507478c9d341429451d86f59268968911e5c446ff",
+      "input_sha256": "1cc3b14a3ef2b34f47ae0941fd18bdf651b8ee8234d06b060cb2e1a4d2876812"
+    },
+    {
+      "id": "AUX_marker_matrix",
+      "sha256": "660515646b42211e94d0d5424ebeb38361267240f56b0dec87703b2abc752476",
+      "input_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T19",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 399.3448181152344,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_coordinates",
+      "x_pt": 445.8175964355469,
+      "y_pt": 74,
+      "width_pt": 537.0599365234375,
+      "height_pt": 193.03466796875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_matrix",
+      "x_pt": 296.52996826171875,
+      "y_pt": 427.57861328125,
+      "width_pt": 407.8175964355469,
+      "height_pt": 298.404296875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1000.8775329589844,
+  "height_pt": 752.98291015625,
+  "output_sha256": {
+    "K07.svg": "9eb0bc13ea1c1c8d5e86693413f73445f5b671719bd0b42b53578bfcdb3efea9",
+    "K07.png": "c6624f5201a45e8c544633a3258ea71fed4775bf8e3c3d3e8ed19ef384a153eb",
+    "K07.pdf": "076a448876b5cfb87f9f5f740ab6c12eb342f78da24f7caec9c025f8f0add235"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 60,
+    "issues": [],
+    "width_pt": 1000.8775634765625,
+    "height_pt": 752.98291015625
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Coordinates, marker facets and fixed means are separated without clipping.",
+    "png_sha256": "c6624f5201a45e8c544633a3258ea71fed4775bf8e3c3d3e8ed19ef384a153eb",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K07.svg": "9eb0bc13ea1c1c8d5e86693413f73445f5b671719bd0b42b53578bfcdb3efea9",
+      "K07.png": "c6624f5201a45e8c544633a3258ea71fed4775bf8e3c3d3e8ed19ef384a153eb",
+      "K07.pdf": "076a448876b5cfb87f9f5f740ab6c12eb342f78da24f7caec9c025f8f0add235"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

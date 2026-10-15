@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "figure_id": "B05",
+  "renderer": "mirrored_bars",
+  "input": {
+    "path": "mirror.tsv",
+    "sha256": "1e9e5b144a4d97223da5d7e29a93fdbc92fae1bfc1bcfad22c728e35bfeba911"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-aesthetic-rebuild",
+    "palette_name": "tol_muted",
+    "palette_colors": [
+      "#CC6677",
+      "#332288",
+      "#DDCC77",
+      "#117733",
+      "#88CCEE",
+      "#882255",
+      "#44AA99",
+      "#999933",
+      "#AA4499"
+    ],
+    "group_slots": {
+      "Control": 1,
+      "Treated": 0,
+      "Before": 1,
+      "After": 0,
+      "Model A": 1,
+      "Model B": 0,
+      "Model C": 3,
+      "G1": 1,
+      "G2": 0,
+      "G3": 3,
+      "G4": 5,
+      "G5": 6,
+      "Coding": 1,
+      "Regulatory": 0,
+      "Intergenic": 3
+    },
+    "roles": {
+      "primary": "#CC6677",
+      "negative": "#332288",
+      "positive": "#CC6677",
+      "accent": "#AA4499",
+      "neutral": "#A9B1BA",
+      "significant": "#AA4499",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#CC6677"
+      ],
+      "diverging": [
+        "#332288",
+        "#F8F8F7",
+        "#CC6677"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "experimental_unit": "Synthetic display objects; no biological inference",
+    "filtering": "No aesthetic exclusions; complete fixture retained",
+    "denominator": "All supplied fixture records; explicit membership denominators where stated",
+    "uncertainty": "No uncertainty estimated; none encoded in this mode",
+    "synthetic": true,
+    "contrast": "Synthetic illustration of frozen-result visual grammar",
+    "input_unit": "Explicit supplied table cells/coordinates",
+    "limits": "Explicit renderer settings in figure_spec",
+    "interpretation_limit": "Synthetic display fixture only; no biological inference or upstream analysis",
+    "source": "Original hand-authored frozen synthetic display fixture mirror",
+    "model": "No research analysis model fitted"
+  },
+  "parameters": {
+    "unit_label": "Supplied count",
+    "left_group": "Before",
+    "right_group": "After",
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original hand-authored frozen synthetic display fixture mirror",
+      "independent_unit": "Synthetic software display units only",
+      "denominator": "All rows in the bound fixture",
+      "value_definition": "Existing frozen values; no scientific analysis rerun",
+      "uncertainty_definition": "Supplied illustrative bounds where present; no interval calculated"
+    }
+  },
+  "appearance": {
+    "preset": "paper"
+  }
+}

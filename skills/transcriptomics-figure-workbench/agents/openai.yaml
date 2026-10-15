@@ -1,6 +1,6 @@
 interface:
   display_name: "科研数据与多组学绘图工作台"
-  short_description: "按数据结构选择通用画法与组合，统一课题色卡和字体，保留参考表达与可追溯导出"
-  default_prompt: "使用 $transcriptomics-figure-workbench 按数据与表达选择通用画法及组合，保留参考的视觉语言，应用统一课题色卡和字体并检查实际导出。"
+  short_description: "通用与方法专用绘图、GSEA美化、冻结结果、离线预览和版本验收"
+  default_prompt: "使用 $transcriptomics-figure-workbench 从当前实际目录选择绘图器，检查冻结输入与来源，生成统一课题样式的图形；提供逐图预览、可复核导出和独立视觉验收。"
 policy:
   allow_implicit_invocation: true

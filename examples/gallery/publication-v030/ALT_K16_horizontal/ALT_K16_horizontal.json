@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K16_horizontal",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K16",
+  "arrangement": "horizontal",
+  "relationship": "同时看集合之间关系和各条件的响应模式",
+  "components": [
+    {
+      "id": "N02",
+      "sha256": "616587cebbe3ec94e766a7842f93239e5912bba9be8b3117e508054026dd47ab",
+      "input_sha256": "9904209537a6bcc58014d73f2fd2364d1ea6e6cd84fa0e7563f71aff8654f51d"
+    },
+    {
+      "id": "AUX_term_scores",
+      "sha256": "e64bc57cd93150a4f4c930b8d24a569421e0bf3a5fab0de044a9181dbf30d5f6",
+      "input_sha256": "b1ce6f89f2244517d24ab8800a2ad7d59e3f4159594970b8220a0fbd99184f95"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N02",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 396.81219482421875,
+      "height_pt": 345.26519775390625,
+      "scale": 1
+    },
+    {
+      "id": "AUX_term_scores",
+      "x_pt": 434.81219482421875,
+      "y_pt": 74,
+      "width_pt": 439.58465576171875,
+      "height_pt": 298.404296875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 892.3968505859375,
+  "height_pt": 446.26519775390625,
+  "output_sha256": {
+    "ALT_K16_horizontal.svg": "86630ce9e97a5412bc650a6a7d878fefda814b13033e320ef21638fc3b44738d",
+    "ALT_K16_horizontal.png": "c00a0ce26e270b858446893dc93d1427b92de9d10fb749d9a23fa76660fc4e82",
+    "ALT_K16_horizontal.pdf": "1d1fdda9928183b97fe72cc637d16c10da772aa65ad28720f1fc76bc0b66cb04"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 45,
+    "issues": [],
+    "width_pt": 892.3968505859375,
+    "height_pt": 446.26519775390625
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Overlap network and signed condition matrix retain different semantics with readable scales.",
+    "png_sha256": "c00a0ce26e270b858446893dc93d1427b92de9d10fb749d9a23fa76660fc4e82",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K16_horizontal.svg": "86630ce9e97a5412bc650a6a7d878fefda814b13033e320ef21638fc3b44738d",
+      "ALT_K16_horizontal.png": "c00a0ce26e270b858446893dc93d1427b92de9d10fb749d9a23fa76660fc4e82",
+      "ALT_K16_horizontal.pdf": "1d1fdda9928183b97fe72cc637d16c10da772aa65ad28720f1fc76bc0b66cb04"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

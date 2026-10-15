@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K21_horizontal",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K21",
+  "arrangement": "horizontal",
+  "relationship": "同一术语在各条件是否报告、报告的比例和证据量；显式区分未报告与未检验；内圈显著性高度与方向色；外圈每个成员的效应分布；读出环形轨道、网络或点阵使用的ID对应何种条目",
+  "components": [
+    {
+      "id": "E01",
+      "sha256": "0aaaafc11e8ce3146e067a7e8fc0321596c8871c0702a769b5aada9400db6444",
+      "input_sha256": "4693c93c12e01023e7b381077de14b371ff28a38db141660204b3bb417d43b4d"
+    },
+    {
+      "id": "E02",
+      "sha256": "6d07612c7e6a76e3ac93b6525d069de0492d9db0a47a79640abebc0da44614f4",
+      "input_sha256": "28b3ea6ce0f2790b216fb41e7c835ed7ca46f7ce15254578ab05e03f85475eb6"
+    },
+    {
+      "id": "E06a",
+      "sha256": "ed0cb441a383e1d28e4cbf17dc9e55dfa2ba4b3eb2c77e40d2bdc98531f4aa70",
+      "input_sha256": "3a3b9715b686e4dfce46380033a99feff4fb4ba677ff040e349a39bff53f449e"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E01",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 560.2141723632812,
+      "height_pt": 431.6539001464844,
+      "scale": 1
+    },
+    {
+      "id": "E02",
+      "x_pt": 598.2141723632812,
+      "y_pt": 74,
+      "width_pt": 406.6360778808594,
+      "height_pt": 454.44927978515625,
+      "scale": 1
+    },
+    {
+      "id": "E06a",
+      "x_pt": 1024.8502502441406,
+      "y_pt": 74,
+      "width_pt": 514.7999877929688,
+      "height_pt": 162.8000030517578,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1557.6502380371094,
+  "height_pt": 555.4492797851562,
+  "output_sha256": {
+    "ALT_K21_horizontal.svg": "6b95f089f9e357ddd6e8c230777475aa1008237d6d6d2e6178e43d7204bdc64b",
+    "ALT_K21_horizontal.png": "023c141f316f67e93ddf271cfe112cae378631a037e2b332cb567d5a53406733",
+    "ALT_K21_horizontal.pdf": "9d44aed8bc25fa0c4072f218e226e8b3d101842fa3dcc3c7e30c33c4d0c247e0"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 94,
+    "issues": [],
+    "width_pt": 1557.6502685546875,
+    "height_pt": 555.4492797851562
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Enrichment grid, term circle and term key retain full labels and independent scales.",
+    "png_sha256": "023c141f316f67e93ddf271cfe112cae378631a037e2b332cb567d5a53406733",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K21_horizontal.svg": "6b95f089f9e357ddd6e8c230777475aa1008237d6d6d2e6178e43d7204bdc64b",
+      "ALT_K21_horizontal.png": "023c141f316f67e93ddf271cfe112cae378631a037e2b332cb567d5a53406733",
+      "ALT_K21_horizontal.pdf": "9d44aed8bc25fa0c4072f218e226e8b3d101842fa3dcc3c7e30c33c4d0c247e0"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

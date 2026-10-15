@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K32_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K32",
+  "arrangement": "vertical",
+  "relationship": "同一物理位置的身份与测量",
+  "components": [
+    {
+      "id": "E33a",
+      "sha256": "70d54696a7d4520112784ba339aed80f66b7e33d3bb3903cd57cdc752be957fb",
+      "input_sha256": "1398806bf1ef7fb2cae3b1d7775ef50fa68b6849e0943b97d0c08c3a703a0c4f"
+    },
+    {
+      "id": "E33b",
+      "sha256": "0c25e4962d5742525643ce7ed2c985fd602a96f213ccf3beb3701845a4f71aa5",
+      "input_sha256": "1398806bf1ef7fb2cae3b1d7775ef50fa68b6849e0943b97d0c08c3a703a0c4f"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E33a",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 401.6579895019531,
+      "height_pt": 327.09600830078125,
+      "scale": 1
+    },
+    {
+      "id": "E33b",
+      "x_pt": 18,
+      "y_pt": 443.09600830078125,
+      "width_pt": 461.50714111328125,
+      "height_pt": 334.0963134765625,
+      "scale": 1
+    }
+  ],
+  "width_pt": 497.50714111328125,
+  "height_pt": 804.1923217773438,
+  "output_sha256": {
+    "ALT_K32_vertical.svg": "36273978cd4fbfe37818660d185359dba985b21ee1db1bdc0aaee88581be617a",
+    "ALT_K32_vertical.png": "93df1cc2c510493af517459da3c3b03b33a553eb9e3093812797bb7c825448e4",
+    "ALT_K32_vertical.pdf": "ed2128cc7dbe447a2c937422aa31431bab5a8bf7d8276ec431bbeba8b969a98c"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 23,
+    "issues": [],
+    "width_pt": 497.50714111328125,
+    "height_pt": 804.1923217773438
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Registered category and continuous spot maps preserve scale bars and background; separate value scale readable.",
+    "png_sha256": "93df1cc2c510493af517459da3c3b03b33a553eb9e3093812797bb7c825448e4",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K32_vertical.svg": "36273978cd4fbfe37818660d185359dba985b21ee1db1bdc0aaee88581be617a",
+      "ALT_K32_vertical.png": "93df1cc2c510493af517459da3c3b03b33a553eb9e3093812797bb7c825448e4",
+      "ALT_K32_vertical.pdf": "ed2128cc7dbe447a2c937422aa31431bab5a8bf7d8276ec431bbeba8b969a98c"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

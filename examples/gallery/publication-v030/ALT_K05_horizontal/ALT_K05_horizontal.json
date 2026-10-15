@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K05_horizontal",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K05",
+  "arrangement": "horizontal",
+  "relationship": "对照分布与已经提供的估计范围",
+  "components": [
+    {
+      "id": "AUX_raincloud",
+      "sha256": "954330fc6de6c6d0a9b2d892c35d01debb76d22b7c1c67509ffc5747e70ccf65",
+      "input_sha256": "f953c6bfbc81e875e1bb644fd899bb4a9953ebd1773ac9e9fb530cecb912044b"
+    },
+    {
+      "id": "AUX_estimate_forest",
+      "sha256": "3827535a1ea76306e6bdabbe3c7c3c36735271f9442258cda5f3715ff7b8123b",
+      "input_sha256": "c2825c5d65c2b61533c220b63c900a390f841761a0b38616e1fb4c8c4c169a5d"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "AUX_raincloud",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 428.6746826171875,
+      "height_pt": 313.6182556152344,
+      "scale": 1
+    },
+    {
+      "id": "AUX_estimate_forest",
+      "x_pt": 466.6746826171875,
+      "y_pt": 74,
+      "width_pt": 419.1097412109375,
+      "height_pt": 154.27511596679688,
+      "scale": 1
+    }
+  ],
+  "width_pt": 903.784423828125,
+  "height_pt": 414.6182556152344,
+  "output_sha256": {
+    "ALT_K05_horizontal.svg": "42c7d041869e050bf5892182fc6456a16c9a20830c728bbb378ff5c339882359",
+    "ALT_K05_horizontal.png": "a08a27b1c8b8a26284488c5f0f6b066581b8a195ff9fc60ec3555f972a87ea7e",
+    "ALT_K05_horizontal.pdf": "e6f57ef32ab41d6935312642e18e55d85eb08e19e38fd4e48818c708bf14cf4f"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 32,
+    "issues": [],
+    "width_pt": 903.784423828125,
+    "height_pt": 414.6182556152344
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Raincloud and compact intervals readable; illustrative-bound limitation retained beneath interval panel.",
+    "png_sha256": "a08a27b1c8b8a26284488c5f0f6b066581b8a195ff9fc60ec3555f972a87ea7e",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K05_horizontal.svg": "42c7d041869e050bf5892182fc6456a16c9a20830c728bbb378ff5c339882359",
+      "ALT_K05_horizontal.png": "a08a27b1c8b8a26284488c5f0f6b066581b8a195ff9fc60ec3555f972a87ea7e",
+      "ALT_K05_horizontal.pdf": "e6f57ef32ab41d6935312642e18e55d85eb08e19e38fd4e48818c708bf14cf4f"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

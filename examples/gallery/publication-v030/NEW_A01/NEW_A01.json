@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "NEW_A01",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/aesthetic-v030/A01/A01.svg",
+  "source_sha256": "c742b5ee0fb0ccdfac3c8cb8abb58a234ff878a68bbf39dece281455f2219653",
+  "source_metadata": "examples/aesthetic-v030/A01/A01.json",
+  "source_metadata_sha256": "bf32149461e7d5fffc731d25347b41fa53a10316ac4df891985aa0bcf1bb8633",
+  "input_table": "examples/aesthetic-v030/A01/A01.tsv",
+  "input_sha256": "4fd4a4d60cca2ea27471d4bd30209572356f2ff75e063bdac97f04bd04723d74",
+  "frozen_graphical_geometry_sha256": "1499d08df6600432e08c9ebad0725ce18f3451a6c286db1a784d7aaeb5e5c759",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 325.7903137207031,
+  "height_pt": 293.9179992675781,
+  "raster_dpi": 300,
+  "axis_geometry": [
+    {
+      "axis": 0,
+      "bounds": [
+        0.145,
+        0.17,
+        0.79,
+        0.64
+      ],
+      "xlim": [
+        -4.083133869776857,
+        3.999025191349433
+      ],
+      "ylim": [
+        -0.20843371656198495,
+        5.333157293107558
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear",
+      "rect_pt": [
+        57.51829650878906,
+        78.00022323608397,
+        250.27199035644531,
+        163.58400390625
+      ]
+    }
+  ],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "independent compact guide lane"
+  ],
+  "removed_page_furniture": [
+    "Differential expression",
+    "SYNTHETIC DEMO | A01"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      11.582298278808594,
+      29.436222076416016
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 16,
+    "issues": [
+      {
+        "kind": "text_overlap",
+        "texts": [
+          "0",
+          "l\n       o\n       g\n        \n       f\n       o\n       l\n       d\n        \n      "
+        ]
+      }
+    ],
+    "width_pt": 325.7903137207031,
+    "height_pt": 293.9179992675781
+  },
+  "output_sha256": {
+    "NEW_A01.svg": "00e5531441c773e1cdbda46eec3ce8fafe5c2866aae8dba85577d7d52e7a97bf",
+    "NEW_A01.png": "26d964de6836906965f4231e52e3641f7b0d47c35c3f739bc2eba6384d81a714",
+    "NEW_A01.pdf": "6fe632f5feaab716573bb55e54ea798e24f0914cefd378ab7514e23dc3ab13bb"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Volcano colors, threshold guides and top legend are clear; math subscript proximity is intentional, not a collision.",
+    "png_sha256": "26d964de6836906965f4231e52e3641f7b0d47c35c3f739bc2eba6384d81a714",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "NEW_A01.svg": "00e5531441c773e1cdbda46eec3ce8fafe5c2866aae8dba85577d7d52e7a97bf",
+      "NEW_A01.png": "26d964de6836906965f4231e52e3641f7b0d47c35c3f739bc2eba6384d81a714",
+      "NEW_A01.pdf": "6fe632f5feaab716573bb55e54ea798e24f0914cefd378ab7514e23dc3ab13bb"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

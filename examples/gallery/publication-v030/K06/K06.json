@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K06",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K06",
+  "arrangement": "default",
+  "relationship": "互补展示各条件水平和有序变化",
+  "components": [
+    {
+      "id": "T32",
+      "sha256": "af655a093d28291409395b307af34038167e26eb66f5d818ae824327f09aa731",
+      "input_sha256": "3bbd9ccd7d5b7a9eac67473e44af3cc8724edfc1951cda3763cff448997a81b4"
+    },
+    {
+      "id": "T31",
+      "sha256": "765c1a1eae0c12dd2d74a5f833896fc9a7ee50507bd7aa7c6f76c1f8db2f6f92",
+      "input_sha256": "f08972b71dba6e649481e2aa8bec179bf0fbbf65f4d0b289252a44655850031e"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T32",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 414.1840515136719,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "T31",
+      "x_pt": 452.1840515136719,
+      "y_pt": 74,
+      "width_pt": 406.67889404296875,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    }
+  ],
+  "width_pt": 876.8629455566406,
+  "height_pt": 412.57861328125,
+  "output_sha256": {
+    "K06.svg": "76db31d3acb215adddeb91a93d27589dde4651303c70c79e3b6c5441ed77a92c",
+    "K06.png": "12da75a5b03a94d125056b7c75c75b03f50a9c4b46da9f358b8749d53c5e2837",
+    "K06.pdf": "10f0b105badb7a36732ee9e201cbb76e597ebb98c4c4c6cc17f3453675dce865"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 51,
+    "issues": [],
+    "width_pt": 876.8629150390625,
+    "height_pt": 412.57861328125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Grouped estimates and ordered curves have separate legends; bounds and labels remain clear.",
+    "png_sha256": "12da75a5b03a94d125056b7c75c75b03f50a9c4b46da9f358b8749d53c5e2837",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K06.svg": "76db31d3acb215adddeb91a93d27589dde4651303c70c79e3b6c5441ed77a92c",
+      "K06.png": "12da75a5b03a94d125056b7c75c75b03f50a9c4b46da9f358b8749d53c5e2837",
+      "K06.pdf": "10f0b105badb7a36732ee9e201cbb76e597ebb98c4c4c6cc17f3453675dce865"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "figure_id": "GSEA06",
+  "renderer": "gsea_leading_edge",
+  "input": {
+    "path": "GSEA06.tsv",
+    "sha256": "c8c6025ed9853ff927739cdb717e763353f2cc7035b1c2aea8b4ed6f1b12f863"
+  },
+  "parameters": {
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Hand-authored frozen software display fixture; no enrichment calculated",
+      "independent_unit": "No biological independent units; software cells only",
+      "denominator": "Complete selected display grid; demo ranked universe of twenty identities",
+      "value_definition": "Supplied illustrative ES/NES/metric/membership cells",
+      "uncertainty_definition": "No uncertainty estimated; adjusted probabilities are illustrative fixed inputs"
+    },
+    "pathway_order": [
+      "Response programme",
+      "Repair programme",
+      "Metabolic programme"
+    ],
+    "gene_order": [
+      "Gene1",
+      "Gene2",
+      "Gene3",
+      "Gene4",
+      "Gene5",
+      "Gene6",
+      "Gene7",
+      "Gene8"
+    ],
+    "value_limits": [
+      -1.5,
+      1.5
+    ],
+    "value_label": "Gene effect (demo)",
+    "title": "GSEA · leading-edge membership"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-method-displays",
+    "palette_name": "tol_muted",
+    "palette_colors": [
+      "#CC6677",
+      "#332288",
+      "#DDCC77",
+      "#117733",
+      "#88CCEE",
+      "#882255",
+      "#44AA99",
+      "#999933",
+      "#AA4499"
+    ],
+    "group_slots": {
+      "Response programme": 1,
+      "Repair programme": 0,
+      "Metabolic programme": 3
+    },
+    "roles": {
+      "primary": "#CC6677",
+      "negative": "#4477AA",
+      "positive": "#CC6677",
+      "accent": "#AA4499",
+      "neutral": "#A9B1BA",
+      "significant": "#AA4499",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#CC6677"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#CC6677"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "interpretation_limit": "Explicit synthetic display fixture; not biological evidence",
+    "synthetic": true,
+    "input_unit": "Explicit synthetic display fixture; not biological evidence",
+    "source": "Hand-authored frozen software display fixture; no enrichment calculated",
+    "filtering": "Explicit synthetic display fixture; not biological evidence",
+    "experimental_unit": "Explicit synthetic display fixture; not biological evidence",
+    "contrast": "Synthetic B versus A",
+    "model": "Explicit synthetic display fixture; not biological evidence",
+    "denominator": "Explicit synthetic display fixture; not biological evidence",
+    "uncertainty": "Explicit synthetic display fixture; not biological evidence",
+    "limits": "Explicit synthetic display fixture; not biological evidence"
+  },
+  "appearance": {
+    "preset": "paper"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "K37",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K37",
+  "arrangement": "default",
+  "relationship": "同一成员ID与条目结果对应；局部网络是明确节点集合诱导的子图，不重新估计边。",
+  "components": [
+    {
+      "id": "AUX_c37_sets",
+      "sha256": "7e46b4af0b2983ece6090ac995fad3cc9c495ec0f66d240ca3186deef202de5e",
+      "input_sha256": "8ee30937bcf48da1104c4389b1e61d2f90b63701f52629eb7e0e712af9007bfb"
+    },
+    {
+      "id": "AUX_c37_terms",
+      "sha256": "e7a9c95f1eb0c06a3c5c0aac9864cdfb19084aa9b45ede8f170a87beb49e8c1d",
+      "input_sha256": "75d756118f145c3052136581c06d3bf8aca91df96a2d473d77023e94c278871d"
+    },
+    {
+      "id": "E34",
+      "sha256": "686e886ddaddbb710987f708a6b9c3c5eb683a8cf224ff6f0188721fa7f41363",
+      "input_sha256": "2d95ebfaa0b1a71cdbe9db2781c1455ed943ae86594ef9f8602a6103cb6ea339"
+    },
+    {
+      "id": "AUX_c37_network",
+      "sha256": "b06e54014d1964b3000eb5b473800331fda4a01e3c6bebe5ed7dd5d4cc014a84",
+      "input_sha256": "3d4a9e31a4c08a07d2f46af8aa76050b94d2aebe92a5f195c56c6dbebdb16a32"
+    },
+    {
+      "id": "AUX_c37_local",
+      "sha256": "5789d01e4d1f1518d2888587d7d2ade73e33e7715b2873efd99ab7db3469f01d",
+      "input_sha256": "a1ef1a5cf4a0e6ee7af113aca33f7663c8a4c4492cf7d4fd173ab8ac008b2061"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "AUX_c37_sets",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 323.133544921875,
+      "height_pt": 272.362548828125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c37_terms",
+      "x_pt": 939.858642578125,
+      "y_pt": 74,
+      "width_pt": 656.7554321289062,
+      "height_pt": 321.83074951171875,
+      "scale": 1
+    },
+    {
+      "id": "E34",
+      "x_pt": 18,
+      "y_pt": 437.83074951171875,
+      "width_pt": 901.858642578125,
+      "height_pt": 488.46630859375,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c37_network",
+      "x_pt": 939.858642578125,
+      "y_pt": 437.83074951171875,
+      "width_pt": 411.861572265625,
+      "height_pt": 340.9256591796875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c37_local",
+      "x_pt": 583.6816864013672,
+      "y_pt": 968.2970581054688,
+      "width_pt": 447.2507019042969,
+      "height_pt": 217.78973388671875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1614.6140747070312,
+  "height_pt": 1213.0867919921875,
+  "output_sha256": {
+    "K37.svg": "deb34393dc000af67b9c4c5c7d3f72e980c75a5bbcb983df8fff6c333a2e8837",
+    "K37.png": "0ff0e98c35d0bf69958f1f217aa5a2ba905fb3e6d441bec6ba48304812d98c04",
+    "K37.pdf": "999e29be6e3898c9fec93a6bd15cea5922284456e2b4f09c748b84183445cf92"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 140,
+    "issues": [],
+    "width_pt": 1614.614013671875,
+    "height_pt": 1213.0867919921875
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Individually inspected: category, ribbon, ratio and network panels complete; topology and subset semantics preserved. Large native canvas and vector zoom required for dense networks.",
+    "png_sha256": "0ff0e98c35d0bf69958f1f217aa5a2ba905fb3e6d441bec6ba48304812d98c04",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K37.svg": "deb34393dc000af67b9c4c5c7d3f72e980c75a5bbcb983df8fff6c333a2e8837",
+      "K37.png": "0ff0e98c35d0bf69958f1f217aa5a2ba905fb3e6d441bec6ba48304812d98c04",
+      "K37.pdf": "999e29be6e3898c9fec93a6bd15cea5922284456e2b4f09c748b84183445cf92"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

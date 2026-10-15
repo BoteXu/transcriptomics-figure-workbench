@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K03_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K03",
+  "arrangement": "vertical",
+  "relationship": "展示位置、特征与明确条件构成三个层次",
+  "components": [
+    {
+      "id": "T19",
+      "sha256": "b359ad35e1768da1e8e602cb24310f46827220c6f2fc4c61df5c27dcd70166cd",
+      "input_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+    },
+    {
+      "id": "AUX_marker_matrix",
+      "sha256": "660515646b42211e94d0d5424ebeb38361267240f56b0dec87703b2abc752476",
+      "input_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+    },
+    {
+      "id": "T10",
+      "sha256": "b35fa4367583d7ee2119fae63e0a5069799b128a4216b8cca651f0916b47a463",
+      "input_sha256": "9130d14084806dd08e74698fdd84d82fd23e008a1fdd24116d5d20aa07573f0d"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T19",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 399.3448181152344,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_matrix",
+      "x_pt": 18,
+      "y_pt": 427.57861328125,
+      "width_pt": 407.8175964355469,
+      "height_pt": 298.404296875,
+      "scale": 1
+    },
+    {
+      "id": "T10",
+      "x_pt": 18,
+      "y_pt": 767.98291015625,
+      "width_pt": 409.17919921875,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    }
+  ],
+  "width_pt": 445.17919921875,
+  "height_pt": 1106.5615234375,
+  "output_sha256": {
+    "ALT_K03_vertical.svg": "8f0e8437805dc215934ff9764281fb614309317efaf0c66500b4daa049b50c39",
+    "ALT_K03_vertical.png": "73ecf5be6e3c6e1512d2cd2ee4bcb4654ea954a4d21f5820e8f0d4638fa40a5a",
+    "ALT_K03_vertical.pdf": "7e9a620ec5b339e25d64f31c1c75b2e551114543cde78ce110c6843ca0b4f4c1"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 68,
+    "issues": [],
+    "width_pt": 445.17919921875,
+    "height_pt": 1106.5615234375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Coordinate, marker matrix and composition retain full legends and denominators in this arrangement.",
+    "png_sha256": "73ecf5be6e3c6e1512d2cd2ee4bcb4654ea954a4d21f5820e8f0d4638fa40a5a",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K03_vertical.svg": "8f0e8437805dc215934ff9764281fb614309317efaf0c66500b4daa049b50c39",
+      "ALT_K03_vertical.png": "73ecf5be6e3c6e1512d2cd2ee4bcb4654ea954a4d21f5820e8f0d4638fa40a5a",
+      "ALT_K03_vertical.pdf": "7e9a620ec5b339e25d64f31c1c75b2e551114543cde78ce110c6843ca0b4f4c1"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

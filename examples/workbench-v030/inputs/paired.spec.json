@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "figure_id": "WB_paired",
+  "renderer": "paired",
+  "input": {
+    "path": "paired.tsv"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-workbench-v030",
+    "palette_name": "card_06",
+    "palette_colors": [
+      "#506AAA",
+      "#728DC1",
+      "#91BBDF",
+      "#B6DBF1",
+      "#F6D3D9",
+      "#E79FBF",
+      "#E17692"
+    ],
+    "group_slots": {
+      "G1": 0,
+      "G2": 6
+    },
+    "roles": {
+      "primary": "#506AAA",
+      "negative": "#506AAA",
+      "positive": "#E17692",
+      "accent": "#E17692",
+      "neutral": "#A8ADB3",
+      "significant": "#E17692",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#506AAA"
+      ],
+      "diverging": [
+        "#506AAA",
+        "#F7F7F7",
+        "#E17692"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "parameters": {
+    "palette": {
+      "G1": "#506AAA",
+      "G2": "#E17692"
+    },
+    "condition_order": [
+      "G1",
+      "G2"
+    ],
+    "y_label": "Supplied measurement"
+  },
+  "provenance": {
+    "source": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "input_unit": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "experimental_unit": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "contrast": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "denominator": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "model": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "limits": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "filtering": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "uncertainty": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "interpretation_limit": "SYNTHETIC DEMO frozen fixture; no scientific claim",
+    "synthetic": true
+  },
+  "appearance": {
+    "preset": "paper"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K41",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K41",
+  "arrangement": "default",
+  "relationship": "两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。",
+  "components": [
+    {
+      "id": "E45",
+      "sha256": "924bc6593b80625d1952124940fc0ba97ba97db52b27fce1ee97e35132f449dc",
+      "input_sha256": "9827fc9f0360874b14aa1e3e644079b1257b2d78ec834e984070ab3420ee26fa"
+    },
+    {
+      "id": "E46",
+      "sha256": "c658d9c77e27164bc6fc8f626bf305e554ac8b0bab5a90cf94fed6ac4c73775d",
+      "input_sha256": "5cbda8be61d8ed94ff1a17eb4e2fb9ecc68435e43e15db0956c9173215c895ec"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E45",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 488.2347717285156,
+      "height_pt": 418.75445556640625,
+      "scale": 1
+    },
+    {
+      "id": "E46",
+      "x_pt": 526.2347717285156,
+      "y_pt": 74,
+      "width_pt": 472.23590087890625,
+      "height_pt": 253.82662963867188,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1016.4706726074219,
+  "height_pt": 519.7544555664062,
+  "output_sha256": {
+    "K41.svg": "63e2c7654e3567a87591d4044ac91b945cc25a2d71631d6b4f170814d393472a",
+    "K41.png": "ba3c11780981d3b18c1f1f5b1b9cb9b04538b5bedb540ddbc3ce79f7f124de8b",
+    "K41.pdf": "0fea7ff6c81c4a20bcd4eca69ba30d5c5d0909cf16b3f3ad65122de612938ebb"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 51,
+    "issues": [],
+    "width_pt": 1016.470703125,
+    "height_pt": 519.7544555664062
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Individually inspected: calibration bins and support aligned; decision curves and declared strategy conventions retained; no clipped notes. Illustrative intervals explicitly labelled.",
+    "png_sha256": "ba3c11780981d3b18c1f1f5b1b9cb9b04538b5bedb540ddbc3ce79f7f124de8b",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K41.svg": "63e2c7654e3567a87591d4044ac91b945cc25a2d71631d6b4f170814d393472a",
+      "K41.png": "ba3c11780981d3b18c1f1f5b1b9cb9b04538b5bedb540ddbc3ce79f7f124de8b",
+      "K41.pdf": "0fea7ff6c81c4a20bcd4eca69ba30d5c5d0909cf16b3f3ad65122de612938ebb"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K29_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K29",
+  "arrangement": "vertical",
+  "relationship": "全基因组已有信号位置与局部聚集；局部信号与多条轨道对应；未知LD单独标识",
+  "components": [
+    {
+      "id": "E28",
+      "sha256": "2ef28f240c0c628a2278b9d583b6ab5f102e465f1eb1ec2959cdda363522caec",
+      "input_sha256": "5888986efd10441b40e1db20faf93b2cbcebec0748ead29938ced21e59fc41b6"
+    },
+    {
+      "id": "E29",
+      "sha256": "311b5759eaa05bcb41d718765326e58fe2a6ab8ffe16fd96cba9e7b636be5b66",
+      "input_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E28",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 559.4098510742188,
+      "height_pt": 311.5706481933594,
+      "scale": 1
+    },
+    {
+      "id": "E29",
+      "x_pt": 18,
+      "y_pt": 427.5706481933594,
+      "width_pt": 550.9439086914062,
+      "height_pt": 446.58270263671875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 595.4098510742188,
+  "height_pt": 901.1533508300781,
+  "output_sha256": {
+    "ALT_K29_vertical.svg": "fd9b5dc68ab2e3178e2abec19b7d28de24750b62ed1d5b1070e8f6b1b9864fa2",
+    "ALT_K29_vertical.png": "673dbdae23f5beec745240156a2a12cc4a557726773485074bfee265793ac080",
+    "ALT_K29_vertical.pdf": "1b4762b135e98c0df3bc9b8f6d9ed23c2a99cb6c12d068478069571bfa87b24d"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 54,
+    "issues": [],
+    "width_pt": 595.4098510742188,
+    "height_pt": 901.1533813476562
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Global and local association tracks retain synthetic assembly notes, LD-unknown markers and supplied gene spans.",
+    "png_sha256": "673dbdae23f5beec745240156a2a12cc4a557726773485074bfee265793ac080",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K29_vertical.svg": "fd9b5dc68ab2e3178e2abec19b7d28de24750b62ed1d5b1070e8f6b1b9864fa2",
+      "ALT_K29_vertical.png": "673dbdae23f5beec745240156a2a12cc4a557726773485074bfee265793ac080",
+      "ALT_K29_vertical.pdf": "1b4762b135e98c0df3bc9b8f6d9ed23c2a99cb6c12d068478069571bfa87b24d"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

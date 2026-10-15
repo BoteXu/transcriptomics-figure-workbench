@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "K15",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K15",
+  "arrangement": "default",
+  "relationship": "同时看共享对象、成员逐项关系与集合交集量",
+  "components": [
+    {
+      "id": "N03",
+      "sha256": "808166ac6c5a27fa61eb99b75894befc434ee488cc70475a2efbbd64e9a41d65",
+      "input_sha256": "8add7c6263735b7c53000049dbd2eedb6593aa502e79225ed7cbaa8e512ef135"
+    },
+    {
+      "id": "AUX_membership",
+      "sha256": "335ab3da98550fd414bbb12335bfd40dfdbca5010fe3a1b7ebc7284bd16e506f",
+      "input_sha256": "c0f24a0f92e5265795c8bf2dbfa299e1b131442f0eea590c50c185380f0ba2d6"
+    },
+    {
+      "id": "AUX_membership_upset",
+      "sha256": "ee630bfda99a2cce91fb55a84c9b0ba5c73d5540660a1d8d65bcd98d906abefd",
+      "input_sha256": "e263c1b45d4d513bc2041527fe1c8119ca72bceae8248713730940e38e93292b"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N03",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 260,
+      "height_pt": 339.53631591796875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_membership",
+      "x_pt": 591.5947265625,
+      "y_pt": 74,
+      "width_pt": 418.8229064941406,
+      "height_pt": 298.404296875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_membership_upset",
+      "x_pt": 237.4114532470703,
+      "y_pt": 455.53631591796875,
+      "width_pt": 553.5947265625,
+      "height_pt": 407.7788391113281,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1028.4176330566406,
+  "height_pt": 890.3151550292969,
+  "output_sha256": {
+    "K15.svg": "87a20e273bf9ded09e2469429239bebb93bee066f0f3d3c7aae3fb233ec32ecf",
+    "K15.png": "fa7552287789be40252a52cee108afaba21fbd41b09a595ca07c34b77e40699c",
+    "K15.pdf": "2f4d33569b87926942a9fd069edf076c0d8c8efc8393688a10faca736ad80995"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 80,
+    "issues": [],
+    "width_pt": 1028.4176025390625,
+    "height_pt": 890.315185546875
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Two-layer network, membership matrix and exclusive intersections remain complete; narrow network geometry intentionally retained.",
+    "png_sha256": "fa7552287789be40252a52cee108afaba21fbd41b09a595ca07c34b77e40699c",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K15.svg": "87a20e273bf9ded09e2469429239bebb93bee066f0f3d3c7aae3fb233ec32ecf",
+      "K15.png": "fa7552287789be40252a52cee108afaba21fbd41b09a595ca07c34b77e40699c",
+      "K15.pdf": "2f4d33569b87926942a9fd069edf076c0d8c8efc8393688a10faca736ad80995"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

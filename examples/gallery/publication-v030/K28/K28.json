@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "K28",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K28",
+  "arrangement": "default",
+  "relationship": "向量和marker数据对应哪个已有亚群或身份；坐标中已计算局部方向与幅度；每个身份中的已有连续特征位置，与分类/向量图共同查询",
+  "components": [
+    {
+      "id": "E25",
+      "sha256": "0686ee285e75f967da55f6a340389d9bb0b071559bbf03e060db99b25d8fca41",
+      "input_sha256": "8049625f92c105285abff7fe9bbc72bdc4dbbfc6ac21b873365f15e4fed8caed"
+    },
+    {
+      "id": "E18",
+      "sha256": "aab97958f8b31cb1feab759d3cca417ba11c4a988d31ff403e210262567f7c26",
+      "input_sha256": "e4a004b89fedbe6485728c418d354c7a8891081a47692c71000fd4700205c06a"
+    },
+    {
+      "id": "E26",
+      "sha256": "f86db0d1997ff31128d5855908cd26600a539aba551e6a634d00e62e511c6fd8",
+      "input_sha256": "863cf5d165ed577b07c16d101f9f8f1adeb1fd0a4426cfdbe390dabcfc7c2ebc"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E25",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 436.596435546875,
+      "height_pt": 238.41546630859375,
+      "scale": 1
+    },
+    {
+      "id": "E18",
+      "x_pt": 604.5863647460938,
+      "y_pt": 74,
+      "width_pt": 463.50299072265625,
+      "height_pt": 279.7674865722656,
+      "scale": 1
+    },
+    {
+      "id": "E26",
+      "x_pt": 259.7514953613281,
+      "y_pt": 395.7674865722656,
+      "width_pt": 566.5863647460938,
+      "height_pt": 229.24545288085938,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1086.08935546875,
+  "height_pt": 652.012939453125,
+  "output_sha256": {
+    "K28.svg": "dbc0ddbc537ed25119d42e1d27ccd6039b46aaa551076fb3859e5f896a2e890a",
+    "K28.png": "7c15a689c449f77a1c4ef7e5526b43b2d5c60ce29ac78d79217bd91320e7c7f5",
+    "K28.pdf": "493fc8e0704247acc9a01ee0a2ec35dbaf8faf197ab5ebe84fbbdc9286d2a365"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 61,
+    "issues": [],
+    "width_pt": 1086.08935546875,
+    "height_pt": 652.012939453125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Coordinates, frozen vectors and marker facets remain distinct with readable scale and no new integration.",
+    "png_sha256": "7c15a689c449f77a1c4ef7e5526b43b2d5c60ce29ac78d79217bd91320e7c7f5",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K28.svg": "dbc0ddbc537ed25119d42e1d27ccd6039b46aaa551076fb3859e5f896a2e890a",
+      "K28.png": "7c15a689c449f77a1c4ef7e5526b43b2d5c60ce29ac78d79217bd91320e7c7f5",
+      "K28.pdf": "493fc8e0704247acc9a01ee0a2ec35dbaf8faf197ab5ebe84fbbdc9286d2a365"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K11_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K11",
+  "arrangement": "vertical",
+  "relationship": "同时看位置、支持量、类别构成；位置重叠不会隐藏数量",
+  "components": [
+    {
+      "id": "T19",
+      "sha256": "b359ad35e1768da1e8e602cb24310f46827220c6f2fc4c61df5c27dcd70166cd",
+      "input_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+    },
+    {
+      "id": "AUX_subgroup_counts",
+      "sha256": "3bd3f9cea8a9251971b5caed7666e148b27dfad58034e9e39ddbfeb7ce9db59d",
+      "input_sha256": "635d83a0a35272767f4194ef78b3ad914df60cf3ecc29fc4e3685c6c865023bc"
+    },
+    {
+      "id": "AUX_subgroup_shares",
+      "sha256": "a070ab7e7749d969ade58759fa78954ae416ca1a178624f397a224055530f53b",
+      "input_sha256": "48de7fc9962bff4287f3c5533a66bb6e6ace0405d76277ee88422e7d55a6844a"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T19",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 399.3448181152344,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_subgroup_counts",
+      "x_pt": 18,
+      "y_pt": 427.57861328125,
+      "width_pt": 411.6839294433594,
+      "height_pt": 298.404296875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_subgroup_shares",
+      "x_pt": 18,
+      "y_pt": 767.98291015625,
+      "width_pt": 271.6820068359375,
+      "height_pt": 234.881591796875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 447.6839294433594,
+  "height_pt": 1029.864501953125,
+  "output_sha256": {
+    "ALT_K11_vertical.svg": "b8fa9adf22159c1e37efee6868aacf2c96865cb9a9cb90331dd084715979f205",
+    "ALT_K11_vertical.png": "c13b221fc49cf588fca75f43d42412913a580d40d40798d7476beac03470cbc3",
+    "ALT_K11_vertical.pdf": "ab31de2638b10e2e99c7b5d69558a4979fd36bb2f5f90d08facf155a3a072105"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 65,
+    "issues": [],
+    "width_pt": 447.6839294433594,
+    "height_pt": 1029.864501953125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Location, count and share views separated; rounded share labels and total denominator visible.",
+    "png_sha256": "c13b221fc49cf588fca75f43d42412913a580d40d40798d7476beac03470cbc3",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K11_vertical.svg": "b8fa9adf22159c1e37efee6868aacf2c96865cb9a9cb90331dd084715979f205",
+      "ALT_K11_vertical.png": "c13b221fc49cf588fca75f43d42412913a580d40d40798d7476beac03470cbc3",
+      "ALT_K11_vertical.pdf": "ab31de2638b10e2e99c7b5d69558a4979fd36bb2f5f90d08facf155a3a072105"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

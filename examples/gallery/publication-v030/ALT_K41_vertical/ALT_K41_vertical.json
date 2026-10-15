@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K41_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K41",
+  "arrangement": "vertical",
+  "relationship": "两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。",
+  "components": [
+    {
+      "id": "E45",
+      "sha256": "924bc6593b80625d1952124940fc0ba97ba97db52b27fce1ee97e35132f449dc",
+      "input_sha256": "9827fc9f0360874b14aa1e3e644079b1257b2d78ec834e984070ab3420ee26fa"
+    },
+    {
+      "id": "E46",
+      "sha256": "c658d9c77e27164bc6fc8f626bf305e554ac8b0bab5a90cf94fed6ac4c73775d",
+      "input_sha256": "5cbda8be61d8ed94ff1a17eb4e2fb9ecc68435e43e15db0956c9173215c895ec"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E45",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 488.2347717285156,
+      "height_pt": 418.75445556640625,
+      "scale": 1
+    },
+    {
+      "id": "E46",
+      "x_pt": 18,
+      "y_pt": 534.7544555664062,
+      "width_pt": 472.23590087890625,
+      "height_pt": 253.82662963867188,
+      "scale": 1
+    }
+  ],
+  "width_pt": 524.2347717285156,
+  "height_pt": 815.5810852050781,
+  "output_sha256": {
+    "ALT_K41_vertical.svg": "3252abefe349e712284fd42e5a7304a4ed068c58248d4495c061fb62cf2eb282",
+    "ALT_K41_vertical.png": "242b6f9791ff9cfcedecc3e7315dfb8101eabc2b7dce273b9a6c452490844b27",
+    "ALT_K41_vertical.pdf": "4cacb0ab8dfa980ac5a94d528cfdc83a196ee47d07cc9b8f055c72f79256a931"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 51,
+    "issues": [],
+    "width_pt": 524.2347412109375,
+    "height_pt": 815.5810546875
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Individually inspected: calibration bins and support aligned; decision curves and declared strategy conventions retained; no clipped notes. Illustrative intervals explicitly labelled.",
+    "png_sha256": "242b6f9791ff9cfcedecc3e7315dfb8101eabc2b7dce273b9a6c452490844b27",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K41_vertical.svg": "3252abefe349e712284fd42e5a7304a4ed068c58248d4495c061fb62cf2eb282",
+      "ALT_K41_vertical.png": "242b6f9791ff9cfcedecc3e7315dfb8101eabc2b7dce273b9a6c452490844b27",
+      "ALT_K41_vertical.pdf": "4cacb0ab8dfa980ac5a94d528cfdc83a196ee47d07cc9b8f055c72f79256a931"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K08_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K08",
+  "arrangement": "vertical",
+  "relationship": "同时看位置、特征模式与每组支持量",
+  "components": [
+    {
+      "id": "T19",
+      "sha256": "b359ad35e1768da1e8e602cb24310f46827220c6f2fc4c61df5c27dcd70166cd",
+      "input_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+    },
+    {
+      "id": "AUX_marker_counts",
+      "sha256": "2f31a0c682d3458a8df188447501255b5cebea5a8cd2da4ac3d3a803a8305cb8",
+      "input_sha256": "c17c1220c6e7fdfd7159cff20f27959117085d2191bc07780c41bb3716e6e1dc"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T19",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 399.3448181152344,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_counts",
+      "x_pt": 18,
+      "y_pt": 427.57861328125,
+      "width_pt": 391.62945556640625,
+      "height_pt": 263.66375732421875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 435.3448181152344,
+  "height_pt": 718.2423706054688,
+  "output_sha256": {
+    "ALT_K08_vertical.svg": "69a0d82c83de1195304fe6937281c7470f00a816c4b53abb09d5f906fc8496ab",
+    "ALT_K08_vertical.png": "c91b07ce459b593e3a07bb2d509ba8ce37b727046a855ba7e75602bfa60aea47",
+    "ALT_K08_vertical.pdf": "cf5be033381c7fc46264d24b1baf93400515d6be2ba11fd81565dce7b5b752d2"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 58,
+    "issues": [],
+    "width_pt": 435.3448181152344,
+    "height_pt": 718.2423706054688
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Coordinate map and aligned marker/count matrix retain full labels and counts.",
+    "png_sha256": "c91b07ce459b593e3a07bb2d509ba8ce37b727046a855ba7e75602bfa60aea47",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K08_vertical.svg": "69a0d82c83de1195304fe6937281c7470f00a816c4b53abb09d5f906fc8496ab",
+      "ALT_K08_vertical.png": "c91b07ce459b593e3a07bb2d509ba8ce37b727046a855ba7e75602bfa60aea47",
+      "ALT_K08_vertical.pdf": "cf5be033381c7fc46264d24b1baf93400515d6be2ba11fd81565dce7b5b752d2"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

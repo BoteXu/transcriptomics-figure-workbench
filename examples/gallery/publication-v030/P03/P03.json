@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "P03",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/publication-inputs-v030/native-P03.svg",
+  "source_sha256": "d00ddc66005af0d77b24a999648392ccd647bf5d069f403c6728867e353b2432",
+  "source_metadata": "examples/gallery/publication-inputs-v030/native-P03.json",
+  "source_metadata_sha256": "77fc5aadd743fd738dacd127a62d6a3504f3503a96d4c5f7e783ada519cb44ea",
+  "input_table": "examples/gallery/figures/P03/P03.tsv",
+  "input_sha256": "74b6486c65b97f4898c62837bcdadd550414ffb2cd6feba0610ade65e016fd6e",
+  "frozen_graphical_geometry_sha256": "f98b43b59e7ada2bfabcfdadd33a6634079f1cb25d46f3fa9479efe00578c82d",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 260,
+  "height_pt": 253.04676818847656,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "finishing_patch": {},
+  "finisher_sha256": "f7e9c549c91cd659609fc12b3e837dba03149efb25b6ad00ffa56fcc5b2a4f34",
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas"
+  ],
+  "removed_page_furniture": [
+    "Within-unit change",
+    "SYNTHETIC DEMO | P03"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      5.353885650634766,
+      6.200000762939453
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 12,
+    "issues": [],
+    "width_pt": 260,
+    "height_pt": 253.04676818847656
+  },
+  "output_sha256": {
+    "P03.svg": "f78d25318b1474c643de4b92f27ad07af6ed5d91b8c68451ac532b5108fd8237",
+    "P03.png": "47ea800f731b468a12352ca0170bb870042d7a5cea5007f030904c17297b7397",
+    "P03.pdf": "4c0a55db08b8dcc615cb420eabfadc09ee15574c7f822e5cd1bdc1d710862d12"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Redrawn from exact original paired TSV; endpoints use deterministic lateral separation and all twelve pairs retained.",
+    "png_sha256": "47ea800f731b468a12352ca0170bb870042d7a5cea5007f030904c17297b7397",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "P03.svg": "f78d25318b1474c643de4b92f27ad07af6ed5d91b8c68451ac532b5108fd8237",
+      "P03.png": "47ea800f731b468a12352ca0170bb870042d7a5cea5007f030904c17297b7397",
+      "P03.pdf": "4c0a55db08b8dcc615cb420eabfadc09ee15574c7f822e5cd1bdc1d710862d12"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

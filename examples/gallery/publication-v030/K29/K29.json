@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K29",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K29",
+  "arrangement": "default",
+  "relationship": "全基因组已有信号位置与局部聚集；局部信号与多条轨道对应；未知LD单独标识",
+  "components": [
+    {
+      "id": "E28",
+      "sha256": "2ef28f240c0c628a2278b9d583b6ab5f102e465f1eb1ec2959cdda363522caec",
+      "input_sha256": "5888986efd10441b40e1db20faf93b2cbcebec0748ead29938ced21e59fc41b6"
+    },
+    {
+      "id": "E29",
+      "sha256": "311b5759eaa05bcb41d718765326e58fe2a6ab8ffe16fd96cba9e7b636be5b66",
+      "input_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E28",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 559.4098510742188,
+      "height_pt": 311.5706481933594,
+      "scale": 1
+    },
+    {
+      "id": "E29",
+      "x_pt": 597.4098510742188,
+      "y_pt": 74,
+      "width_pt": 550.9439086914062,
+      "height_pt": 446.58270263671875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1166.353759765625,
+  "height_pt": 547.5827026367188,
+  "output_sha256": {
+    "K29.svg": "769863aebe27e2bb0f6ebd587b0b6b3c25bd29e5f6ab7eb829230229780571c7",
+    "K29.png": "d409671d88dbbca0b793286975000970a79bc396ea2dbb8f70ee3835120033f4",
+    "K29.pdf": "8a40112486f84f5b997fa00ed6238b815bd30fff05f5e1ba1e074656ae5715b1"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 54,
+    "issues": [],
+    "width_pt": 1166.353759765625,
+    "height_pt": 547.5827026367188
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Global and local association tracks retain synthetic assembly notes, LD-unknown markers and supplied gene spans.",
+    "png_sha256": "d409671d88dbbca0b793286975000970a79bc396ea2dbb8f70ee3835120033f4",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K29.svg": "769863aebe27e2bb0f6ebd587b0b6b3c25bd29e5f6ab7eb829230229780571c7",
+      "K29.png": "d409671d88dbbca0b793286975000970a79bc396ea2dbb8f70ee3835120033f4",
+      "K29.pdf": "8a40112486f84f5b997fa00ed6238b815bd30fff05f5e1ba1e074656ae5715b1"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

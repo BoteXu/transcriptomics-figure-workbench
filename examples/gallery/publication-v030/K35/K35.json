@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K35",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K35",
+  "arrangement": "default",
+  "relationship": "峰形、保留时间和不同条件的曲线位置；实测与参考碎片的位置和强度分布",
+  "components": [
+    {
+      "id": "M07",
+      "sha256": "3fa06f168e3f96dae6904848f87046c39d355d8189e972f6a34fc3c18d237ed8",
+      "input_sha256": "d8742cfa0fa3e40c6a4bc53e74301ccf5e8df762145768fb1b5ae83e7855763e"
+    },
+    {
+      "id": "M06",
+      "sha256": "e60324d5fac707fe8791566e48773833c05a87cad32c8f94d444fc6c07e0c37f",
+      "input_sha256": "a68c4670b9548758c5dac979ccb61ebb04f21d83310c7745fd49f271ec9ed6cd"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M07",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 427.235595703125,
+      "height_pt": 253.82666015625,
+      "scale": 1
+    },
+    {
+      "id": "M06",
+      "x_pt": 465.235595703125,
+      "y_pt": 74,
+      "width_pt": 558.6405029296875,
+      "height_pt": 334.39459228515625,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1041.8760986328125,
+  "height_pt": 435.39459228515625,
+  "output_sha256": {
+    "K35.svg": "1a98b96f26406202d1489e940e2c3f6589ab656e014baeffeb4d64b948244f25",
+    "K35.png": "63cb1128f249acd00ccb50315797f3df8a4cfca0894c64ebb8ff50efe8d03749",
+    "K35.pdf": "04c9c3db47b9478727c90cfe489ba7b8f9028beae60e7455a31b3988aaf9b731"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 46,
+    "issues": [],
+    "width_pt": 1041.8760986328125,
+    "height_pt": 435.39459228515625
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Chromatogram and mirror spectrum have explicit units and non-fitting notes; guides outside data.",
+    "png_sha256": "63cb1128f249acd00ccb50315797f3df8a4cfca0894c64ebb8ff50efe8d03749",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K35.svg": "1a98b96f26406202d1489e940e2c3f6589ab656e014baeffeb4d64b948244f25",
+      "K35.png": "63cb1128f249acd00ccb50315797f3df8a4cfca0894c64ebb8ff50efe8d03749",
+      "K35.pdf": "04c9c3db47b9478727c90cfe489ba7b8f9028beae60e7455a31b3988aaf9b731"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

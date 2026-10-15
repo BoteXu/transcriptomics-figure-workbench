@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "K24",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K24",
+  "arrangement": "default",
+  "relationship": "全分布位置、尾部和跨组差异；不依赖分箱；偏移、尺度差异和尾部偏离；多组的位置、宽度及分布形状",
+  "components": [
+    {
+      "id": "E10",
+      "sha256": "bd18b6ffb8d2abd18e688ad8b17b870da2063ba1a55b5cd9d6f790538899c739",
+      "input_sha256": "b137feadcefaba97b6ccc4f150291d3bddfee22adbc28fc58a557c0800065030"
+    },
+    {
+      "id": "E11",
+      "sha256": "71b1533659ffd00a78e8634ac17d82affd4c9c590ad54054af5389e884a26d7f",
+      "input_sha256": "91ae012bae24fd171df7ba75a63301ca9dce24e7df12884d21893168c1b40438"
+    },
+    {
+      "id": "E12",
+      "sha256": "d9e83ee76dc9a7e107b031c747235f0775ad1da1917f5ab6fd24b6980f45bb1d",
+      "input_sha256": "0baa6b8a2facb19f898d73237a5e4ba0ba720eda5049794e0949aead31e251b7"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E10",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 468.2781982421875,
+      "height_pt": 308.1866455078125,
+      "scale": 1
+    },
+    {
+      "id": "E11",
+      "x_pt": 506.2781982421875,
+      "y_pt": 74,
+      "width_pt": 458.4790954589844,
+      "height_pt": 312.5635681152344,
+      "scale": 1
+    },
+    {
+      "id": "E12",
+      "x_pt": 262.067626953125,
+      "y_pt": 428.5635681152344,
+      "width_pt": 458.6220397949219,
+      "height_pt": 292.84661865234375,
+      "scale": 1
+    }
+  ],
+  "width_pt": 982.7572937011719,
+  "height_pt": 748.4101867675781,
+  "output_sha256": {
+    "K24.svg": "c0c6dd709c0f61149e13f4250fca2de5eb2edbf78b4d143414db4ce55426d09c",
+    "K24.png": "d845fffad6c0853b97e0eee695f3e798af8cf19327f93456643098020fa14004",
+    "K24.pdf": "69e01b0232d0e54ff9e0e3064d69b5fcdaef002e4a1e8f2e15c6bb465afcac7f"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 58,
+    "issues": [],
+    "width_pt": 982.75732421875,
+    "height_pt": 748.41015625
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "ECDF, QQ and supplied density separated; curve labels and notes readable.",
+    "png_sha256": "d845fffad6c0853b97e0eee695f3e798af8cf19327f93456643098020fa14004",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K24.svg": "c0c6dd709c0f61149e13f4250fca2de5eb2edbf78b4d143414db4ce55426d09c",
+      "K24.png": "d845fffad6c0853b97e0eee695f3e798af8cf19327f93456643098020fa14004",
+      "K24.pdf": "69e01b0232d0e54ff9e0e3064d69b5fcdaef002e4a1e8f2e15c6bb465afcac7f"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

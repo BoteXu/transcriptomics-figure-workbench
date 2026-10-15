@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "P28",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/figures/P28/P28.svg",
+  "source_sha256": "7c778ff2f0e44391bd4c3806c75e3fa587888b167e5bec05982e0451c16d2f09",
+  "source_metadata": "examples/gallery/metadata/P28.json",
+  "source_metadata_sha256": "5e25f65050738cd363a8fabb91d1dd04551addb43e651d99077090e58f47a678",
+  "input_table": "examples/gallery/figures/P28/P28.tsv",
+  "input_sha256": "31daee5b612aa41d93c90609a45d844df0e5dd2b5315a73b76ed1038e4ecb9bd",
+  "frozen_graphical_geometry_sha256": "58e803d4fb711b2fae73b94102ac435336ccc84074f7e9cdc041382ac26fb58b",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 472.9000244140625,
+  "height_pt": 327.2087707519531,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO - P28",
+    "Software test fixture; not biological evidence"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -53.13641357421875,
+      4.102363586425781
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 22,
+    "issues": [],
+    "width_pt": 472.9000244140625,
+    "height_pt": 327.2087707519531
+  },
+  "output_sha256": {
+    "P28.svg": "502237d96094a0542446d8dcf49d94e46c86f885106f8857e1d2f82c26562910",
+    "P28.png": "0bff4868e40bddcc9d577f88c9e77e157472b01b69cffaba26b8512839490d08",
+    "P28.pdf": "fedcf20238f83065b13630a9703484762b0d4cb67f5b4e8175ca5c43a9c2c48d"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "RNA and ATAC tracks align to positions; interval gaps preserved.",
+    "png_sha256": "0bff4868e40bddcc9d577f88c9e77e157472b01b69cffaba26b8512839490d08",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "P28.svg": "502237d96094a0542446d8dcf49d94e46c86f885106f8857e1d2f82c26562910",
+      "P28.png": "0bff4868e40bddcc9d577f88c9e77e157472b01b69cffaba26b8512839490d08",
+      "P28.pdf": "fedcf20238f83065b13630a9703484762b0d4cb67f5b4e8175ca5c43a9c2c48d"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

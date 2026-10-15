@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "AUX_delta_estimate",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/publication-inputs-v030/native-AUX_delta_estimate.svg",
+  "source_sha256": "422ae8201bc8b17e4e0a07d52c5acd599470f5a8b563481c0d6134fd2383b8fb",
+  "source_metadata": "examples/gallery/publication-inputs-v030/native-AUX_delta_estimate.json",
+  "source_metadata_sha256": "72b6f7f2d5c7f9a9786a453a8fe054460b7ac26a9966a04c5a15b867eecf6879",
+  "input_table": "examples/gallery/components/delta_estimate/delta_estimate.tsv",
+  "input_sha256": "345608a360c824864e3abe70c5ffee77defcf53d8c2f3ed3a40cb74156a1df19",
+  "frozen_graphical_geometry_sha256": "80421d0428bb33c2563dac53454b615dd8210bdc7fad47df14f1a5d445446d78",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 419.1097412109375,
+  "height_pt": 190.27511596679688,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "finishing_patch": {
+    "notes": [
+      "Fixed illustrative demo bounds; not a research confidence interval."
+    ]
+  },
+  "finisher_sha256": "ab77521d311cd876a7db90bfd72c86b972f568d592e941d2bf8232f3abeef640",
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "explicit retained context notes"
+  ],
+  "removed_page_furniture": [
+    "Estimated effects",
+    "SYNTHETIC DEMO | AUX_delta_estimate"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -3.500642776489258,
+      17.412338256835938
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 13,
+    "issues": [],
+    "width_pt": 419.1097412109375,
+    "height_pt": 190.27511596679688
+  },
+  "output_sha256": {
+    "AUX_delta_estimate.svg": "046ad2cbf3f6d27273626dad44f8b60592d6426ce4e0da4cd3330b860424ac83",
+    "AUX_delta_estimate.png": "53afe2b75a92d30945874ef6155c0d03f7c3e4b13859b24cf2cd9da85221c3c5",
+    "AUX_delta_estimate.pdf": "8f507cbad283f80fc9fc56fefa3943660c63fc8d07f61ca12db27dd2565ed778"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Compact single-row estimate with full interval; illustrative bounds limitation visible.",
+    "png_sha256": "53afe2b75a92d30945874ef6155c0d03f7c3e4b13859b24cf2cd9da85221c3c5",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "AUX_delta_estimate.svg": "046ad2cbf3f6d27273626dad44f8b60592d6426ce4e0da4cd3330b860424ac83",
+      "AUX_delta_estimate.png": "53afe2b75a92d30945874ef6155c0d03f7c3e4b13859b24cf2cd9da85221c3c5",
+      "AUX_delta_estimate.pdf": "8f507cbad283f80fc9fc56fefa3943660c63fc8d07f61ca12db27dd2565ed778"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

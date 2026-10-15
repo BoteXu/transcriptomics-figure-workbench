@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "enrichplot.gseaplot2",
+      "package": "enrichplot",
+      "renderer": "gsea_tracks",
+      "required_columns": [
+        "kind",
+        "pathway",
+        "rank",
+        "value",
+        "gene",
+        "leading_edge",
+        "NES",
+        "padj",
+        "set_size"
+      ],
+      "purpose": "Exact exported ES, hit positions, ranked metric, supplied NES/FDR; no reconstruction from summary statistics.",
+      "fixed_parameters": {
+        "mode": "classic"
+      },
+      "required_context": [
+        "ranked universe",
+        "rank metric definition and direction",
+        "gene-set version",
+        "contrast",
+        "leading-edge flags"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "enrichplot.gseaplot2.overlay",
+      "package": "enrichplot",
+      "renderer": "gsea_tracks",
+      "required_columns": [
+        "kind",
+        "pathway",
+        "rank",
+        "value",
+        "gene",
+        "leading_edge",
+        "NES",
+        "padj",
+        "set_size"
+      ],
+      "purpose": "Exact exported ES, hit positions, ranked metric, supplied NES/FDR; no reconstruction from summary statistics.",
+      "fixed_parameters": {
+        "mode": "overlay"
+      },
+      "required_context": [
+        "ranked universe",
+        "rank metric definition and direction",
+        "gene-set version",
+        "contrast",
+        "leading-edge flags"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "enrichplot.gseaplot2.facets",
+      "package": "enrichplot",
+      "renderer": "gsea_tracks",
+      "required_columns": [
+        "kind",
+        "pathway",
+        "rank",
+        "value",
+        "gene",
+        "leading_edge",
+        "NES",
+        "padj",
+        "set_size"
+      ],
+      "purpose": "Exact exported ES, hit positions, ranked metric, supplied NES/FDR; no reconstruction from summary statistics.",
+      "fixed_parameters": {
+        "mode": "facets"
+      },
+      "required_context": [
+        "ranked universe",
+        "rank metric definition and direction",
+        "gene-set version",
+        "contrast",
+        "leading-edge flags"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "fgsea.plotEnrichment",
+      "package": "fgsea",
+      "renderer": "gsea_tracks",
+      "required_columns": [
+        "kind",
+        "pathway",
+        "rank",
+        "value",
+        "gene",
+        "leading_edge",
+        "NES",
+        "padj",
+        "set_size"
+      ],
+      "purpose": "Exact exported ES, hit positions, ranked metric, supplied NES/FDR; no reconstruction from summary statistics.",
+      "fixed_parameters": {
+        "mode": "classic"
+      },
+      "required_context": [
+        "ranked universe",
+        "rank metric definition and direction",
+        "gene-set version",
+        "contrast",
+        "leading-edge flags"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "fgsea.NES_matrix",
+      "package": "fgsea",
+      "renderer": "gsea_nes",
+      "required_columns": [
+        "pathway",
+        "contrast",
+        "status",
+        "NES",
+        "padj",
+        "set_size"
+      ],
+      "purpose": "Cross-contrast NES with FDR outlines and explicit untested cells.",
+      "fixed_parameters": {},
+      "required_context": [
+        "common NES/color limits",
+        "selected terms and contrast order",
+        "set-size definition"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "fgsea.leading_edge",
+      "package": "fgsea",
+      "renderer": "gsea_leading_edge",
+      "required_columns": [
+        "pathway",
+        "gene",
+        "member",
+        "leading_edge",
+        "value"
+      ],
+      "purpose": "Exact selected leading-edge membership and supplied gene effects.",
+      "fixed_parameters": {},
+      "required_context": [
+        "complete selected membership grid",
+        "gene-effect unit and common limits"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "clusterProfiler.dotplot",
+      "package": "clusterProfiler / enrichplot",
+      "renderer": "ora_terms",
+      "required_columns": [
+        "term",
+        "count",
+        "query_size",
+        "padj"
+      ],
+      "purpose": "ORA gene ratio and exact selected-query denominator; separate from GSEA NES.",
+      "fixed_parameters": {
+        "mode": "bubble"
+      },
+      "required_context": [
+        "background universe",
+        "selected query size",
+        "adjusted-P method",
+        "selected term order"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "clusterProfiler.lollipop",
+      "package": "clusterProfiler / enrichplot",
+      "renderer": "ora_terms",
+      "required_columns": [
+        "term",
+        "count",
+        "query_size",
+        "padj"
+      ],
+      "purpose": "ORA gene ratio and exact selected-query denominator; separate from GSEA NES.",
+      "fixed_parameters": {
+        "mode": "lollipop"
+      },
+      "required_context": [
+        "background universe",
+        "selected query size",
+        "adjusted-P method",
+        "selected term order"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "enrichplot.ridgeplot",
+      "package": "enrichplot",
+      "renderer": "density_ridges",
+      "required_columns": [
+        "group",
+        "x",
+        "density"
+      ],
+      "purpose": "Draw already estimated density grids; do not estimate KDE while restyling.",
+      "fixed_parameters": {},
+      "required_context": [
+        "common x grid",
+        "density unit/bandwidth/source",
+        "leading-edge or all-member scope"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "enrichplot.cnetplot",
+      "package": "enrichplot",
+      "renderer": "typed_network",
+      "required_columns": [
+        "kind",
+        "node_id",
+        "label",
+        "entity_type",
+        "group",
+        "x",
+        "y",
+        "area",
+        "source",
+        "target",
+        "weight",
+        "sign"
+      ],
+      "purpose": "Use frozen nodes, edges and coordinates; no inferred network or layout.",
+      "fixed_parameters": {},
+      "required_context": [
+        "edge definition",
+        "node area unit",
+        "source identities",
+        "selected term/gene scope"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "enrichplot.emapplot",
+      "package": "enrichplot",
+      "renderer": "typed_network",
+      "required_columns": [
+        "kind",
+        "node_id",
+        "label",
+        "entity_type",
+        "group",
+        "x",
+        "y",
+        "area",
+        "source",
+        "target",
+        "weight",
+        "sign"
+      ],
+      "purpose": "Use frozen nodes, edges and coordinates; no inferred network or layout.",
+      "fixed_parameters": {},
+      "required_context": [
+        "edge definition",
+        "node area unit",
+        "source identities",
+        "selected term/gene scope"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "GSVA.score_heatmap",
+      "package": "GSVA",
+      "renderer": "editorial",
+      "required_columns": [
+        "feature",
+        "sample",
+        "value"
+      ],
+      "purpose": "Frozen GSVA/ssGSEA scores; no scoring or z-scaling.",
+      "fixed_parameters": {
+        "kind": "matrix"
+      },
+      "required_context": [
+        "score method and version",
+        "scale unit and limits",
+        "sample biological unit"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "DESeq2.volcano",
+      "package": "DESeq2",
+      "renderer": "editorial",
+      "required_columns": [
+        "gene",
+        "log2FC",
+        "padj"
+      ],
+      "purpose": "Fixed differential-expression results; no refitting or adjusted-P recalculation.",
+      "fixed_parameters": {
+        "kind": "volcano"
+      },
+      "required_context": [
+        "contrast and reference",
+        "effect shrinkage status",
+        "FDR method",
+        "filtering and NA policy"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "limma.effect_forest",
+      "package": "limma",
+      "renderer": "editorial",
+      "required_columns": [
+        "label",
+        "group",
+        "estimate",
+        "lower",
+        "upper"
+      ],
+      "purpose": "Supplied effect intervals; not a reconstructed limma empirical-Bayes analysis.",
+      "fixed_parameters": {
+        "kind": "forest"
+      },
+      "required_context": [
+        "effect scale",
+        "interval definition",
+        "contrast and design"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "MSstats.volcano",
+      "package": "MSstats",
+      "renderer": "editorial",
+      "required_columns": [
+        "gene",
+        "log2FC",
+        "padj"
+      ],
+      "purpose": "Existing protein effects and adjusted probabilities.",
+      "fixed_parameters": {
+        "kind": "volcano"
+      },
+      "required_context": [
+        "protein identity mapping",
+        "contrast",
+        "missing-value handling"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "Seurat.DotPlot",
+      "package": "Seurat",
+      "renderer": "dot_matrix",
+      "required_columns": [
+        "feature",
+        "group",
+        "fraction",
+        "value"
+      ],
+      "purpose": "Frozen fraction and average-expression grid; no normalization or clustering.",
+      "fixed_parameters": {},
+      "required_context": [
+        "fraction denominator",
+        "mean_all/mean_detected/scaled semantics",
+        "group order"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "Seurat.DimPlot",
+      "package": "Seurat",
+      "renderer": "embedding",
+      "required_columns": [
+        "cell_id",
+        "group",
+        "x",
+        "y"
+      ],
+      "purpose": "Frozen embedding coordinates; no UMAP/t-SNE fitting.",
+      "fixed_parameters": {},
+      "required_context": [
+        "embedding identity",
+        "coordinate unit",
+        "cell versus donor unit"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "Scanpy.umap",
+      "package": "Scanpy",
+      "renderer": "embedding",
+      "required_columns": [
+        "cell_id",
+        "group",
+        "x",
+        "y"
+      ],
+      "purpose": "Render selected stored coordinates without refitting.",
+      "fixed_parameters": {},
+      "required_context": [
+        "embedding version",
+        "cell identities",
+        "biological-unit limitation"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "WGCNA.module_trait",
+      "package": "WGCNA",
+      "renderer": "split_metric_matrix",
+      "required_columns": [
+        "row_id",
+        "column_id",
+        "association",
+        "pvalue"
+      ],
+      "purpose": "Separate supplied module-trait association and probability color scales.",
+      "fixed_parameters": {},
+      "required_context": [
+        "correlation definition",
+        "multiple-testing scope",
+        "module identities",
+        "independent sample unit"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "WGCNA.module_network",
+      "package": "WGCNA",
+      "renderer": "typed_network",
+      "required_columns": [
+        "kind",
+        "node_id",
+        "label",
+        "entity_type",
+        "group",
+        "x",
+        "y",
+        "area",
+        "source",
+        "target",
+        "weight",
+        "sign"
+      ],
+      "purpose": "Supplied selected module network and fixed topology.",
+      "fixed_parameters": {},
+      "required_context": [
+        "adjacency/TOM definition",
+        "selection rule",
+        "frozen coordinates"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "CellChat.communication_network",
+      "package": "CellChat",
+      "renderer": "typed_network",
+      "required_columns": [
+        "kind",
+        "node_id",
+        "label",
+        "entity_type",
+        "group",
+        "x",
+        "y",
+        "area",
+        "source",
+        "target",
+        "weight",
+        "sign"
+      ],
+      "purpose": "Frozen communication network; probability is not physical binding or causal signaling.",
+      "fixed_parameters": {},
+      "required_context": [
+        "sender/receiver",
+        "weight/probability definition",
+        "selection threshold",
+        "replicate context"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "decoupleR.activity_heatmap",
+      "package": "decoupleR",
+      "renderer": "editorial",
+      "required_columns": [
+        "feature",
+        "sample",
+        "value"
+      ],
+      "purpose": "Existing regulator activity scores; no activity inference.",
+      "fixed_parameters": {
+        "kind": "matrix"
+      },
+      "required_context": [
+        "inference method",
+        "regulon version",
+        "score unit and limits"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "PROGENy.pathway_activity",
+      "package": "PROGENy",
+      "renderer": "editorial",
+      "required_columns": [
+        "feature",
+        "sample",
+        "value"
+      ],
+      "purpose": "Existing pathway activity scores; retain scale and contrast.",
+      "fixed_parameters": {
+        "kind": "matrix"
+      },
+      "required_context": [
+        "model version",
+        "score unit",
+        "sample context"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "survminer.ggsurvplot",
+      "package": "survival / survminer",
+      "renderer": "survival",
+      "required_columns": [
+        "kind",
+        "group",
+        "time",
+        "survival",
+        "lower",
+        "upper",
+        "at_risk"
+      ],
+      "purpose": "Existing step curves, risk counts and censor positions; no survival fitting.",
+      "fixed_parameters": {},
+      "required_context": [
+        "time unit",
+        "risk-count convention",
+        "interval definition",
+        "censor scope"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    },
+    {
+      "id": "pROC.roc",
+      "package": "pROC",
+      "renderer": "editorial",
+      "required_columns": [
+        "group",
+        "x",
+        "y"
+      ],
+      "purpose": "Frozen ROC coordinates; no AUC or model estimation.",
+      "fixed_parameters": {
+        "kind": "roc"
+      },
+      "required_context": [
+        "evaluation cohort",
+        "positive-class convention",
+        "coordinate order",
+        "uncertainty source"
+      ],
+      "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+    }
+  ]
+}

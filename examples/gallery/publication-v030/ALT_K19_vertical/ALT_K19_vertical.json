@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K19_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K19",
+  "arrangement": "vertical",
+  "relationship": "全景看已有信号，局部窗口看命中结构；窗口范围明示",
+  "components": [
+    {
+      "id": "N08",
+      "sha256": "fb5925b4c85dae0ad7998de9b7746ea41047d741f1c43cbc43483a18bc36b7d2",
+      "input_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a"
+    },
+    {
+      "id": "AUX_hit_window",
+      "sha256": "ea1814d7f83d11ede83198a647e3fbbd5d415865831bd2b46c08c1f4dd0ac857",
+      "input_sha256": "c1199ef0da5b604b26eae5f307909fe0af92db91a545e4b6dbdf15cebc34e7bb"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N08",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 528.2916259765625,
+      "height_pt": 416.7068176269531,
+      "scale": 1
+    },
+    {
+      "id": "AUX_hit_window",
+      "x_pt": 18,
+      "y_pt": 532.7068176269531,
+      "width_pt": 415.3227844238281,
+      "height_pt": 298.404296875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 564.2916259765625,
+  "height_pt": 858.1111145019531,
+  "output_sha256": {
+    "ALT_K19_vertical.svg": "94f237dbc891a48d53a4047065085e02480eb2a863ae2f97e0b19292a65c5a12",
+    "ALT_K19_vertical.png": "8e46dbcafd11c2e1b20c8ffb8c4e5dc6f070f8ee85dc3d4144826bcf1e4baa82",
+    "ALT_K19_vertical.pdf": "d643e0aa9c783fdbc0d6bdb95a93c4d11ca5e8daad0b530deafc36105964ef62"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 46,
+    "issues": [],
+    "width_pt": 564.2916259765625,
+    "height_pt": 858.111083984375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Three enrichment tracks and explicit hit window separated; rank ranges and supplied-score note visible.",
+    "png_sha256": "8e46dbcafd11c2e1b20c8ffb8c4e5dc6f070f8ee85dc3d4144826bcf1e4baa82",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K19_vertical.svg": "94f237dbc891a48d53a4047065085e02480eb2a863ae2f97e0b19292a65c5a12",
+      "ALT_K19_vertical.png": "8e46dbcafd11c2e1b20c8ffb8c4e5dc6f070f8ee85dc3d4144826bcf1e4baa82",
+      "ALT_K19_vertical.pdf": "d643e0aa9c783fdbc0d6bdb95a93c4d11ca5e8daad0b530deafc36105964ef62"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

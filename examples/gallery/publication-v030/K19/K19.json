@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K19",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K19",
+  "arrangement": "default",
+  "relationship": "全景看已有信号，局部窗口看命中结构；窗口范围明示",
+  "components": [
+    {
+      "id": "N08",
+      "sha256": "fb5925b4c85dae0ad7998de9b7746ea41047d741f1c43cbc43483a18bc36b7d2",
+      "input_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a"
+    },
+    {
+      "id": "AUX_hit_window",
+      "sha256": "ea1814d7f83d11ede83198a647e3fbbd5d415865831bd2b46c08c1f4dd0ac857",
+      "input_sha256": "c1199ef0da5b604b26eae5f307909fe0af92db91a545e4b6dbdf15cebc34e7bb"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N08",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 528.2916259765625,
+      "height_pt": 416.7068176269531,
+      "scale": 1
+    },
+    {
+      "id": "AUX_hit_window",
+      "x_pt": 566.2916259765625,
+      "y_pt": 74,
+      "width_pt": 415.3227844238281,
+      "height_pt": 298.404296875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 999.6144104003906,
+  "height_pt": 517.7068176269531,
+  "output_sha256": {
+    "K19.svg": "3b77874af943953eb762f9e7457d3dde2f9f9c5af76ea8b327e4dde7a66d78db",
+    "K19.png": "31173afa0a7cf7355976bc3e6a7dc2b6c0e330cf286fe3fc04e32f5e0ad354a4",
+    "K19.pdf": "b7a008fbf8bd8b76d70fe8350ba237e469b77021c49bcdcce24226daeeebc9ad"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 46,
+    "issues": [],
+    "width_pt": 999.6144409179688,
+    "height_pt": 517.706787109375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Three enrichment tracks and explicit hit window separated; rank ranges and supplied-score note visible.",
+    "png_sha256": "31173afa0a7cf7355976bc3e6a7dc2b6c0e330cf286fe3fc04e32f5e0ad354a4",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K19.svg": "3b77874af943953eb762f9e7457d3dde2f9f9c5af76ea8b327e4dde7a66d78db",
+      "K19.png": "31173afa0a7cf7355976bc3e6a7dc2b6c0e330cf286fe3fc04e32f5e0ad354a4",
+      "K19.pdf": "b7a008fbf8bd8b76d70fe8350ba237e469b77021c49bcdcce24226daeeebc9ad"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

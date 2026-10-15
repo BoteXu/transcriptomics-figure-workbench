@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K18",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K18",
+  "arrangement": "default",
+  "relationship": "宏观看分配，矩阵读局部数值；同一数量两种视角",
+  "components": [
+    {
+      "id": "N04",
+      "sha256": "e4a923a7ad335216d6bd2b895fd473cca85115cda0a553c965d056875108f7fc",
+      "input_sha256": "c92072adec8cc59a5cc1e4e40edfbcab509ac8069a6009d2e88eb8f78116f4a3"
+    },
+    {
+      "id": "AUX_flow_matrix",
+      "sha256": "6a65c91ef853c2d16603fd94fc27abb6be0d813d1d9f8c6ad0e78066cb69fb80",
+      "input_sha256": "36c9c8529b7052d0a0c25caecbb1fe816ed8d4f0e1ff9d1faa62adaed0cf51a2"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N04",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 356.54425048828125,
+      "height_pt": 383.255615234375,
+      "scale": 1
+    },
+    {
+      "id": "AUX_flow_matrix",
+      "x_pt": 394.54425048828125,
+      "y_pt": 74,
+      "width_pt": 407.8175964355469,
+      "height_pt": 298.404296875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 820.3618469238281,
+  "height_pt": 484.255615234375,
+  "output_sha256": {
+    "K18.svg": "258ae164d1624ac3b71cb845a4b7e875fa46b512aa687b394437c1971f6d0214",
+    "K18.png": "3d55f6ac4b14a424d9f77d7d82eb0fbbfe7627490b40007ca8b9ca6a5bf9e574",
+    "K18.pdf": "1b09d2c420aa3b4e8bac8e9e5b0e268b3ebab109e4a703f77e956517979ab3d5"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 32,
+    "issues": [],
+    "width_pt": 820.36181640625,
+    "height_pt": 484.255615234375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Weighted chord labels, ribbon geometry and original matrix remain clear, unsigned semantics explicit.",
+    "png_sha256": "3d55f6ac4b14a424d9f77d7d82eb0fbbfe7627490b40007ca8b9ca6a5bf9e574",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K18.svg": "258ae164d1624ac3b71cb845a4b7e875fa46b512aa687b394437c1971f6d0214",
+      "K18.png": "3d55f6ac4b14a424d9f77d7d82eb0fbbfe7627490b40007ca8b9ca6a5bf9e574",
+      "K18.pdf": "1b09d2c420aa3b4e8bac8e9e5b0e268b3ebab109e4a703f77e956517979ab3d5"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

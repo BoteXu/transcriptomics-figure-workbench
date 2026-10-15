@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K10",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K10",
+  "arrangement": "default",
+  "relationship": "色块比较整体模式，曲线比较行的相对轮廓与转折",
+  "components": [
+    {
+      "id": "AUX_marker_matrix",
+      "sha256": "660515646b42211e94d0d5424ebeb38361267240f56b0dec87703b2abc752476",
+      "input_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+    },
+    {
+      "id": "AUX_marker_profiles",
+      "sha256": "0d0288c33e1085c2329d026c17115b3fd8d12add17a9af5b6a261daabb127712",
+      "input_sha256": "3ea5f08f99ea9a447e87f0bc75780cbc26190774bd214b03d173694ab1938b9b"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "AUX_marker_matrix",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 407.8175964355469,
+      "height_pt": 298.404296875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_profiles",
+      "x_pt": 445.8175964355469,
+      "y_pt": 74,
+      "width_pt": 409.1794128417969,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    }
+  ],
+  "width_pt": 872.9970092773438,
+  "height_pt": 412.57861328125,
+  "output_sha256": {
+    "K10.svg": "e5b826531dc0e39a1de05d770383a8b21730438944e646c50310b07c009a21c3",
+    "K10.png": "93bace135628d1d24fb25eb65bee87966204bbea0ddfff3d7d9fdb2a8fedb1fa",
+    "K10.pdf": "8d092d362556598a5ed735580483e996b006559afcce236d93ddbaed91c1df77"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 48,
+    "issues": [],
+    "width_pt": 872.9970092773438,
+    "height_pt": 412.57861328125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Heatmap and stored marker profile retain full axes and color mapping; categorical-marker indices preserved.",
+    "png_sha256": "93bace135628d1d24fb25eb65bee87966204bbea0ddfff3d7d9fdb2a8fedb1fa",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K10.svg": "e5b826531dc0e39a1de05d770383a8b21730438944e646c50310b07c009a21c3",
+      "K10.png": "93bace135628d1d24fb25eb65bee87966204bbea0ddfff3d7d9fdb2a8fedb1fa",
+      "K10.pdf": "8d092d362556598a5ed735580483e996b006559afcce236d93ddbaed91c1df77"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

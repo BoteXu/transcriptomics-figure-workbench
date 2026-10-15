@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K33",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K33",
+  "arrangement": "default",
+  "relationship": "每个因子在哪些层解释更多变异；因子由哪些分子特征共同构成",
+  "components": [
+    {
+      "id": "M02",
+      "sha256": "ce6c69df7f5afa316994f8668198483940c75cd50c313b8f115892961ab511a5",
+      "input_sha256": "a2fdfaee95ad701f7bf719852d97056d5164b7eae43fd3e9ac8a3de4653fd5ba"
+    },
+    {
+      "id": "M03",
+      "sha256": "69d77ac0fc18abc8750a9237fca0bb43f0f7bdf6933a42770f0ace1102c76635",
+      "input_sha256": "d4455aa7078554a03c59d8817d97536b5734d6d09518de07f5e6595238eef6ab"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M02",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 417.25579833984375,
+      "height_pt": 281.7108154296875,
+      "scale": 1
+    },
+    {
+      "id": "M03",
+      "x_pt": 455.25579833984375,
+      "y_pt": 74,
+      "width_pt": 429.2664794921875,
+      "height_pt": 342.421142578125,
+      "scale": 1
+    }
+  ],
+  "width_pt": 902.5222778320312,
+  "height_pt": 443.421142578125,
+  "output_sha256": {
+    "K33.svg": "10263ecd9fee28dd3b862ba0b24b5ab72c806df496c944ec75b32b4abb9a6e20",
+    "K33.png": "17af5bd3ce687e7dea2f24ba7099530d234069ba4b5a990cfada4b71faee4c21",
+    "K33.pdf": "10a384ed10e44ddc975c4569e3bd45ce642aca0a713074e36adf8e6219447520"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 50,
+    "issues": [],
+    "width_pt": 902.5222778320312,
+    "height_pt": 443.421142578125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Factor variance and signed loadings have separate scales and full row identities.",
+    "png_sha256": "17af5bd3ce687e7dea2f24ba7099530d234069ba4b5a990cfada4b71faee4c21",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K33.svg": "10263ecd9fee28dd3b862ba0b24b5ab72c806df496c944ec75b32b4abb9a6e20",
+      "K33.png": "17af5bd3ce687e7dea2f24ba7099530d234069ba4b5a990cfada4b71faee4c21",
+      "K33.pdf": "10a384ed10e44ddc975c4569e3bd45ce642aca0a713074e36adf8e6219447520"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

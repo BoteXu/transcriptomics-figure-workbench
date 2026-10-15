@@ -1,0 +1,689 @@
+{
+  "schema_version": 1,
+  "adapters": {
+    "qc_de": {
+      "renderer": "figure_qc_de.plot_frozen_qc_de",
+      "numeric_columns": [
+        "q1",
+        "median",
+        "q3",
+        "whislo",
+        "whishi",
+        "n",
+        "x",
+        "y",
+        "width",
+        "height",
+        "angle",
+        "coverage",
+        "effect",
+        "average",
+        "rank",
+        "count",
+        "left",
+        "right"
+      ],
+      "theme_mode": "argument"
+    },
+    "splice_tracks": {
+      "renderer": "figure_analysis_results.plot_splice_tracks",
+      "numeric_columns": [
+        "start",
+        "end",
+        "value",
+        "count",
+        "lane"
+      ],
+      "theme_mode": "argument"
+    },
+    "variant_posteriors": {
+      "renderer": "figure_analysis_results.plot_variant_posteriors",
+      "numeric_columns": [
+        "position",
+        "pip"
+      ],
+      "theme_mode": "argument"
+    },
+    "contribution_waterfall": {
+      "renderer": "figure_analysis_results.plot_contribution_waterfall",
+      "numeric_columns": [
+        "contribution"
+      ],
+      "theme_mode": "argument"
+    },
+    "calibration_counts": {
+      "renderer": "figure_multimodal.plot_calibration_counts",
+      "numeric_columns": [
+        "bin_left",
+        "bin_right",
+        "predicted",
+        "estimate",
+        "lower",
+        "upper",
+        "n"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "sequence_logo": {
+      "renderer": "figure_biomni_views.plot_sequence_logo",
+      "numeric_columns": [
+        "height"
+      ],
+      "theme_mode": "argument"
+    },
+    "contact_tracks": {
+      "renderer": "figure_biomni_views.plot_contact_tracks",
+      "numeric_columns": [
+        "start",
+        "end",
+        "value"
+      ],
+      "theme_mode": "argument"
+    },
+    "branch_tree": {
+      "renderer": "figure_biomni_views.plot_branch_tree",
+      "numeric_columns": [
+        "branch_length"
+      ],
+      "theme_mode": "argument"
+    },
+    "slice_overlay": {
+      "renderer": "figure_biomni_views.plot_slice_overlay",
+      "numeric_columns": [
+        "u",
+        "v",
+        "intensity",
+        "label"
+      ],
+      "theme_mode": "argument"
+    },
+    "registration_check": {
+      "renderer": "figure_biomni_views.plot_registration_check",
+      "numeric_columns": [
+        "u",
+        "v",
+        "fixed",
+        "registered"
+      ],
+      "theme_mode": "argument"
+    },
+    "alluvial": {
+      "renderer": "figure_network_extensions.plot_alluvial",
+      "numeric_columns": [
+        "weight"
+      ],
+      "theme_mode": "argument"
+    },
+    "weighted_chord": {
+      "renderer": "figure_network_extensions.plot_weighted_chord",
+      "numeric_columns": [
+        "weight"
+      ],
+      "theme_mode": "argument"
+    },
+    "heatmap": {
+      "renderer": "figure_core.plot_heatmap",
+      "numeric_columns": [
+        "value"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "dot_matrix": {
+      "renderer": "figure_core.plot_dot",
+      "numeric_columns": [
+        "fraction",
+        "value"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "polished_matrix": {
+      "renderer": "figure_polish.plot_polished_matrix",
+      "numeric_columns": [
+        "value"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "membership_ribbons": {
+      "renderer": "figure_linked_evidence.plot_membership_ribbons",
+      "numeric_columns": [
+        "effect",
+        "ratio",
+        "padj",
+        "count"
+      ],
+      "theme_mode": "argument"
+    },
+    "split_metric_matrix": {
+      "renderer": "figure_linked_evidence.plot_split_metric_matrix",
+      "numeric_columns": [
+        "association",
+        "pvalue"
+      ],
+      "theme_mode": "argument"
+    },
+    "hierarchy_tracks": {
+      "renderer": "figure_linked_evidence.plot_hierarchy_tracks",
+      "numeric_columns": [
+        "height"
+      ],
+      "theme_mode": "argument"
+    },
+    "radial_hierarchy": {
+      "renderer": "figure_linked_evidence.plot_radial_hierarchy",
+      "numeric_columns": [
+        "height",
+        "metric",
+        "outer_value",
+        "area_value"
+      ],
+      "theme_mode": "argument"
+    },
+    "stacked_values": {
+      "renderer": "figure_linked_evidence.plot_stacked_values",
+      "numeric_columns": [
+        "value"
+      ],
+      "theme_mode": "argument"
+    },
+    "frozen_dynamics": {
+      "renderer": "figure_multimodal.plot_frozen_dynamics",
+      "numeric_columns": [
+        "time",
+        "estimate",
+        "lower",
+        "upper"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "composition": {
+      "renderer": "figure_core.plot_composition",
+      "numeric_columns": [
+        "count"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "ternary": {
+      "renderer": "figure_multiscale.plot_ternary_composition",
+      "numeric_columns": [],
+      "theme_mode": "argument"
+    },
+    "genome_overview": {
+      "renderer": "figure_multiscale.plot_genome_overview",
+      "numeric_columns": [
+        "position",
+        "pvalue"
+      ],
+      "theme_mode": "argument"
+    },
+    "locus_tracks": {
+      "renderer": "figure_multiscale.plot_locus_tracks",
+      "numeric_columns": [
+        "position",
+        "pvalue",
+        "ld_r2",
+        "start",
+        "end",
+        "lane",
+        "rate"
+      ],
+      "theme_mode": "argument"
+    },
+    "funnel": {
+      "renderer": "figure_multiscale.plot_funnel_result",
+      "numeric_columns": [
+        "estimate",
+        "se"
+      ],
+      "theme_mode": "argument"
+    },
+    "hierarchy_area": {
+      "renderer": "figure_multiscale.plot_hierarchy_partition",
+      "numeric_columns": [
+        "value",
+        "x0",
+        "y0",
+        "x1",
+        "y1"
+      ],
+      "theme_mode": "argument"
+    },
+    "uncertainty_fan": {
+      "renderer": "figure_multiscale.plot_uncertainty_fan",
+      "numeric_columns": [
+        "x",
+        "coverage",
+        "center",
+        "lower",
+        "upper"
+      ],
+      "theme_mode": "argument"
+    },
+    "spatial_overlay": {
+      "renderer": "figure_multiscale.plot_spatial_overlay",
+      "numeric_columns": [
+        "x",
+        "y",
+        "red",
+        "green",
+        "blue",
+        "radius",
+        "value"
+      ],
+      "theme_mode": "argument"
+    },
+    "cross_effects": {
+      "renderer": "figure_multiomics_views.plot_cross_effects",
+      "numeric_columns": [
+        "effect_x",
+        "effect_y",
+        "q_x",
+        "q_y"
+      ],
+      "theme_mode": "argument"
+    },
+    "aligned_views": {
+      "renderer": "figure_multiomics_views.plot_aligned_views",
+      "numeric_columns": [
+        "x",
+        "y"
+      ],
+      "theme_mode": "argument"
+    },
+    "loading_projection": {
+      "renderer": "figure_multiomics_views.plot_loading_projection",
+      "numeric_columns": [
+        "x",
+        "y"
+      ],
+      "theme_mode": "argument"
+    },
+    "mass_spectrum": {
+      "renderer": "figure_multiomics_views.plot_mass_spectrum",
+      "numeric_columns": [
+        "mz",
+        "intensity"
+      ],
+      "theme_mode": "argument"
+    },
+    "genomic_links": {
+      "renderer": "figure_multiomics_views.plot_genomic_links",
+      "numeric_columns": [
+        "start",
+        "end",
+        "value",
+        "score"
+      ],
+      "theme_mode": "argument"
+    },
+    "pathway_overlay": {
+      "renderer": "figure_multiomics_views.plot_pathway_overlay",
+      "numeric_columns": [
+        "x",
+        "y",
+        "value"
+      ],
+      "theme_mode": "argument"
+    },
+    "model_diagnostic": {
+      "renderer": "figure_multiomics_views.plot_diagnostic_panel",
+      "numeric_columns": [
+        "fitted",
+        "residual",
+        "standard_residual",
+        "leverage",
+        "cook",
+        "reference_quantile",
+        "ordered_residual"
+      ],
+      "theme_mode": "argument"
+    },
+    "enrichment_grid": {
+      "renderer": "figure_method_extensions.plot_enrichment_grid",
+      "numeric_columns": [
+        "padj",
+        "gene_ratio"
+      ],
+      "theme_mode": "argument"
+    },
+    "term_effect_circle": {
+      "renderer": "figure_method_extensions.plot_term_effect_circle",
+      "numeric_columns": [
+        "padj",
+        "zscore",
+        "effect"
+      ],
+      "theme_mode": "argument"
+    },
+    "term_key": {
+      "renderer": "figure_method_extensions.plot_term_key",
+      "numeric_columns": [],
+      "theme_mode": "argument"
+    },
+    "two_set_overlap": {
+      "renderer": "figure_method_extensions.plot_two_set_overlap",
+      "numeric_columns": [],
+      "theme_mode": "argument"
+    },
+    "gene_term_chord": {
+      "renderer": "figure_method_extensions.plot_gene_term_chord",
+      "numeric_columns": [
+        "effect"
+      ],
+      "theme_mode": "argument"
+    },
+    "distribution": {
+      "renderer": "figure_method_extensions.plot_distribution_result",
+      "numeric_columns": [
+        "x",
+        "y"
+      ],
+      "theme_mode": "argument"
+    },
+    "balance": {
+      "renderer": "figure_method_extensions.plot_balance",
+      "numeric_columns": [
+        "smd"
+      ],
+      "theme_mode": "argument"
+    },
+    "agreement": {
+      "renderer": "figure_method_extensions.plot_agreement",
+      "numeric_columns": [
+        "mean",
+        "difference"
+      ],
+      "theme_mode": "argument"
+    },
+    "survival": {
+      "renderer": "figure_method_extensions.plot_survival_result",
+      "numeric_columns": [
+        "time",
+        "survival",
+        "lower",
+        "upper",
+        "at_risk"
+      ],
+      "theme_mode": "argument"
+    },
+    "swimmer": {
+      "renderer": "figure_method_extensions.plot_swimmer",
+      "numeric_columns": [
+        "start",
+        "end",
+        "time"
+      ],
+      "theme_mode": "argument"
+    },
+    "specification_curve": {
+      "renderer": "figure_method_extensions.plot_specification_curve",
+      "numeric_columns": [
+        "estimate",
+        "lower",
+        "upper",
+        "included"
+      ],
+      "theme_mode": "argument"
+    },
+    "vector_field": {
+      "renderer": "figure_method_extensions.plot_vector_field",
+      "numeric_columns": [
+        "x",
+        "y",
+        "vx",
+        "vy"
+      ],
+      "theme_mode": "argument"
+    },
+    "bivariate_tiles": {
+      "renderer": "figure_method_extensions.plot_bivariate_tiles",
+      "numeric_columns": [
+        "metric_x",
+        "metric_y"
+      ],
+      "theme_mode": "argument"
+    },
+    "forest": {
+      "renderer": "figure_publication.plot_publication_forest",
+      "numeric_columns": [
+        "estimate",
+        "lower",
+        "upper"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "density_ridges": {
+      "renderer": "figure_general.plot_density_ridges",
+      "numeric_columns": [
+        "x",
+        "density"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "annotated_matrix": {
+      "renderer": "figure_publication.plot_aligned_matrix",
+      "numeric_columns": [
+        "value",
+        "row_count"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "typed_network": {
+      "renderer": "figure_network_extensions.plot_typed_network",
+      "numeric_columns": [
+        "x",
+        "y",
+        "area",
+        "weight",
+        "sign"
+      ],
+      "theme_mode": "argument"
+    },
+    "multistate_matrix": {
+      "renderer": "figure_network_extensions.plot_multistate_matrix",
+      "numeric_columns": [],
+      "theme_mode": "argument"
+    },
+    "xy_points": {
+      "renderer": "figure_general.plot_xy_points",
+      "numeric_columns": [
+        "x",
+        "y"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "embedding": {
+      "renderer": "figure_core.plot_embedding",
+      "numeric_columns": [
+        "x",
+        "y"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "feature_facets": {
+      "renderer": "figure_publication.plot_feature_facets",
+      "numeric_columns": [
+        "x",
+        "y",
+        "value"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "grouped_estimates": {
+      "renderer": "figure_general.plot_grouped_estimates",
+      "numeric_columns": [
+        "estimate",
+        "lower",
+        "upper"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "raincloud": {
+      "renderer": "figure_publication.plot_raincloud",
+      "numeric_columns": [
+        "value"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "volcano": {
+      "renderer": "figure_core.plot_volcano",
+      "numeric_columns": [
+        "log2FC",
+        "padj"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "volcano_marginal": {
+      "renderer": "figure_styles.plot_volcano_marginal",
+      "numeric_columns": [
+        "log2FC",
+        "padj"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "paired": {
+      "renderer": "figure_extensions.plot_paired",
+      "numeric_columns": [
+        "value"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "upset": {
+      "renderer": "figure_network_extensions.plot_upset",
+      "numeric_columns": [],
+      "theme_mode": "argument"
+    },
+    "rank_bump": {
+      "renderer": "figure_network_extensions.plot_rank_bump",
+      "numeric_columns": [
+        "rank"
+      ],
+      "theme_mode": "argument"
+    },
+    "running_enrichment": {
+      "renderer": "figure_network_extensions.plot_running_enrichment",
+      "numeric_columns": [
+        "rank",
+        "value"
+      ],
+      "theme_mode": "argument"
+    },
+    "frozen_curve": {
+      "renderer": "figure_publication.plot_publication_curve",
+      "numeric_columns": [
+        "x",
+        "y"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "effect_matrix": {
+      "renderer": "figure_extensions.plot_effect_matrix",
+      "numeric_columns": [
+        "estimate",
+        "lower",
+        "upper",
+        "padj"
+      ],
+      "theme_mode": "wrapper"
+    },
+    "editorial": {
+      "renderer": "figure_editorial.plot_editorial",
+      "numeric_columns": [
+        "log2FC",
+        "padj",
+        "rank",
+        "value",
+        "estimate",
+        "lower",
+        "upper",
+        "x",
+        "y"
+      ],
+      "theme_mode": "argument"
+    },
+    "mosaic_counts": {
+      "renderer": "figure_expanded_grammar.plot_mosaic_counts",
+      "numeric_columns": [
+        "count"
+      ],
+      "theme_mode": "argument"
+    },
+    "waffle_counts": {
+      "renderer": "figure_expanded_grammar.plot_waffle_counts",
+      "numeric_columns": [
+        "count"
+      ],
+      "theme_mode": "argument"
+    },
+    "horizon_series": {
+      "renderer": "figure_expanded_grammar.plot_horizon_series",
+      "numeric_columns": [
+        "x",
+        "value"
+      ],
+      "theme_mode": "argument"
+    },
+    "connected_scatter": {
+      "renderer": "figure_expanded_grammar.plot_connected_scatter",
+      "numeric_columns": [
+        "step",
+        "x",
+        "y"
+      ],
+      "theme_mode": "argument"
+    },
+    "mirrored_bars": {
+      "renderer": "figure_expanded_grammar.plot_mirrored_bars",
+      "numeric_columns": [
+        "value"
+      ],
+      "theme_mode": "argument"
+    },
+    "genomic_rainfall": {
+      "renderer": "figure_expanded_grammar.plot_genomic_rainfall",
+      "numeric_columns": [
+        "position",
+        "gap"
+      ],
+      "theme_mode": "argument"
+    },
+    "gsea_tracks": {
+      "renderer": "figure_gsea.plot_gsea_tracks",
+      "numeric_columns": [
+        "rank",
+        "value",
+        "leading_edge",
+        "NES",
+        "padj",
+        "set_size"
+      ],
+      "theme_mode": "argument"
+    },
+    "gsea_nes": {
+      "renderer": "figure_gsea.plot_gsea_nes",
+      "numeric_columns": [
+        "NES",
+        "padj",
+        "set_size"
+      ],
+      "theme_mode": "argument"
+    },
+    "gsea_leading_edge": {
+      "renderer": "figure_gsea.plot_gsea_leading_edge",
+      "numeric_columns": [
+        "member",
+        "leading_edge",
+        "value"
+      ],
+      "theme_mode": "argument"
+    },
+    "ora_terms": {
+      "renderer": "figure_gsea.plot_ora_terms",
+      "numeric_columns": [
+        "count",
+        "query_size",
+        "padj"
+      ],
+      "theme_mode": "argument"
+    }
+  }
+}

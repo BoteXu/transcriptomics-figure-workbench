@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "figure_id": "A06",
+  "renderer": "editorial",
+  "input": {
+    "path": "E47.tsv",
+    "sha256": "6112589d125beff9504430c0a72f1e1c7fb0869fb053057f08b7c531435da858"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-aesthetic-rebuild",
+    "palette_name": "tol_muted",
+    "palette_colors": [
+      "#CC6677",
+      "#332288",
+      "#DDCC77",
+      "#117733",
+      "#88CCEE",
+      "#882255",
+      "#44AA99",
+      "#999933",
+      "#AA4499"
+    ],
+    "group_slots": {
+      "Control": 1,
+      "Treated": 0,
+      "Before": 1,
+      "After": 0,
+      "Model A": 1,
+      "Model B": 0,
+      "Model C": 3,
+      "G1": 1,
+      "G2": 0,
+      "G3": 3,
+      "G4": 5,
+      "G5": 6,
+      "Coding": 1,
+      "Regulatory": 0,
+      "Intergenic": 3
+    },
+    "roles": {
+      "primary": "#CC6677",
+      "negative": "#332288",
+      "positive": "#CC6677",
+      "accent": "#AA4499",
+      "neutral": "#A9B1BA",
+      "significant": "#AA4499",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#CC6677"
+      ],
+      "diverging": [
+        "#332288",
+        "#F8F8F7",
+        "#CC6677"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "experimental_unit": "Synthetic display records; independent units require actual analysis context",
+    "filtering": "No aesthetic exclusions",
+    "denominator": "Complete supplied table; model evaluation counts never summed across models",
+    "uncertainty": "Only supplied illustrative bounds; no inference performed",
+    "synthetic": true,
+    "contrast": "Frozen result visualization demonstration",
+    "input_unit": "\u8c03\u63a7\u56e0\u5b50\u00d7\u6837\u672c\u5df2\u7ed9\u6709\u7b26\u53f7\u8bc4\u5206\u3001\u6837\u672c\u8eab\u4efd/\u6761\u4ef6\u3001\u8bc4\u5206\u7248\u672c\u4e0e\u8986\u76d6\u8bf4\u660e",
+    "limits": "Saved drawing limits and result definitions",
+    "interpretation_limit": "\u4e0d\u628a\u8bc4\u5206\u5f53\u56e0\u679c\u6d3b\u6027\uff1b\u7f3a\u5931\u9776\u6807\u8986\u76d6\u548c\u6b63\u8d1f\u6743\u91cd\u5b9a\u4e49\u5fc5\u987b\u7531\u4e0a\u6e38\u4fdd\u7559\u3002",
+    "source": "Original deterministic procedural software fixture, not a research dataset",
+    "model": "No upstream scientific model executed"
+  },
+  "parameters": {
+    "kind": "matrix",
+    "options": {
+      "title": "Regulator activity",
+      "limits": [
+        -1,
+        1
+      ],
+      "scale_type": "signed",
+      "y_label": "Activity score"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original deterministic procedural software fixture, not a research dataset",
+      "independent_unit": "Synthetic software display units only",
+      "denominator": "All rows in the bound fixture",
+      "value_definition": "Existing frozen values; no scientific analysis rerun",
+      "uncertainty_definition": "Supplied illustrative bounds where present; no interval calculated"
+    }
+  },
+  "appearance": {
+    "preset": "paper"
+  }
+}

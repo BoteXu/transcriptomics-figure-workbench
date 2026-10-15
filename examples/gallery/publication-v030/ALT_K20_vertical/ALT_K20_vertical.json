@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K20_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K20",
+  "arrangement": "vertical",
+  "relationship": "矩阵看共现，数量看支持量；按对象去重避免事件累加",
+  "components": [
+    {
+      "id": "N07",
+      "sha256": "43d3ad5032f23ba1df542988702b28ac695c908ea3a73b36a22d9c4379528955",
+      "input_sha256": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0"
+    },
+    {
+      "id": "AUX_event_counts",
+      "sha256": "d392a39401b8ea1670acb20572bf6014696ddeac6e0d48f0cca13e42374c11ee",
+      "input_sha256": "3e32d3171211a5d391b2b63fbdd6fbbcd797ca5eec8c4ebe78945f91dfce557d"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N07",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 553.5984497070312,
+      "height_pt": 374.1022644042969,
+      "scale": 1
+    },
+    {
+      "id": "AUX_event_counts",
+      "x_pt": 18,
+      "y_pt": 490.1022644042969,
+      "width_pt": 409.1794128417969,
+      "height_pt": 295.94952392578125,
+      "scale": 1
+    }
+  ],
+  "width_pt": 589.5984497070312,
+  "height_pt": 813.0517883300781,
+  "output_sha256": {
+    "ALT_K20_vertical.svg": "9bb01e192d7b0ea9273a6a6351808920cb8d4734100e05b19d4423f8071a9713",
+    "ALT_K20_vertical.png": "6ac97bcde8b35a752ac4aaa0a87299f881211edb9dfee7a664c32def1a42247b",
+    "ALT_K20_vertical.pdf": "d65a0ddcb69a51f9521ead8db3e539f8d86d29bd9c9b4f3106bf9c199fc779f8"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 53,
+    "issues": [],
+    "width_pt": 589.5984497070312,
+    "height_pt": 813.0518188476562
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Multistate matrix, event guide and object counts are readable; measured-none semantics retained.",
+    "png_sha256": "6ac97bcde8b35a752ac4aaa0a87299f881211edb9dfee7a664c32def1a42247b",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K20_vertical.svg": "9bb01e192d7b0ea9273a6a6351808920cb8d4734100e05b19d4423f8071a9713",
+      "ALT_K20_vertical.png": "6ac97bcde8b35a752ac4aaa0a87299f881211edb9dfee7a664c32def1a42247b",
+      "ALT_K20_vertical.pdf": "d65a0ddcb69a51f9521ead8db3e539f8d86d29bd9c9b4f3106bf9c199fc779f8"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

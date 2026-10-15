@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K39_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K39",
+  "arrangement": "vertical",
+  "relationship": "两个panel共用叶端ID；标记指标与可加数量分别保留单位，不能把独立对接能量相加解释亲和力。",
+  "components": [
+    {
+      "id": "E37",
+      "sha256": "aafbd5058a29eea21783ee9befabd64f04d5460ed2464fa484153e40b2e4b4ee",
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba"
+    },
+    {
+      "id": "AUX_c39_stack",
+      "sha256": "7008917c9a1ba20591524f452a28fd48fb50a438c6b890b83a31dcd629f89f11",
+      "input_sha256": "7449a01178e4c017bb1fe19f97d8d5f06e6d615cee8c43a34c16948da0e8bffa"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E37",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 549.5702514648438,
+      "height_pt": 516.0784301757812,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c39_stack",
+      "x_pt": 18,
+      "y_pt": 632.0784301757812,
+      "width_pt": 656.7554321289062,
+      "height_pt": 320.8307189941406,
+      "scale": 1
+    }
+  ],
+  "width_pt": 692.7554321289062,
+  "height_pt": 979.9091491699219,
+  "output_sha256": {
+    "ALT_K39_vertical.svg": "c5d506c448426da08443c64c99023fc128f1b12f2bc9776837117603d294cfc0",
+    "ALT_K39_vertical.png": "57f3edf1e381dbd39d65e6a1e1b5ee3d0c4a49b328eefe2474134e87e8f93358",
+    "ALT_K39_vertical.pdf": "3f9b03b0507a9c1ed2ff3936dcd3c610e2af0695363e35430a372c7dbbbd4715"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 54,
+    "issues": [],
+    "width_pt": 692.7554321289062,
+    "height_pt": 979.9091796875
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Individually inspected: radial hierarchy, quantitative leaf tracks and additive component stack complete. Units, labels and negative color scale retained.",
+    "png_sha256": "57f3edf1e381dbd39d65e6a1e1b5ee3d0c4a49b328eefe2474134e87e8f93358",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K39_vertical.svg": "c5d506c448426da08443c64c99023fc128f1b12f2bc9776837117603d294cfc0",
+      "ALT_K39_vertical.png": "57f3edf1e381dbd39d65e6a1e1b5ee3d0c4a49b328eefe2474134e87e8f93358",
+      "ALT_K39_vertical.pdf": "3f9b03b0507a9c1ed2ff3936dcd3c610e2af0695363e35430a372c7dbbbd4715"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

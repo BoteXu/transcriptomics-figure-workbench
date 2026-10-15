@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "K11",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K11",
+  "arrangement": "default",
+  "relationship": "同时看位置、支持量、类别构成；位置重叠不会隐藏数量",
+  "components": [
+    {
+      "id": "T19",
+      "sha256": "b359ad35e1768da1e8e602cb24310f46827220c6f2fc4c61df5c27dcd70166cd",
+      "input_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+    },
+    {
+      "id": "AUX_subgroup_counts",
+      "sha256": "3bd3f9cea8a9251971b5caed7666e148b27dfad58034e9e39ddbfeb7ce9db59d",
+      "input_sha256": "635d83a0a35272767f4194ef78b3ad914df60cf3ecc29fc4e3685c6c865023bc"
+    },
+    {
+      "id": "AUX_subgroup_shares",
+      "sha256": "a070ab7e7749d969ade58759fa78954ae416ca1a178624f397a224055530f53b",
+      "input_sha256": "48de7fc9962bff4287f3c5533a66bb6e6ace0405d76277ee88422e7d55a6844a"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T19",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 399.3448181152344,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_subgroup_counts",
+      "x_pt": 437.3448181152344,
+      "y_pt": 74,
+      "width_pt": 411.6839294433594,
+      "height_pt": 298.404296875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_subgroup_shares",
+      "x_pt": 297.6733703613281,
+      "y_pt": 427.57861328125,
+      "width_pt": 271.6820068359375,
+      "height_pt": 234.881591796875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 867.0287475585938,
+  "height_pt": 689.460205078125,
+  "output_sha256": {
+    "K11.svg": "8a46f961d0f0bc9027bfd89e9fb15f1ce4f3f937f7311c22fd6a9be54deaba49",
+    "K11.png": "11f319b65adf9a079fa64c52b7e5100a9360fe3a23eb2cdbef64affa8a27b170",
+    "K11.pdf": "b7601f8d959ecc79a9026d27295686885742911d4af14c1ddd93fa0611d5df9b"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 65,
+    "issues": [],
+    "width_pt": 867.0287475585938,
+    "height_pt": 689.460205078125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Location, count and share views separated; rounded share labels and total denominator visible.",
+    "png_sha256": "11f319b65adf9a079fa64c52b7e5100a9360fe3a23eb2cdbef64affa8a27b170",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K11.svg": "8a46f961d0f0bc9027bfd89e9fb15f1ce4f3f937f7311c22fd6a9be54deaba49",
+      "K11.png": "11f319b65adf9a079fa64c52b7e5100a9360fe3a23eb2cdbef64affa8a27b170",
+      "K11.pdf": "b7601f8d959ecc79a9026d27295686885742911d4af14c1ddd93fa0611d5df9b"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

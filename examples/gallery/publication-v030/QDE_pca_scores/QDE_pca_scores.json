@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "QDE_pca_scores",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/qc-de/QDE_pca_scores/QDE_pca_scores.svg",
+  "source_sha256": "8b108ae300c1d679c425f1098cfca6820931058a5962faed987bc39dbe0f0c3a",
+  "source_metadata": "examples/qc-de/QDE_pca_scores/QDE_pca_scores.json",
+  "source_metadata_sha256": "d3054a9b9dc7a4f1caa126444dd193934a267a2d4738695e7bf73482c2546085",
+  "input_table": "examples/qc-de/QDE_pca_scores/QDE_pca_scores.tsv",
+  "input_sha256": "2b3607d5588bc8f873b294bf84731666d79a053b761f24d7652f7946207d09bd",
+  "frozen_graphical_geometry_sha256": "f2bed9beb255144d11837fdd863f55b464a18b384f78c67aa11fb8c7fdfc8181",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 520.2050170898438,
+  "height_pt": 406.44775390625,
+  "raster_dpi": 300,
+  "axis_geometry": [
+    {
+      "axis": 0,
+      "bounds": [
+        0.13,
+        0.2408955223880597,
+        0.59,
+        0.5737313432835821
+      ],
+      "xlim": [
+        -4,
+        4
+      ],
+      "ylim": [
+        -3,
+        3
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear",
+      "rect_pt": [
+        53.17048095703126,
+        57.58121017228312,
+        382.32,
+        276.7679964982218
+      ]
+    }
+  ],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "independent compact guide lane"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO — pca_scores",
+    "SYNTHETIC DEMO | QDE_pca_scores",
+    "Software test fixture; not biological evidence"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -31.06951904296875,
+      -31.842788696289062
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 28,
+    "issues": [],
+    "width_pt": 520.2050170898438,
+    "height_pt": 406.44775390625
+  },
+  "output_sha256": {
+    "QDE_pca_scores.svg": "acaa02134dea0d51a37b9914e67755c3a4efa2954471b4ee9f6afdfe1455fa32",
+    "QDE_pca_scores.png": "62ec98520d51a7abe0c2e9f8dbce054aa112bb417c1b06a4cdaa6d70acf92ae2",
+    "QDE_pca_scores.pdf": "4f341a7946ad55ea0357b3e79bbb67650fe8a88e56a1ca7e54cda8040a82ba5b"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Four supplied scores, project colors, phenotype markers and supplied ellipse are visible; no fit performed.",
+    "png_sha256": "62ec98520d51a7abe0c2e9f8dbce054aa112bb417c1b06a4cdaa6d70acf92ae2",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "QDE_pca_scores.svg": "acaa02134dea0d51a37b9914e67755c3a4efa2954471b4ee9f6afdfe1455fa32",
+      "QDE_pca_scores.png": "62ec98520d51a7abe0c2e9f8dbce054aa112bb417c1b06a4cdaa6d70acf92ae2",
+      "QDE_pca_scores.pdf": "4f341a7946ad55ea0357b3e79bbb67650fe8a88e56a1ca7e54cda8040a82ba5b"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

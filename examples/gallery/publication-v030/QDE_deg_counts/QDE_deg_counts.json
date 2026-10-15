@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "QDE_deg_counts",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/qc-de/QDE_deg_counts/QDE_deg_counts.svg",
+  "source_sha256": "829566546534f23f10f5bd9f6f1b8c6809b6a3c815136f5fc00a8d959633a0ec",
+  "source_metadata": "examples/qc-de/QDE_deg_counts/QDE_deg_counts.json",
+  "source_metadata_sha256": "427ec52c7d15d7d09e82948138f620ae7292c5692d9d232f7cdb07c6ec909903",
+  "input_table": "examples/qc-de/QDE_deg_counts/QDE_deg_counts.tsv",
+  "input_sha256": "23a394fcfc71b0758e6bc2bf5170769d6c5292c3ab3f4dfbe84ed3891726aa26",
+  "frozen_graphical_geometry_sha256": "60519aaaf10945bce693d4901dc3ae92d094fbe825fd9db2f63e98dd6f19c941",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 476.2061462402344,
+  "height_pt": 352.8985900878906,
+  "raster_dpi": 300,
+  "axis_geometry": [
+    {
+      "axis": 0,
+      "bounds": [
+        0.14,
+        0.24333333333333332,
+        0.57,
+        0.5591666666666666
+      ],
+      "xlim": [
+        -0.5900000000000001,
+        3.5900000000000003
+      ],
+      "ylim": [
+        0,
+        23.4
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear",
+      "rect_pt": [
+        51.354843750000015,
+        53.00000030517583,
+        328.32,
+        241.55999999999997
+      ]
+    }
+  ],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "independent compact guide lane"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO — deg_counts",
+    "SYNTHETIC DEMO | QDE_deg_counts",
+    "Software test fixture; not biological evidence"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -29.28515625,
+      -32.31999969482422
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 22,
+    "issues": [],
+    "width_pt": 476.2061462402344,
+    "height_pt": 352.8985900878906
+  },
+  "output_sha256": {
+    "QDE_deg_counts.svg": "8ef6d2e290e7339cf1fafdf5ffd09c4581e2dfcb695ba1204a22835905c8454b",
+    "QDE_deg_counts.png": "be6b089e70fe0cd3342ccac5171ee879ca8497b8757abb198bac7b680169bf7b",
+    "QDE_deg_counts.pdf": "f82194122e2ab4bc6608256f4eb45cc033781f11df2cca879b1d1fbc0ff34986"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Four classes include explicit untested category; all counts readable.",
+    "png_sha256": "be6b089e70fe0cd3342ccac5171ee879ca8497b8757abb198bac7b680169bf7b",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "QDE_deg_counts.svg": "8ef6d2e290e7339cf1fafdf5ffd09c4581e2dfcb695ba1204a22835905c8454b",
+      "QDE_deg_counts.png": "be6b089e70fe0cd3342ccac5171ee879ca8497b8757abb198bac7b680169bf7b",
+      "QDE_deg_counts.pdf": "f82194122e2ab4bc6608256f4eb45cc033781f11df2cca879b1d1fbc0ff34986"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

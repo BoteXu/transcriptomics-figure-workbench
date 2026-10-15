@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "P01",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/figures/P01/P01.svg",
+  "source_sha256": "104c91a9e4f7ac69bfce0cbd368793911e5b1a692bdf99097bd6ac2278e154e5",
+  "source_metadata": "examples/gallery/metadata/P01.json",
+  "source_metadata_sha256": "f31358d39e3328dac90c8a3194ec67737170b3177f2b3071e9e9b9fe49450b6c",
+  "input_table": "examples/gallery/figures/P01/P01.tsv",
+  "input_sha256": "2ce476ea016ae09310ade42a49137860681c3d473963e38009ecccd0b9811e40",
+  "frozen_graphical_geometry_sha256": "a643b601ffcdf4d0a07136763a44963b8c5531619f732af6d7d73946cff1132d",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 542.6015319824219,
+  "height_pt": 364.8201904296875,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO - P01",
+    "Software test fixture; not biological evidence"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      16.40174961090088,
+      31.99928092956543
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 13,
+    "issues": [],
+    "width_pt": 542.6015625,
+    "height_pt": 364.8201904296875
+  },
+  "output_sha256": {
+    "P01.svg": "64ab8b723db15d593a52deee2fbaf2ccbd33844852ad80da946d9b442943f77d",
+    "P01.png": "189734dfa45575ae5e37548ddb26ae07915e7b4a710641a3b51845fe110bac3a",
+    "P01.pdf": "222a4a4715a1c29a0f6da9882b49ca3f5268e359a454cb78baa3d09273eb0bf3"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Two observation groups and axis units clear; no clipping.",
+    "png_sha256": "189734dfa45575ae5e37548ddb26ae07915e7b4a710641a3b51845fe110bac3a",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "P01.svg": "64ab8b723db15d593a52deee2fbaf2ccbd33844852ad80da946d9b442943f77d",
+      "P01.png": "189734dfa45575ae5e37548ddb26ae07915e7b4a710641a3b51845fe110bac3a",
+      "P01.pdf": "222a4a4715a1c29a0f6da9882b49ca3f5268e359a454cb78baa3d09273eb0bf3"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

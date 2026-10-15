@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K27",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K27",
+  "arrangement": "default",
+  "relationship": "随时间的概率变化、不确定性与仍被随访的人数；个体随访长度、断续区间和事件时序",
+  "components": [
+    {
+      "id": "E15",
+      "sha256": "f4f66c79967edd87755bfd0f3fee5843c4225a13a416f3d13ba34512e45c4c50",
+      "input_sha256": "6c744dd7234e9b7cf001dddbb1913d31810f897c8e6a974c7f5f7c7ade23f681"
+    },
+    {
+      "id": "E16",
+      "sha256": "ffbd12067d92deb6c8b5be32786c72e28d55c7265f5e7dd7404e64e6f54802da",
+      "input_sha256": "9efe4e56a132f71cd0114df44dd6b95b3e1ba6cc3b106d1544704521f49fa968"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E15",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 493.5303039550781,
+      "height_pt": 379.59033203125,
+      "scale": 1
+    },
+    {
+      "id": "E16",
+      "x_pt": 531.5303039550781,
+      "y_pt": 74,
+      "width_pt": 495.5912780761719,
+      "height_pt": 328.76422119140625,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1045.12158203125,
+  "height_pt": 480.59033203125,
+  "output_sha256": {
+    "K27.svg": "5ab354d2d49cbb1c56aecda6f67527d5855c31b304e169d68d37aa807d5acc62",
+    "K27.png": "4e16c4e5389b11ea6f8561735567ef91d8535746d22330f64baa6120f42c2f67",
+    "K27.pdf": "463a4eb45b04208b9b454427fcce91fa87cc8ee2c6415e1e92c8cd9b3364588d"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 66,
+    "issues": [],
+    "width_pt": 1045.12158203125,
+    "height_pt": 480.59033203125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Supplied survival, at-risk counts and individual follow-up readable; event/censor guide explicit.",
+    "png_sha256": "4e16c4e5389b11ea6f8561735567ef91d8535746d22330f64baa6120f42c2f67",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K27.svg": "5ab354d2d49cbb1c56aecda6f67527d5855c31b304e169d68d37aa807d5acc62",
+      "K27.png": "4e16c4e5389b11ea6f8561735567ef91d8535746d22330f64baa6120f42c2f67",
+      "K27.pdf": "463a4eb45b04208b9b454427fcce91fa87cc8ee2c6415e1e92c8cd9b3364588d"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

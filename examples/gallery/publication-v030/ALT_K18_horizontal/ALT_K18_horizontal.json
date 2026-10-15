@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K18_horizontal",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K18",
+  "arrangement": "horizontal",
+  "relationship": "宏观看分配，矩阵读局部数值；同一数量两种视角",
+  "components": [
+    {
+      "id": "N04",
+      "sha256": "e4a923a7ad335216d6bd2b895fd473cca85115cda0a553c965d056875108f7fc",
+      "input_sha256": "c92072adec8cc59a5cc1e4e40edfbcab509ac8069a6009d2e88eb8f78116f4a3"
+    },
+    {
+      "id": "AUX_flow_matrix",
+      "sha256": "6a65c91ef853c2d16603fd94fc27abb6be0d813d1d9f8c6ad0e78066cb69fb80",
+      "input_sha256": "36c9c8529b7052d0a0c25caecbb1fe816ed8d4f0e1ff9d1faa62adaed0cf51a2"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N04",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 356.54425048828125,
+      "height_pt": 383.255615234375,
+      "scale": 1
+    },
+    {
+      "id": "AUX_flow_matrix",
+      "x_pt": 394.54425048828125,
+      "y_pt": 74,
+      "width_pt": 407.8175964355469,
+      "height_pt": 298.404296875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 820.3618469238281,
+  "height_pt": 484.255615234375,
+  "output_sha256": {
+    "ALT_K18_horizontal.svg": "f395208bd9a8d6c4ea9d4176e1c0de86d20368a9c4ceffb15a9b4dffdce93e2b",
+    "ALT_K18_horizontal.png": "94d2db7cfb26d3449978c70813fc3bb8a1494c4ed39fb1359d8a99548aee6868",
+    "ALT_K18_horizontal.pdf": "7904923caad19d06b8c30ea05d5471d3bb1dcc2fb6c3e4476a14cb0a1f7bd799"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 32,
+    "issues": [],
+    "width_pt": 820.36181640625,
+    "height_pt": 484.255615234375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Weighted chord labels, ribbon geometry and original matrix remain clear, unsigned semantics explicit.",
+    "png_sha256": "94d2db7cfb26d3449978c70813fc3bb8a1494c4ed39fb1359d8a99548aee6868",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K18_horizontal.svg": "f395208bd9a8d6c4ea9d4176e1c0de86d20368a9c4ceffb15a9b4dffdce93e2b",
+      "ALT_K18_horizontal.png": "94d2db7cfb26d3449978c70813fc3bb8a1494c4ed39fb1359d8a99548aee6868",
+      "ALT_K18_horizontal.pdf": "7904923caad19d06b8c30ea05d5471d3bb1dcc2fb6c3e4476a14cb0a1f7bd799"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

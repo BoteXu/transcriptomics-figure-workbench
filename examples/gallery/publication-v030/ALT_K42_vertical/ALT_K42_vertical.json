@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K42_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K42",
+  "arrangement": "vertical",
+  "relationship": "矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。",
+  "components": [
+    {
+      "id": "E47",
+      "sha256": "aa29faab9ab10166413584db3e2b899ca7b7744fa8544a94c3c0937c8796013e",
+      "input_sha256": "6112589d125beff9504430c0a72f1e1c7fb0869fb053057f08b7c531435da858"
+    },
+    {
+      "id": "E51",
+      "sha256": "1ef37a62473bf1f4f45e74a96208ca82b3bd0878bb08d236c708aae871369ea4",
+      "input_sha256": "a0a50217649ef1fe054afdb25462d21bb9dfec6c2afdd2552862689ecac257a3"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E47",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 441.45635986328125,
+      "height_pt": 308.2254638671875,
+      "scale": 1
+    },
+    {
+      "id": "E51",
+      "x_pt": 18,
+      "y_pt": 424.2254638671875,
+      "width_pt": 484.8348388671875,
+      "height_pt": 340.9417419433594,
+      "scale": 1
+    }
+  ],
+  "width_pt": 520.8348388671875,
+  "height_pt": 792.1672058105469,
+  "output_sha256": {
+    "ALT_K42_vertical.svg": "05ac70737e2ec1bb6c685323b6b6efc8d140dcd322cb38aa5d59bd4f401fc992",
+    "ALT_K42_vertical.png": "70f1748fec2ad3f7ad10ff92e413464299df818e87398859e29c77639f40d057",
+    "ALT_K42_vertical.pdf": "57c00b7cdd37a0fe5247bccd03773529a963fe4275b24fa8d3193472ea8c0d6d"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 52,
+    "issues": [],
+    "width_pt": 520.8348388671875,
+    "height_pt": 792.167236328125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Individually inspected: regulator activity matrix and complete additive signed contributions retain labels, independent units and total. No clipping or overlap.",
+    "png_sha256": "70f1748fec2ad3f7ad10ff92e413464299df818e87398859e29c77639f40d057",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K42_vertical.svg": "05ac70737e2ec1bb6c685323b6b6efc8d140dcd322cb38aa5d59bd4f401fc992",
+      "ALT_K42_vertical.png": "70f1748fec2ad3f7ad10ff92e413464299df818e87398859e29c77639f40d057",
+      "ALT_K42_vertical.pdf": "57c00b7cdd37a0fe5247bccd03773529a963fe4275b24fa8d3193472ea8c0d6d"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

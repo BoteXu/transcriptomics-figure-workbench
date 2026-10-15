@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FigureSpec 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "figure_id",
+    "renderer",
+    "input",
+    "theme",
+    "parameters",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "figure_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,79}$"
+    },
+    "renderer": {
+      "type": "string"
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "numeric_columns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "max_rows": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "max_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20971520
+        }
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "description": "Only parameters from the selected generated callable signature are accepted."
+    },
+    "theme": {
+      "type": "object",
+      "description": "Existing complete project-theme schema 1; source card and identity capacity are checked."
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contrast",
+        "denominator",
+        "experimental_unit",
+        "filtering",
+        "input_unit",
+        "interpretation_limit",
+        "limits",
+        "model",
+        "source",
+        "synthetic",
+        "uncertainty"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "experimental_unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contrast": {
+          "type": "string",
+          "minLength": 1
+        },
+        "denominator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limits": {
+          "type": "string",
+          "minLength": 1
+        },
+        "filtering": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uncertainty": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interpretation_limit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "synthetic": {
+          "type": "boolean"
+        }
+      }
+    },
+    "appearance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "preset": {
+          "enum": [
+            "paper",
+            "compact",
+            "presentation",
+            "large_print"
+          ]
+        },
+        "font_family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label_pt": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 40
+        },
+        "tick_pt": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 40
+        },
+        "title_pt": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 40
+        },
+        "note_pt": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 40
+        },
+        "line_width": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 40
+        }
+      }
+    },
+    "export": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "raster_dpi": {
+          "enum": [
+            300,
+            600
+          ]
+        },
+        "tiff": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "description": "Structural exchange schema. The fixed registry and runtime validator enforce selected parameters, local file bounds and theme bindings."
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "S01",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/publication-inputs-v030/S01.svg",
+  "source_sha256": "554546f0274289e9c2cf38a2824c62caa8c39d88ebd9826cd0d4cd261b598e7a",
+  "source_metadata": "examples/gallery/metadata/S01.json",
+  "source_metadata_sha256": "d57068ad681b46dd5664fc4d0ff0810ac498bfe040e2bcc3ac39e3498935ddb2",
+  "input_table": null,
+  "input_sha256": null,
+  "frozen_graphical_geometry_sha256": "32c3fcaa6dd11f7da4762fb2848c4eb89be4a0350f7aae52eb134747dda3507e",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 316,
+  "height_pt": 377.93457943925233,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "finishing_patch": {
+    "body_bounds": [
+      0,
+      0,
+      280,
+      300.93457943925233
+    ]
+  },
+  "finisher_sha256": "30aea7228da91c17318b348c0f6936f615e1eb2ed75f6f404077d1b19d17fb10",
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "explicit visible-body bounds: [0,0,280,300.93457943925233]"
+  ],
+  "removed_page_furniture": [],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      18,
+      53
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 3,
+    "issues": [],
+    "width_pt": 316,
+    "height_pt": 377.9345703125
+  },
+  "output_sha256": {
+    "S01.svg": "29030fd3f262803ea7bbe60c7fa143106f91213868385d18e87fcad630e5abf4",
+    "S01.png": "36209dc35964afb3496429fe281a63eb90032cd93ee9ae32dd2107ea5a7a6c8b",
+    "S01.pdf": "b1dbac5b23d57b4c43ac7d6c28f03f046a4e106854d49338416133b1799ea7f6"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Original structure raster preserved, tight crop gives a clear large cartoon with readable title.",
+    "png_sha256": "36209dc35964afb3496429fe281a63eb90032cd93ee9ae32dd2107ea5a7a6c8b",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "S01.svg": "29030fd3f262803ea7bbe60c7fa143106f91213868385d18e87fcad630e5abf4",
+      "S01.png": "36209dc35964afb3496429fe281a63eb90032cd93ee9ae32dd2107ea5a7a6c8b",
+      "S01.pdf": "b1dbac5b23d57b4c43ac7d6c28f03f046a4e106854d49338416133b1799ea7f6"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

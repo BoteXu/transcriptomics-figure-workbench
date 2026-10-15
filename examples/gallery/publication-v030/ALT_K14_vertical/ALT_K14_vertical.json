@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K14_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K14",
+  "arrangement": "vertical",
+  "relationship": "网络看拓扑，矩阵精确定位边；两者可以互相核对",
+  "components": [
+    {
+      "id": "N01",
+      "sha256": "b18c8002bada27e00f653dadbe982b852733c32a0e6550ae80115fbe0432762c",
+      "input_sha256": "d8727314f4134564b9ffd7e8573d8e49d1d3a5b563976f7dbbe5bf00aacc6f68"
+    },
+    {
+      "id": "AUX_adjacency",
+      "sha256": "33343c24da7226aca26fb7b7dee0f713045d2f3fbef9ec412c8cb6347931a50d",
+      "input_sha256": "a4f7bce33fa9773f07574cccd7c33d433e51e9420ec40c65fdd935e124a817e9"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N01",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 434.5043640136719,
+      "height_pt": 339.6521301269531,
+      "scale": 1
+    },
+    {
+      "id": "AUX_adjacency",
+      "x_pt": 18,
+      "y_pt": 455.6521301269531,
+      "width_pt": 431.0843811035156,
+      "height_pt": 298.8007507324219,
+      "scale": 1
+    }
+  ],
+  "width_pt": 470.5043640136719,
+  "height_pt": 781.452880859375,
+  "output_sha256": {
+    "ALT_K14_vertical.svg": "7d48185d29141ea61c1ac3b6c86b41b3060060f953cf4097c1a2c3e857c16f43",
+    "ALT_K14_vertical.png": "9e2ecd86699ad3ac97ff7cfffce44e53a921182bf1188adbc58a85dad6d9b6fb",
+    "ALT_K14_vertical.pdf": "342d99b6057bd91661b38bf43fbba47296c38a863cd5f5a454960176276175d0"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 74,
+    "issues": [],
+    "width_pt": 470.5043640136719,
+    "height_pt": 781.452880859375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Typed signed network and exact adjacency matrix have legible labels and separate sign/shape/color guides.",
+    "png_sha256": "9e2ecd86699ad3ac97ff7cfffce44e53a921182bf1188adbc58a85dad6d9b6fb",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K14_vertical.svg": "7d48185d29141ea61c1ac3b6c86b41b3060060f953cf4097c1a2c3e857c16f43",
+      "ALT_K14_vertical.png": "9e2ecd86699ad3ac97ff7cfffce44e53a921182bf1188adbc58a85dad6d9b6fb",
+      "ALT_K14_vertical.pdf": "342d99b6057bd91661b38bf43fbba47296c38a863cd5f5a454960176276175d0"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

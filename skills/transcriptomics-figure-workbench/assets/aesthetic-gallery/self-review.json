@@ -1,0 +1,161 @@
+{
+  "status": "SELF_REVIEW_COMPLETED_PENDING_PROJECT_AND_USER_REVIEW",
+  "reviewed_at_utc": "2026-10-15T01:35:16.477860+00:00",
+  "scope": "Direct screen inspection of all twelve actual exported PNGs; final A03 inspected after point-layout revision. Other final PNG hashes matched the individually inspected revision. Browser and software checks recorded separately.",
+  "earlier_eight_mechanical_fixtures": "AESTHETIC_REVIEW_FAILED_REQUIRES_REDRAW",
+  "scientific_acceptance": false,
+  "user_aesthetic_acceptance": false,
+  "not_reviewed": [
+    "Print proofs",
+    "Per-device font rendering",
+    "All 260 historical figures",
+    "Real project data",
+    "Individual PDF pages by rendered pixels"
+  ],
+  "records": [
+    {
+      "id": "A01",
+      "kind": "volcano",
+      "renderer": "editorial",
+      "source_id": "P08",
+      "source_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10",
+      "png_sha256": "fb2958f1c94e33fbfcada55d74cd74c82cd5e2aacd417b28e9ee0233e29120ae",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Reduced title weight and separated guide lane. All 420 supplied features retained. Exact labels/annotations should be selected explicitly for a real study.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "A02",
+      "kind": "forest",
+      "renderer": "editorial",
+      "source_id": "E21",
+      "source_sha256": "68cb15dc00ee3e89619c44d1791ade9feeae0b6bd25a015a5b3f19a30cf82f41",
+      "png_sha256": "84cdff811dba12d5f8d3424ce3c407c15c51b93623d40595749a741f146545e2",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Removed fragmented row bands; readable charcoal comparison and interval text. Existing illustrative intervals remain unchanged.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "A03",
+      "kind": "paired",
+      "renderer": "editorial",
+      "source_id": "P03",
+      "source_sha256": "74b6486c65b97f4898c62837bcdadd550414ffb2cd6feba0610ade65e016fd6e",
+      "png_sha256": "fee1db6fb6719e8f600da2852d6d30b0a653eb1967efe62072d762e135e647f0",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "All 12 complete pairs visible; shared within-pair horizontal glyph displacement separates close endpoints without changing Y values.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "A04",
+      "kind": "roc",
+      "renderer": "editorial",
+      "source_id": "P25a",
+      "source_sha256": "deb7b0523c961b42e4aadb8f1ef42f10d589cb9f27ee5a3063e9ab8f9fea284b",
+      "png_sha256": "590fe202aa71dd0e18479a2d51f95d3c1707076812ab088ed84904d6b01188cd",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Three step curves distinguished by line style and color; guide outside data. No AUC or validation accuracy inferred.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "A05",
+      "kind": "rank",
+      "renderer": "editorial",
+      "source_id": "N09",
+      "source_sha256": "9b0b7ea04240b452b05ccb95b83550dbfbe188cdd3f58ad1e8da1bdefb963ed9",
+      "png_sha256": "ceb6bd8e87514d3dcaa76773b9694c54108001192c86b18cbf9688242adb688b",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Integer ranks and direct endpoint labels replace fractional ordinal ticks. All five series and four stages retained.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "A06",
+      "kind": "matrix",
+      "renderer": "editorial",
+      "source_id": "E47",
+      "source_sha256": "6112589d125beff9504430c0a72f1e1c7fb0869fb053057f08b7c531435da858",
+      "png_sha256": "e16a4712e517921f6317aa1150cc10a070d71d3686b9ba2a6f0c7c64dbd8b771",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Narrower colorbar and controlled label/cell proportions. Fixed signed scale retained; no clustering or rescaling.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "B01",
+      "kind": "mosaic",
+      "renderer": "mosaic_counts",
+      "source_id": "mosaic",
+      "source_sha256": "5480b608bbd220a65f7db0f41d322f70eb124ff7b8b622606ebf3a476c08dbc0",
+      "png_sha256": "fc3a08d7f87ba76386e505b6278d365aff919d88dd2296a918bdde9c39c90302",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Widths and heights have separate declared meanings; totals shown below columns. Thin borders may obscure very small cells; do not treat this as a precision table.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "B02",
+      "kind": "waffle",
+      "renderer": "waffle_counts",
+      "source_id": "waffle",
+      "source_sha256": "da0b01f6aab12b71d496e1a5fba81708cec15b2cf6038edd279427aacb3b0458",
+      "png_sha256": "d577b56d0cece53b9b3d0137d84795176b6958fcc3801811816d630def38b1f8",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "60 exact tiles and numeric category counts; no rounding. Use another view for hundreds of units or many categories.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "B03",
+      "kind": "horizon",
+      "renderer": "horizon_series",
+      "source_id": "horizon",
+      "source_sha256": "33df9596849fd20c2b7c5f25895e0441b9fd998c8fb0b46aa2c6fdeaf038be99",
+      "png_sha256": "dda0f3acd0db97abc0fce3ec80f2c831f6ae37d2612e558ae28dff29e5072514",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Folded magnitude bands have a full linear reference panel. Recommended supplementary overview; linear view is clearer for exact comparisons.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "B04",
+      "kind": "connected",
+      "renderer": "connected_scatter",
+      "source_id": "connected",
+      "source_sha256": "96938a1307f00cbef0178d2ee3c07457e15f9025e523e1ff3115f6e1fdf67d13",
+      "png_sha256": "22bf048c54d91a4469ad9ffc7acb5dbb4ecdb09a5ee3191bf6f13b705fd52b30",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Footer/X-label collision found in round 2 and repaired. Start/end identities visible, supplied straight segments and coordinates retained.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "B05",
+      "kind": "mirror",
+      "renderer": "mirrored_bars",
+      "source_id": "mirror",
+      "source_sha256": "1e9e5b144a4d97223da5d7e29a93fdbc92fae1bfc1bcfad22c728e35bfeba911",
+      "png_sha256": "16729006bcc602289069d5093d50c281810dc44646f421b8da974e31b6438361",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Shared zero, mirrored magnitudes and exact labels. Left side does not imply negative measurements or an effect sign.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    },
+    {
+      "id": "B06",
+      "kind": "rainfall",
+      "renderer": "genomic_rainfall",
+      "source_id": "rainfall",
+      "source_sha256": "06258a62a6a307380467f1a69017be2a018d0c459d4ca4bec6b89575dc67576d",
+      "png_sha256": "e2bd2cd7bba0c5bb095f0cf5bda0ba44915930a4d6519715b2781fbdf13d740d",
+      "status": "RENDERED_UNREVIEWED",
+      "review_notes": "Long footer clipping and second-panel minor-tick rail found in round 2 and repaired. Shared log-gap scale; supplied gaps are not validated mutation hotspots.",
+      "self_review": "SCREEN_REVIEW_COMPLETED",
+      "user_acceptance": false
+    }
+  ]
+}

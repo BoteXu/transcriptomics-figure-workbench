@@ -1,0 +1,79 @@
+// Actual isolated-browser acceptance. Use an installed Playwright, never auto-install here.
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {pathToFileURL} from 'node:url';
+const [url,output,specPath]=process.argv.slice(2);
+if(!url||!output||!specPath)throw Error('Supply selected Studio URL, fresh result directory and synthetic FigureSpec');
+await fs.mkdir(output,{recursive:false});
+const modulePath=process.env.FIGURE_PLAYWRIGHT_MODULE;
+const {chromium}=modulePath?await import(pathToFileURL(modulePath)):await import('playwright');
+const options={headless:true};
+if(process.env.FIGURE_BROWSER_EXECUTABLE)options.executablePath=process.env.FIGURE_BROWSER_EXECUTABLE;
+else if(process.platform==='win32')options.channel='msedge';
+const browser=await chromium.launch(options);
+const context=await browser.newContext({viewport:{width:1440,height:1050},acceptDownloads:true});
+const page=await context.newPage(),errors=[],external=[];
+page.on('pageerror',e=>errors.push(e.message));
+await page.route('**/*',route=>{
+  const value=route.request().url();
+  if(value.startsWith(new URL(url).origin+'/')||value.startsWith('data:')||value.startsWith('blob:'))return route.continue();
+  external.push(value);return route.abort();
+});
+const checks=[];
+try{
+  await page.goto(url,{waitUntil:'networkidle'});
+  const registry=JSON.parse(await page.locator('#studio-data').textContent()).registry;
+  assert.equal(await page.locator('#catalog-count').innerText(),String(registry.counts.python_functions));checks.push('all source-derived callable entries visible');
+  await page.waitForSelector('.svg-frame',{timeout:8000});
+  await page.frameLocator('#preview-content iframe').locator('svg').waitFor();
+  assert.match(await page.frameLocator('#preview-content iframe').locator('svg').textContent(),/\u2212/);
+  assert.equal(await page.locator('#preview-state').innerText(),'PREVIEW_EDIT_UNREVIEWED');
+  await page.screenshot({path:path.join(output,'studio-desktop.png'),fullPage:true});
+  await page.locator('#search').fill('雨云');assert.equal(await page.locator('#catalog-list button').count(),1);
+  await page.locator('#catalog-list button').click();assert.match(await page.locator('#renderer-detail').innerText(),/density_min_n/);checks.push('search resolves actual parameters');
+  await page.locator('#search').fill('');await page.locator('#catalog-mode').selectOption('example');
+  assert.equal(await page.locator('#catalog-count').innerText(),'260');
+  const ids=await page.evaluate(()=>JSON.parse(document.getElementById('studio-data').textContent).examples.slice(0,2).map(x=>x.id));
+  for(const id of ids){await page.locator('#search').fill(id);await page.locator('#catalog-list button').first().click();await page.getByRole('button',{name:'添加到组图草案'}).click();}
+  await page.getByRole('button',{name:'组图排版',exact:true}).click();assert.equal(await page.locator('.board-panel').count(),2);
+  await page.locator('.board-panel').first().dragTo(page.locator('.board-panel').nth(1));
+  const boardDownload=page.waitForEvent('download');await page.locator('#export-board').click();const board=await boardDownload;
+  await board.saveAs(path.join(output,'composition-draft.json'));
+  const draft=JSON.parse(await fs.readFile(path.join(output,'composition-draft.json'),'utf8'));
+  assert.equal(draft.status,'LAYOUT_DRAFT');assert.deepEqual(draft.panels.map(x=>x.id),[ids[1],ids[0]]);checks.push('260 historical IDs, drag reorder and draft export');
+  await page.locator('#spec-file').setInputFiles(specPath);
+  const originalSpec=JSON.parse(await fs.readFile(specPath,'utf8'));
+  const svgPath=path.join(path.dirname(path.dirname(specPath)),originalSpec.figure_id,originalSpec.figure_id+'.svg');
+  const receiptPath=svgPath.replace(/\.svg$/,'.json');
+  await page.locator('#spec-file').setInputFiles(receiptPath);
+  const bad='<svg xmlns="http://www.w3.org/2000/svg"><text x="0" y="20">unrelated fixture</text></svg>';
+  await page.locator('#svg-file').setInputFiles({name:'wrong.svg',mimeType:'image/svg+xml',buffer:Buffer.from(bad)});
+  await page.waitForFunction(()=>document.getElementById('message').textContent.includes('哈希不匹配'));
+  await page.locator('#svg-file').setInputFiles(svgPath);
+  await page.waitForFunction(()=>document.getElementById('asset-label').textContent.includes('WB_ma.svg'));
+  await page.locator('#font-family').fill('DejaVu Sans');await page.locator('#text-scale').fill('125');
+  await page.getByRole('button',{name:'修改前后',exact:true}).click();assert.equal(await page.locator('#before-view iframe').count(),1);
+  assert.equal(await page.locator('#after-view iframe').count(),1);checks.push('local SVG import, font scale and before-after preview');
+  await page.frameLocator('#before-view iframe').locator('text').first().waitFor();
+  await page.frameLocator('#after-view iframe').locator('text').first().waitFor();
+  await page.screenshot({path:path.join(output,'studio-compare.png'),fullPage:true});
+  await page.locator('#raster-dpi').selectOption('600');await page.locator('#include-tiff').check();
+  const exported=page.waitForEvent('download');await page.locator('#export-spec').click();const download=await exported;
+  await download.saveAs(path.join(output,'redraw.spec.json'));
+  const original=JSON.parse(await fs.readFile(specPath,'utf8')),redraw=JSON.parse(await fs.readFile(path.join(output,'redraw.spec.json'),'utf8'));
+  assert.deepEqual(redraw.input,original.input);assert.deepEqual(redraw.parameters,original.parameters);assert.deepEqual(redraw.provenance,original.provenance);assert.deepEqual(redraw.theme,original.theme);
+  assert.equal(redraw.appearance.font_family,'DejaVu Sans');assert.equal(redraw.appearance.label_pt,12.5);assert.equal(redraw.export.raster_dpi,600);assert.equal(redraw.export.tiff,true);checks.push('redraw export preserves inputs and scientific parameters');
+  const unsafe=await page.evaluate(()=>{
+    const source=['<script>alert(1)</script>','<image href="https://example.invalid/x.png"/>','<rect onclick="alert(1)"/>','<foreignObject/>','<style>@import "https://example.invalid/a.css";</style>'];
+    return source.map(x=>{try{window.FigureStudioCore.safeSVG('<svg xmlns="http://www.w3.org/2000/svg">'+x+'</svg>');return false;}catch{return true;}});
+  });assert.ok(unsafe.every(Boolean));checks.push('five active or remote SVG inputs refused');
+  assert.equal(external.length,0);assert.deepEqual(errors,[]);checks.push('no page errors or external requests');
+  await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(output,'studio-mobile.png'),fullPage:true});
+  assert.ok(await page.locator('#export-spec').isVisible());checks.push('responsive narrow layout');
+  const report={status:'STUDIO_BROWSER_PASS',checks,external_requests:0,scientific_acceptance:false};
+  await fs.writeFile(path.join(output,'browser-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
+}catch(error){
+  await page.screenshot({path:path.join(output,'failure.png'),fullPage:true});
+  console.error(JSON.stringify({message:error.message,page_errors:errors,ui_message:await page.locator('#message').innerText()}));throw error;
+}finally{await context.close();await browser.close();}

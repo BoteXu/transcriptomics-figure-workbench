@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K09_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K09",
+  "arrangement": "vertical",
+  "relationship": "分类位置与同一批对象的特征强度、覆盖比例同时展示",
+  "components": [
+    {
+      "id": "T19",
+      "sha256": "b359ad35e1768da1e8e602cb24310f46827220c6f2fc4c61df5c27dcd70166cd",
+      "input_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+    },
+    {
+      "id": "AUX_marker_fraction",
+      "sha256": "5937d0308649bdf15b1df16520621b932011f535c888e289312da9a9aa001ce0",
+      "input_sha256": "55e02200fefb346fe4b557740874cadee3048f7112684c2e508fb475976f029d"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T19",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 399.3448181152344,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_fraction",
+      "x_pt": 18,
+      "y_pt": 427.57861328125,
+      "width_pt": 530.3251342773438,
+      "height_pt": 286.5923767089844,
+      "scale": 1
+    }
+  ],
+  "width_pt": 566.3251342773438,
+  "height_pt": 741.1709899902344,
+  "output_sha256": {
+    "ALT_K09_vertical.svg": "579b255d12fe76b37435da489b16d029aba9da7089a709101ca55ab21a56f06d",
+    "ALT_K09_vertical.png": "0e558506506d3ccea15755ca4e0a82fdda6a55cb8cb762da27ae1008f80b12de",
+    "ALT_K09_vertical.pdf": "ddbe656d6de91db458d7121f1ea05384830e35d22ea0dc885d50419b7ecdb843"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 52,
+    "issues": [],
+    "width_pt": 566.3251342773438,
+    "height_pt": 741.1710205078125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Coordinate and dot-matrix panels retain distinct color and area guides with no legend collision.",
+    "png_sha256": "0e558506506d3ccea15755ca4e0a82fdda6a55cb8cb762da27ae1008f80b12de",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K09_vertical.svg": "579b255d12fe76b37435da489b16d029aba9da7089a709101ca55ab21a56f06d",
+      "ALT_K09_vertical.png": "0e558506506d3ccea15755ca4e0a82fdda6a55cb8cb762da27ae1008f80b12de",
+      "ALT_K09_vertical.pdf": "ddbe656d6de91db458d7121f1ea05384830e35d22ea0dc885d50419b7ecdb843"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

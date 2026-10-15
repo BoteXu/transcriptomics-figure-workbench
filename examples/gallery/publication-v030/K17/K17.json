@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K17",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K17",
+  "arrangement": "default",
+  "relationship": "流带看对应路径，堆叠看各阶段总体构成；分母一致",
+  "components": [
+    {
+      "id": "N05",
+      "sha256": "ae0c0d515aed7587e1c3f3f48be6ed38ecd6df662113158139ab135050e5c33a",
+      "input_sha256": "497982e006e28c9bf5f8696ee16e27911f0e48b9d592dea252ac37f436946a62"
+    },
+    {
+      "id": "AUX_stage_composition",
+      "sha256": "f0d55b077bf4817ab953b1aa87f5fb58c21ac3e52ad1bf7dbf950c8bed2ec485",
+      "input_sha256": "8fd008ce23af91e587f465e3243c31c63d1da0c2623b2ad0567f89b96f707f0d"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N05",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 459.2945556640625,
+      "height_pt": 396.53228759765625,
+      "scale": 1
+    },
+    {
+      "id": "AUX_stage_composition",
+      "x_pt": 497.2945556640625,
+      "y_pt": 74,
+      "width_pt": 409.1794128417969,
+      "height_pt": 316.3029479980469,
+      "scale": 1
+    }
+  ],
+  "width_pt": 924.4739685058594,
+  "height_pt": 497.53228759765625,
+  "output_sha256": {
+    "K17.svg": "2a059f0dc98db3a1f540eee6ee01d93478bd662d3c88cd5aa798c54ac57e9a09",
+    "K17.png": "25667e5f666fdb6ff8ad2437d1d76370d58912b79f751f96bbb29596ea456667",
+    "K17.pdf": "ad1ab5acad2ffe39e33cd2ceece6e3d204e5430ee7ae8a6f7dacd2db94958e62"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 44,
+    "issues": [],
+    "width_pt": 924.4739990234375,
+    "height_pt": 497.53228759765625
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Alluvial paths and stage composition retain same identity colors and full weight/denominator notes.",
+    "png_sha256": "25667e5f666fdb6ff8ad2437d1d76370d58912b79f751f96bbb29596ea456667",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K17.svg": "2a059f0dc98db3a1f540eee6ee01d93478bd662d3c88cd5aa798c54ac57e9a09",
+      "K17.png": "25667e5f666fdb6ff8ad2437d1d76370d58912b79f751f96bbb29596ea456667",
+      "K17.pdf": "ad1ab5acad2ffe39e33cd2ceece6e3d204e5430ee7ae8a6f7dacd2db94958e62"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

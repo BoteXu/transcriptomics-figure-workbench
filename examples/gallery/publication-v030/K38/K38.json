@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "K38",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K38",
+  "arrangement": "default",
+  "relationship": "诊断值、树、模块身份、性状关系和成员评分均为已有结果；对象ID与模块身份有显式对应。",
+  "components": [
+    {
+      "id": "AUX_c38_fit",
+      "sha256": "c33ee6a317de68298120947a1db7ba2aa777a590e97813ef7ca8e7ef9adebf16",
+      "input_sha256": "54d227bf543facf986d3e61db9671b52fa6c0c69029165e751640da80eed800c"
+    },
+    {
+      "id": "AUX_c38_degree",
+      "sha256": "655da5a8faaea72df996f94bd7ff503311f2aa3ca8e8f0e8eeeb470940b592ec",
+      "input_sha256": "b833abe8e7ffff86dc84b251011790b1db892d2e49b366e1a48ed925c07de37e"
+    },
+    {
+      "id": "E36",
+      "sha256": "777662fec21d96499d7d6dba4267ec7de61dc33f436ab182412495ff4da282b0",
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba"
+    },
+    {
+      "id": "E35",
+      "sha256": "e5848ee28e4b74ad97ad6a164f3391fe718a42ef25deb40895cd60b57183123f",
+      "input_sha256": "9848b8a6bad07be531c6fc8386a4bbdab4bda5ab1c78477d947f3cee09294e9a"
+    },
+    {
+      "id": "AUX_c38_scores",
+      "sha256": "573c1e30c4cdc3738d6ba32453caa5150b072d54bd1aa9faf8cbad4420eba1d1",
+      "input_sha256": "b751f5a434b4b937b1e507ea22b40b9ea46bbbf36a48493dfe32a410dabca184"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "AUX_c38_fit",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 425.9333190917969,
+      "height_pt": 270.60662841796875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c38_degree",
+      "x_pt": 719.4353637695312,
+      "y_pt": 74,
+      "width_pt": 428.4378356933594,
+      "height_pt": 270.60662841796875,
+      "scale": 1
+    },
+    {
+      "id": "E36",
+      "x_pt": 18,
+      "y_pt": 386.60662841796875,
+      "width_pt": 681.4353637695312,
+      "height_pt": 348.49102783203125,
+      "scale": 1
+    },
+    {
+      "id": "E35",
+      "x_pt": 719.4353637695312,
+      "y_pt": 386.60662841796875,
+      "width_pt": 523.434814453125,
+      "height_pt": 341.2537841796875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c38_scores",
+      "x_pt": 417.4684295654297,
+      "y_pt": 777.09765625,
+      "width_pt": 425.9333190917969,
+      "height_pt": 271.4287109375,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1260.8701782226562,
+  "height_pt": 1075.5263671875,
+  "output_sha256": {
+    "K38.svg": "8b069564d8758c54e88fa2605b98f400c1f1be65128824594285e61d75d8ee18",
+    "K38.png": "eeeeec7d011f5bd858a8e8c2e760e4b37ed4dd797360d80cb224002fce9e994a",
+    "K38.pdf": "c81ac89eec48c1d432391e5b26b32b803d0f77eef73bfa246fb71ff91c163c5d"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 121,
+    "issues": [],
+    "width_pt": 1260.8701171875,
+    "height_pt": 1075.5263671875
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Individually inspected: power diagnostics, supplied hierarchy/module tracks, independent matrix scales and MM/GS scatter remain complete. No clipping or refitting.",
+    "png_sha256": "eeeeec7d011f5bd858a8e8c2e760e4b37ed4dd797360d80cb224002fce9e994a",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K38.svg": "8b069564d8758c54e88fa2605b98f400c1f1be65128824594285e61d75d8ee18",
+      "K38.png": "eeeeec7d011f5bd858a8e8c2e760e4b37ed4dd797360d80cb224002fce9e994a",
+      "K38.pdf": "c81ac89eec48c1d432391e5b26b32b803d0f77eef73bfa246fb71ff91c163c5d"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

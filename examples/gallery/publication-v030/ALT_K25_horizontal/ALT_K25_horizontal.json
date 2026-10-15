@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K25_horizontal",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K25",
+  "arrangement": "horizontal",
+  "relationship": "两种测量的取值范围与关系，和差值相合图联合查看；量程相关偏差与个体差值分布",
+  "components": [
+    {
+      "id": "E24",
+      "sha256": "981fb1822f241a7acf91b17466ed4f36288a2cb050d7fe6fca2966239b4d022a",
+      "input_sha256": "624cef0005b8cb49310464d184f962749fcdeeeb2b1c6754013f76d18adcc761"
+    },
+    {
+      "id": "E14",
+      "sha256": "a36f4f714c8a262f4c105a3511975a8f80d1aaace7fa2c7dd740ad6f8d663d6b",
+      "input_sha256": "0708e92e613bfdf1dbb98d74a71e8213ee0829cf0b49831653baf1fbe232938c"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E24",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 423.43280029296875,
+      "height_pt": 270.60662841796875,
+      "scale": 1
+    },
+    {
+      "id": "E14",
+      "x_pt": 461.43280029296875,
+      "y_pt": 74,
+      "width_pt": 463.80950927734375,
+      "height_pt": 323.9546203613281,
+      "scale": 1
+    }
+  ],
+  "width_pt": 943.2423095703125,
+  "height_pt": 424.9546203613281,
+  "output_sha256": {
+    "ALT_K25_horizontal.svg": "354646caa5929f8558966eb900bfb48a3413241e9964a05e12866bd4a1fd9572",
+    "ALT_K25_horizontal.png": "b38b31d71340ed01e3c3fb27ce9d9aac6882812e872c8f5119797e9407153d40",
+    "ALT_K25_horizontal.pdf": "24fbe69aad3586b4494ac926be54197027bb67ba2be2e1130ad7cd185e0c2788"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 45,
+    "issues": [],
+    "width_pt": 943.2423095703125,
+    "height_pt": 424.9546203613281
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "XY and agreement difference panels retain full paired means and supplied agreement limits.",
+    "png_sha256": "b38b31d71340ed01e3c3fb27ce9d9aac6882812e872c8f5119797e9407153d40",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K25_horizontal.svg": "354646caa5929f8558966eb900bfb48a3413241e9964a05e12866bd4a1fd9572",
+      "ALT_K25_horizontal.png": "b38b31d71340ed01e3c3fb27ce9d9aac6882812e872c8f5119797e9407153d40",
+      "ALT_K25_horizontal.pdf": "24fbe69aad3586b4494ac926be54197027bb67ba2be2e1130ad7cd185e0c2788"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

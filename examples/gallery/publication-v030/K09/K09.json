@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K09",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K09",
+  "arrangement": "default",
+  "relationship": "分类位置与同一批对象的特征强度、覆盖比例同时展示",
+  "components": [
+    {
+      "id": "T19",
+      "sha256": "b359ad35e1768da1e8e602cb24310f46827220c6f2fc4c61df5c27dcd70166cd",
+      "input_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+    },
+    {
+      "id": "AUX_marker_fraction",
+      "sha256": "5937d0308649bdf15b1df16520621b932011f535c888e289312da9a9aa001ce0",
+      "input_sha256": "55e02200fefb346fe4b557740874cadee3048f7112684c2e508fb475976f029d"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T19",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 399.3448181152344,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_fraction",
+      "x_pt": 437.3448181152344,
+      "y_pt": 74,
+      "width_pt": 530.3251342773438,
+      "height_pt": 286.5923767089844,
+      "scale": 1
+    }
+  ],
+  "width_pt": 985.6699523925781,
+  "height_pt": 412.57861328125,
+  "output_sha256": {
+    "K09.svg": "61557b6cacaf9f758b402d5d6711fa590c78df96c20102d3f14ed3301ee4f346",
+    "K09.png": "3a75e5b82351a6aa0aee50d9ebd3b5857611b7f46b7e871a25f7df83aac8276e",
+    "K09.pdf": "a0bb136dd95acda0b88b14bb7bc99f57873462a669eafa35c34116e601ba6c34"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 52,
+    "issues": [],
+    "width_pt": 985.6699829101562,
+    "height_pt": 412.57861328125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Coordinate and dot-matrix panels retain distinct color and area guides with no legend collision.",
+    "png_sha256": "3a75e5b82351a6aa0aee50d9ebd3b5857611b7f46b7e871a25f7df83aac8276e",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K09.svg": "61557b6cacaf9f758b402d5d6711fa590c78df96c20102d3f14ed3301ee4f346",
+      "K09.png": "3a75e5b82351a6aa0aee50d9ebd3b5857611b7f46b7e871a25f7df83aac8276e",
+      "K09.pdf": "a0bb136dd95acda0b88b14bb7bc99f57873462a669eafa35c34116e601ba6c34"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

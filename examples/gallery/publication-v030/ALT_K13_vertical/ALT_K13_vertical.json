@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K13_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K13",
+  "arrangement": "vertical",
+  "relationship": "气泡看附加量值，六边形看重叠区域到底有多少记录",
+  "components": [
+    {
+      "id": "T29",
+      "sha256": "fe27c135600aabe06858e94036ea9cf46da136e6e2b590efebadbb40b3416ed1",
+      "input_sha256": "1ab080a05132e6029978a2af999a43f948c59fd93958310787163fe60d7350a8"
+    },
+    {
+      "id": "AUX_bubble_hex",
+      "sha256": "5d0ea594fba5cd50ed5cdd033aa9fedf9a1c23735e90fe35fd2e18406469bbfc",
+      "input_sha256": "bc0c162070fa693864493290ab460db4e993a651d0313f1065f092c64c470a91"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T29",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 439.9766845703125,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_bubble_hex",
+      "x_pt": 18,
+      "y_pt": 427.57861328125,
+      "width_pt": 513.5103759765625,
+      "height_pt": 403.3148193359375,
+      "scale": 1
+    }
+  ],
+  "width_pt": 549.5103759765625,
+  "height_pt": 857.8934326171875,
+  "output_sha256": {
+    "ALT_K13_vertical.svg": "a1a3fba916964db3413b34fd2898f4293e54bccc57f3a3633a89217be25fa18a",
+    "ALT_K13_vertical.png": "c51b42e65565c91ebf3294c3ff91ccab9df7883ed8ea291e988ecb37ce5a3146",
+    "ALT_K13_vertical.pdf": "eeeb1cc043d2b6fc345b80d119793323bbdd2aafd6663cb81611cebd39b46aec"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 60,
+    "issues": [],
+    "width_pt": 549.5103759765625,
+    "height_pt": 857.8934326171875
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Bubble area guide and occupied-bin color scale remain distinct; full descriptive limitation retained.",
+    "png_sha256": "c51b42e65565c91ebf3294c3ff91ccab9df7883ed8ea291e988ecb37ce5a3146",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K13_vertical.svg": "a1a3fba916964db3413b34fd2898f4293e54bccc57f3a3633a89217be25fa18a",
+      "ALT_K13_vertical.png": "c51b42e65565c91ebf3294c3ff91ccab9df7883ed8ea291e988ecb37ce5a3146",
+      "ALT_K13_vertical.pdf": "eeeb1cc043d2b6fc345b80d119793323bbdd2aafd6663cb81611cebd39b46aec"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K34",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K34",
+  "arrangement": "default",
+  "relationship": "各模态的组间位置及对象对应；不同模态特征指向哪些成分方向",
+  "components": [
+    {
+      "id": "M04",
+      "sha256": "731fcf3d828b4170183b390bb3a18c88775683877299cc2ee32c3af13692b04c",
+      "input_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d"
+    },
+    {
+      "id": "M05",
+      "sha256": "10012d0ef5f86b513b0c1311da96494822012b2026a3505b2bbc8f19736306c7",
+      "input_sha256": "b19562723275c14ad315db2eef27d45c72e4c466ce13094c9be8a0bd44c3790e"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M04",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 726.631591796875,
+      "height_pt": 333.90655517578125,
+      "scale": 1
+    },
+    {
+      "id": "M05",
+      "x_pt": 764.631591796875,
+      "y_pt": 74,
+      "width_pt": 412.2962646484375,
+      "height_pt": 368.66656494140625,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1194.9278564453125,
+  "height_pt": 469.66656494140625,
+  "output_sha256": {
+    "K34.svg": "5cec289a2f46b8d45fba02056b68fece1e10ee54fffccb935e76c1f6eb644bd5",
+    "K34.png": "3c8fbb14d9d6b1f13cefd5b1e8041e27a4b36cd64fd22df7ef4c7b1279c82716",
+    "K34.pdf": "4800ea019c3fab08c7ffe73e71a8209e2df5fa96292e25e21d4a064f5798177b"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 78,
+    "issues": [],
+    "width_pt": 1194.9278564453125,
+    "height_pt": 469.66656494140625
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Multiview score axes and correlation circle remain legible; foreground ticks and interpretation limits retained.",
+    "png_sha256": "3c8fbb14d9d6b1f13cefd5b1e8041e27a4b36cd64fd22df7ef4c7b1279c82716",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K34.svg": "5cec289a2f46b8d45fba02056b68fece1e10ee54fffccb935e76c1f6eb644bd5",
+      "K34.png": "3c8fbb14d9d6b1f13cefd5b1e8041e27a4b36cd64fd22df7ef4c7b1279c82716",
+      "K34.pdf": "4800ea019c3fab08c7ffe73e71a8209e2df5fa96292e25e21d4a064f5798177b"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

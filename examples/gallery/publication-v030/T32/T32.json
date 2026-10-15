@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "T32",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/gallery/figures/T32/T32.svg",
+  "source_sha256": "cf918cbd7f154b6a9bb5836fdbb5ed4b057c94df0a577aa81f784fb531b906fd",
+  "source_metadata": "examples/gallery/metadata/T32.json",
+  "source_metadata_sha256": "3470d2b4d3cbf524e74b5f76f8b2f463fc5bb589ff102ebfb6bd7da9c28513fb",
+  "input_table": "examples/gallery/figures/T32/T32.tsv",
+  "input_sha256": "3bbd9ccd7d5b7a9eac67473e44af3cc8724edfc1951cda3763cff448997a81b4",
+  "frozen_graphical_geometry_sha256": "be5a8073e61345ebe716a6e599be7384c89a2ad965bdf7ccf54cda3d72df34e1",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 414.1840515136719,
+  "height_pt": 347.57861328125,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "independent compact guide lane"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO - T32",
+    "Software test fixture; not biological evidence",
+    "Grouped values and bounds"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -15.240360260009766,
+      -5.7519989013671875
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 24,
+    "issues": [],
+    "width_pt": 414.1840515136719,
+    "height_pt": 347.57861328125
+  },
+  "output_sha256": {
+    "T32.svg": "af655a093d28291409395b307af34038167e26eb66f5d818ae824327f09aa731",
+    "T32.png": "5582967637bd0d291876c4aaf13a8c05568db97f30b708bba7f17c75a478d595",
+    "T32.pdf": "180f22a6dc78db2e12ad35af1b721e9b12f933a1a07fa83f91f21c575fd14e51"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Six grouped bar series and intervals fit within axes.",
+    "png_sha256": "5582967637bd0d291876c4aaf13a8c05568db97f30b708bba7f17c75a478d595",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "T32.svg": "af655a093d28291409395b307af34038167e26eb66f5d818ae824327f09aa731",
+      "T32.png": "5582967637bd0d291876c4aaf13a8c05568db97f30b708bba7f17c75a478d595",
+      "T32.pdf": "180f22a6dc78db2e12ad35af1b721e9b12f933a1a07fa83f91f21c575fd14e51"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

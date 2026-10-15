@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K36_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K36",
+  "arrangement": "vertical",
+  "relationship": "将数量变化定位到功能图中的位置；各样本标记组成",
+  "components": [
+    {
+      "id": "M09",
+      "sha256": "cf309e68357bde2514bd23f93c425874fae30dd124833ff41dc898a52546d2cf",
+      "input_sha256": "bce2b60cd33080d2dec4b3ece8925cdc0b1f4c88ad2269baf2e6d0596144876c"
+    },
+    {
+      "id": "M10",
+      "sha256": "a1f2ef25cbe3a1250dd5942ce1492f35a97a7349cdf40973bc4d7a96e75eda7a",
+      "input_sha256": "314fcb38df709ac3a0c2d20e9f52dcaf37ae91f680e262aa56799fd5450a40c6"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M09",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 529.8519897460938,
+      "height_pt": 319.5771484375,
+      "scale": 1
+    },
+    {
+      "id": "M10",
+      "x_pt": 18,
+      "y_pt": 435.5771484375,
+      "width_pt": 439.0853576660156,
+      "height_pt": 262.1564025878906,
+      "scale": 1
+    }
+  ],
+  "width_pt": 565.8519897460938,
+  "height_pt": 724.7335510253906,
+  "output_sha256": {
+    "ALT_K36_vertical.svg": "6e019bb279ecfa9cd82714fccbbd4d9af82493c2ff5b696c547fc048ad3a170e",
+    "ALT_K36_vertical.png": "493e9806bbf47e93bff7ffb95a9b5841e3bbb9469fdbbd41cdc8ab576d410d89",
+    "ALT_K36_vertical.pdf": "bf3a5377cba1a80ad29f3666b732ce014e16fedfb4064994c9520e75196ca3f1"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 35,
+    "issues": [],
+    "width_pt": 565.8519897460938,
+    "height_pt": 724.7335815429688
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Known pathway topology and isotope composition separated; abundance-versus-flux boundary visible.",
+    "png_sha256": "493e9806bbf47e93bff7ffb95a9b5841e3bbb9469fdbbd41cdc8ab576d410d89",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K36_vertical.svg": "6e019bb279ecfa9cd82714fccbbd4d9af82493c2ff5b696c547fc048ad3a170e",
+      "ALT_K36_vertical.png": "493e9806bbf47e93bff7ffb95a9b5841e3bbb9469fdbbd41cdc8ab576d410d89",
+      "ALT_K36_vertical.pdf": "bf3a5377cba1a80ad29f3666b732ce014e16fedfb4064994c9520e75196ca3f1"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

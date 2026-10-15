@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K27_horizontal",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K27",
+  "arrangement": "horizontal",
+  "relationship": "随时间的概率变化、不确定性与仍被随访的人数；个体随访长度、断续区间和事件时序",
+  "components": [
+    {
+      "id": "E15",
+      "sha256": "f4f66c79967edd87755bfd0f3fee5843c4225a13a416f3d13ba34512e45c4c50",
+      "input_sha256": "6c744dd7234e9b7cf001dddbb1913d31810f897c8e6a974c7f5f7c7ade23f681"
+    },
+    {
+      "id": "E16",
+      "sha256": "ffbd12067d92deb6c8b5be32786c72e28d55c7265f5e7dd7404e64e6f54802da",
+      "input_sha256": "9efe4e56a132f71cd0114df44dd6b95b3e1ba6cc3b106d1544704521f49fa968"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E15",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 493.5303039550781,
+      "height_pt": 379.59033203125,
+      "scale": 1
+    },
+    {
+      "id": "E16",
+      "x_pt": 531.5303039550781,
+      "y_pt": 74,
+      "width_pt": 495.5912780761719,
+      "height_pt": 328.76422119140625,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1045.12158203125,
+  "height_pt": 480.59033203125,
+  "output_sha256": {
+    "ALT_K27_horizontal.svg": "ba61f5d6d5b1cd063c86a5db56f0047872d785ae45920d7ed3c7a8f4512994a5",
+    "ALT_K27_horizontal.png": "388632cd4171233e7e47a19553f9bb4b0d671b191c3add0c42f862ddb3b2b41a",
+    "ALT_K27_horizontal.pdf": "1e5001695429d556db5b7a083789e619c04bcbcf2c09d73756d09e571865cf98"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 66,
+    "issues": [],
+    "width_pt": 1045.12158203125,
+    "height_pt": 480.59033203125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Supplied survival, at-risk counts and individual follow-up readable; event/censor guide explicit.",
+    "png_sha256": "388632cd4171233e7e47a19553f9bb4b0d671b191c3add0c42f862ddb3b2b41a",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K27_horizontal.svg": "ba61f5d6d5b1cd063c86a5db56f0047872d785ae45920d7ed3c7a8f4512994a5",
+      "ALT_K27_horizontal.png": "388632cd4171233e7e47a19553f9bb4b0d671b191c3add0c42f862ddb3b2b41a",
+      "ALT_K27_horizontal.pdf": "1e5001695429d556db5b7a083789e619c04bcbcf2c09d73756d09e571865cf98"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

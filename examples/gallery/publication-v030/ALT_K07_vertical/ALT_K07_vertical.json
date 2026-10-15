@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K07_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K07",
+  "arrangement": "vertical",
+  "relationship": "在同一几何和汇总层次比较分类与特征",
+  "components": [
+    {
+      "id": "T19",
+      "sha256": "b359ad35e1768da1e8e602cb24310f46827220c6f2fc4c61df5c27dcd70166cd",
+      "input_sha256": "e9e74841b8e0ad423d8debb21c1722789f76045ff6a6c76cd266fbc1f9b96a05"
+    },
+    {
+      "id": "AUX_marker_coordinates",
+      "sha256": "96d49e8c28cecbd4faaec44507478c9d341429451d86f59268968911e5c446ff",
+      "input_sha256": "1cc3b14a3ef2b34f47ae0941fd18bdf651b8ee8234d06b060cb2e1a4d2876812"
+    },
+    {
+      "id": "AUX_marker_matrix",
+      "sha256": "660515646b42211e94d0d5424ebeb38361267240f56b0dec87703b2abc752476",
+      "input_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T19",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 399.3448181152344,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_coordinates",
+      "x_pt": 18,
+      "y_pt": 427.57861328125,
+      "width_pt": 537.0599365234375,
+      "height_pt": 193.03466796875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_matrix",
+      "x_pt": 18,
+      "y_pt": 662.61328125,
+      "width_pt": 407.8175964355469,
+      "height_pt": 298.404296875,
+      "scale": 1
+    }
+  ],
+  "width_pt": 573.0599365234375,
+  "height_pt": 988.017578125,
+  "output_sha256": {
+    "ALT_K07_vertical.svg": "0ac687490a429835ccbe9e7e3c56302fc600e92a71b036582b769f624dd5418a",
+    "ALT_K07_vertical.png": "b5cb64a9987018da8df37beda81858d3bd6395cbec4bb10807b120dbb8dd6e80",
+    "ALT_K07_vertical.pdf": "1808742d1a9ff94458532bdd90567be93072774815c00dd579c00d18bd299904"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 60,
+    "issues": [],
+    "width_pt": 573.0599365234375,
+    "height_pt": 988.017578125
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Coordinates, marker facets and fixed means are separated without clipping.",
+    "png_sha256": "b5cb64a9987018da8df37beda81858d3bd6395cbec4bb10807b120dbb8dd6e80",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K07_vertical.svg": "0ac687490a429835ccbe9e7e3c56302fc600e92a71b036582b769f624dd5418a",
+      "ALT_K07_vertical.png": "b5cb64a9987018da8df37beda81858d3bd6395cbec4bb10807b120dbb8dd6e80",
+      "ALT_K07_vertical.pdf": "1808742d1a9ff94458532bdd90567be93072774815c00dd579c00d18bd299904"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

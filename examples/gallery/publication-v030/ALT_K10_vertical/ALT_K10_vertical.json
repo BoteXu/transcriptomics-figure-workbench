@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K10_vertical",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K10",
+  "arrangement": "vertical",
+  "relationship": "色块比较整体模式，曲线比较行的相对轮廓与转折",
+  "components": [
+    {
+      "id": "AUX_marker_matrix",
+      "sha256": "660515646b42211e94d0d5424ebeb38361267240f56b0dec87703b2abc752476",
+      "input_sha256": "9b901f7092a3eb207d0ad31eb55ea24276e29ca1a66273fe6d31c02768c17575"
+    },
+    {
+      "id": "AUX_marker_profiles",
+      "sha256": "0d0288c33e1085c2329d026c17115b3fd8d12add17a9af5b6a261daabb127712",
+      "input_sha256": "3ea5f08f99ea9a447e87f0bc75780cbc26190774bd214b03d173694ab1938b9b"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "AUX_marker_matrix",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 407.8175964355469,
+      "height_pt": 298.404296875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_marker_profiles",
+      "x_pt": 18,
+      "y_pt": 414.404296875,
+      "width_pt": 409.1794128417969,
+      "height_pt": 311.57861328125,
+      "scale": 1
+    }
+  ],
+  "width_pt": 445.1794128417969,
+  "height_pt": 752.98291015625,
+  "output_sha256": {
+    "ALT_K10_vertical.svg": "dea1664b111741847169d6c3adc59327616fffa1c533309d835beb95c33b437f",
+    "ALT_K10_vertical.png": "75bd9d29739666d4ca6544e02163417e909d359b81326c848538fa537c9ca61b",
+    "ALT_K10_vertical.pdf": "650798dc1fd102436bdd569b51a7b343276e8ad26b06668c5b7b0c8530de43c2"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 48,
+    "issues": [],
+    "width_pt": 445.1794128417969,
+    "height_pt": 752.98291015625
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Heatmap and stored marker profile retain full axes and color mapping; categorical-marker indices preserved.",
+    "png_sha256": "75bd9d29739666d4ca6544e02163417e909d359b81326c848538fa537c9ca61b",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "ALT_K10_vertical.svg": "dea1664b111741847169d6c3adc59327616fffa1c533309d835beb95c33b437f",
+      "ALT_K10_vertical.png": "75bd9d29739666d4ca6544e02163417e909d359b81326c848538fa537c9ca61b",
+      "ALT_K10_vertical.pdf": "650798dc1fd102436bdd569b51a7b343276e8ad26b06668c5b7b0c8530de43c2"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

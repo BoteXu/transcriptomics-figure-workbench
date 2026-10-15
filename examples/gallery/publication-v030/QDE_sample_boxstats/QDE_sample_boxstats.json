@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "QDE_sample_boxstats",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_svg": "examples/qc-de/QDE_sample_boxstats/QDE_sample_boxstats.svg",
+  "source_sha256": "6ce90394fa2bf4425cbf59104f717212e7f6df2b6cbef2d1baedd41833dca46b",
+  "source_metadata": "examples/qc-de/QDE_sample_boxstats/QDE_sample_boxstats.json",
+  "source_metadata_sha256": "57c6fb1c2274633f4f98edaadc3b7889937c3bbf485a4ac2e5422eb7a280332b",
+  "input_table": "examples/qc-de/QDE_sample_boxstats/QDE_sample_boxstats.tsv",
+  "input_sha256": "1d0fae8d284ca4e100ab1619df2a8fbc6c9d6551be69b4d688e573ce56df86bd",
+  "frozen_graphical_geometry_sha256": "c1221d8fc46a9d0be036ad2d6e8ba2e3ff1cf150e1363cd91407ed27524c017a",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 521.5108032226562,
+  "height_pt": 329.77833557128906,
+  "raster_dpi": 300,
+  "axis_geometry": [
+    {
+      "axis": 0,
+      "bounds": [
+        0.13,
+        0.31666666666666665,
+        0.61,
+        0.495
+      ],
+      "xlim": [
+        0.5,
+        4.5
+      ],
+      "ylim": [
+        0.33499999999999996,
+        3.965
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear",
+      "rect_pt": [
+        54.21515487670899,
+        52.99999938964845,
+        395.28,
+        213.84
+      ]
+    }
+  ],
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "independent compact guide lane"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO — sample_boxstats",
+    "SYNTHETIC DEMO | QDE_sample_boxstats",
+    "Software test fixture; not biological evidence"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -30.024845123291016,
+      -28.360000610351562
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 18,
+    "issues": [],
+    "width_pt": 521.5108032226562,
+    "height_pt": 329.7783203125
+  },
+  "output_sha256": {
+    "QDE_sample_boxstats.svg": "0464fb2e46317874b3c2e4d1e2d989b7e56a30c0bd07819a4408a9fe8f6a206d",
+    "QDE_sample_boxstats.png": "0e4821ec7e366ad48a9151c0778a1e6a5bd5dbd0b685bad914dfccb2cb2ca3cb",
+    "QDE_sample_boxstats.pdf": "2204dd9b4cd8c1fe75b04882afd80eee86c0b77fbe6310f577e47f40445fb79a"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Four provided box summaries and project guide are clear.",
+    "png_sha256": "0e4821ec7e366ad48a9151c0778a1e6a5bd5dbd0b685bad914dfccb2cb2ca3cb",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "QDE_sample_boxstats.svg": "0464fb2e46317874b3c2e4d1e2d989b7e56a30c0bd07819a4408a9fe8f6a206d",
+      "QDE_sample_boxstats.png": "0e4821ec7e366ad48a9151c0778a1e6a5bd5dbd0b685bad914dfccb2cb2ca3cb",
+      "QDE_sample_boxstats.pdf": "2204dd9b4cd8c1fe75b04882afd80eee86c0b77fbe6310f577e47f40445fb79a"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

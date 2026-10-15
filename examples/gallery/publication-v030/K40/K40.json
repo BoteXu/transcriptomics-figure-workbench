@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "K40",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K40",
+  "arrangement": "default",
+  "relationship": "叶ID、矩阵行列与成员评分对应；模块ID对应条目关联与代表值网络。TOM/adjacency/kME定义与网络版本由上游明确给定。",
+  "components": [
+    {
+      "id": "E36",
+      "sha256": "777662fec21d96499d7d6dba4267ec7de61dc33f436ab182412495ff4da282b0",
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba"
+    },
+    {
+      "id": "AUX_c40_matrix",
+      "sha256": "7d394e13d537fbb3c84dcba4627c9bbd3085ac2a9178a3cb3c896975c8baa28f",
+      "input_sha256": "0d6c3beca03916100f1cb156b059b914e875885fe648a2372790635ecae58111"
+    },
+    {
+      "id": "AUX_c40_network",
+      "sha256": "2fd1d1f22f292fc8961250d795c564e630ba9f4b75439f986060dc1245cc77ee",
+      "input_sha256": "6c9a9e9f5646b24de20327a9dc55b714ed6a0d10ee759336280cb15f6eeac9bc"
+    },
+    {
+      "id": "E35",
+      "sha256": "e5848ee28e4b74ad97ad6a164f3391fe718a42ef25deb40895cd60b57183123f",
+      "input_sha256": "9848b8a6bad07be531c6fc8386a4bbdab4bda5ab1c78477d947f3cee09294e9a"
+    },
+    {
+      "id": "AUX_c38_scores",
+      "sha256": "573c1e30c4cdc3738d6ba32453caa5150b072d54bd1aa9faf8cbad4420eba1d1",
+      "input_sha256": "b751f5a434b4b937b1e507ea22b40b9ea46bbbf36a48493dfe32a410dabca184"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E36",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 681.4353637695312,
+      "height_pt": 348.49102783203125,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c40_matrix",
+      "x_pt": 719.4353637695312,
+      "y_pt": 74,
+      "width_pt": 588.73095703125,
+      "height_pt": 380.6119384765625,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c40_network",
+      "x_pt": 18,
+      "y_pt": 496.6119384765625,
+      "width_pt": 411.0260009765625,
+      "height_pt": 342.50677490234375,
+      "scale": 1
+    },
+    {
+      "id": "E35",
+      "x_pt": 719.4353637695312,
+      "y_pt": 496.6119384765625,
+      "width_pt": 523.434814453125,
+      "height_pt": 341.2537841796875,
+      "scale": 1
+    },
+    {
+      "id": "AUX_c38_scores",
+      "x_pt": 450.1165008544922,
+      "y_pt": 881.1187133789062,
+      "width_pt": 425.9333190917969,
+      "height_pt": 271.4287109375,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1326.1663208007812,
+  "height_pt": 1179.5474243164062,
+  "output_sha256": {
+    "K40.svg": "0974605d2791f9249fe7d5b6ca5b307fc104c7c216330c96dedabba6f3d367bc",
+    "K40.png": "6dd033e70add2d7056e36574615a69656409e4a9850a60163b34f8ebb3f4c687",
+    "K40.pdf": "d2ed643d6ba18ce2037b944f07bd89d7685bf41a241d3a3d1a48a27a6bfb71a8"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 139,
+    "issues": [],
+    "width_pt": 1326.166259765625,
+    "height_pt": 1179.5474853515625
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Individually inspected: supplied hierarchy, aligned matrix, typed network, split matrix and MM/GS scatter complete; separate scales and guides preserved. Large native canvas required.",
+    "png_sha256": "6dd033e70add2d7056e36574615a69656409e4a9850a60163b34f8ebb3f4c687",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K40.svg": "0974605d2791f9249fe7d5b6ca5b307fc104c7c216330c96dedabba6f3d367bc",
+      "K40.png": "6dd033e70add2d7056e36574615a69656409e4a9850a60163b34f8ebb3f4c687",
+      "K40.pdf": "d2ed643d6ba18ce2037b944f07bd89d7685bf41a241d3a3d1a48a27a6bfb71a8"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}

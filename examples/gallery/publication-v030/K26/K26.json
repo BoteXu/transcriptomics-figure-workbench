@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "K26",
+  "status": "VISUALLY_SELF_REVIEWED",
+  "source_recipe": "K26",
+  "arrangement": "default",
+  "relationship": "逐协变量诊断调整前后的观测平衡变化；逐行对比效应方向、大小与区间，精确读出所有数值",
+  "components": [
+    {
+      "id": "E13",
+      "sha256": "02e09645d0c2c954f128ac9933df2e3b4280548ab0063914b79225f4850e3bb3",
+      "input_sha256": "61c0a2e376f82311d7ef6264f4bc05bb215f7fc63fc1d2abcacd36db277340b3"
+    },
+    {
+      "id": "E21",
+      "sha256": "ad8ba94f7f5ee1dcc4a3edc32c2cc0210249024e7e7c0f89c6f95809a0183502",
+      "input_sha256": "68cb15dc00ee3e89619c44d1791ade9feeae0b6bd25a015a5b3f19a30cf82f41"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E13",
+      "x_pt": 18,
+      "y_pt": 74,
+      "width_pt": 447.2117614746094,
+      "height_pt": 267.7226257324219,
+      "scale": 1
+    },
+    {
+      "id": "E21",
+      "x_pt": 485.2117614746094,
+      "y_pt": 74,
+      "width_pt": 590.9759521484375,
+      "height_pt": 273.1439208984375,
+      "scale": 1
+    }
+  ],
+  "width_pt": 1094.1877136230469,
+  "height_pt": 374.1439208984375,
+  "output_sha256": {
+    "K26.svg": "295018a8f0468fbb4766f35bae791b9224a0743153d3cf1a416cd81549986c81",
+    "K26.png": "52332a77f68d4c6398bd625a96363978d514d8218b230676ce2f8b1f81f1c993",
+    "K26.pdf": "b4fe2bcf914615d94e717709de44154f588fd0a6860fd3c8c594c6ebb0877a36"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 49,
+    "issues": [],
+    "width_pt": 1094.187744140625,
+    "height_pt": 374.1439208984375
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": true,
+  "layout_policy": "Full independent panels at original physical scale; no shared-axis inference; source values unchanged",
+  "visual_review": {
+    "status": "SELF_REVIEWED",
+    "inspection": "individual full image in Codex",
+    "note": "Balance thresholds and model intervals readable; numeric interval column aligned.",
+    "png_sha256": "52332a77f68d4c6398bd625a96363978d514d8218b230676ce2f8b1f81f1c993",
+    "inspected_artifact": "PNG",
+    "associated_exports": {
+      "K26.svg": "295018a8f0468fbb4766f35bae791b9224a0743153d3cf1a416cd81549986c81",
+      "K26.png": "52332a77f68d4c6398bd625a96363978d514d8218b230676ce2f8b1f81f1c993",
+      "K26.pdf": "b4fe2bcf914615d94e717709de44154f588fd0a6860fd3c8c594c6ebb0877a36"
+    },
+    "independent_second_reviewer": false,
+    "pdf_pixel_inspection": false,
+    "paper_print_proof": false
+  }
+}
