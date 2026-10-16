@@ -54,7 +54,7 @@ def build(work,review,out):
         if item['section']=='composition':
             req=load(stem.parent/'request.json')
             for panel,c in zip(req['panels'],row['components']):
-                for field,ext in [('svg','svg'),('table','tsv')]:panel[field]='../../../source/'+c+'/'+c+'.'+ext
+                for field,ext in [('svg','svg'),('table','tsv')]:panel[field]='../../source/'+c+'/'+c+'.'+ext
             write(folder/'request.json',req)
         if item['section'] in ['study','study-layout']:
             src=item['root']/('inputs/'+row['id'] if item['section']=='study-layout' else row['id'])

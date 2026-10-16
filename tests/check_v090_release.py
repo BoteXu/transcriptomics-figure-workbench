@@ -16,6 +16,11 @@ def main():
         assert not row['visual_review']['independent_second_review'] and not row['visual_review']['calibrated_paper_proof']
         if row['section'] in ['study','study-layout']:
             s=load(BASE/row['assets']['spec']);assert sha((BASE/row['assets']['spec']).parent/s['input']['path'])==s['input']['sha256']
+        if row['section']=='composition':
+            folder=BASE/row['key'];req=load(folder/'request.json')
+            for panel in req['panels']:
+                for key in ['svg','table']:
+                    path=(folder/panel[key]).resolve();assert path.is_file() and (BASE/'source').resolve() in path.parents,'Nonportable composition component'
     for base in [BASE,SKILL/'assets/study-gallery']:
         for assay,number in [('bulk',11),('single_cell',14)]:
             path=base/'study-manifests'/(assay+'.json');manifest=load(path)
