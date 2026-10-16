@@ -24,6 +24,7 @@ jobs:
           python tests/check_design_workflow.py
           python tests/check_review_update.py
           python tests/check_review_v060.py
+          python tests/check_clarity_release.py
           python skills/transcriptomics-figure-workbench/scripts/workbench.py methods --search GSEA
           python skills/transcriptomics-figure-workbench/scripts/render_frozen_table.py --help
   render:
@@ -47,6 +48,7 @@ jobs:
           python tests/check_package_styles.py examples/package-v040
           python tests/check_design_runtime.py design-ci
           python tests/check_refined_runtime.py
+          python tests/check_clarity_runtime.py
           python tests/check_reading.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -70,6 +72,7 @@ jobs:
         run: |
           python skills/transcriptomics-figure-workbench/scripts/workbench.py studio --output .ci/studio.html --gallery examples/gallery --demo-svg examples/workbench-v030/WB_ma/WB_ma.svg
           node tests/check_publication_browser.mjs publication-browser-ci .ci/studio.html
+          node tests/check_clarity_browser.mjs clarity-browser-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

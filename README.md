@@ -2,9 +2,22 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.6.0**。优先选择较漂亮、克制且适合当前数据的画法；参考来源包括社区作者博客、GitHub 和教程。流程为“比较问题 → 冻结字段与上下文 → 比较实际画法 → 目标尺寸绘图 → 修订 → 按实际范围验收”。Studio 优先展示10张精修示例，25个软件包专项示例及历史接口保留。
+本版为 **v0.7.0**。优先选择较漂亮、克制且适合当前数据的画法；参考来源包括社区作者博客、GitHub 和教程。流程为“比较问题 → 冻结字段与上下文 → 比较实际画法 → 目标尺寸绘图 → 修订 → 按实际范围验收”。Studio 优先展示25张精修示例，25个软件包专项示例及历史接口保留。
 
 [优选与全库复查浏览页](examples/review-v060/index.html) · [5张社区方案实际示例](examples/refined-v060/index.html) · [来源与采用说明](skills/transcriptomics-figure-workbench/references/community-designs-v060.md) · [精修与阅读版契约](skills/transcriptomics-figure-workbench/references/refined-views-v060.md) · [本轮检查范围](skills/transcriptomics-figure-workbench/references/validation-v060.md)
+
+## v0.7 旧图重排与拓展画法
+
+[打开15张实际示例](examples/clarity-v070/index.html) · [458个导出与旧版对比](examples/review-v070/index.html) · [参数、适用条件和来源](skills/transcriptomics-figure-workbench/references/clarity-views-v070.md) · [实际验收范围](skills/transcriptomics-figure-workbench/references/validation-v070.md)
+
+- **六个旧来源重新设计：** 多曲线取消大标记和宽图例；效应分布保留全部点并整理数值栏；五类别贡献图拆成五张完整明细，贡献占比用共同尺度矩阵；交叉成员连线改成成员矩阵；三切片与配准对照改为紧凑面板。
+- **继续改美观：** 标题减重，删除图内冗长工程说明并存入元数据，保留短语义图注；加深贡献点中间色，拉开影像坐标与色条。不是整批换色后直接判通过。
+- **四种拓展展示：** 原始观测加供应效应分布、预计算决策曲线、PR精修专用入口、跨队列排名范围。已有通用PR画法保留；新入口不等于新增统计方法。
+- **15张真实导出：** 十个可选显示模式，每张有PNG/PDF/SVG、准确表格、FigureSpec和来源记录。R11的6,650个贡献点与45个占比完整分开展示，没有为了美观删点。
+- **逐图检查：** 十五张完整PDF页面在屏幕标称178mm宽度逐一查看；导出后的正文低分位字号至少7.95pt。屏幕检查不是校准印刷打样，也不是独立第二审稿。
+- **剩余问题明列：** 原140个字号预警继续保留；R04、R24、P10等仍需下一轮完整面板重排。旧图仍可回查，新版浏览页为已有替代画法的六个旧来源调整默认推荐。
+
+![多曲线原版与重排对比](docs/clarity-comparison-v070.jpg)
 
 ## v0.6 社区方案、完整逐图复查与阅读版
 
@@ -37,7 +50,7 @@
 
 | 升级 | 实际实现 |
 |---|---|
-| 架构 | 123 个 Python 绘图函数统一登记；81 个固定别名；只在选定绘图时加载依赖 |
+| 架构 | 124 个 Python 绘图函数统一登记；82 个固定别名；只在选定绘图时加载依赖 |
 | 输入 | 一个 FigureSpec 保存数据、参数、课题主题和来源；变动使旧计划失效 |
 | 外观 | 论文、紧凑、报告、大字四种字号层级，复用15套现有色卡与固定分组颜色 |
 | 交互 | 离线 SVG 导入、字体/字号预览、修改前后比较、可拖动组图草案与重绘配置 |
@@ -141,7 +154,7 @@ v0.2.5 增量：新增八种冻结 QC / DE 模式；逐项审查用户提供的�
 
 任选一种方式：
 
-1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.6.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
+1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.7.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
 2. 在 Codex 中使用 skill-installer，指定仓库 `BoteXu/transcriptomics-figure-workbench` 和路径 `skills/transcriptomics-figure-workbench`。
 3. 克隆仓库，只复制 `skills/transcriptomics-figure-workbench/` 至自己的 skills 目录。
 

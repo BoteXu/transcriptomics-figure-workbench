@@ -14,6 +14,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_biomni_views.plot_branch_tree | branch_tree | yes | root_id, leaf_order, branch_unit, tree_definition |
 | figure_biomni_views.plot_slice_overlay | slice_overlay | yes | view_order, axis_labels, label_slots, intensity_limits, registration_definition, orientation_definition |
 | figure_biomni_views.plot_registration_check | registration_check | yes | intensity_limits, difference_limits, tile_pixels, coordinate_labels, registration_definition |
+| figure_clarity_views.plot_clarity_views | clarity | yes | view, contract, options |
 | figure_core.plot_embedding | embedding | yes | palette |
 | figure_core.plot_samples | canonical ID | yes | palette, y_label |
 | figure_core.plot_forest | canonical ID | yes | x_label, interval_label, effect_scale |
@@ -240,6 +241,16 @@ See the fixed implementation and its input contract.
 | registration_definition | true | — |
 | arrangement | false | "horizontal" |
 | title | false | "" |
+
+## figure_clarity_views.plot_clarity_views
+
+Fine profiles, readable dense panels, imaging and supplied evaluation views.
+
+| Parameter | Required | Default |
+|---|---|---|
+| view | true | — |
+| contract | true | — |
+| options | true | — |
 
 ## figure_core.plot_embedding
 

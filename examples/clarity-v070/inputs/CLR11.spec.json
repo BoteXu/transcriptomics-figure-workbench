@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "figure_id": "CLR11",
+  "renderer": "clarity",
+  "input": {
+    "path": "CLR11.tsv",
+    "sha256": "c37c91ec52f97e43b787e8d82423786f2e675f6224b1e46886312e691b337565"
+  },
+  "parameters": {
+    "view": "pixels",
+    "options": {
+      "mode": "registration",
+      "view_order": [],
+      "label_names": {},
+      "intensity_limits": [
+        0,
+        1
+      ],
+      "difference_limits": [
+        -0.15,
+        0.15
+      ],
+      "tile_pixels": 4,
+      "coordinate_labels": [
+        "u (mm)",
+        "v (mm)"
+      ],
+      "orientation_definition": "Declared u/v direction; procedural grids, not clinical anatomy.",
+      "title": "Registered image comparison",
+      "subtitle": "One shared grid / fixed and registered intensity scales"
+    },
+    "contract": {
+      "source_definition": "Frozen public synthetic table: examples/gallery/figures/E42/E42.tsv",
+      "independent_unit": "Synthetic identity only; no biological sample or scientific inference",
+      "denominator": "all rows",
+      "value_definition": "All plotted channels supplied explicitly; exact units and source selection in FigureSpec",
+      "uncertainty_definition": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+      "synthetic": true
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-clarity-CLR11",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Supplied channels": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F0F4F6",
+        "#436C87"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#C96068"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "experimental_unit": "Synthetic identity only; no biological sample or scientific inference",
+    "limits": "Declared view options",
+    "input_unit": "Synthetic identity only; no biological sample or scientific inference",
+    "uncertainty": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+    "filtering": "all rows",
+    "interpretation_limit": "Synthetic display fixture only; not biological evidence",
+    "contrast": "Synthetic display only; no biological inference",
+    "model": "Frozen synthetic software example; no scientific model or native package execution",
+    "source": "Frozen public synthetic table: examples/gallery/figures/E42/E42.tsv",
+    "synthetic": true,
+    "denominator": "all rows"
+  },
+  "appearance": {
+    "preset": "paper"
+  },
+  "export": {
+    "target_width_mm": 178,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "block"
+  }
+}

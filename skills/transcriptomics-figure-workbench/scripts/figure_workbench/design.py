@@ -33,6 +33,17 @@ ROUTES = {
    ('editorial','matrix',['row','column','value'],'Membership matrix','Prefer when readers need the identities of individual shared members.')],
  'paired': [
    ('editorial','paired',['unit','group','value'],'Paired observations','Light connecting lines retain subject identity; do not connect unrelated samples.')],
+ 'contributions': [
+   ('clarity','contribution',['unit','group','label','effect','value'],'Class-specific contribution detail','Export complete selected classes separately; preserve per-instance contribution and feature-value colour.')],
+ 'imaging': [
+   ('clarity','pixels',['x','y','value'],'Compact physical pixel panels','Use complete registered grids, declared orientation and unchanged intensity scales; no registration or segmentation.')],
+ 'estimation': [
+   ('clarity','estimation',['unit','group','value','effect','lower','upper','density','x'],'Observations and supplied effect distribution','Separate raw observations from upstream effect/density; no bootstrap or inference.')],
+ 'model_evaluation': [
+   ('clarity','precision_recall',['series','x','value'],'Precision and recall','Preserve upstream evaluation cohort and positive-class definitions; no AP or threshold optimisation.'),
+   ('clarity','decision',['series','x','value'],'Decision curves','Use precomputed net benefit, declared baseline strategies, population and outcome units.')],
+ 'rank_stability': [
+   ('clarity','rank_stability',['label','group','rank','lower','upper','status'],'Cross-export rank spans','Retain declared feature order and explicit unassessed states; rank spans are not automatically confidence intervals.')],
  'profiles': [
    ('publication_plus','profile',['category','series','value','area'],'Aligned linear profiles','Prefer common linear scales and visible category rows to overlapping radial fills.')],
  'survival': [

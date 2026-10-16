@@ -1,0 +1,490 @@
+{
+  "experimental_unit": "Synthetic identity only; no biological sample or scientific inference",
+  "limits": "Declared view options",
+  "input_unit": "Synthetic identity only; no biological sample or scientific inference",
+  "uncertainty": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+  "filtering": "all contribution rows for Class 4; other classes exported separately; shares exported as CLR08",
+  "interpretation_limit": "Synthetic display fixture only; not biological evidence",
+  "contrast": "Synthetic display only; no biological inference",
+  "model": "Frozen synthetic software example; no scientific model or native package execution",
+  "source": "Frozen public synthetic table: examples/gallery/figures/R11/R11.tsv",
+  "synthetic": true,
+  "denominator": "all contribution rows for Class 4; other classes exported separately; shares exported as CLR08",
+  "palette": "package_editorial",
+  "layout_audit": {
+    "status": "LAYOUT_CHECKS_ONLY",
+    "issues": [],
+    "index_alignment": {
+      "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+      "bindings": [],
+      "issues": []
+    },
+    "manual_export_review_required": true,
+    "scope": "Legend/canvas and legend/data-region bounding boxes only; titles, labels, contrast and colorbars still need inspection"
+  },
+  "workbench": {
+    "version": "0.7.0",
+    "spec": {
+      "schema_version": 1,
+      "figure_id": "CLR07",
+      "renderer": "clarity",
+      "input": {
+        "path": "CLR07.tsv",
+        "sha256": "6ab84a773ae3261a85380a9d2943780c0e9525cd37a8a02517a4269558dfe77f"
+      },
+      "parameters": {
+        "view": "contribution",
+        "options": {
+          "class_label": "Class 4",
+          "feature_order": [
+            "Variable 08",
+            "Variable 09",
+            "Variable 10",
+            "Variable 11",
+            "Variable 12",
+            "Variable 13",
+            "Variable 14",
+            "Variable 15",
+            "Variable 16",
+            "Variable 17",
+            "Variable 18",
+            "Variable 19",
+            "Variable 01",
+            "Variable 02",
+            "Variable 03",
+            "Variable 04",
+            "Variable 05",
+            "Variable 06",
+            "Variable 07"
+          ],
+          "value_limits": [
+            0,
+            1
+          ],
+          "effect_limits": [
+            -0.85,
+            0.85
+          ],
+          "effect_label": "Supplied contribution",
+          "value_label": "Supplied feature value",
+          "title": "Class 4 | contribution detail",
+          "subtitle": "All 19 features and 1,330 instances / original feature order"
+        },
+        "contract": {
+          "source_definition": "Frozen public synthetic table: examples/gallery/figures/R11/R11.tsv",
+          "independent_unit": "Synthetic identity only; no biological sample or scientific inference",
+          "denominator": "all contribution rows for Class 4; other classes exported separately; shares exported as CLR08",
+          "value_definition": "All plotted channels supplied explicitly; exact units and source selection in FigureSpec",
+          "uncertainty_definition": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+          "synthetic": true
+        }
+      },
+      "theme": {
+        "schema_version": 1,
+        "project_id": "synthetic-clarity-CLR07",
+        "palette_name": "package_editorial",
+        "palette_colors": [
+          "#218C8D",
+          "#D8795B",
+          "#5676A5",
+          "#A795BD",
+          "#C8A34E",
+          "#6EA98C",
+          "#B66C87",
+          "#7B94A1",
+          "#A28C77",
+          "#74798D"
+        ],
+        "group_slots": {
+          "Supplied channels": 0
+        },
+        "roles": {
+          "primary": "#218C8D",
+          "negative": "#218C8D",
+          "positive": "#74798D",
+          "accent": "#74798D",
+          "neutral": "#A8ADB3",
+          "significant": "#74798D",
+          "border": "#526272"
+        },
+        "continuous": {
+          "sequential": [
+            "#F0F4F6",
+            "#436C87"
+          ],
+          "diverging": [
+            "#327D9F",
+            "#F7F7F4",
+            "#C96068"
+          ]
+        },
+        "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+        "font_family": "DejaVu Sans",
+        "design": {
+          "label_pt": 10,
+          "tick_pt": 9,
+          "title_pt": 11,
+          "note_pt": 8,
+          "spine_width": 0.7,
+          "spine_mode": "keep",
+          "grid": "keep"
+        },
+        "line_width": 1.4,
+        "point_edge_width": 0.4,
+        "preview_only": true
+      },
+      "provenance": {
+        "experimental_unit": "Synthetic identity only; no biological sample or scientific inference",
+        "limits": "Declared view options",
+        "input_unit": "Synthetic identity only; no biological sample or scientific inference",
+        "uncertainty": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+        "filtering": "all contribution rows for Class 4; other classes exported separately; shares exported as CLR08",
+        "interpretation_limit": "Synthetic display fixture only; not biological evidence",
+        "contrast": "Synthetic display only; no biological inference",
+        "model": "Frozen synthetic software example; no scientific model or native package execution",
+        "source": "Frozen public synthetic table: examples/gallery/figures/R11/R11.tsv",
+        "synthetic": true,
+        "denominator": "all contribution rows for Class 4; other classes exported separately; shares exported as CLR08"
+      },
+      "appearance": {
+        "preset": "paper"
+      },
+      "export": {
+        "target_width_mm": 178,
+        "minimum_text_pt": 7.5,
+        "readability_policy": "block"
+      }
+    },
+    "spec_sha256": "8212ecc93f677ff986187ca4a122d499afaad6a22299ec95a4e68ce5f12fa2d0",
+    "input_sha256": "6ab84a773ae3261a85380a9d2943780c0e9525cd37a8a02517a4269558dfe77f",
+    "source_identity": {
+      "alluvial_geometry.py": "bcb5c01aaac0013ba6b5b253b6cbe77d7ed12b30f0c33b16aa8833fe53ef7e70",
+      "analysis_result_fixture.py": "9d8d7e4eeade2d0f9db4fd41ea1e09c073cb023f37c6360c345be434c7122131",
+      "biomni_view_fixture.py": "3cf0cb146e139551e6bac3d9e9f7ee53fc974a519a58af053970a444c1a05f71",
+      "build_aesthetic_gallery.py": "419e773dec759624839f7c15cb00e292ff1d7ffa965a44d5432bad1b1f3ea5b7",
+      "build_gallery.py": "6ab034fb815d3c5632dc82879820edcb91980aff9ad875e08e5d930e7702398e",
+      "check_environment.py": "52fd4005f14294ee59fa03cdc8e41f8381dd88d7321e1c1a7cb28333636ccaeb",
+      "compose_catalog_examples.py": "9b65772bc42e60f2083ff7917a0e2f3ed023ebadea35a877f2a15ae17471dd11",
+      "compose_panels.py": "6ea96f1d50cdfc9cc2a0e52f5afe96ad1f4c58267c9cf433960c9724b20c5616",
+      "figure_analysis_results.py": "c60940ec4a5499a2c56dd7bd76503d0523f0bd0c36a7ad515d774afb58a2f795",
+      "figure_biomni_views.py": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+      "figure_clarity_views.py": "def000810f16cc83d62a0c0d98e114a3a3839f698b70e83f7fd6fd542d46ebfe",
+      "figure_core.py": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+      "figure_design.py": "d59c451c587e8151ed5939b1f6bbb31341a2ece2ea706ca81508601ca5b55c8c",
+      "figure_editorial.py": "9c9e9639fcb3714b1688d877419b166a3b7028e0a7f5ca85ce43ac284f6a925f",
+      "figure_expanded_grammar.py": "35b8a0a6814eab29c19bf8c9c2002cec5a9d7b9835a8bf5a9a9f9b16128929b7",
+      "figure_extensions.py": "8df606b112cf247eb880c8cfda5bf05b0124e744caa8d078b60cbf8f2d99f26e",
+      "figure_general.py": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+      "figure_gsea.py": "40f6e383aa5081bf65242a58b180aa18a17079c49378798125e908a3c9c3cbdd",
+      "figure_layout.py": "866995c6cdd619a20b333ebbb7affd519aecdfafa36362e12102f5215e5d870e",
+      "figure_linked_evidence.py": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+      "figure_method_extensions.py": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+      "figure_multimodal.py": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "figure_multiomics_views.py": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+      "figure_multiscale.py": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+      "figure_network_extensions.py": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+      "figure_package_styles.py": "3fd1f93b0d56ce640762535a144894d13e57499e387f225021028c4420d08399",
+      "figure_palette_applications.py": "30968482e47951aa89fb78669450b94759be8401515832fa9e32d3c71680887a",
+      "figure_polish.py": "1dd1e7849ea89bc67071cef0c2cf01193837c23bae09c20fa98afe1b366e8484",
+      "figure_process_dashboard.py": "f05172abf504690d97c8df546684056a3afbd04c0283fac6d3d66c6eb9184afb",
+      "figure_publication.py": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+      "figure_publication_plus.py": "dbdda56147fcd1260fe84fc5fef640b916f34764b9547cc7ee33eb0ac1a4bb12",
+      "figure_qc_de.py": "4731eb732c08ab86c7c02dc65982154fcf6214f553290ffb1409258357841d9d",
+      "figure_reference.py": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+      "figure_reference_palettes.py": "b9880e9ab9e0a452b65650526c1be388cbcf61e5fec7ac7cff72dbe21ef060c4",
+      "figure_refined_views.py": "bf8a02235dc6db5be9f2a1bdbcb0297cd2bfe6790a773145ba5b874ab66be659",
+      "figure_styles.py": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+      "figure_workbench/__init__.py": "4e11e85ea83d40945523a5d7505945029651025322f9d938eb719fac58943981",
+      "figure_workbench/contracts.py": "4d02f31c212997f2005a22081fc8f0ac575b97117b8f6358f15861cd60be794d",
+      "figure_workbench/design.py": "6005fa201e3d94f7b005951883b654f09440dcad7ad663907227fdc6ef962a75",
+      "figure_workbench/methods.py": "ff6b59c757003fbe518d196412c9c12c767e01a314f52354ff21c885247f049d",
+      "figure_workbench/pipeline.py": "b68a938183f50088b0616d6a8cce46f33ddb5ff472d042fbdb7288716b5f374e",
+      "figure_workbench/quality.py": "b02056f8ca7f6e96b252ac7f8f86652ce2a4219840f39fadda4788d04fc2799e",
+      "figure_workbench/reading.py": "b413c4c285018635789d64546a0cb18356517cac7d63b893da42d8bfaa4d159c",
+      "figure_workbench/registry.py": "c0778b866adc1dbdbc6d4fa4154b72fdd8b41afa0fa141e91bead2876f810336",
+      "figure_workbench/review.py": "7bde70ed7055543781df7dc22e53138062a43715bcca0e287f8b87154e1b19d4",
+      "figure_workbench/studio.py": "0dd4e362bd9d34d3ccbe03b08e81aff52eef89c2cc1ee80e4b5fbbb8648254f5",
+      "increment_test.py": "1d211e0dc79fb466e8d8918f1c2b0c28d31ce7e429aaf8d15f52780a16b0db6f",
+      "indexed_alignment.py": "2f94ad6f9af88e54dcb8074cde40b87a7c0d3fdb0da851969947ac430542f9a2",
+      "linked_evidence_fixture.py": "2ec6c162d5e7ed1cced1a05e86cd1bb1a227dd05cea47b88765b61e0525c98ef",
+      "matrix_input.py": "1deecb5ee1feee518b9ab389ea4ed15b091ad8b29051ee3f69cfa00c63c887eb",
+      "method_extension_fixture.py": "9ed2daff619242aecf23a5c8f6202e1c7adbfc2be566c887603698424052e420",
+      "multimodal_test.py": "729a1768ea4052304aee01a26cedc5e46250b199b6bc4e43d6ea96a604b88977",
+      "multiview_fixture.py": "132998d136efce26dc888b758aff2af789f1fbf50d85f811033a091e1b82196b",
+      "panel_layout_audit.py": "2a2cbf1b84834fba7a40ff686a259f3082a97ad353c0f80c24846ff57f8757e4",
+      "polish_test.py": "0064c686eb7796865448b428fc0a09ae9865d31ebb2d4d6caee1d257e3545bf5",
+      "process_fixture.py": "0acd7167ded5ee14fb3bfd1af6403c5660d091cbc92edb6c84f51482e77b6e37",
+      "project_theme.py": "94cd8b08047032d81a08b065edc1ab48feebaf52fd608cd07cfbff6d56513f25",
+      "public_fixture.py": "4f8b720c90ca2a5eeb7f5102a433212706a7c9157e3bb57f97ef23de6ce38421",
+      "publication_test.py": "d46965c63e76497c0f1339ae2f0933667e6780c017c358ec7e4e573d5e716550",
+      "reference_fixture.py": "b9f3c50421aa3fd3cdc8f210c3a8aa167515a0df22fd17d3a8cc0b8ea2e8e382",
+      "reference_validation.py": "22f8a4591bbf834a911f3df41b4577bc2339565a8a69658b88e864251b5d2cd5",
+      "regression_test.py": "091e9434ad357cf5a14cd7528ae4b960aaadad262e3c4957e30554bfdfd1bed9",
+      "render_frozen_table.py": "bdfe8cc470c5203f67657754a2144bc44fc39d62179a51f749c69c977bf2f0c3",
+      "render_project_panels.py": "f6bf62a93981c94bd57a632d3ece2445bbf1950dfbf55be0b1608708e4461df2",
+      "render_reference_table.py": "61dbfad957cf5ad3379a376ce64d88f1a0968d95e21696d65902d13c8dbc3772",
+      "render_saved_components.py": "1602ce440e6d3d17c6a4a3c953f6a354e78a8fefed566c5bcf139b3ffb146069",
+      "review_exports.py": "d997e8818180422d4d2d2de548f302710d6adc8c3640e5841abe3d30b6c69db1",
+      "set_project_theme.py": "af46c7abe5b4094b4dcb99b3d9807454e340fd9a32566bd0a92c3e84919eb0bc",
+      "smoke_test.py": "ed499b242823646850663fa2f25d0088f61d50359950b65863ba611f6772d4b5",
+      "style_test.py": "e72e69625be39493edd8032a105e88b38f529999481698534b011eaf2db4c0f8",
+      "workbench.py": "1e0b0c3bc97822b42b2f5122d9a980ceaebbfa6ae21fd9c718d3cfca7f4c2ea6",
+      "references/renderer-registry.json": "abaa67b027230ad430678f7dbb412e129dfd1342dde3f35d0ea9f5444a6571c2",
+      "references/renderer-adapters.json": "19c02160a3a0d115e60db6a50c4ae375ed255b0adef3104524a5929d2dd77599",
+      "references/reference-palettes.json": "901342c110d88faa9220747eb575f67992a3e66eb3a7ea9ad984de9d95d5a08d",
+      "references/method-entries.json": "79d2ab8e88c6596bc604fad7c4c4424e59e4e3ff55b5436fc4dc687d53fb142b"
+    },
+    "renderer": "figure_clarity_views.plot_clarity_views",
+    "quantitative_geometry_sha256": "3e7408e6c34b3f26faebb037082379e4b0ff106f9e235bd9881cace9ab8fa1c8",
+    "appearance_sha256": "4c4656b75e70d9c8cdeb120f41204ae2f7c4177ce70ba1032254f759e26a159a",
+    "export": {
+      "raster_dpi": 300,
+      "tiff": false,
+      "target_width_mm": 178,
+      "minimum_text_pt": 7.5,
+      "readability_policy": "block"
+    },
+    "print_readability": {
+      "target_width_mm": 178,
+      "native_width_mm": 172.72,
+      "minimum_required_pt": 7.5,
+      "essential_text_count": 40,
+      "smallest_pt": 8.24455766558592,
+      "p10_pt": 8.24455766558592,
+      "below_threshold": [],
+      "state": "MEASUREMENT_PASS",
+      "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+      "visual_acceptance": false
+    },
+    "visual_acceptance": false,
+    "scientific_acceptance": false
+  },
+  "schema_version": 2,
+  "figure_id": "CLR07",
+  "status": "RENDERED_UNREVIEWED",
+  "input_hash": "425fd9392afb358f8ac1ec9583f5b68172fbe816e666a608a549bafc72c0797a",
+  "input_hash_algorithm": "SHA256",
+  "input_hash_scope": "exact exported TSV bytes",
+  "source_file": "inputs/CLR07.tsv",
+  "source_file_sha256": "6ab84a773ae3261a85380a9d2943780c0e9525cd37a8a02517a4269558dfe77f",
+  "figure_spec": {
+    "kind": "editorial_rebuild",
+    "kind_mode": "clarity_contribution",
+    "contract": {
+      "source_definition": "Frozen public synthetic table: examples/gallery/figures/R11/R11.tsv",
+      "independent_unit": "Synthetic identity only; no biological sample or scientific inference",
+      "denominator": "all contribution rows for Class 4; other classes exported separately; shares exported as CLR08",
+      "value_definition": "All plotted channels supplied explicitly; exact units and source selection in FigureSpec",
+      "uncertainty_definition": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+      "synthetic": true
+    },
+    "options": {
+      "class_label": "Class 4",
+      "feature_order": [
+        "Variable 08",
+        "Variable 09",
+        "Variable 10",
+        "Variable 11",
+        "Variable 12",
+        "Variable 13",
+        "Variable 14",
+        "Variable 15",
+        "Variable 16",
+        "Variable 17",
+        "Variable 18",
+        "Variable 19",
+        "Variable 01",
+        "Variable 02",
+        "Variable 03",
+        "Variable 04",
+        "Variable 05",
+        "Variable 06",
+        "Variable 07"
+      ],
+      "value_limits": [
+        0,
+        1
+      ],
+      "effect_limits": [
+        -0.85,
+        0.85
+      ],
+      "effect_label": "Supplied contribution",
+      "value_label": "Supplied feature value",
+      "title": "Class 4 | contribution detail",
+      "subtitle": "All 19 features and 1,330 instances / original feature order"
+    },
+    "visual_acceptance": false,
+    "scientific_analysis": "none; frozen inputs only",
+    "design_system": "editorial-v3-candidate",
+    "synthetic_only": false,
+    "text_geometry": {
+      "status": "TEXT_GEOMETRY_ONLY",
+      "issues": [],
+      "labels_checked": 39,
+      "scope": "Visible labels, annotations, ticks and legends at current physical size; no perceptual or scientific acceptance"
+    },
+    "project_theme": {
+      "schema_version": 1,
+      "project_id": "synthetic-clarity-CLR07",
+      "palette_name": "package_editorial",
+      "palette_colors": [
+        "#218C8D",
+        "#D8795B",
+        "#5676A5",
+        "#A795BD",
+        "#C8A34E",
+        "#6EA98C",
+        "#B66C87",
+        "#7B94A1",
+        "#A28C77",
+        "#74798D"
+      ],
+      "group_slots": {
+        "Supplied channels": 0
+      },
+      "roles": {
+        "primary": "#218C8D",
+        "negative": "#218C8D",
+        "positive": "#74798D",
+        "accent": "#74798D",
+        "neutral": "#A8ADB3",
+        "significant": "#74798D",
+        "border": "#526272"
+      },
+      "continuous": {
+        "sequential": [
+          "#F0F4F6",
+          "#436C87"
+        ],
+        "diverging": [
+          "#327D9F",
+          "#F7F7F4",
+          "#C96068"
+        ]
+      },
+      "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+      "font_family": "DejaVu Sans",
+      "design": {
+        "label_pt": 10,
+        "tick_pt": 9,
+        "title_pt": 11,
+        "note_pt": 8,
+        "spine_width": 0.7,
+        "spine_mode": "keep",
+        "grid": "keep"
+      },
+      "line_width": 1.4,
+      "point_edge_width": 0.4,
+      "preview_only": true
+    },
+    "project_theme_sha256": "4c4656b75e70d9c8cdeb120f41204ae2f7c4177ce70ba1032254f759e26a159a",
+    "display_notes": [
+      "All selected-class instances retained; row jitter is display-only. No SHAP computation, ranking, feature selection or causal attribution."
+    ],
+    "demo_label_style": "compact",
+    "guide_layout": {
+      "strategy": "Separate outer lanes; canvas grows instead of hiding guides",
+      "legends_relocated": 0,
+      "tick_canvas_scale": [
+        1.0,
+        1.0
+      ],
+      "geometry_sha256": "3e7408e6c34b3f26faebb037082379e4b0ff106f9e235bd9881cace9ab8fa1c8"
+    }
+  },
+  "width_inches": 6.8,
+  "height_inches": 6.37,
+  "layout_geometry": [
+    {
+      "axis": 0,
+      "bounds": [
+        0.25,
+        0.18,
+        0.54,
+        0.6500000000000001
+      ],
+      "xlim": [
+        -0.85,
+        0.85
+      ],
+      "ylim": [
+        18.5,
+        -0.5
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": false,
+      "projection": "rectilinear"
+    },
+    {
+      "axis": 1,
+      "bounds": [
+        0.85,
+        0.43,
+        0.018000000000000016,
+        0.22000000000000003
+      ],
+      "xlim": [
+        0.0,
+        1.0
+      ],
+      "ylim": [
+        0.0,
+        1.0
+      ],
+      "xscale": "linear",
+      "yscale": "linear",
+      "gid": null,
+      "colourbar": true,
+      "projection": "rectilinear"
+    }
+  ],
+  "index_alignment": {
+    "status": "INDEX_GEOMETRY_CHECKS_ONLY",
+    "bindings": [],
+    "issues": []
+  },
+  "renderer_sha256": {
+    "figure_analysis_results.py": "c60940ec4a5499a2c56dd7bd76503d0523f0bd0c36a7ad515d774afb58a2f795",
+    "figure_biomni_views.py": "fad6faf8878e164ed326e3688c2d8ad2d55142776dee7fc4a81aecd8e6826f5c",
+    "figure_clarity_views.py": "def000810f16cc83d62a0c0d98e114a3a3839f698b70e83f7fd6fd542d46ebfe",
+    "figure_core.py": "f36c928749c3dfd4d12e582204fb11dee7d04063e9fdbfc71b374b7033004111",
+    "figure_design.py": "d59c451c587e8151ed5939b1f6bbb31341a2ece2ea706ca81508601ca5b55c8c",
+    "figure_editorial.py": "9c9e9639fcb3714b1688d877419b166a3b7028e0a7f5ca85ce43ac284f6a925f",
+    "figure_expanded_grammar.py": "35b8a0a6814eab29c19bf8c9c2002cec5a9d7b9835a8bf5a9a9f9b16128929b7",
+    "figure_extensions.py": "8df606b112cf247eb880c8cfda5bf05b0124e744caa8d078b60cbf8f2d99f26e",
+    "figure_general.py": "7323aa0c513f71bb4dda96696e85e0114d986f8ca1db021f7ef12f6333a57e06",
+    "figure_gsea.py": "40f6e383aa5081bf65242a58b180aa18a17079c49378798125e908a3c9c3cbdd",
+    "figure_layout.py": "866995c6cdd619a20b333ebbb7affd519aecdfafa36362e12102f5215e5d870e",
+    "figure_linked_evidence.py": "ea09b2e61d64b1068b6661e49179e267fc57b00fa9cdfe6e3b5b7e60f9608fdc",
+    "figure_method_extensions.py": "abb65dc1b0baf9331f3c4a5179a2af9919357971292b58b2398b97c3c5231d66",
+    "figure_multimodal.py": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+    "figure_multiomics_views.py": "cb2e9a6463245731ad0e5910e2c2611c59f3108352adab4f85eddff0e056c218",
+    "figure_multiscale.py": "f2b346c8b1c0e45ae11f20828405708e3903f210f0b74002795a4fee8e0317bd",
+    "figure_network_extensions.py": "7226e50de6abf1539b7858f4da756b8c1e0b184d2bbb687546d0a4fcc6bfcd28",
+    "figure_package_styles.py": "3fd1f93b0d56ce640762535a144894d13e57499e387f225021028c4420d08399",
+    "figure_palette_applications.py": "30968482e47951aa89fb78669450b94759be8401515832fa9e32d3c71680887a",
+    "figure_polish.py": "1dd1e7849ea89bc67071cef0c2cf01193837c23bae09c20fa98afe1b366e8484",
+    "figure_process_dashboard.py": "f05172abf504690d97c8df546684056a3afbd04c0283fac6d3d66c6eb9184afb",
+    "figure_publication.py": "05971e6ac4b74703c332310d7b10e16d80844995776fa2b2ff5fc46ec8c1c4f9",
+    "figure_publication_plus.py": "dbdda56147fcd1260fe84fc5fef640b916f34764b9547cc7ee33eb0ac1a4bb12",
+    "figure_qc_de.py": "4731eb732c08ab86c7c02dc65982154fcf6214f553290ffb1409258357841d9d",
+    "figure_reference.py": "edd448cb668cfde60c00bbba0771e7a9604813a6ec8baeda05345113381f677a",
+    "figure_reference_palettes.py": "b9880e9ab9e0a452b65650526c1be388cbcf61e5fec7ac7cff72dbe21ef060c4",
+    "figure_refined_views.py": "bf8a02235dc6db5be9f2a1bdbcb0297cd2bfe6790a773145ba5b874ab66be659",
+    "figure_styles.py": "d126e02539e9ef53a0b0861664d408ed6e4a56e971fdb565e4994cd6c545e370",
+    "alluvial_geometry.py": "bcb5c01aaac0013ba6b5b253b6cbe77d7ed12b30f0c33b16aa8833fe53ef7e70",
+    "indexed_alignment.py": "2f94ad6f9af88e54dcb8074cde40b87a7c0d3fdb0da851969947ac430542f9a2",
+    "matrix_input.py": "1deecb5ee1feee518b9ab389ea4ed15b091ad8b29051ee3f69cfa00c63c887eb",
+    "project_theme.py": "94cd8b08047032d81a08b065edc1ab48feebaf52fd608cd07cfbff6d56513f25"
+  },
+  "output_sha256": {
+    "CLR07.svg": "83490d65432f518eb28950641d83655b4ccb988750e74139a6bb16507f2cd039",
+    "CLR07.pdf": "dec05843a34b94033a5a6d3afc04ebdb0f4cfc3b05537642f4ff3f0cd7b90a20",
+    "CLR07.png": "5045d3f32f9b62542af45c8b3e375374c95139237ef76081fb7e440529363f2c",
+    "CLR07.tsv": "425fd9392afb358f8ac1ec9583f5b68172fbe816e666a608a549bafc72c0797a",
+    "CLR07_session.txt": "619d0144dbf182bb47b57ae21940148b8aaab05bb427d65e40e7df9e7c7c80c2"
+  }
+}

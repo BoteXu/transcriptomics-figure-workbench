@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "version": "0.6.0",
+  "version": "0.7.0",
   "counts": {
-    "python_functions": 123,
-    "fixed_aliases": 81,
-    "table_entries": 123
+    "python_functions": 124,
+    "fixed_aliases": 82,
+    "table_entries": 124
   },
   "renderers": [
     {
@@ -458,6 +458,61 @@
         "registered",
         "u",
         "v"
+      ]
+    },
+    {
+      "id": "figure_clarity_views.plot_clarity_views",
+      "module": "figure_clarity_views",
+      "function": "plot_clarity_views",
+      "display_name": "Clarity and extension views",
+      "summary": "Fine profiles, readable dense panels, imaging and supplied evaluation views.",
+      "parameters": [
+        {
+          "name": "view",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "contract",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "options",
+          "required": true,
+          "annotation": null
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [
+        "clarity"
+      ],
+      "source_sha256": "def000810f16cc83d62a0c0d98e114a3a3839f698b70e83f7fd6fd542d46ebfe",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "contribution",
+        "count",
+        "density",
+        "effect",
+        "feature_value",
+        "fixed",
+        "intensity",
+        "label_id",
+        "lower",
+        "lower_rank",
+        "p",
+        "padj",
+        "rank",
+        "ratio",
+        "registered",
+        "u",
+        "upper",
+        "upper_rank",
+        "v",
+        "value",
+        "x",
+        "y"
       ]
     },
     {
@@ -7287,6 +7342,34 @@
         "upper_delta",
         "r",
         "p"
+      ],
+      "theme_mode": "argument"
+    },
+    "clarity": {
+      "renderer": "figure_clarity_views.plot_clarity_views",
+      "numeric_columns": [
+        "x",
+        "y",
+        "value",
+        "lower",
+        "upper",
+        "contribution",
+        "feature_value",
+        "effect",
+        "ratio",
+        "padj",
+        "count",
+        "p",
+        "u",
+        "v",
+        "intensity",
+        "fixed",
+        "registered",
+        "density",
+        "label_id",
+        "rank",
+        "lower_rank",
+        "upper_rank"
       ],
       "theme_mode": "argument"
     }

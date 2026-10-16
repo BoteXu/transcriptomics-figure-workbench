@@ -11,7 +11,7 @@ def build_studio(output,gallery=None,demo_svg=None):
     from .methods import catalog_methods
     data={'registry':read_registry(),'examples':[],'methods':[],'method_entries':catalog_methods(),'demo_svg':None}
     data['design_examples']=[]
-    for gallery_name in ['refined-gallery','design-gallery']:
+    for gallery_name in ['clarity-gallery','refined-gallery','design-gallery']:
         designs=SKILL/'assets'/gallery_name
         if not designs.is_dir():continue
         prefix=Path(os.path.relpath(designs,output.resolve().parent)).as_posix()

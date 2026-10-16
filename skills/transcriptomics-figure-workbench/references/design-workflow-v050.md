@@ -26,7 +26,7 @@ Exact top-level fields:
 }
 ```
 
-Structures: `differential_expression`, `enrichment`, `effects`, `matrix`, `embedding`, `network`, `overlap`, `paired`, `profiles`, `survival`, `uncertainty`. Every mapped role names an actual selected field. Read `figure_workbench/design.py` for the exact candidate-role list. A `HOLD` has explicit blocking reasons and no preferred design. The QC field is a caller declaration; it is not independently verified by the planner. Candidate compatibility is necessary, not sufficient: renderer contracts still check real values, full grids, test status, scales and identities.
+Structures: `differential_expression`, `enrichment`, `effects`, `matrix`, `embedding`, `network`, `overlap`, `paired`, `profiles`, `survival`, `uncertainty`. Current additions: `curves`, `score_comparison`, `associations`, `contributions`, `imaging`, `estimation`, `model_evaluation`, `rank_stability` (nineteen structures total). Every mapped role names an actual selected field. Read `figure_workbench/design.py` for the exact candidate-role list. A `HOLD` has explicit blocking reasons and no preferred design. The QC field is a caller declaration; it is not independently verified by the planner. Candidate compatibility is necessary, not sufficient: renderer contracts still check real values, full grids, test status, scales and identities.
 
 Prefer the attractive compatible candidate, review the actual example, then construct the exact FigureSpec parameters shown by `describe`. Guidance labels such as `editorial / forest` must be translated to that renderer's documented `kind` or options, not blindly copied into parameters. Existing `method-spec` remains the fixed package-binding route. Source changes invalidate saved execution plans.
 

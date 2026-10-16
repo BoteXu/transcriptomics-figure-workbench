@@ -7,7 +7,7 @@ description: Design, render and improve publication figures from frozen scientif
 
 ## Start with the comparison and a polished example
 
-Identify the comparison the reader should see, the supplied data shape and the intended use (paper, slide or screen). **Prioritize attractive, restrained examples with readable labels and clear visual hierarchy.** Start with the [five community-informed examples](assets/refined-gallery/index.html), [five design alternatives](assets/design-gallery/index.html) and [25 package examples](assets/package-gallery/index.html). Offer one preferred design and at most two useful alternatives. A different palette or repeated layout is not a new scientific method.
+Identify the comparison the reader should see, the supplied data shape and the intended use (paper, slide or screen). **Prioritize attractive, restrained examples with readable labels and clear visual hierarchy.** Start with the [15 new clarity and extension examples](assets/clarity-gallery/index.html), [five community-informed examples](assets/refined-gallery/index.html), [five design alternatives](assets/design-gallery/index.html) and [25 package examples](assets/package-gallery/index.html). Offer one preferred design and at most two useful alternatives. A different palette or repeated layout is not a new scientific method.
 
 Consider excellent community implementations, author blogs, GitHub repositories and readable tutorials alongside official examples. Compare actual figures, then record the author, source, inspected scope, adopted design and code/license boundary in the [community design ledger](references/community-designs-v060.md). The source's popularity or official status does not establish suitability. Never claim an unread article was integrated. Prefer an independently implemented frozen-table view when analysis packages are unnecessary.
 
@@ -72,6 +72,8 @@ Use a source-bound [reading edition](references/refined-views-v060.md) when a fu
 Deliver a preferred preview, editable PDF/SVG, exact plotted TSV, FigureSpec and receipts. State material limitations and what was actually inspected. Keep `RENDERED_UNREVIEWED`, `FILES_VERIFIED`, `MEASUREMENT_PASS`, visual acceptance and scientific acceptance distinct.
 
 ## Specialist routes and compatibility
+
+- Dense profiles, contribution detail, effect distributions, memberships, physical pixel panels, estimation, decision/PR curves and rank spans: [v0.7 exact contracts and sources](references/clarity-views-v070.md). Split large dashboards into complete source-bound components; preserve the original overview and its unresolved size warnings.
 
 - Package views and GSEA contracts: [package/method entries](references/package-method-entries.md), [package styles](references/package-styles-v040.md).
 - New half-eye, split matrix and linear profile contracts: [design workflow](references/design-workflow-v050.md).
