@@ -8,6 +8,7 @@ import {pathToFileURL} from 'node:url';
 import {execFile} from 'node:child_process';
 import {promisify} from 'node:util';
 const output=process.argv[2];if(!output)throw Error('Supply fresh private test output');
+const studioPath=process.argv[3]||'examples/studio/index.html';
 await fs.mkdir(output,{recursive:false});
 const root=process.cwd(),types={'.html':'text/html; charset=utf-8','.js':'text/javascript','.json':'application/json','.png':'image/png','.svg':'image/svg+xml','.css':'text/css'};
 const server=http.createServer(async(req,res)=>{
@@ -23,11 +24,13 @@ const opts={headless:true};if(process.env.FIGURE_BROWSER_EXECUTABLE)opts.executa
 let browser;const checks=[],external=[],errors=[];
 try{
   // Run the established Studio interaction gates against the rebuilt full Studio first.
-  await promisify(execFile)(process.execPath,['tests/check_studio.mjs',base+'/examples/studio/index.html',path.join(output,'studio'),'examples/workbench-v030/inputs/ma.spec.json'],{timeout:180000});
+  await promisify(execFile)(process.execPath,['tests/check_studio.mjs',base+'/'+studioPath,path.join(output,'studio'),'examples/workbench-v030/inputs/ma.spec.json'],{timeout:180000});
   checks.push('established Studio search/import/hash mismatch/drag/export/narrow-layout tests pass');
+  await promisify(execFile)(process.execPath,['tests/check_aesthetic_gallery.mjs',base+'/examples/aesthetic-v030/index.html',path.join(output,'aesthetic')],{timeout:180000});
+  checks.push('established aesthetic gallery opinion and export interactions pass');
   browser=await chromium.launch(opts);const context=await browser.newContext({viewport:{width:1440,height:1050}}),page=await context.newPage();
   page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',route=>{const u=route.request().url();if(u.startsWith(base+'/')||u.startsWith('blob:')||u.startsWith('data:'))return route.continue();external.push(u);return route.abort()});
-  await page.goto(base+'/examples/studio/index.html');await page.locator('#publication-finish').click();
+  await page.goto(base+'/'+studioPath);await page.locator('#publication-finish').click();
   await page.waitForFunction(()=>document.getElementById('preview-state').textContent==='PUBLICATION_PREVIEW_UNREVIEWED');
   assert.equal(await page.frameLocator('#before-view iframe').locator('svg').count(),1);
   assert.equal(await page.frameLocator('#after-view iframe').locator('svg').count(),1);checks.push('actual publication finisher and before/after preview execute');

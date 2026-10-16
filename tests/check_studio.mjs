@@ -75,5 +75,6 @@ try{
   await fs.writeFile(path.join(output,'browser-validation.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }catch(error){
   await page.screenshot({path:path.join(output,'failure.png'),fullPage:true});
-  console.error(JSON.stringify({message:error.message,page_errors:errors,ui_message:await page.locator('#message').innerText()}));throw error;
+  const uiMessage=await page.locator('#message').count()?await page.locator('#message').innerText():null;
+  console.error(JSON.stringify({message:error.message,page_errors:errors,ui_message:uiMessage,url:page.url()}));throw error;
 }finally{await context.close();await browser.close();}
