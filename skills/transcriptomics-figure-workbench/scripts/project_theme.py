@@ -3,7 +3,7 @@
 Project identity-to-colour mappings are explicit and stable across figure subsets.
 """
 from pathlib import Path
-import json,copy,hashlib
+import json,copy,hashlib,re
 import matplotlib.pyplot as plt
 from matplotlib.colors import to_rgba
 from figure_reference_palettes import load_palettes,palette_scope,resolve_card_name
@@ -27,6 +27,8 @@ def validate_theme(theme):
     if not isinstance(theme['font_family'],str) or not theme['font_family']: raise ValueError('Font must be explicit')
     for slot in theme['group_slots'].values():
         if type(slot) is not int or not 0<=slot<len(card['colors']): raise ValueError('Category slot outside card capacity')
+    explicit=theme.get('category_colors',{})
+    if not isinstance(explicit,dict) or len(explicit)>500 or any(not isinstance(k,str) or not k.strip() or not isinstance(v,str) or not re.fullmatch(r'#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?',v) for k,v in explicit.items()):raise ValueError('Explicit named category colours must be bounded Hex maps; no cycling')
     for name in ('sequential','diverging'):
         if len(theme['continuous'][name])<2: raise ValueError('Incomplete continuous scale')
         for c in theme['continuous'][name]: to_rgba(c)
@@ -42,8 +44,9 @@ def read_theme(path): return validate_theme(json.loads(Path(path).read_text(enco
 
 def group_palette(theme,groups):
     validate_theme(theme); groups=list(groups)
-    if len(groups)!=len(set(groups)) or set(groups)-set(theme['group_slots']): raise ValueError('Unregistered or duplicated project identities; never guess by row order')
-    return {g:theme['palette_colors'][theme['group_slots'][g]] for g in groups}
+    explicit=theme.get('category_colors',{})
+    if len(groups)!=len(set(groups)) or set(groups)-(set(theme['group_slots'])|set(explicit)): raise ValueError('Unregistered or duplicated project identities; never guess by row order')
+    return {g:explicit[g] if g in explicit else theme['palette_colors'][theme['group_slots'][g]] for g in groups}
 
 def bind_panel(theme,spec,data):
     theme=validate_theme(theme); spec=copy.deepcopy(spec); typ=spec['type']
@@ -106,11 +109,12 @@ def render_with_theme(renderer,data,params,theme):
         default_scale=scale_parameter.default if scale_parameter else None
         signed=settings.get('signed',False) or settings.get('scale_type',default_scale)=='signed' or settings.get('value_semantics') in ('scaled','signed_effect')
         settings['continuous_colors']=theme['continuous']['diverging' if signed else 'sequential']
-    if isinstance(settings.get('block_palette'),dict) and set(settings['block_palette'])<=set(theme['group_slots']):
+    registered=set(theme['group_slots'])|set(theme.get('category_colors',{}))
+    if isinstance(settings.get('block_palette'),dict) and set(settings['block_palette'])<=registered:
         settings['block_palette']=group_palette(theme,list(settings['block_palette']))
     if isinstance(settings.get('annotation_palettes'),dict):
         for name,palette in settings['annotation_palettes'].items():
-            if set(palette)<=set(theme['group_slots']):settings['annotation_palettes'][name]=group_palette(theme,list(palette))
+            if set(palette)<=registered:settings['annotation_palettes'][name]=group_palette(theme,list(palette))
     if 'font_family' in signature.parameters: settings['font_family']=theme['font_family']
     with palette_scope(theme),plt.rc_context({'font.family':theme['font_family']}): fig=renderer(data,**settings); fig=apply_project_style(fig,theme)
     fig._omics_spec['theme_adapter']=renderer.__module__+'.'+renderer.__name__

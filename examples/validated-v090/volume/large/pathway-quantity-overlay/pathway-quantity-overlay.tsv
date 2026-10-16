@@ -1,0 +1,13 @@
+record_type	node_id	label	x	y	value	source	target	direction
+node	A	Input	0.0	1.0	0.7			
+node	B	Pool A	1.0	1.0	-0.6			
+node	C	Pool B	2.0	1.0	0.3			
+node	D	Pool C	2.0	0.0	1.1			
+node	E	Pool D	1.0	0.0	-0.4			
+node	F	Output	0.0	0.0	0.5			
+edge						A	B	known
+edge						B	C	known
+edge						C	D	known
+edge						D	E	known
+edge						E	B	known
+edge						E	F	known

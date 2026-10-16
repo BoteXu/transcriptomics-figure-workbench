@@ -1,0 +1,94 @@
+{
+  "form": "N11",
+  "base_form": "field",
+  "example": "N11",
+  "title": "二维密度与等高场",
+  "source_meta": "examples/gallery/metadata/N11.json",
+  "route": "native",
+  "adapter": "figure_network_extensions.plot_contour_field",
+  "parameters": {
+    "value_label": "Supplied signed field",
+    "limits": [
+      -1,
+      1
+    ],
+    "levels": [
+      -1.0,
+      -0.8,
+      -0.6,
+      -0.3999999999999999,
+      -0.19999999999999996,
+      0.0,
+      0.20000000000000018,
+      0.40000000000000013,
+      0.6000000000000001,
+      0.8,
+      1.0
+    ],
+    "x_label": "Supplied X",
+    "y_label": "Supplied Y"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "aesthetic-library-preview",
+    "palette_name": "card_06",
+    "palette_colors": [
+      "#506AAA",
+      "#728DC1",
+      "#91BBDF",
+      "#B6DBF1",
+      "#F6D3D9",
+      "#E79FBF",
+      "#E17692"
+    ],
+    "group_slots": {
+      "G1": 0,
+      "G2": 1,
+      "G3": 2,
+      "G4": 3,
+      "G5": 4,
+      "G6": 5,
+      "G7": 6,
+      "All points": 0,
+      "Support": 1,
+      "Site": 6,
+      "Input": 2,
+      "Output": 0
+    },
+    "roles": {
+      "primary": "#506AAA",
+      "negative": "#506AAA",
+      "positive": "#E17692",
+      "accent": "#E17692",
+      "neutral": "#A8ADB3",
+      "significant": "#E17692",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#506AAA"
+      ],
+      "diverging": [
+        "#506AAA",
+        "#F7F7F7",
+        "#E17692"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/gallery/figures/N11/N11.tsv"
+}

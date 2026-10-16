@@ -5,7 +5,8 @@ import textwrap
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, Normalize, TwoSlopeNorm
 from matplotlib.lines import Line2D
-from matplotlib.patches import Rectangle
+from matplotlib.patches import Rectangle, Patch
+from matplotlib.transforms import Bbox
 from matplotlib.mlab import GaussianKDE
 from figure_core import checked, palette_check, stamp, effect_reference
 from matrix_input import normalize_matrix, axis_labels, matrix_frame
@@ -107,9 +108,28 @@ def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry=
     if has_block or has_count:
         from indexed_alignment import bind_index_axes
         if has_block:bind_index_axes(fig,ax,strip,'y',rows)
-        if has_count:bind_index_axes(fig,ax,side,'y',rows)
+        if has_count:
+            bind_index_axes(fig,ax,side,'y',rows)
+            # A right-hand track follows the matrix right edge when the canvas
+            # grows. Anchoring it to the left edge can cover the last column.
+            side_width=side.get_position().width*fig.get_figwidth()
+            gap=max(.28,(side.get_position().x0-ax.get_position().x1)*fig.get_figwidth())
+            def count_locator(track,renderer):
+                b=ax.get_position();fw=fig.get_figwidth()
+                return Bbox.from_bounds(b.x1+gap/fw,b.y0,side_width/fw,b.height)
+            side.set_axes_locator(count_locator)
     cb=fig.add_subplot(gs[0,k]);fig.colorbar(im,cax=cb,label=value_label);cb.tick_params(labelsize=8);cb.set_box_aspect(20)
     fig.suptitle(title,x=left,ha='left',fontsize=12,y=.97)
+    if has_block:
+        groups=list(dict.fromkeys(block))
+        ncol=min(4,len(groups));legend_rows=(len(groups)+ncol-1)//ncol
+        fw,fh=fig.get_size_inches();legend_height=.26*legend_rows
+        fig.set_size_inches(fw,fh+legend_height+.12)
+        fh=fig.get_figheight()
+        fig.subplots_adjust(top=1-(.65+legend_height)/fh)
+        fig.legend(handles=[Patch(facecolor=block_palette[g],edgecolor='none',label=str(g)) for g in groups],
+                   loc='upper left',bbox_to_anchor=(left,1-(.42 if title else .10)/fh),
+                   ncol=ncol,frameon=False,fontsize=8,handlelength=1,columnspacing=1.4,borderaxespad=0)
     return stamp(fig,data,'publication_aligned_matrix',limits=list(limits),center=center,signed=signed,value_label=value_label,geometry=geometry,bubble_area='constant_not_detection',row_order=rows,column_order=cols,row_aliases=dict(zip(rows,labels_y)),column_aliases=dict(zip(cols,labels_x)),count_label=count_label,block_palette=block_palette,continuous_colors=continuous_colors,clustering='none_frozen_input_order',row_field=row_field,column_field=column_field,value_field=value_field,value_columns=list(value_columns) if value_columns is not None else None,missing=missing,figsize=list(map(float,figsize)),row_block_field=row_block_field if has_block else None,row_count_field=row_count_field if has_count else None,row_label_wrap=row_label_wrap,column_label_wrap=column_label_wrap,label_fontsize=label_fontsize)
 
 def plot_publication_forest(data,palette,*,x_label,interval_label,effect_scale,title='',compact=True,decimals=2):
@@ -167,17 +187,18 @@ def plot_feature_facets(data,*,value_label,limits,title='',ncols='auto',point_si
     if point_size is None:point_size=max(.5,min(28,200/np.sqrt(d.cell_id.nunique())))
     if panel_height is None:panel_height=max(1.8,panel_width*max(float(d.y.max()-d.y.min()),1)/max(float(d.x.max()-d.x.min()),1)+.65)
     from figure_workbench.responsive import canvas_budget
-    fig,axs=plt.subplots(nrows,ncols,figsize=canvas_budget(ncols*panel_width,nrows*panel_height),squeeze=False,layout='constrained')
+    from figure_workbench.responsive import facet_slots
+    fig=plt.figure(figsize=canvas_budget(ncols*panel_width,nrows*panel_height),layout='constrained')
+    axs=[fig.add_subplot(slot) for slot in facet_slots(fig,len(feats),nrows,ncols)]
     norm=Normalize(*limits);artist=None
     cmap=LinearSegmentedColormap.from_list('project_features',continuous_colors) if continuous_colors is not None else 'magma'
-    for ax,f in zip(axs.ravel(),feats):
+    for ax,f in zip(axs,feats):
         z=d[d.feature==f];zero=z[z.value==0];pos=z[z.value>0]
         ax.scatter(zero.x,zero.y,s=point_size,c='#D8DDE2',lw=0,rasterized=True)
         artist=ax.scatter(pos.x,pos.y,c=pos.value,s=point_size,cmap=cmap,norm=norm,lw=0,rasterized=True)
         dx=max(float(d.x.max()-d.x.min()),1)*.03;dy=max(float(d.y.max()-d.y.min()),1)*.03
         ax.set(xlim=(d.x.min()-dx,d.x.max()+dx),ylim=(d.y.min()-dy,d.y.max()+dy),title=f,aspect='equal');ax.set_axis_off()
-    for ax in axs.ravel()[len(feats):]:ax.set_axis_off()
-    fig.colorbar(artist,ax=list(axs.ravel()),fraction=.02,pad=.025,label=value_label);fig.suptitle(title,fontsize=12)
+    fig.colorbar(artist,ax=axs,fraction=.02,pad=.025,label=value_label);fig.suptitle(title,fontsize=12)
     return stamp(fig,data,'publication_stored_feature_facets',limits=list(limits),value_label=value_label,coordinates='unchanged',draw_order='zeros_then_positive_original_order',point_size=point_size,cmap=continuous_colors if continuous_colors is not None else 'magma',point_layers_rasterized=True)
 
 def plot_raincloud(data,palette,*,y_label,unit_label,title='',density_min_n=20):

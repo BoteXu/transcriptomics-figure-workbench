@@ -1,0 +1,49 @@
+{
+  "form": "calibration",
+  "adapter": "figure_core.plot_curve",
+  "rows": 10,
+  "source_input_sha256": "aa58a859e368439ecb0937caad4a1b43f007dd530a4d55fee6cc3a24cc596580",
+  "input_sha256": "8609e160aecf2e189ac1d105b7a635e46a22e2d9ac727fa65c7cf2ecb045693b",
+  "quantitative_geometry_sha256": "45dcfda4f8d3ada847e26fc67fbcef213f3874bdbd0eb82b8f2d2d38ec7d1b6e",
+  "volume": {
+    "level": "medium",
+    "quantity_dimension": "model",
+    "quantity": 2,
+    "input_rows": 10,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 10
+  },
+  "size_inches": [
+    10.0,
+    4.656659999999999
+  ],
+  "id": "calibration",
+  "section": "volume",
+  "level": "medium",
+  "assets": {
+    "png": "volume/medium/calibration/calibration.png",
+    "svg": "volume/medium/calibration/calibration.svg",
+    "tsv": "volume/medium/calibration/calibration.tsv"
+  },
+  "sha256": {
+    "png": "0a6d8283143017b45207ad782091633446805fc2e143446d5456e12a7801a582",
+    "svg": "c713a4f4a058b8ddc45d5bc0aeafc3a076d848593e1e915974db2a5ec18aa60b",
+    "tsv": "8609e160aecf2e189ac1d105b7a635e46a22e2d9ac727fa65c7cf2ecb045693b"
+  },
+  "visual_review": {
+    "key": "volume/medium/calibration",
+    "png_sha256": "0a6d8283143017b45207ad782091633446805fc2e143446d5456e12a7801a582",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "校准曲线与样本支持"
+}

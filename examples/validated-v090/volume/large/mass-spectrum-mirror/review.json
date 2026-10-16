@@ -1,0 +1,49 @@
+{
+  "form": "mass-spectrum-mirror",
+  "adapter": "figure_multiomics_views.plot_mass_spectrum",
+  "rows": 32,
+  "source_input_sha256": "a68c4670b9548758c5dac979ccb61ebb04f21d83310c7745fd49f271ec9ed6cd",
+  "input_sha256": "afa31428ae370ef09af4ef510496748b8c197351b0270f93563c7334df4c2792",
+  "quantitative_geometry_sha256": "249a9b66d27a7db1534414e4507cd57d3d2da64c7c9fb1983f7d3598926b3949",
+  "volume": {
+    "level": "large",
+    "quantity_dimension": "peak_id",
+    "quantity": 32,
+    "input_rows": 32,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 8.5
+  },
+  "size_inches": [
+    8.5,
+    5.4
+  ],
+  "id": "mass-spectrum-mirror",
+  "section": "volume",
+  "level": "large",
+  "assets": {
+    "png": "volume/large/mass-spectrum-mirror/mass-spectrum-mirror.png",
+    "svg": "volume/large/mass-spectrum-mirror/mass-spectrum-mirror.svg",
+    "tsv": "volume/large/mass-spectrum-mirror/mass-spectrum-mirror.tsv"
+  },
+  "sha256": {
+    "png": "ed4e3b4902158fa147dc73227c1e3e91726c7a11e6c2423333823f8e4c701aa0",
+    "svg": "ad863955f44875336af2ff03448c188298636eb682881ca739707002a9e4788f",
+    "tsv": "afa31428ae370ef09af4ef510496748b8c197351b0270f93563c7334df4c2792"
+  },
+  "visual_review": {
+    "key": "volume/large/mass-spectrum-mirror",
+    "png_sha256": "ed4e3b4902158fa147dc73227c1e3e91726c7a11e6c2423333823f8e4c701aa0",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "Mass spectrum mirror"
+}

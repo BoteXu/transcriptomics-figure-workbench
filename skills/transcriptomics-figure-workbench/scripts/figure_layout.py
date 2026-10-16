@@ -51,6 +51,32 @@ def optimize_guide_layout(fig):
     if np.max(tick_scale)>1.005:
         fig.set_size_inches(*(np.asarray(fig.get_size_inches())*tick_scale))
         fig.canvas.draw();renderer=fig.canvas.get_renderer()
+    # Measure neighbouring complete axes, including their tick/title lanes.
+    # Native axes positions are retained; enlarge their physical separation.
+    # Overlapping axes (insets and intentional overlays) are never guessed apart.
+    adjacent_scale=np.ones(2)
+    for _ in range(4):
+        renderer=fig.canvas.get_renderer();scale=np.ones(2)
+        axes=[a for a in fig.axes if a.axison]
+        for i,a in enumerate(axes):
+            ab=a.bbox;at=a.get_tightbbox(renderer,bbox_extra_artists=[])
+            if at is None:continue
+            for b in axes[i+1:]:
+                bb=b.bbox;bt=b.get_tightbbox(renderer,bbox_extra_artists=[])
+                if bt is None:continue
+                if min(ab.y1,bb.y1)-max(ab.y0,bb.y0)>.5*min(ab.height,bb.height):
+                    left,right,lt,rt=(ab,bb,at,bt) if ab.x0<bb.x0 else (bb,ab,bt,at)
+                    gap=right.x0-left.x1
+                    if gap>2:scale[0]=max(scale[0],(max(0,lt.x1-left.x1)+max(0,right.x0-rt.x0)+5)/gap)
+                if min(ab.x1,bb.x1)-max(ab.x0,bb.x0)>.5*min(ab.width,bb.width):
+                    bottom,top,bt0,tt=(ab,bb,at,bt) if ab.y0<bb.y0 else (bb,ab,bt,at)
+                    gap=top.y0-bottom.y1
+                    if gap>2:scale[1]=max(scale[1],(max(0,bt0.y1-bottom.y1)+max(0,top.y0-tt.y0)+5)/gap)
+        scale=np.minimum(scale,1.8)
+        if max(scale)<=1.01:break
+        from figure_workbench.responsive import canvas_budget
+        fig.set_size_inches(*canvas_budget(*(np.asarray(fig.get_size_inches())*scale)))
+        adjacent_scale*=scale;fig.canvas.draw()
     data_axes=[a for a in fig.axes if a.axison and not hasattr(a,'_colorbar')]
     legends=[l for l in fig.findobj(Legend) if l.get_visible()]
     moved=[]
@@ -67,6 +93,22 @@ def optimize_guide_layout(fig):
             legend.set_bbox_to_anchor(((old[0]+.10)/sizes[0],y/sizes[1]),transform=fig.transFigure)
             legend._page_fixed_anchor=True
             legend.set_loc('upper left');legend.borderaxespad=0;y-=h+.18
+    # Captions need their own physical lane after typography changes. Scaling
+    # the entire page preserves an existing caption/x-label collision, so move
+    # only colliding low figure-level notes into a newly reserved bottom lane.
+    fig.canvas.draw();renderer=fig.canvas.get_renderer();notes=[]
+    excluded=set(getattr(fig,'_software_band_artists',[]))
+    axes_boxes=[a.get_tightbbox(renderer,bbox_extra_artists=[]) for a in fig.axes if a.axison]
+    for t in fig.texts:
+        if t in excluded or getattr(t,'_panel_heading',False) or not t.get_visible() or not t.get_text().strip() or t.get_transform()!=fig.transFigure or t.get_position()[1]>=.25:continue
+        tb=t.get_window_extent(renderer)
+        if any(b is not None and min(tb.x1,b.x1)>max(tb.x0,b.x0) and min(tb.y1,b.y1)+4>max(tb.y0,b.y0) for b in axes_boxes):
+            notes.append((t,tb.height/fig.dpi))
+    if notes:
+        old=np.asarray(fig.get_size_inches(),float);lane=sum(h+.10 for _,h in notes)+.14
+        _expand_canvas(fig,old+[0,lane],[0,lane]);cursor=.10
+        for t,h in reversed(notes):
+            t.set_y(cursor/fig.get_figheight());t.set_verticalalignment('bottom');cursor+=h+.10
     fig.canvas.draw();box=fig.get_tightbbox(fig.canvas.get_renderer());sizes=np.asarray(fig.get_size_inches(),float)
     if box is not None:
         left=max(0,.12-box.x0);bottom=max(0,.12-box.y0)
@@ -74,7 +116,7 @@ def optimize_guide_layout(fig):
         if max(left,bottom,right,top)>.005:_expand_canvas(fig,sizes+[left+right,bottom+top],[left,bottom])
     fig.canvas.draw()
     if before!=geometry_signature(fig):raise RuntimeError('Guide optimization changed quantitative geometry')
-    fig._omics_spec['guide_layout']=dict(strategy='Separate outer lanes; canvas grows instead of hiding guides',legends_relocated=len(moved),tick_canvas_scale=list(tick_scale),geometry_sha256=before)
+    fig._omics_spec['guide_layout']=dict(strategy='Measured adjacent axes and separate outer lanes; canvas grows instead of hiding guides',legends_relocated=len(moved),captions_relocated=len(notes),tick_canvas_scale=list(tick_scale),adjacent_canvas_scale=list(adjacent_scale),geometry_sha256=before)
     return fig
 
 

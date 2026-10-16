@@ -1,10 +1,11 @@
 """At-use layout controls. Imports plotting dependencies only during rendering."""
 import math
+from numbers import Real
 
 
 def canvas_budget(width,height):
-    if any(type(v) not in (int,float) or not math.isfinite(v) or not 0<v<=100 for v in [width,height]) or width*height>600:raise ValueError('Canvas resource HOLD: paginate complete panels or use a bounded server render')
-    return width,height
+    if any(isinstance(v,bool) or not isinstance(v,Real) or not math.isfinite(v) or not 0<v<=100 for v in [width,height]) or width*height>600:raise ValueError('Canvas resource HOLD: paginate complete panels or use a bounded server render')
+    return float(width),float(height)
 
 
 def grid_shape(count, columns='auto', rows=None, *, preferred_width=4.2, canvas_width=None):
@@ -13,13 +14,23 @@ def grid_shape(count, columns='auto', rows=None, *, preferred_width=4.2, canvas_
         if rows is not None:
             if type(rows) is not int or rows<1:raise ValueError('Positive integer rows required')
             columns=math.ceil(count/rows)
-        else:columns=max(1,int(canvas_width/preferred_width)) if canvas_width else max(1,round(math.sqrt(count*1.35)))
+        else:columns=max(1,int(canvas_width/preferred_width)) if canvas_width else (count if count<=3 else max(1,round(math.sqrt(count*1.35))))
         columns=min(columns,count)
     if type(columns) is not int or not 1<=columns<=64:raise ValueError('Positive integer columns or auto required')
     required=math.ceil(count/columns)
     if rows is None:rows=required
     if type(rows) is not int or rows<required:raise ValueError('Requested rows cannot contain all panels; expand or paginate')
     return rows,columns
+
+
+def facet_slots(fig,count,rows,columns,**kwargs):
+    """Equal-size complete facets; centre the incomplete final row."""
+    grid=fig.add_gridspec(rows,columns*2,**kwargs);slots=[]
+    for k in range(count):
+        row,col=divmod(k,columns);in_row=min(columns,count-row*columns)
+        offset=columns-in_row
+        slots.append(grid[row,offset+col*2:offset+col*2+2])
+    return slots
 
 
 def validate_layout(request):
@@ -93,9 +104,9 @@ def gsea_facets(curve,hit,metric,summary,names,theme,options):
     if min(pw,ph)<2 or max(pw,ph)>20:raise ValueError('Choose readable bounded panel dimensions')
     palette=group_palette(theme,names)
     fig=plt.figure(figsize=canvas_budget(pw*cols,ph*rows+.55),facecolor='white',layout='constrained')
-    outer=fig.add_gridspec(rows,cols,hspace=.16,wspace=.12)
+    slots=facet_slots(fig,len(names),rows,cols,hspace=.16,wspace=.12)
     for k,name in enumerate(names):
-        grid=outer[k//cols,k%cols].subgridspec(3,1,height_ratios=[3.2,.45,1],hspace=.06)
+        grid=slots[k].subgridspec(3,1,height_ratios=[3.2,.45,1],hspace=.06)
         ax=fig.add_subplot(grid[0]);rug=fig.add_subplot(grid[1],sharex=ax);bottom=fig.add_subplot(grid[2],sharex=ax)
         q=curve[curve.pathway==name];h=hit[hit.pathway==name];s=summary.loc[name];color=palette[name]
         ax.plot(q['rank'],q.value,color=color,lw=1.5);ax.fill_between(q['rank'],0,q.value,color=color,alpha=.07)

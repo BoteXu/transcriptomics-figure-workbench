@@ -1,0 +1,101 @@
+{
+  "form": "QDE_radial_effects",
+  "base_form": "radial-effects",
+  "example": "QDE_radial_effects",
+  "title": "径向效应图",
+  "source_meta": "examples/qc-de/QDE_radial_effects/QDE_radial_effects.json",
+  "route": "native",
+  "adapter": "figure_qc_de.plot_frozen_qc_de",
+  "parameters": {
+    "mode": "radial_effects",
+    "contract": {
+      "source_definition": "SYNTHETIC DEMO frozen summaries",
+      "independent_unit": "synthetic donor",
+      "denominator": "complete synthetic fixture",
+      "feature_selection": "predeclared fixture; no selection calculated",
+      "effect_definition": "supplied log2 expression contrast",
+      "status_definition": "frozen upstream classifications",
+      "average_definition": "supplied mean log2 expression",
+      "rank_definition": "supplied effect rank",
+      "count_unit": "features",
+      "pvalue_definition": "raw P from synthetic fixture",
+      "bin_boundary_definition": "left inclusive; last right inclusive",
+      "expression_scale": "supplied log2 expression",
+      "whisker_definition": "supplied precomputed whiskers",
+      "outlier_display": "not available in supplied box summary",
+      "axis_x": "PC1 (supplied 35%)",
+      "axis_y": "PC2 (supplied 20%)",
+      "pca_basis": "same frozen reference basis",
+      "ellipse_definition": "supplied Gaussian data-dispersion region, not mean CI",
+      "x_limits": [
+        -4.0,
+        4.0
+      ],
+      "y_limits": [
+        -3.0,
+        3.0
+      ]
+    },
+    "order": [
+      "g1",
+      "g2",
+      "g3",
+      "g4"
+    ],
+    "marker_map": null,
+    "title": "SYNTHETIC DEMO — radial_effects"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-qc-de",
+    "palette_name": "card_06",
+    "palette_colors": [
+      "#506AAA",
+      "#728DC1",
+      "#91BBDF",
+      "#B6DBF1",
+      "#F6D3D9",
+      "#E79FBF",
+      "#E17692"
+    ],
+    "group_slots": {
+      "p1": 0,
+      "p2": 1
+    },
+    "roles": {
+      "primary": "#506AAA",
+      "negative": "#506AAA",
+      "positive": "#E17692",
+      "accent": "#E17692",
+      "neutral": "#A8ADB3",
+      "significant": "#E17692",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#506AAA"
+      ],
+      "diverging": [
+        "#506AAA",
+        "#F7F7F7",
+        "#E17692"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/qc-de/QDE_radial_effects/QDE_radial_effects.tsv"
+}

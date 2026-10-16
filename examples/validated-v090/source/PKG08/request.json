@@ -1,0 +1,93 @@
+{
+  "form": "PKG08",
+  "base_form": "enrichment-summary",
+  "example": "PKG08",
+  "title": "富集结果点线图",
+  "source_meta": "examples/package-v040/PKG08/PKG08.json",
+  "route": "native",
+  "adapter": "package_style",
+  "parameters": {
+    "view": "ora",
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original deterministic display fixtures; no scientific engine executed",
+      "independent_unit": "No biological replicates; software display geometry only",
+      "denominator": "Complete selected synthetic display grid or universe; explicit per-view channels",
+      "value_definition": "Frozen illustrative effects, scores, probabilities, curves, coordinates and topology",
+      "uncertainty_definition": "Supplied illustrative intervals only; no inference or interval estimation"
+    },
+    "options": {
+      "term_order": [
+        "Interferon signalling",
+        "Extracellular matrix",
+        "Oxidative phosphorylation",
+        "RNA splicing",
+        "Vesicle-mediated transport",
+        "DNA repair",
+        "Lipid biosynthesis",
+        "Cell-cycle transition"
+      ],
+      "background_definition": "Synthetic universe n=1,000",
+      "ratio_max": 0.32,
+      "significance_max": 5,
+      "mode": "lollipop",
+      "title": "Over-represented programmes"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-package-PKG08",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Display": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#E2EFEB",
+        "#6DB3A7",
+        "#1C6C70"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/package-v040/PKG08/PKG08.tsv"
+}

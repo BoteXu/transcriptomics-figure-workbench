@@ -28,6 +28,7 @@ jobs:
           python tests/check_forms_release.py
           python tests/check_flexible_layout.py
           python tests/check_responsive_release.py
+          python tests/check_v090_release.py
           python skills/transcriptomics-figure-workbench/scripts/workbench.py methods --search GSEA
           python skills/transcriptomics-figure-workbench/scripts/render_frozen_table.py --help
   render:
@@ -42,6 +43,14 @@ jobs:
         run: python tests/check_workbench_runtime.py workbench-ci
       - name: Check variable-data single-figure layouts
         run: python tests/check_responsive_layout.py responsive-ci
+      - name: Check study routing, independent units and repaired layout regressions
+        run: |
+          python tests/check_study_figures.py
+          python tests/check_layout_depth_v090.py
+      - name: Exercise ordinary requests on two coherent fictional result packages
+        run: |
+          python tools/build_transcriptomic_study_examples.py --output study-ci-fixtures
+          python tools/render_study_examples.py --fixtures study-ci-fixtures
       - name: Render redesigned and expanded display modes; verify scientific encodings
         run: |
           python tools/build_aesthetic_redesign.py --output aesthetic-ci
@@ -58,7 +67,9 @@ jobs:
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: workbench-frozen-previews
-          path: workbench-ci
+          path: |
+            workbench-ci
+            study-ci-fixtures
   browser:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -79,6 +90,7 @@ jobs:
           node tests/check_publication_browser.mjs publication-browser-ci .ci/studio.html
           node tests/check_clarity_browser.mjs clarity-browser-ci
           node tests/check_forms_browser.mjs forms-browser-ci
+          node tests/check_v090_browser.mjs v090-browser-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
@@ -86,3 +98,4 @@ jobs:
           path: |
             publication-browser-ci
             forms-browser-ci
+            v090-browser-ci

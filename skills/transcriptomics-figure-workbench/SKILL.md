@@ -31,6 +31,16 @@ Respect a user-selected design. These defaults guide choices when no design was 
 
 ## Workflow
 
+### Transcriptomic figure sets and ordinary requests
+
+For “画质控图”, “展示差异和通路” or “做一套文章组图”, plan a coherent figure set from explicit frozen results. Use [the study workflow](references/transcriptomic-study-v090.md) and `study-plan` to bind the request to selected FigureSpecs. The bounded phrase router assists the host; it does not infer a study design or locate arbitrary private files.
+
+Treat the set as unfinished until the intended scientific comparisons are both readable and visually convincing. A normal request must not merely return a bare default scatter or an indiscriminate catalogue dump. Choose complementary panels, stable identity colours, clear hierarchy and suitable density; make a restrained main figure and complete companion figures. Avoid repeating near-identical heatmaps. Reflow the same form before proposing a new form.
+
+Bulk defaults cover sample distributions, library totals, stored PCA, correlation, DE, annotated expression, supplied effect intervals, MA, ORA and full GSEA tracks when those inputs exist. Single-cell defaults cover multi-metric cell QC, donor totals, batch and cell-type embeddings, marker means/fractions and feature maps, donor compositions, donor-level DE/intervals/MA/expression and pathways. Missing results remain explicitly missing; optional trajectory, communication or regulatory views require their own frozen results. Cells and donors have distinct roles.
+
+Review the actual exported main figure at its declared width, every companion figure and every composition page. Inspect dense labels individually. Check information complementarity, balance, empty space, contrast, label collisions, complete guides and units as well as data preservation. Iterate failed views, bind the new review to final hashes, and mark the set complete only after all requested views pass. Numerical font-size checks alone never approve beauty. A synthetic demonstration tests software and drawing, not the scientific backend.
+
 ### 1. Establish the frozen input and scope
 
 For formal drawing, obtain one selected table, source version/hash, biological independent unit, denominator, contrast, missingness, selection and uncertainty definitions. Upstream QC must already be reviewed. If these are unresolved, prepare a design proposal and mark the dependency; do not present a final research figure as accepted. Browsing examples requires no private data.

@@ -1,0 +1,81 @@
+{
+  "form": "P23",
+  "base_form": "stacked",
+  "example": "P23",
+  "title": "堆叠与组成柱状图",
+  "source_meta": "examples/gallery/metadata/P23.json",
+  "route": "native",
+  "adapter": "figure_core.plot_composition",
+  "parameters": {
+    "palette": {
+      "Type A": "#35618F",
+      "Type B": "#67A9A2",
+      "Type C": "#B84E35",
+      "Type D": "#C9A64B",
+      "Type E": "#857AA8",
+      "Type F": "#AAB4BD"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-full-layout-P23",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Type A": 0,
+      "Type B": 1,
+      "Type C": 2,
+      "Type D": 3,
+      "Type E": 4,
+      "Type F": 5,
+      "Control": 6,
+      "Treated": 7
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#E1E8EB",
+        "#396F91"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/gallery/figures/P23/P23.tsv"
+}

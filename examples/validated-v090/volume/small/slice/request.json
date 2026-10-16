@@ -1,0 +1,94 @@
+{
+  "form": "slice",
+  "example": "E41",
+  "title": "切片叠加",
+  "source_meta": "examples/gallery/metadata/E41.json",
+  "route": "native",
+  "adapter": "figure_biomni_views.plot_slice_overlay",
+  "parameters": {
+    "view_order": [
+      "Axial"
+    ],
+    "axis_labels": {
+      "Axial": [
+        "Supplied u (mm)",
+        "Supplied v (mm)"
+      ]
+    },
+    "label_slots": {
+      "1": "G3",
+      "2": "G7"
+    },
+    "intensity_limits": [
+      0,
+      1
+    ],
+    "registration_definition": "Already registered synthetic orthogonal pixel grids, no patient images.",
+    "orientation_definition": "Explicit supplied slice planes and u/v orientation; procedural background, not clinical anatomy.",
+    "arrangement": "vertical",
+    "title": "Frozen orthogonal slice labels"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "aesthetic-library-preview",
+    "palette_name": "card_06",
+    "palette_colors": [
+      "#506AAA",
+      "#728DC1",
+      "#91BBDF",
+      "#B6DBF1",
+      "#F6D3D9",
+      "#E79FBF",
+      "#E17692"
+    ],
+    "group_slots": {
+      "G1": 0,
+      "G2": 1,
+      "G3": 2,
+      "G4": 3,
+      "G5": 4,
+      "G6": 5,
+      "G7": 6,
+      "All points": 0,
+      "Support": 1,
+      "Site": 6,
+      "Input": 2,
+      "Output": 0
+    },
+    "roles": {
+      "primary": "#506AAA",
+      "negative": "#506AAA",
+      "positive": "#E17692",
+      "accent": "#E17692",
+      "neutral": "#A8ADB3",
+      "significant": "#E17692",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#506AAA"
+      ],
+      "diverging": [
+        "#506AAA",
+        "#F7F7F7",
+        "#E17692"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/gallery/figures/E41/E41.tsv"
+}

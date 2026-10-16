@@ -1,0 +1,49 @@
+{
+  "form": "variant-posteriors",
+  "adapter": "figure_analysis_results.plot_variant_posteriors",
+  "rows": 16,
+  "source_input_sha256": "9e608288608cdf61f27e043399138c7ae2b8d1614f0b5f6ce27033ef3cb7a3cc",
+  "input_sha256": "5cb98e1e117be518323e7734b31dd1b94e68b3a848e846815b7317e45be311d7",
+  "quantitative_geometry_sha256": "5ec6866a86ed668f8a3684b7b038285e2da103fbdd8c39ba9947e23deccc5f6b",
+  "volume": {
+    "level": "small",
+    "quantity_dimension": "variant_id",
+    "quantity": 8,
+    "input_rows": 16,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 7.2
+  },
+  "size_inches": [
+    7.812143842257045,
+    5.737873263888889
+  ],
+  "id": "variant-posteriors",
+  "section": "volume",
+  "level": "small",
+  "assets": {
+    "png": "volume/small/variant-posteriors/variant-posteriors.png",
+    "svg": "volume/small/variant-posteriors/variant-posteriors.svg",
+    "tsv": "volume/small/variant-posteriors/variant-posteriors.tsv"
+  },
+  "sha256": {
+    "png": "79d65f62de5a6a590fa1fe2f7996887490fa242454b2417cf32374f85467caf3",
+    "svg": "d9af4a301a1101ce506790615b4fc2efb79a4566f21c6ddf3650086895f37206",
+    "tsv": "5cb98e1e117be518323e7734b31dd1b94e68b3a848e846815b7317e45be311d7"
+  },
+  "visual_review": {
+    "key": "volume/small/variant-posteriors",
+    "png_sha256": "79d65f62de5a6a590fa1fe2f7996887490fa242454b2417cf32374f85467caf3",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "Variant posteriors across supplied signals"
+}

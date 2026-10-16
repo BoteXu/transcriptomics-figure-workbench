@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "assay": "single_cell",
+  "title": "Fictional single_cell transcriptomic result package",
+  "contrast": "Treated versus Control / illustrative",
+  "independent_unit": "Synthetic donor; n=12; cells nested within donors",
+  "denominator": "12 synthetic donors; 1200 fictional gene results; explicit cell-level display denominators",
+  "frozen_results": true,
+  "upstream_qc": "reviewed",
+  "results": [
+    {
+      "role": "study_overview",
+      "spec": "../study/SingleCellMain/input/SingleCellMain.spec.json"
+    },
+    {
+      "role": "qc_distribution",
+      "spec": "../study/CellQC/input/CellQC.spec.json"
+    },
+    {
+      "role": "donor_summary",
+      "spec": "../study/DonorCounts/input/DonorCounts.spec.json"
+    },
+    {
+      "role": "batch_embedding",
+      "spec": "../study/CellBatches/input/CellBatches.spec.json"
+    },
+    {
+      "role": "celltype_embedding",
+      "spec": "../study/CellTypes/input/CellTypes.spec.json"
+    },
+    {
+      "role": "marker_dot",
+      "spec": "../study/MarkerDot/input/MarkerDot.spec.json"
+    },
+    {
+      "role": "marker_features",
+      "spec": "../study/MarkerFeatures/input/MarkerFeatures.spec.json"
+    },
+    {
+      "role": "donor_composition",
+      "spec": "../study/DonorComposition/input/DonorComposition.spec.json"
+    },
+    {
+      "role": "donor_differential",
+      "spec": "../study/DonorDE/input/DonorDE.spec.json"
+    },
+    {
+      "role": "effect_intervals",
+      "spec": "../study/DonorEffects/input/DonorEffects.spec.json"
+    },
+    {
+      "role": "ma",
+      "spec": "../study/DonorMA/input/DonorMA.spec.json"
+    },
+    {
+      "role": "differential_heatmap",
+      "spec": "../study/DonorHeatmap/input/DonorHeatmap.spec.json"
+    },
+    {
+      "role": "enrichment_summary",
+      "spec": "../study/DonorPathways/input/DonorPathways.spec.json"
+    },
+    {
+      "role": "gsea_curves",
+      "spec": "../study/DonorEnrichmentTracks/input/DonorEnrichmentTracks.spec.json"
+    }
+  ]
+}

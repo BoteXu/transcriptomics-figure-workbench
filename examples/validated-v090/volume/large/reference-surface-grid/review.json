@@ -1,0 +1,49 @@
+{
+  "form": "reference-surface-grid",
+  "adapter": "figure_reference.plot_surface_grid",
+  "rows": 4225,
+  "source_input_sha256": "5746e49fe74697c60214e09c836df23b3134c7ffa8ac465115c08f75f548810a",
+  "input_sha256": "187c44f42981e0ffdbfa2110b61994fd27dec4dfa85f06aaa6d0daf5685cd6d5",
+  "quantitative_geometry_sha256": "e850105931395049678553c6b6a80032ff9b356bc43d50e1539479deab15fcc9",
+  "volume": {
+    "level": "large",
+    "quantity_dimension": "supplied_regular_grid",
+    "quantity": 4225,
+    "input_rows": 4225,
+    "preparation": "Exact supplied regular-grid points at declared stride; no interpolation",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 8.5
+  },
+  "size_inches": [
+    8.518143663194444,
+    6.0
+  ],
+  "id": "reference-surface-grid",
+  "section": "volume",
+  "level": "large",
+  "assets": {
+    "png": "volume/large/reference-surface-grid/reference-surface-grid.png",
+    "svg": "volume/large/reference-surface-grid/reference-surface-grid.svg",
+    "tsv": "volume/large/reference-surface-grid/reference-surface-grid.tsv"
+  },
+  "sha256": {
+    "png": "f3ceb6f51aaf91fd34a8f96b002c4bc1f5caaed7402b57a52e0ef671ae72f268",
+    "svg": "9b224519a5b860735ac0a0fa052cabbad09756e052792a2c4a0d295d112f4e49",
+    "tsv": "187c44f42981e0ffdbfa2110b61994fd27dec4dfa85f06aaa6d0daf5685cd6d5"
+  },
+  "visual_review": {
+    "key": "volume/large/reference-surface-grid",
+    "png_sha256": "f3ceb6f51aaf91fd34a8f96b002c4bc1f5caaed7402b57a52e0ef671ae72f268",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "Surface grid"
+}

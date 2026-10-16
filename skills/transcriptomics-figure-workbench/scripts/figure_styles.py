@@ -31,7 +31,7 @@ def plot_volcano_editorial(data, *, labels=(), alpha=.05, fc=1):
     chosen = d[d.gene.isin(labels)]
     if any(sum((chosen.log2FC < 0) == side) > 6 for side in [True, False]):
         raise ValueError('At most six labels per side; use a companion table for more')
-    fig, ax = canvas(); fig.set_size_inches(7.8, 4.8)
+    fig, ax = canvas();fig.set_layout_engine(None);fig.set_size_inches(7.8,5.4);ax.set_position([.12,.15,.83,.66])
     extent = max(d.log2FC.abs().max(), fc * 1.3)
     top = max(d.evidence.max(), -np.log10(alpha)) * 1.18
     ax.axhline(-np.log10(alpha), color='#929AA1', ls='--', lw=.7)
@@ -59,7 +59,7 @@ def plot_volcano_editorial(data, *, labels=(), alpha=.05, fc=1):
     ticks = np.linspace(-extent, extent, 5)
     ax.set_xticks(ticks, [f'{x:.1f}' for x in ticks]); ax.tick_params(axis='x', labelsize=9)
     ax.legend(handles=handles, frameon=True, framealpha=1, edgecolor='none', facecolor='white',
-              loc='upper center', ncols=3, fontsize=8)
+              loc='lower left', bbox_to_anchor=(0,1.12), ncols=3, fontsize=8,borderaxespad=0)
     return stamp(fig, data, 'volcano_editorial', alpha=alpha, fc=fc, labels=labels,
                  label_layout='fixed side lanes; points unchanged', palette=COLORS,
                  point_count=len(d), status_counts=d.status.value_counts().to_dict())
@@ -199,13 +199,15 @@ def plot_composition_panels(data, palette, *, unit_label, y_max=None,ncols='auto
     from figure_workbench.responsive import grid_shape
     nrows,ncols=grid_shape(len(types),ncols,nrows)
     from figure_workbench.responsive import canvas_budget
-    fig, axes = plt.subplots(nrows, ncols, figsize=canvas_budget(max(5.2, ncols*panel_width), nrows*panel_height+1),
-                             squeeze=False, sharey=True, layout='constrained')
+    from figure_workbench.responsive import facet_slots
+    fig=plt.figure(figsize=canvas_budget(max(5.2,ncols*panel_width),nrows*panel_height+1),layout='constrained')
+    axes=[]
+    for slot in facet_slots(fig,len(types),nrows,ncols):axes.append(fig.add_subplot(slot,sharey=axes[0] if axes else None))
     samples = {g: list(pd.unique(d.loc[d.group == g, 'sample'])) for g in groups}
     offsets = {s: x for g in groups for s, x in zip(samples[g], np.linspace(-.13, .13, len(samples[g])) if len(samples[g])>1 else [0])}
     markers = ['o', 's', '^', 'D','P','X','v','<','>','h','p','*']
     if len(groups)>len(markers):markers=['o']*len(groups)
-    for ax, celltype in zip(axes.flat, types):
+    for ax, celltype in zip(axes, types):
         sub = d[d.celltype == celltype]
         for i, g in enumerate(groups):
             z = sub[sub.group == g]
@@ -213,9 +215,10 @@ def plot_composition_panels(data, palette, *, unit_label, y_max=None,ncols='auto
                        marker=markers[i], s=32, edgecolors='white', lw=.35, zorder=3)
         ax.set_xticks(range(len(groups)), [f'{textwrap.fill(str(g), 12)}\nn={len(samples[g])}' for g in groups], fontsize=8)
         ax.set(title=str(celltype), ylim=(0, y_max*1.04), xlim=(-.5, len(groups)-.5))
-        ticks=np.linspace(0, y_max, 5); ax.set_yticks(ticks, [f'{t*100:g}%' for t in ticks])
+        from matplotlib.ticker import MaxNLocator,PercentFormatter
+        ax.yaxis.set_major_locator(MaxNLocator(nbins=4,steps=[1,2,2.5,5,10]))
+        ax.yaxis.set_major_formatter(PercentFormatter(1,decimals=0 if y_max>=.05 else 1))
         ax.spines[['top', 'right']].set_visible(False); ax.grid(axis='y', color='#E8EDF1', lw=.7)
-    for ax in list(axes.flat)[len(types):]: ax.set_visible(False)
     fig.supylabel('Fraction of all supplied cells per sample\nEach point = '+unit_label, fontsize=10)
     fig.suptitle('Each point = '+unit_label, fontsize=11)
     return stamp(fig, data, 'composition_panels', palette=palette, unit_label=unit_label,

@@ -1,0 +1,49 @@
+{
+  "form": "slice",
+  "adapter": "figure_biomni_views.plot_slice_overlay",
+  "rows": 2016,
+  "source_input_sha256": "46a92708af4bc5d4227f3490c3e81cd26233d373dcbfe340da8a7f75ad3e8504",
+  "input_sha256": "d059e6beee12886ab7b8840851f64f80c30d5496b79b7716a7522c8de13ed78c",
+  "quantitative_geometry_sha256": "c18603396c7b7aee128783320eb39e7ad443c26d8b1c25a894aa4ee30707087f",
+  "volume": {
+    "level": "large",
+    "quantity_dimension": "view",
+    "quantity": 3,
+    "input_rows": 2016,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 8.5
+  },
+  "size_inches": [
+    8.5,
+    21.42
+  ],
+  "id": "slice",
+  "section": "volume",
+  "level": "large",
+  "assets": {
+    "png": "volume/large/slice/slice.png",
+    "svg": "volume/large/slice/slice.svg",
+    "tsv": "volume/large/slice/slice.tsv"
+  },
+  "sha256": {
+    "png": "cd0fb809020d2841ffb9797a5abe06fe93410a29b004153752530c2d45662ed8",
+    "svg": "695b33623df780e89e4930be5f37db1ae44d53fa0b41159bcfba4308401f96a6",
+    "tsv": "d059e6beee12886ab7b8840851f64f80c30d5496b79b7716a7522c8de13ed78c"
+  },
+  "visual_review": {
+    "key": "volume/large/slice",
+    "png_sha256": "cd0fb809020d2841ffb9797a5abe06fe93410a29b004153752530c2d45662ed8",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "切片叠加"
+}

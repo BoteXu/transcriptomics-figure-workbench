@@ -1,0 +1,27 @@
+{
+  "id": "K12_reading",
+  "title": "Paired values, same-subject deltas and stored delta bounds",
+  "panels": [
+    {
+      "id": "Panel1",
+      "svg": "../../../source/AUX_paired/AUX_paired.svg",
+      "table": "../../../source/AUX_paired/AUX_paired.tsv"
+    },
+    {
+      "id": "Panel2",
+      "svg": "../../../source/AUX_paired_deltas/AUX_paired_deltas.svg",
+      "table": "../../../source/AUX_paired_deltas/AUX_paired_deltas.tsv"
+    },
+    {
+      "id": "Panel3",
+      "svg": "../../../source/AUX_delta_estimate/AUX_delta_estimate.svg",
+      "table": "../../../source/AUX_delta_estimate/AUX_delta_estimate.tsv"
+    }
+  ],
+  "canvas_width_pt": 650,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "label_order": "reading",
+  "columns": 1,
+  "max_rows_per_page": 2
+}

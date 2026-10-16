@@ -1,0 +1,93 @@
+{
+  "form": "NEW_A02",
+  "base_form": "forest",
+  "example": "NEW_A02",
+  "title": "效应与区间森林图",
+  "source_meta": "examples/aesthetic-v030/A02/A02.json",
+  "route": "native",
+  "adapter": "editorial",
+  "parameters": {
+    "kind": "forest",
+    "options": {
+      "title": "Estimated effects",
+      "x_label": "Effect size",
+      "effect_scale": "difference"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original deterministic software fixture; seed 2026100511",
+      "independent_unit": "Synthetic software display units only",
+      "denominator": "All rows in the bound fixture",
+      "value_definition": "Existing frozen values; no scientific analysis rerun",
+      "uncertainty_definition": "Supplied illustrative bounds where present; no interval calculated"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-aesthetic-rebuild",
+    "palette_name": "tol_muted",
+    "palette_colors": [
+      "#CC6677",
+      "#332288",
+      "#DDCC77",
+      "#117733",
+      "#88CCEE",
+      "#882255",
+      "#44AA99",
+      "#999933",
+      "#AA4499"
+    ],
+    "group_slots": {
+      "Control": 1,
+      "Treated": 0,
+      "Before": 1,
+      "After": 0,
+      "Model A": 1,
+      "Model B": 0,
+      "Model C": 3,
+      "G1": 1,
+      "G2": 0,
+      "G3": 3,
+      "G4": 5,
+      "G5": 6,
+      "Coding": 1,
+      "Regulatory": 0,
+      "Intergenic": 3
+    },
+    "roles": {
+      "primary": "#CC6677",
+      "negative": "#332288",
+      "positive": "#CC6677",
+      "accent": "#AA4499",
+      "neutral": "#A9B1BA",
+      "significant": "#AA4499",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#CC6677"
+      ],
+      "diverging": [
+        "#332288",
+        "#F8F8F7",
+        "#CC6677"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/aesthetic-v030/A02/A02.tsv"
+}

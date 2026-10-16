@@ -1,0 +1,27 @@
+{
+  "id": "K13_weighted",
+  "title": "Same XY objects: quantitative bubbles and occupied bins",
+  "panels": [
+    {
+      "id": "Panel1",
+      "svg": "../../../source/T29/T29.svg",
+      "table": "../../../source/T29/T29.tsv"
+    },
+    {
+      "id": "Panel2",
+      "svg": "../../../source/AUX_bubble_hex/AUX_bubble_hex.svg",
+      "table": "../../../source/AUX_bubble_hex/AUX_bubble_hex.tsv"
+    }
+  ],
+  "canvas_width_pt": 1100,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "label_order": "reading",
+  "columns": 2,
+  "column_weights": [
+    1.15,
+    1
+  ],
+  "packing": "masonry",
+  "packing_order": "tall_first"
+}

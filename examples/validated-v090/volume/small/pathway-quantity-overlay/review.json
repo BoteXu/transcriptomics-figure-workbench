@@ -1,0 +1,49 @@
+{
+  "form": "pathway-quantity-overlay",
+  "adapter": "figure_multiomics_views.plot_pathway_overlay",
+  "rows": 3,
+  "source_input_sha256": "bce2b60cd33080d2dec4b3ece8925cdc0b1f4c88ad2269baf2e6d0596144876c",
+  "input_sha256": "c8de564fad27cca7cc2ca76ee309651104b0266f6c12b78b228b0cbd2679d9aa",
+  "quantitative_geometry_sha256": "e24b010a51456d7a506e7cc0f6afd3992e0028dc2481b76eb730327b5733eac6",
+  "volume": {
+    "level": "small",
+    "quantity_dimension": "node_id",
+    "quantity": 2,
+    "input_rows": 3,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 7.2
+  },
+  "size_inches": [
+    7.2,
+    6.0
+  ],
+  "id": "pathway-quantity-overlay",
+  "section": "volume",
+  "level": "small",
+  "assets": {
+    "png": "volume/small/pathway-quantity-overlay/pathway-quantity-overlay.png",
+    "svg": "volume/small/pathway-quantity-overlay/pathway-quantity-overlay.svg",
+    "tsv": "volume/small/pathway-quantity-overlay/pathway-quantity-overlay.tsv"
+  },
+  "sha256": {
+    "png": "ecfa096127230d1d2720f596c238c7e11e45491041fc3feef4ef4833644ef935",
+    "svg": "e1fd541b8360bb22e07ab25718454d4c4ec4ab5f44d813939f67d454aa0726da",
+    "tsv": "c8de564fad27cca7cc2ca76ee309651104b0266f6c12b78b228b0cbd2679d9aa"
+  },
+  "visual_review": {
+    "key": "volume/small/pathway-quantity-overlay",
+    "png_sha256": "ecfa096127230d1d2720f596c238c7e11e45491041fc3feef4ef4833644ef935",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "Pathway quantity overlay"
+}

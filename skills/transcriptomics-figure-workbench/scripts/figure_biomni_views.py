@@ -203,7 +203,7 @@ def plot_registration_check(data,theme,*,intensity_limits,difference_limits,tile
     for i,(label,values) in enumerate(figures):
         b=[.06+i*.205,.23,.172,.60] if arrangement=='horizontal' else [.14,.13+(3-i)*.195,.56,.16]
         ax=_axis(fig,b);im=ax.imshow(values,origin='lower',extent=extent,interpolation='nearest',cmap=_cmap(theme,True) if i==3 else 'gray',vmin=dl if i==3 else lo,vmax=dh if i==3 else hi)
-        ax.set(title=label,xlabel=coordinate_labels[0],ylabel=coordinate_labels[1]);ax.set_aspect('equal')
+        ax.set(title=label,xlabel=coordinate_labels[0],ylabel=coordinate_labels[1] if i==0 or arrangement=='vertical' else '');ax.set_aspect('equal')
         if i==3:
             cax=fig.add_axes([.91,.23,.012,.6] if arrangement=='horizontal' else [.78,.13,.028,.16]);fig.colorbar(im,cax=cax,label='Pixel intensity difference')
     fig.text(.06,.95,title,fontsize=11,weight='bold');fig.text(.06,.045,'Checkerboard alternates supplied images; subtraction uses identical pixel coordinates and declared intensity scale.',fontsize=8)

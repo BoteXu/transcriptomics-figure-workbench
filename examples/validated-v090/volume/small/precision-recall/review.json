@@ -1,0 +1,49 @@
+{
+  "form": "precision-recall",
+  "adapter": "figure_core.plot_curve",
+  "rows": 8,
+  "source_input_sha256": "1dd97354d7be17124b4c8790140d435efc22b8edcdac84dfc271fe61eb551338",
+  "input_sha256": "edbb328551ee9f7eba15bd95e29ace0a5d179e50b33f4f771d5cb9de0339a9bb",
+  "quantitative_geometry_sha256": "08e5434a42db0029c6408e14a5648985efc9de83df4a98b212c4228eae39ddcd",
+  "volume": {
+    "level": "small",
+    "quantity_dimension": "model",
+    "quantity": 1,
+    "input_rows": 8,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 7.2
+  },
+  "size_inches": [
+    7.260425029515939,
+    4.656659999999999
+  ],
+  "id": "precision-recall",
+  "section": "volume",
+  "level": "small",
+  "assets": {
+    "png": "volume/small/precision-recall/precision-recall.png",
+    "svg": "volume/small/precision-recall/precision-recall.svg",
+    "tsv": "volume/small/precision-recall/precision-recall.tsv"
+  },
+  "sha256": {
+    "png": "abdb5fd14eb493ffc5913a64a449c6d7a75eff6c37c34fe4b227ab810a3df683",
+    "svg": "7c52947bcf299d98706f9efdcc5270294b3debf156c7295eec35e850c0b24e9b",
+    "tsv": "edbb328551ee9f7eba15bd95e29ace0a5d179e50b33f4f771d5cb9de0339a9bb"
+  },
+  "visual_review": {
+    "key": "volume/small/precision-recall",
+    "png_sha256": "abdb5fd14eb493ffc5913a64a449c6d7a75eff6c37c34fe4b227ab810a3df683",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "精确率与召回曲线"
+}

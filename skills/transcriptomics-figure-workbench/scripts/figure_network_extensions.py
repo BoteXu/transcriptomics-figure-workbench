@@ -207,6 +207,8 @@ def plot_rank_bump(data,theme,*,stage_order,title=''):
     fig=_start(theme);ax=_ax(fig,[.14,.16,.58,.68]);
     for g in groups:
         q=d[d.group==g].set_index('stage').reindex(stage_order);ax.plot(range(len(stage_order)),q['rank'],color=pal[g],marker='o',label=g)
+    from matplotlib.ticker import MaxNLocator
+    ax.yaxis.set_major_locator(MaxNLocator(integer=bool((d['rank']%1==0).all())))
     ax.invert_yaxis();ax.set_xticks(range(len(stage_order)),stage_order);ax.set(ylabel='Stored rank (1 = highest)',title=title);fig.legend(handles=ax.get_legend_handles_labels()[0],labels=groups,loc='upper left',bbox_to_anchor=(.78,.84),frameon=False)
     return _done(fig,data,'rank_bump',theme,stage_order=stage_order,analysis_boundary='Ranks supplied; ties preserved; no rank computation')
 

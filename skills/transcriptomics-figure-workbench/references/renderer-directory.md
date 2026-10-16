@@ -125,6 +125,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_reference.plot_aligned_tracks | canonical ID | yes | palette, category_order, track_order, matrix_order, block_order, matrix_labels, matrix_limits, count_label |
 | figure_reference.plot_surface_grid | canonical ID | yes | axis_labels, value_label, limits |
 | figure_refined_views.plot_refined_views | refined | yes | view, contract, options |
+| figure_study_overview.plot_transcriptomic_overview | canonical ID | yes | assay, contrast, independent_unit, denominator |
 | figure_styles.plot_volcano_editorial | canonical ID | yes | none |
 | figure_styles.plot_volcano_marginal | volcano_marginal | yes | none |
 | figure_styles.plot_enrichment_lollipop | canonical ID | yes | score_type, denominator_label, count_label |
@@ -353,6 +354,12 @@ See the fixed implementation and its input contract.
 | Parameter | Required | Default |
 |---|---|---|
 | y_label | true | — |
+| metric_field | false | null |
+| metric_labels | false | null |
+| ncols | false | "auto" |
+| nrows | false | null |
+| panel_width | false | 3.3 |
+| panel_height | false | 3.5 |
 
 ## figure_core.plot_composition
 
@@ -370,6 +377,12 @@ See the fixed implementation and its input contract.
 | Parameter | Required | Default |
 |---|---|---|
 | kind | false | "ROC" |
+| palette | false | null |
+| mode | false | "auto" |
+| ncols | false | "auto" |
+| nrows | false | null |
+| panel_width | false | 3.8 |
+| panel_height | false | 3.6 |
 
 ## figure_editorial.plot_editorial
 
@@ -529,6 +542,7 @@ See the fixed implementation and its input contract.
 | y_label | true | — |
 | unit_label | true | — |
 | connect_order | false | false |
+| label_points | false | false |
 
 ## figure_general.plot_grouped_estimates
 
@@ -1445,6 +1459,7 @@ R01/R02. Area profile and bubble ring; area in pt^2 per original unit.
 | curve_mode | false | "vertices" |
 | size | false | [8, 7] |
 | font_size | false | 9 |
+| label_layout | false | "auto" |
 
 ## figure_reference.plot_ellipse_correlation
 
@@ -1700,6 +1715,28 @@ Compact GSEA, supplied nested ribbon, score shifts and association matrices.
 | view | true | — |
 | contract | true | — |
 | options | true | — |
+
+## figure_study_overview.plot_transcriptomic_overview
+
+A coherent main figure; complete companion results remain independently exported.
+
+| Parameter | Required | Default |
+|---|---|---|
+| assay | true | — |
+| contrast | true | — |
+| independent_unit | true | — |
+| denominator | true | — |
+| matrix_label | false | "Row z-score" |
+| panels | false | null |
+| labels | false | [] |
+| alpha | false | 0.05 |
+| fc | false | 1 |
+| embedding_axes | false | null |
+| panel_titles | false | null |
+| ncols | false | "auto" |
+| nrows | false | null |
+| panel_width | false | 3.9 |
+| panel_height | false | 3.6 |
 
 ## figure_styles.plot_volcano_editorial
 

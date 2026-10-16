@@ -142,10 +142,13 @@ def plot_score_comparison(data, score_label, condition_labels):
     if ((d.lower_delta>d.delta)|(d.upper_delta<d.delta)|(d.lower_delta < -1)|(d.upper_delta > 1)).any(): raise ValueError('Invalid supplied delta interval')
     fig,axes=plt.subplots(1,2,figsize=(9,4.5),layout='constrained')
     ax=axes[0]; ax.plot([0,1],[0,1],':',color='grey'); ax.scatter(d.score_a,d.score_b,color='#35618F')
-    for row in d.itertuples(): ax.annotate(row.feature,(row.score_a,row.score_b),xytext=(4,4),textcoords='offset points',fontsize=8)
+    numbered=any(len(str(v))>18 for v in d.feature)
+    for i,row in enumerate(d.itertuples()): ax.annotate(str(i+1) if numbered else row.feature,(row.score_a,row.score_b),xytext=(4,4),textcoords='offset points',fontsize=8)
+    if numbered:ax.set_title('Point numbers match the effect rows',loc='left',fontsize=9)
     ax.set(xlim=(0,1),ylim=(0,1),xlabel=f'{condition_labels[0]} {score_label}',ylabel=f'{condition_labels[1]} {score_label}',aspect='equal')
     ax=axes[1]; y=np.arange(len(d)); ax.axvline(0,color='grey',linestyle=':')
     ax.errorbar(d.delta,y,xerr=[d.delta-d.lower_delta,d.upper_delta-d.delta],fmt='o',color='#35618F',capsize=3)
-    ax.set_yticks(y,d.feature); ax.invert_yaxis(); ax.set_xlabel(f'{condition_labels[1]} - {condition_labels[0]}')
+    names=[textwrap.fill(str(i+1)+'  '+str(v),24) if numbered else str(v) for i,v in enumerate(d.feature)]
+    ax.set_yticks(y,names); ax.invert_yaxis(); ax.set_xlabel(f'{condition_labels[1]} - {condition_labels[0]}')
     return stamp(fig,data,'score_comparison',score_label=score_label,conditions=list(condition_labels),
                  uncertainty='supplied delta intervals; never derived from marginal AUC intervals')

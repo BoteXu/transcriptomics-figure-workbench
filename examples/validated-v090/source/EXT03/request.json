@@ -1,0 +1,95 @@
+{
+  "form": "EXT03",
+  "base_form": "precision-recall",
+  "example": "EXT03",
+  "title": "精确率与召回曲线",
+  "source_meta": "examples/clarity-v070/EXT03/EXT03.json",
+  "route": "native",
+  "adapter": "clarity",
+  "parameters": {
+    "view": "precision_recall",
+    "options": {
+      "series_order": [
+        "Model A",
+        "Model B"
+      ],
+      "x_limits": [
+        0,
+        1
+      ],
+      "y_limits": [
+        0,
+        1
+      ],
+      "x_label": "Recall",
+      "y_label": "Precision",
+      "evaluation_definition": "Illustrative stored precision and recall; positive class and evaluation cohort declared upstream",
+      "title": "Precision and recall across stored thresholds",
+      "subtitle": "Exact supplied vertices / a distinct view from ROC"
+    },
+    "contract": {
+      "source_definition": "Frozen public synthetic table: original literal fixture EXT03",
+      "independent_unit": "Synthetic identity only; no biological sample or scientific inference",
+      "denominator": "complete literal original software fixture; no threshold, AP or AUC estimation",
+      "value_definition": "All plotted channels supplied explicitly; exact units and source selection in FigureSpec",
+      "uncertainty_definition": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+      "synthetic": true
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-clarity-EXT03",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Model A": 0,
+      "Model B": 1
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F0F4F6",
+        "#436C87"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#C96068"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/clarity-v070/EXT03/EXT03.tsv"
+}

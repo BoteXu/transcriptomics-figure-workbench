@@ -1,0 +1,49 @@
+{
+  "form": "residual-diagnostics",
+  "adapter": "figure_multiomics_views.plot_diagnostic_panel",
+  "rows": 16,
+  "source_input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e",
+  "input_sha256": "6d000ffb42b4c76a2f2a5e25475d91d7559ae68df873aad07cf67fe749da9ab2",
+  "quantitative_geometry_sha256": "09c224f70f96ee16ada462ad1d15898209b16653179b059d882c9cbb670f96f1",
+  "volume": {
+    "level": "small",
+    "quantity_dimension": "unit_id",
+    "quantity": 16,
+    "input_rows": 16,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 7.2
+  },
+  "size_inches": [
+    7.2,
+    5.2
+  ],
+  "id": "residual-diagnostics",
+  "section": "volume",
+  "level": "small",
+  "assets": {
+    "png": "volume/small/residual-diagnostics/residual-diagnostics.png",
+    "svg": "volume/small/residual-diagnostics/residual-diagnostics.svg",
+    "tsv": "volume/small/residual-diagnostics/residual-diagnostics.tsv"
+  },
+  "sha256": {
+    "png": "f78c84c146e08f87d6ad7d8e52179986eab9c90f6d2b3c7c9f4c325eb4427371",
+    "svg": "6967987561e2b859e55d25eb7a5cc3d9fcbf0a9f6fecfd21c46cdbb008cf7e7c",
+    "tsv": "6d000ffb42b4c76a2f2a5e25475d91d7559ae68df873aad07cf67fe749da9ab2"
+  },
+  "visual_review": {
+    "key": "volume/small/residual-diagnostics",
+    "png_sha256": "f78c84c146e08f87d6ad7d8e52179986eab9c90f6d2b3c7c9f4c325eb4427371",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "残差诊断散点"
+}

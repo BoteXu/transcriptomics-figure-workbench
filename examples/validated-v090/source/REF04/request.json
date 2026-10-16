@@ -1,0 +1,93 @@
+{
+  "form": "REF04",
+  "base_form": "scores",
+  "example": "REF04",
+  "title": "双条件分数与差值",
+  "source_meta": "examples/refined-v060/REF04/REF04.json",
+  "route": "native",
+  "adapter": "refined",
+  "parameters": {
+    "view": "score_shift",
+    "options": {
+      "feature_order": [
+        "Type A",
+        "Type B",
+        "Type C",
+        "Type D",
+        "Type E",
+        "Type F"
+      ],
+      "label_a": "Score A",
+      "label_b": "Score B",
+      "score_label": "Supplied score",
+      "difference_label": "B minus A",
+      "interval_definition": "Supplied difference bounds; no new inference",
+      "title": "Score comparison and change uncertainty",
+      "subtitle": "Same features, scores and difference intervals as P22"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Frozen public synthetic source: examples/gallery/figures/P22/P22.tsv",
+      "independent_unit": "Synthetic feature identity; connecting scores does not establish paired subjects",
+      "denominator": "All six supplied feature comparisons",
+      "value_definition": "Scores A/B and supplied B-minus-A effect with its separate bounds",
+      "uncertainty_definition": "Existing difference bounds only; no intervals inferred for raw scores"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-refined-REF04",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Score A": 0,
+      "Score B": 1
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#218C8D"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/refined-v060/REF04/REF04.tsv"
+}

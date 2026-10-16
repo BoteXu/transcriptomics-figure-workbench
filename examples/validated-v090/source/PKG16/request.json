@@ -1,0 +1,114 @@
+{
+  "form": "PKG16",
+  "base_form": "dot-matrix",
+  "example": "PKG16",
+  "title": "点阵与气泡矩阵",
+  "source_meta": "examples/package-v040/PKG16/PKG16.json",
+  "route": "native",
+  "adapter": "package_style",
+  "parameters": {
+    "view": "dot",
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original deterministic display fixtures; no scientific engine executed",
+      "independent_unit": "No biological replicates; software display geometry only",
+      "denominator": "Complete selected synthetic display grid or universe; explicit per-view channels",
+      "value_definition": "Frozen illustrative effects, scores, probabilities, curves, coordinates and topology",
+      "uncertainty_definition": "Supplied illustrative intervals only; no inference or interval estimation"
+    },
+    "options": {
+      "row_order": [
+        "PECAM1",
+        "VWF",
+        "KDR",
+        "COL1A1",
+        "DCN",
+        "LUM",
+        "LYZ",
+        "CD68",
+        "CSF1R",
+        "CD3D",
+        "CD3E",
+        "TRAC",
+        "TNNT2",
+        "MYH6",
+        "ACTN2"
+      ],
+      "column_order": [
+        "Endothelial",
+        "Fibroblast",
+        "Myeloid",
+        "T cells",
+        "Cardiomyocyte"
+      ],
+      "value_semantics": "mean_all",
+      "denominator_label": "Fraction denominator: all displayed cells in each identity (synthetic)",
+      "limits": [
+        0,
+        3.5
+      ],
+      "value_label": "Mean expression",
+      "title": "Marker expression by cell identity"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-package-PKG16",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Endothelial": 0,
+      "Fibroblast": 1,
+      "Myeloid": 2,
+      "T cells": 3,
+      "Cardiomyocyte": 4
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#E2EFEB",
+        "#6DB3A7",
+        "#1C6C70"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/package-v040/PKG16/PKG16.tsv"
+}

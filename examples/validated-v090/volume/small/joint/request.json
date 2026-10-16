@@ -1,0 +1,87 @@
+{
+  "form": "joint",
+  "example": "R08",
+  "title": "联合散点与边际分布",
+  "source_meta": "examples/gallery/metadata/R08.json",
+  "route": "native",
+  "adapter": "figure_reference.plot_joint_reference",
+  "parameters": {
+    "palette": {
+      "Group 1": "#AEDFCB",
+      "Group 2": "#FFD0AF",
+      "Group 3": "#C9D4EB"
+    },
+    "limits": [
+      [
+        -1.5,
+        1.2
+      ],
+      [
+        7.7,
+        9.3
+      ]
+    ],
+    "x_label": "Measurement X",
+    "y_label": "Measurement Y",
+    "marginal_mode": "bins",
+    "identity": false,
+    "residual_label": null
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-full-layout-joint",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Group 1": 0,
+      "Group 2": 1,
+      "Group 3": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#E1E8EB",
+        "#396F91"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/gallery/figures/R08/R08.tsv"
+}

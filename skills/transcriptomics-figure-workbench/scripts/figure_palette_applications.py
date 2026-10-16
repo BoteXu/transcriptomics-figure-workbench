@@ -57,7 +57,11 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=None,font_family='De
                 if typ=='flow_gate' or spec.get('continuous_color',False):
                     checked(sub,['color_value'],['color_value']); cmap=plt.get_cmap('turbo') if typ=='flow_gate' else LinearSegmentedColormap.from_list('plate',colors)
                     cmap=LinearSegmentedColormap.from_list('panel_continuous',spec['continuous_colors']) if 'continuous_colors' in spec else cmap
-                    dots=ax.scatter(sub.x,sub.y,s=2 if typ=='flow_gate' else 5,c=sub.color_value,cmap=cmap,norm=Normalize(*spec['color_limits']),lw=0,alpha=.8)
+                    area=spec.get('point_size',5 if typ=='flow_gate' else 5)
+                    if not np.isfinite(area) or area<=0:raise ValueError('point_size must be positive')
+                    dots=ax.scatter(sub.x,sub.y,s=area,c=sub.color_value,cmap=cmap,norm=Normalize(*spec['color_limits']),
+                                    linewidths=.20 if typ=='flow_gate' else 0,
+                                    edgecolors='#687B8E' if typ=='flow_gate' else 'none',alpha=.9 if typ=='flow_gate' else .8)
                 else: ax.scatter(sub.x,sub.y,s=sub.area*spec.get('area_scale',.3) if typ=='bubble' else 8,color=pal[g],alpha=.85,lw=.4,ec='white' if typ=='pca' else 'none',label=g)
             ell=_records(src,'ellipse',['group','x','y','width','height','angle'],['x','y','width','height','angle'],optional=True)
             for e in ell.itertuples():

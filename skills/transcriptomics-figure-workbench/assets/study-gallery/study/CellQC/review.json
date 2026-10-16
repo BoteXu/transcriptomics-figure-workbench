@@ -1,0 +1,47 @@
+{
+  "form": "qc_distribution",
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 255.43916399999986,
+    "minimum_required_pt": 7,
+    "essential_text_count": 68,
+    "smallest_pt": 7.399022023106844,
+    "p10_pt": 7.399022023106844,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assay": "single_cell",
+  "role": "qc_distribution",
+  "id": "CellQC",
+  "section": "study",
+  "level": null,
+  "assets": {
+    "png": "study/CellQC/CellQC.png",
+    "svg": "study/CellQC/CellQC.svg",
+    "pdf": "study/CellQC/CellQC.pdf",
+    "tsv": "study/CellQC/CellQC.tsv",
+    "spec": "study/CellQC/input/CellQC.spec.json"
+  },
+  "sha256": {
+    "png": "33b183b77eaa0d1cedbc502d52db479a0926007753d1faba2be70256307ab434",
+    "svg": "d0f6b443ce84dd9e29fbc7604a88b0baa991bc7726acc5d7cccafcf3edb5b89f",
+    "pdf": "02611b7c913a3ef2a6dc5d47b23a0193366698047bf596e5331130ddf9e682de",
+    "tsv": "79d01ea1ce6117525340c9dde0511205e12a6c677e3bdb99af3e6162b0e3be14"
+  },
+  "visual_review": {
+    "key": "study/CellQC",
+    "png_sha256": "33b183b77eaa0d1cedbc502d52db479a0926007753d1faba2be70256307ab434",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
+    "target_width_mm": 210,
+    "font_measurement": "MEASUREMENT_PASS",
+    "pdf_readback": false
+  },
+  "scientific_acceptance": false
+}

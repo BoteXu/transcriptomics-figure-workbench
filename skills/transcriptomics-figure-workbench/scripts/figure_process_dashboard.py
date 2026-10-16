@@ -14,7 +14,11 @@ from figure_reference import _new,_ax,_types,_records,_unique,_grid
 def plot_process_dashboard(data,palette,*,surface_order,bar_group_order,stage_order,
                            geometry_label,count_label,size=(12,9)):
     _types(data,['node','edge','path','matrix','surface','landmark','count'])
-    nodes=_records(data,'node',['node_id','x','y','width','height','group','text'],['x','y','width','height']); edges=_records(data,'edge',['edge_id','x0','y0','x1','y1','line_style'],['x0','y0','x1','y1']); paths=_records(data,'path',['object_id','order','x','y','group','shape'],['order','x','y']); matrices=_records(data,'matrix',['matrix_id','row','column','value'],['row','column','value']); surfaces=_records(data,'surface',['surface_id','x','y','z'],['x','y','z']); peaks=_records(data,'landmark',['surface_id','landmark','x','y','z','group'],['x','y','z']); counts=_records(data,'count',['bar_group','category','stage','value'],['value'])
+    nodes=_records(data,'node',['node_id','x','y','width','height','group'],['x','y','width','height']); edges=_records(data,'edge',['edge_id','x0','y0','x1','y1','line_style'],['x0','y0','x1','y1']); paths=_records(data,'path',['object_id','order','x','y','group','shape'],['order','x','y']); matrices=_records(data,'matrix',['matrix_id','row','column','value'],['row','column','value']); surfaces=_records(data,'surface',['surface_id','x','y','z'],['x','y','z']); peaks=_records(data,'landmark',['surface_id','landmark','x','y','z','group'],['x','y','z']); counts=_records(data,'count',['bar_group','category','stage','value'],['value'])
+    # An explicitly declared backdrop may have no annotation. This is an empty
+    # decorative label, not a missing scientific measurement or a zero fill.
+    if 'text' not in nodes or (nodes.text.isna()&(nodes.group!='Backdrop')).any():raise ValueError('Only explicit backdrop nodes may have empty text')
+    nodes.loc[nodes.text.isna(),'text']=''
     _unique(nodes,['node_id']); _unique(edges,['edge_id']); _unique(paths,['object_id','order']); _unique(peaks,['surface_id','landmark']); _unique(counts,['bar_group','category','stage'])
     if len(surface_order)!=3 or len(set(surface_order))!=3 or len(bar_group_order)!=2 or len(set(bar_group_order))!=2 or len(set(stage_order))!=len(stage_order): raise ValueError('Layout requires three distinct surfaces and two distinct count groups')
     if set(matrices.matrix_id)!={0,1,2} or set(peaks.surface_id)-set(surface_order): raise ValueError('Three numbered matrices and known landmark surfaces required')

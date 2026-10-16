@@ -10,21 +10,24 @@ def text_required(**labels):
         raise ValueError('Explicit nonempty semantic labels are required')
 
 
-def plot_xy_points(data,palette,x_label,y_label,*,unit_label,connect_order=False):
+def plot_xy_points(data,palette,x_label,y_label,*,unit_label,connect_order=False,label_points=False):
     text_required(x=x_label,y=y_label,unit=unit_label)
     d=checked(data,['unit_id','group','x','y'],['x','y'])
     if d.unit_id.duplicated().any(): raise ValueError('One row per independent unit required')
     palette_check(d.group,palette);fig,ax=canvas()
     if type(connect_order) is not bool:raise ValueError('Explicit boolean connection setting required')
+    if type(label_points) is not bool or label_points and len(d)>40:raise ValueError('Explicit point labels support at most forty selected identities; use a reading view for more')
     for g in pd.unique(d.group):
         sub=d[d.group==g]
         if connect_order:
             if len(sub)<2 or (np.diff(sub.x)<=0).any():raise ValueError('Connected points need an explicitly increasing input order')
             ax.plot(sub.x,sub.y,color=palette[g],lw=1.2,alpha=.8,zorder=1)
         ax.scatter(sub.x,sub.y,color=palette[g],s=27,alpha=.8,label=g,linewidths=.3,edgecolors='white',zorder=2)
+        if label_points:
+            for row in sub.itertuples():ax.annotate(str(row.unit_id),(row.x,row.y),xytext=(4,4),textcoords='offset points',fontsize=8,color='#40535F')
     ax.set(xlabel=x_label,ylabel=y_label);ax.legend(frameon=False)
     return stamp(fig,data,'xy_points',palette=palette,x_label=x_label,y_label=y_label,unit_label=unit_label,
-                 connect_order=connect_order,inference='No correlation, fit or p-value computed; connected order is supplied')
+                 connect_order=connect_order,label_points=label_points,inference='No correlation, fit or p-value computed; connected order is supplied')
 
 
 def plot_grouped_estimates(data,palette,y_label,*,interval_label):

@@ -1,0 +1,101 @@
+{
+  "form": "EXT04",
+  "base_form": "rank",
+  "example": "EXT04",
+  "title": "排名轨迹与范围",
+  "source_meta": "examples/clarity-v070/EXT04/EXT04.json",
+  "route": "native",
+  "adapter": "clarity",
+  "parameters": {
+    "view": "rank_stability",
+    "options": {
+      "feature_order": [
+        "Feature A",
+        "Feature B",
+        "Feature C",
+        "Feature D",
+        "Feature E",
+        "Feature F",
+        "Feature G",
+        "Feature H"
+      ],
+      "cohort_order": [
+        "Discovery",
+        "Validation A",
+        "Validation B"
+      ],
+      "rank_limits": [
+        0.5,
+        8.5
+      ],
+      "interval_definition": "Illustrative supplied rank spans; not inferential confidence intervals",
+      "title": "Rank spans across stored exports",
+      "subtitle": "All eight features / explicit unassessed states"
+    },
+    "contract": {
+      "source_definition": "Frozen public synthetic table: original literal fixture EXT04",
+      "independent_unit": "Synthetic identity only; no biological sample or scientific inference",
+      "denominator": "complete literal original rank display fixture; no ranking or stability calculation",
+      "value_definition": "All plotted channels supplied explicitly; exact units and source selection in FigureSpec",
+      "uncertainty_definition": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+      "synthetic": true
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-clarity-EXT04",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Discovery": 0,
+      "Validation A": 1,
+      "Validation B": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F0F4F6",
+        "#436C87"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#C96068"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/clarity-v070/EXT04/EXT04.tsv"
+}

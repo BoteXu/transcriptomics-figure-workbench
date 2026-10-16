@@ -92,7 +92,7 @@ def _curve_path(xs,ys):
     return MPath(vertices,codes)
 
 def plot_annular_profile(data,palette,*,value_label,area_label,value_max,area_scale=0.045,
-                         connect_categories=False,curve_mode='vertices',size=(8,7),font_size=9):
+                         connect_categories=False,curve_mode='vertices',size=(8,7),font_size=9,label_layout='auto'):
     """R01/R02. Area profile and bubble ring; area in pt^2 per original unit."""
     _types(data,['profile'])
     d=_records(data,'profile',['category','series','value','area'],['value','area'])
@@ -101,6 +101,31 @@ def plot_annular_profile(data,palette,*,value_label,area_label,value_max,area_sc
     mat,cats,series=_grid(d,'category','series','value'); n=len(cats)
     if n<3 or len(series)>4: raise ValueError('Use 3+ categories and <=4 series')
     if curve_mode not in ('vertices','smooth_display') or (not connect_categories and curve_mode!='vertices'): raise ValueError('Invalid radial display curve')
+    if label_layout not in ['auto','radial','linear']:raise ValueError('Use auto, radial or linear profile label layout')
+    linear=label_layout=='linear' or (label_layout=='auto' and (n>16 or (n>8 and max(len(str(c)) for c in cats)>16)))
+    if linear:
+        fig=_new((max(size[0],3+len(series)*2),max(size[1],1.8+n*.30)),font_size)
+        from matplotlib.font_manager import FontProperties
+        wrapped=[textwrap.fill(str(c),28,break_long_words=False) for c in cats]
+        renderer=fig.canvas.get_renderer();fp=FontProperties(family='DejaVu Sans',size=max(font_size,9))
+        label_inches=max(renderer.get_text_width_height_descent(line,fp,False)[0] for label in wrapped for line in label.splitlines())/fig.dpi
+        left_inches=label_inches+.25;right_inches=1.45
+        fig.set_figwidth(max(fig.get_figwidth(),left_inches+right_inches+len(series)*1.65))
+        left=left_inches/fig.get_figwidth();span=(1-left-right_inches/fig.get_figwidth())/len(series)
+        for j,s in enumerate(series):
+            ax=_ax(fig,[left+j*span,.16,span*.83,.73]);sub=d.set_index(['category','series']).loc[[(c,s) for c in cats]];yy=np.arange(n)
+            for i in yy[::2]:ax.axhspan(i-.5,i+.5,color='#F2F5F7',zorder=0)
+            ax.hlines(yy,0,sub.value,color='#B9C6CF',lw=.8)
+            ax.scatter(sub.value,yy,s=sub.area*area_scale,color=palette[s],edgecolors='white',lw=.5,zorder=3)
+            ax.set(xlim=(0,value_max),ylim=(n-.5,-.5),xlabel=textwrap.fill(value_label.replace('\n',' '),24),title=str(s))
+            ax.set_yticks(yy,wrapped if j==0 else ['']*n);ax.tick_params(axis='y',length=0)
+            ax.spines['left'].set_visible(False)
+            from matplotlib.ticker import MaxNLocator
+            ax.xaxis.set_major_locator(MaxNLocator(3))
+        sizes=np.array([.25,.5,.75])*d.area.max()
+        fig.legend(handles=[Line2D([],[],marker='o',ms=np.sqrt(v*area_scale),mfc='white',mec=INK,ls='',label=f'{v:g}') for v in sizes],title=area_label,loc='upper left',bbox_to_anchor=(1-right_inches/fig.get_figwidth(),.88),frameon=False,fontsize=8,title_fontsize=8)
+        fig.text(left,.035,'Complete categories and supplied values; aligned linear extension.',fontsize=8)
+        return _finish(fig,data,'annular_profile',palette=palette,value_label=value_label,area_label=area_label,value_max=value_max,area_scale=area_scale,label_layout='linear',requested_label_layout=label_layout,curve_mode='none; exact supplied category values',bubble_area='original area times area_scale')
     theta=np.pi/2-np.arange(n)*2*np.pi/n
     fig=_new(size,font_size); ax=_ax(fig,[.025,.07,.76,.84]); ax.set_aspect('equal'); ax.axis('off')
     hole=.30
@@ -593,16 +618,16 @@ def plot_strip_effects(data,palette,*,panel_order,contrast_order,up_color='#FF6A
     included=(d.padj<=alpha)&(d.value.abs()>=fc)
     fig=_new(size); h=max(float(d.value.abs().max())*1.12,fc*2); width=.87/len(panel_order)
     for k,p in enumerate(panel_order):
-        ax=_ax(fig,[.07+k*width,.22,width-.055,.63])
+        ax=_ax(fig,[.07+k*width,.27,width-.055,.60])
         for i,c in enumerate(contrast_order):
             sub=d[(d.panel==p)&(d.contrast==c)]; eligible=sub[(sub.padj<=alpha)&(sub.value.abs()>=fc)]
             ax.axvspan(i-.44,i+.44,color='#F0F1F2',zorder=0)
             ax.scatter(i+eligible.jitter,eligible.value,s=2,c=np.where(eligible.value>0,up_color,down_color),lw=0)
             ax.add_patch(Rectangle((i-.44,-.8),.88,1.6,fc=palette[c],ec='none',zorder=3)); ax.text(i,0,c,ha='center',va='center',fontsize=6,color='white',zorder=4)
             ax.text(i,h*.90,str(int((eligible.value>0).sum())),ha='center',fontsize=7); ax.text(i,-h*.90,str(int((eligible.value<0).sum())),ha='center',fontsize=7)
-        ax.set(xlim=(-.6,len(contrast_order)-.4),ylim=(-h,h),ylabel='Supplied signed effect',title=str(p)); ax.set_xticks([])
-    fig.text(.07,.10,eligibility_label+f'; padj <= {alpha:g}; |effect| >= {fc:g}',fontsize=8)
-    fig.legend(handles=[Line2D([],[],ls='',marker='o',color=c,label=l) for c,l in [(up_color,'Positive eligible effect'),(down_color,'Negative eligible effect')]],loc='lower right',bbox_to_anchor=(.98,.09),frameon=False,fontsize=7)
+        ax.set(xlim=(-.6,len(contrast_order)-.4),ylim=(-h,h),ylabel='Supplied signed effect' if k==0 else '',title=str(p)); ax.set_xticks([])
+    fig.text(.07,.15,textwrap.fill(eligibility_label+f'; padj <= {alpha:g}; |effect| >= {fc:g}',max(45,int(size[0]*11))),fontsize=8,va='top')
+    fig.legend(handles=[Line2D([],[],ls='',marker='o',color=c,label=l) for c,l in [(up_color,'Positive eligible effect'),(down_color,'Negative eligible effect')]],loc='lower center',bbox_to_anchor=(.5,.015),ncols=2,frameon=False,fontsize=7)
     return _finish(fig,data,'strip_effects',palette=palette,panel_order=list(panel_order),contrast_order=list(contrast_order),alpha=alpha,fc=fc,eligibility_label=eligibility_label,included_rows=int(included.sum()),excluded_rows=int((~included).sum()),counts='eligible feature records; not inferred sample n',jitter='supplied display offset; effect unchanged')
 
 def plot_aligned_tracks(data,palette,*,category_order,track_order,matrix_order,block_order,
@@ -616,7 +641,7 @@ def plot_aligned_tracks(data,palette,*,category_order,track_order,matrix_order,b
     fig=_new(size); n=len(category_order); top=.90; height=.075
     for i,t in enumerate(track_order):
         ax=_ax(fig,[.08,top-(i+1)*height,.80,height*.84]); sub=counts[counts.track==t].set_index('category').reindex(category_order)
-        ax.bar(range(n),sub.value,color=palette[t],width=.86); ax.set(xlim=(-.5,n-.5),ylabel=t); ax.set_xticks([]); ax.yaxis.label.set_size(8); ax.grid(axis='y',color='#E2E6E9',lw=.4); ax.set_axisbelow(True)
+        ax.bar(range(n),sub.value,color=palette[t],width=.86); ax.set(xlim=(-.5,n-.5));ax.text(-.09,.5,t,transform=ax.transAxes,ha='right',va='center',fontsize=8); ax.set_xticks([]); ax.grid(axis='y',color='#E2E6E9',lw=.4); ax.set_axisbelow(True)
     cursor=top-len(track_order)*height-.01
     for k,m in enumerate(matrix_order):
         sub=matrices[matrices.matrix==m]; mat,rs,cs=_grid(sub,'row','category','value')
@@ -624,16 +649,18 @@ def plot_aligned_tracks(data,palette,*,category_order,track_order,matrix_order,b
         lo,hi=matrix_limits[m]
         if lo>=hi or ((sub.value<lo)|(sub.value>hi)).any(): raise ValueError('Matrix limits clip values')
         mh=.13; cursor-=mh+.025
-        ax=_ax(fig,[.08,cursor,.80,mh]); cmap=plt.get_cmap('RdPu' if k%2==0 else 'OrRd'); ax.imshow(mat.reindex(columns=category_order),aspect='auto',cmap=cmap,vmin=lo,vmax=hi); ax.set_yticks(range(len(rs)),rs,fontsize=7)
-        ax.set_xticks(range(n),category_order,rotation=90,fontsize=6) if k==len(matrix_order)-1 else ax.set_xticks([])
-        _colorbar(fig,[.90,cursor,.012,mh],cmap,Normalize(lo,hi),matrix_labels[m])
-    cats=categories.set_index('category').reindex(category_order); band=_ax(fig,[.08,.23,.80,.055]); band.axis('off'); band.set(xlim=(-.5,n-.5),ylim=(0,1))
+        from matplotlib.colors import LinearSegmentedColormap
+        ax=_ax(fig,[.08,cursor,.80,mh]); cmap=LinearSegmentedColormap.from_list('aligned_metric_'+str(k),['#EDF2F4','#326B8D' if k%2==0 else '#AD6451']); ax.imshow(mat.reindex(columns=category_order),aspect='auto',cmap=cmap,vmin=lo,vmax=hi); ax.set_yticks(range(len(rs)),rs,fontsize=7)
+        ax.set_xticks(range(n),[textwrap.fill(str(v),20,break_long_words=False) for v in category_order],rotation=90,fontsize=6) if k==len(matrix_order)-1 else ax.set_xticks([])
+        _colorbar(fig,[.90,cursor,.012,mh],cmap,Normalize(lo,hi),textwrap.fill(matrix_labels[m],16))
+    band_y=.14 if max(len(str(v)) for v in category_order)>16 else .23
+    cats=categories.set_index('category').reindex(category_order); band=_ax(fig,[.08,band_y,.80,.055]); band.axis('off'); band.set(xlim=(-.5,n-.5),ylim=(0,1))
     observed_blocks=[]
     for b in block_order:
         ids=np.flatnonzero(cats.block.to_numpy()==b)
         if len(ids)==0 or not np.all(np.diff(ids)==1): raise ValueError('Each block must be contiguous in supplied category order')
         observed_blocks.extend(ids.tolist()); left=ids.min()-.5; right=ids.max()+.5; band.plot([left,left,right,right],[1,.2,.2,1],color=INK,lw=.8); band.text((left+right)/2,.05,b,ha='center',va='top',fontsize=9)
-    fig.text(.01,.66,count_label,rotation=90,fontsize=9)
+    fig.text(.015,.90,count_label,fontsize=8,va='bottom')
     return _finish(fig,data,'aligned_tracks',palette=palette,category_order=list(category_order),track_order=list(track_order),matrix_order=list(matrix_order),block_order=list(block_order),matrix_labels=matrix_labels,matrix_limits=matrix_limits,count_label=count_label,order='fixed across all panels; no clustering or species assumption')
 
 def plot_surface_grid(data,*,axis_labels,value_label,limits,view=(32,-132),size=(9,6)):
@@ -645,6 +672,7 @@ def plot_surface_grid(data,*,axis_labels,value_label,limits,view=(32,-132),size=
     # rcount/ccount preserve every supplied grid node, no automatic subsampling.
     surf=ax.plot_surface(xx,yy,mat.to_numpy(),cmap=cm,norm=norm,rcount=len(ys),ccount=len(xs),lw=0,antialiased=True,shade=False)
     ax.set(xlabel=axis_labels[0],ylabel=axis_labels[1],zlabel=value_label,zlim=limits); ax.view_init(*view); ax.tick_params(labelsize=7); ax.set_box_aspect((1,1,.55))
+    ax.xaxis.labelpad=13;ax.yaxis.labelpad=15;ax.zaxis.labelpad=10
     ax.set_xticks(np.linspace(xs.min(),xs.max(),5)); ax.set_yticks(np.linspace(ys.min(),ys.max(),5)); ax.set_zticks(np.linspace(limits[0],limits[1],5))
     _colorbar(fig,[.89,.17,.022,.67],cm,norm,value_label)
     return _finish(fig,data,'surface_grid',axis_labels=list(axis_labels),value_label=value_label,limits=list(limits),view=list(view),surface='supplied regular grid; no smoothing/interpolation',occlusion='3D perspective hides regions; pair with 2D map for quantitative reading')

@@ -98,6 +98,8 @@ def validate_spec(spec):
         raise ValueError('Theme must preserve an existing declared categorical card')
     if not isinstance(theme['group_slots'],dict) or any(type(v) is not int or not 0<=v<len(theme['palette_colors']) for v in theme['group_slots'].values()):
         raise ValueError('Invalid category identities or color capacity')
+    explicit=theme.get('category_colors',{})
+    if not isinstance(explicit,dict) or len(explicit)>500 or any(not isinstance(k,str) or not k.strip() or not isinstance(v,str) or not re.fullmatch(r'#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?',v) for k,v in explicit.items()):raise ValueError('Invalid explicit named category colour map')
     if not isinstance(theme['font_family'],str) or not theme['font_family'].strip():
         raise ValueError('Font family required')
     for key in ['label_pt','tick_pt','title_pt','note_pt']:

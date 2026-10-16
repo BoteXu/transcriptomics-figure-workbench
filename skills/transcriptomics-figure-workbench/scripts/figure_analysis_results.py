@@ -90,8 +90,8 @@ def plot_contribution_waterfall(data,theme,*,component_order,baseline,total,quan
         else:ax.plot([j-.35,j+.35],[level,level],c=theme['roles']['neutral'],lw=1)
         ax.plot([j-.65,j-.35],[level,level],c=theme['roles']['border'],ls=':',lw=.7)
         records.append(dict(component=id_,start=level,end=end,contribution=float(r.contribution)));level=end
-    ax.bar(len(order)+1,abs(total),bottom=min(0,total),color=theme['roles']['primary'],width=.7);ax.axhline(0,color=theme['roles']['border'],lw=.6)
+    ax.bar(len(order)+1,abs(total),bottom=min(0,total),color=theme['roles']['neutral'],edgecolor=theme['roles']['border'],linewidth=.7,width=.7);ax.axhline(0,color=theme['roles']['border'],lw=.6)
     ax.set(xticks=range(len(order)+2),xticklabels=['Baseline']+[textwrap.fill(str(x),13) for x in d.label]+['Total'],ylabel=quantity_definition,title=title)
     ax.tick_params(axis='x',labelrotation=30);fig.text(.12,.06,textwrap.fill(contribution_definition,110),fontsize=8)
-    fig.legend(handles=[Patch(color=theme['roles']['positive'],label='Positive contribution'),Patch(color=theme['roles']['negative'],label='Negative contribution')],loc='upper left',bbox_to_anchor=(.86,.84),frameon=False)
+    fig.legend(handles=[Patch(color=theme['roles']['positive'],label='Positive contribution'),Patch(color=theme['roles']['negative'],label='Negative contribution'),Patch(facecolor=theme['roles']['neutral'],edgecolor=theme['roles']['border'],label='Baseline / total')],loc='upper left',bbox_to_anchor=(.86,.84),frameon=False)
     return _finish(fig,data,theme,'contribution_waterfall',component_order=order,baseline=baseline,total=total,quantity_definition=quantity_definition,contribution_definition=contribution_definition,title=title,levels=records,inference='none; additive inputs required, no attribution or mechanistic decomposition calculated')

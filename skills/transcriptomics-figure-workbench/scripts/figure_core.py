@@ -257,13 +257,29 @@ def plot_heatmap(data, value_label, center=0, *, scale_type='signed',
                                    column_annotations=column_annotations,palettes=annotation_palettes)
     return fig
 
-def plot_qc(data,y_label):
+def plot_qc(data,y_label,*,metric_field=None,metric_labels=None,ncols='auto',nrows=None,panel_width=3.3,panel_height=3.5):
     d=checked(data,['cell_id','sample','value'],['value'])
-    if d.duplicated(['cell_id','sample']).any(): raise ValueError('Duplicate cells within sample')
-    groups=list(pd.unique(d['sample'])); fig,ax=canvas()
-    ax.boxplot([d.loc[d['sample']==g,'value'] for g in groups],tick_labels=groups,patch_artist=True,boxprops={'facecolor':'#CAD9E8','edgecolor':'#35618F'})
-    ax.set(xlabel='Capture / sample',ylabel=y_label)
-    return stamp(fig, data, 'qc', y_label=y_label)
+    if metric_field is not None:
+        d=checked(d,[metric_field]);metrics=list(pd.unique(d[metric_field]))
+        if not isinstance(metric_labels,dict) or set(metric_labels)!=set(metrics) or any(not str(v).strip() for v in metric_labels.values()):raise ValueError('Every QC metric requires its explicit label and units')
+        if d.duplicated(['cell_id','sample',metric_field]).any():raise ValueError('Duplicate cell/sample/metric')
+        from figure_workbench.responsive import grid_shape,facet_slots,canvas_budget
+        rows,cols=grid_shape(len(metrics),ncols,nrows);fig=plt.figure(figsize=canvas_budget(cols*panel_width,rows*panel_height),layout='constrained')
+        axes=[fig.add_subplot(s) for s in facet_slots(fig,len(metrics),rows,cols)]
+    else:
+        if metric_labels is not None or ncols!='auto' or nrows is not None:raise ValueError('QC facet controls require an explicit metric field and labels')
+        if d.duplicated(['cell_id','sample']).any(): raise ValueError('Duplicate cells within sample')
+        fig,ax=canvas();metrics=[None];axes=[ax]
+    for metric,ax in zip(metrics,axes):
+        part=d if metric is None else d[d[metric_field]==metric];groups=list(pd.unique(part['sample']))
+        ax.boxplot([part.loc[part['sample']==g,'value'] for g in groups],tick_labels=groups,patch_artist=True,
+               boxprops={'facecolor':'#E3EBEF','edgecolor':'#708795','linewidth':.8},
+               medianprops={'color':'#2B7285','linewidth':1.2},
+               whiskerprops={'color':'#708795','linewidth':.8},capprops={'color':'#708795','linewidth':.8},
+               flierprops={'marker':'.','markerfacecolor':'#708795','markeredgecolor':'none','markersize':4,'alpha':.65})
+        ax.set(xlabel='Capture / sample',ylabel=y_label if metric is None else metric_labels[metric]);ax.spines[['top','right']].set_visible(False)
+        if metric is not None:ax.tick_params(axis='x',labelrotation=90,labelsize=8)
+    return stamp(fig, data, 'qc', y_label=y_label,metric_field=metric_field,metric_labels=metric_labels,metrics=metrics,statistics='Descriptive boxes; no filtering, threshold estimation or inference')
 
 def plot_composition(data,palette,*,y_label='Fraction of included cells'):
     d=checked(data,['sample','celltype','count'],['count'])
@@ -281,19 +297,37 @@ def plot_composition(data,palette,*,y_label='Fraction of included cells'):
     ax.legend(loc='upper left',bbox_to_anchor=(1,1),frameon=False)
     return stamp(fig, data, 'composition', palette=palette, denominator='all supplied counts per sample',y_label=y_label)
 
-def plot_curve(data,kind='ROC'):
+def plot_curve(data,kind='ROC',*,palette=None,mode='auto',ncols='auto',nrows=None,panel_width=3.8,panel_height=3.6):
     if kind not in ['ROC','PR','calibration']: raise ValueError('Unknown curve kind')
     d=checked(data,['model','x','y'],['x','y'])
     if ((d[['x','y']]<0)|(d[['x','y']]>1)).any().any(): raise ValueError('Curve values outside [0,1]')
-    fig,ax=canvas()
+    models=list(pd.unique(d.model))
+    if mode not in ['auto','overlay','facets']:raise ValueError('Curve mode must be auto, overlay or facets')
+    if palette is not None:palette_check(models,palette)
+    facets=mode=='facets' or (mode=='auto' and (len(models)>4 or ncols!='auto' or nrows is not None))
+    if mode=='overlay' and (ncols!='auto' or nrows is not None):raise ValueError('Use facets for row/column controls')
+    if not facets and len(models)>4:raise ValueError('More than four overlapping curves require complete facets')
+    if facets:
+        from figure_workbench.responsive import grid_shape,facet_slots,canvas_budget
+        rows,cols=grid_shape(len(models),ncols,nrows)
+        fig=plt.figure(figsize=canvas_budget(cols*panel_width,rows*panel_height),layout='constrained')
+        axes=[fig.add_subplot(s) for s in facet_slots(fig,len(models),rows,cols)]
+    else:fig,ax=canvas();axes=[ax]*len(models)
     styles=['-','--','-.',':']
-    if d.model.nunique()>len(styles): raise ValueError('Too many curves; use facets')
-    for i,m in enumerate(pd.unique(d.model)):
-        sub=d[d.model==m]; ax.plot(sub.x,sub.y,color='#35618F',linestyle=styles[i],label=m)
-    if kind!='PR': ax.plot([0,1],[0,1],':',color='grey')
+    for i,(m,ax) in enumerate(zip(models,axes)):
+        sub=d[d.model==m];color=palette[m] if palette else '#35618F';style='-' if facets else styles[i]
+        rgb=np.asarray(to_rgba(color)[:3]);linear=np.where(rgb<=.04045,rgb/12.92,((rgb+.055)/1.055)**2.4)
+        contrast=1.05/(float(linear@[.2126,.7152,.0722])+.05)
+        if contrast<3:ax.plot(sub.x,sub.y,color='#687783',linestyle=style,lw=2.5,zorder=1)
+        ax.plot(sub.x,sub.y,color=color,linestyle=style,label=m,lw=1.5,zorder=2)
+        if facets:ax.set_title(str(m),loc='left',fontsize=10)
     labels={'ROC':('False positive rate','True positive rate'),'PR':('Recall','Precision'),'calibration':('Predicted probability','Observed fraction')}
-    ax.set(xlim=(0,1),ylim=(0,1),xlabel=labels[kind][0],ylabel=labels[kind][1],aspect='equal'); ax.legend(frameon=False)
-    return stamp(fig, data, 'curve', curve_kind=kind, threshold_order='input order')
+    for ax in dict.fromkeys(axes):
+        if kind!='PR':ax.plot([0,1],[0,1],':',color='#A7B2BA',lw=.8,zorder=0)
+        ax.set(xlim=(0,1),ylim=(0,1),xlabel=labels[kind][0],ylabel=labels[kind][1],aspect='equal')
+        ax.spines[['top','right']].set_visible(False)
+        if not facets:ax.legend(frameon=False)
+    return stamp(fig, data, 'curve', curve_kind=kind, threshold_order='input order',curve_mode='facets' if facets else 'overlay',model_order=models)
 
 def export_figure(fig,data,out_dir,figure_id,meta, *, source_file=None, expected_source_sha256=None):
     """Publish a complete per-figure directory by one rename on the same filesystem.

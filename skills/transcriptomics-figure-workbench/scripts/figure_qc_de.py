@@ -121,9 +121,11 @@ def plot_frozen_qc_de(data, theme, *, mode, contract, order=None, marker_map=Non
         if mode == 'ma':
             d = checked(d, ['average', 'effect'], ['average', 'effect']); _declarations(contract, ['average_definition'])
             fig = _new(theme, (9, 5.5)); ax = _axis(fig, [.13, .23, .60, .60])
-            for status in pd.unique(d.status):
+            for status in [s for s in ['other','untested','down','up'] if s in set(d.status)]:
                 q = d[d.status == status]
-                ax.scatter(q.average, q.effect, c=colors[status], ec=theme['roles']['border'] if status == 'untested' else 'none', s=18)
+                dense=len(d)>250;emphasized=status in ['up','down']
+                ax.scatter(q.average, q.effect, c=colors[status], ec=theme['roles']['border'] if status == 'untested' else 'none',
+                           s=(10 if emphasized else 5) if dense else 18,alpha=(.85 if emphasized else .28) if dense else 1,rasterized=dense)
             ax.set(xlabel=contract['average_definition'], ylabel=contract['effect_definition']); ax.axhline(0, color=theme['roles']['border'], lw=.7)
         elif mode == 'ranked_effects':
             d = checked(d, ['rank'], ['rank']); _numbers(d, ['rank']); _unique(d, ['rank'])

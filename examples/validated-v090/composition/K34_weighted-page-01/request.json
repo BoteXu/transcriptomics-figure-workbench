@@ -1,0 +1,27 @@
+{
+  "id": "K34_weighted",
+  "title": "多组学对象分数＋特征相关投影",
+  "panels": [
+    {
+      "id": "Panel1",
+      "svg": "../../../source/M04/M04.svg",
+      "table": "../../../source/M04/M04.tsv"
+    },
+    {
+      "id": "Panel2",
+      "svg": "../../../source/M05/M05.svg",
+      "table": "../../../source/M05/M05.tsv"
+    }
+  ],
+  "canvas_width_pt": 1100,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "label_order": "reading",
+  "columns": 2,
+  "column_weights": [
+    1.15,
+    1
+  ],
+  "packing": "masonry",
+  "packing_order": "tall_first"
+}

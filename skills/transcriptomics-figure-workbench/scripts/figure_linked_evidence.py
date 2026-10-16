@@ -33,7 +33,9 @@ def plot_membership_ribbons(data,theme,*,member_order,term_order,block_slots,eff
     effects=m.set_index('member_id').effect.to_dict(); terms=t.set_index('term_id')
     for r in e.itertuples():
         verts=[(.04,my[r.member_id]),(.39,my[r.member_id]),(.61,ty[r.term_id]),(.98,ty[r.term_id])]
-        a.add_patch(PathPatch(Path(verts,[Path.MOVETO,Path.CURVE4,Path.CURVE4,Path.CURVE4]),fc='none',ec=cmap(en(effects[r.member_id])),lw=.8,alpha=.55))
+        path=Path(verts,[Path.MOVETO,Path.CURVE4,Path.CURVE4,Path.CURVE4])
+        a.add_patch(PathPatch(path,fc='none',ec='#788896',lw=1.15,alpha=.30))
+        a.add_patch(PathPatch(path,fc='none',ec=cmap(en(effects[r.member_id])),lw=.85,alpha=.90))
     for mid in member_order:
         a.text(.0,my[mid],mid,ha='right',va='center',fontsize=8)
     for tid in term_order:

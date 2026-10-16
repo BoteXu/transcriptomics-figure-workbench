@@ -1,0 +1,49 @@
+{
+  "form": "heatmap",
+  "adapter": "figure_polish.plot_polished_matrix",
+  "rows": 32,
+  "source_input_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+  "input_sha256": "8a18ee1d1e547b53f455905b6b561f4e1bba2a968aefd0e004e0e9bd79bd6dca",
+  "quantitative_geometry_sha256": "530b61aaf3198fe08f431387887acc518e8a345bed9d50f1840d4fe736902a4b",
+  "volume": {
+    "level": "small",
+    "quantity_dimension": "feature",
+    "quantity": 4,
+    "input_rows": 32,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 7.2
+  },
+  "size_inches": [
+    7.2,
+    4.4
+  ],
+  "id": "heatmap",
+  "section": "volume",
+  "level": "small",
+  "assets": {
+    "png": "volume/small/heatmap/heatmap.png",
+    "svg": "volume/small/heatmap/heatmap.svg",
+    "tsv": "volume/small/heatmap/heatmap.tsv"
+  },
+  "sha256": {
+    "png": "9c353884ee765a0ad2595443fa4337ed0d28dd963b1db7016c15960145557270",
+    "svg": "8347671ce0831c268d4e08a3c284a4f15536255578f4ba96004142c2aef56a9a",
+    "tsv": "8a18ee1d1e547b53f455905b6b561f4e1bba2a968aefd0e004e0e9bd79bd6dca"
+  },
+  "visual_review": {
+    "key": "volume/small/heatmap",
+    "png_sha256": "9c353884ee765a0ad2595443fa4337ed0d28dd963b1db7016c15960145557270",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "热图"
+}

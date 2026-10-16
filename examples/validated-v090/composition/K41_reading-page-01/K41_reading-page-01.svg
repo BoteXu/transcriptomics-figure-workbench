@@ -1,0 +1,725 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 650.0 1052.7406944770294" width="650.0pt" height="1052.7406944770294pt"><rect width="650.0" height="1052.7406944770294" fill="white" /><text x="24" y="28" font-size="13" font-family="Arial, sans-serif" fill="#283740">预测校准、评价支持量与决策价值</text><svg width="602.0" height="554.6286704283231" viewBox="0 0 506.16 466.330312" version="1.1" id="Panel1_scope" x="24.0" y="74.0" preserveAspectRatio="xMinYMin meet">
+ <defs>
+  <style type="text/css">#Panel1_scope *{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="Panel1_figure_1">
+  <g id="Panel1_patch_1">
+   <path d="M 0 466.330312  L 506.16 466.330312  L 506.16 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="Panel1_axes_1">
+   <g id="Panel1_patch_2">
+    <path d="M 65.88 253.475321  L 421.632 253.475321  L 421.632 58.464  L 65.88 58.464  z " style="fill: #ffffff" />
+   </g>
+   <g id="Panel1_matplotlib.axis_1">
+    <g id="Panel1_xtick_1">
+     <g id="Panel1_line2d_1">
+      <defs>
+       <path id="Panel1_m2fe68dcdb9" d="M 0 0  L 0 3  " style="stroke: #49545e; stroke-width: 0.6" />
+      </defs>
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="65.88" y="253.475321" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+    </g>
+    <g id="Panel1_xtick_2">
+     <g id="Panel1_line2d_2">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="137.0304" y="253.475321" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+    </g>
+    <g id="Panel1_xtick_3">
+     <g id="Panel1_line2d_3">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="208.1808" y="253.475321" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+    </g>
+    <g id="Panel1_xtick_4">
+     <g id="Panel1_line2d_4">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="279.3312" y="253.475321" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+    </g>
+    <g id="Panel1_xtick_5">
+     <g id="Panel1_line2d_5">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="350.4816" y="253.475321" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+    </g>
+    <g id="Panel1_xtick_6">
+     <g id="Panel1_line2d_6">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="421.632" y="253.475321" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="Panel1_matplotlib.axis_2">
+    <g id="Panel1_ytick_1">
+     <g id="Panel1_line2d_7">
+      <defs>
+       <path id="Panel1_m5dd5d953ae" d="M 0 0  L -3 0  " style="stroke: #49545e; stroke-width: 0.6" />
+      </defs>
+      <g>
+       <use xlink:href="#Panel1_m5dd5d953ae" x="65.88" y="253.475321" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_1">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="59.38" y="256.894266" transform="rotate(-0 59.38 256.894266)">0.0</text>
+     </g>
+    </g>
+    <g id="Panel1_ytick_2">
+     <g id="Panel1_line2d_8">
+      <g>
+       <use xlink:href="#Panel1_m5dd5d953ae" x="65.88" y="214.473057" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_2">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="59.38" y="217.892002" transform="rotate(-0 59.38 217.892002)">0.2</text>
+     </g>
+    </g>
+    <g id="Panel1_ytick_3">
+     <g id="Panel1_line2d_9">
+      <g>
+       <use xlink:href="#Panel1_m5dd5d953ae" x="65.88" y="175.470792" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_3">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="59.38" y="178.889738" transform="rotate(-0 59.38 178.889738)">0.4</text>
+     </g>
+    </g>
+    <g id="Panel1_ytick_4">
+     <g id="Panel1_line2d_10">
+      <g>
+       <use xlink:href="#Panel1_m5dd5d953ae" x="65.88" y="136.468528" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_4">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="59.38" y="139.887474" transform="rotate(-0 59.38 139.887474)">0.6</text>
+     </g>
+    </g>
+    <g id="Panel1_ytick_5">
+     <g id="Panel1_line2d_11">
+      <g>
+       <use xlink:href="#Panel1_m5dd5d953ae" x="65.88" y="97.466264" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_5">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="59.38" y="100.885209" transform="rotate(-0 59.38 100.885209)">0.8</text>
+     </g>
+    </g>
+    <g id="Panel1_ytick_6">
+     <g id="Panel1_line2d_12">
+      <g>
+       <use xlink:href="#Panel1_m5dd5d953ae" x="65.88" y="58.464" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_6">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="59.38" y="61.882945" transform="rotate(-0 59.38 61.882945)">1.0</text>
+     </g>
+    </g>
+    <g id="Panel1_text_7">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #27323c" x="38.664844" y="155.96966" transform="rotate(-90 38.664844 155.96966)">Observed event fraction</text>
+    </g>
+   </g>
+   <g id="Panel1_line2d_13">
+    <path d="M 65.88 253.475321  L 421.632 58.464  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #aeb7bf; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_LineCollection_1">
+    <path d="M 88.1145 253.011729  L 88.1145 227.660257  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa" />
+    <path d="M 132.5835 226.877872  L 132.5835 201.5264  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa" />
+    <path d="M 177.0525 201.156369  L 177.0525 175.804897  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa" />
+    <path d="M 221.5215 176.051998  L 221.5215 150.700526  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa" />
+    <path d="M 265.9905 151.675583  L 265.9905 126.324111  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa" />
+    <path d="M 310.4595 128.027124  L 310.4595 102.675652  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa" />
+    <path d="M 354.9285 104.995796  L 354.9285 79.644325  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa" />
+    <path d="M 399.3975 82.376823  L 399.3975 58.464  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa" />
+   </g>
+   <g id="Panel1_line2d_14">
+    <defs>
+     <path id="Panel1_m4d269c85a5" d="M 2 0  L -2 -0  " style="stroke: #506aaa" />
+    </defs>
+    <g clip-path="url(#Panel1_p62d9258e31)">
+     <use xlink:href="#Panel1_m4d269c85a5" x="88.1145" y="253.011729" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="132.5835" y="226.877872" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="177.0525" y="201.156369" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="221.5215" y="176.051998" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="265.9905" y="151.675583" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="310.4595" y="128.027124" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="354.9285" y="104.995796" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="399.3975" y="82.376823" style="fill: #506aaa; stroke: #506aaa" />
+    </g>
+   </g>
+   <g id="Panel1_line2d_15">
+    <g clip-path="url(#Panel1_p62d9258e31)">
+     <use xlink:href="#Panel1_m4d269c85a5" x="88.1145" y="227.660257" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="132.5835" y="201.5264" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="177.0525" y="175.804897" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="221.5215" y="150.700526" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="265.9905" y="126.324111" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="310.4595" y="102.675652" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="354.9285" y="79.644325" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m4d269c85a5" x="399.3975" y="58.464" style="fill: #506aaa; stroke: #506aaa" />
+    </g>
+   </g>
+   <g id="Panel1_LineCollection_2">
+    <path d="M 88.1145 249.777919  L 88.1145 224.426447  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #e17692" />
+    <path d="M 132.5835 217.668761  L 132.5835 192.317289  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #e17692" />
+    <path d="M 177.0525 187.37396  L 177.0525 162.022489  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #e17692" />
+    <path d="M 221.5215 159.794538  L 221.5215 134.443066  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #e17692" />
+    <path d="M 265.9905 135.418123  L 265.9905 110.066651  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #e17692" />
+    <path d="M 310.4595 114.244715  L 310.4595 88.893243  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #e17692" />
+    <path d="M 354.9285 95.786685  L 354.9285 70.435213  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #e17692" />
+    <path d="M 399.3975 79.143013  L 399.3975 58.464  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #e17692" />
+   </g>
+   <g id="Panel1_line2d_16">
+    <defs>
+     <path id="Panel1_m7c779ed753" d="M 2 0  L -2 -0  " style="stroke: #e17692" />
+    </defs>
+    <g clip-path="url(#Panel1_p62d9258e31)">
+     <use xlink:href="#Panel1_m7c779ed753" x="88.1145" y="249.777919" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="132.5835" y="217.668761" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="177.0525" y="187.37396" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="221.5215" y="159.794538" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="265.9905" y="135.418123" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="310.4595" y="114.244715" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="354.9285" y="95.786685" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="399.3975" y="79.143013" style="fill: #e17692; stroke: #e17692" />
+    </g>
+   </g>
+   <g id="Panel1_line2d_17">
+    <g clip-path="url(#Panel1_p62d9258e31)">
+     <use xlink:href="#Panel1_m7c779ed753" x="88.1145" y="224.426447" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="132.5835" y="192.317289" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="177.0525" y="162.022489" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="221.5215" y="134.443066" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="265.9905" y="110.066651" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="310.4595" y="88.893243" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="354.9285" y="70.435213" style="fill: #e17692; stroke: #e17692" />
+     <use xlink:href="#Panel1_m7c779ed753" x="399.3975" y="58.464" style="fill: #e17692; stroke: #e17692" />
+    </g>
+   </g>
+   <g id="Panel1_line2d_18">
+    <path d="M 88.1145 240.335993  L 132.5835 214.202136  L 177.0525 188.480633  L 221.5215 163.376262  L 265.9905 138.999847  L 310.4595 115.351388  L 354.9285 92.320061  L 399.3975 69.701087  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+    <defs>
+     <path id="Panel1_m94ed3bc601" d="M 0 2  C 0.530406 2 1.03916 1.789267 1.414214 1.414214  C 1.789267 1.03916 2 0.530406 2 0  C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214  C 1.03916 -1.789267 0.530406 -2 0 -2  C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214  C -1.789267 -1.03916 -2 -0.530406 -2 0  C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214  C -1.03916 1.789267 -0.530406 2 0 2  z " style="stroke: #506aaa" />
+    </defs>
+    <g clip-path="url(#Panel1_p62d9258e31)">
+     <use xlink:href="#Panel1_m94ed3bc601" x="88.1145" y="240.335993" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m94ed3bc601" x="132.5835" y="214.202136" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m94ed3bc601" x="177.0525" y="188.480633" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m94ed3bc601" x="221.5215" y="163.376262" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m94ed3bc601" x="265.9905" y="138.999847" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m94ed3bc601" x="310.4595" y="115.351388" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m94ed3bc601" x="354.9285" y="92.320061" style="fill: #506aaa; stroke: #506aaa" />
+     <use xlink:href="#Panel1_m94ed3bc601" x="399.3975" y="69.701087" style="fill: #506aaa; stroke: #506aaa" />
+    </g>
+   </g>
+   <g id="Panel1_line2d_19">
+    <path d="M 88.1145 237.102183  L 132.5835 204.993025  L 177.0525 174.698224  L 221.5215 147.118802  L 265.9905 122.742387  L 310.4595 101.568979  L 354.9285 83.110949  L 399.3975 66.467277  " clip-path="url(#Panel1_p62d9258e31)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+    <defs>
+     <path id="Panel1_mb20e4b52a3" d="M -2 2  L 2 2  L 2 -2  L -2 -2  z " style="stroke: #e17692; stroke-linejoin: miter" />
+    </defs>
+    <g clip-path="url(#Panel1_p62d9258e31)">
+     <use xlink:href="#Panel1_mb20e4b52a3" x="88.1145" y="237.102183" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+     <use xlink:href="#Panel1_mb20e4b52a3" x="132.5835" y="204.993025" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+     <use xlink:href="#Panel1_mb20e4b52a3" x="177.0525" y="174.698224" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+     <use xlink:href="#Panel1_mb20e4b52a3" x="221.5215" y="147.118802" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+     <use xlink:href="#Panel1_mb20e4b52a3" x="265.9905" y="122.742387" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+     <use xlink:href="#Panel1_mb20e4b52a3" x="310.4595" y="101.568979" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+     <use xlink:href="#Panel1_mb20e4b52a3" x="354.9285" y="83.110949" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+     <use xlink:href="#Panel1_mb20e4b52a3" x="399.3975" y="66.467277" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+    </g>
+   </g>
+   <g id="Panel1_patch_3">
+    <path d="M 65.88 253.475321  L 65.88 58.464  " style="fill: none; stroke: #9ca6ae; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_patch_4">
+    <path d="M 65.88 253.475321  L 421.632 253.475321  " style="fill: none; stroke: #9ca6ae; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_legend_1">
+    <g id="Panel1_LineCollection_3">
+     <path d="M 457.6 22.038594  L 457.6 14.038594  " style="fill: none; stroke: #506aaa" />
+    </g>
+    <g id="Panel1_line2d_20">
+     <g>
+      <use xlink:href="#Panel1_m4d269c85a5" x="457.6" y="22.038594" style="fill: #506aaa; stroke: #506aaa" />
+     </g>
+    </g>
+    <g id="Panel1_line2d_21">
+     <g>
+      <use xlink:href="#Panel1_m4d269c85a5" x="457.6" y="14.038594" style="fill: #506aaa; stroke: #506aaa" />
+     </g>
+    </g>
+    <g id="Panel1_line2d_22">
+     <path d="M 449.6 18.038594  L 465.6 18.038594  " style="fill: none; stroke: #506aaa; stroke-linecap: square" />
+    </g>
+    <g id="Panel1_line2d_23">
+     <g>
+      <use xlink:href="#Panel1_m94ed3bc601" x="457.6" y="18.038594" style="fill: #506aaa; stroke: #506aaa" />
+     </g>
+    </g>
+    <g id="Panel1_text_8">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #27323c" x="472" y="20.838594" transform="rotate(-0 472 20.838594)">G1</text>
+    </g>
+    <g id="Panel1_LineCollection_4">
+     <path d="M 457.6 35.039297  L 457.6 27.039297  " style="fill: none; stroke: #e17692" />
+    </g>
+    <g id="Panel1_line2d_24">
+     <g>
+      <use xlink:href="#Panel1_m7c779ed753" x="457.6" y="35.039297" style="fill: #e17692; stroke: #e17692" />
+     </g>
+    </g>
+    <g id="Panel1_line2d_25">
+     <g>
+      <use xlink:href="#Panel1_m7c779ed753" x="457.6" y="27.039297" style="fill: #e17692; stroke: #e17692" />
+     </g>
+    </g>
+    <g id="Panel1_line2d_26">
+     <path d="M 449.6 31.039297  L 465.6 31.039297  " style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #e17692" />
+    </g>
+    <g id="Panel1_line2d_27">
+     <g>
+      <use xlink:href="#Panel1_mb20e4b52a3" x="457.6" y="31.039297" style="fill: #e17692; stroke: #e17692; stroke-linejoin: miter" />
+     </g>
+    </g>
+    <g id="Panel1_text_9">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #27323c" x="472" y="33.839297" transform="rotate(-0 472 33.839297)">G7</text>
+    </g>
+   </g>
+  </g>
+  <g id="Panel1_axes_2">
+   <g id="Panel1_patch_5">
+    <path d="M 65.88 334.08  L 421.632 334.08  L 421.632 269.076226  L 65.88 269.076226  z " style="fill: #ffffff" />
+   </g>
+   <g id="Panel1_matplotlib.axis_3">
+    <g id="Panel1_xtick_7">
+     <g id="Panel1_line2d_28">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="65.88" y="334.08" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_10">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="65.88" y="347.417891" transform="rotate(-0 65.88 347.417891)">0.0</text>
+     </g>
+    </g>
+    <g id="Panel1_xtick_8">
+     <g id="Panel1_line2d_29">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="137.0304" y="334.08" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_11">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="137.0304" y="347.417891" transform="rotate(-0 137.0304 347.417891)">0.2</text>
+     </g>
+    </g>
+    <g id="Panel1_xtick_9">
+     <g id="Panel1_line2d_30">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="208.1808" y="334.08" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_12">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="208.1808" y="347.417891" transform="rotate(-0 208.1808 347.417891)">0.4</text>
+     </g>
+    </g>
+    <g id="Panel1_xtick_10">
+     <g id="Panel1_line2d_31">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="279.3312" y="334.08" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_13">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="279.3312" y="347.417891" transform="rotate(-0 279.3312 347.417891)">0.6</text>
+     </g>
+    </g>
+    <g id="Panel1_xtick_11">
+     <g id="Panel1_line2d_32">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="350.4816" y="334.08" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_14">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="350.4816" y="347.417891" transform="rotate(-0 350.4816 347.417891)">0.8</text>
+     </g>
+    </g>
+    <g id="Panel1_xtick_12">
+     <g id="Panel1_line2d_33">
+      <g>
+       <use xlink:href="#Panel1_m2fe68dcdb9" x="421.632" y="334.08" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_15">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="421.632" y="347.417891" transform="rotate(-0 421.632 347.417891)">1.0</text>
+     </g>
+    </g>
+    <g id="Panel1_text_16">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #27323c" x="243.756" y="361.178437" transform="rotate(-0 243.756 361.178437)">Mean predicted probability</text>
+    </g>
+   </g>
+   <g id="Panel1_matplotlib.axis_4">
+    <g id="Panel1_ytick_7">
+     <g id="Panel1_line2d_34">
+      <g>
+       <use xlink:href="#Panel1_m5dd5d953ae" x="65.88" y="331.125283" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_17">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="59.38" y="334.544228" transform="rotate(-0 59.38 334.544228)">0</text>
+     </g>
+    </g>
+    <g id="Panel1_ytick_8">
+     <g id="Panel1_line2d_35">
+      <g>
+       <use xlink:href="#Panel1_m5dd5d953ae" x="65.88" y="295.092149" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel1_text_18">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="59.38" y="298.511094" transform="rotate(-0 59.38 298.511094)">50</text>
+     </g>
+    </g>
+    <g id="Panel1_text_19">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #27323c" x="41.525156" y="301.578113" transform="rotate(-90 41.525156 301.578113)">Bin n</text>
+    </g>
+   </g>
+   <g id="Panel1_line2d_36">
+    <path d="M 65.88 331.125283  L 65.88 293.650824  L 110.349 293.650824  L 110.349 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_line2d_37">
+    <path d="M 110.349 331.125283  L 110.349 277.796245  L 154.818 277.796245  L 154.818 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_line2d_38">
+    <path d="M 154.818 331.125283  L 154.818 272.030943  L 199.287 272.030943  L 199.287 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_line2d_39">
+    <path d="M 199.287 331.125283  L 199.287 280.678896  L 243.756 280.678896  L 243.756 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_line2d_40">
+    <path d="M 243.756 331.125283  L 243.756 296.533474  L 288.225 296.533474  L 288.225 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_line2d_41">
+    <path d="M 288.225 331.125283  L 288.225 309.505403  L 332.694 309.505403  L 332.694 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_line2d_42">
+    <path d="M 332.694 331.125283  L 332.694 315.991367  L 377.163 315.991367  L 377.163 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_line2d_43">
+    <path d="M 377.163 331.125283  L 377.163 318.153355  L 421.632 318.153355  L 421.632 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_line2d_44">
+    <path d="M 65.88 331.125283  L 65.88 311.667391  L 110.349 311.667391  L 110.349 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_line2d_45">
+    <path d="M 110.349 331.125283  L 110.349 300.136788  L 154.818 300.136788  L 154.818 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_line2d_46">
+    <path d="M 154.818 331.125283  L 154.818 284.282209  L 199.287 284.282209  L 199.287 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_line2d_47">
+    <path d="M 199.287 331.125283  L 199.287 272.751606  L 243.756 272.751606  L 243.756 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_line2d_48">
+    <path d="M 243.756 331.125283  L 243.756 274.913594  L 288.225 274.913594  L 288.225 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_line2d_49">
+    <path d="M 288.225 331.125283  L 288.225 289.326848  L 332.694 289.326848  L 332.694 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_line2d_50">
+    <path d="M 332.694 331.125283  L 332.694 304.460764  L 377.163 304.460764  L 377.163 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_line2d_51">
+    <path d="M 377.163 331.125283  L 377.163 313.829379  L 421.632 313.829379  L 421.632 331.125283  " clip-path="url(#Panel1_pc79f46b75a)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel1_patch_6">
+    <path d="M 65.88 334.08  L 65.88 269.076226  " style="fill: none; stroke: #9ca6ae; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="Panel1_patch_7">
+    <path d="M 65.88 334.08  L 421.632 334.08  " style="fill: none; stroke: #9ca6ae; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+  </g>
+  <g id="Panel1_text_20">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #27323c" transform="translate(65.88 435.763281)">Synthetic held-out evaluation records; counts are per model and cannot be summed;</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #27323c" transform="translate(65.88 445.365469)">Supplied illustrative bin bounds, not fitted confidence intervals. Counts are within</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #27323c" transform="translate(65.88 454.967656)">each model, not summed.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="Panel1_p62d9258e31">
+   <rect x="65.88" y="58.464" width="355.752" height="195.011321" />
+  </clipPath>
+  <clipPath id="Panel1_pc79f46b75a">
+   <rect x="65.88" y="269.076226" width="355.752" height="65.003774" />
+  </clipPath>
+ </defs>
+</svg><text x="24.0" y="67.0" font-size="10" font-family="Arial, sans-serif" font-weight="600" fill="#283740">A</text><svg width="602.0" height="358.1120240487063" viewBox="0 0 578.16 343.930312" version="1.1" id="Panel2_scope" x="24.0" y="670.6286704283231" preserveAspectRatio="xMinYMin meet">
+ <defs>
+  <style type="text/css">#Panel2_scope *{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="Panel2_figure_1">
+  <g id="Panel2_patch_1">
+   <path d="M 0 343.930312  L 578.16 343.930312  L 578.16 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="Panel2_axes_1">
+   <g id="Panel2_patch_2">
+    <path d="M 71.568 221.4  L 490.752 221.4  L 490.752 41.328  L 71.568 41.328  z " style="fill: #ffffff" />
+   </g>
+   <g id="Panel2_FillBetweenPolyCollection_1">
+    <defs>
+     <path id="Panel2_m2b30603447" d="M 90.621818 -293.584976  L 90.621818 -293.584976  L 110.678469 -292.431105  L 130.73512 -291.277235  L 150.79177 -290.123365  L 170.848421 -288.969494  L 190.905072 -287.815624  L 210.961722 -286.661753  L 231.018373 -285.507883  L 251.075024 -284.354012  L 271.131675 -283.200142  L 291.188325 -282.046271  L 311.244976 -280.892401  L 331.301627 -279.73853  L 351.358278 -278.58466  L 371.414928 -277.43079  L 391.471579 -276.276919  L 411.52823 -275.123049  L 431.58488 -273.969178  L 451.641531 -272.815308  L 471.698182 -271.661437  L 471.698182 -271.661437  L 471.698182 -271.661437  L 451.641531 -272.815308  L 431.58488 -273.969178  L 411.52823 -275.123049  L 391.471579 -276.276919  L 371.414928 -277.43079  L 351.358278 -278.58466  L 331.301627 -279.73853  L 311.244976 -280.892401  L 291.188325 -282.046271  L 271.131675 -283.200142  L 251.075024 -284.354012  L 231.018373 -285.507883  L 210.961722 -286.661753  L 190.905072 -287.815624  L 170.848421 -288.969494  L 150.79177 -290.123365  L 130.73512 -291.277235  L 110.678469 -292.431105  L 90.621818 -293.584976  z " />
+    </defs>
+    <g clip-path="url(#Panel2_pb5ed9aaf0d)">
+     <use xlink:href="#Panel2_m2b30603447" x="0" y="343.930312" style="fill: #506aaa; fill-opacity: 0.13" />
+    </g>
+   </g>
+   <g id="Panel2_FillBetweenPolyCollection_2">
+    <defs>
+     <path id="Panel2_mdc835ff812" d="M 90.621818 -289.679058  L 90.621818 -289.679058  L 110.678469 -288.44561  L 130.73512 -287.212163  L 150.79177 -285.978715  L 170.848421 -284.745267  L 190.905072 -283.51182  L 210.961722 -282.278372  L 231.018373 -281.044924  L 251.075024 -279.811476  L 271.131675 -278.578029  L 291.188325 -277.344581  L 311.244976 -276.111133  L 331.301627 -274.877685  L 351.358278 -273.644238  L 371.414928 -272.41079  L 391.471579 -271.177342  L 411.52823 -269.943895  L 431.58488 -268.710447  L 451.641531 -267.476999  L 471.698182 -266.243551  L 471.698182 -266.243551  L 471.698182 -266.243551  L 451.641531 -267.476999  L 431.58488 -268.710447  L 411.52823 -269.943895  L 391.471579 -271.177342  L 371.414928 -272.41079  L 351.358278 -273.644238  L 331.301627 -274.877685  L 311.244976 -276.111133  L 291.188325 -277.344581  L 271.131675 -278.578029  L 251.075024 -279.811476  L 231.018373 -281.044924  L 210.961722 -282.278372  L 190.905072 -283.51182  L 170.848421 -284.745267  L 150.79177 -285.978715  L 130.73512 -287.212163  L 110.678469 -288.44561  L 90.621818 -289.679058  z " />
+    </defs>
+    <g clip-path="url(#Panel2_pb5ed9aaf0d)">
+     <use xlink:href="#Panel2_mdc835ff812" x="0" y="343.930312" style="fill: #e17692; fill-opacity: 0.13" />
+    </g>
+   </g>
+   <g id="Panel2_FillBetweenPolyCollection_3">
+    <defs>
+     <path id="Panel2_m95445bc0c3" d="M 90.621818 -294.417222  L 90.621818 -294.417222  L 110.678469 -291.133804  L 130.73512 -287.616553  L 150.79177 -283.839566  L 170.848421 -279.772969  L 190.905072 -275.382126  L 210.961722 -270.626646  L 231.018373 -265.459138  L 251.075024 -259.82363  L 271.131675 -253.653528  L 291.188325 -246.868976  L 311.244976 -239.373379  L 331.301627 -231.048776  L 351.358278 -221.749585  L 371.414928 -211.294019  L 391.471579 -199.452078  L 411.52823 -185.928443  L 431.58488 -170.3375  L 451.641531 -152.165986  L 471.698182 -130.715403  L 471.698182 -130.715403  L 471.698182 -130.715403  L 451.641531 -152.165986  L 431.58488 -170.3375  L 411.52823 -185.928443  L 391.471579 -199.452078  L 371.414928 -211.294019  L 351.358278 -221.749585  L 331.301627 -231.048776  L 311.244976 -239.373379  L 291.188325 -246.868976  L 271.131675 -253.653528  L 251.075024 -259.82363  L 231.018373 -265.459138  L 210.961722 -270.626646  L 190.905072 -275.382126  L 170.848421 -279.772969  L 150.79177 -283.839566  L 130.73512 -287.616553  L 110.678469 -291.133804  L 90.621818 -294.417222  z " />
+    </defs>
+    <g clip-path="url(#Panel2_pb5ed9aaf0d)">
+     <use xlink:href="#Panel2_m95445bc0c3" x="0" y="343.930312" style="fill: #91bbdf; fill-opacity: 0.13" />
+    </g>
+   </g>
+   <g id="Panel2_FillBetweenPolyCollection_4">
+    <defs>
+     <path id="Panel2_mbf861a2e04" d="M 90.621818 -263.9126  L 90.621818 -263.9126  L 110.678469 -263.9126  L 130.73512 -263.9126  L 150.79177 -263.9126  L 170.848421 -263.9126  L 190.905072 -263.9126  L 210.961722 -263.9126  L 231.018373 -263.9126  L 251.075024 -263.9126  L 271.131675 -263.9126  L 291.188325 -263.9126  L 311.244976 -263.9126  L 331.301627 -263.9126  L 351.358278 -263.9126  L 371.414928 -263.9126  L 391.471579 -263.9126  L 411.52823 -263.9126  L 431.58488 -263.9126  L 451.641531 -263.9126  L 471.698182 -263.9126  L 471.698182 -263.9126  L 471.698182 -263.9126  L 451.641531 -263.9126  L 431.58488 -263.9126  L 411.52823 -263.9126  L 391.471579 -263.9126  L 371.414928 -263.9126  L 351.358278 -263.9126  L 331.301627 -263.9126  L 311.244976 -263.9126  L 291.188325 -263.9126  L 271.131675 -263.9126  L 251.075024 -263.9126  L 231.018373 -263.9126  L 210.961722 -263.9126  L 190.905072 -263.9126  L 170.848421 -263.9126  L 150.79177 -263.9126  L 130.73512 -263.9126  L 110.678469 -263.9126  L 90.621818 -263.9126  z " />
+    </defs>
+    <g clip-path="url(#Panel2_pb5ed9aaf0d)">
+     <use xlink:href="#Panel2_mbf861a2e04" x="0" y="343.930312" style="fill: #b6dbf1; fill-opacity: 0.13" />
+    </g>
+   </g>
+   <g id="Panel2_matplotlib.axis_1">
+    <g id="Panel2_xtick_1">
+     <g id="Panel2_line2d_1">
+      <defs>
+       <path id="Panel2_md13baee131" d="M 0 0  L 0 3  " style="stroke: #49545e; stroke-width: 0.6" />
+      </defs>
+      <g>
+       <use xlink:href="#Panel2_md13baee131" x="122.378182" y="221.4" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_1">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="122.378182" y="234.737891" transform="rotate(-0 122.378182 234.737891)">0.1</text>
+     </g>
+    </g>
+    <g id="Panel2_xtick_2">
+     <g id="Panel2_line2d_2">
+      <g>
+       <use xlink:href="#Panel2_md13baee131" x="185.890909" y="221.4" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_2">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="185.890909" y="234.737891" transform="rotate(-0 185.890909 234.737891)">0.2</text>
+     </g>
+    </g>
+    <g id="Panel2_xtick_3">
+     <g id="Panel2_line2d_3">
+      <g>
+       <use xlink:href="#Panel2_md13baee131" x="249.403636" y="221.4" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_3">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="249.403636" y="234.737891" transform="rotate(-0 249.403636 234.737891)">0.3</text>
+     </g>
+    </g>
+    <g id="Panel2_xtick_4">
+     <g id="Panel2_line2d_4">
+      <g>
+       <use xlink:href="#Panel2_md13baee131" x="312.916364" y="221.4" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_4">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="312.916364" y="234.737891" transform="rotate(-0 312.916364 234.737891)">0.4</text>
+     </g>
+    </g>
+    <g id="Panel2_xtick_5">
+     <g id="Panel2_line2d_5">
+      <g>
+       <use xlink:href="#Panel2_md13baee131" x="376.429091" y="221.4" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_5">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="376.429091" y="234.737891" transform="rotate(-0 376.429091 234.737891)">0.5</text>
+     </g>
+    </g>
+    <g id="Panel2_xtick_6">
+     <g id="Panel2_line2d_6">
+      <g>
+       <use xlink:href="#Panel2_md13baee131" x="439.941818" y="221.4" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_6">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #49545e" x="439.941818" y="234.737891" transform="rotate(-0 439.941818 234.737891)">0.6</text>
+     </g>
+    </g>
+    <g id="Panel2_text_7">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #27323c" x="281.16" y="248.498437" transform="rotate(-0 281.16 248.498437)">Risk threshold</text>
+    </g>
+   </g>
+   <g id="Panel2_matplotlib.axis_2">
+    <g id="Panel2_ytick_1">
+     <g id="Panel2_line2d_7">
+      <path d="M 71.568 206.015061  L 490.752 206.015061  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke: #e7ebee; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="Panel2_line2d_8">
+      <defs>
+       <path id="Panel2_m8724a3249a" d="M 0 0  L -3 0  " style="stroke: #49545e; stroke-width: 0.6" />
+      </defs>
+      <g>
+       <use xlink:href="#Panel2_m8724a3249a" x="71.568" y="206.015061" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_8">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="65.068" y="209.434006" transform="rotate(-0 65.068 209.434006)">−1.0</text>
+     </g>
+    </g>
+    <g id="Panel2_ytick_2">
+     <g id="Panel2_line2d_9">
+      <path d="M 71.568 180.815591  L 490.752 180.815591  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke: #e7ebee; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="Panel2_line2d_10">
+      <g>
+       <use xlink:href="#Panel2_m8724a3249a" x="71.568" y="180.815591" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_9">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="65.068" y="184.234536" transform="rotate(-0 65.068 184.234536)">−0.8</text>
+     </g>
+    </g>
+    <g id="Panel2_ytick_3">
+     <g id="Panel2_line2d_11">
+      <path d="M 71.568 155.616121  L 490.752 155.616121  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke: #e7ebee; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="Panel2_line2d_12">
+      <g>
+       <use xlink:href="#Panel2_m8724a3249a" x="71.568" y="155.616121" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_10">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="65.068" y="159.035067" transform="rotate(-0 65.068 159.035067)">−0.6</text>
+     </g>
+    </g>
+    <g id="Panel2_ytick_4">
+     <g id="Panel2_line2d_13">
+      <path d="M 71.568 130.416652  L 490.752 130.416652  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke: #e7ebee; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="Panel2_line2d_14">
+      <g>
+       <use xlink:href="#Panel2_m8724a3249a" x="71.568" y="130.416652" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_11">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="65.068" y="133.835597" transform="rotate(-0 65.068 133.835597)">−0.4</text>
+     </g>
+    </g>
+    <g id="Panel2_ytick_5">
+     <g id="Panel2_line2d_15">
+      <path d="M 71.568 105.217182  L 490.752 105.217182  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke: #e7ebee; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="Panel2_line2d_16">
+      <g>
+       <use xlink:href="#Panel2_m8724a3249a" x="71.568" y="105.217182" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_12">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="65.068" y="108.636127" transform="rotate(-0 65.068 108.636127)">−0.2</text>
+     </g>
+    </g>
+    <g id="Panel2_ytick_6">
+     <g id="Panel2_line2d_17">
+      <path d="M 71.568 80.017712  L 490.752 80.017712  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke: #e7ebee; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="Panel2_line2d_18">
+      <g>
+       <use xlink:href="#Panel2_m8724a3249a" x="71.568" y="80.017712" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_13">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="65.068" y="83.436657" transform="rotate(-0 65.068 83.436657)">0.0</text>
+     </g>
+    </g>
+    <g id="Panel2_ytick_7">
+     <g id="Panel2_line2d_19">
+      <path d="M 71.568 54.818242  L 490.752 54.818242  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke: #e7ebee; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="Panel2_line2d_20">
+      <g>
+       <use xlink:href="#Panel2_m8724a3249a" x="71.568" y="54.818242" style="fill: #49545e; stroke: #49545e; stroke-width: 0.6" />
+      </g>
+     </g>
+     <g id="Panel2_text_14">
+      <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #49545e" x="65.068" y="58.237188" transform="rotate(-0 65.068 58.237188)">0.2</text>
+     </g>
+    </g>
+    <g id="Panel2_text_15">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #27323c" x="36.811125" y="131.364" transform="rotate(-90 36.811125 131.364)">Supplied net benefit</text>
+    </g>
+   </g>
+   <g id="Panel2_line2d_21">
+    <path d="M 90.621818 50.345337  L 110.678469 51.499207  L 130.73512 52.653077  L 150.79177 53.806948  L 170.848421 54.960818  L 190.905072 56.114689  L 210.961722 57.268559  L 231.018373 58.42243  L 251.075024 59.5763  L 271.131675 60.730171  L 291.188325 61.884041  L 311.244976 63.037912  L 331.301627 64.191782  L 351.358278 65.345652  L 371.414928 66.499523  L 391.471579 67.653393  L 411.52823 68.807264  L 431.58488 69.961134  L 451.641531 71.115005  L 471.698182 72.268875  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke: #506aaa; stroke-width: 1.4; stroke-linecap: square" />
+   </g>
+   <g id="Panel2_line2d_22">
+    <path d="M 90.621818 54.251254  L 110.678469 55.484702  L 130.73512 56.71815  L 150.79177 57.951598  L 170.848421 59.185045  L 190.905072 60.418493  L 210.961722 61.651941  L 231.018373 62.885388  L 251.075024 64.118836  L 271.131675 65.352284  L 291.188325 66.585732  L 311.244976 67.819179  L 331.301627 69.052627  L 351.358278 70.286075  L 371.414928 71.519523  L 391.471579 72.75297  L 411.52823 73.986418  L 431.58488 75.219866  L 451.641531 76.453313  L 471.698182 77.686761  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.4" />
+   </g>
+   <g id="Panel2_line2d_23">
+    <path d="M 90.621818 49.513091  L 110.678469 52.796508  L 130.73512 56.31376  L 150.79177 60.090747  L 170.848421 64.157343  L 190.905072 68.548186  L 210.961722 73.303667  L 231.018373 78.471174  L 251.075024 84.106683  L 271.131675 90.276785  L 291.188325 97.061337  L 311.244976 104.556934  L 331.301627 112.881537  L 351.358278 122.180727  L 371.414928 132.636294  L 391.471579 144.478234  L 411.52823 158.00187  L 431.58488 173.592813  L 451.641531 191.764326  L 471.698182 213.214909  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke-dasharray: 8.96,2.24,1.4,2.24; stroke-dashoffset: 0; stroke: #91bbdf; stroke-width: 1.4" />
+   </g>
+   <g id="Panel2_line2d_24">
+    <path d="M 90.621818 80.017712  L 110.678469 80.017712  L 130.73512 80.017712  L 150.79177 80.017712  L 170.848421 80.017712  L 190.905072 80.017712  L 210.961722 80.017712  L 231.018373 80.017712  L 251.075024 80.017712  L 271.131675 80.017712  L 291.188325 80.017712  L 311.244976 80.017712  L 331.301627 80.017712  L 351.358278 80.017712  L 371.414928 80.017712  L 391.471579 80.017712  L 411.52823 80.017712  L 431.58488 80.017712  L 451.641531 80.017712  L 471.698182 80.017712  " clip-path="url(#Panel2_pb5ed9aaf0d)" style="fill: none; stroke-dasharray: 1.4,2.31; stroke-dashoffset: 0; stroke: #b6dbf1; stroke-width: 1.4" />
+   </g>
+   <g id="Panel2_patch_3">
+    <path d="M 71.568 221.4  L 71.568 41.328  " style="fill: none; stroke: #9ca6ae; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="Panel2_patch_4">
+    <path d="M 71.568 221.4  L 490.752 221.4  " style="fill: none; stroke: #9ca6ae; stroke-width: 0.7; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="Panel2_legend_1">
+    <g id="Panel2_line2d_25">
+     <path d="M 521.6 18.038594  L 529.6 18.038594  L 537.6 18.038594  " style="fill: none; stroke: #506aaa; stroke-width: 1.5; stroke-linecap: square" />
+    </g>
+    <g id="Panel2_text_16">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #27323c" x="544" y="20.838594" transform="rotate(-0 544 20.838594)">G1</text>
+    </g>
+    <g id="Panel2_line2d_26">
+     <path d="M 521.6 31.039297  L 529.6 31.039297  L 537.6 31.039297  " style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #e17692; stroke-width: 1.5" />
+    </g>
+    <g id="Panel2_text_17">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #27323c" x="544" y="33.839297" transform="rotate(-0 544 33.839297)">G7</text>
+    </g>
+    <g id="Panel2_line2d_27">
+     <path d="M 521.6 44.04  L 529.6 44.04  L 537.6 44.04  " style="fill: none; stroke-dasharray: 9.6,2.4,1.5,2.4; stroke-dashoffset: 0; stroke: #91bbdf; stroke-width: 1.5" />
+    </g>
+    <g id="Panel2_text_18">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #27323c" x="544" y="46.84" transform="rotate(-0 544 46.84)">G3</text>
+    </g>
+    <g id="Panel2_line2d_28">
+     <path d="M 521.6 57.040703  L 529.6 57.040703  L 537.6 57.040703  " style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #b6dbf1; stroke-width: 1.5" />
+    </g>
+    <g id="Panel2_text_19">
+     <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #27323c" x="544" y="59.840703" transform="rotate(-0 544 59.840703)">G4</text>
+    </g>
+   </g>
+  </g>
+  <g id="Panel2_text_20">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #27323c" transform="translate(71.568 313.363281)">Same synthetic evaluation cohort; G1/G7=model, G3=treat all, G4=treat none; No uncertainty</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #27323c" transform="translate(71.568 322.965469)">supplied: bounds equal the frozen curves; opt-in decision convention; frozen summaries, no</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #27323c" transform="translate(71.568 332.567656)">smoothing.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="Panel2_pb5ed9aaf0d">
+   <rect x="71.568" y="41.328" width="419.184" height="180.072" />
+  </clipPath>
+ </defs>
+</svg><text x="24.0" y="663.6286704283231" font-size="10" font-family="Arial, sans-serif" font-weight="600" fill="#283740">B</text></svg>

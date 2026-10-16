@@ -23,6 +23,10 @@ def build_studio(output,gallery=None,demo_svg=None):
         prefix=Path(os.path.relpath(consolidated,output.resolve().parent)).as_posix()
         forms=json.loads((SKILL/'references/form-catalog.json').read_text(encoding='utf8'))['forms']
         data['design_examples']=[dict(id=g['id'],title=g['title'],input_shape='基础图型与扩展；合成展示，单位与来源按所选实例核查',png=prefix+'/'+g['default']+'.jpg',source=prefix+'/index.html#'+g['id']) for g in forms]
+    studies=SKILL/'assets/study-gallery'
+    if studies.is_dir():
+        prefix=Path(os.path.relpath(studies,output.resolve().parent)).as_posix()
+        data['design_examples']=[dict(id=key,title=title,input_shape='完整冻结结果示例；主图与细节图配套，合成数据不是科学证据',png=prefix+'/'+key+'.jpg',source=prefix+'/index.html#'+key) for key,title in [('BulkMain','Bulk 转录组文章组图'),('SingleCellMain','单细胞文章组图')]]+data['design_examples']
     package_gallery=SKILL/'assets/package-gallery'
     if package_gallery.is_dir():
         prefix=Path(os.path.relpath(package_gallery,output.resolve().parent)).as_posix()

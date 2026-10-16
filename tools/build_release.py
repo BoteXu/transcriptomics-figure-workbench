@@ -26,6 +26,10 @@ def main(output):
         destination=output/name;shutil.copy2(ROOT/'examples/overview'/source,destination);assets.append(destination)
     studio=output/f'figure-studio-v{version}.html'
     page=(SKILL/'assets/figure-studio.html').read_text(encoding='utf8')
+    for key in ['BulkMain','SingleCellMain']:
+        prefix='study-gallery/'+key+'.jpg'
+        page=page.replace(prefix,'data:image/jpeg;base64,'+base64.b64encode((SKILL/'assets/study-gallery'/(key+'.jpg')).read_bytes()).decode())
+        page=page.replace('study-gallery/index.html#'+key,'https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/examples/validated-v090/index.html#'+key)
     # The single-file download embeds only public synthetic preview pixels.
     # Full editable bundles remain available in the separately checked ZIP.
     for row in json.loads((ROOT/'examples/package-v040/manifest.json').read_text())['records']:
@@ -105,10 +109,10 @@ def main(output):
         report=json.loads((ROOT/'examples/forms-v080/manifest.json').read_text(encoding='utf8'))
         for row in report['records']:
             paths.update(row['assets'].values());paths.update(row.get('previous_assets',{}).values())
-        for folder in ['examples/responsive-v081','examples/forms-v080','examples/layout-v080','examples/review-v070','examples/clarity-v070','examples/review-v060','examples/refined-v060','examples/reading-v060','examples/design-v050','examples/gallery/repairs-v050','examples/gallery/repairs-v060','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
+        for folder in ['examples/validated-v090','examples/responsive-v081','examples/forms-v080','examples/layout-v080','examples/review-v070','examples/clarity-v070','examples/review-v060','examples/refined-v060','examples/reading-v060','examples/design-v050','examples/gallery/repairs-v050','examples/gallery/repairs-v060','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
             paths.update(p.relative_to(ROOT).as_posix() for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
         for relative in sorted(paths):archive.write(ROOT/relative,relative)
-        archive.writestr('README.txt','Open examples/responsive-v081/index.html for 14 data-dependent single figures and six composition pages. Open examples/forms-v080/index.html for 90 consolidated base entries and all 458 earlier revised exports. Exact previous assets and historical size warnings remain attached. Source files are in the versioned public repository. Screen review is not final manuscript-size, paper-proof or scientific acceptance.\n')
+        archive.writestr('README.txt','Open examples/validated-v090/index.html for 803 hash-bound screen-reviewed pages, including 25 coherent study figures and eight custom main layouts. The study-manifests and selected input specifications are portable; main-figure print scope is recorded per artifact. Open examples/forms-v080/index.html for 90 consolidated base entries and all 458 earlier exports. Exact previous assets and historical size warnings remain attached. Source files are in the versioned public repository. Screen review is not calibrated paper-proof, independent review or scientific acceptance.\n')
     assets.append(review)
     contact=output/'design-alternatives-v050.jpg';shutil.copy2(ROOT/'docs/design-alternatives-v050.jpg',contact);assets.append(contact)
     contact=output/'refined-alternatives-v060.jpg';shutil.copy2(ROOT/'docs/refined-alternatives-v060.jpg',contact);assets.append(contact)

@@ -1,0 +1,49 @@
+{
+  "form": "hierarchy",
+  "adapter": "figure_multiscale.plot_hierarchy_partition",
+  "rows": 6,
+  "source_input_sha256": "b71a24e84b660f99c09498850aa1425ccf49f4784f7eb4cd2b97b44fc52c305c",
+  "input_sha256": "8b837833dc543349312264915b4d6c277b54bf76837940d7ec5b626b9c3fecae",
+  "quantitative_geometry_sha256": "301b8636de46e820befdcc1c7b73a2bfee58601f523386851db80859f9f76dd9",
+  "volume": {
+    "level": "medium",
+    "quantity_dimension": "display_tree_nodes",
+    "quantity": 6,
+    "input_rows": 6,
+    "preparation": "Complete selected tree leaves plus ancestors; illustrative parent quantities regenerated before freezing",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 10
+  },
+  "size_inches": [
+    10.0,
+    5.8
+  ],
+  "id": "hierarchy",
+  "section": "volume",
+  "level": "medium",
+  "assets": {
+    "png": "volume/medium/hierarchy/hierarchy.png",
+    "svg": "volume/medium/hierarchy/hierarchy.svg",
+    "tsv": "volume/medium/hierarchy/hierarchy.tsv"
+  },
+  "sha256": {
+    "png": "6037a010c8acadf702ea1ed67ceb2bf1d3e9d599c02dc002ff806f3c209a6b83",
+    "svg": "69b02ad3193b6da67e393dbe8e19a046ba9565eaee5b8ff70f7e48b982f65eab",
+    "tsv": "8b837833dc543349312264915b4d6c277b54bf76837940d7ec5b626b9c3fecae"
+  },
+  "visual_review": {
+    "key": "volume/medium/hierarchy",
+    "png_sha256": "6037a010c8acadf702ea1ed67ceb2bf1d3e9d599c02dc002ff806f3c209a6b83",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "层次与分支树"
+}

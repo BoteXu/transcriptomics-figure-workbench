@@ -66,6 +66,11 @@ def render_plan(plan,output):
                 files.append(tiff)
             receipt_path=bundle/(spec['figure_id']+'.json')
             receipt=json.loads(receipt_path.read_text(encoding='utf8'))
+            final_readability=print_readability(fig,settings)
+            if settings.get('readability_policy')=='block' and final_readability['state']!='MEASUREMENT_PASS':
+                raise ValueError('PRINT_SIZE_HOLD: final export layout changed readability; reflow before publishing the bundle')
+            readability=final_readability
+            receipt['workbench']['print_readability']=final_readability
             receipt['output_sha256'][png.name]=digest(png)
             if settings['tiff']:receipt['output_sha256'][tiff.name]=digest(tiff)
             receipt_path.write_text(json.dumps(receipt,ensure_ascii=False,indent=2,allow_nan=False)+'\n',encoding='utf8')

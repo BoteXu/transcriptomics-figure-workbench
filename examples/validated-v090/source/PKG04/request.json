@@ -1,0 +1,90 @@
+{
+  "form": "PKG04",
+  "base_form": "gsea",
+  "example": "PKG04",
+  "title": "GSEA 富集曲线",
+  "source_meta": "examples/package-v040/PKG04/PKG04.json",
+  "route": "native",
+  "adapter": "package_style",
+  "parameters": {
+    "view": "gsea",
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original deterministic display fixtures; no scientific engine executed",
+      "independent_unit": "No biological replicates; software display geometry only",
+      "denominator": "Complete selected synthetic display grid or universe; explicit per-view channels",
+      "value_definition": "Frozen illustrative effects, scores, probabilities, curves, coordinates and topology",
+      "uncertainty_definition": "Supplied illustrative intervals only; no inference or interval estimation"
+    },
+    "options": {
+      "ranked_universe": 240,
+      "metric_label": "Rank metric",
+      "contrast": "Illustrative condition B versus A",
+      "gene_set_version": "Synthetic gene sets v2 (not MSigDB)",
+      "curve_order": [
+        "Oxidative metabolism"
+      ],
+      "mode": "classic",
+      "title": "Gene set enrichment",
+      "gene_labels": []
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-package-PKG04",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Interferon response": 0,
+      "Oxidative metabolism": 1,
+      "Matrix organization": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#E2EFEB",
+        "#6DB3A7",
+        "#1C6C70"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/package-v040/PKG04/PKG04.tsv"
+}

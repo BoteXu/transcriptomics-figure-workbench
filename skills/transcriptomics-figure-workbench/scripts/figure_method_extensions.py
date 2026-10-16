@@ -228,7 +228,7 @@ def plot_survival_result(data,theme,*,time_label,risk_convention,interval_defini
     if set(r.group)!=set(groups) or (r.at_risk<0).any() or (r.at_risk%1!=0).any() or (r.time<0).any():raise ValueError('Complete supplied integer at-risk counts required')
     times=list(pd.unique(r.time))
     if len(r)!=len(groups)*len(times) or times!=sorted(times) or min(times)<s.time.min() or max(times)>s.time.max():raise ValueError('Complete ordered group x risk-time grid inside displayed follow-up required')
-    fig=_new(theme,(8,6.0));ax=_axis(fig,[.12,.43,.61,.41]);risk=fig.add_axes([.12,.135,.61,.13]);risk.set_xlim(*[s.time.min(),s.time.max()]);risk.set_ylim(-.5,len(groups)-.5);risk.axis('off')
+    fig=_new(theme,(8,6.0));ax=_axis(fig,[.12,.43,.61,.41]);risk=fig.add_axes([.12,.135,.61,.10]);risk.set_xlim(*[s.time.min(),s.time.max()]);risk.set_ylim(-.5,len(groups)-.5);risk.axis('off')
     for i,g in enumerate(groups):
         q=s[s.group==g]
         if (np.diff(q.time)<=0).any() or (np.diff(q.survival)>1e-12).any():raise ValueError('Survival must be ordered and non-increasing')
@@ -244,7 +244,7 @@ def plot_survival_result(data,theme,*,time_label,risk_convention,interval_defini
             if (idx<0).any() or (q.time>steps.time.max()).any() or not np.allclose(q.survival,steps.survival.to_numpy()[idx],rtol=0,atol=1e-10):raise ValueError('Censor coordinates must lie on the given group post-step curve')
             ax.scatter(q.time,q.survival,marker='|',s=40,color=pal[g])
     ax.set(xlabel=time_label,ylabel='Supplied survival probability',ylim=(0,1.04),xlim=(s.time.min(),s.time.max()),title=title);fig.legend(*ax.get_legend_handles_labels(),loc='upper left',bbox_to_anchor=(.77,.84),frameon=False)
-    fig.text(.12,.326,'At risk ('+risk_convention.replace('_',' ')+')',fontsize=9)
+    fig.text(.12,.325,'At risk ('+risk_convention.replace('_',' ')+')',fontsize=9)
     for v in times:risk.text(v,len(groups)-.1,f'{v:g}',ha='center',va='bottom',fontsize=8,color='#586672')
     fig.text(.12,.07,interval_definition+'; no Kaplan-Meier fit or log-rank test is performed.',fontsize=8)
     return _finish(fig,data,theme,'survival_steps_at_risk',risk_convention=risk_convention,interval_definition=interval_definition,time_label=time_label,censoring='explicit supplied markers only',step='post')

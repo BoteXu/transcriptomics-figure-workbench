@@ -1,0 +1,49 @@
+{
+  "form": "variant-posteriors",
+  "adapter": "figure_analysis_results.plot_variant_posteriors",
+  "rows": 32,
+  "source_input_sha256": "9e608288608cdf61f27e043399138c7ae2b8d1614f0b5f6ce27033ef3cb7a3cc",
+  "input_sha256": "4f884b696be0b707a836a16e5a2ee2881ef7f49d4c33949b0c3e943dacb6d578",
+  "quantitative_geometry_sha256": "2e83ba5708808207454d6c5576c2ae47e6fdae23d665f37281c4ddf6aaa56b85",
+  "volume": {
+    "level": "medium",
+    "quantity_dimension": "variant_id",
+    "quantity": 16,
+    "input_rows": 32,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 10
+  },
+  "size_inches": [
+    10.0,
+    5.737873263888889
+  ],
+  "id": "variant-posteriors",
+  "section": "volume",
+  "level": "medium",
+  "assets": {
+    "png": "volume/medium/variant-posteriors/variant-posteriors.png",
+    "svg": "volume/medium/variant-posteriors/variant-posteriors.svg",
+    "tsv": "volume/medium/variant-posteriors/variant-posteriors.tsv"
+  },
+  "sha256": {
+    "png": "3d57f90303a83f3657c0a77602674196bf51a0861d496a83c93f32ad0148806e",
+    "svg": "679e3f21d7728ebe838c5c03d0edbbc54fc5605ca4533f4f66e8163011276974",
+    "tsv": "4f884b696be0b707a836a16e5a2ee2881ef7f49d4c33949b0c3e943dacb6d578"
+  },
+  "visual_review": {
+    "key": "volume/medium/variant-posteriors",
+    "png_sha256": "3d57f90303a83f3657c0a77602674196bf51a0861d496a83c93f32ad0148806e",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "Variant posteriors across supplied signals"
+}

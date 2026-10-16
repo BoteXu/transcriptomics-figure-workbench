@@ -1,0 +1,107 @@
+{
+  "form": "PKG06",
+  "base_form": "heatmap",
+  "example": "PKG06",
+  "title": "热图",
+  "source_meta": "examples/package-v040/PKG06/PKG06.json",
+  "route": "native",
+  "adapter": "package_style",
+  "parameters": {
+    "view": "leading",
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original deterministic display fixtures; no scientific engine executed",
+      "independent_unit": "No biological replicates; software display geometry only",
+      "denominator": "Complete selected synthetic display grid or universe; explicit per-view channels",
+      "value_definition": "Frozen illustrative effects, scores, probabilities, curves, coordinates and topology",
+      "uncertainty_definition": "Supplied illustrative intervals only; no inference or interval estimation"
+    },
+    "options": {
+      "pathway_order": [
+        "Interferon response",
+        "Oxidative metabolism",
+        "Matrix organization",
+        "RNA processing"
+      ],
+      "gene_order": [
+        "STAT1",
+        "IRF7",
+        "ISG15",
+        "MX1",
+        "NDUFA1",
+        "COX5A",
+        "ATP5F1",
+        "COL1A1",
+        "FN1",
+        "MMP2",
+        "SRSF1",
+        "DDX5"
+      ],
+      "value_limits": [
+        -2,
+        2
+      ],
+      "value_label": "Supplied log2 effect",
+      "title": "Leading-edge membership"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-package-PKG06",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Interferon response": 0,
+      "Oxidative metabolism": 1,
+      "Matrix organization": 2,
+      "RNA processing": 3
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#E2EFEB",
+        "#6DB3A7",
+        "#1C6C70"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/package-v040/PKG06/PKG06.tsv"
+}

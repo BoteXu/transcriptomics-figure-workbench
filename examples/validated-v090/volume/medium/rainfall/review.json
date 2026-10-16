@@ -1,0 +1,49 @@
+{
+  "form": "rainfall",
+  "adapter": "genomic_rainfall",
+  "rows": 13,
+  "source_input_sha256": "06258a62a6a307380467f1a69017be2a018d0c459d4ca4bec6b89575dc67576d",
+  "input_sha256": "b92c1002ee65a483256f39b9a476e115559d47a11d0eb0a1ed5619cefb3265d8",
+  "quantitative_geometry_sha256": "22a6cf4d391135bff816410db37406bfa8c32e3c6c5dbec9f91a4667e35836f6",
+  "volume": {
+    "level": "medium",
+    "quantity_dimension": "variant_id",
+    "quantity": 13,
+    "input_rows": 13,
+    "preparation": "Complete selected identity records; auxiliary supplied display records retained",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 10
+  },
+  "size_inches": [
+    10.0,
+    3.3555555555555556
+  ],
+  "id": "rainfall",
+  "section": "volume",
+  "level": "medium",
+  "assets": {
+    "png": "volume/medium/rainfall/rainfall.png",
+    "svg": "volume/medium/rainfall/rainfall.svg",
+    "tsv": "volume/medium/rainfall/rainfall.tsv"
+  },
+  "sha256": {
+    "png": "6b95e656bc8ca93f07cb729cb1f68b6880ba2d99c624b23cfef95809d43f2a40",
+    "svg": "1d6ef2c57e287474924353f7fbced7ed083f4784ffef23ecedf02bdf8f51cc80",
+    "tsv": "b92c1002ee65a483256f39b9a476e115559d47a11d0eb0a1ed5619cefb3265d8"
+  },
+  "visual_review": {
+    "key": "volume/medium/rainfall",
+    "png_sha256": "6b95e656bc8ca93f07cb729cb1f68b6880ba2d99c624b23cfef95809d43f2a40",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "基因组降雨图"
+}

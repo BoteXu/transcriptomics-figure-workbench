@@ -1,0 +1,27 @@
+{
+  "id": "K02_weighted",
+  "title": "Subgroups and markers at the same stored coordinates",
+  "panels": [
+    {
+      "id": "Panel1",
+      "svg": "../../../source/T19/T19.svg",
+      "table": "../../../source/T19/T19.tsv"
+    },
+    {
+      "id": "Panel2",
+      "svg": "../../../source/AUX_marker_coordinates/AUX_marker_coordinates.svg",
+      "table": "../../../source/AUX_marker_coordinates/AUX_marker_coordinates.tsv"
+    }
+  ],
+  "canvas_width_pt": 1100,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "label_order": "reading",
+  "columns": 2,
+  "column_weights": [
+    1.15,
+    1
+  ],
+  "packing": "masonry",
+  "packing_order": "tall_first"
+}

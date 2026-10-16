@@ -1,0 +1,49 @@
+{
+  "form": "registration",
+  "adapter": "figure_biomni_views.plot_registration_check",
+  "rows": 168,
+  "source_input_sha256": "9a1ebcd031d929277a0590a5134dcad733a653eec5cb113155cd64ab11a68bd2",
+  "input_sha256": "46c6c860aaa9d065a2466b6ff7005b99f94822578f71711df68da41bafced511",
+  "quantitative_geometry_sha256": "4afd84c651f67324b004393de0fb75935c51250866de91e939afb01b07b18729",
+  "volume": {
+    "level": "medium",
+    "quantity_dimension": "supplied_regular_grid",
+    "quantity": 168,
+    "input_rows": 168,
+    "preparation": "Exact supplied regular-grid points at declared stride; no interpolation",
+    "scientific_validity": "Synthetic display test only; no inference or biological acceptance"
+  },
+  "requested_layout": {
+    "width_inches": 10
+  },
+  "size_inches": [
+    10.026143663194443,
+    5.0
+  ],
+  "id": "registration",
+  "section": "volume",
+  "level": "medium",
+  "assets": {
+    "png": "volume/medium/registration/registration.png",
+    "svg": "volume/medium/registration/registration.svg",
+    "tsv": "volume/medium/registration/registration.tsv"
+  },
+  "sha256": {
+    "png": "4aa5c0c77bbb6ece5aa924400b9fd1371448b7d2871118a8013d38c5c45f5d6c",
+    "svg": "ab7baf399823f02520e31bd5a7da2968b51b7579a69b11ee9a96ac5155d1dd42",
+    "tsv": "46c6c860aaa9d065a2466b6ff7005b99f94822578f71711df68da41bafced511"
+  },
+  "visual_review": {
+    "key": "volume/medium/registration",
+    "png_sha256": "4aa5c0c77bbb6ece5aa924400b9fd1371448b7d2871118a8013d38c5c45f5d6c",
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex visual self-review",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false,
+    "scope": "Complete independently framed image screened; selected dense/changed examples enlarged. Data volume cases preserve declared records",
+    "target_width_mm": null
+  },
+  "scientific_acceptance": false,
+  "title": "配准检查"
+}

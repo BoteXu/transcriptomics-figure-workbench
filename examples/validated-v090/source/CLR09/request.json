@@ -1,0 +1,116 @@
+{
+  "form": "CLR09",
+  "base_form": "heatmap",
+  "example": "CLR09",
+  "title": "热图",
+  "source_meta": "examples/clarity-v070/CLR09/CLR09.json",
+  "route": "native",
+  "adapter": "clarity",
+  "parameters": {
+    "view": "membership",
+    "options": {
+      "member_order": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F09",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16",
+        "F17",
+        "F18",
+        "F19",
+        "F20"
+      ],
+      "term_order": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08"
+      ],
+      "effect_limits": [
+        -2,
+        2
+      ],
+      "denominator": "Ratio = displayed members / 20 supplied background members",
+      "title": "Membership without crossing ribbons",
+      "subtitle": "All 47 links, 20 member effects and eight term summaries"
+    },
+    "contract": {
+      "source_definition": "Frozen public synthetic table: examples/gallery/figures/E34/E34.tsv",
+      "independent_unit": "Synthetic identity only; no biological sample or scientific inference",
+      "denominator": "all rows",
+      "value_definition": "All plotted channels supplied explicitly; exact units and source selection in FigureSpec",
+      "uncertainty_definition": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+      "synthetic": true
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-clarity-CLR09",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Supplied channels": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F0F4F6",
+        "#436C87"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#C96068"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/clarity-v070/CLR09/CLR09.tsv"
+}

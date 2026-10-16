@@ -1,0 +1,22 @@
+record_type	node_id	label	entity_type	group	x	y	area	source	target	weight	sign
+node	P1	Path 1	term	G1	2.0	0.0	90.0				
+node	P2	Path 2	term	G2	1.2469796037174672	1.5636629649360596	105.0				
+node	P3	Path 3	term	G3	-0.4450418679126287	1.9498558243636472	120.0				
+node	P4	Path 4	term	G1	-1.801937735804838	0.8677674782351165	135.0				
+node	P5	Path 5	term	G2	-1.8019377358048383	-0.867767478235116	150.0				
+node	P6	Path 6	term	G3	-0.4450418679126292	-1.9498558243636472	165.0				
+node	P7	Path 7	term	G1	1.2469796037174667	-1.5636629649360598	180.0				
+edge								P1	P2	0.35	0.0
+edge								P1	P3	0.5	0.0
+edge								P1	P5	0.2	0.0
+edge								P1	P6	0.35	0.0
+edge								P2	P4	0.2	0.0
+edge								P2	P5	0.35	0.0
+edge								P2	P7	0.6499999999999999	0.0
+edge								P3	P4	0.35	0.0
+edge								P3	P6	0.6499999999999999	0.0
+edge								P3	P7	0.2	0.0
+edge								P4	P5	0.6499999999999999	0.0
+edge								P4	P6	0.2	0.0
+edge								P5	P7	0.5	0.0
+edge								P6	P7	0.6499999999999999	0.0

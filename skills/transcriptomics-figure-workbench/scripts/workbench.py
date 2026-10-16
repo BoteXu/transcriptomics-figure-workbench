@@ -21,6 +21,8 @@ def main():
     le=commands.add_parser('layout-export');le.add_argument('--plan',required=True,type=Path);le.add_argument('--output',required=True,type=Path)
     li=commands.add_parser('layout-inspect');li.add_argument('--bundle',required=True,type=Path);li.add_argument('--record',type=Path)
     design=commands.add_parser('design');design.add_argument('--brief',required=True,type=Path);design.add_argument('--output',required=True,type=Path)
+    study=commands.add_parser('study-plan');study.add_argument('--manifest',required=True,type=Path);study.add_argument('--request',required=True);study.add_argument('--output',required=True,type=Path)
+    study_render=commands.add_parser('study-render');study_render.add_argument('--plan',required=True,type=Path);study_render.add_argument('--output',required=True,type=Path)
     method_spec=commands.add_parser('method-spec');method_spec.add_argument('--entry',required=True)
     method_spec.add_argument('--template',required=True,type=Path);method_spec.add_argument('--output',required=True,type=Path)
     plan=commands.add_parser('plan');plan.add_argument('--spec',required=True,type=Path);plan.add_argument('--output',required=True,type=Path)
@@ -73,6 +75,14 @@ def main():
         from figure_workbench.methods import prepare_method_spec
         spec=prepare_method_spec(args.entry,read_json(args.template),args.template.resolve().parent,args.output)
         write_new(args.output,spec);result={'status':'METHOD_SPEC_PREPARED','entry':args.entry,'output':str(args.output),'native_package_executed':False}
+    elif args.command=='study-plan':
+        from figure_workbench.study import study_plan
+        result=study_plan(read_json(args.manifest),args.request,args.manifest.resolve().parent);write_new(args.output,result)
+        result={'status':result['state'],'sections':result['sections'],'missing_results':result['missing_results'],'blocking_reasons':result['blocking_reasons'],'analysis_performed':False}
+    elif args.command=='study-render':
+        from figure_workbench.study import render_study
+        receipt=render_study(read_json(args.plan),args.output)
+        result={'status':receipt['state'],'figures':len(receipt['panels']),'analysis_performed':False,'visual_acceptance':False}
     elif args.command=='design':
         from figure_workbench.design import design_plan
         result=design_plan(read_json(args.brief),args.brief.resolve().parent)
