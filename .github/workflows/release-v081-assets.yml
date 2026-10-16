@@ -1,0 +1,65 @@
+name: Prepare v0.8.1 draft assets
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  assets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: b4379ff0bf05f085c2dc19efc38db5115a1503d1
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - name: Verify pinned public source and build public assets
+        run: |
+          test "$(git rev-parse HEAD)" = b4379ff0bf05f085c2dc19efc38db5115a1503d1
+          python tests/check_responsive_release.py
+          python tools/build_release.py --output release-assets > release-build.json
+      - name: Complete missing draft assets and bind the remote checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import subprocess,json,hashlib
+          from pathlib import Path
+          def gh(*args):
+              return subprocess.check_output(['gh',*args],text=True)
+          endpoint='repos/'+__import__('os').environ['GH_REPO']+'/releases/414922228'
+          release=json.loads(gh('api',endpoint))
+          assert release['tag_name']=='v0.8.1' and release['draft']
+          local=Path('release-assets')
+          names={p.name for p in local.iterdir() if p.is_file()}
+          assert len(names)==23
+          present={r['name']:r for r in release['assets']}
+          assert set(present)<=names and all(r['state']=='uploaded' for r in present.values())
+          uploaded={}
+          for name in sorted(names-set(present)):
+              path=local/name
+              gh('release','upload','v0.8.1',str(path))
+              uploaded[name]=hashlib.sha256(path.read_bytes()).hexdigest()
+          final=json.loads(gh('api',endpoint));assets={r['name']:r for r in final['assets']}
+          assert set(assets)==names and all(r['state']=='uploaded' for r in assets.values())
+          for name,digest in uploaded.items():assert assets[name]['digest']=='sha256:'+digest
+          checksum=local/'SHA256SUMS-v0.8.1.txt'
+          checksum.write_text(''.join(r['digest'].removeprefix('sha256:')+'  '+name+'\n' for name,r in sorted(assets.items()) if name!=checksum.name))
+          gh('release','upload','v0.8.1',str(checksum),'--clobber')
+          final=json.loads(gh('api',endpoint))
+          assert final['draft'] and len(final['assets'])==23
+          receipt=dict(status='PINNED_PUBLIC_DRAFT_ASSETS_COMPLETE',source_commit='b4379ff0bf05f085c2dc19efc38db5115a1503d1',uploaded_from_pinned_source=uploaded,assets=[dict(name=r['name'],size=r['size'],digest=r['digest']) for r in final['assets']])
+          Path('release-preparation.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          print(json.dumps(dict(status=receipt['status'],assets=23,new_uploads=len(uploaded))))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: release-v081-preparation
+          path: |
+            release-build.json
+            release-preparation.json
