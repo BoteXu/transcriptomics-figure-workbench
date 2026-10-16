@@ -79,6 +79,25 @@ try{
     await page.screenshot({path:path.join(output,key+'-178mm-screen.png'),fullPage:true});
   }
   checks.push('five individual nominal CSS 178mm screenshots saved for separate human inspection; automation is not visual acceptance');
+  await page.goto(base+'/examples/review-v060/index.html');await page.locator('#filter').selectOption('all');
+  assert.equal(await page.locator('article').count(),443);assert.equal(await page.locator('article .reading-link').count(),443);
+  await page.locator('#search').fill('P10');await page.getByRole('button',{name:'检查 P10',exact:true}).click();
+  assert.match(await page.locator('#viewport img').getAttribute('src'),/repairs-v060/);
+  const reading=await page.locator('#detail .reading-link').getAttribute('href');assert.match(reading,/reading-volume-\d\d\.pdf#page=\d+/);
+  const response=await context.request.get(base+'/'+new URL(reading,base+'/examples/review-v060/index.html').pathname.replace(/^\//,''));assert.equal(response.status(),200);await response.dispose();
+  await page.locator('#before').click();assert.match(await page.locator('#viewport img').getAttribute('src'),/publication-v030/);await page.locator('#close').click();
+  await page.locator('#search').fill('');await page.locator('#filter').selectOption('composition');assert.equal(await page.locator('article').count(),126);
+  await page.getByRole('button',{name:'检查 K09',exact:true}).click();await page.locator('#parts').click();assert.ok(await page.locator('.component img[src*="repairs-v060"]').count()>=1);await page.locator('#close').click();
+  await page.setViewportSize({width:390,height:844});await page.locator('#filter').selectOption('preferred');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth));
+  checks.push('443-entry current browser, bound PDF reading links, revised raster scatter, component version and narrow layout verified');
+  await page.setViewportSize({width:850,height:1100});
+  for(let i=1;i<=5;i++){
+    const key='REF'+String(i).padStart(2,'0');
+    await page.setContent('<!doctype html><meta charset="utf-8"><style>body{margin:24px;background:#edf1f3;font:14px system-ui}img{display:block;width:178mm;height:auto;background:white}</style><p>'+key+' · nominal CSS 178 mm screen proof (not calibrated paper)</p><img src="'+base+'/examples/refined-v060/'+key+'/'+key+'.png" alt="'+key+'">');
+    await page.waitForFunction(()=>document.querySelector('img').complete&&document.querySelector('img').naturalWidth>1000);
+    await page.screenshot({path:path.join(output,key+'-178mm-screen.png'),fullPage:true});
+  }
+  checks.push('five community-informed nominal CSS 178mm screenshots prepared, requiring separate actual inspection');
   assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
   const result={status:'PUBLICATION_BROWSER_PASS',checks,external_requests:0,scientific_acceptance:false};
   await fs.writeFile(path.join(output,'validation.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

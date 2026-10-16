@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "counts": {
-    "python_functions": 122,
-    "fixed_aliases": 80,
-    "table_entries": 122
+    "python_functions": 123,
+    "fixed_aliases": 81,
+    "table_entries": 123
   },
   "renderers": [
     {
@@ -6300,6 +6300,58 @@
       "numeric_columns": []
     },
     {
+      "id": "figure_refined_views.plot_refined_views",
+      "module": "figure_refined_views",
+      "function": "plot_refined_views",
+      "display_name": "Community-inspired refined views",
+      "summary": "Compact GSEA, supplied nested ribbon, score shifts and association matrices.",
+      "parameters": [
+        {
+          "name": "view",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "contract",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "options",
+          "required": true,
+          "annotation": null
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [
+        "refined"
+      ],
+      "source_sha256": "bf8a02235dc6db5be9f2a1bdbcb0297cd2bfe6790a773145ba5b874ab66be659",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "NES",
+        "delta",
+        "estimate",
+        "inner_lower",
+        "inner_upper",
+        "leading_edge",
+        "lower",
+        "lower_delta",
+        "p",
+        "padj",
+        "r",
+        "rank",
+        "score_a",
+        "score_b",
+        "set_size",
+        "upper",
+        "upper_delta",
+        "value",
+        "x"
+      ]
+    },
+    {
       "id": "figure_styles.plot_volcano_editorial",
       "module": "figure_styles",
       "function": "plot_volcano_editorial",
@@ -7210,6 +7262,31 @@
         "inner_upper",
         "value",
         "area"
+      ],
+      "theme_mode": "argument"
+    },
+    "refined": {
+      "renderer": "figure_refined_views.plot_refined_views",
+      "numeric_columns": [
+        "rank",
+        "value",
+        "NES",
+        "padj",
+        "set_size",
+        "leading_edge",
+        "x",
+        "estimate",
+        "lower",
+        "upper",
+        "inner_lower",
+        "inner_upper",
+        "score_a",
+        "score_b",
+        "delta",
+        "lower_delta",
+        "upper_delta",
+        "r",
+        "p"
       ],
       "theme_mode": "argument"
     }

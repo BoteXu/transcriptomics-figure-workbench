@@ -23,6 +23,7 @@ jobs:
           python tests/check_workbench.py
           python tests/check_design_workflow.py
           python tests/check_review_update.py
+          python tests/check_review_v060.py
           python skills/transcriptomics-figure-workbench/scripts/workbench.py methods --search GSEA
           python skills/transcriptomics-figure-workbench/scripts/render_frozen_table.py --help
   render:
@@ -45,6 +46,8 @@ jobs:
           python tests/check_package_styles.py package-ci
           python tests/check_package_styles.py examples/package-v040
           python tests/check_design_runtime.py design-ci
+          python tests/check_refined_runtime.py
+          python tests/check_reading.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: workbench-frozen-previews

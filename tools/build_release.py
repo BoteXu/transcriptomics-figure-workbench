@@ -40,6 +40,10 @@ def main(output):
         key=row['id'];prefix='design-gallery/'+key+'/'+key
         page=page.replace(prefix+'.png','data:image/png;base64,'+base64.b64encode((ROOT/'examples/design-v050'/key/(key+'.png')).read_bytes()).decode())
         page=page.replace('design-gallery/index.html#'+key,'https://github.com/BoteXu/transcriptomics-figure-workbench/tree/v'+version+'/examples/design-v050#'+key)
+    for row in json.loads((ROOT/'examples/refined-v060/manifest.json').read_text())['records']:
+        key=row['id'];prefix='refined-gallery/'+key+'/'+key
+        page=page.replace(prefix+'.png','data:image/png;base64,'+base64.b64encode((ROOT/'examples/refined-v060'/key/(key+'.png')).read_bytes()).decode())
+        page=page.replace('refined-gallery/index.html#'+key,'https://github.com/BoteXu/transcriptomics-figure-workbench/tree/v'+version+'/examples/refined-v060#'+key)
     studio.write_text(page,encoding='utf8');assets.append(studio)
     package_examples=output/f'package-examples-v{version}.zip'
     with zipfile.ZipFile(package_examples,'x',compression=zipfile.ZIP_DEFLATED) as archive:
@@ -90,15 +94,18 @@ def main(output):
     review=output/f'figure-review-library-v{version}.zip'
     with zipfile.ZipFile(review,'x',compression=zipfile.ZIP_DEFLATED) as archive:
         paths=set()
-        report=json.loads((ROOT/'examples/review-v050/review-index.json').read_text(encoding='utf8'))
+        report=json.loads((ROOT/'examples/review-v060/review-index.json').read_text(encoding='utf8'))
         for row in report['records']:
             paths.update(row['assets'].values());paths.update(row.get('previous_assets',{}).values())
-        for folder in ['examples/review-v050','examples/design-v050','examples/gallery/repairs-v050','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
+        for folder in ['examples/review-v060','examples/refined-v060','examples/reading-v060','examples/design-v050','examples/gallery/repairs-v050','examples/gallery/repairs-v060','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
             paths.update(p.relative_to(ROOT).as_posix() for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
         for relative in sorted(paths):archive.write(ROOT/relative,relative)
-        archive.writestr('README.txt','Open examples/review-v050/index.html for 438 current exports, five repairs, five alternatives and 126 component reading views. Exact full sources are in the versioned public repository. Overview and screen review are not paper proofs or scientific acceptance.\n')
+        archive.writestr('README.txt','Open examples/review-v060/index.html for 443 current exports, 32 repairs, ten preferred alternatives and source-bound reading PDFs. Exact full sources are in the versioned public repository. Overview and screen review are not paper proofs or scientific acceptance.\n')
     assets.append(review)
     contact=output/'design-alternatives-v050.jpg';shutil.copy2(ROOT/'docs/design-alternatives-v050.jpg',contact);assets.append(contact)
+    contact=output/'refined-alternatives-v060.jpg';shutil.copy2(ROOT/'docs/refined-alternatives-v060.jpg',contact);assets.append(contact)
+    for volume in json.loads((ROOT/'examples/reading-v060/reading-index.json').read_text())['volumes']:
+        destination=output/volume['file'];shutil.copy2(ROOT/'examples/reading-v060'/volume['file'],destination);assets.append(destination)
     (output/f'SHA256SUMS-v{version}.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in assets),encoding='utf8')
     print(json.dumps(dict(status='PUBLIC_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
 

@@ -32,6 +32,9 @@ def main():
     review.add_argument('--inspection',type=Path)
     studio=commands.add_parser('studio');studio.add_argument('--output',required=True,type=Path)
     studio.add_argument('--gallery',type=Path);studio.add_argument('--demo-svg',type=Path)
+    reading=commands.add_parser('reading-plan');reading.add_argument('--index',required=True,type=Path);reading.add_argument('--root',required=True,type=Path);reading.add_argument('--output',required=True,type=Path)
+    reading.add_argument('--width-mm',type=float,default=178.);reading.add_argument('--minimum-text-pt',type=float,default=7.5);reading.add_argument('--volume-size',type=int,default=75)
+    reading_export=commands.add_parser('reading-export');reading_export.add_argument('--plan',required=True,type=Path);reading_export.add_argument('--output',required=True,type=Path)
     args=parser.parse_args()
     if args.command=='catalog':
         registry=read_registry();query=args.search.casefold()
@@ -88,6 +91,14 @@ def main():
             if not args.checks or not args.output or not args.notes:parser.error('A decision needs --checks, --notes and --output')
             result=record_visual(args.bundle,args.decision,read_json(args.checks),args.notes,args.output,read_json(args.inspection) if args.inspection else None)
         else:result=inspect_bundle(args.bundle)
+    elif args.command=='reading-plan':
+        from figure_workbench.reading import make_reading_plan
+        result=make_reading_plan(args.index,args.root,args.width_mm,args.minimum_text_pt,args.volume_size);write_new(args.output,result)
+        result={'status':'READING_PLAN_ONLY','figures':len(result['records']),'scientific_analysis':False}
+    elif args.command=='reading-export':
+        from figure_workbench.reading import export_reading
+        result=export_reading(read_json(args.plan),args.output)
+        result={'status':result['state'],'figures':result['figures'],'volumes':len(result['volumes']),'scientific_analysis':False}
     else:
         from figure_workbench.studio import build_studio
         result=build_studio(args.output,args.gallery,args.demo_svg)

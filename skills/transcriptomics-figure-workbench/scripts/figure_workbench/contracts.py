@@ -79,7 +79,7 @@ def validate_spec(spec):
         raise ValueError('Complete explicit provenance is required')
     if any(not isinstance(meta[k],str) or not meta[k].strip() for k in META_FIELDS-{'synthetic'}):
         raise ValueError('Provenance text cannot be empty')
-    if row['module'] in {'figure_editorial','figure_expanded_grammar','figure_package_styles','figure_publication_plus'}:
+    if row['module'] in {'figure_editorial','figure_expanded_grammar','figure_package_styles','figure_publication_plus','figure_refined_views'}:
         contract=spec['parameters'].get('contract')
         if not isinstance(contract,dict) or type(contract.get('synthetic')) is not bool or contract['synthetic']!=meta['synthetic']:
             raise ValueError('Frozen-input contract and export provenance must agree about synthetic data')

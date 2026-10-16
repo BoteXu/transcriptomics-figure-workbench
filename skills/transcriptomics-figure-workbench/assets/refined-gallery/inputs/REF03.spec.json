@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "figure_id": "REF03",
+  "renderer": "refined",
+  "input": {
+    "path": "REF03.tsv",
+    "sha256": "5e223c83b0671bc32a916d240a7c4b05443b12e00992bb742f471c8cf50c7219"
+  },
+  "parameters": {
+    "view": "ribbon",
+    "options": {
+      "series_order": [
+        "Train",
+        "Validation"
+      ],
+      "interval_definition": "Illustrative supplied display bands; probability meaning unspecified",
+      "x_label": "Epoch",
+      "y_label": "Loss",
+      "title": "Training curves with supplied interval bands",
+      "subtitle": "Same loss rows as R14 / no model training"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Frozen public synthetic source: examples/gallery/figures/R14/R14.tsv",
+      "independent_unit": "Synthetic stored curve; epochs are repeated positions, not independent experiments",
+      "denominator": "All loss positions within both selected stored curves",
+      "value_definition": "Supplied epoch, estimate and interval endpoints",
+      "uncertainty_definition": "Illustrative supplied bounds; probability meaning unspecified; not estimated here"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-refined-REF03",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Train": 0,
+      "Validation": 1
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#218C8D"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "experimental_unit": "Synthetic stored curve; epochs are repeated positions, not independent experiments",
+    "limits": "Supplied epoch, estimate and interval endpoints",
+    "input_unit": "Synthetic stored curve; epochs are repeated positions, not independent experiments",
+    "uncertainty": "Illustrative supplied bounds; probability meaning unspecified; not estimated here",
+    "filtering": "all 240 loss rows; other dashboard record types excluded explicitly",
+    "interpretation_limit": "Synthetic display fixture only; not biological evidence",
+    "contrast": "Synthetic display only; no biological inference",
+    "model": "Frozen synthetic display channels; no model fitting or native package execution",
+    "source": "Frozen public synthetic source: examples/gallery/figures/R14/R14.tsv",
+    "synthetic": true,
+    "denominator": "All loss positions within both selected stored curves"
+  },
+  "appearance": {
+    "preset": "paper"
+  },
+  "export": {
+    "target_width_mm": 178,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "block"
+  }
+}

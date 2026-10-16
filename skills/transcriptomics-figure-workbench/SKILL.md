@@ -7,13 +7,15 @@ description: Design, render and improve publication figures from frozen scientif
 
 ## Start with the comparison and a polished example
 
-Identify the comparison the reader should see, the supplied data shape and the intended use (paper, slide or screen). **Prioritize attractive, restrained examples with readable labels and clear visual hierarchy.** Use the [five current design alternatives](assets/design-gallery/index.html) and [25 package examples](assets/package-gallery/index.html) before searching the historical catalog. Offer one preferred design and at most two useful alternatives. A different palette or repeated layout is not a new scientific method.
+Identify the comparison the reader should see, the supplied data shape and the intended use (paper, slide or screen). **Prioritize attractive, restrained examples with readable labels and clear visual hierarchy.** Start with the [five community-informed examples](assets/refined-gallery/index.html), [five design alternatives](assets/design-gallery/index.html) and [25 package examples](assets/package-gallery/index.html). Offer one preferred design and at most two useful alternatives. A different palette or repeated layout is not a new scientific method.
+
+Consider excellent community implementations, author blogs, GitHub repositories and readable tutorials alongside official examples. Compare actual figures, then record the author, source, inspected scope, adopted design and code/license boundary in the [community design ledger](references/community-designs-v060.md). The source's popularity or official status does not establish suitability. Never claim an unread article was integrated. Prefer an independently implemented frozen-table view when analysis packages are unnecessary.
 
 | Intended comparison | Preferred display | Required distinction |
 |---|---|---|
 | Differential expression | Selected-label volcano; short declared feature set as point/interval forest | Effect, adjusted probability and uncertainty are separate channels |
 | Enrichment across contrasts | Aligned NES dot matrix; term lollipop for ORA | NES differs from ES; size differs from significance; missing tests remain explicit |
-| A genuine enrichment curve | ES + hit barcode + rank metric; facets for many pathways | Requires supplied full curve and ranked universe, not only an enrichment summary |
+| A genuine enrichment curve | Compact ES, hit rugs and rank strip; aligned facets for many pathways | Complete curves and ranked universe required; gradient zero must remain visible; preserve supplied NES/FDR |
 | A matrix with known groups | Split annotated heatmap; expression dot matrix when fractions matter | Fixed order/groups, units, colour range, fraction denominator and missingness |
 | Distribution and uncertainty | Supplied half-eye + intervals, or a point/interval forest | A density requires supplied coordinates; no new KDE, intervals or tests for styling |
 | Paired observations | Sparse paired points/lines | Only connect the same independently identified unit |
@@ -21,6 +23,9 @@ Identify the comparison the reader should see, the supplied data shape and the i
 | Dense graph or many memberships | Adjacency / membership matrix; aligned UpSet | Preserve edge and intersection definitions; do not prune to make a nicer network |
 | Profiles with many categories | Aligned linear small multiples | Prefer to overlapping radial fills for precise comparison; retain a radial alternative when requested |
 | Multiple panels | Few balanced panels with independent exports | Check the actual page width; provide a component reading view for oversized layouts |
+| Scores in two conditions | Dumbbell scores plus a separate difference forest | Preserve supplied difference bounds; feature identity alone is not biological pairing |
+| Stored curves | Fine curves with quiet supplied interval ribbons | No smoothing, fitting or invented bounds |
+| Correlation and Mantel summaries | Separate aligned matrices when links become crowded | Distinct guides and complete pairs; retain raw p in the table and disclose if not visually encoded |
 
 Respect a user-selected design. These defaults guide choices when no design was specified; scientific compatibility is mandatory. Do not manufacture missing channels or change selection thresholds for appearance.
 
@@ -58,6 +63,8 @@ Separate three records: file/encoding checks, visual inspection, and scientific 
 
 At intended size inspect hierarchy, labels/units, legends, clipping, overlap, category/scale meaning, point/line contrast and panel balance. Use the offline [review browser template](assets/studio/review-browser.html) through the repository's generated review gallery for original/revised comparisons, native pixel zoom and component reading. Do not infer shared axes merely from aligned panels.
 
+Use a source-bound [reading edition](references/refined-views-v060.md) when a full figure cannot be inspected at page width. Keep an overview plus uniformly scaled overlapping detail tiles or linked independent components. Do not treat a readable detail book as acceptance of the original manuscript composition. Preserve the actual inspection scope, including unreviewed pages and raster/outlined text.
+
 ### 6. Record and deliver
 
 `review --bundle` checks file hashes. A visual decision needs the six actual checks and notes. For target-width bundles, `--inspection` must identify the inspected artifact types, individual scope and matching width; contact overviews cannot become acceptance. Source/export changes invalidate the corresponding bound record. A self-review is not an independent second review or paper proof.
@@ -68,6 +75,7 @@ Deliver a preferred preview, editable PDF/SVG, exact plotted TSV, FigureSpec and
 
 - Package views and GSEA contracts: [package/method entries](references/package-method-entries.md), [package styles](references/package-styles-v040.md).
 - New half-eye, split matrix and linear profile contracts: [design workflow](references/design-workflow-v050.md).
+- Community-informed GSEA, ribbons, score differences, association matrices and PDF reading: [v0.6 contracts](references/refined-views-v060.md); [sources and adoption decisions](references/community-designs-v060.md).
 - Matrix ordering/missingness: [matrix input](references/matrix-input.md); QC/DE: [frozen summaries](references/qc-de-article-review.md).
 - Genomics, multiomics, spatial and model results: [analysis modules](references/analysis-modules-router.md), [multiomics](references/course-visualization-router.md), [Biomni views](references/biomni-visualization-router.md).
 - Networks, memberships and tracks: [network expansion](references/network-expansion.md), [linked evidence](references/wgcna-visualization-router.md), [alignment](references/alignment-and-flow.md).

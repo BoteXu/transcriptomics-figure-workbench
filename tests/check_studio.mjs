@@ -24,7 +24,7 @@ const checks=[];
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   const registry=JSON.parse(await page.locator('#studio-data').textContent()).registry;
-  assert.equal(await page.locator('#catalog-count').innerText(),'5');checks.push('five preferred polished examples are the default');
+  assert.equal(await page.locator('#catalog-count').innerText(),'10');checks.push('ten preferred polished examples are the default');
   await page.locator('#catalog-mode').selectOption('renderer');
   assert.equal(await page.locator('#catalog-count').innerText(),String(registry.counts.python_functions));checks.push('all source-derived callable entries visible');
   await page.waitForSelector('.svg-frame',{timeout:8000});

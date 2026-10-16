@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "figure_id": "REF05",
+  "renderer": "refined",
+  "input": {
+    "path": "REF05.tsv",
+    "sha256": "05f5e5743721ec31291c3a1bd42fb21ffd08aa4f1d0d6da134c0a57d44c2af84"
+  },
+  "parameters": {
+    "view": "association",
+    "options": {
+      "variable_order": [
+        "N",
+        "P",
+        "K",
+        "Ca",
+        "Mg",
+        "S",
+        "Al",
+        "Fe",
+        "Mn",
+        "Zn",
+        "Mo",
+        "Variable12",
+        "Variable13",
+        "pH"
+      ],
+      "specimen_order": [
+        "Set 1",
+        "Set 2",
+        "Set 3",
+        "Set 4"
+      ],
+      "correlation_label": "Pairwise r",
+      "title": "Associations without crossing edges",
+      "subtitle": "Same pairwise and Mantel summaries as R07 / distinct measures"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Frozen public synthetic source: examples/gallery/figures/R07/R07.tsv",
+      "independent_unit": "Synthetic variable-pair and set/variable summary; not biological subjects",
+      "denominator": "All supplied pairwise and Mantel summaries; missing diagonal not assumed to be a measured zero",
+      "value_definition": "Pairwise r and Mantel r retain distinct guides; raw p-values remain available in the exact table",
+      "uncertainty_definition": "No interval supplied; no correlation or p-value calculation"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-refined-REF05",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Supplied associations": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#218C8D"
+      ],
+      "diverging": [
+        "#327D9F",
+        "#F7F7F4",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "experimental_unit": "Synthetic variable-pair and set/variable summary; not biological subjects",
+    "limits": "Pairwise r and Mantel r retain distinct guides; raw p-values remain available in the exact table",
+    "input_unit": "Synthetic variable-pair and set/variable summary; not biological subjects",
+    "uncertainty": "No interval supplied; no correlation or p-value calculation",
+    "filtering": "all 91 pairwise and 56 Mantel summaries",
+    "interpretation_limit": "Synthetic display fixture only; not biological evidence",
+    "contrast": "Synthetic display only; no biological inference",
+    "model": "Frozen synthetic display channels; no model fitting or native package execution",
+    "source": "Frozen public synthetic source: examples/gallery/figures/R07/R07.tsv",
+    "synthetic": true,
+    "denominator": "All supplied pairwise and Mantel summaries; missing diagonal not assumed to be a measured zero"
+  },
+  "appearance": {
+    "preset": "paper"
+  },
+  "export": {
+    "target_width_mm": 178,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "block"
+  }
+}

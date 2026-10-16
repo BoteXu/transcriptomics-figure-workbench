@@ -12,6 +12,7 @@ ROUTES = {
    ('package_style', 'volcano', ['label','effect','adjusted_probability'], 'Sparse labelled volcano', 'Use restrained direction colours and selected labels; retain every point.'),
    ('editorial', 'forest', ['label','effect','lower','upper'], 'Effect and interval', 'Prefer for a short, declared gene set when effect magnitudes matter.')],
  'enrichment': [
+   ('refined','gsea_strip',['rank','running_score','rank_metric','membership','leading_edge'],'Compact aligned enrichment tracks','Prefer a gradient single pathway or aligned pathway facets when the complete ranked universe is supplied; preserve ES and all hits.'),
    ('package_style','nes',['row','column','effect','adjusted_probability','size'],'Aligned NES dot matrix','Separate effect colour, set-size area and test status.'),
    ('package_style','gsea',['rank','running_score','rank_metric','membership','leading_edge'],'ES tracks with hit barcode','Use genuine supplied ES curves; a term-summary table is insufficient.'),
    ('package_style','ora',['label','count','denominator','adjusted_probability'],'Term lollipop','Wrap full pathway names and place statistics in a clear guide lane.')],
@@ -36,6 +37,12 @@ ROUTES = {
    ('publication_plus','profile',['category','series','value','area'],'Aligned linear profiles','Prefer common linear scales and visible category rows to overlapping radial fills.')],
  'survival': [
    ('package_style','survival',['time','survival','lower','upper','at_risk','group'],'Survival with risk table','Use a shared time scale, supplied intervals and explicit risk conventions.')],
+ 'curves': [
+   ('refined','ribbon',['series','x','effect','lower','upper'],'Curve with supplied interval ribbons','Use fine curves, quiet interval bands and a separate key; no smoothing or new uncertainty estimation.')],
+ 'score_comparison': [
+   ('refined','score_shift',['label','score_a','score_b','effect','lower','upper'],'Scores plus difference forest','Separate the two score positions from the supplied difference interval; a feature connection is not a biological pair.')],
+ 'associations': [
+   ('refined','association',['source','target','value','record_type'],'Association matrices without crossing edges','Keep pairwise and Mantel summaries on separate guides; preserve raw probabilities in the exact table.')],
  'uncertainty': [
    ('publication_plus','halfeye',['label','x','density','effect','lower','upper'],'Half-eye and interval','Prefer a restrained slab to a decorative violin; preserve density and interval definitions.'),
    ('editorial','forest',['label','effect','lower','upper'],'Interval forest','Use when no density profile was supplied.')]

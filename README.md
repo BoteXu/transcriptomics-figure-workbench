@@ -2,11 +2,25 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.5.0**。优先选择较漂亮、克制且适合当前数据的画法，流程更新为“比较问题 → 冻结字段与上下文 → 优选方案 → 目标尺寸绘图 → 外观修订 → 按实际范围验收”。Studio 默认展示五张精修替代示例；25 个软件包专项示例与历史接口全部保留。
+本版为 **v0.6.0**。优先选择较漂亮、克制且适合当前数据的画法；参考来源包括社区作者博客、GitHub 和教程。流程为“比较问题 → 冻结字段与上下文 → 比较实际画法 → 目标尺寸绘图 → 修订 → 按实际范围验收”。Studio 优先展示10张精修示例，25个软件包专项示例及历史接口保留。
 
-[优选与全库复查浏览页](examples/review-v050/index.html) · [五种实际替代示例](examples/design-v050/index.html) · [新选图逻辑与契约](skills/transcriptomics-figure-workbench/references/design-workflow-v050.md) · [本轮检查范围](skills/transcriptomics-figure-workbench/references/validation-v050.md)
+[优选与全库复查浏览页](examples/review-v060/index.html) · [5张社区方案实际示例](examples/refined-v060/index.html) · [来源与采用说明](skills/transcriptomics-figure-workbench/references/community-designs-v060.md) · [精修与阅读版契约](skills/transcriptomics-figure-workbench/references/refined-views-v060.md) · [本轮检查范围](skills/transcriptomics-figure-workbench/references/validation-v060.md)
 
-## v0.5 优先好看，也检查实际使用尺寸
+## v0.6 社区方案、完整逐图复查与阅读版
+
+- **新增实际画法：** 渐变 GSEA 轨道、多通路对齐分面、供应区间曲线、双评分加差值森林图、无交叉边的相关/Mantel矩阵。5张完整示例，复用一个入口的4种绘图规则；不是5种新统计方法。
+- **32张具体修订：** 28张分类图换用更易区分的固定身份色；P10主体点、边际直方图和图例同步统一方向色；R05图形与色条同步改为以零为中性色的连续色阶；R08增强三组辨识；R21统一效应方向色。原图及精确源表保留。
+- **实际复查范围：** 438张既有图逐一查看完整图像或组合概览；修订图与新增图另行复看。当前443个导出中，317张独立图完成单图屏幕检查，126张组合完成概览和面板身份检查。屏幕图可能缩放，这不等于443张论文最终尺寸验收。
+- **完整阅读版：** 全部443个导出可从浏览页跳到阅读PDF。密集独立图使用统一比例放大与重叠分页，并有位置地图；组合使用概览及独立图卷号/页码。历史组合保留原组件版本，新组件单独标记。原组合字号预警仍保留。
+- **选图与交互：** `design` 从11类扩为14类比较结构；Studio优先显示5张社区方案与5张既有精修方案。全库浏览提供检索、原像素放大、原版对比、面板展开与阅读卷链接，均离线运行。
+
+![社区方案精修选览](docs/refined-alternatives-v060.jpg)
+
+本轮实际比较了 [GseaVis 作者图例](https://junjunlab.github.io/gseavis-manual/basic-usage.html#new-style-graphic)、[Cédric Scherer 的 doubledumbbell 教程](https://r-graph-gallery.com/web-lollipop-plot-with-r-mario-kart-64-world-records.html)、[ggprism 作者教程](https://csdaw.github.io/ggprism/articles/web-only/ex1-dose.html)，并参考 [linkET](https://github.com/Hy4m/linkET)、[corrmorant](https://github.com/r-link/corrmorant) 与 [ggdist lineribbon](https://mjskay.github.io/ggdist/articles/lineribbon.html)。实际查看范围、采用部分和边界逐项记录；独立实现，不复制第三方代码或参考图片，不声称运行了原生分析包。
+
+## v0.5 保留的设计升级
+
+### 优先好看，也检查实际使用尺寸
 
 - **画法优选：** 供应的分布轮廓加点区间、带分组留白的注释热图、对齐线性轮廓、紧凑区间森林图、区分六类身份的存储坐标图。前三种新增绘图规则，后两种是既有绘图器的新示例，共五张；不等于五种新统计方法。
 - **具体修订：** R01/R02 减少叠色发灰，R03 拉开28处标签与点的距离，R07 弱化非显著边，R16 提高点的可见度。原图和原始数值仍保留，支持原版/修正版对比。
@@ -23,7 +37,7 @@
 
 | 升级 | 实际实现 |
 |---|---|
-| 架构 | 122 个 Python 绘图函数统一登记；80 个固定别名；只在选定绘图时加载依赖 |
+| 架构 | 123 个 Python 绘图函数统一登记；81 个固定别名；只在选定绘图时加载依赖 |
 | 输入 | 一个 FigureSpec 保存数据、参数、课题主题和来源；变动使旧计划失效 |
 | 外观 | 论文、紧凑、报告、大字四种字号层级，复用15套现有色卡与固定分组颜色 |
 | 交互 | 离线 SVG 导入、字体/字号预览、修改前后比较、可拖动组图草案与重绘配置 |
@@ -92,7 +106,7 @@ v0.2.5 增量：新增八种冻结 QC / DE 模式；逐项审查用户提供的�
 |---|---|
 | 主目录 | 98 个画法与组合：72 个通用表达入口、26 个组合入口；另有15套色卡、3个结构示例和1个附表入口 |
 | 保留来源 | 260 个稳定编号；旧244个PNG/PDF原字节保留；包含42张实际组合、15套色卡、3个公共坐标结构示例 |
-| Python 绘图函数 | 122；28个历史R对应函数另行保留，函数数不等于入口数 |
+| Python 绘图函数 | 123；28个历史R对应函数另行保留，函数数不等于入口数 |
 | 历史 R 对应函数 | 28；不宣称所有 Python 新功能都有 R 对应 |
 | 示意图总览 | 主总览只放各入口的唯一代表；[260个来源档案](examples/overview/source-archive-v021.pdf)另列重复与历史示例 |
 | 横纵排版 | [42张组合的84种完整布局](examples/gallery/layout_review/index.html)，另有切片/影像对照横纵模式 |
@@ -127,7 +141,7 @@ v0.2.5 增量：新增八种冻结 QC / DE 模式；逐项审查用户提供的�
 
 任选一种方式：
 
-1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.5.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
+1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.6.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
 2. 在 Codex 中使用 skill-installer，指定仓库 `BoteXu/transcriptomics-figure-workbench` 和路径 `skills/transcriptomics-figure-workbench`。
 3. 克隆仓库，只复制 `skills/transcriptomics-figure-workbench/` 至自己的 skills 目录。
 

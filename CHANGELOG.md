@@ -1,5 +1,14 @@
 # Change log
 
+## 0.6.0
+
+- Broadened design selection to community authors, blogs and GitHub examples, with inspected-scope, author, adoption and code-reuse records. Independently implemented five frozen examples using four refined display views.
+- Added gradient GSEA with exact supplied ES segments, hit stems and ranked metric, aligned pathway facets, supplied ribbons, score/difference panels and separate pairwise/Mantel matrices. No enrichment, fitting or native R package analysis added.
+- Screen-inspected all 438 existing full images or composition overviews. Repaired 32 current versions and inspected all revised outputs; added five separately inspected alternatives. Current scope is 317 individual screen views and 126 composition overviews, not blanket manuscript-size acceptance.
+- Added uniform-scale vector PDF reading editions with full-region overlap, position maps, exact source bindings and cross-volume component navigation. Historical master compositions retain their original component versions; font warnings are not silently cleared.
+- Added three design structures (14 total), ten preferred Studio examples, PDF reading links, exact-channel rejection tests and bounded PDF execution/coverage tests. Registry now contains 123 Python functions and 81 fixed aliases.
+- Preserved the 108 historically audited renderer modules, original 260 IDs, reference colour cards, prior exports and private/customized profile boundaries.
+
 ## 0.5.0
 
 - Reworked the skill around the reader's comparison, compatible frozen channels, attractive defaults, explicit context and target-size inspection. Added a dependency-free design planner for eleven comparison structures.

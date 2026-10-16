@@ -123,6 +123,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_reference.plot_strip_effects | canonical ID | yes | palette, panel_order, contrast_order, eligibility_label |
 | figure_reference.plot_aligned_tracks | canonical ID | yes | palette, category_order, track_order, matrix_order, block_order, matrix_labels, matrix_limits, count_label |
 | figure_reference.plot_surface_grid | canonical ID | yes | axis_labels, value_label, limits |
+| figure_refined_views.plot_refined_views | refined | yes | view, contract, options |
 | figure_styles.plot_volcano_editorial | canonical ID | yes | none |
 | figure_styles.plot_volcano_marginal | volcano_marginal | yes | none |
 | figure_styles.plot_enrichment_lollipop | canonical ID | yes | score_type, denominator_label, count_label |
@@ -1669,6 +1670,16 @@ See the fixed implementation and its input contract.
 | limits | true | — |
 | view | false | [32, -132] |
 | size | false | [9, 6] |
+
+## figure_refined_views.plot_refined_views
+
+Compact GSEA, supplied nested ribbon, score shifts and association matrices.
+
+| Parameter | Required | Default |
+|---|---|---|
+| view | true | — |
+| contract | true | — |
+| options | true | — |
 
 ## figure_styles.plot_volcano_editorial
 

@@ -11,8 +11,9 @@ def build_studio(output,gallery=None,demo_svg=None):
     from .methods import catalog_methods
     data={'registry':read_registry(),'examples':[],'methods':[],'method_entries':catalog_methods(),'demo_svg':None}
     data['design_examples']=[]
-    designs=SKILL/'assets/design-gallery'
-    if designs.is_dir():
+    for gallery_name in ['refined-gallery','design-gallery']:
+        designs=SKILL/'assets'/gallery_name
+        if not designs.is_dir():continue
         prefix=Path(os.path.relpath(designs,output.resolve().parent)).as_posix()
         for row in json.loads((designs/'manifest.json').read_text(encoding='utf8'))['records']:
             key=row['id']

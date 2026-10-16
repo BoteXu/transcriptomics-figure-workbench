@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "M01",
+  "status": "RENDERED_PENDING_VISUAL_REVIEW",
+  "source_svg": "examples/gallery/figures/M01/M01.svg",
+  "source_sha256": "2b6c40d1e3e34bb6c9fd0013b2be64d98f89866fa18cc7184d897ab9c2563961",
+  "source_metadata": "examples/gallery/metadata/M01.json",
+  "source_metadata_sha256": "936603b01ada447c7b18305b09ae2845322ed5cc0a4962a95527be74d0452c04",
+  "input_table": "examples/gallery/figures/M01/M01.tsv",
+  "input_sha256": "79b2b2300b8899ad4c9eea995d4ab7b2efd145feb182d29b3c17d018ceae2494",
+  "frozen_graphical_geometry_sha256": "2bec156ca057ec9642e3a2605cca4a65b10018b492b6e7fa905ffdea67adc5da",
+  "coordinates_and_shapes_retained": true,
+  "route": "frozen SVG graphical primitives; publication layout and text finishing; no upstream result recomputation",
+  "width_pt": 488.5940246582031,
+  "height_pt": 383.21063232421875,
+  "raster_dpi": 300,
+  "axis_geometry": [],
+  "finishing_patch": {
+    "color_map": {
+      "#b6dbf1": "#a8adb3",
+      "#506aaa": "#4b70a6",
+      "#f6d3d9": "#d8795b",
+      "#e17692": "#218c8d"
+    }
+  },
+  "finisher_sha256": "f1e9720db6b9a8573cb220dbbb8e8cb897056599749093c13906c049a7caa0a7",
+  "changes": [
+    "compact provenance",
+    "normal-weight title hierarchy",
+    "dark readable body labels",
+    "tight outer canvas",
+    "independent compact guide lane",
+    "explicit consistent color map: {\"#b6dbf1\":\"#a8adb3\",\"#506aaa\":\"#4b70a6\",\"#f6d3d9\":\"#d8795b\",\"#e17692\":\"#218c8d\"}"
+  ],
+  "removed_page_furniture": [
+    "SYNTHETIC DEMO | M01",
+    "Software test fixture; not biological evidence",
+    "RNA and protein effects"
+  ],
+  "body_transform": {
+    "scale": 1,
+    "translate": [
+      -26.885631561279297,
+      -15.543998718261719
+    ]
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 21,
+    "issues": [],
+    "width_pt": 488.5940246582031,
+    "height_pt": 383.21063232421875
+  },
+  "output_sha256": {
+    "M01.svg": "8cf77928e34db28f794800eb37c3446b8fb1059675df4873a71e2ae2b5172678",
+    "M01.png": "128ff9feb3348cac1e8b841ac75806a2c21fbd80ef7cccf51d43160334d053ec",
+    "M01.pdf": "016d066f21e0480ba4b2e895a88d5472e5e64b7cd6a27afb51385dfe328b8b80"
+  },
+  "scientific_acceptance": false,
+  "visual_acceptance": false
+}
