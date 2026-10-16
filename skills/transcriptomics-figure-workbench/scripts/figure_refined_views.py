@@ -19,6 +19,9 @@ def _gsea(d,t,o):
     if o['line_encoding'] not in ['pathway','rank_metric'] or o['line_encoding']=='rank_metric' and len(names)!=1:raise ValueError('Gradient metric lines require one selected pathway')
     for key in ['metric_label','contrast','gene_set_version']:
         if not isinstance(o[key],str) or not o[key].strip():raise ValueError('State the contrast, metric and gene-set version')
+    if len(names)>1:
+        from figure_workbench.responsive import gsea_facets
+        return gsea_facets(c,h,m,s,names,t,o)
     v=m.value.to_numpy();limit=max(abs(v.min()),abs(v.max()))
     if not limit>0:raise ValueError('Nonzero supplied ranked metric required')
     norm=colors.TwoSlopeNorm(vmin=-limit,vcenter=0,vmax=limit)
@@ -115,7 +118,8 @@ def plot_refined_views(data,theme,*,view,contract,options):
         'ribbon':(_ribbon,'series_order interval_definition x_label y_label title subtitle'),
         'score_shift':(_shift,'feature_order label_a label_b score_label difference_label interval_definition title subtitle'),
         'association':(_association,'variable_order specimen_order correlation_label title subtitle')}
-    if view not in routes or not isinstance(options,dict) or set(options)!=set(routes[view][1].split()):raise ValueError('Use the exact documented refined-view options')
+    extra={'ncols','nrows','panel_width','panel_height'} if view=='gsea_strip' else set()
+    if view not in routes or not isinstance(options,dict) or set(options)-extra!=set(routes[view][1].split()):raise ValueError('Use the documented refined-view options')
     previous=set(plt.get_fignums())
     try:
         fig=routes[view][0](data,theme,copy.deepcopy(options));return _finish(fig,data,'refined_'+view,contract,options,theme)

@@ -66,7 +66,16 @@ def make_layout(request,base):
     fixed_rows=req.get('rows');fixed_rows=integer(fixed_rows,'rows') if fixed_rows is not None else None
     per_page=req.get('max_rows_per_page');per_page=integer(per_page,'page rows') if per_page is not None else None
     if fixed_rows and per_page and fixed_rows!=per_page:raise ValueError('Use rows or max_rows_per_page consistently')
-    limit=fixed_rows or per_page or 1000;occupied=set();cells=[];seen=set();cursor_page=0
+    limit=fixed_rows or per_page or 1000;occupied=set();reserved=set();cells=[];seen=set();cursor_page=0
+    # Explicit positions are reserved before auto placement, regardless of input order.
+    for item in panels:
+        if not any(k in item for k in ['row','column','page']):continue
+        if 'row' not in item or 'column' not in item:raise ValueError('Explicit placement needs row and column')
+        pg=integer(item.get('page',0),'page',0,499);rr=integer(item['row'],'row',0,999);cc=integer(item['column'],'column',0,cols-1)
+        rs=integer(item.get('row_span',1),'row span');cs=integer(item.get('column_span',1),'column span',1,cols)
+        slots={(pg,r,c) for r in range(rr,rr+rs) for c in range(cc,cc+cs)}
+        if rr+rs>limit or cc+cs>cols or reserved&slots:raise ValueError('Explicit panels overlap or exceed the grid')
+        reserved.update(slots)
     for i,item in enumerate(panels):
         k=item.get('id','')
         if not SAFE.fullmatch(k) or k in seen:raise ValueError('Safe unique panel IDs required')
@@ -84,7 +93,7 @@ def make_layout(request,base):
             while page<500 and not found:
                 for row in range(limit-rs+1):
                     for col in range(cols-cs+1):
-                        if not any((page,r,c) in occupied for r in range(row,row+rs) for c in range(col,col+cs)):found=True;break
+                        if not any((page,r,c) in occupied or (page,r,c) in reserved for r in range(row,row+rs) for c in range(col,col+cs)):found=True;break
                     if found:break
                 if not found:
                     if not per_page:raise ValueError('Requested row capacity is insufficient; allow more rows or pagination')
@@ -129,7 +138,26 @@ def make_layout(request,base):
             e['rect_pt']=[x,y,w,h];e['content_rect_pt']=[x,y+(gutter if e['label'] else 0),w,h-(gutter if e['label'] else 0)]
             e['uniform_scale']=min(w/e['source_viewbox'][2],e['content_rect_pt'][3]/e['source_viewbox'][3])
         pages.append(dict(page=index,width_pt=width,height_pt=height,columns=cols,rows=nrows,column_widths_pt=cw,row_heights_pt=rh,panels=selected))
-    return dict(schema_version=1,status='FLEXIBLE_LAYOUT_PLAN',id=req['id'],title=str(req.get('title','')),pages=pages,panel_count=len(cells),shared_data_axes_declared=False,shared_legends_inferred=False,source_content_preserved=True,scientific_analysis=False,visual_acceptance=False,target_size_assessed=False)
+    packing=req.get('packing','grid')
+    if packing not in {'grid','masonry'}:raise ValueError('Use grid or masonry packing')
+    if packing=='masonry':
+        if fixed_rows or per_page or req.get('canvas_height_pt') or req.get('row_heights_pt') or any(any(k in p for k in ['row','column','page']) or p.get('row_span',1)!=1 or p.get('column_span',1)!=1 for p in panels):raise ValueError('Masonry uses natural panel heights; use grid for fixed rows, spans and row-based pagination')
+        if req.get('packing_order','tall_first') not in {'input','tall_first'}:raise ValueError('Use input or tall_first packing order')
+        ends=[pad+heading]*cols;counts=[0]*cols
+        selected=sorted(cells,key=lambda p:p['source_viewbox'][3]/p['source_viewbox'][2],reverse=True) if req.get('packing_order','tall_first')=='tall_first' else cells
+        for e in selected:
+            col=min(range(cols),key=lambda i:ends[i]);w=cw[col];h=w*e['source_viewbox'][3]/e['source_viewbox'][2]+(gutter if e['label'] else 0)
+            x=pad+sum(cw[:col])+gap*col;y=ends[col];e.update(page=0,row=counts[col],column=col,row_span=1,column_span=1,rect_pt=[x,y,w,h],content_rect_pt=[x,y+(gutter if e['label'] else 0),w,h-(gutter if e['label'] else 0)],uniform_scale=w/e['source_viewbox'][2])
+            ends[col]=y+h+gap;counts[col]+=1
+        height=max(ends)-gap+pad;number(height,'masonry canvas height',120)
+        pages=[dict(page=0,width_pt=width,height_pt=height,columns=cols,rows=max(counts),column_widths_pt=cw,row_heights_pt=None,panels=cells,packing='masonry',packing_order=req.get('packing_order','tall_first'))]
+    if req.get('label_order','input') not in {'input','reading'}:raise ValueError('Use input or reading label order')
+    if req.get('label_order')=='reading':
+        custom={p['id'] for p in panels if 'label' in p}
+        for page in pages:
+            for i,e in enumerate(sorted(page['panels'],key=lambda e:(e['rect_pt'][1],e['rect_pt'][0]))):
+                if e['id'] not in custom:e['label']=chr(65+i) if i<26 else str(i+1)
+    return dict(schema_version=1,status='FLEXIBLE_LAYOUT_PLAN',id=req['id'],title=str(req.get('title','')),pages=pages,panel_count=len(cells),shared_data_axes_declared=False,shared_legends_inferred=False,source_content_preserved=True,scientific_analysis=False,visual_acceptance=False,target_size_assessed=False,visual_review_after_layout='REQUIRED')
 
 def export_layout(plan,output,base=None):
     """Export complete inert SVG panels at uniform scale into a fresh folder."""
@@ -190,6 +218,27 @@ def export_layout(plan,output,base=None):
     for name,raw in staged:(out/name).write_bytes(raw)
     for p in allpanels:
         if p.get('source_table'):shutil.copyfile(p['source_table'],out/(p['id']+'.tsv'))
-    receipt=dict(status='FLEXIBLE_LAYOUT_EXPORTED_UNREVIEWED',layout=plan,files={p.name:digest(p) for p in out.iterdir()},scientific_analysis=False,visual_acceptance=False,target_size_assessed=False,export_types=['svg'])
+    receipt=dict(status='FLEXIBLE_LAYOUT_EXPORTED_UNREVIEWED',layout=plan,files={p.name:digest(p) for p in out.iterdir()},scientific_analysis=False,visual_acceptance=False,target_size_assessed=False,export_types=['svg'],visual_review_after_layout='REQUIRED')
     (out/'layout-receipt.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     return receipt
+
+
+def inspect_layout(directory,review=None):
+    """Bind layout review to current output and source bytes, without inferring beauty."""
+    base=Path(directory);receipt=json.loads((base/'layout-receipt.json').read_text(encoding='utf8'));issues=[];current={}
+    for name,h in receipt['files'].items():
+        if Path(name).name!=name:raise ValueError('Unsafe receipt filename')
+        f=base/name
+        if not f.is_file():issues.append('missing output '+name)
+        else:
+            current[name]=digest(f)
+            if current[name]!=h:issues.append('changed output '+name)
+    for page in receipt['layout']['pages']:
+        for p in page['panels']:
+            source=(base/p['source_svg']).resolve()
+            if not source.is_file() or digest(source)!=p['source_svg_sha256']:issues.append('changed source '+p['id'])
+    bound=hashlib.sha256(json.dumps({'receipt':digest(base/'layout-receipt.json'),'files':current},sort_keys=True).encode()).hexdigest()
+    state='UNREVIEWED'
+    if review:
+        state='SCREEN_REVIEWED' if not issues and review.get('layout_sha256')==bound and review.get('screen_review_completed') is True else 'STALE_REVIEW'
+    return dict(status='LAYOUT_INSPECTED',issues=issues,layout_sha256=bound,review_status=state,visual_acceptance=False,target_size_assessed=False)

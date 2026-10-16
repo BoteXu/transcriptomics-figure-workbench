@@ -192,6 +192,7 @@ $('#spec-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;
   $('#font-family').value=spec.appearance?.font_family||spec.theme.font_family||'Arial';$('#preset').value=spec.appearance?.preset||'paper';
   $('#raster-dpi').value=String(spec.export?.raster_dpi||300);$('#include-tiff').checked=spec.export?.tiff===true;
   $('#target-width').value=String(spec.export?.target_width_mm||178);$('#minimum-text').value=String(spec.export?.minimum_text_pt||7);
+  for(const [id,key,factor] of [['native-width','width_inches',25.4],['native-height','height_inches',25.4],['native-columns','columns',1],['native-rows','rows',1]])$('#'+id).value=typeof spec.layout?.[key]==='number'?String(Math.round(spec.layout[key]*factor*100)/100):'';
   const row=DATA.registry.renderers.find(r=>r.id===spec.renderer||r.aliases.includes(spec.renderer));if(row)showRenderer(row);swatches();renderSVG();
   if(!state.expectedSvgHash||!state.sourceHash)message('配置已载入；SVG 与配置尚未做文件绑定。可载入对应导出记录核对，再准备重绘。');
   else if(state.expectedSvgHash===state.sourceHash)message('SVG 与导出记录哈希一致。外观修改仍需重绘与最终验收。');
@@ -199,6 +200,12 @@ $('#spec-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;
 $('#export-spec').onclick=()=>{
   const app=appearance();if(!state.spec){download('appearance.json',JSON.stringify(app,null,2));message('已导出外观设置；原数据与参数未知，未生成绘图结果。');return;}
   const spec=JSON.parse(JSON.stringify(state.spec));spec.appearance=app;spec.figure_id=spec.figure_id+'_restyled';
+  const native={...spec.layout};
+  for(const [id,key,factor,high] of [['native-width','width_inches',25.4,100],['native-height','height_inches',25.4,100],['native-columns','columns',1,64],['native-rows','rows',1,100]]){
+    if(!$('#'+id).value)continue;const v=Number($('#'+id).value)/factor;
+    if(!Number.isFinite(v)||v<(factor===1?1:.5)||v>high||(factor===1&&!Number.isInteger(v))){message('请检查单图画布或分面行列设置。');return;}native[key]=v;
+  }
+  if(Object.keys(native).length)spec.layout=native;
   const width=Number($('#target-width').value),minimum=Number($('#minimum-text').value);
   if(!Number.isFinite(width)||width<40||width>1000||!Number.isFinite(minimum)||minimum<5||minimum>30){message('请填写有效的目标宽度和最小字号。');return;}
   spec.export={...spec.export,raster_dpi:Number($('#raster-dpi').value),tiff:$('#include-tiff').checked,target_width_mm:width,minimum_text_pt:minimum,readability_policy:'block'};

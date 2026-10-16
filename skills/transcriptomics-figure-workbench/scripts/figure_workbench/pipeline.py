@@ -34,7 +34,7 @@ def render_plan(plan,output):
     from figure_design import geometry_signature
     validate_theme(theme)
     data=load_table(plan['input_path'],spec['renderer'],spec['parameters'],spec['input'].get('numeric_columns',[]))
-    fig,audit=render(spec['renderer'],data,spec['parameters'],theme)
+    fig,audit=render(spec['renderer'],data,spec['parameters'],theme,layout=spec.get('layout'))
     meta=copy.deepcopy(spec['provenance']);meta['palette']=theme['palette_name']
     meta['layout_audit']=audit
     settings={'raster_dpi':300,'tiff':False,**spec.get('export',{})}

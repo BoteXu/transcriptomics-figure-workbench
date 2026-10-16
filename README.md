@@ -2,7 +2,18 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.8.0**。重点是把目前已有的图改好，并将非常近似的画法合并为“基础图型＋扩展”。全部458份既有导出已完成同图型修订，包含332张独立图和126张组合图；本轮没有新增独立图型。
+本版为 **v0.8.1**。单图与组图按实际数据量和使用要求调整布局，变更后重新检查美观。v0.8的458份既有导出与合并目录继续保留。
+
+## v0.8.1 单图与组图布局复查
+
+- 单图增加统一画布设置；GSEA、特征和组成分面支持自动行列、自定义行列与面板大小，明确拒绝不适用或冲突的设置。
+- 修复GSEA最多四通路、部分矩阵小行列上限、森林图长表标题碰撞、少量散点过小和固定分面高度造成的留白。
+- 组成图可自动选择覆盖全部数据的共同零起点范围，也可指定显示到100%；分母和原始数值保持。
+- 组图支持按完整面板长宽比自然排高，另保留规则网格、跨行跨列和分页；先保留指定位置，再安放自动面板。
+- 实际生成并查看 **14张单图、6页组图**，含不同数据量、长标签、1/2/3/4/5列、混合长宽比和11面板分页。屏幕检查与最终印刷尺寸分别记录。
+- 调整布局使旧视觉记录失效；更新的历史绘图模块另存原始字节和哈希，旧图的验收不代表新代码已经验收。
+
+[查看本轮实际导出与请求配置](examples/responsive-v081/index.html) · [使用规则与实际检查范围](skills/transcriptomics-figure-workbench/references/responsive-layout-v081.md)
 
 [打开合并后的图库](examples/forms-v080/index.html) · [安装版离线图库](skills/transcriptomics-figure-workbench/assets/forms-gallery/index.html) · [使用与合并规则](skills/transcriptomics-figure-workbench/references/forms-v080.md) · [实际检查范围](skills/transcriptomics-figure-workbench/references/validation-v080.md)
 
@@ -169,7 +180,7 @@ v0.2.5 增量：新增八种冻结 QC / DE 模式；逐项审查用户提供的�
 
 任选一种方式：
 
-1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.8.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
+1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.8.1.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
 2. 在 Codex 中使用 skill-installer，指定仓库 `BoteXu/transcriptomics-figure-workbench` 和路径 `skills/transcriptomics-figure-workbench`。
 3. 克隆仓库，只复制 `skills/transcriptomics-figure-workbench/` 至自己的 skills 目录。
 

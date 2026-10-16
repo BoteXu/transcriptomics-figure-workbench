@@ -46,13 +46,27 @@ def load_table(path,adapter,params,numeric_columns=()):
     return data
 
 
-def render(adapter,data,params,theme):
+def render(adapter,data,params,theme,*,layout=None):
     import matplotlib.pyplot as plt
     from project_theme import validate_theme, render_with_theme
     from panel_layout_audit import audit_panel_layout
     row=resolve(adapter)
     validate_theme(theme);fn=load_callable(adapter);mode=row['theme_mode'];params=dict(params);page_layout=params.pop('page_layout',None)
     accepted=set(inspect.signature(fn).parameters)-{'data','theme'}
+    from figure_workbench.responsive import validate_layout,apply_native_layout
+    layout=validate_layout(layout);native=dict(layout)
+    if 'axis_groups' not in native and 'ncols' in accepted:
+        if row['module']=='figure_gsea' and params.get('mode','classic')!='facets' and any(k in native for k in ['columns','rows']):raise ValueError('Use GSEA facets for requested rows/columns')
+        for key,arg in [('columns','ncols'),('rows','nrows'),('panel_width_inches','panel_width'),('panel_height_inches','panel_height')]:
+            if key in native:
+                if arg not in accepted:raise ValueError('Renderer does not support '+arg)
+                if arg in params and params[arg]!=native[key]:raise ValueError('Conflicting layout and renderer facet settings')
+                params[arg]=native.pop(key)
+    elif 'axis_groups' not in native and row['module'] in {'figure_package_styles','figure_refined_views'} and params.get('view') in {'gsea','gsea_strip'}:
+        if params.get('view')=='gsea' and params['options'].get('mode','classic')!='facets' and any(k in native for k in ['columns','rows']):raise ValueError('Use GSEA facets for requested rows/columns')
+        params['options']=dict(params['options'])
+        for key,arg in [('columns','ncols'),('rows','nrows'),('panel_width_inches','panel_width'),('panel_height_inches','panel_height')]:
+            if key in native:params['options'][arg]=native.pop(key)
     if set(params)-accepted:raise ValueError('Unknown drawing parameters: '+str(sorted(set(params)-accepted)))
     before=set(plt.get_fignums())
     try:
@@ -66,6 +80,12 @@ def render(adapter,data,params,theme):
         if legend:legend.set_bbox_to_anchor((1.07,1));legend.set_loc('upper left')
     if fig._suptitle is not None and fig._suptitle.get_text().startswith('SYNTHETIC DEMO'):fig._suptitle.set_text('')
     fig._omics_spec['demo_label_style']='compact'
+    if native:
+        try:fig=apply_native_layout(fig,native)
+        except Exception:plt.close(fig);raise
+    if layout:
+        fig._omics_spec['requested_layout']=layout
+        fig._omics_spec['visual_review_after_layout']='REQUIRED'
     if page_layout:
         from figure_layout import apply_page_layout
         fig=apply_page_layout(fig,page_layout)

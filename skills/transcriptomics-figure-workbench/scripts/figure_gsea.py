@@ -28,8 +28,8 @@ def _gsea_input(data, order, universe):
     metric = checked(d[d.kind == 'metric'], ['rank', 'value'], ['rank', 'value'])
     summary = checked(d[d.kind == 'summary'], ['pathway', 'NES', 'padj', 'set_size'], ['NES', 'padj', 'set_size'])
     pathways = _order(curve.pathway, order)
-    if not 1 <= len(pathways) <= 4 or type(universe) is not int or universe < 3:
-        raise ValueError('Select one to four pathways and an explicit integer universe')
+    if not 1 <= len(pathways) <= 500 or type(universe) is not int or universe < 3:
+        raise ValueError('Select complete pathways within the render budget and an explicit integer universe')
     if summary.pathway.duplicated().any() or set(summary.pathway) != set(pathways) or set(hit.pathway) != set(pathways):
         raise ValueError('Every selected pathway needs one summary and its actual hit positions')
     if curve.duplicated(['pathway', 'rank']).any() or hit.duplicated(['pathway', 'rank']).any() or hit.duplicated(['pathway', 'gene']).any():
@@ -56,7 +56,8 @@ def _gsea_input(data, order, universe):
 
 def plot_gsea_tracks(data, theme, *, contract, curve_order, ranked_universe,
                      metric_label, contrast, gene_set_version, mode='classic',
-                     title='Gene set enrichment', show_leading_edge=True):
+                     title='Gene set enrichment', show_leading_edge=True,
+                     ncols='auto',nrows=None,panel_width=4.2,panel_height=3.6):
     """GSEA classic/overlay/facets: exact running ES, hit rugs, rank metric and supplied NES/FDR."""
     validate_contract(contract)
     _required_text(metric_label=metric_label, contrast=contrast, gene_set_version=gene_set_version)
@@ -65,6 +66,11 @@ def plot_gsea_tracks(data, theme, *, contract, curve_order, ranked_universe,
     curve, hit, metric, summary, pathways = _gsea_input(data, curve_order, ranked_universe)
     if mode == 'classic' and len(pathways) != 1:
         raise ValueError('Classic mode shows exactly one selected pathway')
+    if mode=='facets':
+        from figure_workbench.responsive import gsea_facets
+        options=dict(ncols=ncols,nrows=nrows,panel_width=panel_width,panel_height=panel_height,metric_label=metric_label,contrast=contrast,gene_set_version=gene_set_version,ranked_universe=ranked_universe,title=title,show_leading_edge=show_leading_edge)
+        fig=gsea_facets(curve,hit,metric,summary,pathways,theme,options)
+        return _done(fig,data,theme,'gsea_tracks',contract,mode=mode,curve_order=pathways,**options)
     pal = group_palette(theme, pathways)
     n = len(pathways)
     fig = _canvas(theme, (7.1, 5.4 if mode != 'facets' else 5.0 + .65 * n), title)
@@ -126,8 +132,8 @@ def plot_gsea_nes(data, theme, *, contract, pathway_order, contrast_order, nes_l
     validate_contract(contract)
     d = checked(data, ['pathway', 'contrast', 'status'])
     rows, columns = _order(d.pathway, pathway_order), _order(d.contrast, contrast_order)
-    if len(rows) > 24 or len(columns) > 8 or d.duplicated(['pathway','contrast']).any() or len(d) != len(rows)*len(columns):
-        raise ValueError('Complete selected pathway/contrast grid required; at most 24 by 8')
+    if d.duplicated(['pathway','contrast']).any() or len(d) != len(rows)*len(columns):
+        raise ValueError('Complete selected pathway/contrast grid required')
     if not set(d.status) <= {'reported','not_tested'}:
         raise ValueError('Use reported or not_tested; nonsignificant is not missing')
     z = checked(d[d.status == 'reported'], ['NES','padj','set_size'], ['NES','padj','set_size'])
@@ -138,7 +144,7 @@ def plot_gsea_nes(data, theme, *, contract, pathway_order, contrast_order, nes_l
     if d[d.status == 'not_tested'][['NES','padj','set_size']].notna().any().any():
         raise ValueError('Untested cells cannot have invented NES/FDR/size')
     height = max(3.3, len(rows)*.33+1.5)
-    fig = _canvas(theme, (7.1,height), title);ax = _axis(fig,[.32,.24,.38,.56])
+    fig = _canvas(theme, (max(7.1,len(columns)*.7+4),height), title);ax = _axis(fig,[.32,.24,.38,.56])
     norm = colors.TwoSlopeNorm(vmin=nes_limits[0],vcenter=0,vmax=nes_limits[1])
     cmap = colors.LinearSegmentedColormap.from_list('gsea_nes',theme['continuous']['diverging'])
     for i,p in enumerate(rows):
@@ -166,7 +172,7 @@ def plot_gsea_leading_edge(data, theme, *, contract, pathway_order, gene_order,
     validate_contract(contract);_required_text(value_label=value_label)
     d=checked(data,['pathway','gene','member','leading_edge','value'],['member','leading_edge','value'])
     rows,cols=_order(d.pathway,pathway_order),_order(d.gene,gene_order)
-    if len(rows)>16 or len(cols)>30 or d.duplicated(['pathway','gene']).any() or len(d)!=len(rows)*len(cols):
+    if d.duplicated(['pathway','gene']).any() or len(d)!=len(rows)*len(cols):
         raise ValueError('Complete bounded selected gene/set grid required')
     if not set(d.member)<= {0,1} or not set(d.leading_edge)<= {0,1} or (d.leading_edge>d.member).any():
         raise ValueError('Leading edge must be a supplied subset of pathway membership')
@@ -196,7 +202,7 @@ def plot_ora_terms(data, theme, *, contract, term_order, background_definition,
     """ORA bubble/lollipop with exact numerator/denominator, no GSEA/ORA conflation."""
     validate_contract(contract);_required_text(background_definition=background_definition)
     d=checked(data,['term','count','query_size','padj'],['count','query_size','padj']);order=_order(d.term,term_order)
-    if mode not in {'bubble','lollipop'} or len(d)>25 or d.term.duplicated().any():raise ValueError('Select unique bounded ORA terms and bubble/lollipop mode')
+    if mode not in {'bubble','lollipop'} or d.term.duplicated().any():raise ValueError('Select unique ORA terms and bubble/lollipop mode')
     if ((d['count']<=0)|(d['count']%1!=0)|(d.query_size<=0)|(d.query_size%1!=0)|(d['count']>d.query_size)|(d.padj<=0)|(d.padj>1)).any():raise ValueError('Positive exact ORA counts, query denominators and adjusted p required')
     if d.query_size.nunique()!=1 or not 0<ratio_max<=1 or not significance_max>0:raise ValueError('A shared selected-query denominator and declared scales are required')
     d=d.set_index('term').loc[order];ratio=d['count']/d.query_size;strength=-np.log10(d.padj)

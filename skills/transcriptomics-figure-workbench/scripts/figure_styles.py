@@ -181,7 +181,7 @@ def plot_enrichment_lollipop(data, *, score_type, denominator_label, count_label
                  color='-log10(FDR); sequential; zero included', area='count; zero anchored',
                  selection='all supplied rows; first appearance order', score_baseline=0)
 
-def plot_composition_panels(data, palette, *, unit_label, y_max=1):
+def plot_composition_panels(data, palette, *, unit_label, y_max=None,ncols='auto',nrows=None,panel_width=2.8,panel_height=2.9):
     d = checked(data, ['sample', 'group', 'celltype', 'count'], ['count']); _text(unit_label)
     palette_check(d.group, palette)
     if d.duplicated(['sample', 'celltype']).any() or ((d['count'] < 0) | (d['count'] % 1 != 0)).any():
@@ -190,18 +190,21 @@ def plot_composition_panels(data, palette, *, unit_label, y_max=1):
         raise ValueError('Sample group assignment is inconsistent')
     types = list(pd.unique(d.celltype)); groups = list(pd.unique(d.group))
     if len(d) != d['sample'].nunique() * len(types): raise ValueError('Explicit complete sample x celltype grid required, including zeros')
-    if len(types) > 12 or len(groups) > 4: raise ValueError('Split large panels explicitly; do not hide categories')
     denom = d.groupby('sample', sort=False)['count'].transform('sum')
     if (denom <= 0).any(): raise ValueError('Zero denominator')
     d['fraction'] = d['count'] / denom
+    if y_max is None:y_max=max(.05,min(1,float(np.ceil(d.fraction.max()*1.08*20)/20)))
     if not (np.isfinite(y_max) and 0 < y_max <= 1 and y_max >= d.fraction.max()):
         raise ValueError('Shared y_max must include all fractions and be in (0,1]')
-    ncols = min(3, len(types)); nrows = int(np.ceil(len(types) / ncols))
-    fig, axes = plt.subplots(nrows, ncols, figsize=(max(5.2, ncols*2.65), nrows*2.7+1),
+    from figure_workbench.responsive import grid_shape
+    nrows,ncols=grid_shape(len(types),ncols,nrows)
+    from figure_workbench.responsive import canvas_budget
+    fig, axes = plt.subplots(nrows, ncols, figsize=canvas_budget(max(5.2, ncols*panel_width), nrows*panel_height+1),
                              squeeze=False, sharey=True, layout='constrained')
     samples = {g: list(pd.unique(d.loc[d.group == g, 'sample'])) for g in groups}
     offsets = {s: x for g in groups for s, x in zip(samples[g], np.linspace(-.13, .13, len(samples[g])) if len(samples[g])>1 else [0])}
-    markers = ['o', 's', '^', 'D']
+    markers = ['o', 's', '^', 'D','P','X','v','<','>','h','p','*']
+    if len(groups)>len(markers):markers=['o']*len(groups)
     for ax, celltype in zip(axes.flat, types):
         sub = d[d.celltype == celltype]
         for i, g in enumerate(groups):

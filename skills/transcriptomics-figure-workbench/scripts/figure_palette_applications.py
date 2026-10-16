@@ -14,7 +14,7 @@ from figure_core import checked,palette_check,stamp
 from figure_reference import _new,_ax,_records,_types,_unique,_grid,_intervals
 from figure_reference_palettes import get_palette
 
-def plot_palette_plate(data,*,palette_name,panel_specs,size=(10,13),font_family='DejaVu Sans',layout='plate'):
+def plot_palette_plate(data,*,palette_name,panel_specs,size=None,font_family='DejaVu Sans',layout='plate',ncols='auto',nrows=None):
     """C01–C07 original application examples. panel_specs records exact mappings.
 
     Requires the full composite table. Empty panels and unsupported types fail.
@@ -22,18 +22,20 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=(10,13),font_family=
     """
     allowed=['point','line','bar','matrix','share','ellipse','density','box','radar','land','flow','schematic','arrow','annotation','volcano','row_tree','column_tree']
     _types(data,allowed); checked(data,['panel']); palettes=get_palette(palette_name,semantic='categorical'); colors=palettes['colors']
-    if len(panel_specs)>8 or len(panel_specs)<1 or set(data.panel)!={s['id'] for s in panel_specs}: raise ValueError('Panel specification mismatch')
+    if len(panel_specs)<1 or set(data.panel)!={s['id'] for s in panel_specs}: raise ValueError('Panel specification mismatch')
     if layout not in ('plate','panel') or (layout=='panel' and len(panel_specs)!=1): raise ValueError('Standalone mode requires exactly one panel')
-    ncols=2; nrows=int(np.ceil(len(panel_specs)/2)); fig=_new(size)
+    from figure_workbench.responsive import grid_shape
+    from figure_workbench.responsive import canvas_budget
+    nrows,ncols=grid_shape(len(panel_specs),ncols,nrows);fig=_new(canvas_budget(*(size or (ncols*5,nrows*3.7+1.5))))
     if layout=='plate':
         fig.text(.05,.935,palette_name+'  |  palette application reproduction',fontsize=16,weight='bold')
         for i,c in enumerate(colors):
             x=.05+i*.90/len(colors); fig.patches.append(Rectangle((x,.065),.88/len(colors),.035,fc=c,ec='white',transform=fig.transFigure))
             fig.text(x+.44/len(colors),.056,c,ha='center',fontsize=7)
     for k,spec in enumerate(panel_specs):
-        panel=spec['id']; typ=spec['type']; src=data[data.panel==panel]; left=.08+(k%2)*.47; height=.74/nrows; bottom=.16+(nrows-1-k//2)*height
+        panel=spec['id']; typ=spec['type']; src=data[data.panel==panel]; left=.08+(k%ncols)*(.90/ncols); height=.74/nrows; bottom=.16+(nrows-1-k//ncols)*height
         # The standalone layout reserves a right-hand lane for all semantic guides.
-        bounds=([.24,.18,.55,.55] if typ=='clustered_matrix' else [.15,.26,.61,.57] if typ=='bubble_matrix' else [.15,.27,.68,.50] if typ=='world_map' else [.15,.18,.61,.66] if typ in ('scatter','embedding','bubble','pca','donut','line','spectrum','bar','stacked','radar','volcano') else [.15,.18,.68,.66]) if layout=='panel' else spec.get('bounds',[left,bottom,.36,height*.72])
+        bounds=([.24,.18,.55,.55] if typ=='clustered_matrix' else [.15,.26,.61,.57] if typ=='bubble_matrix' else [.15,.27,.68,.50] if typ=='world_map' else [.15,.18,.61,.66] if typ in ('scatter','embedding','bubble','pca','donut','line','spectrum','bar','stacked','radar','volcano') else [.15,.18,.68,.66]) if layout=='panel' else spec.get('bounds',[left,bottom,.72/ncols,height*.72])
         if typ=='world_map':
             ax=fig.add_axes(bounds,projection='mollweide'); ax.tick_params(labelsize=6)
         elif typ=='radar': ax=fig.add_axes(bounds,projection='polar'); ax.tick_params(labelsize=6)

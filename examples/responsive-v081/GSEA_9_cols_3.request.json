@@ -1,0 +1,35 @@
+{
+  "renderer": "figure_gsea.plot_gsea_tracks",
+  "parameters": {
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Hand-authored frozen display fixtures",
+      "independent_unit": "Software fixtures; no biological units",
+      "denominator": "All selected fixture identities",
+      "value_definition": "Fixed supplied values",
+      "uncertainty_definition": "Fixed illustrative intervals; no inference"
+    },
+    "curve_order": [
+      "Pathway 1",
+      "Pathway 2",
+      "Pathway 3",
+      "Pathway 4",
+      "Pathway 5",
+      "Pathway 6",
+      "Pathway 7",
+      "Pathway 8",
+      "Pathway 9"
+    ],
+    "ranked_universe": 20,
+    "metric_label": "Rank metric",
+    "contrast": "Synthetic B versus A",
+    "gene_set_version": "Synthetic sets v1",
+    "mode": "facets",
+    "title": "Complete GSEA tracks"
+  },
+  "layout": {
+    "columns": 3,
+    "panel_width_inches": 4.2,
+    "panel_height_inches": 3.8
+  }
+}

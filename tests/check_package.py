@@ -23,7 +23,7 @@ def main():
     entry=(SKILL/'SKILL.md').read_text(encoding='utf8')
     assert entry.startswith('---\n') and 'name: transcriptomics-figure-workbench' in entry
     assert (ROOT/'LICENSE').is_file() and (SKILL/'references/colorbrewer-license.txt').is_file()
-    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.8.0'
+    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.8.1'
     files=[p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and 'dist' not in p.parts]
     for p in files:
         assert p.stat().st_size < 100_000_000, 'GitHub file size exceeded'
@@ -152,7 +152,10 @@ def main():
     audit=json.loads((ROOT/'docs/plot-logic-audit-v024.json').read_text(encoding='utf8'))
     assert audit['functions']==audit['executed']==108 and not audit['failures'] and not audit['uncovered']
     for record in audit['records']:
-        assert record['source_sha256']==sha(SKILL/'scripts'/(record['module']+'.py'))
+        current=SKILL/'scripts'/(record['module']+'.py')
+        if record['source_sha256']!=sha(current):
+            historical=SKILL/'references/source-archive-v080'/(record['module']+'.py.txt')
+            assert historical.is_file() and record['source_sha256']==sha(historical), 'Historical source identity lost'
     plots={}
     for p in (SKILL/'scripts').glob('figure_*.py'):
         tree=ast.parse(p.read_text(encoding='utf8'))

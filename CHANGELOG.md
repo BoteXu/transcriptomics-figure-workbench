@@ -1,5 +1,12 @@
 # Change log
 
+## 0.8.1
+
+- Audited at-use single-figure and composition layout; added native FigureSpec/Studio canvas and facet controls with explicit rejection of ignored or conflicting settings.
+- Made GSEA, feature, composition and palette facets count-driven; removed selected example-grid caps, repaired long-forest title spacing and adapted point size/panel aspect to supplied data.
+- Added natural-height composition packing, reading-order labels, reserved explicit placements and source/output-bound stale layout review checks.
+- Rendered and screen inspected 14 single figures and six composition pages; retained historical sources in a non-executable hash-verified archive. Screen review remains separate from paper-size and scientific acceptance.
+
 ## 0.8.0
 
 - Revised all 458 existing exports within their current forms, with explicit source geometry/table bindings and complete-component compositions.

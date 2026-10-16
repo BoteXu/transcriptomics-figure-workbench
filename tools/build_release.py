@@ -105,10 +105,10 @@ def main(output):
         report=json.loads((ROOT/'examples/forms-v080/manifest.json').read_text(encoding='utf8'))
         for row in report['records']:
             paths.update(row['assets'].values());paths.update(row.get('previous_assets',{}).values())
-        for folder in ['examples/forms-v080','examples/layout-v080','examples/review-v070','examples/clarity-v070','examples/review-v060','examples/refined-v060','examples/reading-v060','examples/design-v050','examples/gallery/repairs-v050','examples/gallery/repairs-v060','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
+        for folder in ['examples/responsive-v081','examples/forms-v080','examples/layout-v080','examples/review-v070','examples/clarity-v070','examples/review-v060','examples/refined-v060','examples/reading-v060','examples/design-v050','examples/gallery/repairs-v050','examples/gallery/repairs-v060','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
             paths.update(p.relative_to(ROOT).as_posix() for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
         for relative in sorted(paths):archive.write(ROOT/relative,relative)
-        archive.writestr('README.txt','Open examples/forms-v080/index.html for 90 consolidated base entries and all 458 revised exports. Open examples/layout-v080/index.html for actual asymmetric and paginated layouts. Exact previous assets and historical size warnings remain attached. Source files are in the versioned public repository. Screen review is not final manuscript-size, paper-proof or scientific acceptance.\n')
+        archive.writestr('README.txt','Open examples/responsive-v081/index.html for 14 data-dependent single figures and six composition pages. Open examples/forms-v080/index.html for 90 consolidated base entries and all 458 earlier revised exports. Exact previous assets and historical size warnings remain attached. Source files are in the versioned public repository. Screen review is not final manuscript-size, paper-proof or scientific acceptance.\n')
     assets.append(review)
     contact=output/'design-alternatives-v050.jpg';shutil.copy2(ROOT/'docs/design-alternatives-v050.jpg',contact);assets.append(contact)
     contact=output/'refined-alternatives-v060.jpg';shutil.copy2(ROOT/'docs/refined-alternatives-v060.jpg',contact);assets.append(contact)

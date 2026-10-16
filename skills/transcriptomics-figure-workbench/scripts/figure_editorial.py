@@ -19,9 +19,11 @@ GRID='#E6EBEF'
 
 
 def _canvas(theme,size,title):
+    from figure_workbench.responsive import canvas_budget
+    canvas_budget(*size)
     with plt.rc_context({'font.family':theme['font_family'],'font.size':9,'pdf.fonttype':42,'svg.fonttype':'none'}):
         fig=plt.figure(figsize=size,facecolor='white')
-    fig.text(.10,.94,title,ha='left',va='top',fontsize=10.5,fontweight='normal',color=INK,fontfamily=theme['font_family'])
+    fig.text(.10,1-.18/size[1],title,ha='left',va='top',fontsize=10.5,fontweight='normal',color=INK,fontfamily=theme['font_family'])
     badge=fig.text(.985,.992,'',ha='right',va='top',fontsize=6.2,color=MUTED,fontfamily=theme['font_family'])
     fig._software_band_artists=[badge]
     return fig
@@ -49,13 +51,17 @@ def _finish(fig,data,kind,contract,options,theme):
     line_factor=theme['line_width']/1.4
     for ax in fig.axes:
         for line in ax.lines:line.set_linewidth(line.get_linewidth()*line_factor)
+    from figure_layout import optimize_guide_layout
+    fig._omics_spec={}
+    fig=optimize_guide_layout(fig)
+    guide_layout=fig._omics_spec.get('guide_layout')
     text_audit=audit_text_geometry(fig)
     if text_audit['issues']:
         plt.close(fig)
         raise ValueError('Text layout needs repair: '+str(text_audit['issues']))
     return stamp(fig,data,'editorial_rebuild',kind_mode=kind,contract=contract,options=options,
                  visual_acceptance=False,scientific_analysis='none; frozen inputs only',
-                 design_system='editorial-v3-candidate',synthetic_only=False,text_geometry=text_audit,project_theme=copy.deepcopy(theme),
+                 design_system='editorial-v3-candidate',synthetic_only=False,text_geometry=text_audit,guide_layout=guide_layout,project_theme=copy.deepcopy(theme),
                  project_theme_sha256=hashlib.sha256(json.dumps(theme,sort_keys=True,separators=(',',':')).encode()).hexdigest())
 
 
@@ -192,11 +198,13 @@ def plot_editorial(data,theme,*,kind,contract,options=None):
         ax.legend(loc='upper left',bbox_to_anchor=(1.035,1),frameon=False,fontsize=7.5,handlelength=1.8,borderaxespad=0,labelspacing=.8)
     elif kind=='forest':
         d=checked(data,['label','group','estimate','lower','upper'],['estimate','lower','upper'])
-        if d.label.duplicated().any() or ((d.lower>d.estimate)|(d.upper<d.estimate)).any() or len(d)>35:raise ValueError('Unique labels and valid supplied intervals required')
+        if d.label.duplicated().any() or ((d.lower>d.estimate)|(d.upper<d.estimate)).any():raise ValueError('Unique labels and valid supplied intervals required')
         scale=options.get('effect_scale','difference');null=effect_reference(scale)
         if scale=='ratio' and (d[['estimate','lower','upper']]<=0).any().any():raise ValueError('Ratio intervals must be positive')
-        groups=list(dict.fromkeys(d.group));pal=group_palette(theme,groups);height=max(1.8,.31*len(d)+1.05)
-        fig=_canvas(theme,(6.3,height),title);bottom=.38/height;top=1-.60/height
+        groups=list(dict.fromkeys(d.group));pal=group_palette(theme,groups)
+        stride=max(.31,max(len(textwrap.wrap(str(s),28)) for s in d.label)*.16)
+        height=max(3.0,stride*len(d)+1.5)
+        fig=_canvas(theme,(6.3,height),title);bottom=.45/height;top=1-1.05/height
         left=fig.add_axes([.035,bottom,.31,top-bottom]);ax=_axis(fig,[.36,bottom,.37,top-bottom]);right=fig.add_axes([.755,bottom,.23,top-bottom])
         y=np.arange(len(d));bounds=(len(d)-.48,-.65)
         for a in [left,ax,right]:a.set_ylim(*bounds)
@@ -215,7 +223,7 @@ def plot_editorial(data,theme,*,kind,contract,options=None):
     else:
         d=checked(data,['feature','sample','value'],['value'])
         rows=_order(d.feature,options.get('row_order'));columns=_order(d['sample'],options.get('column_order'))
-        if d.duplicated(['feature','sample']).any() or len(d)!=len(rows)*len(columns) or len(rows)>40 or len(columns)>24:raise ValueError('Bounded complete matrix required; missing is not zero')
+        if d.duplicated(['feature','sample']).any() or len(d)!=len(rows)*len(columns):raise ValueError('Complete matrix required; missing is not zero')
         limits=options.get('limits')
         if not isinstance(limits,(list,tuple)) or len(limits)!=2 or not np.isfinite(limits).all() or limits[0]>=limits[1]:raise ValueError('Explicit common color limits required')
         if ((d.value<limits[0])|(d.value>limits[1])).any():raise ValueError('Color limits would clip supplied values')

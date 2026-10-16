@@ -17,6 +17,8 @@ TEAL='#218C8D';CORAL='#D8795B';BLUE='#4B70A6';GOLD='#C8A34E'
 
 
 def _new(theme, title, subtitle='', size=(6.7,4.3)):
+    from figure_workbench.responsive import canvas_budget
+    canvas_budget(*size)
     with plt.rc_context({'svg.fonttype':'none','pdf.fonttype':42,'font.family':theme['font_family']}):
         fig=plt.figure(figsize=size,facecolor='white')
     fig.text(.105,.942,title,fontsize=11.6,fontweight='bold',color=INK,va='top')
@@ -58,6 +60,9 @@ def _gsea(data,theme,o):
     c,h,m,s,names=_gsea_input(data,o['curve_order'],o['ranked_universe']);mode=o.get('mode','classic')
     if mode not in ['classic','overlay','facets'] or (mode=='classic' and len(names)!=1):raise ValueError('Select a valid GSEA arrangement')
     if any(not isinstance(o.get(k),str) or not o[k] for k in ['metric_label','contrast','gene_set_version']):raise ValueError('Declare contrast, rank metric and gene-set version')
+    if mode=='facets':
+        from figure_workbench.responsive import gsea_facets
+        return gsea_facets(c,h,m,s,names,theme,o)
     pal=group_palette(theme,names);n=len(names);facets=mode=='facets'
     fig=_new(theme,o.get('title','Gene set enrichment'),o['contrast']+'  /  complete ranked universe: '+str(o['ranked_universe']),size=(6.6,4.7 if not facets else 4.8+.30*n))
     top_low=.49;top_height=.31
@@ -97,7 +102,7 @@ def _gsea(data,theme,o):
 
 def _nes(data,theme,o):
     d=checked(data,['pathway','contrast','status']);rows,cols=_grid(d,'pathway','contrast',o['pathway_order'],o['contrast_order'])
-    if len(rows)>24 or len(cols)>10 or not set(d.status)<={'reported','not_tested'}:raise ValueError('Bounded NES grid and explicit test status required')
+    if not set(d.status)<={'reported','not_tested'}:raise ValueError('Explicit NES test status required')
     z=checked(d[d.status=='reported'],['NES','padj','set_size'],['NES','padj','set_size']);norm=_bounds(z.NES,o['nes_limits'],True)
     maximum=o['size_max'];alpha=o.get('alpha',.05)
     if not 0<alpha<1 or not np.isfinite(maximum) or maximum<=0 or ((z.padj<0)|(z.padj>1)|(z.set_size<=0)|(z.set_size%1!=0)|(z.set_size>maximum)).any():raise ValueError('Invalid NES support values or scale')
@@ -120,7 +125,7 @@ def _nes(data,theme,o):
 
 def _leading(data,theme,o):
     d=checked(data,['pathway','gene','member','leading_edge','value'],['member','leading_edge','value']);rows,cols=_grid(d,'pathway','gene',o['pathway_order'],o['gene_order'])
-    if len(rows)>18 or len(cols)>30 or not set(d.member)<={0,1} or not set(d.leading_edge)<={0,1} or (d.leading_edge>d.member).any() or (d.groupby('gene').value.nunique()!=1).any():raise ValueError('Explicit consistent membership, subset and gene effects required')
+    if not set(d.member)<={0,1} or not set(d.leading_edge)<={0,1} or (d.leading_edge>d.member).any() or (d.groupby('gene').value.nunique()!=1).any():raise ValueError('Explicit consistent membership, subset and gene effects required')
     norm=_bounds(d.value,o['value_limits'],True);cm=_cmap(theme)
     fig=_new(theme,o.get('title','Leading-edge gene programmes'),'Outlined cells identify the supplied leading-edge subset',size=(max(6.7,.29*len(cols)+3),max(3.7,.29*len(rows)+1.8)))
     ax=fig.add_axes([.32,.30,.47,.47]);lookup=d.set_index(['pathway','gene'])
@@ -174,7 +179,6 @@ def _ridge(data,theme,o):
 
 def _matrix(data,theme,o):
     d=checked(data,['feature','sample','value'],['value']);rows,cols=_grid(d,'feature','sample',o.get('row_order'),o.get('column_order'))
-    if len(rows)>36 or len(cols)>30:raise ValueError('Use an explicitly bounded matrix panel')
     signed=o.get('scale_type','signed')=='signed';norm=_bounds(d.value,o['limits'],signed)
     fig=_new(theme,o.get('title','Frozen activity scores'),o.get('subtitle','Fixed order  /  shared scale  /  supplied scores'),size=(max(6.4,len(cols)*.29+3),max(4.0,len(rows)*.27+1.8)))
     ax=fig.add_axes([.34,.25,.43,.50]);mat=d.pivot(index='feature',columns='sample',values='value').loc[rows,cols]
@@ -215,7 +219,7 @@ def _volcano(data,theme,o):
 
 def _forest(data,theme,o):
     d=checked(data,['label','group','estimate','lower','upper'],['estimate','lower','upper'])
-    if d.label.duplicated().any() or len(d)>30 or ((d.lower>d.estimate)|(d.upper<d.estimate)).any():raise ValueError('Unique effects and valid supplied intervals required')
+    if d.label.duplicated().any() or ((d.lower>d.estimate)|(d.upper<d.estimate)).any():raise ValueError('Unique effects and valid supplied intervals required')
     ratio=o.get('effect_scale','difference')=='ratio'
     if o.get('effect_scale','difference') not in ['ratio','difference']:raise ValueError('Declare ratio or difference effect scale')
     if ratio and (d.lower<=0).any():raise ValueError('Ratio intervals must be positive')
@@ -232,7 +236,7 @@ def _forest(data,theme,o):
 
 def _dot(data,theme,o):
     d=checked(data,['feature','group','fraction','value'],['fraction','value']);rows,cols=_grid(d,'feature','group',o.get('row_order'),o.get('column_order'))
-    if len(rows)>35 or len(cols)>20 or ((d.fraction<0)|(d.fraction>1)).any() or o.get('value_semantics') not in ['mean_all','mean_detected','scaled','signed_effect'] or not o.get('denominator_label'):raise ValueError('Declare dot value semantics and fraction denominator')
+    if ((d.fraction<0)|(d.fraction>1)).any() or o.get('value_semantics') not in ['mean_all','mean_detected','scaled','signed_effect'] or not o.get('denominator_label'):raise ValueError('Declare dot value semantics and fraction denominator')
     norm=_bounds(d.value,o['limits'],o.get('scale_type','sequential')=='signed');cm=_cmap(theme,o.get('scale_type','sequential')=='signed')
     if o.get('scale_type','sequential') not in ['signed','sequential'] or (o['value_semantics']=='signed_effect' and o.get('scale_type')!='signed'):raise ValueError('Signed effects require an explicit diverging scale')
     fig=_new(theme,o.get('title','Cell-type marker expression'),o['denominator_label'],size=(max(6.6,len(cols)*.34+3),max(4.4,len(rows)*.24+1.8)));ax=fig.add_axes([.23,.24,.51,.54])
@@ -296,7 +300,7 @@ def _network(data,theme,o):
 
 def _module(data,theme,o):
     d=checked(data,['row_id','column_id','association','pvalue'],['association','pvalue']);rows,cols=_grid(d,'row_id','column_id',o['row_order'],o['column_order']);norm=_bounds(d.association,o['association_limits'],True)
-    if len(rows)>20 or len(cols)>12 or ((d.pvalue<=0)|(d.pvalue>1)).any():raise ValueError('Bounded supplied association and probability grid required')
+    if ((d.pvalue<=0)|(d.pvalue>1)).any():raise ValueError('Supplied association and probability grid required')
     fig=_new(theme,o.get('title','Module–trait relationships'),o['association_definition'],size=(6.7,max(4.2,len(rows)*.39+1.8)));ax=fig.add_axes([.28,.24,.48,.53]);mat=d.pivot(index='row_id',columns='column_id',values='association').loc[rows,cols];im=ax.pcolormesh(np.arange(len(cols)+1),np.arange(len(rows)+1),mat,cmap=_cmap(theme),norm=norm,ec='white',lw=1.2)
     for i,r in enumerate(rows):
         for j,c in enumerate(cols):
@@ -357,7 +361,7 @@ def _roc(data,theme,o):
 DRAW={'gsea':_gsea,'nes':_nes,'leading':_leading,'ora':_ora,'ridge':_ridge,'heatmap':_matrix,'volcano':_volcano,'forest':_forest,'dot':_dot,'embedding':_embedding,'network':_network,'module':_module,'survival':_survival,'roc':_roc}
 
 OPTIONS={
-    'gsea':'curve_order ranked_universe mode metric_label contrast gene_set_version gene_labels',
+    'gsea':'curve_order ranked_universe mode metric_label contrast gene_set_version gene_labels ncols nrows panel_width panel_height',
     'nes':'pathway_order contrast_order nes_limits size_max alpha',
     'leading':'pathway_order gene_order value_limits value_label',
     'ora':'term_order mode significance_max ratio_max background_definition',

@@ -157,12 +157,17 @@ def plot_publication_forest(data,palette,*,x_label,interval_label,effect_scale,t
     fig.text(.32,.055,interval_label,color='#707A84',fontsize=8)
     return stamp(fig,data,'publication_grouped_forest',palette=palette,effect_scale=effect_scale,interval_label=interval_label,group_gaps=.45)
 
-def plot_feature_facets(data,*,value_label,limits,title='',ncols=3,point_size=2,continuous_colors=None):
+def plot_feature_facets(data,*,value_label,limits,title='',ncols='auto',point_size=None,continuous_colors=None,nrows=None,panel_width=2.8,panel_height=None):
     d=checked(data,['cell_id','x','y','feature','value'],['x','y','value'])
     if d.duplicated(['cell_id','feature']).any() or len(d)!=d.cell_id.nunique()*d.feature.nunique():raise ValueError('Complete cell-feature grid required')
     if (d.groupby('cell_id')[['x','y']].nunique()>1).any().any():raise ValueError('Coordinates must match across features')
     if len(limits)!=2 or limits[0]!=0 or not np.isfinite(limits).all() or limits[1]<=0 or (d.value<0).any() or d.value.max()>limits[1]:raise ValueError('Explicit nonnegative common limits must include all values')
-    feats=list(dict.fromkeys(d.feature));nrows=int(np.ceil(len(feats)/ncols));fig,axs=plt.subplots(nrows,ncols,figsize=(ncols*2.5,nrows*2.6),squeeze=False,layout='constrained')
+    from figure_workbench.responsive import grid_shape
+    feats=list(dict.fromkeys(d.feature));nrows,ncols=grid_shape(len(feats),ncols,nrows)
+    if point_size is None:point_size=max(.5,min(28,200/np.sqrt(d.cell_id.nunique())))
+    if panel_height is None:panel_height=max(1.8,panel_width*max(float(d.y.max()-d.y.min()),1)/max(float(d.x.max()-d.x.min()),1)+.65)
+    from figure_workbench.responsive import canvas_budget
+    fig,axs=plt.subplots(nrows,ncols,figsize=canvas_budget(ncols*panel_width,nrows*panel_height),squeeze=False,layout='constrained')
     norm=Normalize(*limits);artist=None
     cmap=LinearSegmentedColormap.from_list('project_features',continuous_colors) if continuous_colors is not None else 'magma'
     for ax,f in zip(axs.ravel(),feats):

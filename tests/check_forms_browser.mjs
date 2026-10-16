@@ -31,6 +31,10 @@ try{
  assert.equal(await page.locator('#preview-state').innerText(),'SAME_FORM_PREVIEW_UNREVIEWED');
  const texts=await page.frameLocator('#preview-content iframe').locator('body').textContent();assert.match(texts,/NES/);assert.match(texts,/FDR/);assert.match(texts,/leading edge/);assert.match(texts,/FROZEN RESULT/);
  assert.equal(await page.evaluate(()=>{try{FigureStudioCore.safeSVG('<svg xmlns="http://www.w3.org/2000/svg"><script>alert(1)</script></svg>');return false}catch{return true}}),true);
+ await page.locator('#spec-file').setInputFiles(path.join(root,'examples/workbench-v030/inputs/ma.spec.json'));await page.waitForFunction(()=>!document.getElementById('spec-file').value);
+ await page.locator('#native-width').fill('203.2');await page.locator('#native-height').fill('152.4');
+ const exported=page.waitForEvent('download');await page.locator('#export-spec').click();const redraw=await exported;await redraw.saveAs(path.join(output,'native-layout.spec.json'));
+ const nativeSpec=JSON.parse(await fs.readFile(path.join(output,'native-layout.spec.json'),'utf8'));assert.ok(Math.abs(nativeSpec.layout.width_inches-8)<1e-8);assert.ok(Math.abs(nativeSpec.layout.height_inches-6)<1e-8);
  await page.setViewportSize({width:1440,height:1050});await page.locator('[data-tab="board"]').click();
  const fixtureFiles=['P09','PKG14','REF01'].map(k=>path.join(root,'examples/forms-v080',k,k+'.svg'));await page.locator('#board-svg-files').setInputFiles(fixtureFiles);await page.waitForFunction(()=>document.querySelectorAll('.board-panel').length===3&&!document.getElementById('board-svg-files').value);
  await page.locator('#board-columns').selectOption('custom');await page.locator('#board-custom-columns').fill('5');await page.locator('#board-custom-columns').dispatchEvent('change');

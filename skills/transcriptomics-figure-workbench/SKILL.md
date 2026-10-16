@@ -61,6 +61,8 @@ Treat example dimensions and category counts as defaults. At use time adapt to t
 
 ### 5. Inspect all exports in scope
 
+For every use, adapt the single figure and its composition to actual data count, label lengths and the user's requested size/arrangement. Use [native layout controls, count-driven facets and composition packing](references/responsive-layout-v081.md). A supported row/column request must take effect; reject unsupported or conflicting settings. After reflow, inspect every changed single export and every composition page for appearance, complete content, readable guides, balance and unused space. Rerender visual failures and bind the new review to final hashes; earlier reviews cannot approve a new layout.
+
 Separate three records: file/encoding checks, visual inspection, and scientific interpretation. Screen every selected figure; enlarge dense or flagged figures and inspect all changed outputs individually. A contact sheet can find broad problems but cannot establish small-label or final-size acceptance. Keep the actual inspection scope and PNG hash; do not copy old review claims onto changed bytes.
 
 At intended size inspect hierarchy, labels/units, legends, clipping, overlap, category/scale meaning, point/line contrast and panel balance. Use the offline [review browser template](assets/studio/review-browser.html) through the repository's generated review gallery for original/revised comparisons, native pixel zoom and component reading. Do not infer shared axes merely from aligned panels.

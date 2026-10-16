@@ -590,6 +590,10 @@ GSEA classic/overlay/facets: exact running ES, hit rugs, rank metric and supplie
 | mode | false | "classic" |
 | title | false | "Gene set enrichment" |
 | show_leading_edge | false | true |
+| ncols | false | "auto" |
+| nrows | false | null |
+| panel_width | false | 4.2 |
+| panel_height | false | 3.6 |
 
 ## figure_gsea.plot_gsea_nes
 
@@ -1232,9 +1236,11 @@ C01–C07 original application examples. panel_specs records exact mappings.
 |---|---|---|
 | palette_name | true | — |
 | panel_specs | true | — |
-| size | false | [10, 13] |
+| size | false | null |
 | font_family | false | "DejaVu Sans" |
 | layout | false | "plate" |
+| ncols | false | "auto" |
+| nrows | false | null |
 
 ## figure_palette_applications.plot_palette_panel
 
@@ -1383,9 +1389,12 @@ See the fixed implementation and its input contract.
 | value_label | true | — |
 | limits | true | — |
 | title | false | "" |
-| ncols | false | 3 |
-| point_size | false | 2 |
+| ncols | false | "auto" |
+| point_size | false | null |
 | continuous_colors | false | null |
+| nrows | false | null |
+| panel_width | false | 2.8 |
+| panel_height | false | null |
 
 ## figure_publication.plot_raincloud
 
@@ -1732,7 +1741,11 @@ See the fixed implementation and its input contract.
 |---|---|---|
 | palette | true | — |
 | unit_label | true | — |
-| y_max | false | 1 |
+| y_max | false | null |
+| ncols | false | "auto" |
+| nrows | false | null |
+| panel_width | false | 2.8 |
+| panel_height | false | 2.9 |
 
 ## figure_styles.plot_sample_distribution
 

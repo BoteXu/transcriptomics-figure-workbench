@@ -1,6 +1,6 @@
 /* Render the selected frozen layout SVGs serially; no numerical research work. */
 import fs from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';import {pathToFileURL} from 'node:url';
-const root=process.cwd(),base=path.join(root,'examples/layout-v080'),manifest=JSON.parse(await fs.readFile(path.join(base,'manifest.json'),'utf8'));
+const root=process.cwd(),base=path.resolve(root,process.argv[2]||'examples/layout-v080'),manifest=JSON.parse(await fs.readFile(path.join(base,'manifest.json'),'utf8'));
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const {chromium}=await import(pathToFileURL(process.env.FIGURE_PLAYWRIGHT_MODULE));const browser=await chromium.launch({headless:true,...(process.platform==='win32'?{channel:'msedge'}:{})});const external=[];
 try{const context=await browser.newContext({viewport:{width:1500,height:1100},deviceScaleFactor:300/96}),page=await context.newPage();

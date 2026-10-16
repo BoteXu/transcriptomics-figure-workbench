@@ -49,8 +49,8 @@ def local_path(value,base):
 
 
 def validate_spec(spec):
-    fields = {'schema_version','figure_id','renderer','input','theme','parameters','provenance','appearance','export'}
-    if not isinstance(spec,dict) or set(spec)-fields or not (fields-{'appearance','export'})<=set(spec):
+    fields = {'schema_version','figure_id','renderer','input','theme','parameters','provenance','appearance','export','layout'}
+    if not isinstance(spec,dict) or set(spec)-fields or not (fields-{'appearance','export','layout'})<=set(spec):
         raise ValueError('FigureSpec has missing or unknown fields')
     if spec['schema_version']!=1 or not re.fullmatch(r'[A-Za-z][A-Za-z0-9_-]{0,79}',spec['figure_id']):
         raise ValueError('Unsupported schema or unsafe stable figure ID')
@@ -59,6 +59,8 @@ def validate_spec(spec):
         raise ValueError('This legacy callable needs its specialist input route')
     if not isinstance(spec['parameters'],dict):
         raise ValueError('Drawing parameters must be a JSON object')
+    from .responsive import validate_layout
+    validate_layout(spec.get('layout'))
     accepted={p['name'] for p in row['parameters']}
     required={p['name'] for p in row['parameters'] if p['required']}
     if set(spec['parameters'])-accepted or required-set(spec['parameters']):

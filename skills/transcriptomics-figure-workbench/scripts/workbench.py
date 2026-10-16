@@ -19,6 +19,7 @@ def main():
     form=commands.add_parser('form');form.add_argument('entry')
     lp=commands.add_parser('layout-plan');lp.add_argument('--request',required=True,type=Path);lp.add_argument('--output',required=True,type=Path)
     le=commands.add_parser('layout-export');le.add_argument('--plan',required=True,type=Path);le.add_argument('--output',required=True,type=Path)
+    li=commands.add_parser('layout-inspect');li.add_argument('--bundle',required=True,type=Path);li.add_argument('--record',type=Path)
     design=commands.add_parser('design');design.add_argument('--brief',required=True,type=Path);design.add_argument('--output',required=True,type=Path)
     method_spec=commands.add_parser('method-spec');method_spec.add_argument('--entry',required=True)
     method_spec.add_argument('--template',required=True,type=Path);method_spec.add_argument('--output',required=True,type=Path)
@@ -65,6 +66,9 @@ def main():
         from figure_workbench.layout import export_layout
         result=export_layout(read_json(args.plan),args.output,args.plan.resolve().parent)
         result={'status':result['status'],'files':list(result['files']),'analysis_performed':False,'visual_acceptance':False}
+    elif args.command=='layout-inspect':
+        from figure_workbench.layout import inspect_layout
+        result=inspect_layout(args.bundle,read_json(args.record) if args.record else None)
     elif args.command=='method-spec':
         from figure_workbench.methods import prepare_method_spec
         spec=prepare_method_spec(args.entry,read_json(args.template),args.template.resolve().parent,args.output)
