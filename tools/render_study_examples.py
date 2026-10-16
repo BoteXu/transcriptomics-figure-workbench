@@ -7,6 +7,7 @@ from figure_workbench.contracts import read_json,write_new
 
 
 def main(base):
+    base=base.resolve()
     records=[];requests=[]
     for assay in ['bulk','single_cell']:
         manifest=read_json(base/(assay+'.manifest.json'))

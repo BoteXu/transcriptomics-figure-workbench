@@ -23,8 +23,11 @@ await page.route('**/*',route=>{
 const checks=[];
 try{
   await page.goto(url,{waitUntil:'networkidle'});
-  const registry=JSON.parse(await page.locator('#studio-data').textContent()).registry;
-  assert.equal(await page.locator('#catalog-count').innerText(),'90');checks.push('90 consolidated base entries are the default');
+  const studioData=JSON.parse(await page.locator('#studio-data').textContent()),registry=studioData.registry;
+  assert.equal(await page.locator('#catalog-count').innerText(),String(studioData.design_examples.length));
+  assert.equal(studioData.design_examples.length,92);
+  assert.deepEqual(studioData.design_examples.slice(0,2).map(r=>r.id),['BulkMain','SingleCellMain']);
+  checks.push('two coherent study quickstarts followed by 90 consolidated base entries');
   await page.locator('#catalog-mode').selectOption('renderer');
   assert.equal(await page.locator('#catalog-count').innerText(),String(registry.counts.python_functions));checks.push('all source-derived callable entries visible');
   await page.waitForSelector('.svg-frame',{timeout:8000});
