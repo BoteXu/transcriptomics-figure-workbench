@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K13_vertical",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K13_vertical/ALT_K13_vertical.png",
+    "svg": "examples/gallery/publication-v030/ALT_K13_vertical/ALT_K13_vertical.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K13_vertical/ALT_K13_vertical.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K13_vertical/ALT_K13_vertical.json"
+  },
+  "source_sha256": {
+    "png": "c51b42e65565c91ebf3294c3ff91ccab9df7883ed8ea291e988ecb37ce5a3146",
+    "svg": "a1a3fba916964db3413b34fd2898f4293e54bccc57f3a3633a89217be25fa18a",
+    "pdf": "eeeb1cc043d2b6fc345b80d119793323bbdd2aafd6663cb81611cebd39b46aec",
+    "meta": "72019c696d42723da5140d1db3a27a272935c1529e5be60343fd402e65f52a6a"
+  },
+  "components": [
+    {
+      "id": "T29",
+      "svg_sha256": "00a1c81b38b3e38a85b7489f4a1bb9a4e1e52b194be489181bfe6640f9d72507",
+      "input_sha256": "1ab080a05132e6029978a2af999a43f948c59fd93958310787163fe60d7350a8"
+    },
+    {
+      "id": "AUX_bubble_hex",
+      "svg_sha256": "e207a0abc489047cc8fe96075cfa9769d28a8c1356788bb36c10ee26b7a2f970",
+      "input_sha256": "bc0c162070fa693864493290ab460db4e993a651d0313f1065f092c64c470a91"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "T29",
+      "x": 18,
+      "y": 64,
+      "scale": 1.1239160666465584,
+      "width_pt": 490,
+      "height_pt": 322.0903078240877
+    },
+    {
+      "id": "AUX_bubble_hex",
+      "x": 18,
+      "y": 433.0903078240877,
+      "scale": 0.9617076559232398,
+      "width_pt": 490,
+      "height_pt": 363.82822875559987
+    }
+  ],
+  "arrangement": "vertical",
+  "relationship": "气泡看附加量值，六边形看重叠区域到底有多少记录",
+  "width_pt": 526,
+  "height_pt": 822.9185365796875,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K13_vertical.svg": "5f798928110fdf33f033c91352c1d70652462d90200666a6c6468742025951c9",
+    "ALT_K13_vertical.png": "6a9efae897998daf0479d6cb9d8c39ca8b73282c240b71f74b7a1558e1f1621d",
+    "ALT_K13_vertical.pdf": "1b0d3c653281e2fc4014857f186a6b6d23d6783531a1899f7f95e08d8f84ac03"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 57,
+    "issues": [],
+    "width_pt": 526,
+    "height_pt": 822.9185180664062
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "6a9efae897998daf0479d6cb9d8c39ca8b73282c240b71f74b7a1558e1f1621d",
+    "svg_sha256": "5f798928110fdf33f033c91352c1d70652462d90200666a6c6468742025951c9",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

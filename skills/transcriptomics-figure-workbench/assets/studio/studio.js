@@ -138,14 +138,43 @@ function renderCatalog(){
   if(example&&!design&&!DATA.examples.length)message('此安装版未附带历史图库。可在构建 Studio 时选定现有完整图库，或导入本机 SVG。');
 }
 
-let dragged=null;
+let dragged=null,boardSerial=0;
+function boardColumns(){const x=$('#board-columns').value;return x==='auto'?Math.max(1,Math.floor((Number($('#board-width').value)-30)/338)):x==='custom'?Number($('#board-custom-columns').value):Number(x);}
+function boardRequest(){
+  const cols=boardColumns(),width=Number($('#board-width').value),gap=Number($('#board-gap').value);
+  if(!Number.isInteger(cols)||cols<1||cols>64||!Number.isFinite(width)||width<120||width>14400||!Number.isFinite(gap)||gap<0||gap>300)throw Error('请检查列数、画布宽度和间距。');
+  const req={id:'SelectedLayout',canvas_width_pt:width,columns:cols,gap_pt:gap,panels:[],source_files_selected:state.board.every(x=>x.svg_filename)};
+  for(const [id,key] of [['board-rows','rows'],['board-page-rows','max_rows_per_page']])if($('#'+id).value){const n=Number($('#'+id).value);if(!Number.isInteger(n)||n<1||n>1000)throw Error('行数须为正整数。');req[key]=n;}
+  if($('#board-weights').value.trim()){req.column_weights=$('#board-weights').value.split(/[,，\s]+/).map(Number);if(req.column_weights.length!==cols||req.column_weights.some(n=>!Number.isFinite(n)||n<=0))throw Error('请为每一列填写一个正的宽度占比。');}
+  req.panels=state.board.map((item,i)=>{const p={id:item.id,label:i<26?String.fromCharCode(65+i):String(i+1),svg:item.svg_filename||null,sha256:item.svg_sha256||null,row_span:item.row_span||1,column_span:item.column_span||1};
+    if(p.column_span>cols)throw Error('面板跨列数超过当前列数。');
+    if(item.grid_row||item.grid_column){if(!item.grid_row||!item.grid_column)throw Error('指定位置时，请同时填写行和列。');p.row=item.grid_row-1;p.column=item.grid_column-1;}
+    if(item.height_pt)p.height_pt=item.height_pt;
+    return p;});
+  const occupied=new Set();
+  for(const p of req.panels){if(p.row===undefined)continue;if(p.column+p.column_span>cols)throw Error('指定位置加跨列数超出画布。');for(let r=p.row;r<p.row+p.row_span;r++)for(let c=p.column;c<p.column+p.column_span;c++){const cell=r+','+c;if(occupied.has(cell))throw Error('指定位置的面板重叠，请调整行列。');occupied.add(cell);}}
+  return req;
+}
+function layoutBoard(){
+  const grid=$('#board-grid');let req;try{req=boardRequest();}catch(e){message(e.message);return;}
+  grid.style.gridTemplateColumns=(req.column_weights||Array(req.columns).fill(1)).map(v=>`minmax(0,${v}fr)`).join(' ');grid.style.gap=req.gap_pt+'px';grid.style.gridAutoRows='minmax(160px,auto)';
+  [...grid.children].forEach((panel,index)=>{const item=state.board[index];if(!item)return;panel.style.gridColumn=(item.grid_column?item.grid_column+' / ':'')+'span '+(item.column_span||1);panel.style.gridRow=(item.grid_row?item.grid_row+' / ':'')+'span '+(item.row_span||1);});
+}
 function renderBoard(){
-  const grid=$('#board-grid');grid.style.gridTemplateColumns='repeat('+$('#board-columns').value+',minmax(0,1fr))';grid.replaceChildren();
+  const grid=$('#board-grid');let req;try{req=boardRequest();}catch(e){message(e.message);return;}
+  grid.style.gridTemplateColumns=(req.column_weights||Array(req.columns).fill(1)).map(v=>`minmax(0,${v}fr)`).join(' ');grid.style.gap=req.gap_pt+'px';grid.style.gridAutoRows='minmax(160px,auto)';grid.replaceChildren();
   state.board.forEach((item,index)=>{const panel=document.createElement('article');panel.className='board-panel';panel.draggable=true;
+    panel.style.gridColumn=(item.grid_column?item.grid_column+' / ':'')+'span '+(item.column_span||1);panel.style.gridRow=(item.grid_row?item.grid_row+' / ':'')+'span '+(item.row_span||1);
     panel.ondragstart=()=>{dragged=index;};panel.ondragover=e=>e.preventDefault();panel.ondrop=e=>{e.preventDefault();if(dragged!==null&&dragged!==index){const [v]=state.board.splice(dragged,1);state.board.splice(index,0,v);renderBoard();}dragged=null;};
     const image=document.createElement('img');image.src=item.png;image.alt=item.title;const label=document.createElement('div');const span=document.createElement('span');span.textContent=String.fromCharCode(65+index)+' · '+item.id;
-    const remove=document.createElement('button');remove.textContent='移除';remove.onclick=()=>{state.board.splice(index,1);renderBoard();};label.append(span,remove);panel.append(image,label);grid.append(panel);});
+    const remove=document.createElement('button');remove.textContent='移除';remove.onclick=()=>{if(item.board_url)URL.revokeObjectURL(item.board_url);state.board.splice(index,1);renderBoard();};label.append(span,remove);panel.append(image,label);
+    const controls=document.createElement('div');controls.className='panel-layout-controls';
+    for(const [key,name,def] of [['row_span','跨行',1],['column_span','跨列',1],['grid_row','指定行',null],['grid_column','指定列',null],['height_pt','高度pt',null]]){const l=document.createElement('label');l.textContent=name;const inp=document.createElement('input');inp.type='number';inp.min='1';inp.value=item[key]||def||'';inp.placeholder=def?'':'自动';inp.setAttribute('aria-label',item.id+' '+name);inp.onchange=()=>{const v=inp.value?Number(inp.value):null;if(v!==null&&(!Number.isFinite(v)||v<1||!Number.isInteger(v))){message('布局使用正整数。');return;}item[key]=v;renderBoard();};l.append(inp);controls.append(l);}
+    panel.append(controls);grid.append(panel);});
 }
+$('#board-svg-files').onchange=async e=>{try{for(const file of e.target.files){if(state.board.length>=100)throw Error('浏览器草案最多100面板；更多面板请用有界布局命令分页。');if(file.size>5*1024**2)throw Error('单张SVG需不超过5MiB。');const raw=await file.text(),doc=safeSVG(raw),hash=await sha(raw);if(state.board.some(x=>x.svg_filename===file.name&&x.svg_sha256===hash))continue;
+ if(state.board.some(x=>x.svg_filename===file.name&&x.svg_sha256!==hash))throw Error('不同内容的SVG不能使用相同文件名，请先重命名。');
+ let id;do{id='Panel_'+(++boardSerial);}while(state.board.some(x=>x.id===id));const url=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(doc)],{type:'image/svg+xml'}));state.board.push({id,title:file.name,png:url,board_url:url,svg_filename:file.name,svg_sha256:hash});}renderBoard();message('已载入完整本机面板，未上传；布局请求需与这些源文件一起保存。');}catch(err){message(err.message);}e.target.value='';};
 function swatches(){
   $('#color-swatches').replaceChildren();for(const color of state.spec?.theme?.palette_colors||[]){if(!/^#[a-f0-9]{6}$/i.test(color))continue;const span=document.createElement('span');span.style.backgroundColor=color;span.title=color;$('#color-swatches').append(span);}
 }
@@ -186,9 +215,24 @@ $('#publication-finish').onclick=async()=>{
     message('已整理标题、正文和留白；冻结数值图形保持。请放大检查实际预览。');
   }catch(e){state.finished=null;state.publicationReceipt=null;message('未整理：'+e.message);}
 };
+$('#form-polish').onclick=async()=>{
+  if(!state.original){message('请先载入本机 SVG。');return;}
+  if(state.expectedSvgHash&&state.sourceHash!==state.expectedSvgHash){message('文件哈希不匹配，已阻止版式整理。');return;}
+  try{
+    const result=window.FigureFormPolish.finish(state.original,{id:'LOCAL_PREVIEW',kind:'frozen_display',profile:'journal',context:{title_en:state.spec?.title||'Frozen result'}},{});
+    const safeResult=window.FigurePublication.safeParse(result.svg);
+    for(const n of safeResult.querySelectorAll('text'))if(n.textContent==='SYNTHETIC DISPLAY · frozen values')n.textContent='FROZEN RESULT · source-bound preview';
+    result.svg=new XMLSerializer().serializeToString(safeResult);
+    state.finished=result.svg;state.publicationReceipt={status:'SAME_FORM_PREVIEW_UNREVIEWED',source_svg_sha256:await sha(state.original),changes:result.changes,retained_notes:result.retained_notes,geometry_audit:result.audit,output_svg_sha256:await sha(result.svg),visual_acceptance:false,scientific_acceptance:false,target_size_assessed:false};
+    if(renderSVG()===false)throw Error('预览未成功。');
+    $('#preview-state').textContent='SAME_FORM_PREVIEW_UNREVIEWED';
+    message('已应用同图型整理，保留数值图形和科学标注；请逐项检查标签、图例、留白与实际尺寸。');
+  }catch(e){state.finished=null;state.publicationReceipt=null;message('未整理：'+e.message);}
+};
 $('#export-svg').onclick=()=>{if(!state.edited){message('请先载入本机 SVG。');return;}download('preview-unreviewed.svg',state.edited,'image/svg+xml');if(state.publicationReceipt){sha(state.edited).then(hash=>download('preview-unreviewed.review.json',JSON.stringify({...state.publicationReceipt,output_svg_sha256:hash},null,2)));}message('已下载未验收 SVG 预览；正式输出仍需重绘并检查最终尺寸。');};
-$('#export-board').onclick=()=>{if(!state.board.length){message('先从历史示例中添加面板。');return;}download('composition-draft.json',JSON.stringify({schema_version:1,status:'LAYOUT_DRAFT',columns:Number($('#board-columns').value),panels:state.board.map((x,i)=>({id:x.id,label:String.fromCharCode(65+i),row:Math.floor(i/Number($('#board-columns').value)),column:i%Number($('#board-columns').value)})),shared_data_axes_declared:false,final_export_created:false},null,2));};
-$('#search').oninput=renderCatalog;$('#catalog-mode').onchange=renderCatalog;$('#board-columns').onchange=renderBoard;
+$('#export-board').onclick=()=>{if(!state.board.length){message('先选择面板。');return;}try{const req=boardRequest();download('composition-draft.json',JSON.stringify({...req,schema_version:1,status:'LAYOUT_DRAFT',shared_data_axes_declared:false,final_export_created:false},null,2));message(req.source_files_selected?'已导出源文件绑定请求；将请求保存在源SVG旁，再做layout-plan和layout-export。':'已导出参考草案；选择对应本机SVG后才能执行布局。');}catch(e){message(e.message);}};
+$('#search').oninput=renderCatalog;$('#catalog-mode').onchange=renderCatalog;$('#board-columns').onchange=layoutBoard;
+for(const id of ['board-custom-columns','board-width','board-rows','board-gap','board-weights','board-page-rows'])$('#'+id).onchange=layoutBoard;
 for(const id of ['font-family','text-scale'])$('#'+id).oninput=()=>{renderSVG();$('#scale-value').textContent=$('#text-scale').value+'%';};
 $('#preset').onchange=()=>message('场景字号已写入重绘设置；SVG 预览只应用所选文字缩放，最终排版请重新绘制。');
 $('#reset-edit').onclick=()=>{state.finished=null;state.publicationReceipt=null;$('#text-scale').value='100';$('#font-family').value=state.spec?.theme?.font_family||'Arial';renderSVG();};
@@ -199,4 +243,4 @@ $('#help').onclick=()=>$('#help-dialog').showModal();$('#close-help').onclick=()
 renderCatalog();swatches();
 if(DATA.demo_svg){state.original=DATA.demo_svg;renderSVG();$('#asset-label').textContent='SYNTHETIC DEMO · 冻结结果示例';}
 else if(DATA.design_examples?.length){showExample(DATA.design_examples[0],true);}
-window.FigureStudioCore={safeSVG,changedSVG,geometry,appearance};
+window.FigureStudioCore={safeSVG,changedSVG,geometry,appearance,boardRequest};

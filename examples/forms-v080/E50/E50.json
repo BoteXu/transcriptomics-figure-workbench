@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "E50",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/E50/E50.png",
+    "svg": "examples/gallery/publication-v030/E50/E50.svg",
+    "pdf": "examples/gallery/publication-v030/E50/E50.pdf",
+    "meta": "examples/gallery/publication-v030/E50/E50.json"
+  },
+  "source_sha256": {
+    "png": "07ea32f1eb3712dcd982e49331d12152c1fa5d2ecf644d713ea88261616cd503",
+    "svg": "8d085759a301e9c9515f35234d4acba405c39fb7b671db7949d4837d224d9e9a",
+    "pdf": "f4a1aedc7a9234e74220a9f4ad04e82757f0ef6914231b237b23bbf93158b43c",
+    "meta": "6ce30bf2f19fb89d0e134edf7f02c516c7695f0b0db45a1e29360f799c0d1748"
+  },
+  "input_table": "examples/gallery/publication-v030/E50/E50.tsv",
+  "input_sha256": "7d449c14828e0ade61584db5bf3dd6213091a9d803e3474c33b93e89376cdde4",
+  "profile": "journal",
+  "kind": "frozen_dynamics",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "0ea38bb6bee1c72868770ae6173ad18192b88fbff8a9b5e509757ae9dd7784b3",
+  "layout_groups": null,
+  "width_pt": 467.9845886230469,
+  "height_pt": 281.8267517089844,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 9,
+    "at_178mm_pt": 9.703529715724253,
+    "minimum_width_for_7pt_mm": 128.40688249564465
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Returned trajectory blocks in physical time",
+    "Synthetic independent run IDs G1/G7; frames and time blocks are not independent runs; Supplied block ranges, not",
+    "confidence intervals across independent trajectories; frozen summaries, no smoothing."
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 21,
+    "issues": [],
+    "width_pt": 467.9845886230469,
+    "height_pt": 281.8267517089844
+  },
+  "output_sha256": {
+    "E50.svg": "df52b0519b64248574efb300a7c90d60473b0ca6a76f6ff520fef98613afd7c5",
+    "E50.png": "0e3d2c8d415b22c8ab0294894bb64888cb2f2839c217f19eb36a359249f1c395",
+    "E50.pdf": "75a9aae1318ed1dd71a0ab7cfdab7b1175c67ad828f9cc4e0637e91a098a312c"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "0e3d2c8d415b22c8ab0294894bb64888cb2f2839c217f19eb36a359249f1c395",
+    "svg_sha256": "df52b0519b64248574efb300a7c90d60473b0ca6a76f6ff520fef98613afd7c5",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "R24",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/R24/R24.png",
+    "svg": "examples/gallery/publication-v030/R24/R24.svg",
+    "pdf": "examples/gallery/publication-v030/R24/R24.pdf",
+    "meta": "examples/gallery/publication-v030/R24/R24.json"
+  },
+  "source_sha256": {
+    "png": "8dc9d15aa3f9d628a59912d0e18ee8ff85d755c51d21db01cf56bc2d48e1cf8e",
+    "svg": "70e568507993de19715c707a065befd5fa6e4070b3b1fb9402431503ed7c8ee5",
+    "pdf": "ac8d05e9da966388176802bd0d52913448bd556b4f4e0ac09bab4a3f6be4cbb4",
+    "meta": "a795e28872f105fbcf8dddc7ec0976fdbb3ce16c457eae7681aef202ec1f8f74"
+  },
+  "input_table": "examples/gallery/publication-v030/R24/R24.tsv",
+  "input_sha256": "9df925fce91622f8c8f19138a1dfbecb6322ce00f1d8cf4ceb8557698127ba56",
+  "profile": "curve",
+  "kind": "reference_process_dashboard",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "58e364087880ef91d38bc0c246aed21e54fffba458d71b351da572004512cc2c",
+  "layout_groups": [
+    [
+      "axes_1"
+    ],
+    [
+      "axes_2"
+    ],
+    [
+      "axes_3"
+    ],
+    [
+      "axes_4"
+    ],
+    [
+      "axes_5"
+    ],
+    [
+      "axes_6"
+    ]
+  ],
+  "width_pt": 626.732666015625,
+  "height_pt": 892.0315551757812,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 6,
+    "at_178mm_pt": 4.8304512257985195,
+    "minimum_width_for_7pt_mm": 257.94691670735676
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels",
+    "complete linked axis groups reflowed without independent coordinate distortion"
+  ],
+  "retained_notes": [
+    "Illustrative geometry only; replace with rendered PDB/mmCIF panels for real structures",
+    "b Supplied value landscapes",
+    "d Supplied stage counts"
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 84,
+    "issues": [],
+    "width_pt": 626.732666015625,
+    "height_pt": 892.0315551757812
+  },
+  "output_sha256": {
+    "R24.svg": "744cb5fec4cbbc71138481329ce311f434207e69f6c53eb3cfbd1e2d07dace57",
+    "R24.png": "849f13089049e148df5a87481290dcd14a6bb22171538a71e8cbf2a328d5eded",
+    "R24.pdf": "91356ba9e0a8876fa9c42dabdf2a128ba5894edb86ee9c0c546843938fc6bdfe"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": true,
+    "png_sha256": "849f13089049e148df5a87481290dcd14a6bb22171538a71e8cbf2a328d5eded",
+    "svg_sha256": "744cb5fec4cbbc71138481329ce311f434207e69f6c53eb3cfbd1e2d07dace57",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 密集内容已另行放大；正式使用应选足够画布或独立面板。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

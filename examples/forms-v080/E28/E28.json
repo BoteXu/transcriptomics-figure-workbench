@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "E28",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/E28/E28.png",
+    "svg": "examples/gallery/publication-v030/E28/E28.svg",
+    "pdf": "examples/gallery/publication-v030/E28/E28.pdf",
+    "meta": "examples/gallery/publication-v030/E28/E28.json"
+  },
+  "source_sha256": {
+    "png": "ff2d07461d3ecd7d86074665cf6a88892d0e122d0c4ae27d1b8101c0d9c8d04e",
+    "svg": "2ef28f240c0c628a2278b9d583b6ab5f102e465f1eb1ec2959cdda363522caec",
+    "pdf": "380dc0d7b48e6a1cc088f1580f59412491ba3368ffc9f85c139f1e99b9c8069a",
+    "meta": "1185fd865e05234c36f018621859557e6517afc4d57dde59e4fab655fa8f2d6e"
+  },
+  "input_table": "examples/gallery/publication-v030/E28/E28.tsv",
+  "input_sha256": "5888986efd10441b40e1db20faf93b2cbcebec0748ead29938ced21e59fc41b6",
+  "profile": "journal",
+  "kind": "genome_association_overview",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "c1742de4233a5db1c3795a03b2e4b3f5d75907e64e3d4dab00e62bd5d8c46f11",
+  "layout_groups": null,
+  "width_pt": 555.4097290039062,
+  "height_pt": 329.57061767578125,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 10,
+    "at_178mm_pt": 9.084589318209614,
+    "minimum_width_for_7pt_mm": 137.15534696790905
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Global association overview",
+    "Supplied thresholds Illustrative threshold: 1e-05"
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 19,
+    "issues": [],
+    "width_pt": 555.4097290039062,
+    "height_pt": 329.57061767578125
+  },
+  "output_sha256": {
+    "E28.svg": "6ef2613a1b66319a5c7b9d30cd88e015f1c440f538d1f4eca3ae8f5b9b80a532",
+    "E28.png": "da9980d89f8527aa4158768b4ae82fb4628014a1f7c3614b80d66d8179ce0f8a",
+    "E28.pdf": "491cdd7296b9beb4f3c67b227cad4c6c7fba1f5708f284c7b826760ac9534a94"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "da9980d89f8527aa4158768b4ae82fb4628014a1f7c3614b80d66d8179ce0f8a",
+    "svg_sha256": "6ef2613a1b66319a5c7b9d30cd88e015f1c440f538d1f4eca3ae8f5b9b80a532",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K30_horizontal",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K30_horizontal/ALT_K30_horizontal.png",
+    "svg": "examples/gallery/publication-v030/ALT_K30_horizontal/ALT_K30_horizontal.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K30_horizontal/ALT_K30_horizontal.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K30_horizontal/ALT_K30_horizontal.json"
+  },
+  "source_sha256": {
+    "png": "2ff4503dc18b2d32c80dd85bc90ec35d9b2d3d9f29b2a4a27ef2b26f632f71e3",
+    "svg": "82b162be21a643dfb61d136a41a0807dba2f300427c3fef090e9a60e8b1bfc83",
+    "pdf": "2c8bdb4a0444c1828d3cc0504379521da498c3995efea71bb11a291ab8ea0ea2",
+    "meta": "fba915de9d2de2decc04df2bc12ec4c88f1ba18592255cca00c98e19b32f32ed"
+  },
+  "components": [
+    {
+      "id": "M11a",
+      "svg_sha256": "ce83bddb0dabfe1a181804e71b086d64e8298389b4f5a40dff2d3ef19ff49b82",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11b",
+      "svg_sha256": "da02f2d905880189c6a20ac9a8d35d0fc726e6927ecb3665510c1d852441b754",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11c",
+      "svg_sha256": "d736f7e35b35d8f276e54b375e12431b662e2176a897ff305cd9251dfd21b9bf",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11d",
+      "svg_sha256": "6b01f7be3dd9e069bafd0ca13fb33d5f117fabe4a5a1515a8750bdd0eb80c061",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M11a",
+      "x": 18,
+      "y": 64,
+      "scale": 0.6566976932010505,
+      "width_pt": 300,
+      "height_pt": 198.06698244323687
+    },
+    {
+      "id": "M11b",
+      "x": 340,
+      "y": 64,
+      "scale": 0.7484540636546843,
+      "width_pt": 300,
+      "height_pt": 225.7416988363193
+    },
+    {
+      "id": "M11c",
+      "x": 662,
+      "y": 64,
+      "scale": 0.6643410943867962,
+      "width_pt": 300,
+      "height_pt": 201.3839898824225
+    },
+    {
+      "id": "M11d",
+      "x": 984,
+      "y": 64,
+      "scale": 0.6669958312082046,
+      "width_pt": 300,
+      "height_pt": 207.84300900448443
+    }
+  ],
+  "arrangement": "horizontal",
+  "relationship": "同时检查残差形态、分布、尺度和高影响对象",
+  "width_pt": 1302,
+  "height_pt": 315.7416988363193,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K30_horizontal.svg": "7c3499b6f9e2c7df223406fcd198065cd1a24e43b3e3a0650776cc40839a6abd",
+    "ALT_K30_horizontal.png": "4eea0d603a5e25742c9eb0e9b08721ea4b44a423938f7a6cb04c55adfed0dffb",
+    "ALT_K30_horizontal.pdf": "893083975d52c062a7cb348a5a5da6a5396bdc47441e0f9afea4527ef1e7b435"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 85,
+    "issues": [],
+    "width_pt": 1302,
+    "height_pt": 315.74169921875
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "4eea0d603a5e25742c9eb0e9b08721ea4b44a423938f7a6cb04c55adfed0dffb",
+    "svg_sha256": "7c3499b6f9e2c7df223406fcd198065cd1a24e43b3e3a0650776cc40839a6abd",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

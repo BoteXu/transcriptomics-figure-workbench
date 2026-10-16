@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "E46",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/E46/E46.png",
+    "svg": "examples/gallery/publication-v030/E46/E46.svg",
+    "pdf": "examples/gallery/publication-v030/E46/E46.pdf",
+    "meta": "examples/gallery/publication-v030/E46/E46.json"
+  },
+  "source_sha256": {
+    "png": "983222dac3e0193c626bfc539b7629bf5185e63eca3e016a7d79171d46623053",
+    "svg": "c658d9c77e27164bc6fc8f626bf305e554ac8b0bab5a90cf94fed6ac4c73775d",
+    "pdf": "5713c35f2c2858bb6e9aed1feb23641614001d77f3363df97ddb1cacb0f9ad2f",
+    "meta": "b9f7bedc9843edcd0df4406f82c833080676d3664716d271aa05841099143d0a"
+  },
+  "input_table": "examples/gallery/publication-v030/E46/E46.tsv",
+  "input_sha256": "5cbda8be61d8ed94ff1a17eb4e2fb9ecc68435e43e15db0956c9173215c895ec",
+  "profile": "journal",
+  "kind": "frozen_dynamics",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "ff8371975077d4d5b528a84da390033bd94afdbcbf7fde6c12ce299030f0d6d3",
+  "layout_groups": null,
+  "width_pt": 468.2361145019531,
+  "height_pt": 281.8267517089844,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 9,
+    "at_178mm_pt": 9.698317198439385,
+    "minimum_width_for_7pt_mm": 128.47589684945564
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Decision curves with declared reference strategies",
+    "Same synthetic evaluation cohort; G1/G7=model, G3=treat all, G4=treat none; No uncertainty supplied: bounds equal the",
+    "frozen curves; opt-in decision convention; frozen summaries, no smoothing."
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 25,
+    "issues": [],
+    "width_pt": 468.2361145019531,
+    "height_pt": 281.8267517089844
+  },
+  "output_sha256": {
+    "E46.svg": "e0c1d1e5cda6c6716c9f76a1254bcafeaf88a2b48450ed485da27084bbfa9026",
+    "E46.png": "bf8f5c3babdabf344ece8ebd8242472d004d75a9de326e3f4d952b0b50877cf4",
+    "E46.pdf": "d3c8054aecd4ddf90e1c1c752b07f767a844c058e41b24970c16393ea7a09c20"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "bf8f5c3babdabf344ece8ebd8242472d004d75a9de326e3f4d952b0b50877cf4",
+    "svg_sha256": "e0c1d1e5cda6c6716c9f76a1254bcafeaf88a2b48450ed485da27084bbfa9026",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

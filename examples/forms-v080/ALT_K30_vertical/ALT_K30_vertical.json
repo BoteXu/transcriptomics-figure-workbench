@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K30_vertical",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K30_vertical/ALT_K30_vertical.png",
+    "svg": "examples/gallery/publication-v030/ALT_K30_vertical/ALT_K30_vertical.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K30_vertical/ALT_K30_vertical.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K30_vertical/ALT_K30_vertical.json"
+  },
+  "source_sha256": {
+    "png": "72e45a31de30253d7c02c6fdefbd22ab56260f31425e41333b7951c4f4717dfb",
+    "svg": "fdd433d03d439a0773d1a8bd0f7e7df5311abe74c431437427a1f82b6ffd9486",
+    "pdf": "e4b3c8e152229afb7569688a200c5ec46927b94527636e87a0ed8482e0896ddd",
+    "meta": "bb6d0051f070c16dd33f881f2320aba1b069c2d1b40c0f2ac4a2966c8ba6bb9c"
+  },
+  "components": [
+    {
+      "id": "M11a",
+      "svg_sha256": "ce83bddb0dabfe1a181804e71b086d64e8298389b4f5a40dff2d3ef19ff49b82",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11b",
+      "svg_sha256": "da02f2d905880189c6a20ac9a8d35d0fc726e6927ecb3665510c1d852441b754",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11c",
+      "svg_sha256": "d736f7e35b35d8f276e54b375e12431b662e2176a897ff305cd9251dfd21b9bf",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    },
+    {
+      "id": "M11d",
+      "svg_sha256": "6b01f7be3dd9e069bafd0ca13fb33d5f117fabe4a5a1515a8750bdd0eb80c061",
+      "input_sha256": "216af18261d3f18051735641f34da37325ca394d01296419568ee3073f76618e"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M11a",
+      "x": 18,
+      "y": 64,
+      "scale": 1.0726062322283825,
+      "width_pt": 490,
+      "height_pt": 323.5094046572869
+    },
+    {
+      "id": "M11b",
+      "x": 18,
+      "y": 434.5094046572869,
+      "scale": 1.222474970635984,
+      "width_pt": 490,
+      "height_pt": 368.71144143265485
+    },
+    {
+      "id": "M11c",
+      "x": 18,
+      "y": 850.2208460899417,
+      "scale": 1.0850904541651005,
+      "width_pt": 490,
+      "height_pt": 328.9271834746234
+    },
+    {
+      "id": "M11d",
+      "x": 18,
+      "y": 1226.1480295645651,
+      "scale": 1.0894265243067343,
+      "width_pt": 490,
+      "height_pt": 339.47691470732457
+    }
+  ],
+  "arrangement": "vertical",
+  "relationship": "同时检查残差形态、分布、尺度和高影响对象",
+  "width_pt": 526,
+  "height_pt": 1591.6249442718897,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K30_vertical.svg": "05a19ed199434c9d099401ec9040cbfcb79441ef98489c0fdc83692f1022a569",
+    "ALT_K30_vertical.png": "4efeea219a1b3d044a15c226714c04e9c781ceb0c1f8f9430a7b0b6a73ae8b21",
+    "ALT_K30_vertical.pdf": "69379ac5b2b49e134f08691dc509a1a8a479155ffeb1b704db087442e2cd1eec"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 85,
+    "issues": [],
+    "width_pt": 526,
+    "height_pt": 1591.625
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "4efeea219a1b3d044a15c226714c04e9c781ceb0c1f8f9430a7b0b6a73ae8b21",
+    "svg_sha256": "05a19ed199434c9d099401ec9040cbfcb79441ef98489c0fdc83692f1022a569",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

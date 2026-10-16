@@ -48,6 +48,10 @@ def main(output):
         key=row['id'];prefix='clarity-gallery/'+key+'/'+key
         page=page.replace(prefix+'.png','data:image/png;base64,'+base64.b64encode((ROOT/'examples/clarity-v070'/key/(key+'.png')).read_bytes()).decode())
         page=page.replace('clarity-gallery/index.html#'+key,'https://github.com/BoteXu/transcriptomics-figure-workbench/tree/v'+version+'/examples/clarity-v070#'+key)
+    for form in json.loads((SKILL/'references/form-catalog.json').read_text(encoding='utf8'))['forms']:
+        key=form['default']
+        page=page.replace('forms-gallery/'+key+'.jpg','data:image/jpeg;base64,'+base64.b64encode((SKILL/'assets/forms-gallery'/(key+'.jpg')).read_bytes()).decode())
+        page=page.replace('forms-gallery/index.html#'+form['id'],'https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/examples/forms-v080/index.html#'+form['id'])
     studio.write_text(page,encoding='utf8');assets.append(studio)
     package_examples=output/f'package-examples-v{version}.zip'
     with zipfile.ZipFile(package_examples,'x',compression=zipfile.ZIP_DEFLATED) as archive:
@@ -98,13 +102,13 @@ def main(output):
     review=output/f'figure-review-library-v{version}.zip'
     with zipfile.ZipFile(review,'x',compression=zipfile.ZIP_DEFLATED) as archive:
         paths=set()
-        report=json.loads((ROOT/'examples/review-v070/review-index.json').read_text(encoding='utf8'))
+        report=json.loads((ROOT/'examples/forms-v080/manifest.json').read_text(encoding='utf8'))
         for row in report['records']:
             paths.update(row['assets'].values());paths.update(row.get('previous_assets',{}).values())
-        for folder in ['examples/review-v070','examples/clarity-v070','examples/review-v060','examples/refined-v060','examples/reading-v060','examples/design-v050','examples/gallery/repairs-v050','examples/gallery/repairs-v060','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
+        for folder in ['examples/forms-v080','examples/layout-v080','examples/review-v070','examples/clarity-v070','examples/review-v060','examples/refined-v060','examples/reading-v060','examples/design-v050','examples/gallery/repairs-v050','examples/gallery/repairs-v060','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
             paths.update(p.relative_to(ROOT).as_posix() for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
         for relative in sorted(paths):archive.write(ROOT/relative,relative)
-        archive.writestr('README.txt','Open examples/review-v070/index.html for 458 exports, fifteen new clarity/extension examples and retained source-bound reading PDFs. Original size warnings remain attached to original exports. Exact full sources are in the versioned public repository. Overview and screen review are not paper proofs or scientific acceptance.\n')
+        archive.writestr('README.txt','Open examples/forms-v080/index.html for 90 consolidated base entries and all 458 revised exports. Open examples/layout-v080/index.html for actual asymmetric and paginated layouts. Exact previous assets and historical size warnings remain attached. Source files are in the versioned public repository. Screen review is not final manuscript-size, paper-proof or scientific acceptance.\n')
     assets.append(review)
     contact=output/'design-alternatives-v050.jpg';shutil.copy2(ROOT/'docs/design-alternatives-v050.jpg',contact);assets.append(contact)
     contact=output/'refined-alternatives-v060.jpg';shutil.copy2(ROOT/'docs/refined-alternatives-v060.jpg',contact);assets.append(contact)

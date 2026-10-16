@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "K28",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/K28/K28.png",
+    "svg": "examples/gallery/publication-v030/K28/K28.svg",
+    "pdf": "examples/gallery/publication-v030/K28/K28.pdf",
+    "meta": "examples/gallery/publication-v030/K28/K28.json"
+  },
+  "source_sha256": {
+    "png": "7c15a689c449f77a1c4ef7e5526b43b2d5c60ce29ac78d79217bd91320e7c7f5",
+    "svg": "dbc0ddbc537ed25119d42e1d27ccd6039b46aaa551076fb3859e5f896a2e890a",
+    "pdf": "493fc8e0704247acc9a01ee0a2ec35dbaf8faf197ab5ebe84fbbdc9286d2a365",
+    "meta": "337b4c8e7a4e0931f7d9dae9e810ce6061f782d50198a346f27ff0c2f6fbf582"
+  },
+  "components": [
+    {
+      "id": "E25",
+      "svg_sha256": "6f7207d55be2e8576f64c11971fa729466073cf0528740c379a146535c0617af",
+      "input_sha256": "8049625f92c105285abff7fe9bbc72bdc4dbbfc6ac21b873365f15e4fed8caed"
+    },
+    {
+      "id": "E18",
+      "svg_sha256": "e879ba1549c7b59336d326b2afda47d2bf272a743c13562229290f53a869bba8",
+      "input_sha256": "e4a004b89fedbe6485728c418d354c7a8891081a47692c71000fd4700205c06a"
+    },
+    {
+      "id": "E26",
+      "svg_sha256": "92fd499590fe96f77532b9dc831c54bab0daa4033756a9aa67dd4b251c594455",
+      "input_sha256": "863cf5d165ed577b07c16d101f9f8f1adeb1fd0a4426cfdbe390dabcfc7c2ebc"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E25",
+      "x": 18,
+      "y": 64,
+      "scale": 0.7859515894026,
+      "width_pt": 340,
+      "height_pt": 167.73427291901436
+    },
+    {
+      "id": "E18",
+      "x": 380,
+      "y": 64,
+      "scale": 0.7399306819735009,
+      "width_pt": 340,
+      "height_pt": 189.25016560427994
+    },
+    {
+      "id": "E26",
+      "x": 18,
+      "y": 300.2501656042799,
+      "scale": 0.6043517194735963,
+      "width_pt": 340,
+      "height_pt": 123.43593387472886
+    }
+  ],
+  "arrangement": "default",
+  "relationship": "向量和marker数据对应哪个已有亚群或身份；坐标中已计算局部方向与幅度；每个身份中的已有连续特征位置，与分类/向量图共同查询",
+  "width_pt": 738,
+  "height_pt": 449.6860994790088,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "K28.svg": "14586ca462ba12490f836c824e32285fb41bce4ea5d659db438545eb8aba5006",
+    "K28.png": "ee20bb303598d5caf778a0d9b297367f6ae585cabc9c951fcf2eaf6a2ae47cd1",
+    "K28.pdf": "ac457c9ce4ca177fa7a6501beddeeaf638ce35be5780453f1911ea479ba3c001"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 57,
+    "issues": [],
+    "width_pt": 738,
+    "height_pt": 449.68609619140625
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "ee20bb303598d5caf778a0d9b297367f6ae585cabc9c951fcf2eaf6a2ae47cd1",
+    "svg_sha256": "14586ca462ba12490f836c824e32285fb41bce4ea5d659db438545eb8aba5006",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

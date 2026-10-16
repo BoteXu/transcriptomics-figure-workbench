@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "P32",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/P32/P32.png",
+    "svg": "examples/gallery/publication-v030/P32/P32.svg",
+    "pdf": "examples/gallery/publication-v030/P32/P32.pdf",
+    "meta": "examples/gallery/publication-v030/P32/P32.json"
+  },
+  "source_sha256": {
+    "png": "dec9a93abe0c5aa716849f008b30067f6961e6e72c297d82bae142c5bc7c2c1a",
+    "svg": "de93449e023354b51a13779a62c8ea67533f2b4cd7609d039f81fe2f40240f0b",
+    "pdf": "2f8c7d653e62e37805b49a651d18e6f3b1816d928e2ebf4d4d0707e18c84093e",
+    "meta": "ac4826caada781f3bff28e19dbb97d6fcb38699c45d454fb24b30f85113ec4dd"
+  },
+  "input_table": "examples/gallery/publication-v030/P32/P32.tsv",
+  "input_sha256": "ca8bcf126bc6d38dc1a26d703916f9d4ab94dd864c33071f6499397b9fd493cf",
+  "profile": "journal",
+  "kind": "availability_counts",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "fcf104e42837c349ad359140f0263973a3ff5849d5fb8c1ce68589c5ba3c5451",
+  "layout_groups": null,
+  "width_pt": 422.9305114746094,
+  "height_pt": 342.0262908935547,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 8.5,
+    "at_178mm_pt": 10.140717638659357,
+    "minimum_width_for_7pt_mm": 122.87098846435545
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Availability, not assigned target-drug duration. Reports are not patients; clusters overlap. No risk",
+    "estimate or confidence interval. All returned clusters and literature zeroes retained."
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 28,
+    "issues": [],
+    "width_pt": 422.9305114746094,
+    "height_pt": 342.0262756347656
+  },
+  "output_sha256": {
+    "P32.svg": "95a7763c627cf70f6c54d10aa1a75700d7c3d53968c1b2ab9172bb89f590a3a0",
+    "P32.png": "1e6488941073489f84810144abca71ed2d8ba27b3123a1457fcaf4697135f403",
+    "P32.pdf": "96b2dbfbd202539cf47d65f14b717865da68e1c44102d61945415aaa8bf7c1b1"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "1e6488941073489f84810144abca71ed2d8ba27b3123a1457fcaf4697135f403",
+    "svg_sha256": "95a7763c627cf70f6c54d10aa1a75700d7c3d53968c1b2ab9172bb89f590a3a0",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

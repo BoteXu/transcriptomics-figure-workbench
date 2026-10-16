@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "ALT_E41_horizontal",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_E41_horizontal/ALT_E41_horizontal.png",
+    "svg": "examples/gallery/publication-v030/ALT_E41_horizontal/ALT_E41_horizontal.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_E41_horizontal/ALT_E41_horizontal.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_E41_horizontal/ALT_E41_horizontal.json"
+  },
+  "source_sha256": {
+    "png": "569f50368e4168bc70efc3531845202b7f0afd0620093877b2e7d443324ee648",
+    "svg": "6370e835037ae6c27f99db13af8dde343803206f733e5817a4a4f266513cc193",
+    "pdf": "6b5dfa1b49f4cc46bd57cc26fc1ab8fce0b5fbd5b817def0ee6c66eeebcacb4b",
+    "meta": "e87b331e80df24f7575b8455c98f6e68d46c0d7d747fc0d58e3ce938e399b766"
+  },
+  "input_table": null,
+  "input_sha256": null,
+  "profile": "journal",
+  "kind": "slice_overlay",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "08c4c06aba7e55b41371cd837662b8185e0fff8c0a2b183b344f604d8e526420",
+  "layout_groups": null,
+  "width_pt": 982.1277465820312,
+  "height_pt": 311.6669921875,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 9,
+    "at_178mm_pt": 4.623738997303071,
+    "minimum_width_for_7pt_mm": 269.47887861463755
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Explicit supplied slice planes and u/v orientation; procedural background, not clinical anatomy."
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 54,
+    "issues": [],
+    "width_pt": 982.1277465820312,
+    "height_pt": 311.6669921875
+  },
+  "output_sha256": {
+    "ALT_E41_horizontal.svg": "26edf16e91fc7fa21274883aee581e61bf9c4d0286a4bf7d17ffe9f786bcd5b1",
+    "ALT_E41_horizontal.png": "1e97e0d50b6adcc21fb1f03bc0f92e03e92971facfaacbabf8f205f9f9c47ab6",
+    "ALT_E41_horizontal.pdf": "cd7bb1d0d279ccec10812c7a7f94d94a6ed7329e6fc2f23563d4d90bf5b4713c"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "1e97e0d50b6adcc21fb1f03bc0f92e03e92971facfaacbabf8f205f9f9c47ab6",
+    "svg_sha256": "26edf16e91fc7fa21274883aee581e61bf9c4d0286a4bf7d17ffe9f786bcd5b1",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K36_horizontal",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K36_horizontal/ALT_K36_horizontal.png",
+    "svg": "examples/gallery/publication-v030/ALT_K36_horizontal/ALT_K36_horizontal.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K36_horizontal/ALT_K36_horizontal.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K36_horizontal/ALT_K36_horizontal.json"
+  },
+  "source_sha256": {
+    "png": "384f65b2445233586c32fcd75d2abf4fd34d5d8412dedab6742347985fef97da",
+    "svg": "f92faf2d3bb0db49758154c0c41aef874d1f5c3fab880628d17fb993c0e51337",
+    "pdf": "bb82ce3494e57d62be758208cd1360fb7d951e483165ac9a43fe1f038e18377f",
+    "meta": "1519ef0adbad943c028807ce311469d127e53df69cad62a1787d6343346ccf49"
+  },
+  "components": [
+    {
+      "id": "M09",
+      "svg_sha256": "248cb741a5eb75488b68ce9850a26a3188698b5bdf52798b25c55a89c8c49514",
+      "input_sha256": "bce2b60cd33080d2dec4b3ece8925cdc0b1f4c88ad2269baf2e6d0596144876c"
+    },
+    {
+      "id": "M10",
+      "svg_sha256": "90b063b3054ff101ef0dbd5cad008b588b2e18f5f95de55f5a92827d11759716",
+      "input_sha256": "314fcb38df709ac3a0c2d20e9f52dcaf37ae91f680e262aa56799fd5450a40c6"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M09",
+      "x": 18,
+      "y": 64,
+      "scale": 0.6465696197844807,
+      "width_pt": 340,
+      "height_pt": 190.4646348624309
+    },
+    {
+      "id": "M10",
+      "x": 380,
+      "y": 64,
+      "scale": 0.7814562382907329,
+      "width_pt": 340,
+      "height_pt": 185.32727870844022
+    }
+  ],
+  "arrangement": "horizontal",
+  "relationship": "将数量变化定位到功能图中的位置；各样本标记组成",
+  "width_pt": 738,
+  "height_pt": 280.4646348624309,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K36_horizontal.svg": "e3ee38f0e070728d10bae2166a561b1cc7994cf759c15b8869683cebe4311b00",
+    "ALT_K36_horizontal.png": "380a221c7b50000e3ccb1ca4309bae114abd5b296885a08f4cae381e5a79f156",
+    "ALT_K36_horizontal.pdf": "ccd0130af61f44f7b78c1709ad5b70f5997e4fb88271e60e2a4fed25fdb8eb95"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 32,
+    "issues": [],
+    "width_pt": 738,
+    "height_pt": 280.4646301269531
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "380a221c7b50000e3ccb1ca4309bae114abd5b296885a08f4cae381e5a79f156",
+    "svg_sha256": "e3ee38f0e070728d10bae2166a561b1cc7994cf759c15b8869683cebe4311b00",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

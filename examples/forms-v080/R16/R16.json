@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "R16",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/repairs-v050/R16/R16.png",
+    "svg": "examples/gallery/repairs-v050/R16/R16.svg",
+    "pdf": "examples/gallery/repairs-v050/R16/R16.pdf",
+    "meta": "examples/gallery/repairs-v050/R16/R16.json"
+  },
+  "source_sha256": {
+    "png": "52dedfde0ef13cc7ee7e90863aa3c6ff5d48d7740d0744a0f3782bb8b5374cf1",
+    "svg": "1f843c30ad2da7e93aff06ce6dc480a50a2e9a12700ca5c89fee5d2a4096899b",
+    "pdf": "f5b23003dcddd7c8e5120efb2033defbedbe4395927acb12be343304638af6fa",
+    "meta": "9790fe76a9cec2588753f96c59f528597e82119839cea1caff630373dbd51bdb"
+  },
+  "input_table": "examples/gallery/repairs-v050/R16/R16.tsv",
+  "input_sha256": "d3859263a355de8643f687e6d9a454336f016e12c7d3ea5e5fe6bb1d7b23401a",
+  "profile": "effects",
+  "kind": "reference_effect_distribution_forest",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "271ff2dd9e206f01a745f6bc71e3a785506117f7a52f5dea988f979d6f3d1e65",
+  "layout_groups": [
+    [
+      "axes_1"
+    ],
+    [
+      "axes_2",
+      "axes_3"
+    ]
+  ],
+  "width_pt": 780.095458984375,
+  "height_pt": 656.1988525390625,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 7,
+    "at_178mm_pt": 4.52761064464516,
+    "minimum_width_for_7pt_mm": 275.2003424750434
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels",
+    "complete linked axis groups reflowed without independent coordinate distortion"
+  ],
+  "retained_notes": [
+    "Supplied interval; n(k) labels are fixture values; meanings must be supplied"
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 78,
+    "issues": [],
+    "width_pt": 780.095458984375,
+    "height_pt": 656.1988525390625
+  },
+  "output_sha256": {
+    "R16.svg": "ed6472fc9a15d677f8c39dbd5ac0cca839ddafb0ebb89dc7ea0ff58a67fc3d28",
+    "R16.png": "b3431b8b19c0f23eb6b939f5cb6fb42a4d5cf907b83ca840bc9728bc9d389430",
+    "R16.pdf": "b74651a1282e030b8a18cbea8ab5766730ae7169593d97a982185880d3d80f13"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": true,
+    "png_sha256": "b3431b8b19c0f23eb6b939f5cb6fb42a4d5cf907b83ca840bc9728bc9d389430",
+    "svg_sha256": "ed6472fc9a15d677f8c39dbd5ac0cca839ddafb0ebb89dc7ea0ff58a67fc3d28",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 密集内容已另行放大；正式使用应选足够画布或独立面板。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

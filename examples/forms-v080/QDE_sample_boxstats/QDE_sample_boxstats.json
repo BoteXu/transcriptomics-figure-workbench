@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "QDE_sample_boxstats",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/QDE_sample_boxstats/QDE_sample_boxstats.png",
+    "svg": "examples/gallery/publication-v030/QDE_sample_boxstats/QDE_sample_boxstats.svg",
+    "pdf": "examples/gallery/publication-v030/QDE_sample_boxstats/QDE_sample_boxstats.pdf",
+    "meta": "examples/gallery/publication-v030/QDE_sample_boxstats/QDE_sample_boxstats.json"
+  },
+  "source_sha256": {
+    "png": "0e4821ec7e366ad48a9151c0778a1e6a5bd5dbd0b685bad914dfccb2cb2ca3cb",
+    "svg": "0464fb2e46317874b3c2e4d1e2d989b7e56a30c0bd07819a4408a9fe8f6a206d",
+    "pdf": "2204dd9b4cd8c1fe75b04882afd80eee86c0b77fbe6310f577e47f40445fb79a",
+    "meta": "cc7cfeeba35272d638e4463771a3e588c26c3c76d023c86c2bccbff908566afa"
+  },
+  "input_table": "examples/gallery/publication-v030/QDE_sample_boxstats/QDE_sample_boxstats.tsv",
+  "input_sha256": "1d0fae8d284ca4e100ab1619df2a8fbc6c9d6551be69b4d688e573ce56df86bd",
+  "profile": "journal",
+  "kind": "frozen_qc_de",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "5797cf0f80be779e0892495de88d2cf36597403c0691ac035c5128549e50aaf4",
+  "layout_groups": null,
+  "width_pt": 517.4958801269531,
+  "height_pt": 319.77867126464844,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 9,
+    "at_178mm_pt": 8.775146888301203,
+    "minimum_width_for_7pt_mm": 141.99192513359918
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Frozen results; synthetic donor | complete synthetic fixture"
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 18,
+    "issues": [],
+    "width_pt": 517.495849609375,
+    "height_pt": 319.7786560058594
+  },
+  "output_sha256": {
+    "QDE_sample_boxstats.svg": "0e43c583b002026887a4a2859779e5988f2bbc8bdeebc72ff14d79e503cb8c98",
+    "QDE_sample_boxstats.png": "3d7dfb475c1a233b148b83da2ac1d23bb5244310664446a4b2868a2f94df5c6d",
+    "QDE_sample_boxstats.pdf": "641134e97070e055ffb2991d74a05343de887602181adf22cde3dde77805b3dc"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "3d7dfb475c1a233b148b83da2ac1d23bb5244310664446a4b2868a2f94df5c6d",
+    "svg_sha256": "0e43c583b002026887a4a2859779e5988f2bbc8bdeebc72ff14d79e503cb8c98",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

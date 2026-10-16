@@ -7,7 +7,7 @@ description: Design, render and improve publication figures from frozen scientif
 
 ## Start with the comparison and a polished example
 
-Identify the comparison the reader should see, the supplied data shape and the intended use (paper, slide or screen). **Prioritize attractive, restrained examples with readable labels and clear visual hierarchy.** Start with the [15 new clarity and extension examples](assets/clarity-gallery/index.html), [five community-informed examples](assets/refined-gallery/index.html), [five design alternatives](assets/design-gallery/index.html) and [25 package examples](assets/package-gallery/index.html). Offer one preferred design and at most two useful alternatives. A different palette or repeated layout is not a new scientific method.
+Identify the comparison the reader should see, the supplied data shape and the intended use (paper, slide or screen). **Prioritize attractive, restrained examples with readable labels and clear visual hierarchy.** Start with [the consolidated base forms and extensions](assets/forms-gallery/index.html) and [the v0.8 form-selection rules](references/forms-v080.md). Choose one base form, then a meaningful extension. Repeated datasets, colours or slight layout changes belong under that extension. Existing source IDs remain aliases. Offer one preferred design and at most two useful alternatives; do not add independent types when the user asks to improve existing forms.
 
 Consider excellent community implementations, author blogs, GitHub repositories and readable tutorials alongside official examples. Compare actual figures, then record the author, source, inspected scope, adopted design and code/license boundary in the [community design ledger](references/community-designs-v060.md). The source's popularity or official status does not establish suitability. Never claim an unread article was integrated. Prefer an independently implemented frozen-table view when analysis packages are unnecessary.
 
@@ -41,7 +41,7 @@ Follow the host's memory, computation and server rules. This skill does not auth
 
 Use `scripts/workbench.py design --brief <DesignBrief.json> --output <new-plan.json>` for a source-bound recommendation. Read [the design workflow and schemas](references/design-workflow-v050.md). This standard-library step checks the selected TSV, explicit semantic roles and context; it returns `HOLD` or compatible candidates. It does not certify numerical/biological validity, create a FigureSpec or run inference.
 
-Use `catalog --search`, `describe <renderer>`, `methods` or `method <entry>` for exact callable contracts. [The generated directory](references/renderer-directory.md) comes from shipped source; discovery imports no plotting dependencies. Design view names are guidance until mapped to that renderer's exact parameters.
+Use `forms --search` or `form <base-or-old-ID>` to select consolidated presentation; use `catalog --search`, `describe <renderer>`, `methods` or `method <entry>` for exact callable contracts. [The generated directory](references/renderer-directory.md) comes from shipped source; discovery imports no plotting dependencies. Design view names are guidance until mapped to that renderer's exact parameters.
 
 ### 3. Bind and render the selected design
 
@@ -55,7 +55,9 @@ Use one project theme and consistent category-to-colour slots. Prefer restrained
 
 Keep supplied statistics, coordinates, intervals, ordering, membership and units fixed. Do not refit FDR, embedding, clustering, enrichment, density or confidence limits for aesthetics. Reuse existing renderers and change presentation in a new version. Use `restyle` for allowed appearance fields; compare quantitative geometry and input hashes. Legacy colours with unknown semantics need an explicit mapping review.
 
-For source SVG finishing, use Studio's inert-SVG finisher and explicit source-bound patches. It preserves graphical primitives while allowing text spacing, consistent colours and bounded decorative-opacity changes. Its output is unreviewed until actually inspected. No external SVG content is fetched.
+For source SVG finishing, use Studio's **同图型美化** inert-SVG finisher and explicit source-bound patches. It preserves graphical primitives while allowing text spacing, consistent colours and bounded decorative-opacity changes. Its output is unreviewed until actually inspected. No external SVG content is fetched.
+
+Treat example dimensions and category counts as defaults. At use time adapt to the requested genes, samples, pathways, groups and label lengths; do not silently truncate data to fit a reference. For arbitrary panel arrangements use Studio's flexible board or `layout-plan` / `layout-export`: automatic rows/columns, unequal column widths, row/column spans, explicit positions and pagination. Read [flexible layout fields and actual examples](references/forms-v080.md#adapt-layout-at-use-time). Complete source panels retain their guides and proportions. Source-internal legend movement uses its renderer controls or a separately supplied legend panel. Frozen historical dashboards may need dynamic component rendering before composition.
 
 ### 5. Inspect all exports in scope
 

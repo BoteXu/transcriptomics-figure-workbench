@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "AUX_c38_degree",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/AUX_c38_degree/AUX_c38_degree.png",
+    "svg": "examples/gallery/publication-v030/AUX_c38_degree/AUX_c38_degree.svg",
+    "pdf": "examples/gallery/publication-v030/AUX_c38_degree/AUX_c38_degree.pdf",
+    "meta": "examples/gallery/publication-v030/AUX_c38_degree/AUX_c38_degree.json"
+  },
+  "source_sha256": {
+    "png": "f8a90681cfe161638d19e4304ec4b2ee6b2ef23753876693450d4e46e523eed2",
+    "svg": "655da5a8faaea72df996f94bd7ff503311f2aa3ca8e8f0e8eeeb470940b592ec",
+    "pdf": "bf062b058852304e1f2ee5693a1b83dafdaa321aa20e47986ec6de823ee0704f",
+    "meta": "3e7dfd1b8cd9b09b85fd5664605ebe582ff5111639f3218f8d7b9fa58a4b84ad"
+  },
+  "input_table": "examples/gallery/publication-v030/AUX_c38_degree/AUX_c38_degree.tsv",
+  "input_sha256": "b833abe8e7ffff86dc84b251011790b1db892d2e49b366e1a48ed925c07de37e",
+  "profile": "journal",
+  "kind": "xy_points",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "d3053f3fb379c4b560a5ce92dd17cc481c4fb7622310aecdf033863a5102a9ae",
+  "layout_groups": null,
+  "width_pt": 424.4382019042969,
+  "height_pt": 296.60679626464844,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 9,
+    "at_178mm_pt": 10.699089624427025,
+    "minimum_width_for_7pt_mm": 116.45850663361726
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 23,
+    "issues": [],
+    "width_pt": 424.4382019042969,
+    "height_pt": 296.6068115234375
+  },
+  "output_sha256": {
+    "AUX_c38_degree.svg": "abac1ebcc5c0ec123e26340b5d12ecdec15103ce564fcfff009845c501fc7ddb",
+    "AUX_c38_degree.png": "d23fafc335e3e87dac44144250a5cb705d1880dcb7758f00e47bf9b5a9e30a34",
+    "AUX_c38_degree.pdf": "fd371b26a679fe7aff81c4b279643ac18d27e2d1b425792818c199f56ea4fdc4"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "d23fafc335e3e87dac44144250a5cb705d1880dcb7758f00e47bf9b5a9e30a34",
+    "svg_sha256": "abac1ebcc5c0ec123e26340b5d12ecdec15103ce564fcfff009845c501fc7ddb",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

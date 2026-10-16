@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K33_horizontal",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K33_horizontal/ALT_K33_horizontal.png",
+    "svg": "examples/gallery/publication-v030/ALT_K33_horizontal/ALT_K33_horizontal.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K33_horizontal/ALT_K33_horizontal.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K33_horizontal/ALT_K33_horizontal.json"
+  },
+  "source_sha256": {
+    "png": "73618b13b35dea08c8588446af1bd3dc8b3bae02994e2bc6596b00ff41102bf7",
+    "svg": "fc35f737d3c728d37c7caf334806553e688d76472acb14c5b6ed1d2b41d1cd99",
+    "pdf": "caf3bd391fca6d44a19ad4b326b3681defaf1e83d413870d7703c9a5dfa87f28",
+    "meta": "17a69560a34d33e3a1a04a7dd84fd6b30e6d216224a55bea34bfa5ffeaf9bfde"
+  },
+  "components": [
+    {
+      "id": "M02",
+      "svg_sha256": "57a654cd16922b6a97fc1839ea5585038f555cd0e1ad95d91fe1c62b65b9976c",
+      "input_sha256": "a2fdfaee95ad701f7bf719852d97056d5164b7eae43fd3e9ac8a3de4653fd5ba"
+    },
+    {
+      "id": "M03",
+      "svg_sha256": "cbd0e34139fedbf9bf65dfa7d99986d17b074ebf7a2f8fa2178fc337c28bee9e",
+      "input_sha256": "d4455aa7078554a03c59d8817d97536b5734d6d09518de07f5e6595238eef6ab"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M02",
+      "x": 18,
+      "y": 64,
+      "scale": 0.8227348561111978,
+      "width_pt": 340,
+      "height_pt": 211.20496090260744
+    },
+    {
+      "id": "M03",
+      "x": 380,
+      "y": 64,
+      "scale": 0.7994967551875592,
+      "width_pt": 340,
+      "height_pt": 253.77736870877607
+    }
+  ],
+  "arrangement": "horizontal",
+  "relationship": "每个因子在哪些层解释更多变异；因子由哪些分子特征共同构成",
+  "width_pt": 738,
+  "height_pt": 343.77736870877607,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K33_horizontal.svg": "24cab804f3da1a3bb946c178ef296386830d1b27ba966063a8ee43b7f3a8ebf5",
+    "ALT_K33_horizontal.png": "abba3ee5bde130e1e11c9772a4b4d6ebd9601b9a77e1db5a872dec54537e61d7",
+    "ALT_K33_horizontal.pdf": "296e3fd865222e76bfb947d7b81d898f87e6eafb1625e20094eab82b1dbcf798"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 47,
+    "issues": [],
+    "width_pt": 738,
+    "height_pt": 343.7773742675781
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "abba3ee5bde130e1e11c9772a4b4d6ebd9601b9a77e1db5a872dec54537e61d7",
+    "svg_sha256": "24cab804f3da1a3bb946c178ef296386830d1b27ba966063a8ee43b7f3a8ebf5",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

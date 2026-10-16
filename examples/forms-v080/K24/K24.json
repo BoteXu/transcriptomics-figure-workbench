@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "K24",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/K24/K24.png",
+    "svg": "examples/gallery/publication-v030/K24/K24.svg",
+    "pdf": "examples/gallery/publication-v030/K24/K24.pdf",
+    "meta": "examples/gallery/publication-v030/K24/K24.json"
+  },
+  "source_sha256": {
+    "png": "d845fffad6c0853b97e0eee695f3e798af8cf19327f93456643098020fa14004",
+    "svg": "c0c6dd709c0f61149e13f4250fca2de5eb2edbf78b4d143414db4ce55426d09c",
+    "pdf": "69e01b0232d0e54ff9e0e3064d69b5fcdaef002e4a1e8f2e15c6bb465afcac7f",
+    "meta": "40e938a6b93119251fb75ad95e1d0a83a959bfb5a16594c06de055c7f0a15581"
+  },
+  "components": [
+    {
+      "id": "E10",
+      "svg_sha256": "155f634e797dfcb40b5e7621a37bc9ab20ee4986133057c544a7a25495faa331",
+      "input_sha256": "b137feadcefaba97b6ccc4f150291d3bddfee22adbc28fc58a557c0800065030"
+    },
+    {
+      "id": "E11",
+      "svg_sha256": "7dee7459dcf56d4a7eb8a1e072648a7913de3a94a290de2443d524ee66257896",
+      "input_sha256": "91ae012bae24fd171df7ba75a63301ca9dce24e7df12884d21893168c1b40438"
+    },
+    {
+      "id": "E12",
+      "svg_sha256": "143dec047233c6faf3012c4c3cb9aa0dd848ccb4a9bb8df7a0017a00444659a6",
+      "input_sha256": "0baa6b8a2facb19f898d73237a5e4ba0ba720eda5049794e0949aead31e251b7"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E10",
+      "x": 18,
+      "y": 64,
+      "scale": 0.7323190178919627,
+      "width_pt": 340,
+      "height_pt": 207.38305551281204
+    },
+    {
+      "id": "E11",
+      "x": 380,
+      "y": 64,
+      "scale": 0.7481093169260041,
+      "width_pt": 340,
+      "height_pt": 215.12896168500794
+    },
+    {
+      "id": "E12",
+      "x": 18,
+      "y": 326.12896168500794,
+      "scale": 0.7478739423413593,
+      "width_pt": 340,
+      "height_pt": 200.31550663433097
+    }
+  ],
+  "arrangement": "default",
+  "relationship": "全分布位置、尾部和跨组差异；不依赖分箱；偏移、尺度差异和尾部偏离；多组的位置、宽度及分布形状",
+  "width_pt": 738,
+  "height_pt": 552.444468319339,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "K24.svg": "b67933088102d904d5820b45dd6c56700c7ecc6b0590924debc8e8aebc9d11c4",
+    "K24.png": "cd639a1d8a76ac62ed76cb5015e106de7f45c4ed18b9ee06ea13563ca8185063",
+    "K24.pdf": "c82e391ea0d56889788ea3dc539ff75986572471259e62f8596f2c3049f73503"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 54,
+    "issues": [],
+    "width_pt": 738,
+    "height_pt": 552.4444580078125
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "cd639a1d8a76ac62ed76cb5015e106de7f45c4ed18b9ee06ea13563ca8185063",
+    "svg_sha256": "b67933088102d904d5820b45dd6c56700c7ecc6b0590924debc8e8aebc9d11c4",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

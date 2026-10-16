@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "R20",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/R20/R20.png",
+    "svg": "examples/gallery/publication-v030/R20/R20.svg",
+    "pdf": "examples/gallery/publication-v030/R20/R20.pdf",
+    "meta": "examples/gallery/publication-v030/R20/R20.json"
+  },
+  "source_sha256": {
+    "png": "94ba2604ccbcfbae2ec8057da4557f1b71b141577f0e3b35f7d5a74b069e564b",
+    "svg": "ebf2fae604543b8c5d9e0c91185daad800384acf4e5a681d3a3d20fec45dd677",
+    "pdf": "5527cd36149216f590c9fa2f565c6997b8aecf454e73d90244a05595b427a109",
+    "meta": "7331f15726aec1d76cf917e8dd2461ee335c51c10dc9500ddb96868c6abc8483"
+  },
+  "input_table": "examples/gallery/publication-v030/R20/R20.tsv",
+  "input_sha256": "47a5ec510f6c91944e50656e78d8dc837312ce0ed7b6160644f69869adbfcf4e",
+  "profile": "matrix",
+  "kind": "reference_facet_bubble_matrix",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "93ebdadba2296b70a286669c49206fe44e5aa0db5f961383efc420469feaac3f",
+  "layout_groups": null,
+  "width_pt": 714.0889282226562,
+  "height_pt": 561.2908020019531,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 7,
+    "at_178mm_pt": 4.9461185635911775,
+    "minimum_width_for_7pt_mm": 251.91470523410374
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Supplied window / condition"
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 59,
+    "issues": [],
+    "width_pt": 714.0889282226562,
+    "height_pt": 561.2908325195312
+  },
+  "output_sha256": {
+    "R20.svg": "b9b423ef064d57510aa811b72c30f58ecec1b22ae87c55be946de0bf4599d5d1",
+    "R20.png": "e5c15e385a43d38d072cf99e04641841d682fd99b24d407b1d379e8289d62905",
+    "R20.pdf": "bae4385d8de529c6e25d275d2cc3e9f731aa9ff3768c2c2be90a67f7d38c2afb"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": true,
+    "png_sha256": "e5c15e385a43d38d072cf99e04641841d682fd99b24d407b1d379e8289d62905",
+    "svg_sha256": "b9b423ef064d57510aa811b72c30f58ecec1b22ae87c55be946de0bf4599d5d1",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 密集内容已另行放大；正式使用应选足够画布或独立面板。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

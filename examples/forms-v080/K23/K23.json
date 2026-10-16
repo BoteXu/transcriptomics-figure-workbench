@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "K23",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/K23/K23.png",
+    "svg": "examples/gallery/publication-v030/K23/K23.svg",
+    "pdf": "examples/gallery/publication-v030/K23/K23.pdf",
+    "meta": "examples/gallery/publication-v030/K23/K23.json"
+  },
+  "source_sha256": {
+    "png": "48cc4e8134bd7dea0b61388990ce037b9f183d0d2d72aaf5f9bb4f0bae790512",
+    "svg": "1dfe62ad476f23461a3eac2972177dab28b5a29993678894ba69771d79373c7e",
+    "pdf": "b5b1da965253eb1151fafebe17cc545035033aebf9c26af66d06077f029a189f",
+    "meta": "4ea78355182087c3db47fc6d94f25fca459dd241f49bd0cb5f87dcb21254fae2"
+  },
+  "components": [
+    {
+      "id": "E08",
+      "svg_sha256": "b3ec1aac9a363d5514eb7df7c1566aaf8392f74bbaabf693b355e44bf9a11377",
+      "input_sha256": "553ee5a3570c439b9644dffea3f4ac02a54dacf4400174be3fa4675c9d0da354"
+    },
+    {
+      "id": "E09",
+      "svg_sha256": "a60830c84596f85f0d557fd290498223fa816d171d4890cee43090639c093b72",
+      "input_sha256": "90ffce26fe5840f5fd2ed1851b34c23e2bf4f3b4e0de1f3a5807a7a28a5a680e"
+    },
+    {
+      "id": "E23",
+      "svg_sha256": "f09d7f7848c8a8af6115c8f1ccac1944b1f7b754b798537846beb438630b8291",
+      "input_sha256": "bfd52c3481ca77d69e1e915ea991457884bc2fdf12007bef8ba9f5e7b825588e"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E08",
+      "x": 18,
+      "y": 64,
+      "scale": 0.7200111571122261,
+      "width_pt": 340,
+      "height_pt": 233.3248801922353
+    },
+    {
+      "id": "E09",
+      "x": 380,
+      "y": 64,
+      "scale": 0.8415185571688663,
+      "width_pt": 340,
+      "height_pt": 372.10017837795704
+    },
+    {
+      "id": "E23",
+      "x": 18,
+      "y": 483.10017837795704,
+      "scale": 0.8257975761497464,
+      "width_pt": 340,
+      "height_pt": 289.3863806759074
+    }
+  ],
+  "arrangement": "default",
+  "relationship": "看哪些术语共享成员，并查出这些成员的效应方向；弦图中相同关系的精确逐格查询和成员覆盖度；选定条目的成员重叠与冗余，保留所有条目",
+  "width_pt": 738,
+  "height_pt": 798.4865590538644,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "K23.svg": "33a5ecdcab700ea5bd4316986d74a7da1da9eee12ccc4ecc0f10f98d8a758981",
+    "K23.png": "11e5439b8a569d0ebe19e36a25d21517ae63c4bd955192c66916a0c39c401351",
+    "K23.pdf": "97e4657d642e8772f70d01f16d0d3c34da808d5445cfd1a1714a58c78623b83d"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 125,
+    "issues": [],
+    "width_pt": 738,
+    "height_pt": 798.486572265625
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "11e5439b8a569d0ebe19e36a25d21517ae63c4bd955192c66916a0c39c401351",
+    "svg_sha256": "33a5ecdcab700ea5bd4316986d74a7da1da9eee12ccc4ecc0f10f98d8a758981",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

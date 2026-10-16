@@ -1,5 +1,14 @@
 # Change log
 
+## 0.8.0
+
+- Revised all 458 existing exports within their current forms, with explicit source geometry/table bindings and complete-component compositions.
+- Consolidated near duplicates into 90 base navigation entries with nested extensions and retained IDs; no new independent chart type or statistical backend.
+- Reflowed dense dashboards, restored visible scientific captions and added literal label-retention checks across 332 standalone sources.
+- Added the consolidated offline gallery, same-form SVG finishing, old-ID discovery and artifact-bound screen-review scopes. Target paper size remains unassessed.
+- Added at-use flexible vector layouts with automatic row growth, weighted columns, spans, explicit placement and pagination; two real configurations produce three inspected pages.
+- Preserved all historical exports, source modules, external attribution and private profile boundaries.
+
 ## 0.6.0
 
 - Broadened design selection to community authors, blogs and GitHub examples, with inspected-scope, author, adoption and code-reuse records. Independently implemented five frozen examples using four refined display views.

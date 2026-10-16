@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K41_vertical",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K41_vertical/ALT_K41_vertical.png",
+    "svg": "examples/gallery/publication-v030/ALT_K41_vertical/ALT_K41_vertical.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K41_vertical/ALT_K41_vertical.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K41_vertical/ALT_K41_vertical.json"
+  },
+  "source_sha256": {
+    "png": "242b6f9791ff9cfcedecc3e7315dfb8101eabc2b7dce273b9a6c452490844b27",
+    "svg": "3252abefe349e712284fd42e5a7304a4ed068c58248d4495c061fb62cf2eb282",
+    "pdf": "4cacb0ab8dfa980ac5a94d528cfdc83a196ee47d07cc9b8f055c72f79256a931",
+    "meta": "2d9231b4bafea31256e0b6e2d1614255e5e3dda88f0eaa08ffe61dd25cd41fd2"
+  },
+  "components": [
+    {
+      "id": "E45",
+      "svg_sha256": "680fbc4eb5d11354cd90d46d35ded6dc20c06de2b0adb28ae21733fbe463f1be",
+      "input_sha256": "9827fc9f0360874b14aa1e3e644079b1257b2d78ec834e984070ab3420ee26fa"
+    },
+    {
+      "id": "E46",
+      "svg_sha256": "e0c1d1e5cda6c6716c9f76a1254bcafeaf88a2b48450ed485da27084bbfa9026",
+      "input_sha256": "5cbda8be61d8ed94ff1a17eb4e2fb9ecc68435e43e15db0956c9173215c895ec"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E45",
+      "x": 18,
+      "y": 64,
+      "scale": 1.0119060448585093,
+      "width_pt": 490,
+      "height_pt": 399.4543889415545
+    },
+    {
+      "id": "E46",
+      "x": 18,
+      "y": 510.4543889415545,
+      "scale": 1.0464805785457116,
+      "width_pt": 490,
+      "height_pt": 241.5557126722453
+    }
+  ],
+  "arrangement": "vertical",
+  "relationship": "两个panel使用同一明确模型身份及评价群体。校准比例、分箱人数与净获益分别保留定义，参考策略不冒充另一个模型。",
+  "width_pt": 526,
+  "height_pt": 778.0101016137999,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K41_vertical.svg": "e2d6668cff936e8ef5d62ded4a860fdde6b38f2f5b66a727f1b591cea14debdb",
+    "ALT_K41_vertical.png": "5455d5dcbbd5abcb6cf42c586e04a244785d98ec791680d5f1c5acb59abc9d5d",
+    "ALT_K41_vertical.pdf": "04d404446cf26960e642648ef1acbee677305cb67b479abd843c936e0e0f7aea"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 48,
+    "issues": [],
+    "width_pt": 526,
+    "height_pt": 778.0101318359375
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "5455d5dcbbd5abcb6cf42c586e04a244785d98ec791680d5f1c5acb59abc9d5d",
+    "svg_sha256": "e2d6668cff936e8ef5d62ded4a860fdde6b38f2f5b66a727f1b591cea14debdb",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

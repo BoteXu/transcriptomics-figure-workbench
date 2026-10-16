@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K19_vertical",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K19_vertical/ALT_K19_vertical.png",
+    "svg": "examples/gallery/publication-v030/ALT_K19_vertical/ALT_K19_vertical.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K19_vertical/ALT_K19_vertical.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K19_vertical/ALT_K19_vertical.json"
+  },
+  "source_sha256": {
+    "png": "8e46dbcafd11c2e1b20c8ffb8c4e5dc6f070f8ee85dc3d4144826bcf1e4baa82",
+    "svg": "94f237dbc891a48d53a4047065085e02480eb2a863ae2f97e0b19292a65c5a12",
+    "pdf": "d643e0aa9c783fdbc0d6bdb95a93c4d11ca5e8daad0b530deafc36105964ef62",
+    "meta": "aad8f80266e25eb90e18c5b936899645798300b87f0ffec820addc1c6bac39fd"
+  },
+  "components": [
+    {
+      "id": "N08",
+      "svg_sha256": "dee1b258a96d3939c4d6beb305c061a9d0d289ba21ccae3a307c68d14a823378",
+      "input_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a"
+    },
+    {
+      "id": "AUX_hit_window",
+      "svg_sha256": "fe0168dfd1f796f1e612679561b080398dc6cfbf5378ca2f233d9ce67361f22e",
+      "input_sha256": "c1199ef0da5b604b26eae5f307909fe0af92db91a545e4b6dbdf15cebc34e7bb"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "N08",
+      "x": 18,
+      "y": 64,
+      "scale": 0.9345943664221419,
+      "width_pt": 490,
+      "height_pt": 366.0869850432957
+    },
+    {
+      "id": "AUX_hit_window",
+      "x": 18,
+      "y": 477.0869850432957,
+      "scale": 1.191278260020531,
+      "width_pt": 490,
+      "height_pt": 325.7005950633867
+    }
+  ],
+  "arrangement": "vertical",
+  "relationship": "全景看已有信号，局部窗口看命中结构；窗口范围明示",
+  "width_pt": 526,
+  "height_pt": 828.7875801066824,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K19_vertical.svg": "a4bf7a6b4520aa3d7a56d89575eef1e6fcb89934b9cc3644aec8e09786d604d8",
+    "ALT_K19_vertical.png": "65d18c684df03d09fe78dafc765a225061b4e7660af01a21a01369f994cc4599",
+    "ALT_K19_vertical.pdf": "897365e79ec030c221d8ba8c7d48be542033252b8234020ddeecbc546f5cebf2"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 43,
+    "issues": [],
+    "width_pt": 526,
+    "height_pt": 828.78759765625
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "65d18c684df03d09fe78dafc765a225061b4e7660af01a21a01369f994cc4599",
+    "svg_sha256": "a4bf7a6b4520aa3d7a56d89575eef1e6fcb89934b9cc3644aec8e09786d604d8",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

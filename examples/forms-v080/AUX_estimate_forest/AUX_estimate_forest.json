@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "AUX_estimate_forest",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/AUX_estimate_forest/AUX_estimate_forest.png",
+    "svg": "examples/gallery/publication-v030/AUX_estimate_forest/AUX_estimate_forest.svg",
+    "pdf": "examples/gallery/publication-v030/AUX_estimate_forest/AUX_estimate_forest.pdf",
+    "meta": "examples/gallery/publication-v030/AUX_estimate_forest/AUX_estimate_forest.json"
+  },
+  "source_sha256": {
+    "png": "e294adce32f1a08238bf23c5a4fcb5bb949959a01c5549309d4c64835c0938ea",
+    "svg": "3827535a1ea76306e6bdabbe3c7c3c36735271f9442258cda5f3715ff7b8123b",
+    "pdf": "5761517b32da576cf85efd7c62109dcceb0fd2c1a9cce8ea12d769e6eeda0ebd",
+    "meta": "a18fc0820a542a6cca3a08154020c6d91e6e1fa5c16fb7f0fbdaf8fa45353dc9"
+  },
+  "input_table": "examples/gallery/publication-v030/AUX_estimate_forest/AUX_estimate_forest.tsv",
+  "input_sha256": "c2825c5d65c2b61533c220b63c900a390f841761a0b38616e1fb4c8c4c169a5d",
+  "profile": "effects",
+  "kind": "publication_grouped_forest",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "5fb01620a68f49009f2c27a06d321cbbfa5b030a717e4e7f55fe9cf6c3fa7d97",
+  "layout_groups": null,
+  "width_pt": 415.10980224609375,
+  "height_pt": 180.2751235961914,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 7.5,
+    "at_178mm_pt": 9.116267426179643,
+    "minimum_width_for_7pt_mm": 136.67874599880645
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Fixed illustrative demo bounds; not a research confidence interval."
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 15,
+    "issues": [],
+    "width_pt": 415.10980224609375,
+    "height_pt": 180.27511596679688
+  },
+  "output_sha256": {
+    "AUX_estimate_forest.svg": "974c44c2659ff6900d4acf2c088c5e5abda1819dfa4a5631d5c47ffe161c0df2",
+    "AUX_estimate_forest.png": "7d654f95c458d25b4a7e7a20b9a178bcf24a0b9de4f08b41c2839590946f83be",
+    "AUX_estimate_forest.pdf": "073a74934348e7db4343d3caf6702dbe87adf7d6e2e6499d47db1b4fb7080549"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "7d654f95c458d25b4a7e7a20b9a178bcf24a0b9de4f08b41c2839590946f83be",
+    "svg_sha256": "974c44c2659ff6900d4acf2c088c5e5abda1819dfa4a5631d5c47ffe161c0df2",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

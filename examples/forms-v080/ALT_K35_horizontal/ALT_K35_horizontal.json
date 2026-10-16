@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K35_horizontal",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K35_horizontal/ALT_K35_horizontal.png",
+    "svg": "examples/gallery/publication-v030/ALT_K35_horizontal/ALT_K35_horizontal.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K35_horizontal/ALT_K35_horizontal.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K35_horizontal/ALT_K35_horizontal.json"
+  },
+  "source_sha256": {
+    "png": "da6a370a67c57d6a92e5e2f3881930b54a74ed6dca19eb131fa0cf2fc27a94b8",
+    "svg": "bf0e36b8409ec502ce55f7730fc5dcd053f75631ad580050d79dbf4eed86f031",
+    "pdf": "8859c8ab50ccc2ddbf834af671303e7eca7d072d387d3b75859f76e428a68a79",
+    "meta": "49c62071584f5d4eaa322d166dc43a975060cd66540b3082cbd6ead5f82037c4"
+  },
+  "components": [
+    {
+      "id": "M07",
+      "svg_sha256": "eefc04c5226e0e5b63d296d8cc1a232684ad129d37ba766f092730fb21bdd38a",
+      "input_sha256": "d8742cfa0fa3e40c6a4bc53e74301ccf5e8df762145768fb1b5ae83e7855763e"
+    },
+    {
+      "id": "M06",
+      "svg_sha256": "ff6864d7e02f6483ec6ab5589ff3b45aecba7277b4bf7a010fd790cc79ee76a7",
+      "input_sha256": "a68c4670b9548758c5dac979ccb61ebb04f21d83310c7745fd49f271ec9ed6cd"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M07",
+      "x": 18,
+      "y": 64,
+      "scale": 0.8033348456237939,
+      "width_pt": 340,
+      "height_pt": 185.43114843414486
+    },
+    {
+      "id": "M06",
+      "x": 380,
+      "y": 64,
+      "scale": 0.613008538229455,
+      "width_pt": 340,
+      "height_pt": 190.27466624380298
+    }
+  ],
+  "arrangement": "horizontal",
+  "relationship": "峰形、保留时间和不同条件的曲线位置；实测与参考碎片的位置和强度分布",
+  "width_pt": 738,
+  "height_pt": 280.274666243803,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K35_horizontal.svg": "38d6fbf94989cfdae5763c8964e233b99b1a911eb179950ac5c67b91ae8285bb",
+    "ALT_K35_horizontal.png": "c59b3eed2e8e5b339e3d86ea77f7389ef5707cdddf9d9a8453da43c984489fba",
+    "ALT_K35_horizontal.pdf": "564c5d7b4aeb7520522db020892a47c26f8ce74669c7e07953209101b65ce8dc"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 43,
+    "issues": [],
+    "width_pt": 738,
+    "height_pt": 280.274658203125
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "c59b3eed2e8e5b339e3d86ea77f7389ef5707cdddf9d9a8453da43c984489fba",
+    "svg_sha256": "38d6fbf94989cfdae5763c8964e233b99b1a911eb179950ac5c67b91ae8285bb",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

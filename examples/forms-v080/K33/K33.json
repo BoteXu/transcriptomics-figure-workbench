@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "K33",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/K33/K33.png",
+    "svg": "examples/gallery/publication-v030/K33/K33.svg",
+    "pdf": "examples/gallery/publication-v030/K33/K33.pdf",
+    "meta": "examples/gallery/publication-v030/K33/K33.json"
+  },
+  "source_sha256": {
+    "png": "17af5bd3ce687e7dea2f24ba7099530d234069ba4b5a990cfada4b71faee4c21",
+    "svg": "10263ecd9fee28dd3b862ba0b24b5ab72c806df496c944ec75b32b4abb9a6e20",
+    "pdf": "10a384ed10e44ddc975c4569e3bd45ce642aca0a713074e36adf8e6219447520",
+    "meta": "3610b9bd67fd850c4a8df36548cfa4e4ccd7bd128139dfcc2c0ed7f9f34c5c23"
+  },
+  "components": [
+    {
+      "id": "M02",
+      "svg_sha256": "57a654cd16922b6a97fc1839ea5585038f555cd0e1ad95d91fe1c62b65b9976c",
+      "input_sha256": "a2fdfaee95ad701f7bf719852d97056d5164b7eae43fd3e9ac8a3de4653fd5ba"
+    },
+    {
+      "id": "M03",
+      "svg_sha256": "cbd0e34139fedbf9bf65dfa7d99986d17b074ebf7a2f8fa2178fc337c28bee9e",
+      "input_sha256": "d4455aa7078554a03c59d8817d97536b5734d6d09518de07f5e6595238eef6ab"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "M02",
+      "x": 18,
+      "y": 64,
+      "scale": 0.8227348561111978,
+      "width_pt": 340,
+      "height_pt": 211.20496090260744
+    },
+    {
+      "id": "M03",
+      "x": 380,
+      "y": 64,
+      "scale": 0.7994967551875592,
+      "width_pt": 340,
+      "height_pt": 253.77736870877607
+    }
+  ],
+  "arrangement": "default",
+  "relationship": "每个因子在哪些层解释更多变异；因子由哪些分子特征共同构成",
+  "width_pt": 738,
+  "height_pt": 343.77736870877607,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "K33.svg": "136f55dd0e2ffb3b3bf97d97e3d1bb846f31243ec68adde94c3abc4c171b04ae",
+    "K33.png": "99280ac447fb1ce33965d2aa51f381ef9180f63b290a221ec282c365cf0e633d",
+    "K33.pdf": "1d126a8807173fd50186e3f37d2f7c293ebd390952d093aeb9cf0fc12a1068f1"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 47,
+    "issues": [],
+    "width_pt": 738,
+    "height_pt": 343.7773742675781
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "99280ac447fb1ce33965d2aa51f381ef9180f63b290a221ec282c365cf0e633d",
+    "svg_sha256": "136f55dd0e2ffb3b3bf97d97e3d1bb846f31243ec68adde94c3abc4c171b04ae",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "E43",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/E43/E43.png",
+    "svg": "examples/gallery/publication-v030/E43/E43.svg",
+    "pdf": "examples/gallery/publication-v030/E43/E43.pdf",
+    "meta": "examples/gallery/publication-v030/E43/E43.json"
+  },
+  "source_sha256": {
+    "png": "afe673c10a422dffed2395086f3edfcbc05c863ba48d8b8312a6fb8f86fb1a45",
+    "svg": "0e3a9e7eda7430a4b44356a85d28311729fe79098b26a322907b7ed9adbe7cfc",
+    "pdf": "00902745903a7813584aa95e1ae4296514b9d40c2a5388e017b36dd261e85953",
+    "meta": "7094f27a2cd5007eacae4cafc75fce5d327e00ca226ceaee3d1ad9d602b29066"
+  },
+  "input_table": "examples/gallery/publication-v030/E43/E43.tsv",
+  "input_sha256": "6d888da37a75ab344cda2bc80371546600145b5f5c62f21b44f96425b9487cc9",
+  "profile": "journal",
+  "kind": "splice_tracks",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "1aa3a27453b7d2b308c562cca8cad0fe9da789340070be70428a2cc338a5d5b6",
+  "layout_groups": null,
+  "width_pt": 530.8695983886719,
+  "height_pt": 407.4606018066406,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 8,
+    "at_178mm_pt": 7.603628923793729,
+    "minimum_width_for_7pt_mm": 163.8691225581699
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Arc width = supplied count 0.045 pt per count Arc lane = layout only",
+    "Synthetic segment; 0-based half-open intervals; increasing position, strand not inferred; Supplied coverage in a common scale for both",
+    "samples; Supplied junction read count; zero counts retained; arc height is layout only"
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 34,
+    "issues": [],
+    "width_pt": 530.86962890625,
+    "height_pt": 407.4606018066406
+  },
+  "output_sha256": {
+    "E43.svg": "67b04ec3c112b8d67c1d11a4f54f78315f16fe12777f99c4747817a7ffc4bf94",
+    "E43.png": "1aa6d9c4372f6ec2efd98e8d1f15a9f9f90c65fb91bb1367a8e8a5202c616255",
+    "E43.pdf": "f35756b44608005cc3d5f2289aa19caf5118f7ee59f6028a55be9e8ba295d34f"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "1aa6d9c4372f6ec2efd98e8d1f15a9f9f90c65fb91bb1367a8e8a5202c616255",
+    "svg_sha256": "67b04ec3c112b8d67c1d11a4f54f78315f16fe12777f99c4747817a7ffc4bf94",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

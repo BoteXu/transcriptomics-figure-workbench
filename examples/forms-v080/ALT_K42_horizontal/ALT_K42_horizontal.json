@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "ALT_K42_horizontal",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "same_form": true,
+  "source": {
+    "png": "examples/gallery/publication-v030/ALT_K42_horizontal/ALT_K42_horizontal.png",
+    "svg": "examples/gallery/publication-v030/ALT_K42_horizontal/ALT_K42_horizontal.svg",
+    "pdf": "examples/gallery/publication-v030/ALT_K42_horizontal/ALT_K42_horizontal.pdf",
+    "meta": "examples/gallery/publication-v030/ALT_K42_horizontal/ALT_K42_horizontal.json"
+  },
+  "source_sha256": {
+    "png": "77bf8addb0511a5d53c1eaac067ae0f7266fcdbe8ab356bb321d1f838ebf3d25",
+    "svg": "7a3e68c4367656d09448fd6a6caacfcb850b94ec3b68d77ac4c04d8f9828d7bf",
+    "pdf": "0b366ad0425ec0657e67524c13373fd26c33cecf910f56b23de833c5102d047d",
+    "meta": "7feccbf9fe1c59b7b6c3d7ab311be9ed9e4cd590d276cce233c030445d3a95c8"
+  },
+  "components": [
+    {
+      "id": "E47",
+      "svg_sha256": "15dd3ca1ca91fe76122e81858d2346d30e9de9f2f0e5695b17ecefb17c02b34d",
+      "input_sha256": "6112589d125beff9504430c0a72f1e1c7fb0869fb053057f08b7c531435da858"
+    },
+    {
+      "id": "E51",
+      "svg_sha256": "6749896fde7de4e00392a6adb83b6fd740c3c2a5eb800b93b2d4c324eed58a25",
+      "input_sha256": "a0a50217649ef1fe054afdb25462d21bb9dfec6c2afdd2552862689ecac257a3"
+    }
+  ],
+  "component_placement": [
+    {
+      "id": "E47",
+      "x": 18,
+      "y": 64,
+      "scale": 0.7772207635489132,
+      "width_pt": 340,
+      "height_pt": 220.12866384555986
+    },
+    {
+      "id": "E51",
+      "x": 380,
+      "y": 64,
+      "scale": 0.7071035052306436,
+      "width_pt": 340,
+      "height_pt": 223.40349159773842
+    }
+  ],
+  "arrangement": "horizontal",
+  "relationship": "矩阵Regulator A / S01的值0.62对应右侧完整贡献加基线的总量0.62；选择身份和可加定义显式保存，其余样本与调控因子保留。",
+  "width_pt": 738,
+  "height_pt": 313.4034915977384,
+  "raster_dpi": 200,
+  "output_sha256": {
+    "ALT_K42_horizontal.svg": "9d40b58ba37d7bab06b97e4c91dbbbccc0c3e406df1afb76165d099828735150",
+    "ALT_K42_horizontal.png": "7d9bbacae708909f88bdadd5a5d70f6d178331403532f3d5647ca9093658f8d0",
+    "ALT_K42_horizontal.pdf": "003f9951c2cc7113b292c3d38676e58a40b0e5fa7bd5130a8b2038580deb42ee"
+  },
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 49,
+    "issues": [],
+    "width_pt": 738,
+    "height_pt": 313.40350341796875
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "limitations": "Overview uses complete uniformly scaled independent panels; target paper size requires separate acceptance. Independent 300 DPI components supplied.",
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "7d9bbacae708909f88bdadd5a5d70f6d178331403532f3d5647ca9093658f8d0",
+    "svg_sha256": "9d40b58ba37d7bab06b97e4c91dbbbccc0c3e406df1afb76165d099828735150",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。 组合按概览与面板身份检查，完整独立组件可分别阅读。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

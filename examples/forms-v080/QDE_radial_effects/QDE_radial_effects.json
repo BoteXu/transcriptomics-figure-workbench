@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "QDE_radial_effects",
+  "status": "SCREEN_REVIEWED_TARGET_SIZE_UNASSESSED",
+  "source": {
+    "png": "examples/gallery/publication-v030/QDE_radial_effects/QDE_radial_effects.png",
+    "svg": "examples/gallery/publication-v030/QDE_radial_effects/QDE_radial_effects.svg",
+    "pdf": "examples/gallery/publication-v030/QDE_radial_effects/QDE_radial_effects.pdf",
+    "meta": "examples/gallery/publication-v030/QDE_radial_effects/QDE_radial_effects.json"
+  },
+  "source_sha256": {
+    "png": "d5054876e35b61aa1927ef81e20d4d6b5739921426af42e8721d3c420eb63e3c",
+    "svg": "e1ea3a365855c5ea9bd876d528a20db1a1f7f9af98df658823aec6593f160a04",
+    "pdf": "f86c6e93a9b8c9078b20aba2a1dd83e2461ad8837c879033ecf75c819f5149f9",
+    "meta": "26f6105422ce9d5d3a24408852eb41a041648c74e4bda1f9dba4f06b7b101692"
+  },
+  "input_table": "examples/gallery/publication-v030/QDE_radial_effects/QDE_radial_effects.tsv",
+  "input_sha256": "4330945646882909406b9e5692e61d5af21719218c45a22545663a0ab75dd40b",
+  "profile": "journal",
+  "kind": "frozen_qc_de",
+  "variant": "journal",
+  "same_form": true,
+  "all_measured_primitives_retained": true,
+  "frozen_graphical_geometry_sha256": "e8cff9c5a1e8ee7be04124d2acb1af19a4069ab38a8e69bd05217d1b7cecbbb2",
+  "layout_groups": null,
+  "width_pt": 483.39154052734375,
+  "height_pt": 436.4803161621094,
+  "raster_dpi": 300,
+  "sizing": {
+    "nominal_width_mm": 178,
+    "body_font_p10_pt": 9,
+    "at_178mm_pt": 9.394252860219119,
+    "minimum_width_for_7pt_mm": 132.63428380518783
+  },
+  "changes": [
+    "quiet guide frames; consistent text and title hierarchy; retained data channels"
+  ],
+  "retained_notes": [
+    "Frozen results; synthetic donor | complete synthetic fixture"
+  ],
+  "geometry_audit": {
+    "scope": "Browser text bounds and text/text overlaps only; no perceptual acceptance",
+    "text_count": 19,
+    "issues": [],
+    "width_pt": 483.39154052734375,
+    "height_pt": 436.4803161621094
+  },
+  "output_sha256": {
+    "QDE_radial_effects.svg": "001b35f51dd3b18bc7a20a1ffbf003ae527c6622db4cdb10f9ab0edf36d91353",
+    "QDE_radial_effects.png": "e7668cbdc8dac9e1c254d1be0374ef6ab4b7a1a374570d9838e40f7db4132339",
+    "QDE_radial_effects.pdf": "205b27e81a5beebafef249ff895921f849102345d3c11197ebd13c55ef56a316"
+  },
+  "visual_acceptance": false,
+  "scientific_acceptance": false,
+  "finisher_sha256": "991ffdd112e4658178f62f801be000bd716a324a39743118f7d1e619dce094fe",
+  "scientific_label_retention": {
+    "status": "PASS",
+    "missing_labels": [],
+    "scope": "literal text retention; no scientific assertion validation"
+  },
+  "visual_review": {
+    "status": "SCREEN_REVIEWED",
+    "reviewer": "Codex self-review",
+    "scope": "complete_images_separately_framed_on_screen_sheets",
+    "additional_enlarged_screen_review": false,
+    "png_sha256": "e7668cbdc8dac9e1c254d1be0374ef6ab4b7a1a374570d9838e40f7db4132339",
+    "svg_sha256": "001b35f51dd3b18bc7a20a1ffbf003ae527c6622db4cdb10f9ab0edf36d91353",
+    "note": "完整画面已在独立框中屏幕查看；并非原像素逐字检查或最终印刷尺寸验收。",
+    "final_size_inspected": false,
+    "calibrated_paper_proof": false,
+    "independent_second_review": false,
+    "scientific_acceptance": false
+  }
+}

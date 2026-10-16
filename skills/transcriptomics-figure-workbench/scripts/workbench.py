@@ -15,6 +15,10 @@ def main():
     describe=commands.add_parser('describe');describe.add_argument('renderer')
     methods=commands.add_parser('methods');methods.add_argument('--search',default='')
     method=commands.add_parser('method');method.add_argument('entry')
+    forms=commands.add_parser('forms');forms.add_argument('--search',default='')
+    form=commands.add_parser('form');form.add_argument('entry')
+    lp=commands.add_parser('layout-plan');lp.add_argument('--request',required=True,type=Path);lp.add_argument('--output',required=True,type=Path)
+    le=commands.add_parser('layout-export');le.add_argument('--plan',required=True,type=Path);le.add_argument('--output',required=True,type=Path)
     design=commands.add_parser('design');design.add_argument('--brief',required=True,type=Path);design.add_argument('--output',required=True,type=Path)
     method_spec=commands.add_parser('method-spec');method_spec.add_argument('--entry',required=True)
     method_spec.add_argument('--template',required=True,type=Path);method_spec.add_argument('--output',required=True,type=Path)
@@ -47,6 +51,20 @@ def main():
     elif args.command=='method':
         from figure_workbench.methods import method_entry
         result=method_entry(args.entry)
+    elif args.command=='forms':
+        from figure_workbench.forms import catalog_forms
+        result=catalog_forms(args.search)
+    elif args.command=='form':
+        from figure_workbench.forms import form_entry
+        result=form_entry(args.entry)
+    elif args.command=='layout-plan':
+        from figure_workbench.layout import make_layout
+        result=make_layout(read_json(args.request),args.request.resolve().parent);write_new(args.output,result)
+        result={'status':result['status'],'panels':result['panel_count'],'pages':len(result['pages']),'analysis_performed':False}
+    elif args.command=='layout-export':
+        from figure_workbench.layout import export_layout
+        result=export_layout(read_json(args.plan),args.output,args.plan.resolve().parent)
+        result={'status':result['status'],'files':list(result['files']),'analysis_performed':False,'visual_acceptance':False}
     elif args.command=='method-spec':
         from figure_workbench.methods import prepare_method_spec
         spec=prepare_method_spec(args.entry,read_json(args.template),args.template.resolve().parent,args.output)
