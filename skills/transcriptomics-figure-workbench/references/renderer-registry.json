@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "counts": {
-    "python_functions": 121,
-    "fixed_aliases": 79,
-    "table_entries": 121
+    "python_functions": 122,
+    "fixed_aliases": 80,
+    "table_entries": 122
   },
   "renderers": [
     {
@@ -5164,6 +5164,48 @@
       ]
     },
     {
+      "id": "figure_publication_plus.plot_publication_plus",
+      "module": "figure_publication_plus",
+      "function": "plot_publication_plus",
+      "display_name": "Publication alternatives",
+      "summary": "Frozen half-eye, split annotated matrix and aligned profile alternatives.",
+      "parameters": [
+        {
+          "name": "view",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "contract",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "options",
+          "required": true,
+          "annotation": null
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [
+        "publication_plus"
+      ],
+      "source_sha256": "dbdda56147fcd1260fe84fc5fef640b916f34764b9547cc7ee33eb0ac1a4bb12",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "area",
+        "density",
+        "estimate",
+        "inner_lower",
+        "inner_upper",
+        "lower",
+        "upper",
+        "value",
+        "x"
+      ]
+    },
+    {
       "id": "figure_qc_de.plot_frozen_qc_de",
       "module": "figure_qc_de",
       "function": "plot_frozen_qc_de",
@@ -7153,6 +7195,21 @@
         "time",
         "survival",
         "at_risk"
+      ],
+      "theme_mode": "argument"
+    },
+    "publication_plus": {
+      "renderer": "figure_publication_plus.plot_publication_plus",
+      "numeric_columns": [
+        "x",
+        "density",
+        "estimate",
+        "lower",
+        "upper",
+        "inner_lower",
+        "inner_upper",
+        "value",
+        "area"
       ],
       "theme_mode": "argument"
     }

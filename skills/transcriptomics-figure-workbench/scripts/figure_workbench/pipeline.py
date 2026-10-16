@@ -38,10 +38,18 @@ def render_plan(plan,output):
     meta=copy.deepcopy(spec['provenance']);meta['palette']=theme['palette_name']
     meta['layout_audit']=audit
     settings={'raster_dpi':300,'tiff':False,**spec.get('export',{})}
+    from .quality import print_readability
+    try:
+        readability=print_readability(fig,settings)
+        if settings.get('readability_policy')=='block' and readability['state']!='MEASUREMENT_PASS':
+            raise ValueError('PRINT_SIZE_HOLD: essential text is too small at the declared width; reflow or simplify panels, or choose a larger target. No final bundle was written.')
+    except Exception:
+        plt.close(fig)
+        raise
     meta['workbench']={'version':__version__,'spec':copy.deepcopy(spec),'spec_sha256':plan['spec_sha256'],
         'input_sha256':plan['input_sha256'],'source_identity':plan['source_identity'],
         'renderer':plan['renderer'],'quantitative_geometry_sha256':geometry_signature(fig),
-        'appearance_sha256':hash_value(theme),'export':settings,'visual_acceptance':False,'scientific_acceptance':False}
+        'appearance_sha256':hash_value(theme),'export':settings,'print_readability':readability,'visual_acceptance':False,'scientific_acceptance':False}
     lock=output/('.'+spec['figure_id']+'.lock')
     guard=None
     try:
@@ -68,7 +76,7 @@ def render_plan(plan,output):
         plt.close(fig)
         if guard is not None:guard.close();lock.unlink(missing_ok=True)
     return {'status':'RENDERED_UNREVIEWED','renderer':plan['renderer'],'rows':len(data),
-            'files':[str(p) for p in files],'inference_performed':False,'visual_review_required':True}
+            'files':[str(p) for p in files],'print_readability':readability,'inference_performed':False,'visual_review_required':True}
 
 
 def restyle_spec(spec,appearance,figure_id):

@@ -1,5 +1,15 @@
 # Change log
 
+## 0.5.0
+
+- Reworked the skill around the reader's comparison, compatible frozen channels, attractive defaults, explicit context and target-size inspection. Added a dependency-free design planner for eleven comparison structures.
+- Added three frozen display grammars (half-eye, split annotated matrix, aligned linear profiles) and five actual alternatives. Existing estimates, matrix values and stored coordinates remain bound to source tables; illustrative half-eye bounds are explicitly identified.
+- Rechecked 433 baseline exports with hashes, PNG decoding, PDF text-baseline/font screening and 49 inspected contact sheets. The 438-entry current browser records 40 individual full-image screen inspections and retains 139 size warnings. This is not blanket final-size visual acceptance.
+- Repaired five saved figures with bounded colour, opacity and text-spacing patches; retained all historical bytes and numerical geometry.
+- Added preferred-example browsing, before/after toggle, native zoom, component reading for 126 compositions, and responsive filtering. Studio defaults to five polished examples and exports physical-size gates.
+- Added pre-export minimum-text HOLD and artifact/width-bound visual-review scope. Contact-sheet claims cannot satisfy a target-width review contract.
+- Preserved legacy Python/R routes, 260 stable IDs, customized profiles and upstream attribution. No local research analysis or native R package execution added.
+
 ## 0.4.0
 
 - Redesigned all 25 package-specific examples: eight replacements and seventeen newly illustrated entries, using fourteen frozen-result display grammars.

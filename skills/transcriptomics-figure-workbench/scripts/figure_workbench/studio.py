@@ -10,6 +10,13 @@ def build_studio(output,gallery=None,demo_svg=None):
     if output.exists():raise FileExistsError('Choose a new Studio output file')
     from .methods import catalog_methods
     data={'registry':read_registry(),'examples':[],'methods':[],'method_entries':catalog_methods(),'demo_svg':None}
+    data['design_examples']=[]
+    designs=SKILL/'assets/design-gallery'
+    if designs.is_dir():
+        prefix=Path(os.path.relpath(designs,output.resolve().parent)).as_posix()
+        for row in json.loads((designs/'manifest.json').read_text(encoding='utf8'))['records']:
+            key=row['id']
+            data['design_examples'].append(dict(id=key,title=key+' · '+row['view'],input_shape='优选冻结结果画法；合成展示，不是科学验收',png=prefix+'/'+key+'/'+key+'.png',source=prefix+'/index.html#'+key))
     package_gallery=SKILL/'assets/package-gallery'
     if package_gallery.is_dir():
         prefix=Path(os.path.relpath(package_gallery,output.resolve().parent)).as_posix()

@@ -154,6 +154,21 @@
       for(const name of ['fill','stroke']){const v=el.getAttribute(name);if(v&&patch.color_map[v.toLowerCase()])el.setAttribute(name,patch.color_map[v.toLowerCase()])}
     }
     if(patch.color_map)changes.push('explicit consistent color map: '+JSON.stringify(patch.color_map));
+    if(patch.element_opacity){
+      for(const [id,opacity]of Object.entries(patch.element_opacity)){
+        if(!/^[A-Za-z][A-Za-z0-9_-]*$/.test(id)||!Number.isFinite(opacity)||opacity<.1||opacity>1)throw Error('Invalid bounded decorative opacity');
+        const target=[...body.querySelectorAll('[id]')].find(el=>el.id===id);
+        if(!target)throw Error('Unknown decorative opacity target');
+        for(const el of [target,...target.querySelectorAll('path,use,polygon,circle')]){
+          if(el.getAttribute('style')?.includes('opacity:')){
+            el.style.opacity=String(opacity);el.style.fillOpacity=String(opacity);el.style.strokeOpacity=String(opacity);
+            // Use one alpha channel; avoid multiplying three replacement alphas.
+            el.style.opacity='1';
+          }
+        }
+      }
+      changes.push('explicit bounded decorative-opacity repair');
+    }
     if(patch.body_bounds)changes.push('explicit visible-body bounds: '+JSON.stringify(patch.body_bounds));
     const b=patch.body_bounds?{x:patch.body_bounds[0],y:patch.body_bounds[1],width:patch.body_bounds[2],height:patch.body_bounds[3]}:box(body),fontSizes=[...body.querySelectorAll('text')].filter(el=>el.textContent.trim().length>2).map(el=>parseFloat(getComputedStyle(el).fontSize)||9).filter(n=>n>=5).sort((a,b)=>a-b);
     const low=fontSizes[Math.floor(fontSizes.length*.03)]||9;

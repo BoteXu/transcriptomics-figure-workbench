@@ -36,6 +36,10 @@ def main(output):
             page=page.replace(prefix+'.'+ext,'https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/examples/package-v040/'+key+'/'+key+'.'+ext)
         page=page.replace('package-gallery/inputs/'+key+'.spec.json','https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/examples/package-v040/inputs/'+key+'.spec.json')
         page=page.replace('package-gallery/index.html#'+key,'https://github.com/BoteXu/transcriptomics-figure-workbench/tree/v'+version+'/examples/package-v040#'+key)
+    for row in json.loads((ROOT/'examples/design-v050/manifest.json').read_text())['records']:
+        key=row['id'];prefix='design-gallery/'+key+'/'+key
+        page=page.replace(prefix+'.png','data:image/png;base64,'+base64.b64encode((ROOT/'examples/design-v050'/key/(key+'.png')).read_bytes()).decode())
+        page=page.replace('design-gallery/index.html#'+key,'https://github.com/BoteXu/transcriptomics-figure-workbench/tree/v'+version+'/examples/design-v050#'+key)
     studio.write_text(page,encoding='utf8');assets.append(studio)
     package_examples=output/f'package-examples-v{version}.zip'
     with zipfile.ZipFile(package_examples,'x',compression=zipfile.ZIP_DEFLATED) as archive:
@@ -81,6 +85,20 @@ def main(output):
         archive.writestr('reviewed-atlas/README.txt','Open index.html for 400 reviewed exports; open methods/index.html for 8 GSEA/ORA displays. Original source files and source-plan paths refer to the versioned public repository. Self-review is not scientific acceptance.\n')
     assets.append(atlas)
     full_pdf=output/'full-atlas-v030.pdf';shutil.copy2(ROOT/'examples/overview/full-atlas-v030.pdf',full_pdf);assets.append(full_pdf)
+    # Self-contained current browser with the exact paths its offline links use.
+    # The historical atlas remains a separate immutable download above.
+    review=output/f'figure-review-library-v{version}.zip'
+    with zipfile.ZipFile(review,'x',compression=zipfile.ZIP_DEFLATED) as archive:
+        paths=set()
+        report=json.loads((ROOT/'examples/review-v050/review-index.json').read_text(encoding='utf8'))
+        for row in report['records']:
+            paths.update(row['assets'].values());paths.update(row.get('previous_assets',{}).values())
+        for folder in ['examples/review-v050','examples/design-v050','examples/gallery/repairs-v050','examples/package-v040/inputs','examples/method-v030/inputs','docs/screens-v050']:
+            paths.update(p.relative_to(ROOT).as_posix() for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
+        for relative in sorted(paths):archive.write(ROOT/relative,relative)
+        archive.writestr('README.txt','Open examples/review-v050/index.html for 438 current exports, five repairs, five alternatives and 126 component reading views. Exact full sources are in the versioned public repository. Overview and screen review are not paper proofs or scientific acceptance.\n')
+    assets.append(review)
+    contact=output/'design-alternatives-v050.jpg';shutil.copy2(ROOT/'docs/design-alternatives-v050.jpg',contact);assets.append(contact)
     (output/f'SHA256SUMS-v{version}.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in assets),encoding='utf8')
     print(json.dumps(dict(status='PUBLIC_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
 

@@ -102,6 +102,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_publication.plot_publication_forest | forest | yes | palette, x_label, interval_label, effect_scale |
 | figure_publication.plot_feature_facets | feature_facets | yes | value_label, limits |
 | figure_publication.plot_raincloud | raincloud | yes | palette, y_label, unit_label |
+| figure_publication_plus.plot_publication_plus | publication_plus | yes | view, contract, options |
 | figure_qc_de.plot_frozen_qc_de | qc_de | yes | mode, contract |
 | figure_reference.plot_annular_profile | canonical ID | yes | palette, value_label, area_label, value_max |
 | figure_reference.plot_ellipse_correlation | canonical ID | yes | labels |
@@ -1385,6 +1386,16 @@ See the fixed implementation and its input contract.
 | unit_label | true | — |
 | title | false | "" |
 | density_min_n | false | 20 |
+
+## figure_publication_plus.plot_publication_plus
+
+Frozen half-eye, split annotated matrix and aligned profile alternatives.
+
+| Parameter | Required | Default |
+|---|---|---|
+| view | true | — |
+| contract | true | — |
+| options | true | — |
 
 ## figure_qc_de.plot_frozen_qc_de
 

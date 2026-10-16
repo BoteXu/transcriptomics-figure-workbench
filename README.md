@@ -2,13 +2,28 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.4.0**。25 个软件包/方法入口现已全部提供重新设计的实际示例（重画8张、补齐17张），并可在 Studio 内直接预览。新版重构为统一的“选择画法 → 输入预检 → 绘图 → 外观修改 → 独立验收”工作流。保留历史 Python/R 接口、260 个稳定示例和全部已有组合。
+本版为 **v0.5.0**。优先选择较漂亮、克制且适合当前数据的画法，流程更新为“比较问题 → 冻结字段与上下文 → 优选方案 → 目标尺寸绘图 → 外观修订 → 按实际范围验收”。Studio 默认展示五张精修替代示例；25 个软件包专项示例与历史接口全部保留。
+
+[优选与全库复查浏览页](examples/review-v050/index.html) · [五种实际替代示例](examples/design-v050/index.html) · [新选图逻辑与契约](skills/transcriptomics-figure-workbench/references/design-workflow-v050.md) · [本轮检查范围](skills/transcriptomics-figure-workbench/references/validation-v050.md)
+
+## v0.5 优先好看，也检查实际使用尺寸
+
+- **画法优选：** 供应的分布轮廓加点区间、带分组留白的注释热图、对齐线性轮廓、紧凑区间森林图、区分六类身份的存储坐标图。前三种新增绘图规则，后两种是既有绘图器的新示例，共五张；不等于五种新统计方法。
+- **具体修订：** R01/R02 减少叠色发灰，R03 拉开28处标签与点的距离，R07 弱化非显著边，R16 提高点的可见度。原图和原始数值仍保留，支持原版/修正版对比。
+- **选图逻辑：** 新增 `design` 指令，按11类比较结构和实际提供的字段推荐方案；QC、独立单位或必要字段未解决时返回 `HOLD`。推荐不是可执行分析，也不证明科学有效。
+- **尺寸门禁：** FigureSpec 和 Studio 支持目标宽度、最小字号与阻断策略。文字过小先重排，再导出；已声明目标尺寸的视觉验收必须另报实际检查的宽度和文件类型。
+- **完整复查：** 433个既有导出完成哈希、PNG解码、PDF文字基线与字号筛查，并查看49张总览页。加上5张替代示例，目前浏览页有438个当前导出；其中40张做了单图屏幕复查。139张仍有178mm页宽下的字号预警；总览检查不能当作逐张最终尺寸通过。
+- **浏览交互：** 优选、全部、尺寸预警、组合四种筛选；独立面板阅读、原像素放大、原版对比和键盘切换。126种组合可展开面板；页面保持离线，不上传数据。
+
+![本轮优选替代画法](docs/design-alternatives-v050.jpg)
+
+设计参考采用 [ggdist 的分布与区间表达](https://mjskay.github.io/ggdist/articles/slabinterval.html) 和 [ComplexHeatmap 的分组切片设计](https://jokergoo.github.io/ComplexHeatmap-reference/book/a-single-heatmap.html#heatmap-split)，实现为独立的冻结表绘图代码。没有运行这些上游分析软件，也没有复制参考图片。公众号检索尚未取得新的可读正文，本轮不宣称整合了未读文章代码。
 
 [打开六种重设计与六种新增图预览](examples/aesthetic-v030/index.html) · [重构设计与输入要求](skills/transcriptomics-figure-workbench/references/aesthetic-rebuild.md) · [打开新版 Figure Studio](examples/studio/index.html) · [统一工作流](skills/transcriptomics-figure-workbench/references/workbench-v030.md) · [自动生成的能力与参数目录](skills/transcriptomics-figure-workbench/references/renderer-directory.md)
 
 | 升级 | 实际实现 |
 |---|---|
-| 架构 | 121 个 Python 绘图函数统一登记；79 个固定别名；只在选定绘图时加载依赖 |
+| 架构 | 122 个 Python 绘图函数统一登记；80 个固定别名；只在选定绘图时加载依赖 |
 | 输入 | 一个 FigureSpec 保存数据、参数、课题主题和来源；变动使旧计划失效 |
 | 外观 | 论文、紧凑、报告、大字四种字号层级，复用15套现有色卡与固定分组颜色 |
 | 交互 | 离线 SVG 导入、字体/字号预览、修改前后比较、可拖动组图草案与重绘配置 |
@@ -47,7 +62,7 @@ GSEA现有专门的单通路、正负曲线、同轴叠加、分面、NES对比�
 
 [8张GSEA/ORA专项预览](examples/method-v030/index.html) · [专用入口、字段与调用方法](skills/transcriptomics-figure-workbench/references/package-method-entries.md)
 
-## 全图谱升级与逐张自检
+## v0.3 历史全图谱升级与逐张自检
 
 **400 个最终导出已逐张查看并绑定图像哈希**：260 个历史主图、32 个辅助面板、88 个横纵或替代排版、8 个 QC/DE 图、12 个重设计和新增示例。其中 274 个独立导出、126 个组合导出。这个数量包含变体，不是 400 种新算法。
 
@@ -77,7 +92,7 @@ v0.2.5 增量：新增八种冻结 QC / DE 模式；逐项审查用户提供的�
 |---|---|
 | 主目录 | 98 个画法与组合：72 个通用表达入口、26 个组合入口；另有15套色卡、3个结构示例和1个附表入口 |
 | 保留来源 | 260 个稳定编号；旧244个PNG/PDF原字节保留；包含42张实际组合、15套色卡、3个公共坐标结构示例 |
-| Python 绘图函数 | 121；28个历史R对应函数另行保留，函数数不等于入口数 |
+| Python 绘图函数 | 122；28个历史R对应函数另行保留，函数数不等于入口数 |
 | 历史 R 对应函数 | 28；不宣称所有 Python 新功能都有 R 对应 |
 | 示意图总览 | 主总览只放各入口的唯一代表；[260个来源档案](examples/overview/source-archive-v021.pdf)另列重复与历史示例 |
 | 横纵排版 | [42张组合的84种完整布局](examples/gallery/layout_review/index.html)，另有切片/影像对照横纵模式 |
@@ -112,7 +127,7 @@ v0.2.5 增量：新增八种冻结 QC / DE 模式；逐项审查用户提供的�
 
 任选一种方式：
 
-1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.3.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
+1. 下载 Release 中的 `transcriptomics-figure-workbench-v0.5.0.zip`，解压后将其中的 `transcriptomics-figure-workbench` 文件夹放入你的 Codex skills 目录（默认 `~/.codex/skills/`）。若已有同名 skill，先备份，再明确选择替换；不要直接覆盖私人项目配置。
 2. 在 Codex 中使用 skill-installer，指定仓库 `BoteXu/transcriptomics-figure-workbench` 和路径 `skills/transcriptomics-figure-workbench`。
 3. 克隆仓库，只复制 `skills/transcriptomics-figure-workbench/` 至自己的 skills 目录。
 

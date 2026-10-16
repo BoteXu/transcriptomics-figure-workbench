@@ -1,52 +1,78 @@
 ---
 name: transcriptomics-figure-workbench
-description: Select, render, restyle, compare and audit scientific figures from frozen result tables. Use a source-derived renderer catalog, shared project themes, offline SVG previews, standalone panels and traceable compositions. Preserve supplied statistics, units, identities and geometry rather than rerunning analysis.
+description: Design, render and improve publication figures from frozen scientific result tables. Prefer polished examples that match the research question, preserve statistical channels and identity, check the intended physical size and record artifact-bound visual review. Includes omics, enrichment, effects, networks, distributions and traceable multi-panel figures.
 ---
 
 # Scientific Figure Workbench
 
-Choose visual encoding by the data structure and intended comparison. Keep source values, independent units, denominators, missingness and supplied uncertainty explicit. Browse without requiring a dataset; formal drawing needs the selected table and provenance.
+## Start with the comparison and a polished example
 
-## Choose the work mode
+Identify the comparison the reader should see, the supplied data shape and the intended use (paper, slide or screen). **Prioritize attractive, restrained examples with readable labels and clear visual hierarchy.** Use the [five current design alternatives](assets/design-gallery/index.html) and [25 package examples](assets/package-gallery/index.html) before searching the historical catalog. Offer one preferred design and at most two useful alternatives. A different palette or repeated layout is not a new scientific method.
 
-- **Discover a figure:** use `scripts/workbench.py catalog --search <term>` and `describe <renderer>`. These commands do not import plotting stacks. The generated [renderer directory](references/renderer-directory.md) lists current signatures and counts; functions, fixed aliases and drawing families are different dimensions. Inspect a specific implementation's input contract before choosing it.
-- **Render frozen results:** read [the unified workflow](references/workbench-v030.md). Select one FigureSpec, prepare a source-bound plan and render into a new output directory. `plan` is preflight only; actual files and receipt hashes establish completion. Table-specific semantic checks still run in the selected renderer.
-- **Refine appearance:** preserve the selected category map and continuous-scale roles. Use one project theme, a named typography profile and a new figure ID. Compare quantitative geometry, then inspect actual final-size exports. Read [aesthetic controls](references/aesthetic-controls.md) for detailed legacy controls.
-- **Use the rebuilt design or additional drawing modes:** read [the aesthetic rebuild](references/aesthetic-rebuild.md) and inspect its 12 actual examples. Six redesigned modes and six supplemental entries are implemented. The repository additionally supplies 400 individually inspected final exports with exact PNG hashes; see [full-atlas review](references/full-atlas-review.md). Text geometry checks do not replace visual review; retain separate source/uncertainty definitions and do not infer scientific analyses from the figures.
-- **Explore interactively:** generate offline Figure Studio with `workbench.py studio`. Load a selected SVG and optional FigureSpec for text previews, before/after comparison and redraw settings. The publication-layout button uses the bundled inert-SVG finisher; its export remains unreviewed until actually inspected. An explicitly supplied gallery exposes all 260 historical source IDs. No service, private upload or automatic data cache is used. Previews remain unreviewed; unknown data/parameters are never inferred.
-- **Compose panels:** retain each independent panel and its table. Use [combination contracts](references/combinations-router.md) and the existing hash-verified `compose_panels` implementation for final assembly. Studio's draggable board exports a layout draft only. Shared scientific axes and common guides need explicit identity/scale bindings.
-- **Review delivery:** use `workbench.py review` for exact file checks, then record only visual checks actually performed. Changed exports invalidate prior visual acceptance. File integrity, visual quality and scientific validity are separate.
+| Intended comparison | Preferred display | Required distinction |
+|---|---|---|
+| Differential expression | Selected-label volcano; short declared feature set as point/interval forest | Effect, adjusted probability and uncertainty are separate channels |
+| Enrichment across contrasts | Aligned NES dot matrix; term lollipop for ORA | NES differs from ES; size differs from significance; missing tests remain explicit |
+| A genuine enrichment curve | ES + hit barcode + rank metric; facets for many pathways | Requires supplied full curve and ranked universe, not only an enrichment summary |
+| A matrix with known groups | Split annotated heatmap; expression dot matrix when fractions matter | Fixed order/groups, units, colour range, fraction denominator and missingness |
+| Distribution and uncertainty | Supplied half-eye + intervals, or a point/interval forest | A density requires supplied coordinates; no new KDE, intervals or tests for styling |
+| Paired observations | Sparse paired points/lines | Only connect the same independently identified unit |
+| Stored embedding | Restrained category palette and explicit label anchors | Preserve coordinates; a cell is not an independent donor |
+| Dense graph or many memberships | Adjacency / membership matrix; aligned UpSet | Preserve edge and intersection definitions; do not prune to make a nicer network |
+| Profiles with many categories | Aligned linear small multiples | Prefer to overlapping radial fills for precise comparison; retain a radial alternative when requested |
+| Multiple panels | Few balanced panels with independent exports | Check the actual page width; provide a component reading view for oversized layouts |
 
-## Package and method entries
+Respect a user-selected design. These defaults guide choices when no design was specified; scientific compatibility is mandatory. Do not manufacture missing channels or change selection thresholds for appearance.
 
-Use `workbench.py methods` and `method <entry>` for 25 fixed package/method bindings. All 25 have actual redesigned examples in [the package gallery](assets/package-gallery/index.html); read [package style guidance and references](references/package-styles-v040.md) before drawing. Use `renderer: package_style` and the selected complete example spec for the new display grammar; preserve existing templates for legacy rendering. Read [package/method routes](references/package-method-entries.md) for dedicated GSEA classic/overlay/facets, NES and leading-edge views, ORA bubble/lollipop and result bindings for enrichment, GSVA, DE, single-cell, WGCNA, communication, activity and survival packages. Native package analysis stays on the existing analysis host. Input/export summaries alone cannot reconstruct genuine ES curves.
+## Workflow
 
-## Select specialist input contracts as needed
+### 1. Establish the frozen input and scope
 
-The preserved [v0.2.5 routing map](references/legacy-routing-v025.md) provides the complete conditional route map. Read only the relevant reference:
+For formal drawing, obtain one selected table, source version/hash, biological independent unit, denominator, contrast, missingness, selection and uncertainty definitions. Upstream QC must already be reviewed. If these are unresolved, prepare a design proposal and mark the dependency; do not present a final research figure as accepted. Browsing examples requires no private data.
 
-- General data shape and visual meaning: [data-expression-router](references/data-expression-router.md).
-- Matrices, labels, missing cells and ordering: [matrix-input](references/matrix-input.md).
-- QC/DE frozen summaries: [qc-de-article-review](references/qc-de-article-review.md).
-- Distribution, paired changes, effects, curves and useful combinations: [publication layouts](references/publication-layouts.md).
-- Genomic, multiomic, spatial, model and computational-biology results: [analysis modules](references/analysis-modules-router.md), [multiomics views](references/course-visualization-router.md), [Biomni views](references/biomni-visualization-router.md).
-- Networks, memberships and aligned tracks: [network expansion](references/network-expansion.md), [linked evidence](references/wgcna-visualization-router.md), [alignment](references/alignment-and-flow.md).
-- Genuine protein coordinates: [protein visualization](references/protein-visualization.md); use an installed specialist viewer and declared chains/residues. A schematic is not an atomic model.
+Follow the host's memory, computation and server rules. This skill does not authorize local research analysis, package installation, remote dispatch or upload. Keep private profiles, inputs, drafts and plans outside the distributable skill.
 
-## Appearance and scientific invariants
+### 2. Prepare a question-led design
 
-Establish one selected palette, stable identity-to-color slots, font hierarchy and semantic continuous scales per project. The [15 color cards](references/reference-palette-guide.md) retain attribution and the documented C02 printed-value conflict. Do not cycle colors when capacity is insufficient. Apply an explicit replacement card through the existing theme tool, then inspect all comparable panels. Native/R automatic replacement remains limited to its actually tested adapters.
+Use `scripts/workbench.py design --brief <DesignBrief.json> --output <new-plan.json>` for a source-bound recommendation. Read [the design workflow and schemas](references/design-workflow-v050.md). This standard-library step checks the selected TSV, explicit semantic roles and context; it returns `HOLD` or compatible candidates. It does not certify numerical/biological validity, create a FigureSpec or run inference.
 
-Paper, compact, presentation and large-print profiles adjust typography. SVG Studio text previews preserve other geometry; final redraw can change text extents and needs export inspection. Some legacy internal colors have no semantic adapter: retain or explicitly review them rather than guess their meaning.
+Use `catalog --search`, `describe <renderer>`, `methods` or `method <entry>` for exact callable contracts. [The generated directory](references/renderer-directory.md) comes from shipped source; discovery imports no plotting dependencies. Design view names are guidance until mapped to that renderer's exact parameters.
 
-Use supplied results and stored coordinates. Do not refit tests, FDR, models, embedding, clustering, enrichment or uncertainty for aesthetics. Unknown is not zero; a cell, spot or technical repeat is not automatically an independent subject. Legacy descriptive display operations retain their documented limits and host execution restrictions.
+### 3. Bind and render the selected design
 
-Follow the host's memory, computation and server rules. This skill does not authorize local scientific analysis, installation, remote dispatch or private uploads. Use the existing server route for scientific computation and large rendering. Keep private project profiles, original references, inputs and plans outside the distributable skill.
+Prepare a complete FigureSpec and a fresh `plan`; `plan` is preflight only. For new publication work declare `export.target_width_mm`, `minimum_text_pt` and `readability_policy: block`. The policy checks essential text at that physical width before writing a final bundle. A font-size measurement cannot certify appearance.
 
-## Export and acceptance
+Use `render --plan` into a fresh directory. Source, table, settings and renderer identities must still match. Actual outputs and receipts establish completion. A blocked size gate means reflow, fewer selected panels with explicit selection, a larger target, or a component reading edition; do not silently shrink or discard data. Preserve failed versions and never overwrite existing bundles.
 
-New FigureSpec renders produce atomic bundles with PDF, SVG, 300/600-DPI PNG, optional TIFF, exact plotted TSV, provenance and environment versions. Saved plans bind exact source, data and settings. No overwriting existing figure bundles or automatic retry of an ambiguous operation.
+### 4. Improve appearance without changing the results
 
-Review actual outputs at final size for labels, units, guides, clipping, category/color semantics and readability. Preserve failure versions. Record the exact bundle hash and inspection scope separately from mechanical checks. Synthetic examples are labeled and never presented as scientific results.
+Use one project theme and consistent category-to-colour slots. Prefer restrained teal/coral/slate accents, dark text, fine neutral guides, direct labels and a dedicated guide lane when they suit the selected data. Use a sequential ramp for nonnegative magnitudes and a declared centred diverging ramp for signed effects. Avoid encoding many identities with nearly indistinguishable shades. Palette capacity must cover all identities; do not cycle colours.
 
-Retain historical Python/R calls, all 260 stable previews, 42 actual compositions, auxiliary panels, 15 cards and original browser opinion keys. Follow [content preservation](references/content-preservation.md). Newly unified callable entries do not become new scientific methods. New package coverage and visual scope are in [v0.4 acceptance](references/validation-v040.md). Preserved validation is in [v0.3 acceptance](references/validation-v030.md); earlier receipts retain their own scope.
+Keep supplied statistics, coordinates, intervals, ordering, membership and units fixed. Do not refit FDR, embedding, clustering, enrichment, density or confidence limits for aesthetics. Reuse existing renderers and change presentation in a new version. Use `restyle` for allowed appearance fields; compare quantitative geometry and input hashes. Legacy colours with unknown semantics need an explicit mapping review.
+
+For source SVG finishing, use Studio's inert-SVG finisher and explicit source-bound patches. It preserves graphical primitives while allowing text spacing, consistent colours and bounded decorative-opacity changes. Its output is unreviewed until actually inspected. No external SVG content is fetched.
+
+### 5. Inspect all exports in scope
+
+Separate three records: file/encoding checks, visual inspection, and scientific interpretation. Screen every selected figure; enlarge dense or flagged figures and inspect all changed outputs individually. A contact sheet can find broad problems but cannot establish small-label or final-size acceptance. Keep the actual inspection scope and PNG hash; do not copy old review claims onto changed bytes.
+
+At intended size inspect hierarchy, labels/units, legends, clipping, overlap, category/scale meaning, point/line contrast and panel balance. Use the offline [review browser template](assets/studio/review-browser.html) through the repository's generated review gallery for original/revised comparisons, native pixel zoom and component reading. Do not infer shared axes merely from aligned panels.
+
+### 6. Record and deliver
+
+`review --bundle` checks file hashes. A visual decision needs the six actual checks and notes. For target-width bundles, `--inspection` must identify the inspected artifact types, individual scope and matching width; contact overviews cannot become acceptance. Source/export changes invalidate the corresponding bound record. A self-review is not an independent second review or paper proof.
+
+Deliver a preferred preview, editable PDF/SVG, exact plotted TSV, FigureSpec and receipts. State material limitations and what was actually inspected. Keep `RENDERED_UNREVIEWED`, `FILES_VERIFIED`, `MEASUREMENT_PASS`, visual acceptance and scientific acceptance distinct.
+
+## Specialist routes and compatibility
+
+- Package views and GSEA contracts: [package/method entries](references/package-method-entries.md), [package styles](references/package-styles-v040.md).
+- New half-eye, split matrix and linear profile contracts: [design workflow](references/design-workflow-v050.md).
+- Matrix ordering/missingness: [matrix input](references/matrix-input.md); QC/DE: [frozen summaries](references/qc-de-article-review.md).
+- Genomics, multiomics, spatial and model results: [analysis modules](references/analysis-modules-router.md), [multiomics](references/course-visualization-router.md), [Biomni views](references/biomni-visualization-router.md).
+- Networks, memberships and tracks: [network expansion](references/network-expansion.md), [linked evidence](references/wgcna-visualization-router.md), [alignment](references/alignment-and-flow.md).
+- Composition: [combination contracts](references/combinations-router.md). Final hash-verified assembly uses `compose_panels`; Studio's draggable board is a draft.
+- Protein coordinates: [protein visualization](references/protein-visualization.md). Reuse a specialist viewer; a schematic is not an atomic model.
+- Legacy controls: [routing map](references/legacy-routing-v025.md), [aesthetic controls](references/aesthetic-controls.md), [unified commands](references/workbench-v030.md).
+
+Retain the original Python/R calls, 260 stable source IDs, historical images and opinion keys, 42 compositions, auxiliary panels and attributed colour cards. Preserve customized/private profiles during upgrades. See [content preservation](references/content-preservation.md), [v0.5 review scope](references/validation-v050.md), [v0.4 acceptance](references/validation-v040.md) and [v0.3 acceptance](references/validation-v030.md). Historical validation keeps its original scope.

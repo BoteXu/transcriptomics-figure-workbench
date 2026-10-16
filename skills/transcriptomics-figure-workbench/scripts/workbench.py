@@ -15,6 +15,7 @@ def main():
     describe=commands.add_parser('describe');describe.add_argument('renderer')
     methods=commands.add_parser('methods');methods.add_argument('--search',default='')
     method=commands.add_parser('method');method.add_argument('entry')
+    design=commands.add_parser('design');design.add_argument('--brief',required=True,type=Path);design.add_argument('--output',required=True,type=Path)
     method_spec=commands.add_parser('method-spec');method_spec.add_argument('--entry',required=True)
     method_spec.add_argument('--template',required=True,type=Path);method_spec.add_argument('--output',required=True,type=Path)
     plan=commands.add_parser('plan');plan.add_argument('--spec',required=True,type=Path);plan.add_argument('--output',required=True,type=Path)
@@ -28,6 +29,7 @@ def main():
     review=commands.add_parser('review');review.add_argument('--bundle',required=True,type=Path)
     review.add_argument('--record',type=Path);review.add_argument('--decision',choices=['accepted','changes_requested'])
     review.add_argument('--checks',type=Path);review.add_argument('--notes');review.add_argument('--output',type=Path)
+    review.add_argument('--inspection',type=Path)
     studio=commands.add_parser('studio');studio.add_argument('--output',required=True,type=Path)
     studio.add_argument('--gallery',type=Path);studio.add_argument('--demo-svg',type=Path)
     args=parser.parse_args()
@@ -46,6 +48,11 @@ def main():
         from figure_workbench.methods import prepare_method_spec
         spec=prepare_method_spec(args.entry,read_json(args.template),args.template.resolve().parent,args.output)
         write_new(args.output,spec);result={'status':'METHOD_SPEC_PREPARED','entry':args.entry,'output':str(args.output),'native_package_executed':False}
+    elif args.command=='design':
+        from figure_workbench.design import design_plan
+        result=design_plan(read_json(args.brief),args.brief.resolve().parent)
+        write_new(args.output,result)
+        result={'status':result['state'],'preferred':result['preferred'],'output':str(args.output),'inference_performed':False}
     elif args.command=='plan':
         result=make_plan(read_json(args.spec),args.spec.resolve().parent);write_new(args.output,result)
         result={'status':'PREFLIGHT_ONLY','rows':result['rows'],'renderer':result['renderer'],'output':str(args.output)}
@@ -79,7 +86,7 @@ def main():
         if args.record:result=verify_visual(args.bundle,read_json(args.record))
         elif args.decision:
             if not args.checks or not args.output or not args.notes:parser.error('A decision needs --checks, --notes and --output')
-            result=record_visual(args.bundle,args.decision,read_json(args.checks),args.notes,args.output)
+            result=record_visual(args.bundle,args.decision,read_json(args.checks),args.notes,args.output,read_json(args.inspection) if args.inspection else None)
         else:result=inspect_bundle(args.bundle)
     else:
         from figure_workbench.studio import build_studio

@@ -79,7 +79,7 @@ def validate_spec(spec):
         raise ValueError('Complete explicit provenance is required')
     if any(not isinstance(meta[k],str) or not meta[k].strip() for k in META_FIELDS-{'synthetic'}):
         raise ValueError('Provenance text cannot be empty')
-    if row['module'] in {'figure_editorial','figure_expanded_grammar'}:
+    if row['module'] in {'figure_editorial','figure_expanded_grammar','figure_package_styles','figure_publication_plus'}:
         contract=spec['parameters'].get('contract')
         if not isinstance(contract,dict) or type(contract.get('synthetic')) is not bool or contract['synthetic']!=meta['synthetic']:
             raise ValueError('Frozen-input contract and export provenance must agree about synthetic data')
@@ -114,10 +114,19 @@ def validate_spec(spec):
     if 'font_family' in app and (not isinstance(app['font_family'],str) or not app['font_family'].strip()):
         raise ValueError('Font family must be explicit')
     export=spec.get('export',{})
-    if (not isinstance(export,dict) or set(export)-{'raster_dpi','tiff'}
+    if (not isinstance(export,dict) or set(export)-{'raster_dpi','tiff','target_width_mm','minimum_text_pt','readability_policy'}
             or type(export.get('raster_dpi',300)) is not int or export.get('raster_dpi',300) not in {300,600}
             or type(export.get('tiff',False)) is not bool):
         raise ValueError('Export supports explicit 300/600 DPI and optional TIFF')
+    for key,low,high in [('target_width_mm',40,1000),('minimum_text_pt',5,30)]:
+        if key in export:
+            v=export[key]
+            if type(v) not in {int,float} or not math.isfinite(v) or not low<=v<=high:
+                raise ValueError('Export print-size target is outside supported bounds')
+    if export.get('readability_policy','warn') not in {'warn','block'}:
+        raise ValueError('readability_policy must be warn or block')
+    if export.get('readability_policy')=='block' and 'target_width_mm' not in export:
+        raise ValueError('A blocking size gate requires an explicit target width')
     canonical(spec)
     return row
 

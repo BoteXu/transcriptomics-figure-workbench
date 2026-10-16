@@ -24,6 +24,8 @@ const checks=[];
 try{
   await page.goto(url,{waitUntil:'networkidle'});
   const registry=JSON.parse(await page.locator('#studio-data').textContent()).registry;
+  assert.equal(await page.locator('#catalog-count').innerText(),'5');checks.push('five preferred polished examples are the default');
+  await page.locator('#catalog-mode').selectOption('renderer');
   assert.equal(await page.locator('#catalog-count').innerText(),String(registry.counts.python_functions));checks.push('all source-derived callable entries visible');
   await page.waitForSelector('.svg-frame',{timeout:8000});
   await page.frameLocator('#preview-content iframe').locator('svg').waitFor();
@@ -64,6 +66,7 @@ try{
   const original=JSON.parse(await fs.readFile(specPath,'utf8')),redraw=JSON.parse(await fs.readFile(path.join(output,'redraw.spec.json'),'utf8'));
   assert.deepEqual(redraw.input,original.input);assert.deepEqual(redraw.parameters,original.parameters);assert.deepEqual(redraw.provenance,original.provenance);assert.deepEqual(redraw.theme,original.theme);
   assert.equal(redraw.appearance.font_family,'DejaVu Sans');assert.equal(redraw.appearance.label_pt,12.5);assert.equal(redraw.export.raster_dpi,600);assert.equal(redraw.export.tiff,true);checks.push('redraw export preserves inputs and scientific parameters');
+  assert.equal(redraw.export.target_width_mm,178);assert.equal(redraw.export.minimum_text_pt,7);assert.equal(redraw.export.readability_policy,'block');checks.push('redraw retains an explicit physical-size blocking gate');
   const unsafe=await page.evaluate(()=>{
     const source=['<script>alert(1)</script>','<image href="https://example.invalid/x.png"/>','<rect onclick="alert(1)"/>','<foreignObject/>','<style>@import "https://example.invalid/a.css";</style>'];
     return source.map(x=>{try{window.FigureStudioCore.safeSVG('<svg xmlns="http://www.w3.org/2000/svg">'+x+'</svg>');return false;}catch{return true;}});

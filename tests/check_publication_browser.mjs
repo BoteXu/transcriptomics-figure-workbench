@@ -57,6 +57,28 @@ try{
   await page.goto(base+'/examples/gallery/index.html#K42');await page.waitForFunction(()=>document.getElementById('outputimage').getAttribute('src').includes('publication-v030/K42'));
   assert.ok(await page.locator('#outputimage').getAttribute('src'));checks.push('primary gallery opens reviewed current preview with stable ID');
   await page.goto(base+'/examples/method-v030/index.html');assert.equal(await page.locator('article').count(),8);checks.push('eight dedicated GSEA/ORA examples accessible');
+  await page.goto(base+'/examples/review-v050/index.html');
+  assert.match(await page.locator('#count').innerText(),/\/ 438/);
+  await page.locator('#filter').selectOption('all');assert.equal(await page.locator('article').count(),438);
+  await page.locator('#search').fill('R03');await page.getByRole('button',{name:'检查 R03',exact:true}).click();
+  assert.match(await page.locator('#viewport img').getAttribute('src'),/repairs-v050/);
+  await page.locator('#before').click();assert.match(await page.locator('#viewport img').getAttribute('src'),/publication-v030/);
+  await page.locator('#native').click();assert.match(await page.locator('#viewport').getAttribute('class'),/native/);
+  await page.locator('#close').click();await page.locator('#search').fill('');await page.locator('#filter').selectOption('size');assert.equal(await page.locator('article').count(),139);
+  await page.locator('#filter').selectOption('composition');assert.equal(await page.locator('article').count(),126);
+  await page.getByRole('button',{name:'检查 K01',exact:true}).click();await page.locator('#parts').click();assert.ok(await page.locator('.component').count()>=2);
+  await page.locator('#close').click();await page.setViewportSize({width:390,height:844});await page.locator('#filter').selectOption('preferred');
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth));
+  await page.screenshot({path:path.join(output,'review-narrow.png'),fullPage:false});
+  checks.push('438-entry review browser: search, 139 size flags, 126 component readings, original/revised toggle, native zoom and narrow layout');
+  await page.setViewportSize({width:850,height:1100});
+  for(let i=1;i<=5;i++){
+    const key='VIS'+String(i).padStart(2,'0');
+    await page.setContent('<!doctype html><meta charset="utf-8"><style>body{margin:24px;background:#edf1f3;font:14px system-ui}img{display:block;width:178mm;height:auto;background:white}</style><p>'+key+' · nominal CSS 178 mm screen proof (not calibrated paper)</p><img src="'+base+'/examples/design-v050/'+key+'/'+key+'.png" alt="'+key+'">');
+    await page.waitForFunction(()=>document.querySelector('img').complete&&document.querySelector('img').naturalWidth>1000);
+    await page.screenshot({path:path.join(output,key+'-178mm-screen.png'),fullPage:true});
+  }
+  checks.push('five individual nominal CSS 178mm screenshots saved for separate human inspection; automation is not visual acceptance');
   assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
   const result={status:'PUBLICATION_BROWSER_PASS',checks,external_requests:0,scientific_acceptance:false};
   await fs.writeFile(path.join(output,'validation.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));

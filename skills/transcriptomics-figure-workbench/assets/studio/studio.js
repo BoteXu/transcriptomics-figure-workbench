@@ -106,11 +106,11 @@ function showRenderer(row){
     const small=document.createElement('div');small.className=p.required?'required':'';small.textContent=p.required?'必填':'默认 '+JSON.stringify(p.default);div.append(small);$('#renderer-detail').append(div);}
   renderCatalog();
 }
-function showExample(item){
+function showExample(item,design=false){
   state.example=item;state.original=null;state.finished=null;state.publicationReceipt=null;state.edited=null;state.sourceHash=null;
-  $('#figure-title').textContent=item.title;$('#figure-subtitle').textContent=item.input_shape;$('#eyebrow').textContent='历史来源 '+item.id;
+  $('#figure-title').textContent=item.title;$('#figure-subtitle').textContent=item.input_shape;$('#eyebrow').textContent=(design?'当前优选 ':'历史来源 ')+item.id;
   const image=document.createElement('img');image.src=item.png;image.alt=item.title;$('#preview-content').replaceChildren(image);
-  $('#before-view').replaceChildren(image.cloneNode());$('#after-view').replaceChildren(image.cloneNode());$('#preview-state').textContent='历史合成示例 · 原编号保留';
+  $('#before-view').replaceChildren(image.cloneNode());$('#after-view').replaceChildren(image.cloneNode());$('#preview-state').textContent=design?'DESIGN_EXAMPLE_SYNTHETIC':'历史合成示例 · 原编号保留';
   const open=document.createElement('a');open.href=item.source;open.textContent='查看原示例、输入表与来源';open.target='_blank';open.rel='noopener';
   const add=document.createElement('button');add.textContent='添加到组图草案';add.onclick=()=>{if(!state.board.some(x=>x.id===item.id))state.board.push(item);renderBoard();message('已加入组图草案；完整面板仍可独立使用。');};
   $('#renderer-detail').replaceChildren(open,document.createElement('br'),add);renderCatalog();
@@ -129,13 +129,13 @@ function showMethod(entry){
   const hint=document.createElement('p');hint.textContent='用 method-spec 绑定已选择的结果表、课题主题和来源，再 plan / render。不会在本机执行原软件包。';box.append(hint);renderCatalog();
 }
 function renderCatalog(){
-  const mode=$('#catalog-mode').value,example=mode==='example',method=mode==='method',query=$('#search').value.trim().toLocaleLowerCase();
-  const rows=(example?DATA.examples:method?DATA.method_entries:DATA.registry.renderers).filter(r=>JSON.stringify(r).toLocaleLowerCase().includes(query)||(!example&&!method&&title(r).toLocaleLowerCase().includes(query)));
+  const mode=$('#catalog-mode').value,design=mode==='design',example=mode==='example'||design,method=mode==='method',query=$('#search').value.trim().toLocaleLowerCase();
+  const rows=(design?DATA.design_examples:example?DATA.examples:method?DATA.method_entries:DATA.registry.renderers).filter(r=>JSON.stringify(r).toLocaleLowerCase().includes(query)||(!example&&!method&&title(r).toLocaleLowerCase().includes(query)));
   $('#catalog-count').textContent=rows.length;$('#catalog-list').replaceChildren();
   for(const row of rows){const b=document.createElement('button');b.textContent=example?row.title:method?row.id:title(row);
     b.className=(example?state.example?.id===row.id:method?state.method?.id===row.id:state.selected?.id===row.id)?'active':'';
-    const small=document.createElement('small');small.textContent=example?row.id:method?row.package:(row.aliases.join(' · ')||row.function);b.append(small);b.onclick=()=>example?showExample(row):method?showMethod(row):showRenderer(row);$('#catalog-list').append(b);}
-  if(example&&!DATA.examples.length)message('此安装版未附带历史图库。可在构建 Studio 时选定现有完整图库，或导入本机 SVG。');
+    const small=document.createElement('small');small.textContent=example?row.id:method?row.package:(row.aliases.join(' · ')||row.function);b.append(small);b.onclick=()=>example?showExample(row,design):method?showMethod(row):showRenderer(row);$('#catalog-list').append(b);}
+  if(example&&!design&&!DATA.examples.length)message('此安装版未附带历史图库。可在构建 Studio 时选定现有完整图库，或导入本机 SVG。');
 }
 
 let dragged=null;
@@ -162,6 +162,7 @@ $('#spec-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;
   state.spec=spec;state.expectedSvgHash=loaded.workbench?loaded.output_sha256?.[loaded.figure_id+'.svg']||null:null;
   $('#font-family').value=spec.appearance?.font_family||spec.theme.font_family||'Arial';$('#preset').value=spec.appearance?.preset||'paper';
   $('#raster-dpi').value=String(spec.export?.raster_dpi||300);$('#include-tiff').checked=spec.export?.tiff===true;
+  $('#target-width').value=String(spec.export?.target_width_mm||178);$('#minimum-text').value=String(spec.export?.minimum_text_pt||7);
   const row=DATA.registry.renderers.find(r=>r.id===spec.renderer||r.aliases.includes(spec.renderer));if(row)showRenderer(row);swatches();renderSVG();
   if(!state.expectedSvgHash||!state.sourceHash)message('配置已载入；SVG 与配置尚未做文件绑定。可载入对应导出记录核对，再准备重绘。');
   else if(state.expectedSvgHash===state.sourceHash)message('SVG 与导出记录哈希一致。外观修改仍需重绘与最终验收。');
@@ -169,7 +170,9 @@ $('#spec-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;
 $('#export-spec').onclick=()=>{
   const app=appearance();if(!state.spec){download('appearance.json',JSON.stringify(app,null,2));message('已导出外观设置；原数据与参数未知，未生成绘图结果。');return;}
   const spec=JSON.parse(JSON.stringify(state.spec));spec.appearance=app;spec.figure_id=spec.figure_id+'_restyled';
-  spec.export={raster_dpi:Number($('#raster-dpi').value),tiff:$('#include-tiff').checked};
+  const width=Number($('#target-width').value),minimum=Number($('#minimum-text').value);
+  if(!Number.isFinite(width)||width<40||width>1000||!Number.isFinite(minimum)||minimum<5||minimum>30){message('请填写有效的目标宽度和最小字号。');return;}
+  spec.export={...spec.export,raster_dpi:Number($('#raster-dpi').value),tiff:$('#include-tiff').checked,target_width_mm:width,minimum_text_pt:minimum,readability_policy:'block'};
   download(spec.figure_id+'.spec.json',JSON.stringify(spec,null,2));message('已导出重绘配置。请保存在原配置旁以保留相对数据路径，再预检与重绘。');
 };
 $('#publication-finish').onclick=async()=>{
@@ -195,4 +198,5 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.query
 $('#help').onclick=()=>$('#help-dialog').showModal();$('#close-help').onclick=()=>$('#help-dialog').close();
 renderCatalog();swatches();
 if(DATA.demo_svg){state.original=DATA.demo_svg;renderSVG();$('#asset-label').textContent='SYNTHETIC DEMO · 冻结结果示例';}
+else if(DATA.design_examples?.length){showExample(DATA.design_examples[0],true);}
 window.FigureStudioCore={safeSVG,changedSVG,geometry,appearance};
