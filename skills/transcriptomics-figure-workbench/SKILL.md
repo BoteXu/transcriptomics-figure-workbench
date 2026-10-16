@@ -19,7 +19,7 @@ Choose visual encoding by the data structure and intended comparison. Keep sourc
 
 ## Package and method entries
 
-Use `workbench.py methods` and `method <entry>` for 25 fixed package/method bindings. Read [package/method routes](references/package-method-entries.md) for dedicated GSEA classic/overlay/facets, NES and leading-edge views, ORA bubble/lollipop and result bindings for enrichment, GSVA, DE, single-cell, WGCNA, communication, activity and survival packages. Native package analysis stays on the existing analysis host. Input/export summaries alone cannot reconstruct genuine ES curves.
+Use `workbench.py methods` and `method <entry>` for 25 fixed package/method bindings. All 25 have actual redesigned examples in [the package gallery](assets/package-gallery/index.html); read [package style guidance and references](references/package-styles-v040.md) before drawing. Use `renderer: package_style` and the selected complete example spec for the new display grammar; preserve existing templates for legacy rendering. Read [package/method routes](references/package-method-entries.md) for dedicated GSEA classic/overlay/facets, NES and leading-edge views, ORA bubble/lollipop and result bindings for enrichment, GSVA, DE, single-cell, WGCNA, communication, activity and survival packages. Native package analysis stays on the existing analysis host. Input/export summaries alone cannot reconstruct genuine ES curves.
 
 ## Select specialist input contracts as needed
 
@@ -49,4 +49,4 @@ New FigureSpec renders produce atomic bundles with PDF, SVG, 300/600-DPI PNG, op
 
 Review actual outputs at final size for labels, units, guides, clipping, category/color semantics and readability. Preserve failure versions. Record the exact bundle hash and inspection scope separately from mechanical checks. Synthetic examples are labeled and never presented as scientific results.
 
-Retain historical Python/R calls, all 260 stable previews, 42 actual compositions, auxiliary panels, 15 cards and original browser opinion keys. Follow [content preservation](references/content-preservation.md). Newly unified callable entries do not become new scientific methods. Current validation is in [v0.3 acceptance](references/validation-v030.md); earlier receipts retain their own scope.
+Retain historical Python/R calls, all 260 stable previews, 42 actual compositions, auxiliary panels, 15 cards and original browser opinion keys. Follow [content preservation](references/content-preservation.md). Newly unified callable entries do not become new scientific methods. New package coverage and visual scope are in [v0.4 acceptance](references/validation-v040.md). Preserved validation is in [v0.3 acceptance](references/validation-v030.md); earlier receipts retain their own scope.

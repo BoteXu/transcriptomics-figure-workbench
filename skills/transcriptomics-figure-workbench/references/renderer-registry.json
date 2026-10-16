@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "counts": {
-    "python_functions": 120,
-    "fixed_aliases": 78,
-    "table_entries": 120
+    "python_functions": 121,
+    "fixed_aliases": 79,
+    "table_entries": 121
   },
   "renderers": [
     {
@@ -4332,6 +4332,66 @@
       ]
     },
     {
+      "id": "figure_package_styles.plot_package_style",
+      "module": "figure_package_styles",
+      "function": "plot_package_style",
+      "display_name": "Package publication displays",
+      "summary": "Fourteen reference-informed package display grammars; frozen tables and explicit method context.",
+      "parameters": [
+        {
+          "name": "view",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "contract",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "options",
+          "required": true,
+          "annotation": null
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [
+        "package_style"
+      ],
+      "source_sha256": "3fd1f93b0d56ce640762535a144894d13e57499e387f225021028c4420d08399",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "NES",
+        "area",
+        "association",
+        "at_risk",
+        "count",
+        "density",
+        "estimate",
+        "fraction",
+        "label_dx",
+        "label_dy",
+        "leading_edge",
+        "log2FC",
+        "lower",
+        "member",
+        "padj",
+        "pvalue",
+        "query_size",
+        "rank",
+        "set_size",
+        "sign",
+        "survival",
+        "time",
+        "upper",
+        "value",
+        "weight",
+        "x",
+        "y"
+      ]
+    },
+    {
       "id": "figure_palette_applications.plot_palette_plate",
       "module": "figure_palette_applications",
       "function": "plot_palette_plate",
@@ -7060,6 +7120,39 @@
         "count",
         "query_size",
         "padj"
+      ],
+      "theme_mode": "argument"
+    },
+    "package_style": {
+      "renderer": "figure_package_styles.plot_package_style",
+      "numeric_columns": [
+        "rank",
+        "value",
+        "leading_edge",
+        "NES",
+        "padj",
+        "set_size",
+        "member",
+        "count",
+        "query_size",
+        "x",
+        "y",
+        "density",
+        "log2FC",
+        "estimate",
+        "lower",
+        "upper",
+        "fraction",
+        "area",
+        "weight",
+        "sign",
+        "label_dx",
+        "label_dy",
+        "association",
+        "pvalue",
+        "time",
+        "survival",
+        "at_risk"
       ],
       "theme_mode": "argument"
     }

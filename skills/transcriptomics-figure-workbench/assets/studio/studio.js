@@ -117,10 +117,15 @@ function showExample(item){
 }
 function showMethod(entry){
   state.method=entry;state.selected=null;state.example=null;
+    state.original=null;state.finished=null;state.publicationReceipt=null;state.edited=null;state.sourceHash=null;state.expectedSvgHash=null;state.spec=null;
+    state.urls.forEach(URL.revokeObjectURL);state.urls=[];
+    $('#preview-content').replaceChildren();$('#before-view').replaceChildren();$('#after-view').replaceChildren();
+    if(entry.example_files){const image=document.createElement('img');image.src=entry.example_files.png;image.alt=entry.id+' 合成结果表示例';image.id='method-example';image.style.maxWidth='100%';$('#preview-content').append(image);$('#preview-state').textContent='PACKAGE_EXAMPLE_SYNTHETIC';}
   $('#figure-title').textContent=entry.id;$('#figure-subtitle').textContent=entry.purpose;$('#eyebrow').textContent=entry.package;
   const box=$('#renderer-detail');box.replaceChildren();
   for(const [key,value] of [['绘图器',entry.renderer],['输入字段',entry.required_columns.join(', ')],['必须说明',entry.required_context.join('; ')],['固定参数',JSON.stringify(entry.fixed_parameters)],['接入方式',entry.input_route]]){const p=document.createElement('p');p.textContent=key+'：'+value;box.append(p)}
   const b=document.createElement('button');b.textContent='导出专用入口说明';b.onclick=()=>download(entry.id+'.entry.json',JSON.stringify(entry,null,2));box.append(b);
+    if(entry.example_files){const links=document.createElement('p');for(const kind of ['svg','pdf','tsv','spec','gallery']){const a=document.createElement('a');a.href=entry.example_files[kind];a.textContent=kind.toUpperCase();a.target='_blank';a.rel='noopener';links.append(a,document.createTextNode('  '));}box.append(links);}
   const hint=document.createElement('p');hint.textContent='用 method-spec 绑定已选择的结果表、课题主题和来源，再 plan / render。不会在本机执行原软件包。';box.append(hint);renderCatalog();
 }
 function renderCatalog(){

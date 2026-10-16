@@ -2,7 +2,7 @@
 
 这些入口接收**已有分析结果导出的冻结表**，复用已实现绘图器，并增加专用字段、参数和方法说明。它们不安装或运行原软件包，不把 `.rds`、Seurat、AnnData 或模型对象直接带入本机分析环境。原始算法、软件名称和许可仍归原作者。
 
-[8张专项预览与逐图记录](../assets/method-gallery/index.html)
+[25张新版专项示例与逐图记录](../assets/package-gallery/index.html) · [设计参考与调用](package-styles-v040.md) · [保留的8张v0.3示例](../assets/method-gallery/index.html)
 
 ## 已登记的25个入口
 
@@ -34,7 +34,7 @@ python scripts/workbench.py render --plan selected-gsea.plan.json --output new-f
 
 `selected-context.json` 使用现有FigureSpec结构：明确输入表、课题主题、来源和该方法必需参数。`method-spec`选择固定绘图器、检查规范字段和源表哈希、保存相对路径；不猜测字段，不填充统计信息，不覆盖已有输出。已有表变动时必须重新准备。
 
-离线Studio左侧选择“软件包 / 方法专用入口”，可检索、查看字段与上下文并导出入口说明。入口说明不是完整FigureSpec，也不是完成的分析。
+离线Studio左侧选择“软件包 / 方法专用入口”，可检索、直接显示25张对应实际示例、查看字段与上下文、打开SVG/PDF/TSV/FigureSpec并导出入口说明。入口说明不是完整FigureSpec，也不是完成的分析。
 
 ## GSEA专项输入与样式
 

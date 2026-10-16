@@ -1,6 +1,6 @@
 """Package the checked public skill and overviews in a fresh directory."""
 from pathlib import Path
-import argparse,hashlib,json,shutil,zipfile
+import argparse,base64,hashlib,json,shutil,zipfile
 ROOT=Path(__file__).resolve().parents[1]
 SKILL=ROOT/'skills/transcriptomics-figure-workbench'
 
@@ -25,7 +25,32 @@ def main(output):
     for source,name in [('visualization-overview.pdf','visualization-overview.pdf'),('source-archive-v021.pdf','all-previews.pdf'),('new-result-modes-v024.jpg','new-result-modes-v024.jpg')]:
         destination=output/name;shutil.copy2(ROOT/'examples/overview'/source,destination);assets.append(destination)
     studio=output/f'figure-studio-v{version}.html'
-    shutil.copy2(SKILL/'assets/figure-studio.html',studio);assets.append(studio)
+    page=(SKILL/'assets/figure-studio.html').read_text(encoding='utf8')
+    # The single-file download embeds only public synthetic preview pixels.
+    # Full editable bundles remain available in the separately checked ZIP.
+    for row in json.loads((ROOT/'examples/package-v040/manifest.json').read_text())['records']:
+        key=row['id'];prefix='package-gallery/'+key+'/'+key
+        preview=ROOT/'examples/package-v040'/key/(key+'.png')
+        page=page.replace(prefix+'.png','data:image/png;base64,'+base64.b64encode(preview.read_bytes()).decode())
+        for ext in ['svg','pdf','tsv','json']:
+            page=page.replace(prefix+'.'+ext,'https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/examples/package-v040/'+key+'/'+key+'.'+ext)
+        page=page.replace('package-gallery/inputs/'+key+'.spec.json','https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/examples/package-v040/inputs/'+key+'.spec.json')
+        page=page.replace('package-gallery/index.html#'+key,'https://github.com/BoteXu/transcriptomics-figure-workbench/tree/v'+version+'/examples/package-v040#'+key)
+    studio.write_text(page,encoding='utf8');assets.append(studio)
+    package_examples=output/f'package-examples-v{version}.zip'
+    with zipfile.ZipFile(package_examples,'x',compression=zipfile.ZIP_DEFLATED) as archive:
+        for file in sorted((ROOT/'examples/package-v040').rglob('*')):
+            if file.is_file():
+                name='package-examples/'+file.relative_to(ROOT/'examples/package-v040').as_posix()
+                if file.name=='index.html':archive.writestr(name,file.read_text(encoding='utf8').replace('../../docs/package-styles-v040.md','../docs/package-styles-v040.md'))
+                else:archive.write(file,name)
+        for name in ['package-styles-v040.md','package-styles-v040.jpg']:
+            file=ROOT/'docs'/name
+            if name.endswith('.md'):archive.writestr('docs/'+name,file.read_text(encoding='utf8').replace('../examples/package-v040/index.html','../package-examples/index.html'))
+            else:archive.write(file,'docs/'+name)
+    assets.append(package_examples)
+    for source,name in [(ROOT/'examples/overview/package-styles-v040.pdf','package-figures-v040.pdf'),(ROOT/'docs/package-styles-v040.jpg','package-figures-v040.jpg')]:
+        destination=output/name;shutil.copy2(source,destination);assets.append(destination)
     previews=output/f'workbench-previews-v{version}.zip'
     with zipfile.ZipFile(previews,'x',compression=zipfile.ZIP_DEFLATED) as archive:
         for file in sorted((ROOT/'examples/aesthetic-v030').rglob('*')):

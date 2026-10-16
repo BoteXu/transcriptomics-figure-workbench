@@ -90,6 +90,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_network_extensions.plot_rank_bump | rank_bump | yes | stage_order |
 | figure_network_extensions.plot_hex_density | canonical ID | yes | x_label, y_label, unit_label |
 | figure_network_extensions.plot_contour_field | canonical ID | yes | value_label, limits, levels, x_label, y_label |
+| figure_package_styles.plot_package_style | package_style | yes | view, contract, options |
 | figure_palette_applications.plot_palette_plate | canonical ID | yes | palette_name, panel_specs |
 | figure_palette_applications.plot_palette_panel | canonical ID | yes | palette_name, panel_spec |
 | figure_polish.plot_polished_matrix | polished_matrix | yes | value_label, limits, signed |
@@ -1199,6 +1200,16 @@ See the fixed implementation and its input contract.
 | x_label | true | — |
 | y_label | true | — |
 | title | false | "" |
+
+## figure_package_styles.plot_package_style
+
+Fourteen reference-informed package display grammars; frozen tables and explicit method context.
+
+| Parameter | Required | Default |
+|---|---|---|
+| view | true | — |
+| contract | true | — |
+| options | true | — |
 
 ## figure_palette_applications.plot_palette_plate
 

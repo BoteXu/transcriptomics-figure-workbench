@@ -1,0 +1,24 @@
+kind	node_id	label	entity_type	group	x	y	area	label_dx	label_dy	label_align	source	target	weight	sign
+node	n0	Interferon	term	Programmes	-1.2	0.9	100.0	0.0	0.19	center				
+node	n1	Matrix	term	Programmes	1.2	0.9	100.0	0.0	0.19	center				
+node	n2	Metabolism	term	Programmes	0.0	-1.0	100.0	0.0	0.19	center				
+node	n3	STAT1	gene	Response	-1.9	0.25	48.0	0.0	0.19	center				
+node	n4	IRF7	gene	Response	-1.6	-0.3	48.0	0.0	0.19	center				
+node	n5	ISG15	gene	Response	-0.9	0.05	48.0	0.0	0.19	center				
+node	n6	FN1	gene	Matrix	1.9	0.25	48.0	0.0	0.19	center				
+node	n7	COL1A1	gene	Matrix	1.65	-0.3	48.0	0.0	0.19	center				
+node	n8	MMP2	gene	Matrix	0.95	0.05	48.0	0.0	0.19	center				
+node	n9	NDUFA1	gene	Energy	-0.65	-1.55	48.0	0.0	0.19	center				
+node	n10	COX5A	gene	Energy	0.0	-1.75	48.0	0.0	0.19	center				
+node	n11	ATP5F1	gene	Energy	0.65	-1.55	48.0	0.0	0.19	center				
+edge											n0	n3	0.35	1.0
+edge											n0	n4	0.55	1.0
+edge											n0	n5	0.8	1.0
+edge											n1	n6	0.35	1.0
+edge											n1	n7	0.55	1.0
+edge											n1	n8	0.8	1.0
+edge											n2	n9	0.35	1.0
+edge											n2	n10	0.55	1.0
+edge											n2	n11	0.8	1.0
+edge											n0	n6	0.35	1.0
+edge											n1	n5	0.55	1.0

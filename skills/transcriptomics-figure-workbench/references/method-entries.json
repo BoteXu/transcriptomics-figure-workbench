@@ -28,7 +28,10 @@
         "leading-edge flags"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "gsea",
+      "publication_example": "PKG01"
     },
     {
       "id": "enrichplot.gseaplot2.overlay",
@@ -57,7 +60,10 @@
         "leading-edge flags"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "gsea",
+      "publication_example": "PKG02"
     },
     {
       "id": "enrichplot.gseaplot2.facets",
@@ -86,7 +92,10 @@
         "leading-edge flags"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "gsea",
+      "publication_example": "PKG03"
     },
     {
       "id": "fgsea.plotEnrichment",
@@ -115,7 +124,10 @@
         "leading-edge flags"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "gsea",
+      "publication_example": "PKG04"
     },
     {
       "id": "fgsea.NES_matrix",
@@ -137,7 +149,10 @@
         "set-size definition"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "nes",
+      "publication_example": "PKG05"
     },
     {
       "id": "fgsea.leading_edge",
@@ -157,7 +172,10 @@
         "gene-effect unit and common limits"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "leading",
+      "publication_example": "PKG06"
     },
     {
       "id": "clusterProfiler.dotplot",
@@ -180,7 +198,10 @@
         "selected term order"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "ora",
+      "publication_example": "PKG07"
     },
     {
       "id": "clusterProfiler.lollipop",
@@ -203,7 +224,10 @@
         "selected term order"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "ora",
+      "publication_example": "PKG08"
     },
     {
       "id": "enrichplot.ridgeplot",
@@ -222,7 +246,10 @@
         "leading-edge or all-member scope"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "ridge",
+      "publication_example": "PKG09"
     },
     {
       "id": "enrichplot.cnetplot",
@@ -251,7 +278,10 @@
         "selected term/gene scope"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "network",
+      "publication_example": "PKG10"
     },
     {
       "id": "enrichplot.emapplot",
@@ -280,7 +310,10 @@
         "selected term/gene scope"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "network",
+      "publication_example": "PKG11"
     },
     {
       "id": "GSVA.score_heatmap",
@@ -301,7 +334,10 @@
         "sample biological unit"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "heatmap",
+      "publication_example": "PKG12"
     },
     {
       "id": "DESeq2.volcano",
@@ -323,7 +359,10 @@
         "filtering and NA policy"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "volcano",
+      "publication_example": "PKG13"
     },
     {
       "id": "limma.effect_forest",
@@ -346,7 +385,10 @@
         "contrast and design"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "forest",
+      "publication_example": "PKG14"
     },
     {
       "id": "MSstats.volcano",
@@ -367,7 +409,10 @@
         "missing-value handling"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "volcano",
+      "publication_example": "PKG15"
     },
     {
       "id": "Seurat.DotPlot",
@@ -387,7 +432,10 @@
         "group order"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "dot",
+      "publication_example": "PKG16"
     },
     {
       "id": "Seurat.DimPlot",
@@ -407,7 +455,10 @@
         "cell versus donor unit"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "embedding",
+      "publication_example": "PKG17"
     },
     {
       "id": "Scanpy.umap",
@@ -427,7 +478,10 @@
         "biological-unit limitation"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "embedding",
+      "publication_example": "PKG18"
     },
     {
       "id": "WGCNA.module_trait",
@@ -448,7 +502,10 @@
         "independent sample unit"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "module",
+      "publication_example": "PKG19"
     },
     {
       "id": "WGCNA.module_network",
@@ -476,7 +533,10 @@
         "frozen coordinates"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "network",
+      "publication_example": "PKG20"
     },
     {
       "id": "CellChat.communication_network",
@@ -505,7 +565,10 @@
         "replicate context"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "network",
+      "publication_example": "PKG21"
     },
     {
       "id": "decoupleR.activity_heatmap",
@@ -526,7 +589,10 @@
         "score unit and limits"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "heatmap",
+      "publication_example": "PKG22"
     },
     {
       "id": "PROGENy.pathway_activity",
@@ -547,7 +613,10 @@
         "sample context"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "heatmap",
+      "publication_example": "PKG23"
     },
     {
       "id": "survminer.ggsurvplot",
@@ -571,7 +640,10 @@
         "censor scope"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "survival",
+      "publication_example": "PKG24"
     },
     {
       "id": "pROC.roc",
@@ -593,7 +665,10 @@
         "uncertainty source"
       ],
       "input_route": "Export selected frozen TSV on the existing analysis host; native RDS/h5ad/Seurat objects are not executed locally.",
-      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate."
+      "validation": "Fixed source route and contracts; actual native package/runtime acceptance is separate.",
+      "publication_renderer": "package_style",
+      "publication_view": "roc",
+      "publication_example": "PKG25"
     }
   ]
 }

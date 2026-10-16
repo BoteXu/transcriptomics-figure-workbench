@@ -1,0 +1,47 @@
+kind	group	time	survival	lower	upper	at_risk
+step	Condition A	0	1	0.988	1	
+step	Condition A	2	0.98	0.962	0.998	
+step	Condition A	4	0.95	0.9259999999999999	0.974	
+step	Condition A	6	0.92	0.89	0.9500000000000001	
+step	Condition A	8	0.88	0.844	0.916	
+step	Condition A	10	0.84	0.7979999999999999	0.882	
+step	Condition A	12	0.8	0.752	0.8480000000000001	
+step	Condition A	14	0.76	0.706	0.8140000000000001	
+step	Condition A	16	0.72	0.6599999999999999	0.78	
+step	Condition A	18	0.68	0.614	0.7460000000000001	
+step	Condition A	20	0.64	0.5680000000000001	0.712	
+step	Condition A	22	0.6	0.522	0.6779999999999999	
+step	Condition A	24	0.56	0.47600000000000003	0.6440000000000001	
+risk	Condition A	0				100
+risk	Condition A	4				90
+risk	Condition A	8				79
+risk	Condition A	12				65
+risk	Condition A	16				49
+risk	Condition A	20				33
+risk	Condition A	24				18
+censor	Condition A	7	0.92			
+censor	Condition A	13	0.8			
+censor	Condition A	19	0.68			
+step	Condition B	0	1	0.988	1	
+step	Condition B	2	0.99	0.972	1	
+step	Condition B	4	0.98	0.956	1	
+step	Condition B	6	0.96	0.9299999999999999	0.99	
+step	Condition B	8	0.94	0.9039999999999999	0.976	
+step	Condition B	10	0.91	0.868	0.9520000000000001	
+step	Condition B	12	0.88	0.832	0.928	
+step	Condition B	14	0.85	0.7959999999999999	0.904	
+step	Condition B	16	0.82	0.7599999999999999	0.88	
+step	Condition B	18	0.79	0.724	0.8560000000000001	
+step	Condition B	20	0.76	0.688	0.8320000000000001	
+step	Condition B	22	0.73	0.6519999999999999	0.808	
+step	Condition B	24	0.7	0.6159999999999999	0.784	
+risk	Condition B	0				100
+risk	Condition B	4				94
+risk	Condition B	8				85
+risk	Condition B	12				73
+risk	Condition B	16				60
+risk	Condition B	20				44
+risk	Condition B	24				27
+censor	Condition B	7	0.96			
+censor	Condition B	13	0.88			
+censor	Condition B	19	0.79			

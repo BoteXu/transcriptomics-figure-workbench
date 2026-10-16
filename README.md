@@ -2,20 +2,20 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.3.0**。新版重构为统一的“选择画法 → 输入预检 → 绘图 → 外观修改 → 独立验收”工作流。保留历史 Python/R 接口、260 个稳定示例和全部已有组合。
+本版为 **v0.4.0**。25 个软件包/方法入口现已全部提供重新设计的实际示例（重画8张、补齐17张），并可在 Studio 内直接预览。新版重构为统一的“选择画法 → 输入预检 → 绘图 → 外观修改 → 独立验收”工作流。保留历史 Python/R 接口、260 个稳定示例和全部已有组合。
 
 [打开六种重设计与六种新增图预览](examples/aesthetic-v030/index.html) · [重构设计与输入要求](skills/transcriptomics-figure-workbench/references/aesthetic-rebuild.md) · [打开新版 Figure Studio](examples/studio/index.html) · [统一工作流](skills/transcriptomics-figure-workbench/references/workbench-v030.md) · [自动生成的能力与参数目录](skills/transcriptomics-figure-workbench/references/renderer-directory.md)
 
 | 升级 | 实际实现 |
 |---|---|
-| 架构 | 120 个 Python 绘图函数统一登记；78 个固定别名；只在选定绘图时加载依赖 |
+| 架构 | 121 个 Python 绘图函数统一登记；79 个固定别名；只在选定绘图时加载依赖 |
 | 输入 | 一个 FigureSpec 保存数据、参数、课题主题和来源；变动使旧计划失效 |
 | 外观 | 论文、紧凑、报告、大字四种字号层级，复用15套现有色卡与固定分组颜色 |
 | 交互 | 离线 SVG 导入、字体/字号预览、修改前后比较、可拖动组图草案与重绘配置 |
 | 导出 | PDF/SVG、300或600 DPI PNG、可选TIFF、准确绘图表和来源记录；完整输出后才发布目录 |
 | 验收 | 文件检查、真实视觉检查、科学复核分别记录；改动导出后旧视觉验收失效 |
 
-## 本轮大幅重画与补充
+## v0.3 保留的重设计与补充
 
 原八张接口测试图未通过美观验收，保留为机械测试。默认版式重新设计：减轻标题、正文用深色、移除碎片底纹、排名仅用整数刻度、图例放到数据区外，配对点用同对共用的横向偏移减少遮挡且不移动Y值。新增模板在导出前阻断文字越界和相互遮挡。
 
@@ -26,6 +26,18 @@
 [逐图查看并记录意见](examples/aesthetic-v030/index.html) · [美观自检记录](docs/aesthetic-self-review-v030.md)
 
 ![本轮六种补充画法](docs/new-drawing-modes-v030.jpg)
+
+## v0.4 软件包专项图全面补齐
+
+**25 / 25 个入口都有实际导出**，使用14套绘图规则。GSEA单通路/叠加/分面、NES、leading edge、ORA、ridge/cnet/emap、GSVA、DESeq2、limma、MSstats、Seurat/Scanpy、WGCNA、CellChat、decoupleR、PROGENy、生存和ROC均有对应示例。
+
+[打开全部25张新示例](examples/package-v040/index.html) · [设计与参考来源](docs/package-styles-v040.md) · [逐张自检记录](examples/package-v040/self-review.json)
+
+每张均有 PNG / PDF / SVG、准确绘图 TSV、可复用 FigureSpec 和来源回执。示例数据为原创建模展示夹具，未运行上游生物信息学分析。参考了实际浏览过的 GseaVis、scCustomize、survminer 图例，重做比例、标注、图例、分组条带与色阶；没有复制或重新分发参考图。美观自检不代表每个用户的审美偏好，也不保证换入任意数据后无需调整。
+
+![新版专项图选览](docs/package-styles-v040.jpg)
+
+Studio 选择“软件包 / 方法专用入口”后直接显示对应示例，可打开矢量图、数据与重绘配置。原来的8张专项示例与400张完整图库继续保留。
 
 ## 按软件包 / 方法进入，含GSEA专项
 
@@ -65,7 +77,7 @@ v0.2.5 增量：新增八种冻结 QC / DE 模式；逐项审查用户提供的�
 |---|---|
 | 主目录 | 98 个画法与组合：72 个通用表达入口、26 个组合入口；另有15套色卡、3个结构示例和1个附表入口 |
 | 保留来源 | 260 个稳定编号；旧244个PNG/PDF原字节保留；包含42张实际组合、15套色卡、3个公共坐标结构示例 |
-| Python 绘图函数 | 120；28个历史R对应函数另行保留，函数数不等于入口数 |
+| Python 绘图函数 | 121；28个历史R对应函数另行保留，函数数不等于入口数 |
 | 历史 R 对应函数 | 28；不宣称所有 Python 新功能都有 R 对应 |
 | 示意图总览 | 主总览只放各入口的唯一代表；[260个来源档案](examples/overview/source-archive-v021.pdf)另列重复与历史示例 |
 | 横纵排版 | [42张组合的84种完整布局](examples/gallery/layout_review/index.html)，另有切片/影像对照横纵模式 |

@@ -1,0 +1,32 @@
+kind	node_id	label	entity_type	group	x	y	area	label_dx	label_dy	label_align	source	target	weight	sign
+node	n0	STAT1	gene	Response	1.0	0.0	100	0	0.16	center				
+node	n1	IRF7	gene	Response	0.86603	0.5	100	0	0.16	center				
+node	n2	ISG15	gene	Response	0.5	0.86603	100	0	0.16	center				
+node	n3	MX1	gene	Response	0.0	1.0	100	0	0.16	center				
+node	n4	OAS1	gene	Response	-0.5	0.86603	100	0	0.16	center				
+node	n5	IFI6	gene	Response	-0.86603	0.5	100	0	0.16	center				
+node	n6	GBP1	gene	Regulation	-1.0	0.0	100	0	0.16	center				
+node	n7	IFIT1	gene	Regulation	-0.86603	-0.5	100	0	-0.16	center				
+node	n8	IFIT3	gene	Regulation	-0.5	-0.86603	100	0	-0.16	center				
+node	n9	DDX58	gene	Regulation	-0.0	-1.0	100	0	-0.16	center				
+node	n10	SOCS1	gene	Regulation	0.5	-0.86603	100	0	-0.16	center				
+node	n11	IRF9	gene	Regulation	0.86603	-0.5	100	0	-0.16	center				
+edge											n0	n1	0.35	1
+edge											n1	n2	0.55	1
+edge											n2	n3	0.8	1
+edge											n3	n4	0.35	1
+edge											n4	n5	0.55	1
+edge											n5	n6	0.8	1
+edge											n6	n7	0.35	1
+edge											n7	n8	0.55	1
+edge											n8	n9	0.8	1
+edge											n9	n10	0.35	1
+edge											n10	n11	0.55	1
+edge											n11	n0	0.8	1
+edge											n0	n3	0.35	1
+edge											n0	n5	0.55	1
+edge											n0	n8	0.8	1
+edge											n3	n7	0.35	1
+edge											n3	n10	0.55	1
+edge											n5	n9	0.8	1
+edge											n7	n11	0.35	1

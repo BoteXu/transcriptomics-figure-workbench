@@ -1,0 +1,21 @@
+kind	node_id	label	entity_type	group	x	y	area	label_dx	label_dy	label_align	source	target	weight	sign
+node	n0	Interferon	term	Immune	-1.5	0.8	100	0	0.19	center				
+node	n1	Antiviral	term	Immune	-0.85	1.2	100	0	0.19	center				
+node	n2	Cytokine	term	Immune	-0.65	0.45	100	0	0.19	center				
+node	n3	Matrix	term	Matrix	1.15	0.85	100	0	0.19	center				
+node	n4	Adhesion	term	Matrix	1.8	0.35	100	0	0.19	center				
+node	n5	Motility	term	Matrix	1.0	-0.1	100	0	0.19	center				
+node	n6	Respiration	term	Energy	-0.8	-1.1	100	0	0.19	center				
+node	n7	ATP synthesis	term	Energy	-0.1	-1.6	100	0	0.19	center				
+node	n8	Lipid usage	term	Energy	0.5	-0.85	100	0	0.19	center				
+edge											n0	n1	0.35	1
+edge											n0	n2	0.55	1
+edge											n1	n2	0.8	1
+edge											n3	n4	0.35	1
+edge											n3	n5	0.55	1
+edge											n4	n5	0.8	1
+edge											n6	n7	0.35	1
+edge											n6	n8	0.55	1
+edge											n7	n8	0.8	1
+edge											n2	n3	0.35	1
+edge											n5	n8	0.55	1

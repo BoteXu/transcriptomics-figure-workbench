@@ -5,6 +5,7 @@ from pathlib import Path
 import tempfile
 from .contracts import PRESETS, check_plan, hash_value, validate_spec
 from .registry import digest
+from . import __version__
 
 
 def project_appearance(spec):
@@ -37,7 +38,7 @@ def render_plan(plan,output):
     meta=copy.deepcopy(spec['provenance']);meta['palette']=theme['palette_name']
     meta['layout_audit']=audit
     settings={'raster_dpi':300,'tiff':False,**spec.get('export',{})}
-    meta['workbench']={'version':'0.3.0','spec':copy.deepcopy(spec),'spec_sha256':plan['spec_sha256'],
+    meta['workbench']={'version':__version__,'spec':copy.deepcopy(spec),'spec_sha256':plan['spec_sha256'],
         'input_sha256':plan['input_sha256'],'source_identity':plan['source_identity'],
         'renderer':plan['renderer'],'quantitative_geometry_sha256':geometry_signature(fig),
         'appearance_sha256':hash_value(theme),'export':settings,'visual_acceptance':False,'scientific_acceptance':False}

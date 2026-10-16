@@ -10,6 +10,14 @@ def build_studio(output,gallery=None,demo_svg=None):
     if output.exists():raise FileExistsError('Choose a new Studio output file')
     from .methods import catalog_methods
     data={'registry':read_registry(),'examples':[],'methods':[],'method_entries':catalog_methods(),'demo_svg':None}
+    package_gallery=SKILL/'assets/package-gallery'
+    if package_gallery.is_dir():
+        prefix=Path(os.path.relpath(package_gallery,output.resolve().parent)).as_posix()
+        for entry in data['method_entries']:
+            key=entry['publication_example']
+            entry['example_files']={extension:prefix+'/'+key+'/'+key+'.'+extension for extension in ['png','svg','pdf','tsv','json']}
+            entry['example_files']['spec']=prefix+'/inputs/'+key+'.spec.json'
+            entry['example_files']['gallery']=prefix+'/index.html#'+key
     if gallery is not None:
         gallery=Path(gallery).resolve()
         manifest=gallery/'catalog.json'

@@ -36,6 +36,17 @@ try{
   await page.locator('#catalog-mode').selectOption('method');assert.equal(await page.locator('#catalog-count').innerText(),'25');
   await page.locator('#search').fill('GSEA');assert.ok(await page.locator('#catalog-list button').count()>=6);await page.locator('#catalog-list button').first().click();
   assert.match(await page.locator('#renderer-detail').textContent(),/ranked universe|gene-effect|set-size/);checks.push('25 dedicated method entries searchable with explicit input context');
+  await page.locator('#search').fill('');
+  for(let i=0;i<25;i++){
+    await page.locator('#catalog-list button').nth(i).click();
+    const key='PKG'+String(i+1).padStart(2,'0');
+    await page.waitForFunction(k=>{const im=document.getElementById('method-example');return im?.src.includes(k+'/'+k+'.png')&&im.complete&&im.naturalWidth>1200},key);
+    assert.equal(await page.locator('#preview-state').innerText(),'PACKAGE_EXAMPLE_SYNTHETIC');
+    assert.equal(await page.locator('#renderer-detail a').count(),5);
+    const spec=await page.locator('#renderer-detail a').filter({hasText:'SPEC'}).getAttribute('href');assert.ok(spec.endsWith(key+'.spec.json'));
+  }
+  checks.push('all 25 package selections show their actual image and exact source/spec/export links');
+  await page.goto(base+'/examples/package-v040/index.html');assert.equal(await page.locator('article').count(),25);checks.push('all 25 new package examples accessible offline');
   await page.goto(base+'/examples/gallery/publication-v030/index.html');assert.equal(await page.locator('article').count(),400);
   await page.locator('#q').fill('ALT_K22_horizontal');assert.equal(await page.locator('article').count(),1);
   await page.locator('article img').waitFor();await page.waitForFunction(()=>document.querySelector('article img').naturalWidth>16000);checks.push('complete 400-entry atlas and extreme-wide final PNG load');

@@ -24,13 +24,20 @@ def method_entry(name):
 def prepare_method_spec(name, template, base, output):
     row=method_entry(name)
     spec=copy.deepcopy(template)
-    spec['renderer']=row['renderer']
+    styled=spec.get('renderer')=='package_style'
+    spec['renderer']='package_style' if styled else row['renderer']
     params=copy.deepcopy(row.get('defaults',{}))
-    params.update(spec['parameters'])
+    supplied=copy.deepcopy(spec['parameters'])
+    if styled:
+        if set(supplied)-{'view','contract','options'}:raise ValueError('Package style accepts view, contract and options only')
+        if supplied.get('view',row['publication_view'])!=row['publication_view']:raise ValueError('Selected method fixes its publication view')
+        params.update(supplied.get('options',{}))
+    else:params.update(supplied)
     for key,value in row.get('fixed_parameters',{}).items():
         if key in params and params[key]!=value:raise ValueError('Selected entry fixes '+key)
         params[key]=value
-    spec['parameters']=params
+    if styled:params.pop('kind',None)
+    spec['parameters']={'view':row['publication_view'],'contract':supplied['contract'],'options':params} if styled else params
     path=local_path(spec['input']['path'],base)
     if path.stat().st_size>spec['input'].get('max_bytes',5*1024**2):raise ValueError('Selected result table exceeds bound')
     with path.open(encoding='utf-8-sig',newline='') as stream:

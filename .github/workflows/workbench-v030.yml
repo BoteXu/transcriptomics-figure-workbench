@@ -1,4 +1,4 @@
-name: Workbench v0.3 acceptance
+name: Workbench acceptance
 on:
   push:
   pull_request:
@@ -39,6 +39,9 @@ jobs:
           python tests/check_aesthetic_grammar.py aesthetic-ci
           python tools/build_method_figures.py --output method-ci
           python tests/check_method_entries.py method-ci
+          python tools/build_package_gallery.py --output package-ci
+          python tests/check_package_styles.py package-ci
+          python tests/check_package_styles.py examples/package-v040
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: workbench-frozen-previews

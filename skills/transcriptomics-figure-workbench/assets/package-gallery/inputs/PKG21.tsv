@@ -1,0 +1,15 @@
+kind	node_id	label	entity_type	group	x	y	area	label_dx	label_dy	label_align	source	target	weight	sign
+node	n0	Endothelial	cell	Endothelial	0.0	1.0	100	0	0.19	center				
+node	n1	Fibroblast	cell	Fibroblast	0.95106	0.30902	100	0	0.19	center				
+node	n2	Myeloid	cell	Myeloid	0.58779	-0.80902	100	0	0.19	center				
+node	n3	T cells	cell	T cells	-0.58779	-0.80902	100	0	0.19	center				
+node	n4	Cardiomyocyte	cell	Cardiomyocyte	-0.95106	0.30902	100	0	0.19	center				
+edge											n0	n1	0.35	1
+edge											n0	n2	0.55	1
+edge											n1	n0	0.8	1
+edge											n1	n4	0.35	1
+edge											n2	n0	0.55	1
+edge											n2	n1	0.8	1
+edge											n2	n3	0.35	1
+edge											n3	n2	0.55	1
+edge											n4	n0	0.8	1

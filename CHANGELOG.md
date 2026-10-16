@@ -1,5 +1,14 @@
 # Change log
 
+## 0.4.0
+
+- Redesigned all 25 package-specific examples: eight replacements and seventeen newly illustrated entries, using fourteen frozen-result display grammars.
+- Added original restrained category/continuous palettes, compact GSEA layers, explicit marker/sample annotation strips, method-specific networks, aligned survival risk tables and readable effect intervals.
+- Every example includes exact source TSV, FigureSpec, PNG/PDF/SVG and separate visual review. No native scientific package execution is claimed.
+- Studio now displays the actual selected package example and links its exports and reproducible spec. Legacy routes and prior reviewed exports remain unchanged.
+- Added source attribution/access ledger, exact-channel and malformed-result checks, 25-example coverage in CI and downloadable package examples.
+- Renderer directory now contains 121 Python functions and 79 fixed aliases; these counts do not equal distinct statistical methods.
+
 ## 0.3.0
 
 - Unified source-derived registry: 120 Python plot functions, 78 fixed aliases and preserved legacy bindings. Discovery/preflight stay dependency-free.
