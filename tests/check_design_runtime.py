@@ -26,11 +26,11 @@ def main(output):
         original=data.copy(deep=True);fig,audit=render(spec['renderer'],data,spec['parameters'],spec['theme']);pd.testing.assert_frame_equal(original,data);plt.close(fig)
         assert row['source_sha256']==digest(ROOT/row['source']) and row['input_sha256']==digest(base/(key+'.tsv'))
         if key=='VIS03':
-            old=pd.read_csv(ROOT/row['source'],sep='\t',dtype={'series':str});pd.testing.assert_frame_equal(data,old,check_dtype=False)
+            old=pd.read_csv(ROOT/row['source'],sep='\t',dtype={'series':str},float_precision='round_trip');pd.testing.assert_frame_equal(data,old,check_dtype=False)
         if key=='VIS02':
-            old=pd.read_csv(ROOT/row['source'],sep='\t');assert data['value'].tolist()==old['value'].tolist()
+            old=pd.read_csv(ROOT/row['source'],sep='\t',float_precision='round_trip');assert data['value'].tolist()==old['value'].tolist()
         if key=='VIS05':
-            old=pd.read_csv(ROOT/row['source'],sep='\t');assert data['x'].tolist()==old['x'].tolist() and data['y'].tolist()==old['y'].tolist()
+            old=pd.read_csv(ROOT/row['source'],sep='\t',float_precision='round_trip');assert data['x'].tolist()==old['x'].tolist() and data['y'].tolist()==old['y'].tolist()
         if key in ['VIS01','VIS02','VIS03']:
             operations={
               'VIS01':[lambda d:d.loc.__setitem__((d.record_type=='density','density'),-1),
