@@ -76,7 +76,7 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
                            column_annotation_field='sample_group',row_annotation_field='feature_block',
                            row_order=None,column_order=None,row_aliases=None,column_aliases=None,
                            cell_width=.45,cell_height=.30,row_label_wrap=None,column_label_wrap=None,
-                           merge_annotation_legends=False,continuous_colors=None,title=''):
+                           merge_annotation_legends=False,continuous_colors=None,title='',presentation='classic',matrix_semantics=None):
     d=checked(data,[row_field,column_field,value_field,column_annotation_field,row_annotation_field],[value_field])
     d=d.rename(columns={row_field:'feature',column_field:'sample',value_field:'value',column_annotation_field:'sample_group',row_annotation_field:'feature_block'})
     if d.duplicated(['feature','sample']).any() or len(d)!=d.feature.nunique()*d['sample'].nunique(): raise ValueError('Incomplete or duplicate heatmap grid')
@@ -100,6 +100,12 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
     if len(set(xlabels))!=len(xlabels) or len(set(ylabels))!=len(ylabels):raise ValueError('Axis aliases must be unique')
     xlabels=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in xlabels]
     ylabels=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in ylabels]
+    if presentation not in ['classic','publication']:raise ValueError('Choose a declared heatmap presentation')
+    if presentation=='publication':
+        from figure_study_publication import annotated_matrix
+        ramp=continuous_colors or (['#4477AA','#F7F7F7','#D8795B'] if scale_type=='signed' else ['#E7F0F2','#326B8D'])
+        fig=annotated_matrix(data,mat,groups,blocks,group_palette,block_palette,value_label=value_label,title=title,scale_type=scale_type,colors=ramp,xlabels=xlabels,ylabels=ylabels,correlation=matrix_semantics=='correlation')
+        return stamp(fig,data,'annotated_heatmap',scale_type=scale_type,row_order=rows,column_order=cols,presentation=presentation,matrix_semantics=matrix_semantics,duplicate_symmetric_half_omitted=matrix_semantics=='correlation')
     fig=plt.figure(figsize=(max(8,len(cols)*float(cell_width)+3+min(max(len(x) for x in ylabels)-16,0)*.025),max(5,len(rows)*float(cell_height)+2)))
     if title:fig.suptitle(title,fontsize=13,fontweight='bold',y=.97)
     grid=fig.add_gridspec(2,1,height_ratios=[.035,1],

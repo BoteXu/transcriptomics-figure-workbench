@@ -109,7 +109,7 @@ def render_with_theme(renderer,data,params,theme):
         if 'panel_spec' in settings:settings['panel_spec']=bind_panel(theme,settings['panel_spec'],data)
         if 'panel_specs' in settings:
             settings['panel_specs']=[bind_panel(theme,s,data[data.panel==s['id']]) for s in settings['panel_specs']]
-    for field in ('palette','stack_palette','group_palette'):
+    for field in ('palette','stack_palette','group_palette','celltype_palette'):
         if field in settings:
             if not isinstance(settings[field],dict): raise ValueError('Explicit named category map required')
             settings[field]=group_palette(theme,list(settings[field]))

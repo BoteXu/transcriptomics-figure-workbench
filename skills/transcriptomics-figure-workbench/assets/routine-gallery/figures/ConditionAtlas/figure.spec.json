@@ -15,7 +15,7 @@
       {
         "id": "Control",
         "kind": "embedding",
-        "title": "Control · same coordinate system",
+        "title": "Control · 6 donors / 376 cells",
         "x_label": "Stored mock UMAP 1",
         "y_label": "Stored mock UMAP 2",
         "series_order": [
@@ -35,7 +35,7 @@
       {
         "id": "Treated",
         "kind": "embedding",
-        "title": "Treated · same coordinate system",
+        "title": "Treated · 6 donors / 524 cells",
         "x_label": "Stored mock UMAP 1",
         "y_label": "Stored mock UMAP 2",
         "series_order": [
@@ -53,9 +53,10 @@
         ]
       }
     ],
-    "title": "Cell identities by condition",
-    "scope_note": "12 fictional donors · six per condition · supplied results only",
-    "columns": "auto"
+    "title": "Cell identities across conditions",
+    "scope_note": "900 cells nested within 12 donors · common coordinates",
+    "columns": "auto",
+    "presentation": "publication"
   },
   "theme": {
     "schema_version": 1,
@@ -127,7 +128,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Synthetic routine-request audit; seed 20261017",
+    "source": "Synthetic routine-request audit; seed 20261017; publication v0.9.6 display revision with unchanged frozen table bytes",
     "input_unit": "Synthetic gene-sample measurement",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -141,13 +142,14 @@
   },
   "appearance": {
     "preset": "paper",
-    "label_pt": 12,
-    "tick_pt": 11,
-    "note_pt": 11
+    "label_pt": 10.5,
+    "tick_pt": 10,
+    "note_pt": 9.5,
+    "title_pt": 12
   },
   "export": {
     "raster_dpi": 300,
-    "target_width_mm": 297,
+    "target_width_mm": 240,
     "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }

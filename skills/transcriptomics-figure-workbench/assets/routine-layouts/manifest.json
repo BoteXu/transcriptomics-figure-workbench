@@ -1,0 +1,172 @@
+{
+  "version": "0.9.6",
+  "records": [
+    {
+      "id": "QC_4",
+      "source": "BulkQC",
+      "assets": {
+        "png": "QC_4/QC_4.png",
+        "svg": "QC_4/QC_4.svg",
+        "pdf": "QC_4/QC_4.pdf"
+      },
+      "spec": "QC_4/figure.spec.json",
+      "input_sha256": "189c2277e9110c56ae19dab83f4f5d704f87ef9db3071620b7c4e8d8fbe2a96c",
+      "png_sha256": "4a2f6db163e35f181a67e9a49cb2f3a4e83d026c608af7c7878a46af8f58eb35",
+      "notes": "四样本完整半云/观测/窄箱，稀疏数据仍有清楚的比较尺度。",
+      "review": "individual screen self-review of actual PNG",
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 210.82,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 20,
+        "smallest_pt": 10.814913196091453,
+        "p10_pt": 11.384119153780476,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "QC_24",
+      "source": "BulkQC",
+      "assets": {
+        "png": "QC_24/QC_24.png",
+        "svg": "QC_24/QC_24.svg",
+        "pdf": "QC_24/QC_24.pdf"
+      },
+      "spec": "QC_24/figure.spec.json",
+      "input_sha256": "75c1b1e80f61618180c0d0275e82f541943633be6d91ae648ec1fe0e0556ed3f",
+      "png_sha256": "5bfeaf97423705287778a3f10bc245d43350997b8bdb9b259138ccede600c36b",
+      "notes": "24样本分为四个完整块；修复页标题与面板标题相碰，共用指标范围保留。",
+      "review": "individual screen self-review of actual PNG",
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 210.82,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 50,
+        "smallest_pt": 10.814913196091453,
+        "p10_pt": 11.384119153780476,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "Composition_2col",
+      "source": "DonorComposition",
+      "assets": {
+        "png": "Composition_2col/Composition_2col.png",
+        "svg": "Composition_2col/Composition_2col.svg",
+        "pdf": "Composition_2col/Composition_2col.pdf"
+      },
+      "spec": "Composition_2col/figure.spec.json",
+      "input_sha256": "276e51e7339d10fe07d7c84c65d0452519bec53199d4190b853205ba868b984d",
+      "png_sha256": "b9da2adb70c4c58ef8e864fa5c3f94139c7dc643144f7df023e4aa3bc9b79f9b",
+      "notes": "显式两列三行含完整供体堆积；调整长页面的物理标题和图例间距。",
+      "review": "individual screen self-review of actual PNG",
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 229.20681360677082,
+        "minimum_required_pt": 7,
+        "essential_text_count": 64,
+        "smallest_pt": 9.947348266494327,
+        "p10_pt": 10.470892912099291,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "Features_2col",
+      "source": "MarkerFeatures",
+      "assets": {
+        "png": "Features_2col/Features_2col.png",
+        "svg": "Features_2col/Features_2col.svg",
+        "pdf": "Features_2col/Features_2col.pdf"
+      },
+      "spec": "Features_2col/figure.spec.json",
+      "input_sha256": "3881489888c14e6e7c652cc6427394aa7106931c73595257b184e46e57f3c4ed",
+      "png_sha256": "2ab207aff4d3a55adca3ffff682bb969629bbb6cf43e4c3745c2aa244ca3b8f4",
+      "notes": "显式两列三行共同坐标特征图；压缩过大头尾空白并保留共同色阶。",
+      "review": "individual screen self-review of actual PNG",
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 142.23999999999998,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 46,
+        "smallest_pt": 18.560179977502816,
+        "p10_pt": 18.560179977502816,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "Effects_12",
+      "source": "GeneEffects",
+      "assets": {
+        "png": "Effects_12/Effects_12.png",
+        "svg": "Effects_12/Effects_12.svg",
+        "pdf": "Effects_12/Effects_12.pdf"
+      },
+      "spec": "Effects_12/figure.spec.json",
+      "input_sha256": "ef7128f9617719f54d955928e7ef3f3cddb27550193e1f8a24b7e87efcc2e36c",
+      "png_sha256": "dd8f30007cbf2d87a5cff0f54667c28eb575fcb6deaa185543b12b50e971ddad",
+      "notes": "12个虚构效应按条目增长行高；精确区间和名称仍对齐。",
+      "review": "individual screen self-review of actual PNG",
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 195.57999999999998,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 60,
+        "smallest_pt": 11.657633704877801,
+        "p10_pt": 11.657633704877801,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "Expression_1col",
+      "source": "GeneExpression",
+      "assets": {
+        "png": "Expression_1col/Expression_1col.png",
+        "svg": "Expression_1col/Expression_1col.svg",
+        "pdf": "Expression_1col/Expression_1col.pdf"
+      },
+      "spec": "Expression_1col/figure.spec.json",
+      "input_sha256": "de5cbf78967e85b947e94bd8680ef23792b5ca787bd9a6f1c807e3b981e24a78",
+      "png_sha256": "c1056a9395496fce2532637c3086a57fbe856bdee603e022fc5a082e1de74eac",
+      "notes": "明确单列四行；每个基因全部供体点、半云与窄箱不拆分。",
+      "review": "individual screen self-review of actual PNG",
+      "readability": {
+        "target_width_mm": 180,
+        "native_width_mm": 116.83999999999999,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 42,
+        "smallest_pt": 14.635398836015064,
+        "p10_pt": 15.405682985279014,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false
+    }
+  ],
+  "synthetic_only": true,
+  "analysis_performed": false,
+  "independent_aesthetic_review": false,
+  "printed_proof": false,
+  "scientific_acceptance": false
+}

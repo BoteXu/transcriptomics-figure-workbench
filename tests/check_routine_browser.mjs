@@ -15,6 +15,9 @@ try{
   await buttons.nth(i).click();await page.locator('#art').evaluate(async im=>{await im.decode();if(!im.naturalWidth)throw Error('Empty image')});
   assert.equal(await page.locator('#counter').textContent(),(i+1)+' / 43');assert.equal(await page.locator('#links a').count(),5);
   assert.ok((await page.locator('#notes').textContent()).length>15);
+  if(await page.locator('#compare').count()){
+   const current=await page.locator('#art').getAttribute('src');await page.locator('#compare').click();await page.locator('#art').evaluate(im=>im.decode());assert.notEqual(await page.locator('#art').getAttribute('src'),current);await page.locator('#compare').click();await page.locator('#art').evaluate(im=>im.decode());assert.equal(await page.locator('#art').getAttribute('src'),current);
+  }
  }
  await buttons.nth(10).click();await page.locator('#art').evaluate(im=>im.decode());await page.screenshot({path:path.join(output,'raincloud-desktop.png'),fullPage:true});
  await page.locator('#zoom').click();assert.ok(await page.locator('#art').evaluate(im=>im.classList.contains('native')));await page.locator('#zoom').click();

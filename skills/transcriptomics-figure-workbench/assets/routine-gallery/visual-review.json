@@ -1,441 +1,356 @@
 {
-  "date": "2026-10-17",
-  "reviewer": "Codex self-review",
+  "version": "0.9.6",
+  "review_type": "artifact_bound_author_screen_self_review",
+  "reviewer": "Codex",
+  "scope": "43 full-size exported PNGs individually inspected; revised exports reinspected; declared physical text gate separate",
+  "universal_aesthetic_approval": false,
+  "scientific_acceptance": false,
+  "independent_aesthetic_review": false,
+  "printed_proof": false,
   "records": [
     {
       "id": "BulkMain",
-      "png_sha256": "64f5e7af836f84e3000c00ec73ee1f59bcffc67ef8c5cee3f550469066d246ef",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "总览保持样本、差异、表达与富集的阅读顺序；ORA 数值已与伴随图统一。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "26fabaf7daef85def4eb7ec2c6003299aa7af932e5774a7cb6177985f7fd11df",
+      "decision": "逐张屏幕自检完成",
+      "notes": "复看四个完整面板；修复表达矩阵图例与条件条的贴碰，保留PCA/火山边缘信息及独立细节页。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "BulkQC",
-      "png_sha256": "f70030bc3b4da725f8bf57c70eb43de9235ec59db74258a8c370dcf45c14239d",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "改为半云、窄箱体与全部观测点；12 个样本逐个标明 180 genes，避免把基因数当作供体重复。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "4dad22e016aa03428cf061ef43a0366eeafe98812ce325d0bb4490515422e2d9",
+      "decision": "逐张屏幕自检完成",
+      "notes": "按条件并排云雨；全部2160个基因观测、每样本180个计数明确；相同指标共轴，标题和样本标签无碰撞。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "BulkPCA",
-      "png_sha256": "02f7731e700beb863b19be3d4ed39eaf41d0a8a379c7eee6c60d9fcd82399cb0",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "12 个样本均保留并标注；95% 给定离散椭圆、组内边际比例和完整解释方差相互分区。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "24c0ab68c2e5ea37d9d3e079ad7cd1fdced4a5b14551565e9219da366285c6be",
+      "decision": "逐张屏幕自检完成",
+      "notes": "12个样本名称、给定95%离散椭圆、两轴完整边缘比例和解释方差均可读；不将椭圆解释为均值置信区间。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "BulkCorrelation",
-      "png_sha256": "6d16e109e90c3dec49b74937d04add123d8d7fb950fd8ca6f5a8c65dda9a538e",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "侧边条件条已移至矩阵旁，标签位于外侧；完整 12×12 矩阵与相关色标保留。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "3eee4f15d221df082f43fe72549cabc72a4c2c10cf960eb57860f6aedbee519f",
+      "decision": "逐张屏幕自检完成",
+      "notes": "唯一66对相关性采用下三角，标签与条件条贴近但分离；上方空区承载组内/组间描述性范围，不重复对称格。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "LibrarySizes",
-      "png_sha256": "7c8f2d273d41426c35e91ccd5195c2b91f8a28d1c13f95127b9da4529a82228c",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "全部样本及两个条件的色序一致；总量轴和样本标签可读。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "4d1dab7ea4a3d8625a48eaf5142c9ab406fdf5b94d8f8c0f85e027dc9b4417f7",
+      "decision": "逐张屏幕自检完成",
+      "notes": "逐样本条线与精确文库数量对齐；轴保留百万reads单位，不从样本名称推断独立性。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "StudyDesign",
-      "png_sha256": "35cb8e35f44546fa8006b9b3c1ca73b5d70838f2ba8600838df1ddd1d5be54ba",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "12 个样本的三个设计列完整；二元设计值按整数显示。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "5d74cb0406d22048225fb323b3ac6c9e83afa1224b73af222e18383ce85e203d",
+      "decision": "逐张屏幕自检完成",
+      "notes": "完整12×3离散0/1设计指示；参考编码明确，撤下不适用的连续色阶。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "BulkDE",
-      "png_sha256": "e551838dd79555091cf40b4ea2e1674dd3889dea6ef8116ad36b176d7c74cfc6",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "全部 1200 个基因保留，堆积边际与方向数量/比例对应；四个选定标签无互相覆盖。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "0b6cb95ab661b04f733844279d55591190e5a23fdd622d53b0e3c2c454fbb760",
+      "decision": "逐张屏幕自检完成",
+      "notes": "完整1200基因、148个方向阈值内基因和完整堆积边缘计数；指定四基因标签清楚，保留FDR/FC阈值。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "BulkHeatmap",
-      "png_sha256": "1abfc5662401f51ad506c6d4291e894f31f8d1e89f17f2f9b012a63b7b5150f2",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "24 个指定基因、12 个样本完整；注释紧贴矩阵，正负程序与连续表达色标分开。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "b51965195d3d9a42983b031ab01c7aecc11bf7cfd6ff44d1440904ee48c7a6dc",
+      "decision": "逐张屏幕自检完成",
+      "notes": "完整24×12选定表达矩阵；条件和程序注释贴近，色标独立留位，无重新聚类或标准化。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "GeneEffects",
-      "png_sha256": "f2ab170d1816fd900b86d45aba4ab065b41d2ad489fc8f3aef07c17d91be37bd",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "重做为紧凑三列森林表，基因/区间/数值逐行对齐，给定区间与效应原值保留，明确供体对比。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "4c7ff59da0c93fd5bb44899435a41e975d292a1c03af47c137e0441197ef02a6",
+      "decision": "逐张屏幕自检完成",
+      "notes": "紧凑名称—区间—精确数值三列，四行交替浅底对齐；区间完全来自冻结表。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "BulkMA",
-      "png_sha256": "904f037a8e2241bb0d896efb68ac91d730885d042036ecb84e476162bf11ffc5",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "完整平均表达/效应点和边际计数保留，零参考线清楚，方向颜色与火山图一致。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "a8ebf5c2a4264cd398f8f047518825a81ee64a5a7819cce5d6cace8466e46511",
+      "decision": "逐张屏幕自检完成",
+      "notes": "全1200基因与横纵边缘堆积分布；正负方向稳定配色、零线清楚，未筛去不显著基因。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "GeneExpression",
-      "png_sha256": "5a72ff032db8348231e68707621119020763678a65df9f68dcb1fb26ebeb23ae",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "四个基因各有完整云雨页格；每条件 6 个供体均显示，云形固定带宽 0.20，窄箱体与点分开。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "b43b4735248f0bd735225aea0c3e9ba1f7a36bde574df4ec0af5aec3c15c2582",
+      "decision": "逐张屏幕自检完成",
+      "notes": "四个指定基因均显示供体半云、全部六点、箱体和计数；2×2布局已按240mm实际字号返修。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "Pathways",
-      "png_sha256": "201075e4ea59ceb1f03b0cb592ef2e540b71a6cad5b54d07bf08f0bd19cebc3c",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "通路名、ORA 比例/命中数/FDR和成员效应分工明确；148 查询基因与 1200 测试基因明确。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "2a59756d821c5c0047721683a743d9ada227196ec1377c43bef1b36f1fc10df2",
+      "decision": "逐张屏幕自检完成",
+      "notes": "六通路比例轴与精确重叠数/FDR/主题对齐；修复低FDR颜色归一化，补充独立色标，稀疏成员格移至完整伴随页。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "EnrichmentTracks",
-      "png_sha256": "02f768fef4a18c4a8cc41877d58d9face3c08bf39846de4e66f0c3078f279ee1",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "三条通路采用两列平衡分面，末面板居中；完整 ES、命中、排序量、NES/FDR均保留。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "b1a079dc11b0f8755129f852d7240954d37c33c7aae42166f2be954b53659127",
+      "decision": "逐张屏幕自检完成",
+      "notes": "三通路平衡分面；每通路完整1200排序、96命中、leading edge、NES/FDR与排序指标可读。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "bulk_GSEASummary",
-      "png_sha256": "34ff8642342eb8edd3e38e6ecbcc80afed52a4f549733c703dbc7c06b93d3339",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "单对比以 NES 为横轴，正负方向直接可读；FDR、成员与基因效应仍为独立通道。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "ceb5cb987afcc1f5c0d8e4abb7c25d2f353f2f4eb8a10b25965908fb2f395556",
+      "decision": "逐张屏幕自检完成",
+      "notes": "正负NES轴及原始数值/FDR清楚；空心保留非显著通路，稀疏成员格不挤占主效应区。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "bulk_GeneSupport",
-      "png_sha256": "8839598dc4386ffd093c287d648959e8421e5ef963348ec71d8a9facdf32eaca",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "成员格与基因效应对应同一指定对比；空白非成员不冒充未报告结果。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "1205ef5e0e4e5255fc2718adecde6644d072bb6f23995a0da8fec333d72c4ea6",
+      "decision": "逐张屏幕自检完成",
+      "notes": "完整六通路×四选定基因成员格；真实非成员用短横表示，效应数字提高对比度，重叠数不冒充所选基因数。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "CellQC",
-      "png_sha256": "d7f822ff266f69a2a5cacf9445e454ad41fbdd64ec9ef98a3b5ee15f49d3718b",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "三项指标均使用云雨，逐样本保留全部细胞，标签明确 cells；12 个供体与 900 个细胞层级分开。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "021b15641d867ed9b91e2539708ebe6a4d1f12d119f23642947b5130fac6fb8a",
+      "decision": "逐张屏幕自检完成",
+      "notes": "三项QC按条件分面，全部900细胞/每指标观测保留；样本计数一致，共用指标轴，三行间距清楚。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorCounts",
-      "png_sha256": "3e19dc9cd765e8ba384167b50fc80cd40327e6fc9e9c677ecc19853564d3d5c2",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "12 个供体的细胞覆盖完整，两个条件配色一致，细胞数不是独立供体数。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "fd9c9f8406bb4b0f25d6decf56f6088d3ef263302689f759687461b36c15cdd5",
+      "decision": "逐张屏幕自检完成",
+      "notes": "全部12供体覆盖与精确数量对齐，完整总数900；清楚标注细胞数量及条件。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "CellBatches",
-      "png_sha256": "0d9ccbc20e5a5eb162328a6537b63199af24fe0f660c84ee0b534f19aa832174",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "三个批次分面保留相同完整背景及坐标，批次高亮不更改嵌入。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "c4ce06905ada4c5fd2469e0db9a50a922f224364e14fd95e8bb18d5193cc9653",
+      "decision": "逐张屏幕自检完成",
+      "notes": "三批次保留全细胞背景与共同坐标；批次×身份堆积数与总数一致，批次及身份顺序固定且有图例。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "CellStudyDesign",
-      "png_sha256": "8388a0690a4488ea97afaa6ec58529d58233a02ee7fc3fb38220dcd8a710d738",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "条件和批次设计明确，0/1 按整数显示，不把设计矩阵变成推断结果。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "3bb83e56981f1b431b350176aad5bc9861d57d24c6f9cc1686547e5c3cfae874",
+      "decision": "逐张屏幕自检完成",
+      "notes": "完整供体设计的0/1编码及参考条件，条件颜色一致，无连续色阶造成的含义误导。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "CellTypes",
-      "png_sha256": "912428bba674fa7385f5ebc5e7b626d8ae3604eb0630a55ee17d2905b6f0efa3",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "身份图谱与 20-marker 特异性证据并置，身份顺序、颜色和群归属一致。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "555fa4a747ea6c4812eb27131612a09a9112a3295d714a52fbccc69a7b1aad36",
+      "decision": "逐张屏幕自检完成",
+      "notes": "共同身份坐标与20marker均值/检出率；各群细胞数显式，修复基因标签与色标的间距。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "MarkerDot",
-      "png_sha256": "86f4b37bb03caaf91e23f139168b57f9037b88a5d6d3d595ca8f95618c04e813",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "全部 20-marker×5 身份均值/检出率可读，面积和表达导引分开。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "4a6c46f066cb4a83c84ec39d9b685995f12e9a6b2acba7522b35f093f98c0b30",
+      "decision": "逐张屏幕自检完成",
+      "notes": "补齐五类marker色条名称、每群数量和共同0–5均值色阶；全部100个均值/检出率组合保留。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "MarkerFeatures",
-      "png_sha256": "29b1ed4353206a6ebe842806e1da14995d57da5ed95c2e8613fed934dff971f7",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "五个代表 marker 保留全部 900 个细胞及共同表达色阶；此页不替代逐亚群多 marker。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "3bae482745c1348f8a6fbacf8960ae4d8030c46231b1e50ddf50f278636f269c",
+      "decision": "逐张屏幕自检完成",
+      "notes": "五个代表marker按一行连续阅读，共同坐标与0–5色阶；全部900个细胞均在各图保留。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "Subgroup_01",
-      "png_sha256": "905ec187c6ce21a80d5c83420f5b513af007e86fb94edbc46f495647ad51585e",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "T cells 独立四-marker 页已逐张查看：先定位/跨群均值与检出率，再连续四个全细胞表达图；共同 0–5 色阶，全部 900 个坐标不变。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "f19dbc83543e1d8f0c42879efafa1385e504a5b99718f1c0b7afda709dc56f2d",
+      "decision": "逐张屏幕自检完成",
+      "notes": "T cells：逐张复看定位、跨五群特异性和对应四marker；每图保留900细胞，检出率/均值/共同色阶完整，标题和图例留位清楚。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "Subgroup_02",
-      "png_sha256": "32fcbeb795ff1baed6c7d939e163a588ca24f929c30af424657b7e83af4160b8",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "B cells 独立四-marker 页已逐张查看：先定位/跨群均值与检出率，再连续四个全细胞表达图；共同 0–5 色阶，全部 900 个坐标不变。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "48e9a28173270fa732c28255bdfcbd3ff5f94dea090948aea2d2253787e3f352",
+      "decision": "逐张屏幕自检完成",
+      "notes": "B cells：逐张复看定位、跨五群特异性和对应四marker；每图保留900细胞，检出率/均值/共同色阶完整，标题和图例留位清楚。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "Subgroup_03",
-      "png_sha256": "f0b7742a313ab307d3d9a7285466345f052bd9cc76b03fb1445bc9551d1723d0",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Myeloid 独立四-marker 页已逐张查看：先定位/跨群均值与检出率，再连续四个全细胞表达图；共同 0–5 色阶，全部 900 个坐标不变。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "74c7d187167893d02372bac2967169ed5727c202e2914bd7ccdb6790deb5c869",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid：逐张复看定位、跨五群特异性和对应四marker；每图保留900细胞，检出率/均值/共同色阶完整，标题和图例留位清楚。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "Subgroup_04",
-      "png_sha256": "d788f415d9ab667d059c783f9cde839dfc3eec539b6f9eaadb4ce85ac30846d5",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Stromal 独立四-marker 页已逐张查看：先定位/跨群均值与检出率，再连续四个全细胞表达图；共同 0–5 色阶，全部 900 个坐标不变。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "e49f85a69726ef0514a93d884e9ec7110e6b8855a101503f9c4d5ee294018a77",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Stromal：逐张复看定位、跨五群特异性和对应四marker；每图保留900细胞，检出率/均值/共同色阶完整，标题和图例留位清楚。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "Subgroup_05",
-      "png_sha256": "2355923d9404ba078c0805e7d50c33592f62ce7b30c8127a7a0f5d313a041e4d",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Endothelial 独立四-marker 页已逐张查看：先定位/跨群均值与检出率，再连续四个全细胞表达图；共同 0–5 色阶，全部 900 个坐标不变。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "c3b477eb18b63ed6a2a0271b58a2006e4675f639fe90138501b803955ce825b0",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Endothelial：逐张复看定位、跨五群特异性和对应四marker；每图保留900细胞，检出率/均值/共同色阶完整，标题和图例留位清楚。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "ConditionAtlas",
-      "png_sha256": "4616e0846e712d9abb82017c5b5496cf94e86465e51c4710d35eb72a46ddb3c6",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "两个条件固定同一坐标范围和身份顺序；没有重拟合或不同缩放。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "d8a9117980b1004bf4e5ed835347b7be3658d74763307eacabf33d3bf472ce53",
+      "decision": "逐张屏幕自检完成",
+      "notes": "两个条件各显示真实范围内的细胞及6个供体，坐标范围/颜色一致，不重新拟合嵌入。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorComposition",
-      "png_sha256": "07d6b7c2125c0ef8a3139db658cd5db810f760b782794077d4f5175e38a48836",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "每个身份逐供体比例完整；6 供体/条件，未把细胞当独立重复。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "48cfbe6b18cbe6319774141a1676ed22618427fce6d50b12db8d63ad0c2bbf4a",
+      "decision": "逐张屏幕自检完成",
+      "notes": "12位供体完整100%堆积条与五身份的逐供体云雨共存；保留全部60个比例，压低重复坐标标签，无细胞池化推断。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorTypeSupport",
-      "png_sha256": "30f3d36b6bae3af3c4e53aa2e69c776da873566bb5f33afee500e959749a55b5",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "5 身份×12 供体的细胞数完整，整数注释与色标清楚。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "6c6907a4ca57e15ba59f19ad0227adccdfda28bbb90a2c406e8d386dd295d7c3",
+      "decision": "逐张屏幕自检完成",
+      "notes": "完整5×12整数格、逐供体总数与行总数；修复色标/说明相碰，保留900细胞和零计数含义。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorDE",
-      "png_sha256": "4907dafd15352e5d8ed74cfa6e9c634825660ba315586db50f5697bff0e99311",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "明确 Myeloid 供体级对比；全基因点与堆积计数/比例完整，沿用同一虚构结果值。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "f587e180f18eb429afea9fd1a32c952ad7311bcbb1c67d078c39deebe9d3a92d",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid供体级对比明确；1200基因完整堆积火山及四个指定标签可读，不以900细胞作为独立样本。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorEffects",
-      "png_sha256": "a93ec139efa346f9f3439f312a7dc24453cf59467b841b6f29d48b81943d8927",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "紧凑三列森林表和给定区间，标题与副标题明确 Myeloid 供体对比。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "f95c43098412fedcba8b8a83fd270d61f877a964d44396efc2f22936c0e231b7",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid供体对比的四个冻结效应/区间；三列对齐，无装饰面积或估计精度的暗示。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorHeatmap",
-      "png_sha256": "37a7213e819366c66b2df84ad96f9b62be6316bed9805641ee80f08933c0e4bb",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Myeloid 的指定表达程序完整，附着注释和表达色标互不混淆。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "8a6de75ae2f7ef6a1862531ae8b7839a894f6f2e081f75b5adb3d0b4dd922c57",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid选定24×12表达程序，完整附着注释及共享色标，行列顺序和数值保留。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorMA",
-      "png_sha256": "1c8cacbb76e87c19ab2d0a41a4036a09fb8ea0a8f3f9e1dea5942e4d322690d6",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Myeloid 供体级平均表达/效应与边际计数完整，不声称所有细胞类型都做过差异。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "fc0e32d7ac463d2fa4035ac4d6656505338d8062e0d3838ff058dfdaae122755",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid全部基因及完整MA边缘分布；效应方向、表达单位、零线及总数明确。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorPathways",
-      "png_sha256": "076882190d5b5c28d137d6ac4e1e844fd8feae94c3b031ce8116240e3423283a",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Myeloid 范围已补入标题；ORA 数值、查询/测试分母、成员与指定对比一致。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "308785f92e1a57dd69fb973df10d923d1f194e1e7993d4986330ddde6e1a187b",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid六通路比例/FDR/重叠数分列，色阶和数值一一匹配，支持证据另页完整显示。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "DonorEnrichmentTracks",
-      "png_sha256": "b8db749380158baf01eb4e1076f508ea4a5ebb50bc1e6b09a4a4099a43b7379e",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Myeloid 标题范围明确；三通路的 ES/命中/排序量完整，分面与标签均可读。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "5b0b8417fb9aa7e5c1344303c60b2c9874594604da7b827575566b0a1991b133",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid三条完整GSEA轨道；每通路NES、FDR、命中数、leading edge与排序指标同时存在。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "single_cell_GSEASummary",
-      "png_sha256": "2471d3420eb9eaf353050be46985c79a227bab36ccc10e9a9f2d47e06ff284fb",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Myeloid 单对比 NES 轴替换单列气泡；方向、FDR及成员效应独立可读。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "5d51573279d7356af83ca5a3415331ceb4563011a3fa2c6446f9cdefbf001c66",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid正负NES与精确FDR清楚，显著性用实心/空心编码，保留非显著行。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "single_cell_GeneSupport",
-      "png_sha256": "a679693d55d793880fe40561b6ebf3596f07c348a2b186db639e2933a0142f62",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Myeloid 标题与基因对比明确，非成员和已测零值保持区分。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "085f8ca1f8fc1730d9f2458f161a29c2505b9346aafe82b694409926a6c376cb",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid六通路×四选定基因完整成员证据；顶部效应和独立色标清晰，非成员不是零效应。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "bulk_GSEADetail_Reading",
-      "png_sha256": "eed5e3a3539a4df55ad689c1859670e60460862c29dd01cded2ce51f4a5bfece",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "单通路阅读版保留完整 1200 排序、96 命中与 85 leading-edge；色条刻度已分开。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "d3170f231ab7676888271b33cafe3c17bd757c6a70c83d40299c8b15ec9c3650",
+      "decision": "逐张屏幕自检完成",
+      "notes": "舍弃对比度不足的渐变ES线，采用清楚的实色精确曲线；独立排序色带保留，命中/leading edge计数明确。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "single_cell_GSEADetail_Reading",
-      "png_sha256": "863a9e4a4cb25de08d55ad41a4ed5724637e09b84666ad09acab4334228e731a",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "Myeloid 范围明确；ES、命中、1200 排序、NES/FDR和 leading-edge 保留，色条无文字碰撞。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "6d97de30cb94fd2004b991cc66a071a853915123de1f05c4277451fcf0a56c43",
+      "decision": "逐张屏幕自检完成",
+      "notes": "Myeloid单通路采用实色完整ES、独立排序指标色带、96命中与85个leading edge；无重算或平滑。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "Subgroup_01_Custom",
-      "png_sha256": "e174f4602828512be3db29492111603b30ed85a73e59c7de0f1d1a78e78eb95f",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "两列 marker 块的纵向阅读版：定位/特异性后连续四个 marker，未删除细胞。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "16c59b4b6ae28ab7f079b9a841aedd0beda40ab492042f45199ff093d06852eb",
+      "decision": "逐张屏幕自检完成",
+      "notes": "两列四marker阅读版，定位/完整特异性居前；各feature均有检出率、均值和共同色阶，图例无相碰。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "Subgroup_03_Custom",
-      "png_sha256": "36c46a2e50cedf535afa3e82462611b971b75cd611350ba20bec4fceb883afde",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "三列整页自定义布局保留定位、跨群特异性与四个 marker，共同坐标和色阶。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "29f194a8ffda37458c49556a7e1e80ee7fd2c000d164e52cfa1163fe383e09b1",
+      "decision": "逐张屏幕自检完成",
+      "notes": "三列自定义页返修独立标签留位与marker标签旋转；跨群名称不再侵入定位图，完整四marker保留。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     },
     {
       "id": "EnrichmentTracks_Custom",
-      "png_sha256": "dfee1c79a86e5cc5c7ecadf579bf460b8978e355f8d88e369500380fc58f9423",
-      "decision": "已逐张屏幕自检（当前模拟数据与尺寸）",
-      "notes": "三通路横排阅读版在 297 mm 指定宽度下核对，ES/命中/排序量与默认版一致。",
-      "scope": "Actual final PNG inspection during this iteration; unchanged pixels reuse the same iteration inspection",
-      "independent_aesthetic_review": false,
-      "print_proof": false,
-      "scientific_acceptance": false
+      "png_sha256": "2b9c09839b03cb66b4ec3569c87aad0e8d94df1b8b5c2d06efbf035a99513dfa",
+      "decision": "逐张屏幕自检完成",
+      "notes": "横排三通路保留全部ES/命中/排序三轨；重新安排原生面板宽度通过297mm字号检查。",
+      "scientific_acceptance": false,
+      "visual_scope": "Actual final PNG; not scientific or independent print acceptance"
     }
-  ],
-  "screen_review_complete": true,
-  "universal_aesthetic_approval": false,
-  "user_acceptance": "not_assessed",
-  "independent_review": false,
-  "scientific_acceptance": false
+  ]
 }

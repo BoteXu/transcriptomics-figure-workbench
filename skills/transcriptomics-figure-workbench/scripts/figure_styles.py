@@ -181,7 +181,7 @@ def plot_enrichment_lollipop(data, *, score_type, denominator_label, count_label
                  color='-log10(FDR); sequential; zero included', area='count; zero anchored',
                  selection='all supplied rows; first appearance order', score_baseline=0)
 
-def plot_composition_panels(data, palette, *, unit_label, y_max=None,ncols='auto',nrows=None,panel_width=2.8,panel_height=2.9):
+def plot_composition_panels(data, palette, *, unit_label, y_max=None,ncols='auto',nrows=None,panel_width=2.8,panel_height=2.9,cloud_shapes=None,celltype_palette=None):
     d = checked(data, ['sample', 'group', 'celltype', 'count'], ['count']); _text(unit_label)
     palette_check(d.group, palette)
     if d.duplicated(['sample', 'celltype']).any() or ((d['count'] < 0) | (d['count'] % 1 != 0)).any():
@@ -196,6 +196,11 @@ def plot_composition_panels(data, palette, *, unit_label, y_max=None,ncols='auto
     if y_max is None:y_max=max(.05,min(1,float(np.ceil(d.fraction.max()*1.08*20)/20)))
     if not (np.isfinite(y_max) and 0 < y_max <= 1 and y_max >= d.fraction.max()):
         raise ValueError('Shared y_max must include all fractions and be in (0,1]')
+    if cloud_shapes is not None:
+        if not isinstance(celltype_palette,dict) or set(celltype_palette)!=set(types):raise ValueError('Explicit stable identity colours required for the complete composition')
+        if set(cloud_shapes)!=set(types) or any(set(cloud_shapes[t])!=set(groups) for t in types):raise ValueError('Complete celltype/group frozen clouds required')
+        from figure_study_publication import composition
+        return composition(data,palette,celltype_palette,cloud_shapes,unit_label,ncols,nrows,panel_width,panel_height)
     from figure_workbench.responsive import grid_shape
     nrows,ncols=grid_shape(len(types),ncols,nrows)
     from figure_workbench.responsive import canvas_budget

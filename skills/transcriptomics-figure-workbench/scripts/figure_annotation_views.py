@@ -160,7 +160,7 @@ def plot_annotation_evidence(data, theme, *, mode, title, expression_label,
         ratios=None
     elif mode=='atlas' and cols==2:
         widths = [3.5, max(5.65, len(marker_order)*.22+group_lane+.5)]
-        width = sum(widths)+.9; height = cell_height+2.0
+        width = sum(widths)+.9; height = cell_height+2.4
         ratios = widths
     else:
         width = cols*max(panel_width,group_lane+2.1)+.5
@@ -168,7 +168,7 @@ def plot_annotation_evidence(data, theme, *, mode, title, expression_label,
     if not evidence:
         if cols==1:height+=1.1
         header=1.75 if cols==1 else 1.4 if mode=='atlas' else 1.2
-        footer=1.72 if cols==1 else 1.12
+        footer=1.72 if cols==1 else 1.55 if mode=='atlas' else 1.12
     if evidence or (mode=='atlas' and cols==2):
         width *= panel_width/3.25
     fig = plt.figure(figsize=canvas_budget(width,height))
@@ -188,7 +188,7 @@ def plot_annotation_evidence(data, theme, *, mode, title, expression_label,
         slots=[gs[i//cols,i%cols] for i in range(count)]
     else:
         slots=facet_slots(fig,count,rows,cols,**options)
-    cmap = LinearSegmentedColormap.from_list('annotation_expression', ['#E8ECEE','#80B2AE','#146D77','#123F5D'])
+    cmap = LinearSegmentedColormap.from_list('annotation_expression', ['#DCE5E7','#80B2AE','#146D77','#123F5D'])
     shown_title=textwrap.fill(title,30,break_long_words=False) if cols==1 else title
     fig.text(.065, 1-.23/height, shown_title, fontsize=14, fontweight='bold',color=INK,va='top')
     subtitle = 'Identity and cross-population marker evidence' if mode=='atlas' else (
@@ -218,7 +218,14 @@ def plot_annotation_evidence(data, theme, *, mode, title, expression_label,
                 box=ax.get_position()
                 ax.set_position([box.x0,box.y0,box.width,box.height-.32/height])
             _dot(ax,dots,names,list(marker_order),expression_limits,cmap,focus_group,pal)
-            _heading(ax,'B','Marker specificity (mean)',y=1.26 if mode=='atlas' else 1.07)
+            if not evidence and mode=='subgroup' and cols>=3:
+                # The specificity panel owns a separate label lane. Otherwise
+                # long identity names intrude into the neighbouring embedding.
+                box=ax.get_position();lane=min(.55*box.width,1.05/fig.get_figwidth())
+                ax.set_position([box.x0+lane,box.y0,box.width-lane,box.height])
+                for label in ax.get_xticklabels():label.set_rotation(90);label.set_ha('center')
+            ax.set_yticklabels([g+' · '+str(sum(emb.group==g)) for g in names])
+            _heading(ax,'B','Specificity' if not evidence and mode=='subgroup' and cols>=3 else 'Marker specificity (mean)',y=1.26 if mode=='atlas' else 1.07)
             if mode=='atlas':
                 assignments=dots.drop_duplicates('feature').set_index('feature').feature_group
                 runs=[]
@@ -235,8 +242,10 @@ def plot_annotation_evidence(data, theme, *, mode, title, expression_label,
         else:
             gene=marker_order[i-2];q=features[features.feature==gene].sort_values('value',kind='stable')
             _coordinates(ax,emb)
-            ax.scatter(q.x,q.y,s=7,c=q.value,cmap=cmap,norm=Normalize(*expression_limits),ec='none',rasterized=True)
+            ax.scatter(q.x,q.y,s=9,c=q.value,cmap=cmap,norm=Normalize(*expression_limits),ec='none',rasterized=True)
             _heading(ax,chr(65+i),gene)
+            source=dots[(dots.feature==gene)&(dots.group==focus_group)].iloc[0]
+            ax.text(.02,-.08,f'Detected {source.fraction:.0%} · mean {source.value:.2f}',transform=ax.transAxes,color=MUTED,fontsize=8.5)
     # Shared guides have a reserved bottom lane directly under the data panels.
     cax=fig.add_axes([.15 if cols==1 else .67,.43/height,.70 if cols==1 else .26,.075/height])
     cb=fig.colorbar(plt.cm.ScalarMappable(norm=Normalize(*expression_limits),cmap=cmap),cax=cax,orientation='horizontal')

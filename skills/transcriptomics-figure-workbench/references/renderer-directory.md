@@ -280,6 +280,7 @@ Draw a complete, explicitly selected analysis chapter with adaptive packing.
 | scope_note | true | — |
 | columns | false | "auto" |
 | rows | false | null |
+| presentation | false | "classic" |
 
 ## figure_clarity_views.plot_clarity_views
 
@@ -459,6 +460,7 @@ Linked ORA/GSEA and complete selected gene support on aligned term rows.
 | nes_limits | false | [-3, 3] |
 | gene_effect_limits | false | [-3, 3] |
 | columns | false | "auto" |
+| presentation | false | "auto" |
 
 ## figure_expanded_grammar.plot_mosaic_counts
 
@@ -590,6 +592,8 @@ See the fixed implementation and its input contract.
 | merge_annotation_legends | false | false |
 | continuous_colors | false | null |
 | title | false | "" |
+| presentation | false | "classic" |
+| matrix_semantics | false | null |
 
 ## figure_extensions.plot_score_comparison
 
@@ -735,6 +739,11 @@ Prefer a compatible information-rich view; all extra scientific channels are sup
 | feature_columns | false | "auto" |
 | cloud_shapes | false | null |
 | observation_unit | false | null |
+| presentation | false | "auto" |
+| group_counts | false | null |
+| expression_limits | false | null |
+| identity_by_cell | false | null |
+| identity_order | false | null |
 
 ## figure_lineage_views.plot_lineage_view
 
@@ -1509,6 +1518,7 @@ See the fixed implementation and its input contract.
 | nrows | false | null |
 | panel_width | false | 2.8 |
 | panel_height | false | null |
+| presentation | false | "classic" |
 
 ## figure_publication.plot_raincloud
 
@@ -1888,6 +1898,8 @@ See the fixed implementation and its input contract.
 | nrows | false | null |
 | panel_width | false | 2.8 |
 | panel_height | false | 2.9 |
+| cloud_shapes | false | null |
+| celltype_palette | false | null |
 
 ## figure_styles.plot_sample_distribution
 

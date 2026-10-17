@@ -62,7 +62,7 @@ def plot_transcriptomic_overview(data,theme,*,assay,contrast,independent_unit,de
         left=1.48 if kind=='enrichment' else .58
         right=.62 if kind in ['matrix','marker_dot','enrichment'] else .16
         bottom=1.05 if kind in ['marker_dot','composition'] else .70 if kind=='matrix' else .55
-        top=1.4 if kind=='composition' and 'embedding' not in selected else .72
+        top=1.4 if kind=='composition' and 'embedding' not in selected else .95 if kind=='matrix' else .72
         x=box.x0+left/fig.get_figwidth();y=box.y0+bottom/fig.get_figheight()
         w=box.width-(left+right)/fig.get_figwidth();h=box.height-(bottom+top)/fig.get_figheight()
         if min(w*fig.get_figwidth(),h*fig.get_figheight())<1.2:raise ValueError('Panel is too small for complete overview guides; enlarge or reflow')

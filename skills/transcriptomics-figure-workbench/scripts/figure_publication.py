@@ -177,20 +177,25 @@ def plot_publication_forest(data,palette,*,x_label,interval_label,effect_scale,t
     fig.text(.32,.055,interval_label,color='#707A84',fontsize=8)
     return stamp(fig,data,'publication_grouped_forest',palette=palette,effect_scale=effect_scale,interval_label=interval_label,group_gaps=.45)
 
-def plot_feature_facets(data,*,value_label,limits,title='',ncols='auto',point_size=None,continuous_colors=None,nrows=None,panel_width=2.8,panel_height=None):
+def plot_feature_facets(data,*,value_label,limits,title='',ncols='auto',point_size=None,continuous_colors=None,nrows=None,panel_width=2.8,panel_height=None,presentation='classic'):
     d=checked(data,['cell_id','x','y','feature','value'],['x','y','value'])
     if d.duplicated(['cell_id','feature']).any() or len(d)!=d.cell_id.nunique()*d.feature.nunique():raise ValueError('Complete cell-feature grid required')
     if (d.groupby('cell_id')[['x','y']].nunique()>1).any().any():raise ValueError('Coordinates must match across features')
     if len(limits)!=2 or limits[0]!=0 or not np.isfinite(limits).all() or limits[1]<=0 or (d.value<0).any() or d.value.max()>limits[1]:raise ValueError('Explicit nonnegative common limits must include all values')
     from figure_workbench.responsive import grid_shape
-    feats=list(dict.fromkeys(d.feature));nrows,ncols=grid_shape(len(feats),ncols,nrows)
+    feats=list(dict.fromkeys(d.feature))
+    if presentation not in ['classic','publication']:raise ValueError('Choose classic or publication feature facets')
+    if presentation=='publication' and ncols=='auto' and nrows is None and len(feats)<=6:ncols=len(feats)
+    nrows,ncols=grid_shape(len(feats),ncols,nrows)
     if point_size is None:point_size=max(.5,min(28,200/np.sqrt(d.cell_id.nunique())))
     if panel_height is None:panel_height=max(1.8,panel_width*max(float(d.y.max()-d.y.min()),1)/max(float(d.x.max()-d.x.min()),1)+.65)
     from figure_workbench.responsive import canvas_budget
     from figure_workbench.responsive import facet_slots
     fig=plt.figure(figsize=canvas_budget(ncols*panel_width,nrows*panel_height),layout='constrained')
+    if presentation=='publication' and nrows>1:fig.set_size_inches(ncols*panel_width,nrows*panel_height+.9)
     fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
-    axs=[fig.add_subplot(slot) for slot in facet_slots(fig,len(feats),nrows,ncols)]
+    bounds=({'left':.03,'right':.97,'bottom':.65/fig.get_figheight(),'top':1-.8/fig.get_figheight()} if nrows>1 else {'left':.03,'right':.97,'bottom':.22,'top':.80}) if presentation=='publication' else {}
+    axs=[fig.add_subplot(slot) for slot in facet_slots(fig,len(feats),nrows,ncols,**bounds)]
     norm=Normalize(*limits);artist=None
     cmap=LinearSegmentedColormap.from_list('project_features',continuous_colors) if continuous_colors is not None else 'magma'
     for ax,f in zip(axs,feats):
@@ -199,7 +204,15 @@ def plot_feature_facets(data,*,value_label,limits,title='',ncols='auto',point_si
         artist=ax.scatter(pos.x,pos.y,c=pos.value,s=point_size,cmap=cmap,norm=norm,lw=0,rasterized=True)
         dx=max(float(d.x.max()-d.x.min()),1)*.03;dy=max(float(d.y.max()-d.y.min()),1)*.03
         ax.set(xlim=(d.x.min()-dx,d.x.max()+dx),ylim=(d.y.min()-dy,d.y.max()+dy),title=f,aspect='equal');ax.set_axis_off()
-    fig.colorbar(artist,ax=axs,fraction=.02,pad=.025,label=value_label);fig.suptitle(title,fontsize=12)
+    if presentation=='publication':
+        fig.set_layout_engine(None);cax=fig.add_axes([.65,.075,.28,.028]);fig.colorbar(artist,cax=cax,orientation='horizontal',label=value_label)
+        if nrows>1:cax.set_position([.55,.3/fig.get_figheight(),.38,.075/fig.get_figheight()])
+        fig.suptitle(title,fontsize=13,color='#294553',x=.035,ha='left',y=.97)
+        if nrows>1:
+            import textwrap
+            fig._suptitle.set_text(textwrap.fill(title,int(fig.get_figwidth()*10)));fig._suptitle.set_y(1-.12/fig.get_figheight())
+        for ax in fig.axes:ax._explicit_guide_layout=True
+    else:fig.colorbar(artist,ax=axs,fraction=.02,pad=.025,label=value_label);fig.suptitle(title,fontsize=12)
     return stamp(fig,data,'publication_stored_feature_facets',limits=list(limits),value_label=value_label,coordinates='unchanged',draw_order='zeros_then_positive_original_order',point_size=point_size,cmap=continuous_colors if continuous_colors is not None else 'magma',point_layers_rasterized=True)
 
 def plot_raincloud(data,palette,*,y_label,unit_label,title='',density_min_n=20):

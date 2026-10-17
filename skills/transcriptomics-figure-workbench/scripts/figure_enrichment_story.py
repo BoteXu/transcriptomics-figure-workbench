@@ -20,7 +20,7 @@ def _label(value, width=26):
 def plot_enrichment_story(data, theme, *, mode, title, background_definition,
                           gene_set_version, selection_definition, support_contrast,
                           tested_size, query_size=None, nes_limits=(-3, 3),
-                          gene_effect_limits=(-3, 3), columns='auto'):
+                          gene_effect_limits=(-3, 3), columns='auto',presentation='auto'):
     """Linked ORA/GSEA and complete selected gene support on aligned term rows.
 
     Two columns share exact row geometry and one term-label lane. One column
@@ -80,6 +80,12 @@ def plot_enrichment_story(data, theme, *, mode, title, background_definition,
     if (len(gene_effect_limits)!=2 or not gene_effect_limits[0]<0<gene_effect_limits[1]
         or ((effect<gene_effect_limits[0])|(effect>gene_effect_limits[1])).any()):
         raise ValueError('Declare gene-effect limits containing every selected gene')
+    if presentation not in ['auto','publication','classic']:raise ValueError('Choose auto, publication or classic enrichment presentation')
+    if len(contrasts)==1 and (presentation=='publication' or (presentation=='auto' and float(membership.member.mean())<.2 and columns=='auto')):
+        from figure_study_publication import enrichment
+        fig=enrichment(data,theme,mode,title,support_contrast,tested_size,query_size,nes_limits,gene_effect_limits)
+        fig._omics_spec.update(background_definition=background_definition,gene_set_version=gene_set_version,selection_definition=selection_definition,term_order=names,gene_order=genes)
+        return apply_project_style(fig,theme)
     label_lane = max(2.0, max(len(line) for x in names for line in _label(x).splitlines())*.073)
     left_width = max(3.1, len(contrasts)*.65) if z is not None else 3.15
     right_width = max(2.5, len(genes)*.38)

@@ -22,12 +22,65 @@
         ],
         "show_values": true,
         "x_label": "",
-        "y_label": ""
+        "y_label": "",
+        "matrix_semantics": "design",
+        "sample_annotations": {
+          "S01": {
+            "condition": "Control",
+            "batch": "Batch 1"
+          },
+          "S02": {
+            "condition": "Control",
+            "batch": "Batch 2"
+          },
+          "S03": {
+            "condition": "Control",
+            "batch": "Batch 3"
+          },
+          "S04": {
+            "condition": "Control",
+            "batch": "Batch 1"
+          },
+          "S05": {
+            "condition": "Control",
+            "batch": "Batch 2"
+          },
+          "S06": {
+            "condition": "Control",
+            "batch": "Batch 3"
+          },
+          "S07": {
+            "condition": "Treated",
+            "batch": "Batch 1"
+          },
+          "S08": {
+            "condition": "Treated",
+            "batch": "Batch 2"
+          },
+          "S09": {
+            "condition": "Treated",
+            "batch": "Batch 3"
+          },
+          "S10": {
+            "condition": "Treated",
+            "batch": "Batch 1"
+          },
+          "S11": {
+            "condition": "Treated",
+            "batch": "Batch 2"
+          },
+          "S12": {
+            "condition": "Treated",
+            "batch": "Batch 3"
+          }
+        },
+        "reference_definition": "Control and Batch 1"
       }
     ],
-    "title": "Donors, condition and batch",
-    "scope_note": "12 fictional donors · six per condition · supplied results only",
-    "columns": "auto"
+    "title": "Donor design and batch coding",
+    "scope_note": "12 simulated donors · six per condition",
+    "columns": "auto",
+    "presentation": "publication"
   },
   "theme": {
     "schema_version": 1,
@@ -99,7 +152,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Synthetic routine-request audit; seed 20261017",
+    "source": "Synthetic routine-request audit; seed 20261017; publication v0.9.6 display revision with unchanged frozen table bytes",
     "input_unit": "Synthetic gene-sample measurement",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -113,13 +166,14 @@
   },
   "appearance": {
     "preset": "paper",
-    "label_pt": 12,
-    "tick_pt": 11,
-    "note_pt": 11
+    "label_pt": 10.5,
+    "tick_pt": 10,
+    "note_pt": 9.5,
+    "title_pt": 12
   },
   "export": {
     "raster_dpi": 300,
-    "target_width_mm": 297,
+    "target_width_mm": 240,
     "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }

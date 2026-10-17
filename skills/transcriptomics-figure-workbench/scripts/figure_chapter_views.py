@@ -160,7 +160,7 @@ def _draw(ax, d, p, theme):
         cb=ax.figure.colorbar(art,ax=ax,fraction=.04,pad=.035);cb.set_label(p['value_label'])
 
 
-def plot_transcriptomic_chapter(data,theme,*,panels,title,scope_note,columns='auto',rows=None):
+def plot_transcriptomic_chapter(data,theme,*,panels,title,scope_note,columns='auto',rows=None,presentation='classic'):
     """Draw a complete, explicitly selected analysis chapter with adaptive packing."""
     if not isinstance(panels,list) or not 1<=len(panels)<=12:raise ValueError('Select one to twelve complementary panels')
     if not title or not scope_note:raise ValueError('Declare the scientific comparison and scope')
@@ -168,6 +168,10 @@ def plot_transcriptomic_chapter(data,theme,*,panels,title,scope_note,columns='au
     if len(ids)!=len(set(ids)) or set(data.panel_id)!=set(ids):raise ValueError('Every input panel must be declared exactly once')
     kinds={'curve','points','interval','matrix','bubble','embedding','network','stack','bars','vector'}
     if any(p.get('kind') not in kinds or not p.get('title') for p in panels):raise ValueError('Use a documented typed panel')
+    if presentation not in ['classic','publication']:raise ValueError('Choose classic or publication presentation')
+    if presentation=='publication' and len(panels)==1 and panels[0]['kind']=='matrix' and panels[0].get('matrix_semantics') in ['design','cell_support']:
+        from figure_study_publication import matrix_evidence
+        return apply_project_style(matrix_evidence(data,theme,panels[0],title,scope_note),theme)
     if rows is not None and (type(rows) is not int or not 1<=rows<=12):raise ValueError('rows must be one to twelve or unspecified')
     ncols=(math.ceil(len(panels)/rows) if rows else min(2,len(panels))) if columns=='auto' else columns
     if isinstance(ncols,bool) or not isinstance(ncols,int) or not 1<=ncols<=4:raise ValueError('columns is auto or an integer from one to four')
@@ -176,12 +180,19 @@ def plot_transcriptomic_chapter(data,theme,*,panels,title,scope_note,columns='au
     max_labels=max([len(set(data.loc[data.panel_id==p['id'],'label'].dropna())) if p['kind'] in ['interval','matrix','bubble','stack','bars'] else 6 for p in panels])
     height=max(4.1,min(8.5,2.9+max_labels*.18))
     fig=plt.figure(figsize=(6*ncols,height*nrows+1.4),layout='constrained')
+    if presentation=='publication':
+        ph=3.0 if all(p['kind']=='points' and p.get('grouped_distribution') for p in panels) else 3.7
+        fig.set_size_inches(4.6*ncols,ph*nrows+1.2)
     from figure_workbench.responsive import facet_slots
     slots=facet_slots(fig,len(panels),nrows,ncols)
     for i,p in enumerate(panels):
         ax=fig.add_subplot(slots[i]);_draw(ax,data[data.panel_id==p['id']],p,theme)
         ax.text(-.10,1.10,chr(65+i),transform=ax.transAxes,fontsize=14,fontweight='bold',color='#286A7C')
     fig.suptitle(title+'\n'+scope_note,fontsize=14,fontweight='bold')
+    if presentation=='publication':
+        for ax in fig.axes:
+            from figure_study_publication import quiet
+            quiet(ax)
     fig.get_layout_engine().set(h_pad=.18,w_pad=.30,hspace=.18,wspace=.14)
     for ax in fig.axes:ax._explicit_guide_layout=True
     stamp(fig,data,'transcriptomic_chapter',panels=panels,title=title,scope_note=scope_note,columns=columns,rows=rows,analysis_performed=False)

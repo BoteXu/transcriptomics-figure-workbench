@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.9.5",
+  "version": "0.9.6",
   "counts": {
     "python_functions": 131,
     "fixed_aliases": 82,
@@ -257,7 +257,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "a63b74cc7c02d3d98a47d016232165a57a6a0f57cc9af2cb75e7287b5e824f2d",
+      "source_sha256": "42bd91e60748e6dbea9d5026f70fa0932560792e03603177c3a6a1bdacfeea39",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "fraction",
@@ -585,12 +585,18 @@
           "required": false,
           "annotation": null,
           "default": null
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "classic"
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "116233c3045427b31cf3b1fb7c8e7d4e9137aaf32b6f80120ab9ec23b18fdda3",
+      "source_sha256": "4f5d7022b887d3dd6a2dcf012286746987d8d21d15e4e8d02753f9aa52585a33",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -1390,12 +1396,18 @@
           "required": false,
           "annotation": null,
           "default": "auto"
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "c51d61b8957d45db74fa7ea782e451bac5cb7708d997507471305b2554975abe",
+      "source_sha256": "db600148b8380609f37c5f644583e0b07b43aeec6e6fe669adbf4ada255a815e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "NES",
@@ -1727,7 +1739,7 @@
       "aliases": [
         "paired"
       ],
-      "source_sha256": "c9ca8ae8a98edb77aff6ea6ebf2befe8cc99b6cd7ff12d33552a859301dadfa6",
+      "source_sha256": "7dc8c96e64e41591e5d9d9c1a0dd2e5c4e6a7b94f1de44b1aa23edb60e4dfbb8",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -1810,7 +1822,7 @@
       "aliases": [
         "effect_matrix"
       ],
-      "source_sha256": "c9ca8ae8a98edb77aff6ea6ebf2befe8cc99b6cd7ff12d33552a859301dadfa6",
+      "source_sha256": "7dc8c96e64e41591e5d9d9c1a0dd2e5c4e6a7b94f1de44b1aa23edb60e4dfbb8",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -1953,12 +1965,24 @@
           "required": false,
           "annotation": null,
           "default": ""
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "classic"
+        },
+        {
+          "name": "matrix_semantics",
+          "required": false,
+          "annotation": null,
+          "default": null
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "c9ca8ae8a98edb77aff6ea6ebf2befe8cc99b6cd7ff12d33552a859301dadfa6",
+      "source_sha256": "7dc8c96e64e41591e5d9d9c1a0dd2e5c4e6a7b94f1de44b1aa23edb60e4dfbb8",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -1983,7 +2007,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "c9ca8ae8a98edb77aff6ea6ebf2befe8cc99b6cd7ff12d33552a859301dadfa6",
+      "source_sha256": "7dc8c96e64e41591e5d9d9c1a0dd2e5c4e6a7b94f1de44b1aa23edb60e4dfbb8",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -2539,12 +2563,42 @@
           "required": false,
           "annotation": null,
           "default": null
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "group_counts",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "expression_limits",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "identity_by_cell",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "identity_order",
+          "required": false,
+          "annotation": null,
+          "default": null
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "c51dabbef15d7f95a0f6b95ecbe0673033a82df57fa8042eaac6fce31ec735d1",
+      "source_sha256": "9994981ef129259565a6a7815bc6e38ef77c9d37f8c57b1d66d3fa7cf9d02d7b",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "average",
@@ -5428,7 +5482,7 @@
       "aliases": [
         "frozen_curve"
       ],
-      "source_sha256": "a3361780fe278b13e6200cfd93e90224452d58af6993a451192601de5bd4f32c",
+      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -5608,7 +5662,7 @@
       "aliases": [
         "annotated_matrix"
       ],
-      "source_sha256": "a3361780fe278b13e6200cfd93e90224452d58af6993a451192601de5bd4f32c",
+      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "row_count",
@@ -5666,7 +5720,7 @@
       "aliases": [
         "forest"
       ],
-      "source_sha256": "a3361780fe278b13e6200cfd93e90224452d58af6993a451192601de5bd4f32c",
+      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -5732,6 +5786,12 @@
           "required": false,
           "annotation": null,
           "default": null
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "classic"
         }
       ],
       "frozen_table_entry": true,
@@ -5739,7 +5799,7 @@
       "aliases": [
         "feature_facets"
       ],
-      "source_sha256": "a3361780fe278b13e6200cfd93e90224452d58af6993a451192601de5bd4f32c",
+      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -5787,7 +5847,7 @@
       "aliases": [
         "raincloud"
       ],
-      "source_sha256": "a3361780fe278b13e6200cfd93e90224452d58af6993a451192601de5bd4f32c",
+      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -7114,7 +7174,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "6ec22df2d342cfbcde942ac8214976bdae0f35974042684a1f0fb6d6ef27544d",
+      "source_sha256": "033ca116b5610c31ba2ec9b8cb9eccc2515e3196fe56666b59cabbc52531d851",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count",
@@ -7156,7 +7216,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1f8836c9ccbe20271191de4c9692380c64ef5aefec5c75d12b2cc520bec732f9",
+      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "log2FC",
@@ -7206,7 +7266,7 @@
       "aliases": [
         "volcano_marginal"
       ],
-      "source_sha256": "1f8836c9ccbe20271191de4c9692380c64ef5aefec5c75d12b2cc520bec732f9",
+      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "log2FC",
@@ -7239,7 +7299,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1f8836c9ccbe20271191de4c9692380c64ef5aefec5c75d12b2cc520bec732f9",
+      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count",
@@ -7293,12 +7353,24 @@
           "required": false,
           "annotation": null,
           "default": 2.9
+        },
+        {
+          "name": "cloud_shapes",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "celltype_palette",
+          "required": false,
+          "annotation": null,
+          "default": null
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1f8836c9ccbe20271191de4c9692380c64ef5aefec5c75d12b2cc520bec732f9",
+      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count"
@@ -7325,7 +7397,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1f8836c9ccbe20271191de4c9692380c64ef5aefec5c75d12b2cc520bec732f9",
+      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"

@@ -117,6 +117,21 @@ def study_plan(manifest, request, base):
             params=spec['parameters'];clouds=params.get('cloud_shapes') or any(p.get('cloud_shapes') for p in params.get('panels',[]))
             presentation_decisions[-1].update(state='RAINCLOUD_SELECTED' if clouds else 'COMPARE_RAINCLOUD_EXTENSION',
                 review='Inspect supplied half-cloud, every observation, narrow box/median and explicit count units' if clouds else 'Prefer a raincloud when frozen density geometry is supplied; otherwise disclose the missing density and retain all observation points. Do not invent a cloud or silently call a boxplot the preferred default.')
+        params=spec['parameters']
+        choices={
+            'sample_embedding':('Ellipse, complete marginal proportions and explained variance','Bare scatter omits available structure'),
+            'differential_expression':('Full volcano with complete stacked marginals','Unlabelled scatter loses tested-universe context'),
+            'donor_differential':('Donor-scoped volcano with complete stacked marginals','Cell-level pooling would misstate independent units'),
+            'sample_correlation':('Unique-pair triangle with attached annotations and pair summaries','Duplicated symmetric squares add no pair information'),
+            'differential_heatmap':('Full selected matrix with attached annotation strips and shared key','Detached legends and duplicate heatmap templates'),
+            'effect_intervals':('Aligned identity, interval and exact-number reading table','Sparse points on an oversized canvas'),
+            'donor_composition':('Per-donor complete stack and per-identity donor distribution','Pooled group proportions hide donor variation'),
+            'marker_subgroup':('Location, all-identity specificity and every selected marker','A single representative marker does not cover a subgroup'),
+            'enrichment_summary':('Aligned ratio or NES with exact overlap, FDR and separate membership detail','Sparse membership decoration must not displace the effect axis'),
+            'gsea_curves':('Complete ES, hits, leading edge and ranked metric','A coloured ES line alone omits essential channels')}
+        if comparison in choices:
+            preferred,rejected=choices[comparison]
+            presentation_decisions[-1].update(preferred_form=preferred,rejected_basic=rejected,selection_scope='Compare available frozen channels and caller layout; never fabricate missing channels',visual_acceptance=False)
     return {'schema_version':1,'state':'HOLD' if blocking else 'FIGURE_SET_PLANNED',
         'assay':assay,'title':manifest['title'],'request':request,'contrast':manifest['contrast'],
         'independent_unit':manifest['independent_unit'],'denominator':manifest['denominator'],

@@ -1,5 +1,7 @@
 # 普通常规指令的完整模拟出图检查
 
+当前画法已在v0.9.6再次逐张返工；见[本版选择、修复与实际验收](publication-defaults-v096.md)。以下保留本套冻结样例的来源、单位和初次构建记录。
+
 这一轮使用同一套明确虚构的结果：12 个供体、每条件 6 个供体、900 个嵌套细胞、1,200 个差异结果基因，5 个身份各 4 个 marker。全部为软件绘图材料，未运行 RNA-seq 分析引擎，也没有真实研究结论。
 
 [逐张浏览 43 份最终图](../assets/routine-gallery/index.html) · [43 页矢量 PDF 图册](../assets/routine-gallery/Bulk_and_SingleCell_FigureBook.pdf) · [与最终图片绑定的屏幕检查](../assets/routine-gallery/visual-review.json)

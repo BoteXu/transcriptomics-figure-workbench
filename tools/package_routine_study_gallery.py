@@ -24,10 +24,11 @@ PAGE='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="view
 function show(i){index=(i+rows.length)%rows.length;const r=rows[index];$('#title').textContent=r.title;$('#counter').textContent=(index+1)+' / '+rows.length;$('#subtitle').textContent=r.variant+' · '+r.width+' mm 阅读宽度 · '+r.review_state;const art=$('#art');art.src=r.assets.png;art.alt=r.title;art.classList.remove('native');$('#viewport').scrollLeft=0;$('#notes').textContent=r.note;$('#links').replaceChildren();for(const[k,v]of Object.entries(r.assets)){let a=document.createElement('a');a.href=v;a.textContent={svg:'打开矢量 SVG',pdf:'单张 PDF',png:'原始 PNG',tsv:'冻结绘图数据',spec:'绘图配置'}[k];a.target='_blank';$('#links').append(a)}$('#parameters').textContent=JSON.stringify(r.parameters,null,2);menu.querySelectorAll('button').forEach(b=>b.classList.toggle('active',Number(b.dataset.index)===index));location.hash=String(index+1)}$('#prev').onclick=()=>show(index-1);$('#next').onclick=()=>show(index+1);$('#zoom').onclick=()=>$('#art').classList.toggle('native');document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(index+1);if(e.key==='ArrowLeft')show(index-1)});show(Number(location.hash.slice(1)||1)-1);</script></html>'''
 
 
-def package(source,out,review=None,fixtures=None):
+def package(source,out,review=None,fixtures=None,baseline=None):
     from pypdf import PdfWriter
     doc=json.loads((source/'manifest.json').read_text(encoding='utf8'));proof=json.loads(review.read_text(encoding='utf8')) if review else {'records':[]}
     by={r['id']:r for r in proof['records']};out.mkdir(parents=True,exist_ok=False);rows=[];writer=PdfWriter();page=0
+    previous={r['id']:r for r in json.loads((baseline/'manifest.json').read_text(encoding='utf8'))['records']} if baseline else {}
     for row in doc['records']:
         k=row['id'];folder=out/'figures'/k;folder.mkdir(parents=True);assets={}
         files={Path(x).suffix:Path(x) for x in row['result']['files']}
@@ -40,8 +41,18 @@ def package(source,out,review=None,fixtures=None):
         if r and r['png_sha256']!=sha:raise ValueError('Review invalidated by changed figure: '+k)
         title=TITLES.get(k,k);writer.append(str(files['.pdf']),import_outline=False);writer.add_outline_item(title,page);page+=1
         rows.append(dict(id=k,title=title,assay=row['assay'],stage=row['stage'],variant=row['variant'],assets=assets,width=s['export']['target_width_mm'],parameters=s['parameters'],png_sha256=sha,review_state=r['decision'] if r else '已生成，尚待逐张审阅',note=r['notes'] if r else '等待实际查看最终图像后记录，不以文件生成或自动检查代替美观性自检。'))
+        if baseline:
+            old=previous[k];old_table=baseline/old['assets']['tsv']
+            if old_table.read_bytes()!=table.read_bytes():raise ValueError('Before/after comparison must preserve exact frozen input bytes: '+k)
+            dest=out/'before'/(k+'.png');dest.parent.mkdir(exist_ok=True);shutil.copyfile(baseline/old['assets']['png'],dest)
+            rows[-1].update(before_png=dest.relative_to(out).as_posix(),before_png_sha256=hashlib.sha256(dest.read_bytes()).hexdigest(),before_input_sha256=hashlib.sha256(old_table.read_bytes()).hexdigest(),input_sha256=hashlib.sha256(table.read_bytes()).hexdigest(),frozen_tsv_unchanged=True)
     writer.write(out/'Bulk_and_SingleCell_FigureBook.pdf');writer.close()
-    (out/'index.html').write_text(PAGE.replace('/*DATA*/',json.dumps(rows,ensure_ascii=False).replace('<','\\u003c')),encoding='utf8')
+    page_html=PAGE.replace('/*DATA*/',json.dumps(rows,ensure_ascii=False).replace('<','\\u003c'))
+    if baseline:
+        page_html=page_html.replace('<button id="zoom">','<button id="compare">查看前版</button><button id="zoom">')
+        page_html=page_html.replace('function show(i){','let before=false;function show(i){before=false;$(\'#compare\').textContent="查看前版";')
+        page_html=page_html.replace("$('#prev').onclick", "$('#compare').onclick=()=>{before=!before;$('#art').src=before?rows[index].before_png:rows[index].assets.png;$('#compare').textContent=before?'返回本版':'查看前版';};$('#prev').onclick")
+    (out/'index.html').write_text(page_html,encoding='utf8')
     (out/'manifest.json').write_text(json.dumps(dict(records=rows,ordinary_requests=doc['requests'],scientific_acceptance=False),ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     if fixtures:
         by_id={r['id']:r for r in rows}
@@ -58,4 +69,4 @@ def package(source,out,review=None,fixtures=None):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--review',type=Path);p.add_argument('--fixtures',type=Path);a=p.parse_args();package(a.source,a.output,a.review,a.fixtures)
+    p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--review',type=Path);p.add_argument('--fixtures',type=Path);p.add_argument('--baseline',type=Path);a=p.parse_args();package(a.source,a.output,a.review,a.fixtures,a.baseline)

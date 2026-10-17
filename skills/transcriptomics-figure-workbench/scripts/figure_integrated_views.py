@@ -202,13 +202,30 @@ def _annotation_atlas(data,theme,title,include_response=False,feature_columns='a
     return fig
 
 
-def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_definition=None,labels=(),alpha=.05,fc=1,feature_columns='auto',cloud_shapes=None,observation_unit=None):
+def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_definition=None,labels=(),alpha=.05,fc=1,feature_columns='auto',cloud_shapes=None,observation_unit=None,presentation='auto',group_counts=None,expression_limits=None,identity_by_cell=None,identity_order=None):
     """Prefer a compatible information-rich view; all extra scientific channels are supplied."""
     if mode not in ['pca','volcano','annotation_atlas','single_cell_main','qc','marker_dot','batch_facets','effect_table','ma','unit_profile']:raise ValueError('Choose a documented integrated presentation')
     if not isinstance(title,str) or not title.strip():raise ValueError('State the comparison')
+    if presentation not in ['auto','publication','classic']:raise ValueError('Choose auto, publication or classic presentation')
+    if mode=='qc' and cloud_shapes is not None and presentation!='classic':
+        d=checked(data,['cell_id','sample','group','value'],['value'])
+        if not observation_unit or (d.groupby('sample').group.nunique()!=1).any():raise ValueError('Explicit QC count units and stable sample groups required')
+        from figure_study_publication import qc_grid
+        return apply_project_style(qc_grid(d,theme,title,cloud_shapes,observation_unit),theme)
+    if mode=='unit_profile' and presentation!='classic':
+        d=checked(data,['sample_id','group','value'],['value'])
+        if d.sample_id.duplicated().any() or (d.value<0).any() or not axis_labels:raise ValueError('Unique samples and explicit count units required')
+        from figure_study_publication import coverage
+        return apply_project_style(coverage(d,theme,title,axis_labels[0]),theme)
+    if mode=='batch_facets' and identity_by_cell is not None and presentation!='classic':
+        from figure_study_publication import batch_coverage
+        d=checked(data,['cell_id','group','x','y'],['x','y'])
+        return apply_project_style(batch_coverage(d,theme,title,identity_by_cell,identity_order),theme)
     if mode in ['annotation_atlas','single_cell_main']:
         return apply_project_style(_annotation_atlas(data,theme,title,mode=='single_cell_main',feature_columns),theme)
     fig=plt.figure(figsize=(8.0,6.7));fig.suptitle(title,fontsize=13,fontweight='bold',y=.97)
+    if presentation!='classic' and mode in ['pca','volcano','ma']:
+        fig.set_size_inches(8.5,6.7);fig._suptitle.set(x=.12,ha='left',color='#294553')
     if mode=='pca':
         ax=_pca_panel(fig,[.12,.29,.75,.53],data,theme,axis_labels or ['PC1','PC2'],ellipse_definition)
         points=data[data.record_type=='embedding']
@@ -224,12 +241,15 @@ def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_defini
         var=checked(data[data.record_type=='pc_variance'],['component','percent'],['percent'])
         if var.component.duplicated().any() or (var.percent<0).any() or abs(var.percent.sum()-100)>1e-6:raise ValueError('Supply a complete explained-variance profile summing to 100%')
         a=_axis(fig,[.12,.09,.57,.11]);a.bar(range(len(var)),var.percent,color=['#218C8D' if i<2 else '#D6E0E5' for i in range(len(var))],width=.7);a.set_xticks(range(len(var)),var.component,fontsize=9);a.set_ylabel('Variance %',fontsize=9)
-        fig.text(.74,.115,textwrap.fill(ellipse_definition,24),fontsize=9,color='#5D707C',va='center')
+        if presentation=='classic':fig.text(.74,.115,textwrap.fill(ellipse_definition,24),fontsize=9,color='#5D707C',va='center')
+        else:
+            fig.text(.74,.14,'PC1 + PC2\n'+format(var.percent.iloc[:2].sum(),'.1f')+'% variance',fontsize=10,color='#356678')
+            fig.text(.12,.025,textwrap.fill(ellipse_definition,105),fontsize=8.5,color='#6B808A')
     elif mode=='volcano':
         ax,counts=_volcano_panel(fig,[.12,.20,.75,.64],data,theme,labels,alpha,fc)
         colors={'Other':'#AAB6BE','Down':theme['roles']['negative'],'Up':theme['roles']['positive']};total=sum(counts.values())
         fig.legend(handles=[Patch(color=colors[g],label=g+'  '+str(n)+' ('+format(n/total,'.1%')+')') for g,n in counts.items()],loc='upper center',bbox_to_anchor=(.5,.93),ncols=3,frameon=False,fontsize=9)
-        fig.text(.12,.06,'Stacked marginals retain all genes · FDR ≤ '+str(alpha)+' and |log2FC| ≥ '+str(fc),fontsize=9,color='#5D707C')
+        fig.text(.12,.06,'All '+format(total,',')+' tested genes · stacked counts · FDR ≤ '+str(alpha)+' and |log2FC| ≥ '+str(fc),fontsize=9,color='#5D707C')
     elif mode=='ma':
         d=checked(data[data.record_type=='ma'],['feature_id','status','average','effect'],['average','effect']).copy();d['group']=d.status
         if d.feature_id.duplicated().any() or set(d.status)-{'other','down','up'}:raise ValueError('Complete unique MA results and supplied tested statuses required')
@@ -237,8 +257,9 @@ def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_defini
         ax,top,right=_marginals(fig,[.12,.20,.75,.64],data,d,pal,'average','effect',xkind='ma_x_bin',ykind='ma_y_bin',stacked=True)
         for g,c in pal.items():
             q=d[d.group==g];ax.scatter(q.average,q.effect,s=6 if g=='other' else 14,c=c,alpha=.3 if g=='other' else .85,ec='none',rasterized=True)
-        ax.axhline(0,color='#9BAAB4',lw=.8);ax.set(xlabel='Supplied average log2 expression',ylabel='Supplied log2 fold change');top.set_xlim(ax.get_xlim());right.set_ylim(ax.get_ylim())
+        ax.axhline(0,color='#9BAAB4',lw=.8);ax.set(xlabel='Average log2 expression',ylabel='log2 fold change');top.set_xlim(ax.get_xlim());right.set_ylim(ax.get_ylim())
         fig.legend(handles=[Patch(color=c,label=g+' · '+str(sum(d.group==g))) for g,c in pal.items()],loc='upper center',bbox_to_anchor=(.5,.92),ncols=3,frameon=False,fontsize=9)
+        fig.text(.12,.06,'All '+format(len(d),',')+' tested genes · stored effects and complete marginal counts',fontsize=9,color='#6B808A')
     elif mode=='qc':
         d=checked(data,['cell_id','sample','group','value'],['value']);metrics=list(data.metric.unique()) if 'metric' in data else ['Expression'];fig.set_size_inches(9,max(3.5,3*len(metrics)))
         if observation_unit is not None and (not isinstance(observation_unit,str) or not observation_unit.strip()):raise ValueError('Declare the observation unit displayed in QC sample counts')
@@ -260,6 +281,20 @@ def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_defini
         fig.legend(handles=[Patch(color=c,label=g) for g,c in palette.items()],loc='upper right',bbox_to_anchor=(.98,1),ncols=len(palette),frameon=False,fontsize=9)
     elif mode=='marker_dot':
         fig.set_size_inches(max(8,data.feature.nunique()*.35+2),4.5);a=_dot_panel(fig,[.14,.31,.76,.48],data,theme)
+        if presentation!='classic':
+            fig._suptitle.set(x=.14,ha='left',color='#294553')
+            features=[x.get_text() for x in a.get_xticklabels()];names=list(data.group.unique());pal=group_palette(theme,names)
+            assignments=data.drop_duplicates('feature').set_index('feature').feature_group
+            for g in names:
+                indices=[j for j,f in enumerate(features) if assignments[f]==g]
+                if indices:a.text(float(np.mean(indices)),1.12,textwrap.fill(g,14),transform=a.get_xaxis_transform(),ha='center',color=pal[g],fontsize=9)
+        if group_counts is not None:
+            names=list(data.group.unique())
+            if set(group_counts)!=set(names) or any(type(v) is not int or v<1 for v in group_counts.values()):raise ValueError('Explicit positive cell counts for every identity required')
+            a.set_yticklabels([g+'  ·  '+str(group_counts[g]) for g in names])
+        if expression_limits is not None:
+            if len(expression_limits)!=2 or expression_limits[0]!=0 or expression_limits[1]<data.value.max():raise ValueError('Common expression scale must retain every supplied value')
+            a.collections[0].set_clim(*expression_limits)
         a.legend(handles=[Line2D([],[],ls='',marker='o',color='#627E8D',ms=np.sqrt(90*p),label=str(int(p*100))+'% detected') for p in [.25,.75]],loc='upper center',bbox_to_anchor=(.5,-.40),ncols=2,frameon=False,fontsize=9)
     elif mode=='batch_facets':
         d=checked(data,['cell_id','group','x','y'],['x','y']);groups=list(d.group.unique());pal=group_palette(theme,groups);cols=min(3,len(groups));rows=int(np.ceil(len(groups)/cols));fig.set_size_inches(cols*3.1,rows*3.1+.6)
@@ -305,4 +340,7 @@ def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_defini
         a.set_yticks(yy,d.sample_id);a.invert_yaxis();a.set(xlim=(0,max(d.value)*1.15),xlabel=axis_labels[0]);a.spines['left'].set_visible(False);a.tick_params(axis='y',length=0)
         fig.legend(handles=[Patch(color=c,label=g) for g,c in pal.items()],loc='upper center',bbox_to_anchor=(.5,.91),ncols=len(pal),frameon=False,fontsize=9)
     stamp(fig,data,'integrated_'+mode,mode=mode,display_summary_only=True,ellipse_definition=ellipse_definition,scientific_acceptance=False)
+    if presentation!='classic':
+        from figure_study_publication import lock
+        lock(fig)
     return apply_project_style(fig,theme)

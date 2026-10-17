@@ -5,6 +5,12 @@ description: Design, render and improve publication figures from frozen scientif
 
 # Scientific Figure Workbench
 
+## Current ordinary bulk and single-cell defaults
+
+For ordinary full-study requests, inspect [the current complete routine examples](assets/routine-gallery/index.html) before choosing isolated historical templates. Use [the explicit selection and acceptance rules](references/publication-defaults-v096.md). Prefer complete, legible visual evidence: supplied PCA dispersion and marginals; full-universe volcano/MA marginals; aligned effect tables; supplied rainclouds with every observation; donor stacks plus donor distributions; complete GSEA tracks; and subgroup location, specificity and all selected markers. A sparse membership matrix belongs in its complete companion rather than an empty decorative main panel. Exact sample correlation pairs may use the triangular view only when the supplied matrix is exactly symmetric and ordered. Never infer independence from a sample ID or library count.
+
+The current default is a selection policy using available frozen channels, not a fixed grid. Grow or paginate QC sample facets, preserve explicit rows/columns, keep common embedding/expression axes, and measure text at the caller's physical width. Record the preferred form, rejected basic alternative, missing channels, input hashes and actual export review. An input result that was not supplied stays missing; never fit a density, uncertainty, embedding or analysis to make a richer picture. Classic views remain explicit alternatives. Changes invalidate prior artifact-bound aesthetic review.
+
 ## Current source-aware selection
 
 For redesigns or journal-quality examples, start with

@@ -20,12 +20,13 @@
   },
   "parameters": {
     "mode": "pca",
-    "title": "Sample structure · dispersion and marginal proportions",
+    "title": "Sample structure",
     "axis_labels": [
       "PC1 (38.4%)",
       "PC2 (17.6%)"
     ],
-    "ellipse_definition": "Supplied 95% reference ellipses; illustrative dispersion, not mean confidence or a group test"
+    "ellipse_definition": "Supplied 95% reference dispersion contours; illustrative, not mean confidence intervals or a separation test.",
+    "presentation": "publication"
   },
   "theme": {
     "schema_version": 1,
@@ -97,7 +98,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis; publication v0.9.6 display revision with unchanged frozen table bytes",
     "input_unit": "Synthetic donor",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -110,11 +111,15 @@
     "synthetic": true
   },
   "appearance": {
-    "preset": "paper"
+    "preset": "paper",
+    "label_pt": 10.5,
+    "tick_pt": 10,
+    "note_pt": 9.5,
+    "title_pt": 12
   },
   "export": {
     "raster_dpi": 300,
-    "target_width_mm": 210,
+    "target_width_mm": 240,
     "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
