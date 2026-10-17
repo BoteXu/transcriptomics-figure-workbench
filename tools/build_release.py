@@ -31,6 +31,12 @@ def main(output):
         page=page.replace(prefix,'data:image/jpeg;base64,'+base64.b64encode((SKILL/'assets/study-gallery'/(key+'.jpg')).read_bytes()).decode())
         page=page.replace('study-gallery/index.html#'+key,'https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/skills/transcriptomics-figure-workbench/assets/study-gallery/index.html#'+key)
     page=page.replace('chapter-gallery/index.html','https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/skills/transcriptomics-figure-workbench/assets/chapter-gallery/index.html')
+    source_gallery=SKILL/'assets/source-gallery'
+    if source_gallery.is_dir():
+        for row in json.loads((source_gallery/'manifest.json').read_text(encoding='utf8'))['records']:
+            relative=row['assets']['preview']
+            page=page.replace('source-gallery/'+relative,'data:image/jpeg;base64,'+base64.b64encode((source_gallery/relative).read_bytes()).decode())
+        page=page.replace('source-gallery/index.html','https://github.com/BoteXu/transcriptomics-figure-workbench/blob/v'+version+'/skills/transcriptomics-figure-workbench/assets/source-gallery/index.html')
     # The single-file download embeds only public synthetic preview pixels.
     # Full editable bundles remain available in the separately checked ZIP.
     for row in json.loads((ROOT/'examples/package-v040/manifest.json').read_text())['records']:
@@ -129,6 +135,16 @@ def main(output):
             if file.is_file():archive.write(file,'editorial-examples/'+file.relative_to(ROOT/'examples/editorial-v092').as_posix())
         for file in sorted((SKILL/'references').glob('journal-*-v092.*')):archive.write(file,'references/'+file.name)
     assets.append(editorial)
+    source_examples=output/f'source-examples-v{version}.zip'
+    with zipfile.ZipFile(source_examples,'x',compression=zipfile.ZIP_DEFLATED) as archive:
+        for file in sorted((ROOT/'examples/source-v093').rglob('*')):
+            if file.is_file():archive.write(file,file.relative_to(ROOT).as_posix())
+        for file in sorted(source_gallery.rglob('*')):
+            if file.is_file():archive.write(file,file.relative_to(ROOT).as_posix())
+        for name in ['source-design-v093.json','source-design-v093.md','validation-v093.md']:
+            archive.write(SKILL/'references'/name,'skills/transcriptomics-figure-workbench/references/'+name)
+        archive.writestr('README.txt','Open examples/source-v093/index.html for 405 current exported views and exact review bindings. Native bundles have portable example.spec.json + frozen TSV for the separately installed workbench plan/render CLI. Layout requests refer to the adjacent complete single SVG panels. Original request.json records repository fixture origins; use example.spec.json for a portable native replay. Screen self-review is not scientific acceptance or calibrated print proof.\n')
+    assets.append(source_examples)
     for volume in json.loads((ROOT/'examples/reading-v060/reading-index.json').read_text())['volumes']:
         destination=output/volume['file'];shutil.copy2(ROOT/'examples/reading-v060'/volume['file'],destination);assets.append(destination)
     (output/f'SHA256SUMS-v{version}.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in assets),encoding='utf8')

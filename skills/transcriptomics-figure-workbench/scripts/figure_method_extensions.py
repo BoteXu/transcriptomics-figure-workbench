@@ -204,12 +204,15 @@ def plot_balance(data,theme,*,stage_order,threshold,metric_definition,title=''):
     d=checked(data,['covariate','group','smd'],['smd']);_unique(d,['covariate','group']);rows=list(pd.unique(d.covariate));pal=group_palette(theme,stage_order)
     if set(stage_order)!=set(d.group) or len(d)!=len(rows)*len(stage_order) or not 0<threshold<1 or not metric_definition:raise ValueError('Full covariate x stage grid and explicit SMD definition/threshold required')
     fig=_new(theme,(8,max(3.7,len(rows)*.32+1.3)));ax=_axis(fig,[.25,.19,.49,.64])
+    markers=['o','D','s','^','v','P','X','h']
+    if len(stage_order)>len(markers):raise ValueError('At most eight declared stages per balance view; provide complete separate comparisons')
     for i,c in enumerate(rows):
+        if i%2==0:ax.axhspan(i-.5,i+.5,color='#F2F5F7',zorder=0,lw=0)
         q=d[d.covariate==c].set_index('group').loc[stage_order];ax.plot(q.smd,[i]*len(q),color='#D0D7DC',lw=.9,zorder=1)
-        for g in stage_order:ax.scatter(q.loc[g,'smd'],i,c=pal[g],s=34,zorder=3)
+        for j,g in enumerate(stage_order):ax.scatter(q.loc[g,'smd'],i,c=pal[g],marker=markers[j],s=34,ec='white',lw=.4,zorder=3)
     for t in [-threshold,threshold]:ax.axvline(t,color=theme['roles']['border'],ls='--',lw=.8)
     ax.axvline(0,color='#CFD6DC',lw=.7);ax.set(yticks=range(len(rows)),yticklabels=rows,xlabel='Supplied standardized mean difference',title=title);ax.invert_yaxis()
-    fig.legend(handles=[Line2D([],[],marker='o',color=pal[g],ls='',label=g) for g in stage_order],loc='upper left',bbox_to_anchor=(.77,.82),frameon=False)
+    fig.legend(handles=[Line2D([],[],marker=markers[j],color=pal[g],ls='',label=g) for j,g in enumerate(stage_order)],loc='upper left',bbox_to_anchor=(.77,.82),frameon=False)
     fig.text(.25,.06,'Diagnostic threshold = '+str(threshold)+'; not a causal validity test.',fontsize=8)
     return _finish(fig,data,theme,'covariate_balance',stage_order=stage_order,threshold=threshold,metric_definition=metric_definition)
 
@@ -220,6 +223,8 @@ def plot_agreement(data,theme,*,bias,loa,unit_label,difference_definition,title=
     fig=_new(theme,(8,4.8));ax=_axis(fig,[.12,.20,.59,.63])
     for g,q in d.groupby('group',sort=False):ax.scatter(q['mean'],q.difference,c=pal[g],s=27,ec='white',lw=.4,label=g,alpha=.8)
     for v,ls in [(bias,'-'),(loa[0],'--'),(loa[1],'--')]:ax.axhline(v,color=theme['roles']['border'],ls=ls,lw=1)
+    ymin=min(float(d.difference.min()),loa[0]);ymax=max(float(d.difference.max()),loa[1]);margin=max((ymax-ymin)*.08,.01)
+    ax.set_ylim(ymin-margin,ymax+margin)
     ax.set(xlabel='Supplied paired mean',ylabel=difference_definition,title=title)
     fig.legend(*ax.get_legend_handles_labels(),loc='upper left',bbox_to_anchor=(.75,.85),frameon=False)
     fig.text(.76,.47,f'Bias {bias:g}\nAgreement limits\n[{loa[0]:g}, {loa[1]:g}]',fontsize=9);fig.text(.12,.07,unit_label+'; supplied summary, no new agreement fit.',fontsize=8)
@@ -238,7 +243,7 @@ def plot_survival_result(data,theme,*,time_label,risk_convention,interval_defini
     for i,g in enumerate(groups):
         q=s[s.group==g]
         if (np.diff(q.time)<=0).any() or (np.diff(q.survival)>1e-12).any():raise ValueError('Survival must be ordered and non-increasing')
-        ax.step(q.time,q.survival,where='post',c=pal[g],label=g);ax.fill_between(q.time,q.lower,q.upper,step='post',color=pal[g],alpha=.17)
+        ax.step(q.time,q.survival,where='post',c=pal[g],label=g,ls=['-','--','-.',':'][groups.index(g)%4]);ax.fill_between(q.time,q.lower,q.upper,step='post',color=pal[g],alpha=.08,linewidth=0)
         risk.text(-.05,len(groups)-i-1,g,transform=risk.get_yaxis_transform(),ha='right',va='center',color=pal[g],fontsize=9)
         rr=r[r.group==g]
         if (np.diff(rr.at_risk)>0).any():raise ValueError('At-risk table must be non-increasing for this non-reentry adapter')

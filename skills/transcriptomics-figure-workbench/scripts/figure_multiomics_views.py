@@ -3,6 +3,7 @@
 These functions do not integrate, infer networks, identify compounds, fit factors
 or register images. Input mappings and geometries are reviewed upstream results.
 """
+import textwrap
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -80,6 +81,13 @@ def plot_mass_spectrum(data,theme,*,spectrum_order,mass_definition,intensity_def
         ax.axhline(0,c=theme['roles']['border'],lw=.6);ax.set(ylabel=intensity_definition)
         if not mirror:ax.text(.01,.86,name,transform=ax.transAxes,fontsize=9)
     axes[-1].set_xlabel(mass_definition);axes[0].set_title(title)
+    if mirror:
+        from matplotlib.ticker import FuncFormatter
+        ax=axes[0];maximum=max(float(d.intensity.max()),1e-12)
+        ax.set_ylim(-maximum*1.18,maximum*1.18)
+        ax.yaxis.set_major_formatter(FuncFormatter(lambda value,pos:f'{abs(value):g}'))
+        ax.text(.98,.94,spectrum_order[0],transform=ax.transAxes,ha='right',color=pal[spectrum_order[0]],fontsize=9)
+        ax.text(.98,.04,spectrum_order[1],transform=ax.transAxes,ha='right',color=pal[spectrum_order[1]],fontsize=9)
     fig.legend(handles=[Line2D([],[],c=pal[g],label=g) for g in pal],bbox_to_anchor=(.77,.83),loc='upper left',frameon=False);fig.text(.11,.065,'No peak matching, compound identification, rescaling or deconvolution performed.',fontsize=8)
     return _finish(fig,data,theme,'mass_spectrum_mirror' if mirror else 'mass_spectrum_sticks',spectrum_order=spectrum_order,mass_definition=mass_definition,intensity_definition=intensity_definition,normalization_definition=normalization_definition,mirror=mirror,label_peak_ids=list(label_peak_ids))
 
@@ -115,8 +123,8 @@ def plot_pathway_overlay(data,theme,*,node_limits,node_value_definition,edge_def
     xrange=max(n.x.max()-n.x.min(),1);yrange=max(n.y.max()-n.y.min(),1);w=xrange*.17;h=yrange*.13
     for r in e.itertuples():
         a=lookup.loc[r.source];b=lookup.loc[r.target];ax.add_patch(FancyArrowPatch((a.x,a.y),(b.x,b.y),arrowstyle='->' if r.direction=='known' else '-',mutation_scale=9,color=theme['roles']['border'],lw=.8,shrinkA=26,shrinkB=26,zorder=0))
-    for r in n.itertuples():ax.add_patch(Rectangle((r.x-w/2,r.y-h/2),w,h,fc=cm(norm(r.value)),ec='white',lw=.8));ax.text(r.x,r.y,r.label,ha='center',va='center',fontsize=8)
-    ax.set(xlim=(n.x.min()-w,n.x.max()+w),ylim=(n.y.min()-h,n.y.max()+h));cb=fig.add_axes([.79,.39,.024,.36]);fig.colorbar(plt.cm.ScalarMappable(norm=norm,cmap=cm),cax=cb,label=node_value_definition)
+    for r in n.itertuples():ax.text(r.x,r.y,textwrap.fill(str(r.label),16,break_long_words=False),ha='center',va='center',fontsize=8,bbox=dict(boxstyle='round,pad=.75,rounding_size=.15',fc=cm(norm(r.value)),ec='white',lw=.8))
+    ax.set(xlim=(n.x.min()-w,n.x.max()+w),ylim=(n.y.min()-yrange*.3,n.y.max()+yrange*.3));cb=fig.add_axes([.79,.39,.024,.36]);fig.colorbar(plt.cm.ScalarMappable(norm=norm,cmap=cm),cax=cb,label=node_value_definition)
     fig.text(.07,.92,title,fontsize=11,weight='bold');fig.text(.07,.07,'Known-map arrows encode supplied topology; node abundance does not encode flux.',fontsize=8)
     return _finish(fig,data,theme,'pathway_quantity_overlay',node_limits=node_limits,node_value_definition=node_value_definition,edge_definition=edge_definition,positions='supplied reviewed map; no layout optimization',edge_width='constant; no flux invented')
 

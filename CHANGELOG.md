@@ -1,5 +1,14 @@
 # Change log
 
+## 0.9.3
+
+- Connected all 90 consolidated base forms to actually inspected original references, adopted/rejected choices, implementation and exported examples. Added 34 source records to the prior eight; distinguish identical charts from related components, older author examples and rejection examples.
+- Rendered and individually screen-reviewed 405 final views: 96 singles, 261 explicit volume variants and 48 complete-panel balanced/custom layouts. Three representative PDFs were separately rasterized and viewed. Exact artifact bindings preserve the scope and limits of this self-review.
+- Added identity support bars, denominator-aligned composition facets, supplied ROC/PR bound facets and explicit step semantics, readable signed-network matrices with missing-edge masks, and complete 2D surface grids. Circular and 3D views remain extensions.
+- Repaired long-label guide collisions, collapsed two-sector chord ribbons, block-bracket spacing, radar identities, overlapping survival traces, agreement-limit margins, distorted pathway labels, fixed-aspect width changes and schematic whitespace/legends. Corrected misleading fixture captions and an artificial truncation artifact in the synthetic GSEA volume preparation.
+- Added portable frozen-table specs for 355 native examples and 96 complete installed views. Studio navigates current previews; renderer aliases and historical galleries remain available. Runtime regressions and public hash/privacy/browser checks do not automatically approve aesthetics or scientific validity.
+- Restored exact decimal-to-binary round trips when reading frozen floating-point TSV fields; numeric-looking identifiers remain strings. Ten representative portable replays retain exact exported quantitative geometry.
+
 ## 0.9.2
 
 - Searched all 90 consolidated forms, prioritizing 2025–2026; separately inspected original pixels and captions for eight figures in seven recent papers. Kept search candidates, reviewed design principles and implementation scope distinct.

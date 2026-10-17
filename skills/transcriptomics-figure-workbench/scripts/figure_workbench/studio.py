@@ -23,6 +23,15 @@ def build_studio(output,gallery=None,demo_svg=None):
         prefix=Path(os.path.relpath(consolidated,output.resolve().parent)).as_posix()
         forms=json.loads((SKILL/'references/form-catalog.json').read_text(encoding='utf8'))['forms']
         data['design_examples']=[dict(id=g['id'],title=g['title'],input_shape='基础图型与扩展；合成展示，单位与来源按所选实例核查',png=prefix+'/'+g['default']+'.jpg',source=prefix+'/index.html#'+g['id']) for g in forms]
+    current_gallery=SKILL/'assets/source-gallery'
+    if current_gallery.is_dir():
+        prefix=Path(os.path.relpath(current_gallery,output.resolve().parent)).as_posix()
+        available={r['id']:r for r in json.loads((current_gallery/'manifest.json').read_text(encoding='utf8'))['records']}
+        for item in data['design_examples']:
+            if item['id'] in available:
+                row=available[item['id']]
+                item.update(png=prefix+'/'+row['assets']['preview'],source=prefix+'/index.html#'+item['id'],
+                    input_shape='当前原图参考修订；完整导出与冻结表可打开，换数据或布局须重新审阅')
     studies=SKILL/'assets/study-gallery'
     if studies.is_dir():
         prefix=Path(os.path.relpath(studies,output.resolve().parent)).as_posix()
@@ -62,6 +71,9 @@ def build_studio(output,gallery=None,demo_svg=None):
         prefix=Path(os.path.relpath(chapters,output.resolve().parent)).as_posix()
         content=content.replace('</header>','<a class="button secondary" href="'+prefix+'/index.html">58个分析章节</a></header>',1)
     content=content.replace('/*__STUDIO_JS__*/',(assets/'publication-svg.js').read_text(encoding='utf8')+'\n'+(assets/'form-polish.js').read_text(encoding='utf8')+'\n'+(assets/'studio.js').read_text(encoding='utf8'))
+    if current_gallery.is_dir():
+        prefix=Path(os.path.relpath(current_gallery,output.resolve().parent)).as_posix()
+        content=content.replace('</header>','<a class="button secondary" href="'+prefix+'/index.html">当前96个修订视图</a></header>',1)
     encoded=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
     content=content.replace('/*__STUDIO_DATA__*/',encoded)
     output.parent.mkdir(parents=True,exist_ok=True)

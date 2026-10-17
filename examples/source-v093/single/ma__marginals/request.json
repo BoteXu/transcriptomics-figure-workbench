@@ -1,0 +1,71 @@
+{
+  "form": "ma__marginals",
+  "base_form": "ma",
+  "example": "QDE_ma",
+  "title": "MA 图",
+  "source_meta": "examples/qc-de/QDE_ma/QDE_ma.json",
+  "route": "native",
+  "adapter": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "ma",
+    "title": "Mean expression, effects and complete marginal counts"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-full-layout-ma__marginals",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "up": 0,
+      "other": 1,
+      "down": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#E1E8EB",
+        "#396F91"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "skills/transcriptomics-figure-workbench/assets/study-gallery/study/BulkMA/BulkMA.tsv",
+  "fixture_definition": "Complete fictional gene effects and matching pre-frozen marginal counts; no inference or rebinning"
+}

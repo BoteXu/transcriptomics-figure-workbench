@@ -1,0 +1,79 @@
+{
+  "form": "waffle",
+  "base_form": "waffle",
+  "example": "NEW_B02",
+  "title": "计数方格",
+  "source_meta": "examples/aesthetic-v030/B02/B02.json",
+  "route": "native",
+  "adapter": "waffle_counts",
+  "parameters": {
+    "unit_label": "event",
+    "columns": 10,
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Original hand-authored frozen synthetic display fixture waffle",
+      "independent_unit": "Synthetic software display units only",
+      "denominator": "All rows in the bound fixture",
+      "value_definition": "Existing frozen values; no scientific analysis rerun",
+      "uncertainty_definition": "Supplied illustrative bounds where present; no interval calculated"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Coding": 0,
+      "Regulatory": 1,
+      "Intergenic": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/aesthetic-v030/B02/B02.tsv",
+  "fixture_definition": "Existing public frozen software fixture; no research inference"
+}

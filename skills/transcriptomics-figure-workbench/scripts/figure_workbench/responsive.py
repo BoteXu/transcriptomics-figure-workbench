@@ -84,6 +84,8 @@ def apply_native_layout(fig,request):
     else:
         if 'columns' in request or 'rows' in request:raise ValueError('This renderer needs native facet controls or complete axis_groups; no ignored row/column request')
         width=request.get('width_inches',fig.get_figwidth());height=request.get('height_inches',fig.get_figheight())
+        if 'width_inches' in request and 'height_inches' not in request and hasattr(fig,'_responsive_canvas_aspect'):
+            height=width/fig._responsive_canvas_aspect
         fig.set_size_inches(*canvas_budget(width,height))
     fig=optimize_guide_layout(fig)
     if request.get('size_policy')=='block' and any(request.get(k) is not None and abs(v-request[k])>.02 for k,v in zip(['width_inches','height_inches'],fig.get_size_inches())):raise ValueError('Requested exact canvas cannot contain readable guides; expand size or reflow')

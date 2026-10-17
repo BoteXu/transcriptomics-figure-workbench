@@ -23,7 +23,7 @@ def main():
     entry=(SKILL/'SKILL.md').read_text(encoding='utf8')
     assert entry.startswith('---\n') and 'name: transcriptomics-figure-workbench' in entry
     assert (ROOT/'LICENSE').is_file() and (SKILL/'references/colorbrewer-license.txt').is_file()
-    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.9.2'
+    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.9.3'
     files=[p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and 'dist' not in p.parts]
     for p in files:
         assert p.stat().st_size < 100_000_000, 'GitHub file size exceeded'
@@ -155,7 +155,7 @@ def main():
         current=SKILL/'scripts'/(record['module']+'.py')
         if record['source_sha256']!=sha(current):
             historical=SKILL/'references/source-archive-v080'/(record['module']+'.py.txt')
-            candidates=[historical,SKILL/'references/source-archive-v081'/(record['module']+'.py.txt')]
+            candidates=[historical,SKILL/'references/source-archive-v081'/(record['module']+'.py.txt'),SKILL/'references/source-archive-v093'/(record['module']+'.py.txt')]
             assert any(p.is_file() and record['source_sha256']==sha(p) for p in candidates), 'Historical source identity lost'
     plots={}
     for p in (SKILL/'scripts').glob('figure_*.py'):

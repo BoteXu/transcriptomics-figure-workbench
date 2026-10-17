@@ -102,7 +102,7 @@ def plot_annular_profile(data,palette,*,value_label,area_label,value_max,area_sc
     if n<3 or len(series)>4: raise ValueError('Use 3+ categories and <=4 series')
     if curve_mode not in ('vertices','smooth_display') or (not connect_categories and curve_mode!='vertices'): raise ValueError('Invalid radial display curve')
     if label_layout not in ['auto','radial','linear']:raise ValueError('Use auto, radial or linear profile label layout')
-    linear=label_layout=='linear' or (label_layout=='auto' and (n>16 or (n>8 and max(len(str(c)) for c in cats)>16)))
+    linear=label_layout=='linear' or (label_layout=='auto' and (n>6 or max(len(str(c)) for c in cats)>16))
     if linear:
         fig=_new((max(size[0],3+len(series)*2),max(size[1],1.8+n*.30)),font_size)
         from matplotlib.font_manager import FontProperties
@@ -182,7 +182,7 @@ def plot_ellipse_correlation(data,*,labels,cmap_name='ellipse_yellow_purple',siz
     _colorbar(fig,[.89,.12,.025,.76],cm,norm,'Correlation r')
     return _finish(fig,data,'ellipse_correlation',labels=labels,cmap=cmap_name,limits=[-1,1],numeric_color='charcoal for contrast')
 
-def plot_signed_network(data,*,palette_name='network_teal_red',node_color='#45B0C8',size=(7,7)):
+def plot_signed_network(data,*,palette_name='network_teal_red',node_color='#45B0C8',size=(7,7),view='auto'):
     _types(data,['node','edge'])
     nodes=_records(data,'node',['node','order'],['order']); edges=_records(data,'edge',['a','b','r'],['r'])
     _unique(nodes,['node']); _unique(nodes,['order']); _unique(edges,['a','b']); _signed(edges)
@@ -190,6 +190,24 @@ def plot_signed_network(data,*,palette_name='network_teal_red',node_color='#45B0
     unordered=[tuple(sorted((str(a),str(b)))) for a,b in zip(edges.a,edges.b)]
     if len(set(unordered))!=len(unordered): raise ValueError('Repeated undirected edge')
     ns=nodes.sort_values('order').node.tolist(); theta=np.pi/2+np.arange(len(ns))*2*np.pi/len(ns)
+    if view not in ('auto','circular','matrix'):raise ValueError('Network view must be auto, circular or matrix')
+    chosen='matrix' if view=='auto' and (len(ns)>12 or len(edges)>2*len(ns)) else 'circular' if view=='auto' else view
+    if chosen=='matrix':
+        # No unreported edge becomes zero. The diagonal is not an estimated r.
+        cm=reference_cmap(palette_name);cm=cm.copy();cm.set_bad('#EDF1F4');norm=Normalize(-1,1)
+        values=np.full((len(ns),len(ns)),np.nan)
+        for e in edges.itertuples():
+            i,j=ns.index(e.a),ns.index(e.b);values[i,j]=values[j,i]=e.r
+        length=max(float(size[0]),len(ns)*.29+2.4);height=max(float(size[1]),len(ns)*.29+1.7)
+        fig=_new((length,height));ax=_ax(fig,[.19,.19,.69,.69],clean=False)
+        image=ax.imshow(np.ma.masked_invalid(values),cmap=cm,norm=norm,interpolation='nearest',aspect='equal')
+        ax.set_xticks(range(len(ns)),ns,rotation=90,fontsize=8);ax.set_yticks(range(len(ns)),ns,fontsize=8);ax.tick_params(length=0,pad=4)
+        ax.set_xticks(np.arange(len(ns)+1)-.5,minor=True);ax.set_yticks(np.arange(len(ns)+1)-.5,minor=True)
+        ax.grid(which='minor',color='white',lw=.45);ax.tick_params(which='minor',length=0)
+        for spine in ax.spines.values():spine.set_visible(False)
+        _colorbar(fig,[.91,.22,.018,.61],cm,norm,'Supplied signed association')
+        fig.text(.19,.06,'All '+str(len(ns))+' nodes / '+str(len(edges))+' undirected edges\nPale cells: unreported pairs or diagonal; not zero',fontsize=8,color='#637381')
+        return _finish(fig,data,'signed_network',palette=palette_name,node_order=ns,arrows=False,view=chosen,requested_view=view,unreported_pairs='masked; not zero',edge_width='not encoded in matrix; exact r in colour',all_edges_retained=True)
     positions={n:np.array([np.cos(t),np.sin(t)]) for n,t in zip(ns,theta)}
     fig=_new(size); ax=_ax(fig,[.08,.18,.84,.72]); ax.axis('off'); ax.set_aspect('equal'); cm=reference_cmap(palette_name); norm=Normalize(-1,1)
     for e in edges.itertuples():
@@ -201,7 +219,7 @@ def plot_signed_network(data,*,palette_name='network_teal_red',node_color='#45B0
         ax.text(*(p*1.12),n,ha='left' if p[0]>.3 else 'right' if p[0]<-.3 else 'center',va='center',fontsize=9,weight='bold')
     ax.set(xlim=(-1.45,1.45),ylim=(-1.22,1.22))
     _colorbar(fig,[.30,.095,.40,.025],cm,norm,'Supplied signed association',orientation='horizontal')
-    return _finish(fig,data,'signed_network',palette=palette_name,node_area='constant; unknown reference size encoding not inferred',edge_width='constant',node_order=ns,arrows=False)
+    return _finish(fig,data,'signed_network',palette=palette_name,node_area='constant; unknown reference size encoding not inferred',edge_width='constant',node_order=ns,arrows=False,view=chosen,requested_view=view)
 
 def plot_mantel_matrix(data,*,labels,specimen_order,p_type,pearson_p_type,size=(9,7)):
     if p_type not in ('raw','adjusted') or pearson_p_type not in ('raw','adjusted'): raise ValueError('Declare p types')
@@ -638,41 +656,58 @@ def plot_aligned_tracks(data,palette,*,category_order,track_order,matrix_order,b
     _unique(counts,['track','category']); _unique(matrices,['matrix','row','category']); _unique(categories,['category']); palette_check(counts.track,palette)
     if (counts.value<0).any() or (counts.value%1!=0).any() or set(counts.track)!=set(track_order) or set(counts.category)!=set(category_order) or set(categories.category)!=set(category_order) or set(categories.block)!=set(block_order) or set(matrices.matrix)!=set(matrix_order): raise ValueError('Track category mismatch')
     if len(counts)!=len(category_order)*len(track_order): raise ValueError('Incomplete count tracks')
-    fig=_new(size); n=len(category_order); top=.90; height=.075
+    n=len(category_order)
+    matrix_rows=[len(pd.unique(matrices.loc[matrices.matrix==m,'row'])) for m in matrix_order]
+    label_extent=max(len(line) for v in category_order for line in textwrap.fill(str(v),20,break_long_words=False).splitlines())*9*.62/72+.22
+    ratios=[.72]*len(track_order)+[max(.85,.36*r) for r in matrix_rows]+[max(.48,label_extent),.35]
+    fig=_new((max(size[0],n*.18+3),max(size[1],sum(ratios)+1.8)))
+    grid=fig.add_gridspec(len(ratios),1,left=.13,right=.82,bottom=.13,top=.91,height_ratios=ratios,hspace=.34)
     for i,t in enumerate(track_order):
-        ax=_ax(fig,[.08,top-(i+1)*height,.80,height*.84]); sub=counts[counts.track==t].set_index('category').reindex(category_order)
+        ax=fig.add_subplot(grid[i]); sub=counts[counts.track==t].set_index('category').reindex(category_order)
         ax.bar(range(n),sub.value,color=palette[t],width=.86); ax.set(xlim=(-.5,n-.5));ax.text(-.09,.5,t,transform=ax.transAxes,ha='right',va='center',fontsize=8); ax.set_xticks([]); ax.grid(axis='y',color='#E2E6E9',lw=.4); ax.set_axisbelow(True)
-    cursor=top-len(track_order)*height-.01
     for k,m in enumerate(matrix_order):
         sub=matrices[matrices.matrix==m]; mat,rs,cs=_grid(sub,'row','category','value')
         if set(cs)!=set(category_order): raise ValueError('Matrix columns mismatch')
         lo,hi=matrix_limits[m]
         if lo>=hi or ((sub.value<lo)|(sub.value>hi)).any(): raise ValueError('Matrix limits clip values')
-        mh=.13; cursor-=mh+.025
         from matplotlib.colors import LinearSegmentedColormap
-        ax=_ax(fig,[.08,cursor,.80,mh]); cmap=LinearSegmentedColormap.from_list('aligned_metric_'+str(k),['#EDF2F4','#326B8D' if k%2==0 else '#AD6451']); ax.imshow(mat.reindex(columns=category_order),aspect='auto',cmap=cmap,vmin=lo,vmax=hi); ax.set_yticks(range(len(rs)),rs,fontsize=7)
+        ax=fig.add_subplot(grid[len(track_order)+k]); cmap=LinearSegmentedColormap.from_list('aligned_metric_'+str(k),['#EDF2F4','#326B8D' if k%2==0 else '#AD6451']); ax.imshow(mat.reindex(columns=category_order),aspect='auto',cmap=cmap,vmin=lo,vmax=hi); ax.set_yticks(range(len(rs)),rs,fontsize=7)
         ax.set_xticks(range(n),[textwrap.fill(str(v),20,break_long_words=False) for v in category_order],rotation=90,fontsize=6) if k==len(matrix_order)-1 else ax.set_xticks([])
-        _colorbar(fig,[.90,cursor,.012,mh],cmap,Normalize(lo,hi),textwrap.fill(matrix_labels[m],16))
-    band_y=.14 if max(len(str(v)) for v in category_order)>16 else .23
-    cats=categories.set_index('category').reindex(category_order); band=_ax(fig,[.08,band_y,.80,.055]); band.axis('off'); band.set(xlim=(-.5,n-.5),ylim=(0,1))
+        pos=ax.get_position();_colorbar(fig,[.87,pos.y0,.012,pos.height],cmap,Normalize(lo,hi),textwrap.fill(matrix_labels[m],16))
+    cats=categories.set_index('category').reindex(category_order); band=fig.add_subplot(grid[-1]); band.axis('off'); band.set(xlim=(-.5,n-.5),ylim=(0,1))
     observed_blocks=[]
     for b in block_order:
         ids=np.flatnonzero(cats.block.to_numpy()==b)
         if len(ids)==0 or not np.all(np.diff(ids)==1): raise ValueError('Each block must be contiguous in supplied category order')
         observed_blocks.extend(ids.tolist()); left=ids.min()-.5; right=ids.max()+.5; band.plot([left,left,right,right],[1,.2,.2,1],color=INK,lw=.8); band.text((left+right)/2,.05,b,ha='center',va='top',fontsize=9)
-    fig.text(.015,.90,count_label,fontsize=8,va='bottom')
+    fig.text(.13,.945,count_label,fontsize=8,va='bottom')
     return _finish(fig,data,'aligned_tracks',palette=palette,category_order=list(category_order),track_order=list(track_order),matrix_order=list(matrix_order),block_order=list(block_order),matrix_labels=matrix_labels,matrix_limits=matrix_limits,count_label=count_label,order='fixed across all panels; no clustering or species assumption')
 
-def plot_surface_grid(data,*,axis_labels,value_label,limits,view=(32,-132),size=(9,6)):
+def plot_surface_grid(data,*,axis_labels,value_label,limits,view=(32,-132),size=(9,6),projection='surface',center=None):
     _types(data,['grid']); d=_records(data,'grid',['x','y','z'],['x','y','z']); mat,ys,xs=_grid(d,'y','x','z')
     if min(mat.shape)<2 or limits[0]>=limits[1] or ((d.z<limits[0])|(d.z>limits[1])).any(): raise ValueError('Degenerate surface or clipping limits')
     xs=np.asarray(xs,float); ys=np.asarray(ys,float)
     if not (np.all(np.diff(xs)>0) and np.all(np.diff(ys)>0)): raise ValueError('Grid coordinates must be supplied in ascending order')
-    fig=_new(size); ax=fig.add_axes([.02,.07,.83,.83],projection='3d'); xx,yy=np.meshgrid(xs,ys); cm=reference_cmap('surface_terrain',semantic='sequential'); norm=Normalize(*limits)
+    if projection not in ('map','surface'):raise ValueError('Use map or surface projection')
+    if center is not None and (not np.isfinite(center) or not limits[0]<center<limits[1]):raise ValueError('Declared colour centre must lie inside limits')
+    if projection=='map':
+        from matplotlib.colors import TwoSlopeNorm
+        fig=_new(size);ax=_ax(fig,[.12,.16,.67,.72]);cm=reference_cmap('network_teal_red',semantic='diverging') if center is not None else reference_cmap('surface_terrain',semantic='sequential');norm=TwoSlopeNorm(center,*limits) if center is not None else Normalize(*limits)
+        # nearest shading constructs cell boundaries around every supplied node;
+        # it neither interpolates nor downsamples the stored field.
+        ax.pcolormesh(xs,ys,mat.to_numpy(),shading='nearest',cmap=cm,norm=norm,rasterized=False)
+        ax.set(xlabel=axis_labels[0],ylabel=axis_labels[1],aspect='equal')
+        _colorbar(fig,[.85,.20,.022,.64],cm,norm,value_label)
+        fig.text(.12,.055,'Complete supplied grid / no interpolation / common value scale',fontsize=8,color='#637381')
+        return _finish(fig,data,'surface_grid',axis_labels=list(axis_labels),value_label=value_label,limits=list(limits),view=list(view),projection=projection,center=center,surface='complete supplied grid as physical 2D cells; no smoothing/interpolation',occlusion='none in top-down view')
+    from matplotlib.colors import TwoSlopeNorm
+    fig=_new(size); ax=fig.add_axes([.02,.07,.83,.83],projection='3d'); xx,yy=np.meshgrid(xs,ys)
+    cm=reference_cmap('network_teal_red',semantic='diverging') if center is not None else reference_cmap('surface_terrain',semantic='sequential')
+    norm=TwoSlopeNorm(center,*limits) if center is not None else Normalize(*limits)
     # rcount/ccount preserve every supplied grid node, no automatic subsampling.
     surf=ax.plot_surface(xx,yy,mat.to_numpy(),cmap=cm,norm=norm,rcount=len(ys),ccount=len(xs),lw=0,antialiased=True,shade=False)
     ax.set(xlabel=axis_labels[0],ylabel=axis_labels[1],zlabel=value_label,zlim=limits); ax.view_init(*view); ax.tick_params(labelsize=7); ax.set_box_aspect((1,1,.55))
     ax.xaxis.labelpad=13;ax.yaxis.labelpad=15;ax.zaxis.labelpad=10
     ax.set_xticks(np.linspace(xs.min(),xs.max(),5)); ax.set_yticks(np.linspace(ys.min(),ys.max(),5)); ax.set_zticks(np.linspace(limits[0],limits[1],5))
     _colorbar(fig,[.89,.17,.022,.67],cm,norm,value_label)
-    return _finish(fig,data,'surface_grid',axis_labels=list(axis_labels),value_label=value_label,limits=list(limits),view=list(view),surface='supplied regular grid; no smoothing/interpolation',occlusion='3D perspective hides regions; pair with 2D map for quantitative reading')
+    return _finish(fig,data,'surface_grid',axis_labels=list(axis_labels),value_label=value_label,limits=list(limits),view=list(view),projection=projection,center=center,surface='supplied regular grid; no smoothing/interpolation',occlusion='3D perspective hides regions; pair with 2D map for quantitative reading')

@@ -1,0 +1,45 @@
+{
+  "id": "Layout01_custom",
+  "title": "Layout 01 | independent display examples | no shared analysis",
+  "panels": [
+    {
+      "id": "Panel1",
+      "svg": "../single/heatmap/heatmap.svg",
+      "row": 0,
+      "column": 2,
+      "column_span": 1
+    },
+    {
+      "id": "Panel2",
+      "svg": "../single/dot-matrix/dot-matrix.svg",
+      "row": 1,
+      "column": 0,
+      "column_span": 1
+    },
+    {
+      "id": "Panel3",
+      "svg": "../single/forest/forest.svg",
+      "row": 0,
+      "column": 0,
+      "column_span": 2
+    },
+    {
+      "id": "Panel4",
+      "svg": "../single/volcano/volcano.svg",
+      "row": 1,
+      "column": 1,
+      "column_span": 2
+    }
+  ],
+  "columns": 3,
+  "canvas_width_pt": 1578.1147342857141,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "label_order": "reading",
+  "packing": "grid",
+  "column_weights": [
+    1.15,
+    0.85,
+    1.05
+  ]
+}

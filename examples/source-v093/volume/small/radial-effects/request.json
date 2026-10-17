@@ -1,0 +1,104 @@
+{
+  "form": "radial-effects",
+  "base_form": "radial-effects",
+  "example": "QDE_radial_effects",
+  "title": "径向效应图",
+  "source_meta": "examples/qc-de/QDE_radial_effects/QDE_radial_effects.json",
+  "route": "native",
+  "adapter": "figure_qc_de.plot_frozen_qc_de",
+  "parameters": {
+    "mode": "radial_effects",
+    "contract": {
+      "source_definition": "SYNTHETIC DEMO frozen summaries",
+      "independent_unit": "synthetic donor",
+      "denominator": "complete synthetic fixture",
+      "feature_selection": "predeclared fixture; no selection calculated",
+      "effect_definition": "supplied log2 expression contrast",
+      "status_definition": "frozen upstream classifications",
+      "average_definition": "supplied mean log2 expression",
+      "rank_definition": "supplied effect rank",
+      "count_unit": "features",
+      "pvalue_definition": "raw P from synthetic fixture",
+      "bin_boundary_definition": "left inclusive; last right inclusive",
+      "expression_scale": "supplied log2 expression",
+      "whisker_definition": "supplied precomputed whiskers",
+      "outlier_display": "not available in supplied box summary",
+      "axis_x": "PC1 (supplied 35%)",
+      "axis_y": "PC2 (supplied 20%)",
+      "pca_basis": "same frozen reference basis",
+      "ellipse_definition": "supplied Gaussian data-dispersion region, not mean CI",
+      "x_limits": [
+        -4.0,
+        4.0
+      ],
+      "y_limits": [
+        -3.0,
+        3.0
+      ]
+    },
+    "order": [
+      "G0082",
+      "G0083",
+      "G0085",
+      "G0087"
+    ],
+    "marker_map": null,
+    "title": "Declared effect signature"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "p1": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/source-v093-final-inputs/radial-effects.tsv",
+  "fixture_definition": "Fictional v0.9.1 gene effects; explicit complete or first-four-per-status scope; synthetic effect ranks frozen before plotting"
+}

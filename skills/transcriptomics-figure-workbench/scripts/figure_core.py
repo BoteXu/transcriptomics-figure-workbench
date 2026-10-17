@@ -85,12 +85,18 @@ def plot_samples(data, palette, y_label):
         raise ValueError('One row per independent unit required')
     palette_check(d.group,palette)
     fig, ax = canvas()
-    groups = list(pd.unique(d.group)); rng = np.random.default_rng(1)
+    groups = list(pd.unique(d.group))
+    fig.set_size_inches(max(4.8,1.05*len(groups)+1.8),4.3)
     for i,g in enumerate(groups):
-        vals = d.loc[d.group==g,'value']
-        ax.scatter(i+rng.uniform(-.08,.08,len(vals)), vals, color=palette[g], s=36)
-    ax.set_xticks(range(len(groups)),groups); ax.set_ylabel(y_label)
-    return stamp(fig, data, 'samples', palette=palette, y_label=y_label)
+        vals = d.loc[d.group==g,'value'].to_numpy()
+        # Display-only rank offsets reveal repeated values without moving Y.
+        ranks=np.argsort(np.argsort(vals,kind='stable'),kind='stable')
+        offsets=.16*np.sin(ranks*2.399963229728653)
+        ax.scatter(i+offsets,vals,color=palette[g],s=30,edgecolors='white',linewidths=.45,alpha=.88,zorder=3)
+    ax.set_xticks(range(len(groups)),[str(g)+'\nn='+str(int((d.group==g).sum())) for g in groups]); ax.set_ylabel(y_label)
+    ax.set_xlim(-.48,len(groups)-.52)
+    ax.grid(axis='y',color='#EDF0F2',linewidth=.6);ax.set_axisbelow(True)
+    return stamp(fig, data, 'samples', palette=palette, y_label=y_label,point_placement='Deterministic categorical offsets; quantitative Y unchanged',group_counts={str(g):int((d.group==g).sum()) for g in groups})
 
 def plot_forest(data, x_label, interval_label, *, effect_scale):
     d = checked(data,['label','estimate','lower','upper'],['estimate','lower','upper'])
@@ -127,7 +133,8 @@ def plot_dot(data, value_label, *, value_semantics, denominator_label,
              row_field='feature', column_field='group', fraction_field='fraction',
              value_field='value', row_order=None, column_order=None,
              row_aliases=None, column_aliases=None, row_label_wrap=None,
-             column_label_wrap=None, label_rotation=None, figsize=None,continuous_colors=None):
+             column_label_wrap=None, label_rotation=None, figsize=None,continuous_colors=None,
+             row_counts=None,count_label=None):
     required=[row_field,column_field,fraction_field,value_field]
     d0=checked(data,required,[fraction_field,value_field])
     if d0.duplicated([row_field,column_field]).any() or ((d0[fraction_field]<0)|(d0[fraction_field]>1)).any():
@@ -146,9 +153,11 @@ def plot_dot(data, value_label, *, value_semantics, denominator_label,
     if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap<1): raise ValueError('column_label_wrap must be a positive integer or None')
     labels_x=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in labels_x]
     labels_y=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in labels_y]
+    if row_counts is not None:
+        if not isinstance(row_counts,dict) or set(row_counts)!=set(features) or not count_label or any(isinstance(v,bool) or not isinstance(v,(int,float)) or not np.isfinite(v) or v<0 or v%1 for v in row_counts.values()):raise ValueError('Complete nonnegative integer row_counts and a count_label are required')
     if figsize is None:
         row_lines=max((x.count('\n')+1 for x in labels_y),default=1)
-        figsize=(max(7.1,len(groups)*.55+3.6),max(4.5,len(features)*max(.27,row_lines*.18)+1.8))
+        figsize=(max(5.8,len(groups)*.52+2.35)+(1.45 if row_counts is not None else 0),max(4.4,len(features)*max(.28,row_lines*.18)+2.0))
     if not isinstance(figsize,(tuple,list)) or len(figsize)!=2 or any(float(x)<=0 for x in figsize): raise ValueError('figsize must be a positive (width, height) pair')
     fig,ax=canvas(); fig.set_layout_engine(None); fig.set_size_inches(float(figsize[0]),float(figsize[1]))
     color_args = dict(cmap='Blues')
@@ -157,19 +166,41 @@ def plot_dot(data, value_label, *, value_semantics, denominator_label,
         color_args = dict(cmap='RdBu_r', norm=TwoSlopeNorm(0,-extent,extent))
     if continuous_colors is not None:
         color_args['cmap']=LinearSegmentedColormap.from_list('project_dot',continuous_colors)
-    dots=ax.scatter([groups.index(g) for g in d['sample']],[features.index(g) for g in d['feature']],s=fraction*150,c=d['value'],edgecolors='none',**color_args)
+    # A complete cell grid and physically sized area key keep the two channels
+    # legible. Empty fraction remains truly empty, never a minimum-sized dot.
+    max_area=260.
+    for i in range(len(features)):
+        if i%2==0:ax.axhspan(i-.5,i+.5,color='#F3F6F8',zorder=0,linewidth=0)
+    dots=ax.scatter([groups.index(g) for g in d['sample']],[features.index(g) for g in d['feature']],s=fraction*max_area,c=d['value'],edgecolors='none',zorder=3,**color_args)
     rotation=(45 if len(groups)>4 else 0) if label_rotation is None else label_rotation
     ax.set_xticks(range(len(groups)),labels_x,rotation=rotation,ha='right' if rotation else 'center')
     ax.set_yticks(range(len(features)),labels_y)
-    fig.colorbar(dots,ax=ax,label=value_label)
-    handles=[ax.scatter([],[],s=f*150,color='#35618F',label=f'{f:.0%}') for f in [.25,.5,1]]
-    ax.legend(handles=handles,title=denominator_label,loc='upper left',bbox_to_anchor=(1.3,1),frameon=False)
-    ax.margins(.2)
-    fig.subplots_adjust(left=min(.52,max(.12,.12+max((len(x.replace('\n','')) for x in labels_y),default=0)*.0045)),bottom=.23 if rotation else .16,right=.84)
+    left=min(.52,max(.16,.10+max((len(x.replace('\n','')) for x in labels_y),default=0)*.008))
+    height=float(figsize[1]);bottom=(1.80 if rotation else 1.48)/height
+    fig.subplots_adjust(left=left,bottom=bottom,right=.75 if row_counts is not None else .96,top=.95)
+    if row_counts is not None:
+        support=fig.add_axes([.78,bottom,.17,.95-bottom],sharey=ax)
+        values=[row_counts[k] for k in features];maximum=max(values,default=0)
+        support.barh(range(len(features)),values,height=.58,color='#8AA6B5',linewidth=0)
+        support.set_xlim(0,max(maximum*1.32,1));support.tick_params(axis='y',left=False,labelleft=False);support.set_xticks([])
+        for i,value in enumerate(values):support.text(value+max(maximum*.04,.01),i,f'{value:,}',va='center',fontsize=8,color='#526272')
+        support.set_title(textwrap.fill(count_label,18),loc='left',fontsize=8.5,pad=9)
+        for spine in support.spines.values():spine.set_visible(False)
+    cax=fig.add_axes([left,.72/height,.34,.09/height])
+    cb=fig.colorbar(dots,cax=cax,orientation='horizontal');cb.set_label(value_label,fontsize=9)
+    cb.outline.set_visible(False);cb.ax.tick_params(length=2,labelsize=8)
+    from matplotlib.lines import Line2D
+    handles=[Line2D([],[],ls='',marker='o',markersize=np.sqrt(f*max_area),color='#527B93',markeredgewidth=0,label=f'{f:.0%}') for f in [.25,.5,1]]
+    # Follow the real colour-key start when long row labels enlarge the left
+    # lane. A capped x position made the two keys overlap after wide resizing.
+    fig.legend(handles=handles,loc='center left',bbox_to_anchor=(left+.38,.70/height),ncol=3,frameon=False,fontsize=8,handletextpad=.3,columnspacing=.8)
+    fig.text(left,.08/height,textwrap.fill('Dot area: fraction of '+denominator_label,max(35,int(float(figsize[0])*10))),fontsize=8,color='#637381',va='bottom')
+    ax.set_xlim(-.5,len(groups)-.5);ax.set_ylim(len(features)-.5,-.5)
+    ax.spines[['left','bottom']].set_visible(False);ax.tick_params(length=0)
     return stamp(fig, data, 'dot', value_label=value_label, value_semantics=value_semantics,
                  denominator_label=denominator_label, area='fraction',row_field=row_field,column_field=column_field,
                  fraction_field=fraction_field,value_field=value_field,row_order=features,column_order=groups,
-                 row_aliases=dict(zip(features,labels_y)),column_aliases=dict(zip(groups,labels_x)),figsize=list(map(float,figsize)))
+                 row_aliases=dict(zip(features,labels_y)),column_aliases=dict(zip(groups,labels_x)),figsize=list(map(float,figsize)),max_point_area=max_area,guide_design='Adjacent horizontal colour and exact-area keys; complete row bands',row_counts=row_counts,count_label=count_label)
 
 def plot_heatmap(data, value_label, center=0, *, scale_type='signed',
                  row_field='feature', column_field='sample', value_field='value',
@@ -281,29 +312,52 @@ def plot_qc(data,y_label,*,metric_field=None,metric_labels=None,ncols='auto',nro
         if metric is not None:ax.tick_params(axis='x',labelrotation=90,labelsize=8)
     return stamp(fig, data, 'qc', y_label=y_label,metric_field=metric_field,metric_labels=metric_labels,metrics=metrics,statistics='Descriptive boxes; no filtering, threshold estimation or inference')
 
-def plot_composition(data,palette,*,y_label='Fraction of included cells'):
+def plot_composition(data,palette,*,y_label='Fraction of included cells',mode='stacked',ncols='auto',nrows=None,panel_width=3.5,panel_height=2.6):
     d=checked(data,['sample','celltype','count'],['count'])
     if d.duplicated(['sample','celltype']).any() or ((d['count']<0)|(d['count']%1!=0)).any(): raise ValueError('Invalid counts')
     palette_check(d.celltype,palette)
     # Fill absent cell types only in this explicitly count-based composition table.
-    matrix=d.pivot(index='sample',columns='celltype',values='count').fillna(0)
+    matrix=d.pivot(index='sample',columns='celltype',values='count').reindex(index=list(pd.unique(d['sample'])),columns=list(pd.unique(d.celltype))).fillna(0)
     if (matrix.sum(axis=1)==0).any(): raise ValueError('Zero denominator')
-    prop=matrix.div(matrix.sum(axis=1),axis=0); fig,ax=canvas(); bottom=np.zeros(len(prop))
+    prop=matrix.div(matrix.sum(axis=1),axis=0)
+    if mode not in ('stacked','facets'):raise ValueError('Composition mode must be stacked or facets')
+    if mode=='facets':
+        from figure_workbench.responsive import grid_shape,facet_slots,canvas_budget
+        rows,cols=grid_shape(len(prop.columns),ncols,nrows)
+        fig=plt.figure(figsize=canvas_budget(cols*panel_width,rows*panel_height+.45),layout='constrained')
+        for k,slot in enumerate(facet_slots(fig,len(prop.columns),rows,cols)):
+            ax=fig.add_subplot(slot);name=prop.columns[k]
+            ax.bar(range(len(prop)),np.ones(len(prop)),color='#EDF1F4',width=.78,zorder=0)
+            ax.bar(range(len(prop)),prop[name],color=palette[name],width=.78,zorder=2)
+            ax.set(ylim=(0,1),xlim=(-.6,len(prop)-.4),title=str(name))
+            ax.set_xticks(range(len(prop)),prop.index,rotation=90 if len(prop)>8 else 45,fontsize=8)
+            ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1));ax.spines[['top','right']].set_visible(False)
+            ax.grid(axis='y',color='white',linewidth=.6);ax.set_axisbelow(True)
+        fig.supylabel(y_label,fontsize=9)
+        return stamp(fig,data,'composition',palette=palette,denominator='all supplied counts per sample',y_label=y_label,mode=mode,rows=rows,columns=cols,sample_order=list(prop.index),celltype_order=list(prop.columns),reference='Pale full-height column = entire supplied sample denominator')
+    if ncols!='auto' or nrows is not None:raise ValueError('Use composition facets for row/column requests')
+    fig,ax=canvas(); bottom=np.zeros(len(prop))
     for celltype in prop.columns:
         ax.bar(prop.index,prop[celltype],bottom=bottom,color=palette[celltype],label=celltype,width=.75)
         bottom+=prop[celltype].to_numpy()
     if not isinstance(y_label,str) or not y_label.strip():raise ValueError('Explicit denominator label required')
     ax.set_ylim(0,1); ax.set_ylabel(y_label)
+    ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1))
     ax.legend(loc='upper left',bbox_to_anchor=(1,1),frameon=False)
-    return stamp(fig, data, 'composition', palette=palette, denominator='all supplied counts per sample',y_label=y_label)
+    return stamp(fig, data, 'composition', palette=palette, denominator='all supplied counts per sample',y_label=y_label,mode=mode,sample_order=list(prop.index),celltype_order=list(prop.columns))
 
-def plot_curve(data,kind='ROC',*,palette=None,mode='auto',ncols='auto',nrows=None,panel_width=3.8,panel_height=3.6):
+def plot_curve(data,kind='ROC',*,palette=None,mode='auto',ncols='auto',nrows=None,panel_width=3.8,panel_height=3.6,prevalence=None,interval_label=None,interpolation='linear'):
     if kind not in ['ROC','PR','calibration']: raise ValueError('Unknown curve kind')
     d=checked(data,['model','x','y'],['x','y'])
     if ((d[['x','y']]<0)|(d[['x','y']]>1)).any().any(): raise ValueError('Curve values outside [0,1]')
     models=list(pd.unique(d.model))
     if mode not in ['auto','overlay','facets']:raise ValueError('Curve mode must be auto, overlay or facets')
     if palette is not None:palette_check(models,palette)
+    has_interval=bool({'lower','upper'}&set(d))
+    if has_interval:
+        checked(d,['lower','upper'],['lower','upper'])
+        if not interval_label or ((d.lower<0)|(d.upper>1)|(d.lower>d.y)|(d.upper<d.y)).any():raise ValueError('Declare valid supplied probability intervals and interval_label')
+    if prevalence is not None and (kind!='PR' or not np.isfinite(prevalence) or not 0<prevalence<1):raise ValueError('A supplied prevalence in (0,1) is only valid for PR')
     facets=mode=='facets' or (mode=='auto' and (len(models)>4 or ncols!='auto' or nrows is not None))
     if mode=='overlay' and (ncols!='auto' or nrows is not None):raise ValueError('Use facets for row/column controls')
     if not facets and len(models)>4:raise ValueError('More than four overlapping curves require complete facets')
@@ -313,21 +367,26 @@ def plot_curve(data,kind='ROC',*,palette=None,mode='auto',ncols='auto',nrows=Non
         fig=plt.figure(figsize=canvas_budget(cols*panel_width,rows*panel_height),layout='constrained')
         axes=[fig.add_subplot(s) for s in facet_slots(fig,len(models),rows,cols)]
     else:fig,ax=canvas();axes=[ax]*len(models)
-    styles=['-','--','-.',':']
+    if interpolation not in ('linear','steps-post'):raise ValueError('Declare linear or steps-post interpolation')
+    styles=['-','--','-.',':'];drawstyle='default' if interpolation=='linear' else interpolation
     for i,(m,ax) in enumerate(zip(models,axes)):
         sub=d[d.model==m];color=palette[m] if palette else '#35618F';style='-' if facets else styles[i]
         rgb=np.asarray(to_rgba(color)[:3]);linear=np.where(rgb<=.04045,rgb/12.92,((rgb+.055)/1.055)**2.4)
         contrast=1.05/(float(linear@[.2126,.7152,.0722])+.05)
-        if contrast<3:ax.plot(sub.x,sub.y,color='#687783',linestyle=style,lw=2.5,zorder=1)
-        ax.plot(sub.x,sub.y,color=color,linestyle=style,label=m,lw=1.5,zorder=2)
+        if contrast<3:ax.plot(sub.x,sub.y,color='#687783',linestyle=style,lw=2.5,zorder=1,drawstyle=drawstyle)
+        if has_interval:ax.fill_between(sub.x,sub.lower,sub.upper,color=color,alpha=.10,linewidth=0,zorder=0,step=None if interpolation=='linear' else 'post')
+        ax.plot(sub.x,sub.y,color=color,linestyle=style,label=m,lw=1.5,zorder=2,drawstyle=drawstyle)
         if facets:ax.set_title(str(m),loc='left',fontsize=10)
     labels={'ROC':('False positive rate','True positive rate'),'PR':('Recall','Precision'),'calibration':('Predicted probability','Observed fraction')}
     for ax in dict.fromkeys(axes):
         if kind!='PR':ax.plot([0,1],[0,1],':',color='#A7B2BA',lw=.8,zorder=0)
+        elif prevalence is not None:ax.axhline(prevalence,ls=':',color='#87939D',lw=.8,label='Prevalence '+f'{prevalence:.1%}')
         ax.set(xlim=(0,1),ylim=(0,1),xlabel=labels[kind][0],ylabel=labels[kind][1],aspect='equal')
         ax.spines[['top','right']].set_visible(False)
-        if not facets:ax.legend(frameon=False)
-    return stamp(fig, data, 'curve', curve_kind=kind, threshold_order='input order',curve_mode='facets' if facets else 'overlay',model_order=models)
+        if not facets:ax.legend(frameon=False,loc='upper left',bbox_to_anchor=(1.025,1),borderaxespad=0)
+        ax.grid(color='#EDF0F2',lw=.55);ax.set_axisbelow(True)
+    if has_interval:fig.text(.12,.015,interval_label,fontsize=8,color='#637381')
+    return stamp(fig, data, 'curve', curve_kind=kind, threshold_order='input order',curve_mode='facets' if facets else 'overlay',model_order=models,prevalence=prevalence,interval_label=interval_label,supplied_intervals=has_interval,interpolation=interpolation)
 
 def export_figure(fig,data,out_dir,figure_id,meta, *, source_file=None, expected_source_sha256=None):
     """Publish a complete per-figure directory by one rename on the same filesystem.

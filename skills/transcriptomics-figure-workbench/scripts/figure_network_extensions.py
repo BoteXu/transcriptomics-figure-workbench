@@ -76,9 +76,15 @@ def plot_weighted_chord(data,theme,*,weight_label,order,title=''):
     def point(a):return(.94*np.cos(a),.94*np.sin(a))
     for r in d.itertuples():
         a=starts[r.source]+offsets[r.source]*scale;b=starts[r.target]+offsets[r.target]*scale;w=r.weight*scale
-        _ribbon(ax,point(a),point(a+w),point(b+w),point(b),pal[r.source]);offsets[r.source]+=r.weight;offsets[r.target]+=r.weight
+        # Follow each allocated circular arc. Straight endpoint joins collapsed
+        # a two-sector ribbon into a narrow hourglass despite its full weight.
+        angles=np.linspace(0,w,max(8,int(np.ceil(w/.025))+1))
+        source=[point(a+t) for t in angles];target=[point(b+t) for t in angles]
+        vertices=source+[tuple(np.asarray(source[-1])*.18),tuple(np.asarray(target[0])*.18),target[0]]+target[1:]+[tuple(np.asarray(target[-1])*.18),tuple(np.asarray(source[0])*.18),source[0],source[0]]
+        codes=[Path.MOVETO]+[Path.LINETO]*(len(source)-1)+[Path.CURVE4]*3+[Path.LINETO]*(len(target)-1)+[Path.CURVE4]*3+[Path.CLOSEPOLY]
+        ax.add_patch(PathPatch(Path(vertices,codes),fc=pal[r.source],ec='white',lw=.25,alpha=.43));offsets[r.source]+=r.weight;offsets[r.target]+=r.weight
     fig.text(.80,.65,'Ribbon width\n'+weight_label,fontsize=9);fig.text(.80,.39,'Unsigned weights\nNo inferred direction',fontsize=8)
-    return _done(fig,data,'weighted_chord',theme,weight_label=weight_label,sector_order=order,directed=False)
+    return _done(fig,data,'weighted_chord',theme,weight_label=weight_label,sector_order=order,directed=False,width_encoding='Exact angular allocation on both sector arcs; interior curvature is layout only')
 
 def plot_alluvial(data,theme,*,stage_columns,weight_label,title='',orientation='horizontal',
                   stage_orders=None,path_order=None,gap_fraction=.045,path_field='path_id',
@@ -116,6 +122,11 @@ def plot_alluvial(data,theme,*,stage_columns,weight_label,title='',orientation='
         width,height=(thickness,hi-lo) if orientation=='horizontal' else (hi-lo,thickness)
         patch=Rectangle(origin,width,height,fc=pal[node['category']],ec='white',lw=.6,zorder=2)
         patch.set_gid('node:'+node['stage']+':'+node['category']);ax.add_patch(patch)
+        if orientation=='horizontal' and (hi-lo)/ledger['extent']>=.075:
+            # Label only bands that have physical room; the complete guide
+            # below still retains tiny and zero-weight categories.
+            ax.text(j,(lo+hi)/2,labels[node['category']],ha='center',va='center',
+                    fontsize=8,color='#24343C',bbox=dict(fc='white',ec='none',alpha=.92,pad=1.8),zorder=4)
     for segment in ledger['segments']:
         if segment['weight']==0:continue
         j=segment['stage_index'];lo,hi=segment['source_interval'];bl,bh=segment['target_interval']
@@ -149,8 +160,12 @@ def plot_alluvial(data,theme,*,stage_columns,weight_label,title='',orientation='
 def plot_upset(data,theme,*,set_columns,unit_label,title=''):
     d=checked(data,['object_id']+set_columns,set_columns);_unique(d,['object_id'])
     if not 2<=len(set_columns)<=8 or len(set_columns)!=len(set(set_columns)) or not set(d[set_columns].to_numpy().ravel())<=set([0,1]):raise ValueError('Membership must be complete binary values for 2–8 distinct sets')
-    patterns=d.groupby(set_columns,sort=False).size(); pats=list(patterns.index); counts=patterns.to_numpy();fig=_start(theme);bars=_ax(fig,[.17,.53,.60,.32]);mat=_ax(fig,[.17,.17,.60,.29]);right=_ax(fig,[.81,.17,.15,.29]);color=theme['roles']['primary']
+    patterns=d.groupby(set_columns,sort=False).size(); pats=list(patterns.index); counts=patterns.to_numpy();fig=_start(theme,size=(max(8.5,len(pats)*.31+3.0),max(5.6,len(set_columns)*.31+3.7)));bars=_ax(fig,[.17,.53,.60,.32]);mat=_ax(fig,[.17,.17,.60,.29]);right=_ax(fig,[.81,.17,.15,.29]);color=theme['roles']['primary']
     bars.bar(range(len(pats)),counts,color=color,width=.7);bars.set(xlim=(-.5,len(pats)-.5),ylabel='Exclusive intersection count');bars.set_xticks([]);bars.set_title(title,loc='left')
+    bars.set_ylim(0,max(counts)*1.19)
+    for i,count in enumerate(counts):bars.text(i,count+max(counts)*.025,str(int(count)),ha='center',va='bottom',fontsize=8,color='#526272')
+    for i in range(len(set_columns)):
+        if i%2==0:mat.axhspan(i-.5,i+.5,color='#F2F5F7',zorder=0,lw=0)
     for j,p in enumerate(pats):
         on=[i for i,v in enumerate(p) if v==1];mat.scatter([j]*len(set_columns),range(len(set_columns)),s=30,color='#DDE3E9')
         if on:mat.plot([j]*len(on),on,color=color,lw=1);mat.scatter([j]*len(on),on,color=color,s=35,zorder=3)
@@ -204,12 +219,23 @@ def plot_running_enrichment(data,theme,*,curve_groups,rank_label,title=''):
 def plot_rank_bump(data,theme,*,stage_order,title=''):
     d=checked(data,['group','stage','rank'],['rank']);_unique(d,['group','stage']);groups=list(pd.unique(d.group));pal=group_palette(theme,groups)
     if set(d.stage)!=set(stage_order) or len(d)!=len(groups)*len(stage_order) or (d['rank']<1).any():raise ValueError('Complete supplied positive ranks required')
-    fig=_start(theme);ax=_ax(fig,[.14,.16,.58,.68]);
+    fig=_start(theme,size=(max(7.2,len(stage_order)*1.2+3),max(4.5,len(groups)*.38+1.8)));ax=_ax(fig,[.14,.16,.62,.68]);
     for g in groups:
         q=d[d.group==g].set_index('stage').reindex(stage_order);ax.plot(range(len(stage_order)),q['rank'],color=pal[g],marker='o',label=g)
     from matplotlib.ticker import MaxNLocator
     ax.yaxis.set_major_locator(MaxNLocator(integer=bool((d['rank']%1==0).all())))
-    ax.invert_yaxis();ax.set_xticks(range(len(stage_order)),stage_order);ax.set(ylabel='Stored rank (1 = highest)',title=title);fig.legend(handles=ax.get_legend_handles_labels()[0],labels=groups,loc='upper left',bbox_to_anchor=(.78,.84),frameon=False)
+    ax.invert_yaxis();ax.set_xticks(range(len(stage_order)),stage_order);ax.set(ylabel='Stored rank (1 = highest)',title=title)
+    endpoints=d[d.stage==stage_order[-1]].sort_values('rank',kind='stable')
+    span=max(float(d['rank'].max()-d['rank'].min()),1);gap=span/max(len(groups)*1.3,8)
+    placed=[]
+    for r in endpoints.itertuples():
+        y=max(float(r.rank),placed[-1]+gap) if placed else float(r.rank);placed.append(y)
+        ax.annotate(r.group,(len(stage_order)-1,r.rank),xytext=(len(stage_order)-.72,y),
+                    color=pal[r.group],fontsize=9,va='center',annotation_clip=False,
+                    arrowprops=dict(arrowstyle='-',color=pal[r.group],lw=.6))
+    ax.set_xlim(-.15,len(stage_order)-.85)
+    ax.set_ylim(max(float(d['rank'].max())+.3,placed[-1]+.3),float(d['rank'].min())-.3)
+    ax.grid(axis='y',color='#E5EBEF',lw=.5);ax.set_axisbelow(True)
     return _done(fig,data,'rank_bump',theme,stage_order=stage_order,analysis_boundary='Ranks supplied; ties preserved; no rank computation')
 
 def plot_hex_density(data,theme,*,x_label,y_label,unit_label,gridsize=24,title=''):

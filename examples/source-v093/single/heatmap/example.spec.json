@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "figure_id": "heatmap",
+  "renderer": "figure_polish.plot_polished_matrix",
+  "input": {
+    "path": "heatmap.tsv",
+    "sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+    "numeric_columns": [
+      "value",
+      "row_count"
+    ],
+    "max_rows": 100000,
+    "max_bytes": 20971520
+  },
+  "parameters": {
+    "layout": "blocks",
+    "limits": [
+      -1.5,
+      1.5
+    ],
+    "signed": true,
+    "value_label": "Demo signed score",
+    "sign_marks": true,
+    "row_aliases": {
+      "Feature 01": "Feature 01",
+      "Feature 02": "Feature 02",
+      "Feature 03": "Feature 03",
+      "Feature 04": "Feature 04",
+      "Feature 05": "Feature 05",
+      "Feature 06": "Feature 06",
+      "Feature 07": "Feature 07",
+      "Feature 08": "Feature 08",
+      "Feature 09": "Feature 09",
+      "Feature 10": "Feature 10",
+      "Feature 11": "Feature 11",
+      "Feature 12": "Feature 12"
+    },
+    "column_aliases": {
+      "S01": "S01",
+      "S02": "S02",
+      "S03": "S03",
+      "S04": "S04",
+      "S05": "S05",
+      "S06": "S06",
+      "S07": "S07",
+      "S08": "S08"
+    },
+    "row_blocks": {
+      "Feature 01": "Module A",
+      "Feature 02": "Module A",
+      "Feature 03": "Module A",
+      "Feature 04": "Module A",
+      "Feature 05": "Module B",
+      "Feature 06": "Module B",
+      "Feature 07": "Module B",
+      "Feature 08": "Module B",
+      "Feature 09": "Module C",
+      "Feature 10": "Module C",
+      "Feature 11": "Module C",
+      "Feature 12": "Module C"
+    },
+    "column_blocks": {
+      "S01": "Control",
+      "S02": "Control",
+      "S03": "Control",
+      "S04": "Control",
+      "S05": "Treated",
+      "S06": "Treated",
+      "S07": "Treated",
+      "S08": "Treated"
+    },
+    "row_order": [
+      "Feature 01",
+      "Feature 02",
+      "Feature 03",
+      "Feature 04",
+      "Feature 05",
+      "Feature 06",
+      "Feature 07",
+      "Feature 08",
+      "Feature 09",
+      "Feature 10",
+      "Feature 11",
+      "Feature 12"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08"
+    ],
+    "width_mm": 180,
+    "font_size": 8.5
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "G1": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Existing public frozen software fixture; no research inference",
+    "input_unit": "Synthetic display record",
+    "experimental_unit": "None inferred; records are not independent biomedical samples",
+    "contrast": "Fictional declared display contrast only",
+    "denominator": "Exact supplied example table; see volume preparation receipt for selected identities",
+    "model": "No scientific model fitted by this drawing example",
+    "limits": "Synthetic display verification only; no biological or clinical validity",
+    "filtering": "Explicit software fixture preparation before drawing; plotted table frozen and hashed",
+    "uncertainty": "Supplied illustrative channels only; no interval estimation",
+    "interpretation_limit": "Review new data and intended physical size again",
+    "synthetic": true
+  },
+  "export": {
+    "raster_dpi": 300,
+    "readability_policy": "warn"
+  }
+}

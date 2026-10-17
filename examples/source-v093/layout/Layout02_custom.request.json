@@ -1,0 +1,45 @@
+{
+  "id": "Layout02_custom",
+  "title": "Layout 02 | independent display examples | no shared analysis",
+  "panels": [
+    {
+      "id": "Panel1",
+      "svg": "../single/gsea/gsea.svg",
+      "row": 0,
+      "column": 2,
+      "column_span": 1
+    },
+    {
+      "id": "Panel2",
+      "svg": "../single/enrichment-summary/enrichment-summary.svg",
+      "row": 0,
+      "column": 0,
+      "column_span": 2
+    },
+    {
+      "id": "Panel3",
+      "svg": "../single/term-circle/term-circle.svg",
+      "row": 1,
+      "column": 1,
+      "column_span": 2
+    },
+    {
+      "id": "Panel4",
+      "svg": "../single/paired/paired.svg",
+      "row": 1,
+      "column": 0,
+      "column_span": 1
+    }
+  ],
+  "columns": 3,
+  "canvas_width_pt": 1518.1714285714284,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "label_order": "reading",
+  "packing": "grid",
+  "column_weights": [
+    1.15,
+    0.85,
+    1.05
+  ]
+}

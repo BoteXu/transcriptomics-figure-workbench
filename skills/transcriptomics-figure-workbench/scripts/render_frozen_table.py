@@ -42,7 +42,13 @@ def load_table(path,adapter,params,numeric_columns=()):
         value=params.get(key)
         if isinstance(value,str):numeric.append(value)
     if isinstance(params.get('value_columns'),(list,tuple)):numeric.extend(params['value_columns'])
-    for c in set(numeric)&set(data.columns):data[c]=pd.to_numeric(data[c],errors='raise')
+    for c in set(numeric)&set(data.columns):
+        values=pd.to_numeric(data[c],errors='raise')
+        # Restore the nearest binary float represented by a frozen decimal.
+        # The fast numeric parser can truncate the last few bits of a 17-digit
+        # TSV coordinate on a second read. Keep integer IDs/types separate.
+        if values.dtype.kind=='f':values=data[c].map(float)
+        data[c]=values
     return data
 
 

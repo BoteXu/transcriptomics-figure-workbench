@@ -1,0 +1,76 @@
+{
+  "form": "ribbon",
+  "base_form": "ribbon",
+  "example": "P29",
+  "title": "曲线与给定区间带",
+  "source_meta": "examples/gallery/metadata/P29.json",
+  "route": "native",
+  "adapter": "figure_multimodal.plot_frozen_dynamics",
+  "parameters": {
+    "palette": {
+      "Start A": "#0072B2",
+      "Start B": "#D55E00"
+    },
+    "time_label": "Demo time (ns)",
+    "value_label": "Demo RMSD (nm)",
+    "unit_label": "synthetic independent-start summaries",
+    "interval_label": "Illustrative supplied bounds"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Start A": 0,
+      "Start B": 1
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/gallery/figures/P29/P29.tsv",
+  "fixture_definition": "Existing public frozen software fixture; no research inference"
+}

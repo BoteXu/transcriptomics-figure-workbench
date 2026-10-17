@@ -116,9 +116,12 @@ def plot_density_ridges(data,palette,x_label,*,density_label,amplitude=.8,height
     scale=amplitude/peak if height_scale is None else height_scale
     if not np.isfinite(scale) or scale<=0 or scale*peak>.95:raise ValueError('Common density height scale must fit between baselines')
     fig,ax=canvas();groups=list(pd.unique(d.group))
+    fig.set_size_inches(max(6.2,fig.get_figwidth()),max(3.4,len(groups)*.42+1.65))
     for i,g in enumerate(groups):
         sub=d[d.group==g];y=i+sub.density.to_numpy()*scale
+        ax.axhline(i,color='#E2E8ED',lw=.6,zorder=0)
         ax.fill_between(sub.x,i,y,color=palette[g],alpha=.45);ax.plot(sub.x,y,color=palette[g],linewidth=1.2)
     ax.set_yticks(range(len(groups)),groups);ax.set(xlabel=x_label,ylabel=density_label,title=title)
+    ax.spines['left'].set_visible(False);ax.tick_params(axis='y',length=0,pad=8)
     return stamp(fig,data,'density_ridges',palette=palette,x_label=x_label,density_label=density_label,
                  shared_display_scale=float(scale),density_estimation='Upstream only; no KDE, bandwidth choice or per-group rescaling',demo_label_style='compact')

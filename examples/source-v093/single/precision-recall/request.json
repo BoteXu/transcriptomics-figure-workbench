@@ -1,0 +1,77 @@
+{
+  "form": "precision-recall",
+  "base_form": "precision-recall",
+  "example": "P25b",
+  "title": "精确率与召回曲线",
+  "source_meta": "examples/gallery/metadata/P25b.json",
+  "route": "native",
+  "adapter": "figure_core.plot_curve",
+  "parameters": {
+    "kind": "PR",
+    "palette": {
+      "Model A": "#218C8D",
+      "Model B": "#D8795B",
+      "Model C": "#5676A5"
+    },
+    "prevalence": 0.2,
+    "interpolation": "steps-post"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-model-comparison",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Model A": 0,
+      "Model B": 1,
+      "Model C": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#218C8D"
+      ],
+      "diverging": [
+        "#218C8D",
+        "#F7F7F7",
+        "#74798D"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/gallery/figures/P25b/P25b.tsv",
+  "fixture_definition": "Existing public frozen software fixture; no research inference"
+}

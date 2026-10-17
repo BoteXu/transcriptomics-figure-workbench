@@ -350,6 +350,8 @@ See the fixed implementation and its input contract.
 | label_rotation | false | null |
 | figsize | false | null |
 | continuous_colors | false | null |
+| row_counts | false | null |
+| count_label | false | null |
 
 ## figure_core.plot_heatmap
 
@@ -407,6 +409,11 @@ See the fixed implementation and its input contract.
 |---|---|---|
 | palette | true | — |
 | y_label | false | "Fraction of included cells" |
+| mode | false | "stacked" |
+| ncols | false | "auto" |
+| nrows | false | null |
+| panel_width | false | 3.5 |
+| panel_height | false | 2.6 |
 
 ## figure_core.plot_curve
 
@@ -421,6 +428,9 @@ See the fixed implementation and its input contract.
 | nrows | false | null |
 | panel_width | false | 3.8 |
 | panel_height | false | 3.6 |
+| prevalence | false | null |
+| interval_label | false | null |
+| interpolation | false | "linear" |
 
 ## figure_editorial.plot_editorial
 
@@ -1566,6 +1576,7 @@ See the fixed implementation and its input contract.
 | palette_name | false | "network_teal_red" |
 | node_color | false | "#45B0C8" |
 | size | false | [7, 7] |
+| view | false | "auto" |
 
 ## figure_reference.plot_mantel_matrix
 
@@ -1791,6 +1802,8 @@ See the fixed implementation and its input contract.
 | limits | true | — |
 | view | false | [32, -132] |
 | size | false | [9, 6] |
+| projection | false | "surface" |
+| center | false | null |
 
 ## figure_refined_views.plot_refined_views
 

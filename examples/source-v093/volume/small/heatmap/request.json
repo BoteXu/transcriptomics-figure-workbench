@@ -1,0 +1,125 @@
+{
+  "form": "heatmap",
+  "base_form": "heatmap",
+  "example": "P17b",
+  "title": "热图",
+  "source_meta": "examples/gallery/metadata/P17b.json",
+  "route": "native",
+  "adapter": "figure_polish.plot_polished_matrix",
+  "parameters": {
+    "layout": "blocks",
+    "limits": [
+      -1.5,
+      1.5
+    ],
+    "signed": true,
+    "value_label": "Demo signed score",
+    "sign_marks": true,
+    "row_aliases": {
+      "Feature 01": "Feature 01",
+      "Feature 02": "Feature 02",
+      "Feature 03": "Feature 03",
+      "Feature 04": "Feature 04"
+    },
+    "column_aliases": {
+      "S01": "S01",
+      "S02": "S02",
+      "S03": "S03",
+      "S04": "S04",
+      "S05": "S05",
+      "S06": "S06",
+      "S07": "S07",
+      "S08": "S08"
+    },
+    "row_blocks": {
+      "Feature 01": "Module A",
+      "Feature 02": "Module A",
+      "Feature 03": "Module A",
+      "Feature 04": "Module A"
+    },
+    "column_blocks": {
+      "S01": "Control",
+      "S02": "Control",
+      "S03": "Control",
+      "S04": "Control",
+      "S05": "Treated",
+      "S06": "Treated",
+      "S07": "Treated",
+      "S08": "Treated"
+    },
+    "row_order": [
+      "Feature 01",
+      "Feature 02",
+      "Feature 03",
+      "Feature 04"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08"
+    ],
+    "width_mm": 180,
+    "font_size": 8.5
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "G1": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/gallery/figures/P17b/P17b.tsv",
+  "fixture_definition": "Existing public frozen software fixture; no research inference"
+}

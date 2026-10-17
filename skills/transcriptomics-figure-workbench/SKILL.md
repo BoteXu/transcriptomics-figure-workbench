@@ -7,15 +7,32 @@ description: Design, render and improve publication figures from frozen scientif
 
 ## Current source-aware selection
 
-For redesigns or journal-quality examples, read
-[the per-form decisions](references/journal-form-review-v092.md) and
-[the recent-figure design review](references/journal-design-v092.md).
-All 90 consolidated forms were searched, with 2025–2026 preferred. Search hits
-are unverified candidates; only the separately identified eight original
-figures were visually reviewed. Do not turn a candidate into a recommendation
-or claim all forms received new implementations. Select by scientific channels,
-readability and output purpose. Compare [the actual 27 revised exports](assets/editorial-gallery/index.html).
+For redesigns or journal-quality examples, start with
+[the current source-to-code choices](references/source-design-v093.md) and
+[96 complete current examples](assets/source-gallery/index.html).
+All 90 consolidated forms now have inspected original references, drawing or
+fixed-reference examples and an artifact-bound screen review. The 34 added
+source records join eight earlier figure records; recent papers are preferred,
+with older author examples where useful. Some sources inform a component,
+scale or rejected alternative rather than depicting the identical chart.
+Read each source's scope, adopted design and rejected choices. Do not claim
+90 recent journal figures, 90 new algorithms or universal aesthetic approval.
+The current inspection covers 96 singles, 261 data-volume variants and 48
+complete-panel layouts. See [exact limits](references/validation-v093.md).
 Publication prestige and extra panels do not establish better design.
+
+Each native current example contains `example.spec.json` and its exact frozen
+TSV. Use the normal `plan` then `render` workflow; do not rerun an analysis to
+match an illustration. The spec records numeric columns, input hash, complete
+parameters and requested layout. Changes to data, labels, theme, size or grid
+invalidate the old screen review. For density, sample counts and uncertain
+quantities, require explicit supplied channels. A synthetic bounds example is
+not a confidence interval. Preserve zero sizes and unreported network cells.
+For dense signed networks prefer the readable matrix; for precise surface
+values prefer the complete 2D grid. Circular networks and 3D surfaces remain
+explicit alternatives. Keep overlaid radar profiles to four; use faceting for
+larger sets. Width-only changes preserve the figure's aspect where the renderer
+declares fixed-aspect maps; caller-specified height remains explicit.
 
 ## Publication design takes precedence over a catalogue of panels
 

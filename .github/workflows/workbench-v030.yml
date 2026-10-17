@@ -36,6 +36,7 @@ jobs:
           python tests/check_private_profile_sync.py
           python tools/build_journal_review.py --check
           python tests/check_editorial_release.py
+          python tests/check_source_release.py
           python skills/transcriptomics-figure-workbench/scripts/workbench.py methods --search GSEA
           python skills/transcriptomics-figure-workbench/scripts/render_frozen_table.py --help
   render:
@@ -58,6 +59,7 @@ jobs:
           python tests/check_method_depth.py
           python tests/check_subgroup_markers.py
           python tests/check_editorial_runtime.py examples/editorial-v092
+          python tests/check_source_runtime.py
       - name: Exercise ordinary requests on two coherent fictional result packages
         run: |
           python tools/build_transcriptomic_study_examples.py --output study-ci-fixtures
@@ -104,6 +106,7 @@ jobs:
           node tests/check_v090_browser.mjs v090-browser-ci
           node tests/check_chapter_browser.mjs chapter-browser-ci
           node tests/check_dedicated_browser.mjs dedicated-browser-ci
+          node tests/check_source_browser.mjs source-browser-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

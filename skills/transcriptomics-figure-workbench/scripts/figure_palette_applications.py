@@ -26,7 +26,11 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=None,font_family='De
     if layout not in ('plate','panel') or (layout=='panel' and len(panel_specs)!=1): raise ValueError('Standalone mode requires exactly one panel')
     from figure_workbench.responsive import grid_shape
     from figure_workbench.responsive import canvas_budget
-    nrows,ncols=grid_shape(len(panel_specs),ncols,nrows);fig=_new(canvas_budget(*(size or (ncols*5,nrows*3.7+1.5))))
+    nrows,ncols=grid_shape(len(panel_specs),ncols,nrows)
+    schematic_panel=layout=='panel' and panel_specs[0]['type']=='schematic'
+    default_size=(6.7,3.35) if schematic_panel else (ncols*5,nrows*3.7+1.5)
+    fig=_new(canvas_budget(*(size or default_size)))
+    if schematic_panel:fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
     if layout=='plate':
         fig.text(.05,.935,palette_name+'  |  palette application reproduction',fontsize=16,weight='bold')
         for i,c in enumerate(colors):
@@ -36,6 +40,7 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=None,font_family='De
         panel=spec['id']; typ=spec['type']; src=data[data.panel==panel]; left=.08+(k%ncols)*(.90/ncols); height=.74/nrows; bottom=.16+(nrows-1-k//ncols)*height
         # The standalone layout reserves a right-hand lane for all semantic guides.
         bounds=([.24,.18,.55,.55] if typ=='clustered_matrix' else [.15,.26,.61,.57] if typ=='bubble_matrix' else [.15,.27,.68,.50] if typ=='world_map' else [.15,.18,.61,.66] if typ in ('scatter','embedding','bubble','pca','donut','line','spectrum','bar','stacked','radar','volcano') else [.15,.18,.68,.66]) if layout=='panel' else spec.get('bounds',[left,bottom,.72/ncols,height*.72])
+        if schematic_panel:bounds=[.06,.23,.88,.63]
         if typ=='world_map':
             ax=fig.add_axes(bounds,projection='mollweide'); ax.tick_params(labelsize=6)
         elif typ=='radar': ax=fig.add_axes(bounds,projection='polar'); ax.tick_params(labelsize=6)
@@ -171,9 +176,14 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=None,font_family='De
             d=_records(src,'radar',['group','category','value'],['value']); _unique(d,['group','category']); cats=list(pd.unique(d.category)); groups=list(pd.unique(d.group)); pal=spec.get('group_palette',dict(zip(groups,colors))); palette_check(d.group,pal)
             if len(d)!=len(cats)*len(groups): raise ValueError('Incomplete radar table')
             th=np.linspace(0,2*np.pi,len(cats),endpoint=False); ax.set_theta_offset(np.pi/2); ax.set_theta_direction(-1)
-            for g in groups:
-                vals=d[d.group==g].set_index('category').reindex(cats).value; ax.plot(np.r_[th,th[0]],np.r_[vals,vals.iloc[0]],color=pal[g],lw=1.2,label=g); ax.fill(np.r_[th,th[0]],np.r_[vals,vals.iloc[0]],color=pal[g],alpha=.10)
-            ax.set_xticks(th,cats); ax.set_ylim(*spec['radial_limits'])
+            if len(groups)>4:raise ValueError('More than four overlapping radar profiles require complete separate panels')
+            for i,g in enumerate(groups):
+                vals=d[d.group==g].set_index('category').reindex(cats).value; ax.plot(np.r_[th,th[0]],np.r_[vals,vals.iloc[0]],color=pal[g],lw=1.2,ls=['-','--','-.',':'][i],marker='o',ms=2.8,label=g); ax.fill(np.r_[th,th[0]],np.r_[vals,vals.iloc[0]],color=pal[g],alpha=.035)
+            ax.set_xticks(th,[textwrap.fill(str(c),18,break_long_words=False) for c in cats]); ax.set_ylim(*spec['radial_limits'])
+            ax.tick_params(axis='x',pad=10)
+            for angle,label in zip(th,ax.get_xticklabels()):
+                label.set_ha('left' if np.sin(angle)>.3 else 'right' if np.sin(angle)<-.3 else 'center')
+            ax.grid(color='#DCE3E8',lw=.55);ax.spines['polar'].set_color('#A9B4BE')
             ax.legend(frameon=False,loc='upper left',bbox_to_anchor=(1.18,1),fontsize=6)
         elif typ in ('world_map','regional_map','map_flows'):
             land=_records(src,'land',['polygon_id','order','x','y'],['order','x','y']); _unique(land,['polygon_id','order'])
@@ -188,10 +198,14 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=None,font_family='De
             if typ=='map_flows':
                 flow=_records(src,'flow',['path_id','order','x','y','value'],['order','x','y','value']); _unique(flow,['path_id','order']); norm=Normalize(*spec['color_limits']); cm=LinearSegmentedColormap.from_list('flow',spec.get('continuous_colors',colors))
                 for _,sub in flow.groupby('path_id',sort=False):
-                    sub=sub.sort_values('order'); ax.plot(sub.x,sub.y,color=cm(norm(sub.value.iloc[0])),lw=.5,alpha=.7); ax.scatter([sub.x.iloc[0],sub.x.iloc[-1]],[sub.y.iloc[0],sub.y.iloc[-1]],s=10,c=[sub.value.iloc[0]]*2,cmap=cm,norm=norm,lw=0)
+                    sub=sub.sort_values('order'); ax.plot(sub.x,sub.y,color=cm(norm(sub.value.iloc[0])),lw=.9,alpha=.95); ax.scatter([sub.x.iloc[0],sub.x.iloc[-1]],[sub.y.iloc[0],sub.y.iloc[-1]],s=14,c=[sub.value.iloc[0]]*2,cmap=cm,norm=norm,lw=0)
                 from matplotlib.cm import ScalarMappable
                 fig.colorbar(ScalarMappable(norm=norm,cmap=cm),ax=ax,fraction=.035,pad=.04,label=spec.get('color_label','Supplied path value'))
-            if typ!='world_map': ax.set(xlim=spec['x_limits'],ylim=spec['y_limits'])
+            if typ!='world_map':
+                ax.set(xlim=spec['x_limits'],ylim=spec['y_limits'])
+                # Preserve the supplied coordinate-plane aspect. A portrait
+                # panel must not stretch a world outline into a tall shape.
+                ax.set_aspect('equal',adjustable='box')
             else: ax.grid(color='#AEB7BF',lw=.3,alpha=.4)
         elif typ=='volcano':
             d=_records(src,'volcano',['unit_id','x','y','group'],['x','y']); _unique(d,['unit_id']); pal=spec['group_palette']; palette_check(d.group,pal)
@@ -205,8 +219,12 @@ def plot_palette_plate(data,*,palette_name,panel_specs,size=None,font_family='De
                 if o.radius<=0: raise ValueError('Invalid schematic radius')
                 ax.add_patch(Circle((o.x,o.y),o.radius,fc=pal[o.group],ec='#8FADB9',lw=.6))
             arrows=_records(src,'arrow',['x0','y0','x1','y1'],['x0','y0','x1','y1'],optional=True)
-            for a in arrows.itertuples(): ax.add_patch(FancyArrowPatch((a.x0,a.y0),(a.x1,a.y1),arrowstyle='->',mutation_scale=12,color=colors[-2],lw=1.3,connectionstyle='arc3,rad=.25'))
+            for a in arrows.itertuples(): ax.add_patch(FancyArrowPatch((a.x0,a.y0),(a.x1,a.y1),arrowstyle='->',mutation_scale=12,color=colors[-2],lw=1.3,connectionstyle='arc3,rad=-.25'))
             ax.set(xlim=spec['x_limits'],ylim=spec['y_limits']); ax.set_aspect('equal'); ax.axis('off')
+            if schematic_panel:
+                ax.set_anchor('N')
+                fig.legend(handles=[Line2D([],[],ls='',marker='o',ms=6,color=pal[g],label=g) for g in dict.fromkeys(d.group)],
+                           loc='lower center',bbox_to_anchor=(.5,.055),ncol=min(4,len(pal)),frameon=False,fontsize=8)
         else: raise ValueError('Unsupported panel type: '+typ)
         annotations=_records(src,'annotation',['x','y','text'],['x','y'],optional=True)
         for a in annotations.itertuples(): ax.text(a.x,a.y,a.text,fontsize=7,ha='center',va='bottom')

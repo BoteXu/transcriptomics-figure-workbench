@@ -144,12 +144,19 @@ def plot_frozen_qc_de(data, theme, *, mode, contract, order=None, marker_map=Non
                 raise ValueError('Select an explicit reviewed <=40-feature radial view, retaining its full source index')
             fig = _new(theme, (9, 7)); ax = fig.add_axes([.10, .20, .60, .62], projection='polar')
             angles = np.arange(len(d)) * 2 * math.pi / len(d)
-            bars = ax.bar(angles, d.effect.abs(), width=2 * math.pi / len(d) * .76, bottom=0,
+            hole=max(float(d.effect.abs().max()),1e-12)*.30
+            bars = ax.bar(angles, d.effect.abs(), width=2 * math.pi / len(d) * .76, bottom=hole,
                           color=[colors[x] for x in d.status], ec='white', lw=.5)
             for patch, status in zip(bars, d.status):
                 if status == 'untested':
                     patch.set_edgecolor(theme['roles']['border']); patch.set_linewidth(.8); patch.set_hatch('///')
             ax.set_xticks(angles, order, fontsize=8); ax.set_theta_offset(math.pi / 2); ax.set_theta_direction(-1)
+            from matplotlib.ticker import MaxNLocator
+            ticks=MaxNLocator(nbins=4).tick_values(0,float(d.effect.abs().max()))
+            ticks=ticks[(ticks>=0)&(ticks<=float(d.effect.abs().max()))]
+            ax.set_yticks(hole+ticks,[f'{v:g}' for v in ticks]);ax.set_ylim(0,hole+float(d.effect.abs().max())*1.12)
+            ax.grid(color='#DCE4EA',lw=.5);ax.spines['polar'].set_visible(False)
+            ax.text(.5,.5,'0 at inner\nboundary',transform=ax.transAxes,ha='center',va='center',fontsize=7,color='#637381')
             ax.set_ylabel('Absolute ' + contract['effect_definition'], labelpad=30)
         _status_key(fig, colors, list(pd.unique(d.status)))
     elif mode in {'deg_counts', 'deg_donut'}:

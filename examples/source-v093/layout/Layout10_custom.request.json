@@ -1,0 +1,45 @@
+{
+  "id": "Layout10_custom",
+  "title": "Layout 10 | independent display examples | no shared analysis",
+  "panels": [
+    {
+      "id": "Panel1",
+      "svg": "../single/contribution/contribution.svg",
+      "row": 0,
+      "column": 2,
+      "column_span": 1
+    },
+    {
+      "id": "Panel2",
+      "svg": "../single/effect-distribution/effect-distribution.svg",
+      "row": 1,
+      "column": 0,
+      "column_span": 1
+    },
+    {
+      "id": "Panel3",
+      "svg": "../single/spatial/spatial.svg",
+      "row": 1,
+      "column": 1,
+      "column_span": 2
+    },
+    {
+      "id": "Panel4",
+      "svg": "../single/slice/slice.svg",
+      "row": 0,
+      "column": 0,
+      "column_span": 2
+    }
+  ],
+  "columns": 3,
+  "canvas_width_pt": 1600.26,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "label_order": "reading",
+  "packing": "grid",
+  "column_weights": [
+    1.15,
+    0.85,
+    1.05
+  ]
+}

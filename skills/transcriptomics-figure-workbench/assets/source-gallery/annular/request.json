@@ -1,0 +1,80 @@
+{
+  "form": "annular",
+  "base_form": "annular",
+  "example": "R01",
+  "title": "环带剖面图",
+  "source_meta": "examples/gallery/metadata/R01.json",
+  "route": "native",
+  "adapter": "figure_reference.plot_annular_profile",
+  "parameters": {
+    "palette": {
+      "2020": "#77DEFF",
+      "2010": "#FF72AC",
+      "2000": "#FF9E7B"
+    },
+    "value_label": "Primary value\n(original units)",
+    "area_label": "Secondary value",
+    "value_max": 7000,
+    "area_scale": 0.022,
+    "connect_categories": true,
+    "curve_mode": "smooth_display"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "2020": 0,
+      "2010": 1,
+      "2000": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/gallery/figures/R01/R01.tsv",
+  "fixture_definition": "Existing public frozen software fixture; no research inference"
+}

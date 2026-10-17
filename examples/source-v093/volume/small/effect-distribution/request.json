@@ -1,0 +1,122 @@
+{
+  "form": "effect-distribution",
+  "base_form": "effect-distribution",
+  "example": "CLR02",
+  "title": "效应分布与区间",
+  "source_meta": "examples/clarity-v070/CLR02/CLR02.json",
+  "route": "native",
+  "adapter": "clarity",
+  "parameters": {
+    "view": "effects",
+    "options": {
+      "row_order": [
+        "Outcome 01",
+        "Outcome 02",
+        "Outcome 03",
+        "Outcome 04",
+        "Outcome 05",
+        "Outcome 06",
+        "Outcome 07",
+        "Outcome 08",
+        "Outcome 09",
+        "Outcome 10",
+        "Outcome 11",
+        "Outcome 12",
+        "Outcome 13",
+        "Outcome 14",
+        "Outcome 15",
+        "Outcome 16",
+        "Outcome 17",
+        "Outcome 18",
+        "Outcome 19",
+        "Outcome 20",
+        "Outcome 21",
+        "Outcome 22",
+        "Outcome 23",
+        "Outcome 24",
+        "Outcome 25",
+        "Outcome 26"
+      ],
+      "panel_order": [
+        "Metric A",
+        "Metric B"
+      ],
+      "panel_labels": {
+        "Metric A": "Supplied effect A",
+        "Metric B": "Supplied effect B"
+      },
+      "limits": [
+        -4,
+        4
+      ],
+      "interval_definition": "Supplied display bounds; not computed here",
+      "count_definition": "Count labels have the fixture-defined n(k) form",
+      "title": "Effect distributions and supplied summaries",
+      "subtitle": "All 26 rows in each metric / exact points, bounds, counts and raw p"
+    },
+    "contract": {
+      "source_definition": "Frozen public synthetic table: examples/gallery/figures/R16/R16.tsv",
+      "independent_unit": "Synthetic identity only; no biological sample or scientific inference",
+      "denominator": "all rows",
+      "value_definition": "All plotted channels supplied explicitly; exact units and source selection in FigureSpec",
+      "uncertainty_definition": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+      "synthetic": true
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Supplied channels": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/clarity-v070/CLR02/CLR02.tsv",
+  "fixture_definition": "Existing public frozen software fixture; no research inference"
+}

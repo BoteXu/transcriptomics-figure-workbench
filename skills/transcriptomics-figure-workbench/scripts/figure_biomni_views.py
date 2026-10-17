@@ -171,19 +171,28 @@ def plot_slice_overlay(data,theme,*,view_order,axis_labels,label_slots,intensity
     _declared(registration_definition,orientation_definition);lo,hi=_limits(intensity_limits)
     labels=sorted(set(data.label));pal=group_palette(theme,list(dict.fromkeys(label_slots.values())))
     if labels[0]<0 or any(x%1!=0 for x in labels) or set(label_slots)!=set(str(int(x)) for x in labels if x>0):raise ValueError('Label 0 is background; every positive integer label needs a color slot')
-    fig=_new(theme,((4.4*len(views)+1.5,5.1) if arrangement=='horizontal' else (6,3.5*len(views)+1.4)))
+    grids=[_pixel_grid(data,['intensity','label'],view) for view in views]
+    panel_width=3.4
+    panel_height=max(panel_width*(extent[3]-extent[2])/(extent[1]-extent[0]) for _,extent in grids)
+    cols=len(views) if arrangement=='horizontal' else 1;rows=1 if arrangement=='horizontal' else len(views)
+    cell_width=panel_width+.65;cell_height=panel_height+.75
+    width=cols*cell_width+(1.55 if arrangement=='horizontal' else .7);height=rows*cell_height+1.0
+    fig=_new(theme,(width,height))
+    if arrangement=='vertical':fig._responsive_canvas_aspect=width/height
     for i,view in enumerate(views):
-        arrays,extent=_pixel_grid(data,['intensity','label'],view)
+        arrays,extent=grids[i]
         if ((arrays['intensity']<lo)|(arrays['intensity']>hi)).any():raise ValueError('Intensity limits must include all supplied pixels')
-        bounds=[.075+i*.78/len(views),.20,.60/len(views),.62] if arrangement=='horizontal' else [.14,.17+(len(views)-i-1)*.69/len(views),.62,.60/len(views)]
+        row,col=(0,i) if arrangement=='horizontal' else (i,0)
+        bounds=[(.65+col*cell_width)/width,(.65+(rows-row-1)*cell_height)/height,panel_width/width,panel_height/height]
         ax=_axis(fig,bounds);ax.imshow(arrays['intensity'],cmap='gray',vmin=lo,vmax=hi,origin='lower',extent=extent,interpolation='nearest')
+        ax._explicit_guide_layout=True
         for label in labels:
             if label==0:continue
             mask=np.ma.masked_where(arrays['label']!=label,arrays['label'])
             ax.imshow(mask,cmap=ListedColormap([pal[label_slots[str(int(label))]]]),alpha=.5,origin='lower',extent=extent,interpolation='nearest')
-        ax.set(title=view,xlabel=axis_labels[view][0],ylabel=axis_labels[view][1]);ax.set_aspect('equal')
-    fig.legend(handles=[Patch(color=pal[s],label='Label '+l) for l,s in label_slots.items()],loc='upper left',bbox_to_anchor=(.88,.82),frameon=False)
-    fig.text(.075,.95,title,fontsize=11,weight='bold');fig.text(.075,.045,textwrap.fill(orientation_definition,105),fontsize=8)
+        ax.set(title=view,xlabel=axis_labels[view][0],ylabel=axis_labels[view][1]);ax.set_aspect('equal');ax.set_anchor('NW')
+    fig.legend(handles=[Patch(color=pal[s],label='Label '+l) for l,s in label_slots.items()],loc='upper left',bbox_to_anchor=(((cols*cell_width+.2)/width if arrangement=='horizontal' else .65/width),1-.5/height),ncol=1 if arrangement=='horizontal' else len(label_slots),frameon=False)
+    fig.text(.65/width,1-.2/height,title,fontsize=11,weight='bold');fig.text(.65/width,.06/height,textwrap.fill(orientation_definition,max(40,int(width*13))),fontsize=8)
     return _finish(fig,data,theme,'slice_overlay',view_order=views,axis_labels=axis_labels,label_slots=label_slots,intensity_limits=intensity_limits,
                    registration_definition=registration_definition,orientation_definition=orientation_definition,arrangement=arrangement,title=title,
                    inference='none; frozen registered slice labels, not generated segmentations')

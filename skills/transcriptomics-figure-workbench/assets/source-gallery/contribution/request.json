@@ -1,0 +1,112 @@
+{
+  "form": "contribution",
+  "base_form": "contribution",
+  "example": "CLR03",
+  "title": "贡献蜂群图",
+  "source_meta": "examples/clarity-v070/CLR03/CLR03.json",
+  "route": "native",
+  "adapter": "clarity",
+  "parameters": {
+    "view": "contribution",
+    "options": {
+      "class_label": "Class 0",
+      "feature_order": [
+        "Variable 01",
+        "Variable 02",
+        "Variable 03",
+        "Variable 04",
+        "Variable 05",
+        "Variable 06",
+        "Variable 07",
+        "Variable 08",
+        "Variable 09",
+        "Variable 10",
+        "Variable 11",
+        "Variable 12",
+        "Variable 13",
+        "Variable 14",
+        "Variable 15",
+        "Variable 16",
+        "Variable 17",
+        "Variable 18",
+        "Variable 19"
+      ],
+      "value_limits": [
+        0,
+        1
+      ],
+      "effect_limits": [
+        -0.85,
+        0.85
+      ],
+      "effect_label": "Supplied contribution",
+      "value_label": "Supplied feature value",
+      "title": "Class 0 | contribution detail",
+      "subtitle": "All 19 features and 1,330 contribution records / original feature order"
+    },
+    "contract": {
+      "source_definition": "Frozen public synthetic table: examples/gallery/figures/R11/R11.tsv",
+      "independent_unit": "Synthetic identity only; no biological sample or scientific inference",
+      "denominator": "all contribution rows for Class 0; other classes exported separately; shares exported as CLR08",
+      "value_definition": "All plotted channels supplied explicitly; exact units and source selection in FigureSpec",
+      "uncertainty_definition": "Supplied display intervals or explicitly not applicable; never estimated by this renderer",
+      "synthetic": true
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Supplied channels": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "table": "examples/clarity-v070/CLR03/CLR03.tsv",
+  "fixture_definition": "Existing public frozen software fixture; no research inference"
+}

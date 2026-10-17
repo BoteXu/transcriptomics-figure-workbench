@@ -189,6 +189,7 @@ def plot_feature_facets(data,*,value_label,limits,title='',ncols='auto',point_si
     from figure_workbench.responsive import canvas_budget
     from figure_workbench.responsive import facet_slots
     fig=plt.figure(figsize=canvas_budget(ncols*panel_width,nrows*panel_height),layout='constrained')
+    fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
     axs=[fig.add_subplot(slot) for slot in facet_slots(fig,len(feats),nrows,ncols)]
     norm=Normalize(*limits);artist=None
     cmap=LinearSegmentedColormap.from_list('project_features',continuous_colors) if continuous_colors is not None else 'magma'

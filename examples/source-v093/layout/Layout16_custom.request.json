@@ -1,0 +1,45 @@
+{
+  "id": "Layout16_custom",
+  "title": "Layout 16 | independent display examples | no shared analysis",
+  "panels": [
+    {
+      "id": "Panel1",
+      "svg": "../single/rainfall/rainfall.svg",
+      "row": 1,
+      "column": 0,
+      "column_span": 1
+    },
+    {
+      "id": "Panel2",
+      "svg": "../single/qq/qq.svg",
+      "row": 0,
+      "column": 2,
+      "column_span": 1
+    },
+    {
+      "id": "Panel3",
+      "svg": "../single/residual-diagnostics/residual-diagnostics.svg",
+      "row": 1,
+      "column": 1,
+      "column_span": 2
+    },
+    {
+      "id": "Panel4",
+      "svg": "../single/dashboards/dashboards.svg",
+      "row": 0,
+      "column": 0,
+      "column_span": 2
+    }
+  ],
+  "columns": 3,
+  "canvas_width_pt": 1664.5714285714282,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "label_order": "reading",
+  "packing": "grid",
+  "column_weights": [
+    1.15,
+    0.85,
+    1.05
+  ]
+}

@@ -79,7 +79,12 @@ def apply_project_style(fig,theme):
     for ax in fig.axes:
         for text in ax.texts: text.set_fontsize(theme['design']['note_pt'])
         for line in ax.lines:
-            if line.get_linestyle() not in ('None','none',''): line.set_linewidth(theme['line_width'])
+            if line.get_linestyle() not in ('None','none',''):
+                # Preserve the renderer's hierarchy: a faint guide must not
+                # acquire the same weight as a measured curve. Idempotent when
+                # a wrapper and a composition apply the same project theme.
+                if not hasattr(line,'_project_base_linewidth'):line._project_base_linewidth=line.get_linewidth()
+                line.set_linewidth(line._project_base_linewidth*theme['line_width']/1.4)
     from matplotlib.legend import Legend
     for legend in fig.findobj(Legend):
         for text in legend.get_texts(): text.set_fontsize(theme['design']['tick_pt'])
@@ -98,10 +103,20 @@ def render_with_theme(renderer,data,params,theme):
     """
     import inspect
     theme=validate_theme(theme); settings=copy.deepcopy(params); signature=inspect.signature(renderer)
+    if renderer.__module__=='figure_palette_applications':
+        # These are explicit semantic panel specifications, not guesses from
+        # existing artist colours. Rebind the declared channels consistently.
+        if 'panel_spec' in settings:settings['panel_spec']=bind_panel(theme,settings['panel_spec'],data)
+        if 'panel_specs' in settings:
+            settings['panel_specs']=[bind_panel(theme,s,data[data.panel==s['id']]) for s in settings['panel_specs']]
     for field in ('palette','stack_palette','group_palette'):
         if field in settings:
             if not isinstance(settings[field],dict): raise ValueError('Explicit named category map required')
             settings[field]=group_palette(theme,list(settings[field]))
+    if renderer.__module__=='figure_core' and renderer.__name__=='plot_curve' and settings.get('palette') is None:
+        models=list(dict.fromkeys(data['model']))
+        if set(models)<=(set(theme['group_slots'])|set(theme.get('category_colors',{}))):
+            settings['palette']=group_palette(theme,models)
     for field,role in [('node_color','primary'),('up_color','positive'),('down_color','negative')]:
         if field in signature.parameters: settings[field]=theme['roles'][role]
     if 'continuous_colors' in signature.parameters:

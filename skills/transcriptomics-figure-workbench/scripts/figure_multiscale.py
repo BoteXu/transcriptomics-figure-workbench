@@ -25,7 +25,12 @@ def plot_ternary_composition(data,theme,*,components,denominator_definition,titl
         for k in range(3):
             others=[j for j in range(3) if j!=k];a=vertices[k]*fraction+vertices[others[0]]*(1-fraction);b=vertices[k]*fraction+vertices[others[1]]*(1-fraction)
             ax.plot([a[0],b[0]],[a[1],b[1]],c='#DCE2E7',lw=.55,zorder=0)
-        ax.text(fraction, -.036,f'{fraction:.1f}',ha='center',fontsize=8,color='#647480')
+        # Tick position is the same barycentric fraction as the grid line.
+        # All three components receive their own increasing direction.
+        for k in range(3):
+            j=(k+1)%3;p=vertices[k]*fraction+vertices[j]*(1-fraction)
+            shift=[(-.033,.012),(.0,-.036),(.033,.012)][k]
+            ax.text(p[0]+shift[0],p[1]+shift[1],f'{fraction:.1f}',ha='center',va='center',fontsize=8,color='#647480')
     xy=v@vertices
     for g in pal:
         ix=(d.group==g).to_numpy();ax.scatter(xy[ix,0],xy[ix,1],c=pal[g],s=26,ec='white',lw=.4,label=g,alpha=.80)

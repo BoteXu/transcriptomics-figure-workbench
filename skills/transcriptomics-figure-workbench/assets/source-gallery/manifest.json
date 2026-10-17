@@ -1,0 +1,2207 @@
+{
+  "version": "0.9.3",
+  "records": [
+    {
+      "id": "heatmap",
+      "form": "heatmap",
+      "assets": {
+        "svg": "heatmap/heatmap.svg",
+        "png": "heatmap/heatmap.png",
+        "pdf": "heatmap/heatmap.pdf",
+        "tsv": "heatmap/heatmap.tsv",
+        "example.spec.json": "heatmap/example.spec.json",
+        "request.json": "heatmap/request.json",
+        "preview": "heatmap/preview.jpg"
+      },
+      "sha256": {
+        "svg": "577b357c39578741a62787988366053c17a4508e85eea5a1157b874fe5115ff2",
+        "png": "7509d44e203193bc0fa6802ce629b5e7ac2c548d54c9f37102b257ee8ccca26a",
+        "pdf": "9eccc7e90a4ba82eaceb8876dc390d65414b1e33a7729613ff1165dcccf243b4",
+        "tsv": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+        "example.spec.json": "1537fd486df78126e93090aab5ba650c40336ea27a6b1c2039415923804e1e4b",
+        "request.json": "6a382ba51f84b84a9ec830ffd3546a9547d1abe2853a0f9eb5ffe5f5b9f4eb21",
+        "preview": "616f619fb144e29e90abf5b369b680d88092ab4c702f9f77e7b776bff6029e96"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "dot-matrix",
+      "form": "dot-matrix",
+      "assets": {
+        "svg": "dot-matrix/dot-matrix.svg",
+        "png": "dot-matrix/dot-matrix.png",
+        "pdf": "dot-matrix/dot-matrix.pdf",
+        "tsv": "dot-matrix/dot-matrix.tsv",
+        "example.spec.json": "dot-matrix/example.spec.json",
+        "request.json": "dot-matrix/request.json",
+        "preview": "dot-matrix/preview.jpg"
+      },
+      "sha256": {
+        "svg": "9b786374a08af0fa825e3e1440740d368cef2e206b16ca75c93d310d552ef7e4",
+        "png": "5317c67f958cac6d1404b879c4f95ea941fdc426dfb06126c536bc7eefbce78f",
+        "pdf": "92b7a9705253677020eba99757627b1bc0bae6b05e937492a8ba54efb7a9fab8",
+        "tsv": "d8e8b4af40fe1d0c072a95e23973083d13657d791bcc8fb6833d23391e95187c",
+        "example.spec.json": "64557105f8b4856019149299f43d4a58dbf73690cc7a2043ca8d37ac77d3f294",
+        "request.json": "adb7aadd136648f2e56ca8140723e2e69687364b11ea2e2ae125a75a661c996a",
+        "preview": "497b6aa6705632fe543bf68071e2c0fb06cca93024dcb708170600f641decb99"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "forest",
+      "form": "forest",
+      "assets": {
+        "svg": "forest/forest.svg",
+        "png": "forest/forest.png",
+        "pdf": "forest/forest.pdf",
+        "tsv": "forest/forest.tsv",
+        "example.spec.json": "forest/example.spec.json",
+        "request.json": "forest/request.json",
+        "preview": "forest/preview.jpg"
+      },
+      "sha256": {
+        "svg": "85f360f18fa95935268d64b9076bdf649c9e74068da23b8ce38b03c8ba79691c",
+        "png": "5a4940a4b54648caad485f1bbc2b587ab4c469b4e6989bc77fc03067cc1d2fe2",
+        "pdf": "de0a41769686320647ff2cb3f3d560cea95f4250ed9eb5b44a9564cc6001dbfd",
+        "tsv": "d25faa1d902fb7c6c31605f7b1da20147cbc2ff319c2d5c247efe594f6cc5772",
+        "example.spec.json": "7449ce8ec9ae9908ff89938e38d1f5aa6272c0efb3991e40493b0194c9094cbe",
+        "request.json": "a62d758833dd2edad0b56691aa81784b7b98a02c246e33a767d3798548e6d151",
+        "preview": "e943e62392f75e47213a2a6cc342223faf8cd8822b2c23bee5de1b57722945f3"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "volcano",
+      "form": "volcano",
+      "assets": {
+        "svg": "volcano/volcano.svg",
+        "png": "volcano/volcano.png",
+        "pdf": "volcano/volcano.pdf",
+        "tsv": "volcano/volcano.tsv",
+        "example.spec.json": "volcano/example.spec.json",
+        "request.json": "volcano/request.json",
+        "preview": "volcano/preview.jpg"
+      },
+      "sha256": {
+        "svg": "105b80023c935118b8021998044cdfb28513feb08a0578a0b6f35020bbe0c677",
+        "png": "20e7577597f6010d50cc6b71a7420de12dbc2a3ff58921fb626faa6d231d7107",
+        "pdf": "8cdadc08d74b742d850858bcf96463c50a5fda98e218d8a798c57ee9ac4ae6ac",
+        "tsv": "4fd4a4d60cca2ea27471d4bd30209572356f2ff75e063bdac97f04bd04723d74",
+        "example.spec.json": "4bdde01ca6cb4da1de98156ab65cb7e08dbb8b91ea01e55891d562c707c596a6",
+        "request.json": "fb7b69501df8614a3d38775dc561944ec5674a33e3276394205dae5d6d9a0866",
+        "preview": "a58dc793432c9f34969557b6282858427283973b55e31d46fac1b32657824b30"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "gsea",
+      "form": "gsea",
+      "assets": {
+        "svg": "gsea/gsea.svg",
+        "png": "gsea/gsea.png",
+        "pdf": "gsea/gsea.pdf",
+        "tsv": "gsea/gsea.tsv",
+        "example.spec.json": "gsea/example.spec.json",
+        "request.json": "gsea/request.json",
+        "preview": "gsea/preview.jpg"
+      },
+      "sha256": {
+        "svg": "dd3457e18ed45bcf904126fd82dee29bcccf0a983f2cd386df4f2281b5605a34",
+        "png": "b0f4fe7119deab1f8ea7e7f61ddcddebcef1fb2f04c536a2e9f1e5fb30077196",
+        "pdf": "c5b929c83c3328588725241fce50d1d5b03c0749f381bb6f0f3754e4b7b67e22",
+        "tsv": "6cbb8430f5747347277ba56420c37ff0b8ec748445022fb862e7ebc4d6a59e5a",
+        "example.spec.json": "7822a381c1c86c641cb6a37fdeddec0eee13be9db7c386601077e6dfa326b20a",
+        "request.json": "9f848b57b4147a1841450d0b13c1e94f4daf92da0f3f6ba96f77026cad8f6d93",
+        "preview": "dc7d999e4baeefc0a6b49e901f7077cd54502e632baa971ece623fca16d186f8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "enrichment-summary",
+      "form": "enrichment-summary",
+      "assets": {
+        "svg": "enrichment-summary/enrichment-summary.svg",
+        "png": "enrichment-summary/enrichment-summary.png",
+        "pdf": "enrichment-summary/enrichment-summary.pdf",
+        "tsv": "enrichment-summary/enrichment-summary.tsv",
+        "example.spec.json": "enrichment-summary/example.spec.json",
+        "request.json": "enrichment-summary/request.json",
+        "preview": "enrichment-summary/preview.jpg"
+      },
+      "sha256": {
+        "svg": "831a78a59caf5d358520fba836502d6880ac8c0a78eb7dc9d5acd554830a1922",
+        "png": "dc185dbb32ed2313be23f2b40ae341629a4e221a98b8f485edb08b3120f65e9d",
+        "pdf": "4d3ab181202bb5b41e4fda48e6001cdc8c4b3f07ddfd76d027b3ef750e831fb3",
+        "tsv": "f72a08f71dc1c42880f6417542028af6f74bcbb6068de21dba15885c77499f4f",
+        "example.spec.json": "e8c02fb1bd8dc520b692fb433efa821d8806486b6407880ccc243da260c08c4a",
+        "request.json": "8e4d475ce03917c33db1cab63ff40f06ece34081fc1b5c72853f27f97d36b41a",
+        "preview": "39f55883c32256f726fc03b133446fba84e6ec4299b0c5d0e37416f160ff5fd4"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "term-circle",
+      "form": "term-circle",
+      "assets": {
+        "svg": "term-circle/term-circle.svg",
+        "png": "term-circle/term-circle.png",
+        "pdf": "term-circle/term-circle.pdf",
+        "tsv": "term-circle/term-circle.tsv",
+        "example.spec.json": "term-circle/example.spec.json",
+        "request.json": "term-circle/request.json",
+        "preview": "term-circle/preview.jpg"
+      },
+      "sha256": {
+        "svg": "43d35b445afba52e9a0833f3c3fc8c6fbf767f17c0a8a6f572082119b77a6419",
+        "png": "c098be06fadf6037cb439da5bff0d4aa1a4dcae1212db8fd1e8da8a29ef43901",
+        "pdf": "00f1952aa26a0772f3bd9b6d960971ddd36322fbda73bce2c257b2de1e25dc0f",
+        "tsv": "a8ad60ee78748c44881ac93fda1c14871db0c1051429346e487a7b06d4616667",
+        "example.spec.json": "06dc02c1fbb768f1c8ff248b2cb04b9853e57e406dc054f95ccc727e1bedad59",
+        "request.json": "7f17c8dc4c96546ec2feac798d8bf57859a2125f231943097b61b15d490c8b16",
+        "preview": "8d3ee14f84028e058272c977fc53414f750657619e0382c43279d796ab28bbee"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "paired",
+      "form": "paired",
+      "assets": {
+        "svg": "paired/paired.svg",
+        "png": "paired/paired.png",
+        "pdf": "paired/paired.pdf",
+        "tsv": "paired/paired.tsv",
+        "example.spec.json": "paired/example.spec.json",
+        "request.json": "paired/request.json",
+        "preview": "paired/preview.jpg"
+      },
+      "sha256": {
+        "svg": "44df70a5883af2006218dc4d750da5064fcb4f90395d6d0be088f2b1a5b4d5ba",
+        "png": "6d6f455f44500ab0eb31752eb917681a30da9af9b62a04a59296be7698a9c962",
+        "pdf": "f6c3aa3cb20743e2b3ff6e30e512d8b1bf5a910aef8ddf04c8cb8551bedfbfef",
+        "tsv": "9cb4156e548087be651040013f4e861b7663012ccd9e2c4e5e3c82c148416dcf",
+        "example.spec.json": "2782a337590c7cc58fadb09510366dbc70c064d6012f08e4c0647c4d67f1e4c0",
+        "request.json": "28242ac5f12244bbaa6b696f0f721f4f33112f3820de96925482a29a1293107a",
+        "preview": "cdbb23ee9e69a83c2c1f933248610de60f97aa0d0db9fb7daee8406135766055"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "point-interval",
+      "form": "point-interval",
+      "assets": {
+        "svg": "point-interval/point-interval.svg",
+        "png": "point-interval/point-interval.png",
+        "pdf": "point-interval/point-interval.pdf",
+        "tsv": "point-interval/point-interval.tsv",
+        "example.spec.json": "point-interval/example.spec.json",
+        "request.json": "point-interval/request.json",
+        "preview": "point-interval/preview.jpg"
+      },
+      "sha256": {
+        "svg": "d8aa272050b6eb515b58905a1a64f1764946ef74b15771365c46b7bdf6dbda72",
+        "png": "f61ba1f92dd12fc69fbe970a9fde4082794997f7cd7fd1cde6380bc14a2975a2",
+        "pdf": "9cb381db6dd4ebfd46d68939d4614783de37cb0b0ab58312772d41b223586312",
+        "tsv": "302a8db6079b201d31b2280898efebf3d268a506332e875e3b7a8bfb8560e13d",
+        "example.spec.json": "c88293883117a19408bac30df501419e6ec931e132a69955f55ae4ec9892bed0",
+        "request.json": "896614a843ae59b051f0de41c6c3d652ee425e58c1820b65bee4e1cd6fbb2ff9",
+        "preview": "61b25964fe845690e152ea29f86ac796a5aae415027c8950b01d63ec292d9170"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "raincloud",
+      "form": "raincloud",
+      "assets": {
+        "svg": "raincloud/raincloud.svg",
+        "png": "raincloud/raincloud.png",
+        "pdf": "raincloud/raincloud.pdf",
+        "tsv": "raincloud/raincloud.tsv",
+        "example.spec.json": "raincloud/example.spec.json",
+        "request.json": "raincloud/request.json",
+        "preview": "raincloud/preview.jpg"
+      },
+      "sha256": {
+        "svg": "3eee5289ec0ff2ddfd0a9ac0bce20b334e1d81bce4064ddcbbae3f7d1a1c92f5",
+        "png": "c4067d548f16cb763740454261c72c385bceadee8c991a6bfde1ac365a30a35a",
+        "pdf": "86af7748796086e620ed11d56e3c332664bb779f651638c24cad32d1c1d509f8",
+        "tsv": "302a8db6079b201d31b2280898efebf3d268a506332e875e3b7a8bfb8560e13d",
+        "example.spec.json": "1acc85ad0e838b896deaf97a70dfd345cd0f4af0e39bbfdb06bd1120fcf2f3a4",
+        "request.json": "ea52a2e24e7b854f8f73373707442dde5c44e251063bd10abe7cdc97a26a7d22",
+        "preview": "adb55138ab7211cd733f025683985d5dbce7898e56db219daf7c8f549e61ebf8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "box",
+      "form": "box",
+      "assets": {
+        "svg": "box/box.svg",
+        "png": "box/box.png",
+        "pdf": "box/box.pdf",
+        "tsv": "box/box.tsv",
+        "example.spec.json": "box/example.spec.json",
+        "request.json": "box/request.json",
+        "preview": "box/preview.jpg"
+      },
+      "sha256": {
+        "svg": "28837d3061e728e52f5ea89de8cd0daa55ef2565a45d5f91b22d9254bc95b1a3",
+        "png": "6b86525b1a3b006f8950141bc5752f541bd8bf47d2e522ad3dc52fa0e6ac3064",
+        "pdf": "b7afbf3c0bf0d2c7157dc9e5b65466bb9ef9873b58f072a4b5dfe3ae128458c5",
+        "tsv": "dd197f9f93a24451feba3ecec0550ed0a7dd01af875480d1835f1dd068dca772",
+        "example.spec.json": "bf9c97038e66e975b113f2846c13c6e0070cd53cf34e9876df85d87e36b72547",
+        "request.json": "c73ef8c2ac4bebd059af5d40815f316cb201018214b9350f1fa6f36268edf594",
+        "preview": "ff27652a6a850da4f1bcb7781344a847a98673b815219be7f3f1619934ee3070"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "violin",
+      "form": "violin",
+      "assets": {
+        "svg": "violin/violin.svg",
+        "png": "violin/violin.png",
+        "pdf": "violin/violin.pdf",
+        "tsv": "violin/violin.tsv",
+        "example.spec.json": "violin/example.spec.json",
+        "request.json": "violin/request.json",
+        "preview": "violin/preview.jpg"
+      },
+      "sha256": {
+        "svg": "aafc16efb1de06c1008ac44c2fcfc671835c612c5d66c3553f89cf7f649f1872",
+        "png": "690f273ebb14f27c5869f80078d4edb6dc6a5548edae79083eff882ef2e0cd94",
+        "pdf": "03c3a0cc770bf5ae9edcafa0cec480526adf21ce54ab5bb9afa178e97931defb",
+        "tsv": "dfc99cadf67e80f214a8c85c731673d229fd6172066cde89b73dd9be22f7fbf5",
+        "example.spec.json": "f31ce65e8d7295ec71d7a13848089ea1647a7b3f1fb55a196150505cca57534a",
+        "request.json": "f862a63538f2a3726bb8aeb8cfadd4ac1e87e6b15c9d6966ded1c91e6413eac8",
+        "preview": "5ca3afb36fb876435f4173907622dcf48dc81c533f9de76d9fdb439815447c5b"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "embedding",
+      "form": "embedding",
+      "assets": {
+        "svg": "embedding/embedding.svg",
+        "png": "embedding/embedding.png",
+        "pdf": "embedding/embedding.pdf",
+        "tsv": "embedding/embedding.tsv",
+        "example.spec.json": "embedding/example.spec.json",
+        "request.json": "embedding/request.json",
+        "preview": "embedding/preview.jpg"
+      },
+      "sha256": {
+        "svg": "370cdddfc246325bc3d556e87c550112744b13359d414a35ad72710000d32eb1",
+        "png": "9dc9b660a907828ca57bd0bc1bee7f27a9f06029e87128d24d8e06dce828510c",
+        "pdf": "9d9e3864a76acfdf54e69f3893304b0716e967f3ca4bf8e75b2421247e3d4469",
+        "tsv": "ecdf93aba0835066c06183e08f06301c0b39209f886e921a60823ad612b2a9c1",
+        "example.spec.json": "fd01be2cab4722b94e9bc98f79c9df9688adc05976c0aaf75e5aa12451ba0532",
+        "request.json": "3093e0190f9ef2602ae0676c5dc0b48cbcb9322dfe8e00d85161a616440f9cea",
+        "preview": "a0efe1127dee5f8ded1bcb5b9bba0cf6f92d19a8e3d489b007b18a4ad3c3209a"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "feature-embedding",
+      "form": "feature-embedding",
+      "assets": {
+        "svg": "feature-embedding/feature-embedding.svg",
+        "png": "feature-embedding/feature-embedding.png",
+        "pdf": "feature-embedding/feature-embedding.pdf",
+        "tsv": "feature-embedding/feature-embedding.tsv",
+        "example.spec.json": "feature-embedding/example.spec.json",
+        "request.json": "feature-embedding/request.json",
+        "preview": "feature-embedding/preview.jpg"
+      },
+      "sha256": {
+        "svg": "bd0d0465df13cb2abff26eeb15645691f2e039daf2d6d85b604f6907cec084dc",
+        "png": "65ac3d67368530129956418e0c612f5bf867ec4b72bce42380e3e9f2193a3304",
+        "pdf": "7a3ba49bab9ff36ac9f9269b996090b78babf56607c519039b7f2573805a5569",
+        "tsv": "d8aed4d9dc3503b006afbab5f2d1bf35d5c8d36436b1b0ff7f4a1e2a9fd518c6",
+        "example.spec.json": "c2b7eb6c038259e29c64e21b9adb69ca8cfd5edfa719c1f1d21e64a3b0a093b5",
+        "request.json": "99e21347dcd0fbaef30c08fc10684f703163d32239b68af102f8f8eaf6998a35",
+        "preview": "ab93377e1e368e2fc3aeae4ce949d11c671ab9837b63b8d8daeeab3fc7fcb5ae"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "scatter",
+      "form": "scatter",
+      "assets": {
+        "svg": "scatter/scatter.svg",
+        "png": "scatter/scatter.png",
+        "pdf": "scatter/scatter.pdf",
+        "tsv": "scatter/scatter.tsv",
+        "example.spec.json": "scatter/example.spec.json",
+        "request.json": "scatter/request.json",
+        "preview": "scatter/preview.jpg"
+      },
+      "sha256": {
+        "svg": "99993a86cb864c9cda269ab99eeaa8d4ad2d015ed5b36ad72087cb1b4b64d1e5",
+        "png": "5ca211a11e7c6b7e1ba55653b26e68813933db9f753d4f838fdc7d0dd6ff3b57",
+        "pdf": "4d430846baa651fbd72596fd3a8836696bcc6ef104ef3997ea4fedc883b9ee46",
+        "tsv": "302a8db6079b201d31b2280898efebf3d268a506332e875e3b7a8bfb8560e13d",
+        "example.spec.json": "75140e2128047e1db5204e38a25d44ccf2764e636f56afa9a0ea2794212c5221",
+        "request.json": "94b8943fe3b4ea61dc848531554227ebe239d65097d8821c76b954e3597d671a",
+        "preview": "91706fb545d698f0f4386be7be44351e6ea312b4007f2428c50505c2b4764cd1"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "ribbon",
+      "form": "ribbon",
+      "assets": {
+        "svg": "ribbon/ribbon.svg",
+        "png": "ribbon/ribbon.png",
+        "pdf": "ribbon/ribbon.pdf",
+        "tsv": "ribbon/ribbon.tsv",
+        "example.spec.json": "ribbon/example.spec.json",
+        "request.json": "ribbon/request.json",
+        "preview": "ribbon/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b14294b0a1456425706a17112b3a2bb94891af62d32fc1d44f4f2fe6b7d7466a",
+        "png": "9bd05e8ae126df673627cb4e18fea31348d3ab3911a66ba1a63b3a5c3cc422a8",
+        "pdf": "3ffa2fd94b9cadff70274d8c1965432dc14b48fc578d2e7ea750f001ea95d5c6",
+        "tsv": "eb0633d9a1d24d9ccc5608a7ee3c164eedd5862a5cbb9dbe11190bb204f590ca",
+        "example.spec.json": "9369a168d12a73beb7c7ff0c0ff1a0c4693557c4fa5dad3e2f2852fdefd3b719",
+        "request.json": "1c479fc6445cfd349f311e0627be80f858b704747ce2adf87fa255b9aa0c3824",
+        "preview": "41e87eaa6a5b800ed5179f99b4bca3179418d9b38580804f7925437592fce0a3"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "profile",
+      "form": "profile",
+      "assets": {
+        "svg": "profile/profile.svg",
+        "png": "profile/profile.png",
+        "pdf": "profile/profile.pdf",
+        "tsv": "profile/profile.tsv",
+        "example.spec.json": "profile/example.spec.json",
+        "request.json": "profile/request.json",
+        "preview": "profile/preview.jpg"
+      },
+      "sha256": {
+        "svg": "fe5b20dcc1c2231a1f3cbbe931582711a818f3d0d1378a9144a80e32ceab6e7f",
+        "png": "061d5b540aeb4691ef29466a4d64f393d170356536439ffd7458966fa5dcaf2b",
+        "pdf": "b7d164303ae1bf98e7bcc2f4546d2a04d9a963a5d59009fc5b006935b6b50976",
+        "tsv": "68475f378198dac4f2c663c31408db02d7c79556620946c340f3330802f267e3",
+        "example.spec.json": "534b309452ee8cc4862d090d03a37280e72cc444691cc6e2bf091be3868edc65",
+        "request.json": "7fefedc5c17c08b607e1f9d8e1c2fb55fd3dfb86dadc9b103245a09ca7fee982",
+        "preview": "a182b8558446bcd1ffaf850fec1d5115e1d4bb6f421cab7123eb1b632fdedaea"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "bars",
+      "form": "bars",
+      "assets": {
+        "svg": "bars/bars.svg",
+        "png": "bars/bars.png",
+        "pdf": "bars/bars.pdf",
+        "tsv": "bars/bars.tsv",
+        "example.spec.json": "bars/example.spec.json",
+        "request.json": "bars/request.json",
+        "preview": "bars/preview.jpg"
+      },
+      "sha256": {
+        "svg": "316aa9c9777bd0f1805632d291dcd0ef3e1906bc21da90c014a87bd57a14e302",
+        "png": "2c662d90d486415d1e7d20cb80999e0525ac7782aacfffc808e73c3159fdec27",
+        "pdf": "f1042719462fe0b12ef9d5b13e11dd955130d7430bfad5853708f2a074fb025d",
+        "tsv": "ca8bcf126bc6d38dc1a26d703916f9d4ab94dd864c33071f6499397b9fd493cf",
+        "example.spec.json": "f165bba28361df32c6d63a0e6a30aac0a30d9cd0e323d3b33efabc3f983d3ab5",
+        "request.json": "1d11667e1305f7f71b2fd31248dfbf88d6dbbfbcd994630e0ee07d62c908d4de",
+        "preview": "f6e40bf6589218b41c3f88da657801ed590be390b83be35b128aed9bb8adf8e7"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "stacked",
+      "form": "stacked",
+      "assets": {
+        "svg": "stacked/stacked.svg",
+        "png": "stacked/stacked.png",
+        "pdf": "stacked/stacked.pdf",
+        "tsv": "stacked/stacked.tsv",
+        "example.spec.json": "stacked/example.spec.json",
+        "request.json": "stacked/request.json",
+        "preview": "stacked/preview.jpg"
+      },
+      "sha256": {
+        "svg": "1f86f5f36ecec28ad055f49479bcbea891e327e5045a0fde8f750660e7f04447",
+        "png": "6385a0375e7ab736fa14feda78970eabbcabb44de6fb53a252c9fb887809b409",
+        "pdf": "52be801a0432d0a8c0e64ab857400c75d457ebaa7b856274adf5fcdc28e07b9d",
+        "tsv": "550245618ff02a55b77fb3c68810e2461804cc13fed948423de391f2e7ceec54",
+        "example.spec.json": "bd5b3e66af79abf393d9752d9413c94e6d6e122498f7d788170816c5875d8267",
+        "request.json": "42f6b06fda0f76231cb9a50f992b4fe47c4cf66dee3b6a95190543677bc713f0",
+        "preview": "459d9966da65e12b5ebeb1c0c8ff5cab3bce3d50d1f457cd4d414fb707551a91"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "donut",
+      "form": "donut",
+      "assets": {
+        "svg": "donut/donut.svg",
+        "png": "donut/donut.png",
+        "pdf": "donut/donut.pdf",
+        "tsv": "donut/donut.tsv",
+        "example.spec.json": "donut/example.spec.json",
+        "request.json": "donut/request.json",
+        "preview": "donut/preview.jpg"
+      },
+      "sha256": {
+        "svg": "432faa9694e77fd1659fa719ae88706408531e9fe69fb61119c95b77af54f4da",
+        "png": "6ecb528e36bbf9e423721b27b4f030f0d3f0ac9c78164072f8ee97ef9bfa7a62",
+        "pdf": "95720a7a81618ab9cd57155ad1039b5d046f0ee468c4005fe9f422289dbe1f4d",
+        "tsv": "2cc418f913ef523467c5366ec25dbc526168fb9dd66f1d5dc01831327ef5ef89",
+        "example.spec.json": "55c4a6dd84a1875c0dadab8d02ca83d4956f77b1d2f4d3a56895d3a48bc272c9",
+        "request.json": "ff18831337ec85dcbe1fc4c4afa90c3e33d9ab0ff0be36d755347d57fafe8736",
+        "preview": "67668f229b0c9b7f75e53bd1d30ab7ed5ed95511d7711efa000ba30b0540ba65"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "histogram",
+      "form": "histogram",
+      "assets": {
+        "svg": "histogram/histogram.svg",
+        "png": "histogram/histogram.png",
+        "pdf": "histogram/histogram.pdf",
+        "tsv": "histogram/histogram.tsv",
+        "example.spec.json": "histogram/example.spec.json",
+        "request.json": "histogram/request.json",
+        "preview": "histogram/preview.jpg"
+      },
+      "sha256": {
+        "svg": "c02513cd75e207fdb539da67bbf13c22e1f2bd4635e0a328c710d29818f593c8",
+        "png": "b70828b433b9f94f61771bc47158b7ffa944cfe032159e59d124873f06eccaff",
+        "pdf": "5ca1a4495cc4839cc01f36ba2ba4cb138abc416c7cfc1e8ac0561c011931a45d",
+        "tsv": "06a29e82665b88fd86ed211762f61b33e2abffb66d5947db4e8183dcd3c089b6",
+        "example.spec.json": "88f69287ac46548041d71e900cc4585e7d9c21be97183178941a3e38fb681527",
+        "request.json": "b4ff644780fa00c25b155e0de38a6e29d3e8dca284576a97c2a078b7968928db",
+        "preview": "8684b6974c927932257b5c9759cd217f570331218aeb7c5986c21f946a353a0c"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "ridges",
+      "form": "ridges",
+      "assets": {
+        "svg": "ridges/ridges.svg",
+        "png": "ridges/ridges.png",
+        "pdf": "ridges/ridges.pdf",
+        "tsv": "ridges/ridges.tsv",
+        "example.spec.json": "ridges/example.spec.json",
+        "request.json": "ridges/request.json",
+        "preview": "ridges/preview.jpg"
+      },
+      "sha256": {
+        "svg": "24564125ff02df6c23e858d61a2b1098501314ed3f79b8ca513278a0c1eae597",
+        "png": "5992562fd487e3824ba85afbbd4758e3e3415d8735a06a72846356a055ecf8bd",
+        "pdf": "3e04ec7ec53af11b65237eeff3745a234142d8a39f19409ae7717faff091e655",
+        "tsv": "6ad55ffe3edd8ca0cad9fbfb0a3c7026235d85b3f43d833340cd85b36c56ea80",
+        "example.spec.json": "dd7b762309064e8504806be0d12c909ecb4a7a6dd9f0f5f79ecc6cf0dec20d55",
+        "request.json": "8a77e331ec0e3f236a52f0a8e694bfb10a1812414aeb3525bf3e34c6b67d6ed7",
+        "preview": "e9966b7ad587d733c70071cf273429f5d9d239a4592d37e41103d57a75dc08e9"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "roc",
+      "form": "roc",
+      "assets": {
+        "svg": "roc/roc.svg",
+        "png": "roc/roc.png",
+        "pdf": "roc/roc.pdf",
+        "tsv": "roc/roc.tsv",
+        "example.spec.json": "roc/example.spec.json",
+        "request.json": "roc/request.json",
+        "preview": "roc/preview.jpg"
+      },
+      "sha256": {
+        "svg": "9af1810406357a7b3d88bf617a9a7747ca47086b802c0758f538a6155584f627",
+        "png": "ed3c1c3e82165b26047c02136e6d17b6d70ab8935d927bfd1103a0f29f2e7fc8",
+        "pdf": "94c80d6a90d00c888f2356feb67cae0faae4c4a1574153829dcb912121f74b09",
+        "tsv": "deb7b0523c961b42e4aadb8f1ef42f10d589cb9f27ee5a3063e9ab8f9fea284b",
+        "example.spec.json": "d853b484dcc9a8fc9feba9c6ac89e817332c601d1335b8c4c3f3e00b1ddd14c9",
+        "request.json": "3751e10aeab0a810ff92a0da42d1d8cc8d8840353e18fba9968b3961af680240",
+        "preview": "ccc06194c7156c02043440447a42010424ed34ce2c45f4a58242a7afaf78c385"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "precision-recall",
+      "form": "precision-recall",
+      "assets": {
+        "svg": "precision-recall/precision-recall.svg",
+        "png": "precision-recall/precision-recall.png",
+        "pdf": "precision-recall/precision-recall.pdf",
+        "tsv": "precision-recall/precision-recall.tsv",
+        "example.spec.json": "precision-recall/example.spec.json",
+        "request.json": "precision-recall/request.json",
+        "preview": "precision-recall/preview.jpg"
+      },
+      "sha256": {
+        "svg": "00aaea6b6fe15ec2655ac58822a5e26e3ec91fca94bc547ab536de7ee460f9e8",
+        "png": "ea106df8d6086c18bae59d54d631f4dd7b09f5e6f2832bc5249d6df43333c2b2",
+        "pdf": "794d36d376aaef0673041d614640a615c777f01eee4139360cf885c970a2981f",
+        "tsv": "5f8c58e258a7c6fcf3096b87bc0217cb0582b2ff9d78d185fe23dba30f1ad8d9",
+        "example.spec.json": "d24c341ed862a469c949322b810e36866ccf6829759b3f8e7de0fb4fe1d27cc8",
+        "request.json": "4f1b04807f1c3d41192db02c103def60857a40c0dbbb65c5832079cb698bea4a",
+        "preview": "743516e872e760182a878df7dfbded965d9a3f00fffb092dba5ae809afb9ed54"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "calibration",
+      "form": "calibration",
+      "assets": {
+        "svg": "calibration/calibration.svg",
+        "png": "calibration/calibration.png",
+        "pdf": "calibration/calibration.pdf",
+        "tsv": "calibration/calibration.tsv",
+        "example.spec.json": "calibration/example.spec.json",
+        "request.json": "calibration/request.json",
+        "preview": "calibration/preview.jpg"
+      },
+      "sha256": {
+        "svg": "0686124f7c98ee8d080d04931664b65b2ea301fa786066df52ebf92e69540a44",
+        "png": "1d2e9ab6e111f72c88627da1a72527662e35b4c9728b497296e74254685180b2",
+        "pdf": "afd87e19fdb7f9f570375cf3884c98cbeea3cb8ed1bbf49294d3f02efe9c7d1a",
+        "tsv": "7b2f0023d386464fce2f5728251a4eb6c368d4208665c302f7f63b0d6932dee4",
+        "example.spec.json": "654f1dbf71cfd7bd8535a693e1f11facc4ba4e44f9da777ed73312347f0df5d1",
+        "request.json": "1d1f76eebb2e6521ac7da060fd2428cc8ff903f2917df5749b31c640cf596d4f",
+        "preview": "403253bf5d8dc86865db971bca0e6b0c2b93e4285ddaa2671abb0c9178a17fda"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "network",
+      "form": "network",
+      "assets": {
+        "svg": "network/network.svg",
+        "png": "network/network.png",
+        "pdf": "network/network.pdf",
+        "tsv": "network/network.tsv",
+        "example.spec.json": "network/example.spec.json",
+        "request.json": "network/request.json",
+        "preview": "network/preview.jpg"
+      },
+      "sha256": {
+        "svg": "12cbacdf95d3ef3eaa7248ae871bc960143e173c9874c92e61bb91abef61077c",
+        "png": "d18abe4c25ac33538d60bc27d174d9820393fb8f571f928b5717135574db088f",
+        "pdf": "b00f24f929a78c103df645f403848de02dafa5b9f3f68be4e8542051c9a33508",
+        "tsv": "fb0e20ba6bc132670fac15c6ac0e838518c09872a662b971ba6198b5b73b1c23",
+        "example.spec.json": "74a03abdde40b30b06662813302b430fee80b09aadf9bee772a688d5f97bcd96",
+        "request.json": "3cf678b53ea8692793fbf82a6625573d10841928f6070eeb68909982ead5f11e",
+        "preview": "720f844e22246f5c7947d67ebedad1027cf75b16773956e1cf9232d539ec9afe"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "chord",
+      "form": "chord",
+      "assets": {
+        "svg": "chord/chord.svg",
+        "png": "chord/chord.png",
+        "pdf": "chord/chord.pdf",
+        "tsv": "chord/chord.tsv",
+        "example.spec.json": "chord/example.spec.json",
+        "request.json": "chord/request.json",
+        "preview": "chord/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b88eec5cd8f35991610246dee3ac193b39f40a526624cad5f7619e08ee96d7ed",
+        "png": "62e448f383479c93772c5a3097f5151b3bbcf31980302ee3f9f18424a4dd4e37",
+        "pdf": "5fb7b772089935e0e3feafbe958a50812932dfe6f8fe4f08ba15b0317dbd88ad",
+        "tsv": "c92072adec8cc59a5cc1e4e40edfbcab509ac8069a6009d2e88eb8f78116f4a3",
+        "example.spec.json": "13cffae470ea69ec943f519392f9e6e015a15a02f1981b9bf03bc7e882d2cf3f",
+        "request.json": "0a6081dcbd30a62a9d15a8c07d5ee721b7257b8abf3af9b237d821b6ee885f30",
+        "preview": "5a873aa8290564e12166d05657b9050e958d41039a365148f8e56f75b8de24a8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "membership-links",
+      "form": "membership-links",
+      "assets": {
+        "svg": "membership-links/membership-links.svg",
+        "png": "membership-links/membership-links.png",
+        "pdf": "membership-links/membership-links.pdf",
+        "tsv": "membership-links/membership-links.tsv",
+        "example.spec.json": "membership-links/example.spec.json",
+        "request.json": "membership-links/request.json",
+        "preview": "membership-links/preview.jpg"
+      },
+      "sha256": {
+        "svg": "150317db6a45da8d25d789ef5c1c1021418c803dc895c3376529456134c39db7",
+        "png": "2ceba269670635e336393aaf2169d1c45152c373c823d3e47ad612ceb7598b33",
+        "pdf": "333d9aa4f33c288825ad9baf7a4e4386f34a7b5f3cb27c863806bcdc0218280d",
+        "tsv": "8898d23d6eb69fbc32d92b9ab00fed96faa6d5ca36409894c149777a73a34d67",
+        "example.spec.json": "63bb1f9534c9dd1f16891a3f054cb0eb0ccb9b9909094d62133a7e1f18fd217d",
+        "request.json": "efe40d8186299ee8f3b411655e1440e1d82dc5349245d441f878303eadb778cd",
+        "preview": "a41ab703cb2edb339a9e54f930d1ac4b54fb3cb5bce35530a882694d8908592e"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "flow",
+      "form": "flow",
+      "assets": {
+        "svg": "flow/flow.svg",
+        "png": "flow/flow.png",
+        "pdf": "flow/flow.pdf",
+        "tsv": "flow/flow.tsv",
+        "example.spec.json": "flow/example.spec.json",
+        "request.json": "flow/request.json",
+        "preview": "flow/preview.jpg"
+      },
+      "sha256": {
+        "svg": "19daacb3eb681acb351f73ecd537e47e2c666faa02c3a5dfdf718fe58a1fcdb3",
+        "png": "9a07a90e113a5b984d718a465b6d63c9be2c32e8a4f211eca5ebc0d39f8bbf59",
+        "pdf": "b59b7e3e5ede19acc75ac8fddb34547ca7b32452508ffdd42106d57ec6111614",
+        "tsv": "497982e006e28c9bf5f8696ee16e27911f0e48b9d592dea252ac37f436946a62",
+        "example.spec.json": "966ea3d788d58be3eee12260919c35a4459b383af76fd382afb462f6d06a7595",
+        "request.json": "4204c36844da71ba7644d22147286b162e3ac6c9b79074abe86f89fc8d875ce7",
+        "preview": "1cdaea0be5a8a27069f5d2dbb7750fcfa94b61576851700a26361f57ca333386"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "upset",
+      "form": "upset",
+      "assets": {
+        "svg": "upset/upset.svg",
+        "png": "upset/upset.png",
+        "pdf": "upset/upset.pdf",
+        "tsv": "upset/upset.tsv",
+        "example.spec.json": "upset/example.spec.json",
+        "request.json": "upset/request.json",
+        "preview": "upset/preview.jpg"
+      },
+      "sha256": {
+        "svg": "203fb9d4c6b6d2f74e46c563651bdf59e008f2d515ad8fe00ad7369c57080f30",
+        "png": "1c0556a15e54b16c3d64b847f3dfcec6a408d4a54f581c16a2280943ad4bb7c5",
+        "pdf": "35a3732313ae39af51581037cc5dedaed33ef5d4a201f2a3f4d998df393580c2",
+        "tsv": "c3ddb2ed1619fc8f06c3340c6a7dde47ff2b8f2770f7f9b3d6bb0eaee89277d5",
+        "example.spec.json": "b4889d6fe0a2efa4a5beb2f8bb7ab25992c18dc06d87bf894fa644355d9cb5b2",
+        "request.json": "0569dd59f2191d6a123a9bb34a0fadf67f6a98f04eec998a78472bb4a3f3e44a",
+        "preview": "9f62e62719bb1e216faee95b4c8768d74fdcaa6662c738fa6fdafdb8d29dead3"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "venn",
+      "form": "venn",
+      "assets": {
+        "svg": "venn/venn.svg",
+        "png": "venn/venn.png",
+        "pdf": "venn/venn.pdf",
+        "tsv": "venn/venn.tsv",
+        "example.spec.json": "venn/example.spec.json",
+        "request.json": "venn/request.json",
+        "preview": "venn/preview.jpg"
+      },
+      "sha256": {
+        "svg": "299afd78291a582d9230d29157df45831fe029479f26cafb185958231e228bd4",
+        "png": "d9ffda894fcbe33dca7118bd4b1187b0b4aa64055b2c98de88aab407ebcc4485",
+        "pdf": "38bda159810298ca7ce37c03e31347e3cd24f5a029556a247b6d6e6f37f4f094",
+        "tsv": "b5acc8a21bb947937c2c878afde270f546ff15b36912a8cb18ce8c2d8c5d4e77",
+        "example.spec.json": "8eee8acb72c94280b5e6bf7eed8441e702a77f444dbf86631b8775b74e2f6a33",
+        "request.json": "74c87bead6a0439bb5dc832763d57bacf853025466089098690e6006dbc9ccbb",
+        "preview": "ba00775f7ff18b89a93131b59e17e3094cf19d5ce742cf2ea9e268d4ea4da692"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "correlation",
+      "form": "correlation",
+      "assets": {
+        "svg": "correlation/correlation.svg",
+        "png": "correlation/correlation.png",
+        "pdf": "correlation/correlation.pdf",
+        "tsv": "correlation/correlation.tsv",
+        "example.spec.json": "correlation/example.spec.json",
+        "request.json": "correlation/request.json",
+        "preview": "correlation/preview.jpg"
+      },
+      "sha256": {
+        "svg": "ad2da14faf08f0b5edcc953d1f87b4c73b2daddbfc4c6e6810888b25440fb7ba",
+        "png": "8def9bc274fb7fbb1c69d8fb0804cbc291c6d42be6235b0ba240971bb4b89d52",
+        "pdf": "0fe6c27b93d42e168d3c93963c0d7e9dccbc9b21828c500a8aa6f099f444a38c",
+        "tsv": "cb84687e2516870a7e6498b47c850bb956927ea41410dc9ff2ec09fe45257525",
+        "example.spec.json": "fff43abb0e09ffff5b08ff3c2b1093756906bd3c2695d4117dc44586c386085f",
+        "request.json": "da577cd516082986d5b192d77dd87cf0b1bc78a034f7071cd234a53c8d76bb29",
+        "preview": "6837b783f3ea6c9743415aff0b7137b1e703d577e16586f7f9e1212f7ac20aca"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "joint",
+      "form": "joint",
+      "assets": {
+        "svg": "joint/joint.svg",
+        "png": "joint/joint.png",
+        "pdf": "joint/joint.pdf",
+        "tsv": "joint/joint.tsv",
+        "example.spec.json": "joint/example.spec.json",
+        "request.json": "joint/request.json",
+        "preview": "joint/preview.jpg"
+      },
+      "sha256": {
+        "svg": "36f6b69b2c2825582885efd95c4fe30ec5115de772ee2115c1dbfe4c0187d2fa",
+        "png": "7912a43087c2fc04b49e3c46579e81b9ad2f6a3ee5c794a599c77aae70daa0f8",
+        "pdf": "15aafdda1c9426b8fb8621588bf43a6f4326c60053515716327cf2372dc65a3c",
+        "tsv": "b03ca1bda02f85a4ea230314e975951f80451d9bcc41ea788e8b7c3a02f1784a",
+        "example.spec.json": "498203ffbd15dd0f5998de3b92de3ae17fd33ffc4e472595057ee0e94c82db57",
+        "request.json": "dccfd0f82173672d15fd817370881ba4fa4fc14c0c4d9ee96710d29ec70111eb",
+        "preview": "0495c7015adf128147956de6124f32de4a06ed327c6fbe7f065f10a642f88d88"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "rank",
+      "form": "rank",
+      "assets": {
+        "svg": "rank/rank.svg",
+        "png": "rank/rank.png",
+        "pdf": "rank/rank.pdf",
+        "tsv": "rank/rank.tsv",
+        "example.spec.json": "rank/example.spec.json",
+        "request.json": "rank/request.json",
+        "preview": "rank/preview.jpg"
+      },
+      "sha256": {
+        "svg": "bc43b25fd4492ebcc081b1afbe399400611c48e825e253cb27825c1d7bc0ce2c",
+        "png": "9f78bce76a5aff27b43845a8569654d15cca7938eb109fad9f1eee8ce215a493",
+        "pdf": "1b7e2d0780e791ad11eb4a32d03994cfd42bf2a2f50f9a1f994f3bed36c6be1a",
+        "tsv": "9b0b7ea04240b452b05ccb95b83550dbfbe188cdd3f58ad1e8da1bdefb963ed9",
+        "example.spec.json": "9efd43abff16b7529c2d4bf18884144f8fb501c15a81a23aa27ccecfb8ebda2d",
+        "request.json": "aeab5fa10c4f8e9272b4e60d49e6964bbd866923b119b467408ca53fb0ce9a0b",
+        "preview": "cfc7e2976ecd23866a45dab497899da1d4bb6201b6306bc16d3f1275974da99e"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "gating",
+      "form": "gating",
+      "assets": {
+        "svg": "gating/gating.svg",
+        "png": "gating/gating.png",
+        "pdf": "gating/gating.pdf",
+        "tsv": "gating/gating.tsv",
+        "example.spec.json": "gating/example.spec.json",
+        "request.json": "gating/request.json",
+        "preview": "gating/preview.jpg"
+      },
+      "sha256": {
+        "svg": "cc116285e7694bb8e1bbcc9a9c8a01013ddc0847e18038ec9a08baef23a1713d",
+        "png": "ffa48ce7d024299a75f1c0d1f87cdc4238b3348c5c6fe8d3e076ad6252c8bf18",
+        "pdf": "e2b7bf1b878463174395a9a35f3ce2c340c287a84a32997c95a36aa562cce694",
+        "tsv": "b230210af9aa85e4161d5a5501425f4f688ff533dc0968a6e4090eed3f6a0522",
+        "example.spec.json": "525e275f0c1c54230589fe28bb2789c68d83aeeafd42b1426f46ebd4ed01db94",
+        "request.json": "3ed5334620a85cba6b7a863c6c663ae01877c014ae29b9dc7a8ac5b1d92a0f36",
+        "preview": "5524a3850046ec6af9d2a4e3003f4e57dd72f1b7d7cf32ecefb1840431941596"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "annular",
+      "form": "annular",
+      "assets": {
+        "svg": "annular/annular.svg",
+        "png": "annular/annular.png",
+        "pdf": "annular/annular.pdf",
+        "tsv": "annular/annular.tsv",
+        "example.spec.json": "annular/example.spec.json",
+        "request.json": "annular/request.json",
+        "preview": "annular/preview.jpg"
+      },
+      "sha256": {
+        "svg": "8e1d6a441200681cdcdc43decec3042d79590851005e36a491d9f370be50ccda",
+        "png": "287b5a8c5babead60f76577f86714452a7838167e234c3a4ef295a399a8d3e0f",
+        "pdf": "7fe352c91eef69ecb6f81274c7828990cb6dd884cec2d74a9b3ad03f4d0aa9bf",
+        "tsv": "96fbd46c4ff5317a5c91cf4505581c54a7e60a7d261885711a92dbff3c44ee40",
+        "example.spec.json": "297283d75ce9fe61f288db83efcd51ea04921c6e8df8815379bb5ff35c98e1f1",
+        "request.json": "3de009f9fe15693cebe9b6f8b4e024b5e90bfcf8e49c8e848719369bcdebd4ce",
+        "preview": "fc755948d2106d29acefd9590da527376151b392646a2b344699c0b62ccac36e"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "contribution",
+      "form": "contribution",
+      "assets": {
+        "svg": "contribution/contribution.svg",
+        "png": "contribution/contribution.png",
+        "pdf": "contribution/contribution.pdf",
+        "tsv": "contribution/contribution.tsv",
+        "example.spec.json": "contribution/example.spec.json",
+        "request.json": "contribution/request.json",
+        "preview": "contribution/preview.jpg"
+      },
+      "sha256": {
+        "svg": "950132f6d496c25bb6b5805e4154f3adce5f29916227ab6afa2ce495fb442eee",
+        "png": "86033a36519b20a6cd2e20c91df1bdce123dc2940588ac425a52302c947b3510",
+        "pdf": "0329e250c9b10561e12c6b395061d24495de5ad6e3ca8714cb5ef74a7183d40e",
+        "tsv": "5fb21f0f30792e341f56864daa10c75d4e0c477c72f880e587573c58ac28095f",
+        "example.spec.json": "6711085594e8950c81eae91676dcff122ce3c5dc5ebd3646ad6755794757d898",
+        "request.json": "2adadc5e00b913f0932ad69ac736b69932bb0b8fee6b54ec1373df4cf4bafd58",
+        "preview": "3deb566f8560bc3b502cbb4df02f4b5d96210016ae54f097ab76bed006073aa4"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "effect-distribution",
+      "form": "effect-distribution",
+      "assets": {
+        "svg": "effect-distribution/effect-distribution.svg",
+        "png": "effect-distribution/effect-distribution.png",
+        "pdf": "effect-distribution/effect-distribution.pdf",
+        "tsv": "effect-distribution/effect-distribution.tsv",
+        "example.spec.json": "effect-distribution/example.spec.json",
+        "request.json": "effect-distribution/request.json",
+        "preview": "effect-distribution/preview.jpg"
+      },
+      "sha256": {
+        "svg": "cba0daafcda49d53959a2646f11f8e33649db534b3c0c21174f15deb3de8865d",
+        "png": "3d7b96ce2c796df7820551ba6a8de156926a49a89d8eafad51c88a1f3d3038a5",
+        "pdf": "b3408051338ed4fed62bb47c5da0595afecd4be8108705ee9cb3bfbb3a96d68f",
+        "tsv": "c20f5caef59b40dcbdead2caad10fd99f8c91cd48696cebe4aaf016311b0dabf",
+        "example.spec.json": "13c2ec897a29f4686c0e3c83b62986418bc1e72e48e6956bdd626af4831b0f02",
+        "request.json": "eba3934baa266d1c8c3d6d32988ea8befc3165694120ba7e7125f386f16e8ed0",
+        "preview": "4523d3ad7ac7411ae995647a02d027b69d4778bf70fcff283c68ab1f1add0bd8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "spatial",
+      "form": "spatial",
+      "assets": {
+        "svg": "spatial/spatial.svg",
+        "png": "spatial/spatial.png",
+        "pdf": "spatial/spatial.pdf",
+        "tsv": "spatial/spatial.tsv",
+        "example.spec.json": "spatial/example.spec.json",
+        "request.json": "spatial/request.json",
+        "preview": "spatial/preview.jpg"
+      },
+      "sha256": {
+        "svg": "f53903c817e5b9c44d56123038def663137ab9783fe3d84cef999f779b69b09a",
+        "png": "ad538f38442c809a31e3d5a30e0b1d30ec82846323ef891295965b989d6a9376",
+        "pdf": "e6ac9836fdc636621d5e7acd31ab228375113cd4302452033742a1e990533c7c",
+        "tsv": "d10d02c473993d7426d5911d96d60a86e0e40e5216085dfadb4e91621bf972f5",
+        "example.spec.json": "1a178ab7077ea0a41fab2003d5ffd421b77ef37c7c3eee1935ae3005fd710bb5",
+        "request.json": "56119783610cd5ada02087618de4ca0ce707bd52d2a6ffead91db5f10d5d9f26",
+        "preview": "fa54bfb6a170470a0123882b677d9f2dcad75cc12b88ab9126eb92b54358b2f8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "slice",
+      "form": "slice",
+      "assets": {
+        "svg": "slice/slice.svg",
+        "png": "slice/slice.png",
+        "pdf": "slice/slice.pdf",
+        "tsv": "slice/slice.tsv",
+        "example.spec.json": "slice/example.spec.json",
+        "request.json": "slice/request.json",
+        "preview": "slice/preview.jpg"
+      },
+      "sha256": {
+        "svg": "9d48cadb09e1e2c8805b5c0cbbf9edb599d8beb17f5b68ac99a975b84565a446",
+        "png": "aa68dc9c80712cd99ae4da4d56b6cdc2985bd7b80dd1705bd5630c6c9db2dec7",
+        "pdf": "776cd68ef22a337f87db2b465a73cb72e943cfb3f754e15975f013d492e8676d",
+        "tsv": "d059e6beee12886ab7b8840851f64f80c30d5496b79b7716a7522c8de13ed78c",
+        "example.spec.json": "99f0b254c83a690beb0b0da69822512f264e49ce45c95f8a5c0ee381a281131f",
+        "request.json": "111926a8701a3811d8a6d89ca01cb9c47d7da438218d70b39b6f1c319f329089",
+        "preview": "1beaf8524d033cfec22efa4bf097116ca14093fcb7c66b6b6673477a7b12fe2c"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "registration",
+      "form": "registration",
+      "assets": {
+        "svg": "registration/registration.svg",
+        "png": "registration/registration.png",
+        "pdf": "registration/registration.pdf",
+        "tsv": "registration/registration.tsv",
+        "example.spec.json": "registration/example.spec.json",
+        "request.json": "registration/request.json",
+        "preview": "registration/preview.jpg"
+      },
+      "sha256": {
+        "svg": "ddf3cf52726d32784cbf6a5c428b78d6be5212e7db2c9ba7e22fa945d6a7d19d",
+        "png": "654eb3996bf4222690d958ff05cb8cd2d1877baa3b01c6994a3b33d4342791da",
+        "pdf": "b03daebab287c8ae783b634a9d9f92786089d5f030c7dbc1c81525d9c2499a4f",
+        "tsv": "8e2bd06d71c495497a4506802b8a30572dbf3ab51cb79e2472b1ca046470e3a7",
+        "example.spec.json": "621b5c0e1f7fd1324b0000cef55213033aac649beaa23af31ce69e57216885dc",
+        "request.json": "26bdd2e6c8ab5fb889bb34b2737454776a63a00ee61832a284f84873b1104862",
+        "preview": "44e019510a3c50aabcb9ed47061b92423a6b673454209d63c35b63778dda47b8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "hierarchy",
+      "form": "hierarchy",
+      "assets": {
+        "svg": "hierarchy/hierarchy.svg",
+        "png": "hierarchy/hierarchy.png",
+        "pdf": "hierarchy/hierarchy.pdf",
+        "tsv": "hierarchy/hierarchy.tsv",
+        "example.spec.json": "hierarchy/example.spec.json",
+        "request.json": "hierarchy/request.json",
+        "preview": "hierarchy/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b04ca39066b842b639f6f8c7e2904356ec7ff0683295102943e1b4d561b63ba1",
+        "png": "44d2b082be96d336e701fbd45e27b5c9575f4b7446460c3523c2946b9a68b637",
+        "pdf": "229772dbddff0a3492dfe0bb95360b64631d5734de81b84abbe0653a7f1f66de",
+        "tsv": "b71a24e84b660f99c09498850aa1425ccf49f4784f7eb4cd2b97b44fc52c305c",
+        "example.spec.json": "7ce1b939bd524bfdc192536af29ef64193b4d0e94529b380e053346c6c950acf",
+        "request.json": "f4e27a0e22c4a31e27e67142c307344e34fd464848c094c029a983a14540bde8",
+        "preview": "a597817847bb021f5ef4cd882668e3a16d8705caacebf878156ea7a2c7fe8710"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "interval-tracks",
+      "form": "interval-tracks",
+      "assets": {
+        "svg": "interval-tracks/interval-tracks.svg",
+        "png": "interval-tracks/interval-tracks.png",
+        "pdf": "interval-tracks/interval-tracks.pdf",
+        "tsv": "interval-tracks/interval-tracks.tsv",
+        "example.spec.json": "interval-tracks/example.spec.json",
+        "request.json": "interval-tracks/request.json",
+        "preview": "interval-tracks/preview.jpg"
+      },
+      "sha256": {
+        "svg": "6e3a63cc05b462e8d6e906374d25cf02d5a6226686d643cbef01293764493719",
+        "png": "06a7c01192622b86fa3262f88dc3bfbc7cdfff7f6fa7ef3d7fd69aea7af333bc",
+        "pdf": "f616cf6de93b53b31c498dd1d7899f2bf49ed2c31f6982aab8e6124fdd9303f2",
+        "tsv": "31daee5b612aa41d93c90609a45d844df0e5dd2b5315a73b76ed1038e4ecb9bd",
+        "example.spec.json": "19ff110482545753d537bab9cad17537360027bf756e9908afe0a238758c4de8",
+        "request.json": "b0e7e203c97aac3096cfcdcd0024631864e6367d123eb3cf23a9fea69c7c8a30",
+        "preview": "8e6e33e91cce2b34d4007db4e9d95f7461591dfcde9e54f531d1e27822f93d72"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "field",
+      "form": "field",
+      "assets": {
+        "svg": "field/field.svg",
+        "png": "field/field.png",
+        "pdf": "field/field.pdf",
+        "tsv": "field/field.tsv",
+        "example.spec.json": "field/example.spec.json",
+        "request.json": "field/request.json",
+        "preview": "field/preview.jpg"
+      },
+      "sha256": {
+        "svg": "21f124ec4b5ece94582a7626a9aab2a3e3281d3d13f8812afa08687e5a5c41d1",
+        "png": "23d5b803124fb031936c86b90b8ab45bf5323cacedadd9274add535e08e83622",
+        "pdf": "5c2ecd7598f0c539a1451b41504e5792b75cdfbfb2ae9fdfe59be8c9bed7c170",
+        "tsv": "12e5880b1dc88c4f67927e58feebff2d02d92480284ddd044106328e57e52175",
+        "example.spec.json": "ac428ab438a789276000f6cb75157ff117e895c60e5bde5180412fe129729bdc",
+        "request.json": "926f446a23c051fae591fb36aff4c11ed75904f4e297c7923fb2147a245d3292",
+        "preview": "38cd7dccd7d6a0229c4dc31133208031af22be609e7a825a8300dc895c7d70dc"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "state-matrix",
+      "form": "state-matrix",
+      "assets": {
+        "svg": "state-matrix/state-matrix.svg",
+        "png": "state-matrix/state-matrix.png",
+        "pdf": "state-matrix/state-matrix.pdf",
+        "tsv": "state-matrix/state-matrix.tsv",
+        "example.spec.json": "state-matrix/example.spec.json",
+        "request.json": "state-matrix/request.json",
+        "preview": "state-matrix/preview.jpg"
+      },
+      "sha256": {
+        "svg": "8a96e97945df886bf89a337f01b1851c326afcfd3d130e2acf5b8a867db3174d",
+        "png": "a6cba80c0283f27a8aa69acfd266d55715585bc5ce0fdd4ae08754fde7c5b261",
+        "pdf": "7c24f2e29a548117621687c192e7e674619beb0972f436bd6df29d0b2bd9c701",
+        "tsv": "1fa1119170a89eb559e4b68f012d8f5faf4b31c82d61389f94499452c9028aa3",
+        "example.spec.json": "98b75fd04e1179333786e2e64909033f88635f0b5a583c9cc36420963573c924",
+        "request.json": "61edea251c5185d0fcb188d61dd7678ce39d9913dbf8e1317401b4a52e46c454",
+        "preview": "d3c3664c036a975db60855570549126c2c98b78e7f3369dc555aa3a4f9b54d88"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "scores",
+      "form": "scores",
+      "assets": {
+        "svg": "scores/scores.svg",
+        "png": "scores/scores.png",
+        "pdf": "scores/scores.pdf",
+        "tsv": "scores/scores.tsv",
+        "example.spec.json": "scores/example.spec.json",
+        "request.json": "scores/request.json",
+        "preview": "scores/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b5d167b45b21adf622ee4666e7352f2b2f380819370e72f0e9ad051c71a8063c",
+        "png": "804d1c180ce16d51dc7a570de9566e46d20a5a3c19dfaea0996a7747c92dfb08",
+        "pdf": "a33284d0d17bef48b032076b3d0843dd5807e40b852ac5fedc0369cd08df3161",
+        "tsv": "72559ae7855d079b79591c190cbeb182d9e37b6d58a87ee8ed21d4bd820baa67",
+        "example.spec.json": "f081eb41259e26d262e30cd8fdb90f6502aa7d2999783c5e00d6b02acbf76513",
+        "request.json": "c4968d9564d2621b69473876cb1f1e216689b06ac482de61cc2854a04b46bc70",
+        "preview": "ffc866b958f65f3576bfba017fa07bd64a2f09d424476e66443e66da70b93787"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "decision",
+      "form": "decision",
+      "assets": {
+        "svg": "decision/decision.svg",
+        "png": "decision/decision.png",
+        "pdf": "decision/decision.pdf",
+        "tsv": "decision/decision.tsv",
+        "example.spec.json": "decision/example.spec.json",
+        "request.json": "decision/request.json",
+        "preview": "decision/preview.jpg"
+      },
+      "sha256": {
+        "svg": "e92206cfe2f606ca235cabcd8dfbd8dd9de9c848017a960ba1952440793d8b9f",
+        "png": "3c57281a6e1b978a6c8055ffca3f09d0a852bcf43dddb98d1d2bc546867c4018",
+        "pdf": "bdae4cf5e0ac81d06e372042f5fdd37b1308b28c5f75f97cf6c4d818681c6c0d",
+        "tsv": "b6b3d7c3d4847748f9f3891138f9bd12ba8909c3d968b4dd6ce6176dc00a2ad9",
+        "example.spec.json": "83f2b5b269e8383a8cbf553002836d8c9482d02d7bece14ce747cc2db3b89cc8",
+        "request.json": "0698d4b19f270a9f0b2da381ee5eeca755a190d345deec47a61127949f11eb48",
+        "preview": "ae7b79bbf34ca52be40ddb20e7a965edbfdfafa01c2aa4decfc533024e4d9f73"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "survival",
+      "form": "survival",
+      "assets": {
+        "svg": "survival/survival.svg",
+        "png": "survival/survival.png",
+        "pdf": "survival/survival.pdf",
+        "tsv": "survival/survival.tsv",
+        "example.spec.json": "survival/example.spec.json",
+        "request.json": "survival/request.json",
+        "preview": "survival/preview.jpg"
+      },
+      "sha256": {
+        "svg": "466b4d8b650b87cf664ba83737bd70a3a9ddb3d9b1ca36d2ec4ca5217d1e2df5",
+        "png": "d44305d1c8c69890cbfeda6c387a1c200f1a0906fe8979164d6d90e9df3bfb9e",
+        "pdf": "317d3aadb1cb266452c5523150cf28910405eb0b96c4bae57b41334764cfa229",
+        "tsv": "9a0085a5fbe5d2f42bd2596d3db9063033f280a4a3b880fcdd7561e2020e4473",
+        "example.spec.json": "b418cef2763e49fa65d303ebd603f46bbbf1fb02d001d4e07a54aef7cee7d4a2",
+        "request.json": "ecf4ccd157c18a00b4cfce457e70cf0a603d3dc781b125c1a9f95a76dfd44f4d",
+        "preview": "3d41df635d74773b15aaa0adb02eaae4a6e721b0fc93c5763f1f5c5e6597cd20"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "maps",
+      "form": "maps",
+      "assets": {
+        "svg": "maps/maps.svg",
+        "png": "maps/maps.png",
+        "pdf": "maps/maps.pdf",
+        "tsv": "maps/maps.tsv",
+        "example.spec.json": "maps/example.spec.json",
+        "request.json": "maps/request.json",
+        "preview": "maps/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b3db3a101bb29461ac37abf2f9cd1b72db541eccf4a58465a3798a76746c7a76",
+        "png": "060d99d4ecb8a293ede2a52e3bc444bf915e05dfe9b56de1b9003d86cce0ea5f",
+        "pdf": "4051e4b29b327699d497458cca8307748eb67ed41b70b46063bad579a449bb82",
+        "tsv": "2917c45d0d603970d0d09393171b0d5d41bb696a87faa77bf981122e554a483a",
+        "example.spec.json": "cd91bb47f98874ca99bc49dfc522e9e50b230fe00dbff0f8e16903d49c61c07e",
+        "request.json": "eac15a8763ec7866da3a7a44fa045963444615f54fb4f1c03cb0a21b8b01f217",
+        "preview": "e6a260be1ccc08dc42bd5350e73e4d4b49b93f6c82c64a7874622bf15e1e879c"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "geographic-links",
+      "form": "geographic-links",
+      "assets": {
+        "svg": "geographic-links/geographic-links.svg",
+        "png": "geographic-links/geographic-links.png",
+        "pdf": "geographic-links/geographic-links.pdf",
+        "tsv": "geographic-links/geographic-links.tsv",
+        "example.spec.json": "geographic-links/example.spec.json",
+        "request.json": "geographic-links/request.json",
+        "preview": "geographic-links/preview.jpg"
+      },
+      "sha256": {
+        "svg": "1efc6e7a3e0c3bf17bde509f0a21eeddf2014dd74a1657be54f78c40226ef875",
+        "png": "0150ce818bd3ee5827021d44656d08e69e9514da6beffd1d72e6e79a11d9f91c",
+        "pdf": "53e4b70c66f591456fc05c0d47f2d12b0963ae29ec7f84c76d3061f2a5a24256",
+        "tsv": "aa9cfda5341f1752c75f2dc1a56310ba386425aa8acb1306bc660ecb167fde87",
+        "example.spec.json": "b3f0e333f9127dcd969b44db600c29bf28a1c74624151b7362a89782aa39c969",
+        "request.json": "3f3e2a7a4b3016e449d0937946175d747ed3e0fbfbed4d1e0eb5ec49a93396d9",
+        "preview": "91e22de7af2b32ffa0ec63f46201e5b5a2b3254235364e015d9bb56da1f24615"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "radar",
+      "form": "radar",
+      "assets": {
+        "svg": "radar/radar.svg",
+        "png": "radar/radar.png",
+        "pdf": "radar/radar.pdf",
+        "tsv": "radar/radar.tsv",
+        "example.spec.json": "radar/example.spec.json",
+        "request.json": "radar/request.json",
+        "preview": "radar/preview.jpg"
+      },
+      "sha256": {
+        "svg": "c72d4bfa8002b87917cde9dbee899703b56b2ef4f1a069fea6754d3ffc4cb83c",
+        "png": "4e00a8ad43d47e7d02e89a6fab8bddafc2ccecfa65a2c4cc8dc2acdde3c51cd3",
+        "pdf": "ebfebeb3bb90587c1d65d2851621f7206cef8bf308c5ca2edc6be7abdb22b52c",
+        "tsv": "0bd1a35c0dc331bfbc8420c11175943f44372caf13e9643a5ab16a27ddbf469c",
+        "example.spec.json": "c2fba97ce7a49cfea02ed96f95bbbe86fccd606f19683fc79797f773cffbaf0b",
+        "request.json": "9c71bc4f35cf02cce51b8647154e70e97167e296af2a4f410f1a6117b9c43434",
+        "preview": "5bdc887a581c96b9edbe27cb98c6103b5b931affad02014521bb5041f0ff53ab"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "object-schematic",
+      "form": "object-schematic",
+      "assets": {
+        "svg": "object-schematic/object-schematic.svg",
+        "png": "object-schematic/object-schematic.png",
+        "pdf": "object-schematic/object-schematic.pdf",
+        "tsv": "object-schematic/object-schematic.tsv",
+        "example.spec.json": "object-schematic/example.spec.json",
+        "request.json": "object-schematic/request.json",
+        "preview": "object-schematic/preview.jpg"
+      },
+      "sha256": {
+        "svg": "71bd5cbe3c352a702531d5241747743dc4d0e577d666ad7eff356a7b2db01a10",
+        "png": "41df92494498a025b9b28fec03c67f169b57521f472877d4746d32029ae828c3",
+        "pdf": "ec3adb99346d08053ac52a0dcf76d4906ddaf18b9d1881ae73e9e8665363fecf",
+        "tsv": "c5ff6e391f234c5e1b64316fa18494dbb0907abeda7ea19c44931e03ad6e24ba",
+        "example.spec.json": "ba9762bb1c5d4dcc52ea5e3079da32e95c06264d7d671b24704e0a39d57931e2",
+        "request.json": "b34344a9020d3a60dd7b846a0d5be7c2d3f9a26a889fd0eb466700d6477c05ce",
+        "preview": "8326e46de8c536619ee911ffa1018b8aff3916c6ddf00d89cbeeaf54c259430d"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "ma",
+      "form": "ma",
+      "assets": {
+        "svg": "ma/ma.svg",
+        "png": "ma/ma.png",
+        "pdf": "ma/ma.pdf",
+        "tsv": "ma/ma.tsv",
+        "example.spec.json": "ma/example.spec.json",
+        "request.json": "ma/request.json",
+        "preview": "ma/preview.jpg"
+      },
+      "sha256": {
+        "svg": "4bdf589051410fce146bed8ebb686a6c963266615b8972edfc1568bbf773a3a0",
+        "png": "3498808260552a2443c15f4621d6961785769e317381c8375b3cc96cade1f621",
+        "pdf": "b2107bbeb4939ae9e05291d3f179cf7c31cb738e0a233ba8b18ccc2170b8b9ae",
+        "tsv": "36376a08eee0beda0a5f7b0e7951c317d3747225816befff61838becb4ca2775",
+        "example.spec.json": "a629cfacec953931597fdc53b4e700d223317a67d91b0d4d1e2da96d36ed6cd1",
+        "request.json": "5ab9ded29cc16175b2a57aa9907a8b55da557c18d59ce1ce41dc17a3dc1217da",
+        "preview": "f64f02b348902ab9de11effd4044875ff8d43249c88ae76b5ee2d0d28546bded"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "radial-effects",
+      "form": "radial-effects",
+      "assets": {
+        "svg": "radial-effects/radial-effects.svg",
+        "png": "radial-effects/radial-effects.png",
+        "pdf": "radial-effects/radial-effects.pdf",
+        "tsv": "radial-effects/radial-effects.tsv",
+        "example.spec.json": "radial-effects/example.spec.json",
+        "request.json": "radial-effects/request.json",
+        "preview": "radial-effects/preview.jpg"
+      },
+      "sha256": {
+        "svg": "3939e33a2fb83857a7baf97b6db47878014f8dfb95f962ef081e264eb02572da",
+        "png": "7fd40a87ad2df182dbf11bf3c5c0bfc2602f85f79784c8598b488ca313f62884",
+        "pdf": "7bcf49c0c5b92bcc28417aa2c61f9e8459d7958243a1c5a4c821e21abb6529a6",
+        "tsv": "c4acf881514da984ae428439fcd27d1f11f5cd7a39c7f70e695450bb93a7dfbc",
+        "example.spec.json": "ceba7dd8ad622e37f172a3b0455c247e763b3bed3260062967aade38d64a9367",
+        "request.json": "cd8d8496d391d5b961ad75b3563653ec3692d6c7f5b2a566bf9841a3035b1405",
+        "preview": "564cb9fc664bd1dba28c78969ca168cff7acbc549df5939ef1cfdbe8439aab31"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "ranked-effects",
+      "form": "ranked-effects",
+      "assets": {
+        "svg": "ranked-effects/ranked-effects.svg",
+        "png": "ranked-effects/ranked-effects.png",
+        "pdf": "ranked-effects/ranked-effects.pdf",
+        "tsv": "ranked-effects/ranked-effects.tsv",
+        "example.spec.json": "ranked-effects/example.spec.json",
+        "request.json": "ranked-effects/request.json",
+        "preview": "ranked-effects/preview.jpg"
+      },
+      "sha256": {
+        "svg": "831d684588ef654f73dd20f1d3e706e8862d8188bf563ffbecd799dd604500cd",
+        "png": "4ec1a837e2c9120f454d6cffc1d0c8b3e503aec0b9e147ea7e5d2f2bcded32b7",
+        "pdf": "ab5652b058bc4ffdb263a19ac8c6fd0ec89d08255568137cedacfb9f878b9d62",
+        "tsv": "1b8b3bc3f8ce0ae784eddf6d5b5159d84900f83bdc65df4efffe8f6aac40d161",
+        "example.spec.json": "48ea50b32d691078e0cd8bd373d38d5224deb4367ed89e9ceb54a4ff2be7d298",
+        "request.json": "ff912b1fce3fa41cd21f07616915a9640e749abbd9ec065b304e49d8e1688a51",
+        "preview": "73412dc89f08795b4901331f2d7a0c19f6ecdc0ba890292733a9818aa4f80360"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "mosaic",
+      "form": "mosaic",
+      "assets": {
+        "svg": "mosaic/mosaic.svg",
+        "png": "mosaic/mosaic.png",
+        "pdf": "mosaic/mosaic.pdf",
+        "tsv": "mosaic/mosaic.tsv",
+        "example.spec.json": "mosaic/example.spec.json",
+        "request.json": "mosaic/request.json",
+        "preview": "mosaic/preview.jpg"
+      },
+      "sha256": {
+        "svg": "30191d02b7e8246afab997b25cbdc3810e9c9f48e52b7d13b06797dc56118bcf",
+        "png": "ef2596d18cd4707f85b2294010d530b96059df7f5144590e31afffa4bf43c8df",
+        "pdf": "9217f07a2d3d95e787fdb631051a3da3c25ffb4b5afcc3b72962dfd3d8a2520d",
+        "tsv": "5480b608bbd220a65f7db0f41d322f70eb124ff7b8b622606ebf3a476c08dbc0",
+        "example.spec.json": "d2e8e35912244a1f18a690f4da1a87edc4643cf6bd0fab48c830c2ae3cad0cc2",
+        "request.json": "5029b33696782e9b8d914184045221205f183ddeda83abb4a28ee5e55acf4f5f",
+        "preview": "98d14b70917100e532692437b373cc5a1e5d2979413cb55b893494668175003a"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "waffle",
+      "form": "waffle",
+      "assets": {
+        "svg": "waffle/waffle.svg",
+        "png": "waffle/waffle.png",
+        "pdf": "waffle/waffle.pdf",
+        "tsv": "waffle/waffle.tsv",
+        "example.spec.json": "waffle/example.spec.json",
+        "request.json": "waffle/request.json",
+        "preview": "waffle/preview.jpg"
+      },
+      "sha256": {
+        "svg": "31f609289d01c7f19a67b5c01eba63db33921005a10723a0d116f84059d27c15",
+        "png": "a60b1d5b589ab680aed60d3d95e5b2ccdcd36590a929165591433ca1678a0a75",
+        "pdf": "5dd74003228e1e3dc426badfd0580224f356d0ee52446efdbd3bb36b5189cccf",
+        "tsv": "da0b01f6aab12b71d496e1a5fba81708cec15b2cf6038edd279427aacb3b0458",
+        "example.spec.json": "12bb71df71ca3d8c96f49de0897cbfc2d921b11cba739c0b9c9008acb21cf33c",
+        "request.json": "7120ef76aa5c2038aacce3e74d9588b47696e88618c6bad6b17535005acf13b4",
+        "preview": "a31764eb62a74ff7e66162be27280cc1dfa2ff0e00e24f8517c82479c9f83a1e"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "horizon",
+      "form": "horizon",
+      "assets": {
+        "svg": "horizon/horizon.svg",
+        "png": "horizon/horizon.png",
+        "pdf": "horizon/horizon.pdf",
+        "tsv": "horizon/horizon.tsv",
+        "example.spec.json": "horizon/example.spec.json",
+        "request.json": "horizon/request.json",
+        "preview": "horizon/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b12299487e4a96bb2863c9ac096bae47278c3102323d7c7f4f07f66d9b85b5c7",
+        "png": "32e7e2e860437da676bc3e244bcba0f9cce55e625fad555b28eff188ef4bf095",
+        "pdf": "3f242e44aae6890257b298f3d87836ea874a383e542ae2c05dfb2d0c6f619fc3",
+        "tsv": "33df9596849fd20c2b7c5f25895e0441b9fd998c8fb0b46aa2c6fdeaf038be99",
+        "example.spec.json": "e04efbeb9b4dbfe8c641f6e2f598576b47f48dee2c2f5bf918a231610bbe4ef8",
+        "request.json": "d8dc17d71270e79697e6c35ac1eb937b6793b29d2e9fd0c41a2baba800893c2c",
+        "preview": "4df6e644d634a197fb4bdcf820acf5ea0b58eaa1efe167f43b7c67010cc73477"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "connected-scatter",
+      "form": "connected-scatter",
+      "assets": {
+        "svg": "connected-scatter/connected-scatter.svg",
+        "png": "connected-scatter/connected-scatter.png",
+        "pdf": "connected-scatter/connected-scatter.pdf",
+        "tsv": "connected-scatter/connected-scatter.tsv",
+        "example.spec.json": "connected-scatter/example.spec.json",
+        "request.json": "connected-scatter/request.json",
+        "preview": "connected-scatter/preview.jpg"
+      },
+      "sha256": {
+        "svg": "916c30a182f706d3ab4ec8fbc24427b56674c89a42abb71283c03e1d044e138f",
+        "png": "0cc8bb0b720dea0517f5ab294cec4101942bafcd8a90b56349cc56248c5c011d",
+        "pdf": "92b1a2fd4ca3054a7f22639abc13378250fdea5f74f50ea03713a6012d049b6a",
+        "tsv": "96938a1307f00cbef0178d2ee3c07457e15f9025e523e1ff3115f6e1fdf67d13",
+        "example.spec.json": "ac8b4dfa5178561a1db3c67fef02af64d09f1693bb311afdca51e70e2134bfaa",
+        "request.json": "40e36e0d727c36eecd689ac79030bf58f891783553492cdbb831b20d78a1ba23",
+        "preview": "bf07e33665eda87e138457294c6b99066b417ce6d0a55ac7a03888c49937dd45"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "mirrored-bars",
+      "form": "mirrored-bars",
+      "assets": {
+        "svg": "mirrored-bars/mirrored-bars.svg",
+        "png": "mirrored-bars/mirrored-bars.png",
+        "pdf": "mirrored-bars/mirrored-bars.pdf",
+        "tsv": "mirrored-bars/mirrored-bars.tsv",
+        "example.spec.json": "mirrored-bars/example.spec.json",
+        "request.json": "mirrored-bars/request.json",
+        "preview": "mirrored-bars/preview.jpg"
+      },
+      "sha256": {
+        "svg": "7d9d59ed6c98e55ec9a26c4e3acdeba3391eafea02a1e873f3b4b2690a452ff7",
+        "png": "bd24848243658434e504ab76ad6ee6f77a85bbe7892bcda77a321b424916d9f4",
+        "pdf": "a401ca9fd1d6aac9c8088a08c04eac690e39b443ce720dfc9c956c9952910777",
+        "tsv": "1e9e5b144a4d97223da5d7e29a93fdbc92fae1bfc1bcfad22c728e35bfeba911",
+        "example.spec.json": "cb3c0c9e2f9ca3e9dc17d0c769d8e69014f2daa0d412cc93d5d0a2403317bea9",
+        "request.json": "b4d1237fd5dc51bb88f44af4588d7dc882a725ba7afc0669860c82b284523601",
+        "preview": "8ceb38c9c08efefd77d3fac10f84886ae11dfc0e38fb7755d8261fcee61668a2"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "rainfall",
+      "form": "rainfall",
+      "assets": {
+        "svg": "rainfall/rainfall.svg",
+        "png": "rainfall/rainfall.png",
+        "pdf": "rainfall/rainfall.pdf",
+        "tsv": "rainfall/rainfall.tsv",
+        "example.spec.json": "rainfall/example.spec.json",
+        "request.json": "rainfall/request.json",
+        "preview": "rainfall/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b7707accaf1fe73fa17c4958df4ba68ebb7da7ee6c728b7eb9577e33f9526c7e",
+        "png": "77c426655a09903df71865dbd87d6fa26c668f8aaf1366b372d2cb76e68ded05",
+        "pdf": "07864ac608bfa540c0f4307279c0aa949e54bb954f149a15e9ba1b0d3fe74be3",
+        "tsv": "06258a62a6a307380467f1a69017be2a018d0c459d4ca4bec6b89575dc67576d",
+        "example.spec.json": "ace8d7dae461d7727fdc9a706508ad5f6f668f6a9c55ab3e5f08b124fa68b795",
+        "request.json": "a64b0dd01ed2e3cd03f42109bd8f8ff98eba1f5699d92a09a5793d2f23b4ab7f",
+        "preview": "31d286f5b0cdda7de8b05cadab5b36b9941589e6c5945f7d2f2d4c745cb5ad25"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "qq",
+      "form": "qq",
+      "assets": {
+        "svg": "qq/qq.svg",
+        "png": "qq/qq.png",
+        "pdf": "qq/qq.pdf",
+        "tsv": "qq/qq.tsv",
+        "example.spec.json": "qq/example.spec.json",
+        "request.json": "qq/request.json",
+        "preview": "qq/preview.jpg"
+      },
+      "sha256": {
+        "svg": "2d911949aadc2039bdf0998292f2c9c88c67cc0a2b43964d7e8c7c4d8b420e5c",
+        "png": "a2bd48a0ebe0528996864e176569602dd4911a189e9ea7ed8ab1c247913c6e97",
+        "pdf": "790b8b465b77e94f5d891fe897f59ee781b4c3fe1f6339a90c91ab4b30862359",
+        "tsv": "f2297c967238f96e3efa7d5c3f652f2e2c5dbc256d6c1dd144a220e18c718be5",
+        "example.spec.json": "3f6c50ff5392ce112bcf6477456f4943409a831e418f446e93239fb1b8b0e8ca",
+        "request.json": "bafd5149b7700e126ca279851f3a0789bdf1a422968b39814a8aa6f7064ad735",
+        "preview": "1692e1c17128f55e48c2399a62b16f53e9f9b823979957553c7783e32e1a0b0c"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "residual-diagnostics",
+      "form": "residual-diagnostics",
+      "assets": {
+        "svg": "residual-diagnostics/residual-diagnostics.svg",
+        "png": "residual-diagnostics/residual-diagnostics.png",
+        "pdf": "residual-diagnostics/residual-diagnostics.pdf",
+        "tsv": "residual-diagnostics/residual-diagnostics.tsv",
+        "example.spec.json": "residual-diagnostics/example.spec.json",
+        "request.json": "residual-diagnostics/request.json",
+        "preview": "residual-diagnostics/preview.jpg"
+      },
+      "sha256": {
+        "svg": "e60835635595f918f4d47c745939d74a81dbdaaa80cc0cdb106add35854d5483",
+        "png": "f46db13a857f9fe408f1385453915653ca2a5a87a3b5f6ab00a1c2730ba15b10",
+        "pdf": "70a0f12e550fdf248491184a9bf54c64cd2030abe76513948317a4da95f701b1",
+        "tsv": "87590e8c6d9a7c8b13077e3d10c1e9bd7d73a34793860eca01b6b9016128fd4b",
+        "example.spec.json": "784a5c2e7c995f652fee49bfecfa0b991f66f3d88496764446477dfb4a394ed4",
+        "request.json": "e09686d0bd2c877dac81c048a76586737bbfc99adc9fc7167f6ad7ba4285a52a",
+        "preview": "0ddf429d095dafea1f458f76ff0f906ff0611820657c841edaa592065b8265d2"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "dashboards",
+      "form": "dashboards",
+      "assets": {
+        "svg": "dashboards/dashboards.svg",
+        "png": "dashboards/dashboards.png",
+        "pdf": "dashboards/dashboards.pdf",
+        "tsv": "dashboards/dashboards.tsv",
+        "example.spec.json": "dashboards/example.spec.json",
+        "request.json": "dashboards/request.json",
+        "preview": "dashboards/preview.jpg"
+      },
+      "sha256": {
+        "svg": "30e3fbecd6f7f26ba6856c40f7375c3d52814d67e225e76be68f62ffe342734e",
+        "png": "1f72c3196bf43aa924aaf3ac590560fdbc2bb53233c5f64d9a5a1a69638c6362",
+        "pdf": "01f55ac649feb7cc4c5810091b86b76d3956adddf6dcf93ead4ef774a7ed641f",
+        "tsv": "550245618ff02a55b77fb3c68810e2461804cc13fed948423de391f2e7ceec54",
+        "example.spec.json": "0016cfd982a8bed7c35f590eaf34b01b3825d932b0111ab99c68ada07268fbe7",
+        "request.json": "0de60dce2c874e6241101631d9b153e422fd4a2100de30f4af383103c74a6aae",
+        "preview": "3dea59d3f7f928d3ea2e75d73195d10d432d72c9ecc2e014606952bce2a6e669"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "residue-confidence",
+      "form": "residue-confidence",
+      "assets": {
+        "svg": "residue-confidence/residue-confidence.svg",
+        "png": "residue-confidence/residue-confidence.png",
+        "pdf": "residue-confidence/residue-confidence.pdf",
+        "tsv": "residue-confidence/residue-confidence.tsv",
+        "example.spec.json": "residue-confidence/example.spec.json",
+        "request.json": "residue-confidence/request.json",
+        "preview": "residue-confidence/preview.jpg"
+      },
+      "sha256": {
+        "svg": "2a657ac3a7a7d110fc0ac74ad8005cc2dde15227fa0c26b6c6fb70065ab85f38",
+        "png": "8ae9fcc379315264c6ba63ef69069536320cdef60f9f1514089c9e1dcfa52779",
+        "pdf": "784397073ea493e87b8a18995aae19d50654186644b68854755a34869772612d",
+        "tsv": "7f99fee267a430a55ae04302c9edcef3885da8561c3e55d6f16c7092082af441",
+        "example.spec.json": "5be1ecc893161b4e23d43c3129688510d4325755d0f2ce8b109569d6cf1f9813",
+        "request.json": "9cb38b4726e99f774411bee1c641aada7f0f150f20e7c7ecedde2a3db6a48234",
+        "preview": "7476d7976df3cd43f6c6af0324d2c61cad90a6501483eebc7d76cfd45c168939"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "reference-parallel-trials",
+      "form": "reference-parallel-trials",
+      "assets": {
+        "svg": "reference-parallel-trials/reference-parallel-trials.svg",
+        "png": "reference-parallel-trials/reference-parallel-trials.png",
+        "pdf": "reference-parallel-trials/reference-parallel-trials.pdf",
+        "tsv": "reference-parallel-trials/reference-parallel-trials.tsv",
+        "example.spec.json": "reference-parallel-trials/example.spec.json",
+        "request.json": "reference-parallel-trials/request.json",
+        "preview": "reference-parallel-trials/preview.jpg"
+      },
+      "sha256": {
+        "svg": "9f68f3fe3554ed8a6afebce587ab9640c3fd05af72a9ceabe6d5f8d8ab2b303d",
+        "png": "4a68b8b5c929382333c43fb7848022d18fe3204e21ed4b2ead537250e0ebf19e",
+        "pdf": "29dc0ecb4ed2afe56575d3ce72d91e7d8df2d6dc7e1a81c9787fb1bd05b95283",
+        "tsv": "c6957e0aa17c2ea15d71a47a26c86b1810d56423f002bc2bc3c2fbf890958a15",
+        "example.spec.json": "d034e9f8a3f1bdcaa289f156fcafedad35678e7d361b5a2733a36418fe3b42b3",
+        "request.json": "c42fdf9554de3dd569c5245f0d1aa6be35882f64142cd4a6b6008082e28d7fe2",
+        "preview": "c0b8541fcf5381b3743a31bb1cec49c950b0f113233f861d52aa411360dfe09c"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "reference-group-beeswarm",
+      "form": "reference-group-beeswarm",
+      "assets": {
+        "svg": "reference-group-beeswarm/reference-group-beeswarm.svg",
+        "png": "reference-group-beeswarm/reference-group-beeswarm.png",
+        "pdf": "reference-group-beeswarm/reference-group-beeswarm.pdf",
+        "tsv": "reference-group-beeswarm/reference-group-beeswarm.tsv",
+        "example.spec.json": "reference-group-beeswarm/example.spec.json",
+        "request.json": "reference-group-beeswarm/request.json",
+        "preview": "reference-group-beeswarm/preview.jpg"
+      },
+      "sha256": {
+        "svg": "1cee7feabc7d338a7225945900d0b50b294f4389d7edee3a3f20795550c32d84",
+        "png": "eca59f441b09dd28c39c48e5dcf0d36d2cd2483aa0567a8ffa2aa8e8aa21705e",
+        "pdf": "717149d679847c3808687dfa28b07df8dc58260ddfd05910b84f19f2d2a9c75a",
+        "tsv": "6057754482b6b5465a8beccad2649a2bd2dca6d0da43d50fbb57e444a0cbd38b",
+        "example.spec.json": "4f32d60b322e2c30c2e77c917eefade89ce6d0ab914a2bfa38243c9b61610d15",
+        "request.json": "0cd118fc97aaca60fe3fe0090312567862414d8858fc810d49053ac8726018b7",
+        "preview": "b4ea1d4d2f996dee6d38c2d8522735fe68ef3f4425589137d9bf9ba3294ceba0"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "reference-strip-effects",
+      "form": "reference-strip-effects",
+      "assets": {
+        "svg": "reference-strip-effects/reference-strip-effects.svg",
+        "png": "reference-strip-effects/reference-strip-effects.png",
+        "pdf": "reference-strip-effects/reference-strip-effects.pdf",
+        "tsv": "reference-strip-effects/reference-strip-effects.tsv",
+        "example.spec.json": "reference-strip-effects/example.spec.json",
+        "request.json": "reference-strip-effects/request.json",
+        "preview": "reference-strip-effects/preview.jpg"
+      },
+      "sha256": {
+        "svg": "ad29b4d4c8c1c9b97bc552d7317dd86df572df2a820154f745debc1661fb8652",
+        "png": "4b7d1623d68cfb8c26f46f389539fbe06ea46fa198016f6291a233c721f1a630",
+        "pdf": "fd753d6006654dd0dd30d2f8d945844560f903adcc7b0ba16e41298e8c0ae7ef",
+        "tsv": "392eff261130e37452dc75f6c447d1ac08a28f431bc53b6d644dd8de7d215765",
+        "example.spec.json": "1630de9e00fb54dab5a12b4cc1d041e29d72564277c504e9eea380d1aeebd244",
+        "request.json": "409f3c2d63aa9d5a817d02935d4d2a86c7581b5464e5ec23cdab9d061e6539a9",
+        "preview": "042b20c17d9c795af23878070fe1b33b9dbc6b452d7535a30915a170d6305f76"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "reference-aligned-tracks",
+      "form": "reference-aligned-tracks",
+      "assets": {
+        "svg": "reference-aligned-tracks/reference-aligned-tracks.svg",
+        "png": "reference-aligned-tracks/reference-aligned-tracks.png",
+        "pdf": "reference-aligned-tracks/reference-aligned-tracks.pdf",
+        "tsv": "reference-aligned-tracks/reference-aligned-tracks.tsv",
+        "example.spec.json": "reference-aligned-tracks/example.spec.json",
+        "request.json": "reference-aligned-tracks/request.json",
+        "preview": "reference-aligned-tracks/preview.jpg"
+      },
+      "sha256": {
+        "svg": "9670ae3eb58c0d1ae257ccc6b3968a9d8fbabf22e06c43f35fdbf609654e8587",
+        "png": "fb5da94a93845beacc3d8d51ed10e4148460e51d8c8cfdf415eb8e54970757c4",
+        "pdf": "52abb0aad92737a490df1bbcf54c7a426027387ac8c19a393243e81856fa3ca4",
+        "tsv": "0781465a224e7b9cf5135e99036e68cf16a4715b36ad03ca9b387b8aff192d88",
+        "example.spec.json": "df9b50f0308bcb5c80c031753c00e04819eaa36ab20381de68fd40cdae20d046",
+        "request.json": "f557e4279b4634792e92e8cabaf9a251e750765f519265e417275f94d19bf80f",
+        "preview": "1534caad1e23c1667eb98facc8d5d8f39d8fb8fe6206cb6ce8e7601364e5f9e8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "reference-surface-grid",
+      "form": "reference-surface-grid",
+      "assets": {
+        "svg": "reference-surface-grid/reference-surface-grid.svg",
+        "png": "reference-surface-grid/reference-surface-grid.png",
+        "pdf": "reference-surface-grid/reference-surface-grid.pdf",
+        "tsv": "reference-surface-grid/reference-surface-grid.tsv",
+        "example.spec.json": "reference-surface-grid/example.spec.json",
+        "request.json": "reference-surface-grid/request.json",
+        "preview": "reference-surface-grid/preview.jpg"
+      },
+      "sha256": {
+        "svg": "9ee97423904033dd477f759ea22112c9906c3483c172a6c3d2d460734d3b0060",
+        "png": "20688cc497f0db0a3782f30f000d5fc898e09e4c76dae8a020ea32e235e580fc",
+        "pdf": "d74c692c8da4447d7fce4b4770aeee4b527ec22322e20fe3ae4c070ccfff5dd5",
+        "tsv": "187c44f42981e0ffdbfa2110b61994fd27dec4dfa85f06aaa6d0daf5685cd6d5",
+        "example.spec.json": "4fd750fc5aadd79fb2e0d7f94c992241a052253aa69261901742759482b2e098",
+        "request.json": "c0e43b104298205f6d6f57932e9b8585307ad4f13af9e8804a5936dc4375f158",
+        "preview": "32cbe466f9635c778117f954801762d9795546d139a698aada751759f60ae479"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "distribution-ecdf",
+      "form": "distribution-ecdf",
+      "assets": {
+        "svg": "distribution-ecdf/distribution-ecdf.svg",
+        "png": "distribution-ecdf/distribution-ecdf.png",
+        "pdf": "distribution-ecdf/distribution-ecdf.pdf",
+        "tsv": "distribution-ecdf/distribution-ecdf.tsv",
+        "example.spec.json": "distribution-ecdf/example.spec.json",
+        "request.json": "distribution-ecdf/request.json",
+        "preview": "distribution-ecdf/preview.jpg"
+      },
+      "sha256": {
+        "svg": "4999e714ec50392fd963560901c951f4cae45891981270fc9f981c20c52f8da9",
+        "png": "0c11f322fe89062a18514e00ee602d6a595affc16958cbb667c859e897d555da",
+        "pdf": "644e81df74322a5cfa67cd41b5827d627fdafc571f34d636ef4968783476e450",
+        "tsv": "55a13b4fecc00f7966ad2c996d0888c8dbe046a0a746e66935dd12915b813c22",
+        "example.spec.json": "78665438b0e68047ffd95341eec48dea233d5d372bb470be5a32ec61b20fcc86",
+        "request.json": "5a0816a2699eaec8ae1edeb5210ce46d1f8357ce8ee469aaefe20afd7fb316ab",
+        "preview": "d7fa1ae068890e8cab91b9110a987f27b2d45c1efbc319d36be7e6f1422d9239"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "covariate-balance",
+      "form": "covariate-balance",
+      "assets": {
+        "svg": "covariate-balance/covariate-balance.svg",
+        "png": "covariate-balance/covariate-balance.png",
+        "pdf": "covariate-balance/covariate-balance.pdf",
+        "tsv": "covariate-balance/covariate-balance.tsv",
+        "example.spec.json": "covariate-balance/example.spec.json",
+        "request.json": "covariate-balance/request.json",
+        "preview": "covariate-balance/preview.jpg"
+      },
+      "sha256": {
+        "svg": "47c49c05bb26b7c5cd3b7b599480e063c2a32c92f097ec7bca2d0a59b830acf1",
+        "png": "b577d8810833a9d007ef9ce8b2f825f64ca9b9c17d931868b3d33aea744fb85d",
+        "pdf": "88db864aa09ba668634b0a638a2be98d953f6fecb05d564b2564525f474fd0dd",
+        "tsv": "754aa9cd26293fd11c6b4f6b749ac506eeb729592b9ea21d5996d085bdf55e4c",
+        "example.spec.json": "815744ae8a03e9c136e7b47f0937b402b6e755e5982e1910b250594f59cfd998",
+        "request.json": "5160a78f4a34b1c110cb2c792bdfd41f59da1a92147a824a60352eafaef84441",
+        "preview": "0b879ce439cab287103e4c8318f8573063b98fdca488df3c5de92b2d8d311e78"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "bland-altman-supplied",
+      "form": "bland-altman-supplied",
+      "assets": {
+        "svg": "bland-altman-supplied/bland-altman-supplied.svg",
+        "png": "bland-altman-supplied/bland-altman-supplied.png",
+        "pdf": "bland-altman-supplied/bland-altman-supplied.pdf",
+        "tsv": "bland-altman-supplied/bland-altman-supplied.tsv",
+        "example.spec.json": "bland-altman-supplied/example.spec.json",
+        "request.json": "bland-altman-supplied/request.json",
+        "preview": "bland-altman-supplied/preview.jpg"
+      },
+      "sha256": {
+        "svg": "6d185bb6df49517867011e484b31af0e1267a1cb52f468aac96a3f2db64af63a",
+        "png": "ad89c934774693f933719fb6f4212162682620310e50f1735176473119b0a043",
+        "pdf": "a9607a99c03241ae1a357cb596d84f340687a9950865ce251766b7dd922e85d7",
+        "tsv": "676e94c65d642b725dba1a81f67334da7a742b106015b36a6569164e52e0001b",
+        "example.spec.json": "5464e1ae76859c401fa41ac41dafebb439fde0e33af32953ca7d0c9f6b1052f3",
+        "request.json": "e845d7a6e5642a1f47b92decbb442bcb0d49a1ec2d367dfa5d926143b9a29ff2",
+        "preview": "35ef32b3209a889a2f35b32dccb70882827beba94092a0a8dae14f371ae861cb"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "swimmer-followup",
+      "form": "swimmer-followup",
+      "assets": {
+        "svg": "swimmer-followup/swimmer-followup.svg",
+        "png": "swimmer-followup/swimmer-followup.png",
+        "pdf": "swimmer-followup/swimmer-followup.pdf",
+        "tsv": "swimmer-followup/swimmer-followup.tsv",
+        "example.spec.json": "swimmer-followup/example.spec.json",
+        "request.json": "swimmer-followup/request.json",
+        "preview": "swimmer-followup/preview.jpg"
+      },
+      "sha256": {
+        "svg": "e0f9eabdcf4aad6a80e1a9358256f1cd28bd3028d376585b9b39a150db985a95",
+        "png": "e5a7d1b1daa7ddbc033e6f106781abe6cd2a9c45ac062f26b8acd51785817757",
+        "pdf": "aec0f3e6313e71c34ef12bd68fa652f57fe26d675c1574b0b1ee1addb1656a54",
+        "tsv": "9efe4e56a132f71cd0114df44dd6b95b3e1ba6cc3b106d1544704521f49fa968",
+        "example.spec.json": "d0153c82f338e041cf6620a1775c03270c3964d3c85a11007d0d397afd54fdbd",
+        "request.json": "4ed9ffe86bee2e69a14a5c1a082076213301ca4094883997f77a673b24e4c317",
+        "preview": "ead70d0d754906f2dc2e7f9f22415cbc06880195024daee1de075e45f4a92ad2"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "specification-curve",
+      "form": "specification-curve",
+      "assets": {
+        "svg": "specification-curve/specification-curve.svg",
+        "png": "specification-curve/specification-curve.png",
+        "pdf": "specification-curve/specification-curve.pdf",
+        "tsv": "specification-curve/specification-curve.tsv",
+        "example.spec.json": "specification-curve/example.spec.json",
+        "request.json": "specification-curve/request.json",
+        "preview": "specification-curve/preview.jpg"
+      },
+      "sha256": {
+        "svg": "d23f0104d26339aeaeb5900456b17067b76ce961a254a9a27fb8a00962413c86",
+        "png": "19a1b2df6d81344527f24bad37beea4e50f4693f48002342210ce6a6e3b10c0c",
+        "pdf": "0d004675a01483d6490af2023e789fa6e436e7546180551087a6e95f3c203c44",
+        "tsv": "db6d79e6b911e39360dab783ab63b91295962756f42cf0dee003630ae8ef0183",
+        "example.spec.json": "a3e911d90375f99efa7ed1b94a6b10c348a93e3ad434fc071dbfb35c9411a62a",
+        "request.json": "01fe97014207751ddf686b9d4d0e4495a8050181f8e2f26e02c5e9808b902fd7",
+        "preview": "22e92071b2c570fbcdc3de719736dfab6ca387bdf5ccca028118c181e30ae2d8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "supplied-vector-field",
+      "form": "supplied-vector-field",
+      "assets": {
+        "svg": "supplied-vector-field/supplied-vector-field.svg",
+        "png": "supplied-vector-field/supplied-vector-field.png",
+        "pdf": "supplied-vector-field/supplied-vector-field.pdf",
+        "tsv": "supplied-vector-field/supplied-vector-field.tsv",
+        "example.spec.json": "supplied-vector-field/example.spec.json",
+        "request.json": "supplied-vector-field/request.json",
+        "preview": "supplied-vector-field/preview.jpg"
+      },
+      "sha256": {
+        "svg": "9d5042e4fc1812102010e9597f55516fd7fb605c6787779b120b7c403bb8ae0a",
+        "png": "9e9b2e5cc480ce62215b3866f1ee2ceacc72054d54065cc35efec9347c19b698",
+        "pdf": "ef0b295ce483f0dc2d718f053d5aa9a5fa2373b5a74015bd76e9181d168a9082",
+        "tsv": "05b2cd4393f163d7738c37573db5b8307864312ac5cf80aa7056cbfb83afe05f",
+        "example.spec.json": "6fc12e09cea48be7443bde4042343f7a16042051aba60000d6edf1e60f663009",
+        "request.json": "525e938d126de29ad626fcf1db48c0a9f4ea757c218e8f208b5d6da7e310eee3",
+        "preview": "045260bfa287a639129beb70d4146309dd2a4002c8b76607f27d9f82fc9d57fd"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "ternary-composition",
+      "form": "ternary-composition",
+      "assets": {
+        "svg": "ternary-composition/ternary-composition.svg",
+        "png": "ternary-composition/ternary-composition.png",
+        "pdf": "ternary-composition/ternary-composition.pdf",
+        "tsv": "ternary-composition/ternary-composition.tsv",
+        "example.spec.json": "ternary-composition/example.spec.json",
+        "request.json": "ternary-composition/request.json",
+        "preview": "ternary-composition/preview.jpg"
+      },
+      "sha256": {
+        "svg": "67ed07d7786b0283da60d0b12b660c06e2de5d5e4dacd1fafc3ad2902f1262d6",
+        "png": "6dbcdb2470f163590df1bf489b4ef05ba2140d07d4cfdc5465f885a34fcd0b5b",
+        "pdf": "5d68033e8a150272c481f83886e668595eef988b54e0f23690739f8856b4b4f4",
+        "tsv": "0ba53cd8e92726fa78f71f10087eb2eed485a61154084f5580ee3bbb661393bc",
+        "example.spec.json": "772410da6da25d0294de8e2cfa0d47923cda0e0f94924833fb33576b72bda836",
+        "request.json": "373da1697089d86f6bb60598f65563b2bb9f4623e3865e0e1296dc7423d1a6aa",
+        "preview": "1e3177e7d248137ffc2c82d53fe75a856742c78f03dc40ff9d99db6e283336fb"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "genome-association-overview",
+      "form": "genome-association-overview",
+      "assets": {
+        "svg": "genome-association-overview/genome-association-overview.svg",
+        "png": "genome-association-overview/genome-association-overview.png",
+        "pdf": "genome-association-overview/genome-association-overview.pdf",
+        "tsv": "genome-association-overview/genome-association-overview.tsv",
+        "example.spec.json": "genome-association-overview/example.spec.json",
+        "request.json": "genome-association-overview/request.json",
+        "preview": "genome-association-overview/preview.jpg"
+      },
+      "sha256": {
+        "svg": "5f3081606621fea5453479d158049df12bdba18534b9f78c8dbae686c2e84c04",
+        "png": "3fadadc9047298bf865a52fcc87df9a9d5792cec4e1638a8a8ea2c65a93d4a12",
+        "pdf": "e4500d5986b56623cc7d41c4f123d153c31e0916c04263a7e99d75dc97bcacad",
+        "tsv": "0d85f8befaa801723ca8e4b128e6c936862003838f3ce50eb33719d79f9727e1",
+        "example.spec.json": "58350dead645705d3d00320d92759afb9d82eaf2f2e4af684ad843e88588f312",
+        "request.json": "8d9551275083d13544ebbccce2d3a4b6ed08458fa3d65baff7e2b5ed32472aa6",
+        "preview": "e7b9babbd0166b55ed679ea3064fe3ab69dbe4ef1ecaecb323bb9a4c0051d2c2"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "funnel-supplied-results",
+      "form": "funnel-supplied-results",
+      "assets": {
+        "svg": "funnel-supplied-results/funnel-supplied-results.svg",
+        "png": "funnel-supplied-results/funnel-supplied-results.png",
+        "pdf": "funnel-supplied-results/funnel-supplied-results.pdf",
+        "tsv": "funnel-supplied-results/funnel-supplied-results.tsv",
+        "example.spec.json": "funnel-supplied-results/example.spec.json",
+        "request.json": "funnel-supplied-results/request.json",
+        "preview": "funnel-supplied-results/preview.jpg"
+      },
+      "sha256": {
+        "svg": "bf65e18770730ecfdb58cc20f5ab4bdce34aaa2c0529b5966d1631e7a3b3df19",
+        "png": "9fbf85e4dc4bca8c2c51413a1aeb63d49b59ff9074d3a58ff5b86e5dd89bdb09",
+        "pdf": "675a42535b8c1581a0e73c047a834fc134de0fcbc5a892702031f99aecd1ca15",
+        "tsv": "ad34fe2a1eed3e066c298c9698afa19da04e20db2a928c663835897fb4c61cf6",
+        "example.spec.json": "7a6b0746af580100437281ba06dbecc561ca1e021fa39d73d30e57b136bd67e6",
+        "request.json": "d077c801784c28bc71ca110a533627295bbab1e83c35640a5033885d695059c0",
+        "preview": "08efd9b95f080106a1f08188daebf2130d44a90cf9ca485f387dd36888c5d6ce"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "feature-correlation-projection",
+      "form": "feature-correlation-projection",
+      "assets": {
+        "svg": "feature-correlation-projection/feature-correlation-projection.svg",
+        "png": "feature-correlation-projection/feature-correlation-projection.png",
+        "pdf": "feature-correlation-projection/feature-correlation-projection.pdf",
+        "tsv": "feature-correlation-projection/feature-correlation-projection.tsv",
+        "example.spec.json": "feature-correlation-projection/example.spec.json",
+        "request.json": "feature-correlation-projection/request.json",
+        "preview": "feature-correlation-projection/preview.jpg"
+      },
+      "sha256": {
+        "svg": "055f002138ccf283a2a84d5a954d43880c78b5fb94abb1bf231e481d527aab73",
+        "png": "831b49a651f5fdb9908d58ddf4ff4773a3ac7a1eb7602da1e4e8bdeff6f7316c",
+        "pdf": "89b2c58bf9744b1440862e86852618b1a8006eb2c6453c1140d8c0affb9accf3",
+        "tsv": "56c1907b330141b905b56701edd5907480bb8e9feb74bd748d855323c8b6e9cf",
+        "example.spec.json": "298b8b53d1a71369cd5dfbf8d8a7371c08984cf29307bd994dcd0a3ec6b8342a",
+        "request.json": "328a8bb91b3fe380d9c7fa8c73696917065db39af674df08f99a0a7ace87e1ce",
+        "preview": "5425bd4d6f3dba08e7fc58a2711cb3e307d2c8c247a96954f956ce4114282880"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "mass-spectrum-mirror",
+      "form": "mass-spectrum-mirror",
+      "assets": {
+        "svg": "mass-spectrum-mirror/mass-spectrum-mirror.svg",
+        "png": "mass-spectrum-mirror/mass-spectrum-mirror.png",
+        "pdf": "mass-spectrum-mirror/mass-spectrum-mirror.pdf",
+        "tsv": "mass-spectrum-mirror/mass-spectrum-mirror.tsv",
+        "example.spec.json": "mass-spectrum-mirror/example.spec.json",
+        "request.json": "mass-spectrum-mirror/request.json",
+        "preview": "mass-spectrum-mirror/preview.jpg"
+      },
+      "sha256": {
+        "svg": "3394d4a46c5ed8900459018f00fbfc9f48da44ef3b5de0dbd822d78795fc4fee",
+        "png": "f56dd26f9a150c7c86c320f61708fce9d35ca3b72e3e52528e3dd2bb9bf171c8",
+        "pdf": "7c4a2a23866d8c1fbe69ec7467859e5f8eb720afd876e64b972ea1f08697b50d",
+        "tsv": "afa31428ae370ef09af4ef510496748b8c197351b0270f93563c7334df4c2792",
+        "example.spec.json": "5dde60063d07c1f52b53e99fc52ad8f70cbbd2e7ab68e8c28408da41f24bc55b",
+        "request.json": "579f9f558a8ecc081f03e12b0f69bb18da47b428270a373ad97646c254911207",
+        "preview": "16f1e96deb20a1d71dbdf667c053ded04b4ae420499dc746a3e3564bcf5ec0db"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "pathway-quantity-overlay",
+      "form": "pathway-quantity-overlay",
+      "assets": {
+        "svg": "pathway-quantity-overlay/pathway-quantity-overlay.svg",
+        "png": "pathway-quantity-overlay/pathway-quantity-overlay.png",
+        "pdf": "pathway-quantity-overlay/pathway-quantity-overlay.pdf",
+        "tsv": "pathway-quantity-overlay/pathway-quantity-overlay.tsv",
+        "example.spec.json": "pathway-quantity-overlay/example.spec.json",
+        "request.json": "pathway-quantity-overlay/request.json",
+        "preview": "pathway-quantity-overlay/preview.jpg"
+      },
+      "sha256": {
+        "svg": "f97658b30868ced544b63afac95371bce49e23723ccb1d91f109e343cbaaff3a",
+        "png": "98811ec6653d70a04fb756ed3b3daa30b7055fb28036f001b10ab33404284a97",
+        "pdf": "9b4df0dfbd8f93cac70fb6febfaac3871540bb0a92cec80c567b56bc158d1d85",
+        "tsv": "bce2b60cd33080d2dec4b3ece8925cdc0b1f4c88ad2269baf2e6d0596144876c",
+        "example.spec.json": "92cec068b61720a95757b5423911d6be93bb811724e51f6340ce329760eb0061",
+        "request.json": "dae22630cf5c9250dab4a0189ee8101a50c79cc75b84bc88f3428db4d00efd4d",
+        "preview": "c78b4c334b1441429e94bb3cb5f233d0aa5e1759b7e4993f35451fb875faaf2f"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "splice-tracks",
+      "form": "splice-tracks",
+      "assets": {
+        "svg": "splice-tracks/splice-tracks.svg",
+        "png": "splice-tracks/splice-tracks.png",
+        "pdf": "splice-tracks/splice-tracks.pdf",
+        "tsv": "splice-tracks/splice-tracks.tsv",
+        "example.spec.json": "splice-tracks/example.spec.json",
+        "request.json": "splice-tracks/request.json",
+        "preview": "splice-tracks/preview.jpg"
+      },
+      "sha256": {
+        "svg": "e60d61e14523e205724da9ef1b2da12b5bb5e6717b01cba844d2f538f06a7716",
+        "png": "b39dadefb153f05cd24215ac6a1d3efa714a58d1a7d2e88c045da053b4f1028f",
+        "pdf": "47ceeaf2c439c4dcdf57e0f8237f11583db9973e8e8da8da938bbde1c72f6105",
+        "tsv": "8d71078def2e6701b0f749a7faead82ae5fb970e5b89aa6505808cfc01171887",
+        "example.spec.json": "aea458ef38278d5b073423821f84daaf9f81eeaaec66863ab030742486e2b13c",
+        "request.json": "11d28413acb73d7f90d55f65e1314159096b503ef9cc5a4da6f1e07f98c75b69",
+        "preview": "5af0b9bc67ddb7b763339ac4af08cab97523a10c07e05f306e8ffd060fbde6ac"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "variant-posteriors",
+      "form": "variant-posteriors",
+      "assets": {
+        "svg": "variant-posteriors/variant-posteriors.svg",
+        "png": "variant-posteriors/variant-posteriors.png",
+        "pdf": "variant-posteriors/variant-posteriors.pdf",
+        "tsv": "variant-posteriors/variant-posteriors.tsv",
+        "example.spec.json": "variant-posteriors/example.spec.json",
+        "request.json": "variant-posteriors/request.json",
+        "preview": "variant-posteriors/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b8fe544bc8e45c3cf8bec1dc0a3a2d0e03c1753e233a81d76feda75693e944da",
+        "png": "0002a70b81dbe712527ea006cca191af1590cbde5eb49e3077972e924c9b7a9f",
+        "pdf": "e0439caea4922918b72d3f58cfd08f570d2c8e9812803736a42811be48772148",
+        "tsv": "5ff3392d30ca4b9f470c4cfad1ad899024b8f190945f0507b4f3c4d2a67d05c1",
+        "example.spec.json": "2eb5e8643d4c9ef6da40fcf33dfbac17434aeb74a4beea3d01f7ecb090ad671c",
+        "request.json": "88a2a080ca3d1c79d626070da4e7fe83f2915a9a345bcd53110c8997af988802",
+        "preview": "1df65d55853b1722ba162a9c7ddca99e7bbb954636b187b2b8db6e293ca0a532"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "contribution-waterfall",
+      "form": "contribution-waterfall",
+      "assets": {
+        "svg": "contribution-waterfall/contribution-waterfall.svg",
+        "png": "contribution-waterfall/contribution-waterfall.png",
+        "pdf": "contribution-waterfall/contribution-waterfall.pdf",
+        "tsv": "contribution-waterfall/contribution-waterfall.tsv",
+        "example.spec.json": "contribution-waterfall/example.spec.json",
+        "request.json": "contribution-waterfall/request.json",
+        "preview": "contribution-waterfall/preview.jpg"
+      },
+      "sha256": {
+        "svg": "bd1c49ccf27b75e4653eb71516cf71b2e6a930ebb1af16e556452bf6f1884a84",
+        "png": "0adf611cd7939e51415348bea9d3053f207659dac31e14f73ec4c09b5d59f932",
+        "pdf": "1df20d1ad6ab5ccecb16b3878e5c7cd6e0825956e9c598e20789f0facf5d54c2",
+        "tsv": "a0a50217649ef1fe054afdb25462d21bb9dfec6c2afdd2552862689ecac257a3",
+        "example.spec.json": "88556ec0fc46164639f53b3b8641e9a279f7107cd97a84fd244d6ea2808417c9",
+        "request.json": "dc9d33018e3f3f96eca7474767b230a4510479699740640cd94e5e925b098163",
+        "preview": "8dce768c4a9f7787d22a25164b3aee4860fe05e43d288e3bbbc9b5d2b24b3432"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "sequence-logo",
+      "form": "sequence-logo",
+      "assets": {
+        "svg": "sequence-logo/sequence-logo.svg",
+        "png": "sequence-logo/sequence-logo.png",
+        "pdf": "sequence-logo/sequence-logo.pdf",
+        "tsv": "sequence-logo/sequence-logo.tsv",
+        "example.spec.json": "sequence-logo/example.spec.json",
+        "request.json": "sequence-logo/request.json",
+        "preview": "sequence-logo/preview.jpg"
+      },
+      "sha256": {
+        "svg": "f9f44078fedfc5b20ded9611636aadcda9f5ec52bf3e2dbee7a6159dc713d7de",
+        "png": "6aeeef87ab1d27ff071b11056624cbe33b07ff572dfa9f78fe1ffebab3d4b116",
+        "pdf": "c98c2a97bb3c3c7c189ba6fbe62acaa8a20b9a6b80ed6e3269aa97c1e9eaeb70",
+        "tsv": "29c7518c73fea634739cad261230aeeeae44ba94229b5ee04d85625617778125",
+        "example.spec.json": "b2a6d3e8fa9b1667586d0b3ca4d69fda414aea811ede2178b955481099dbf817",
+        "request.json": "0874e7c51a9766a920b95f1724be6626d80ab01d1e1530478143f8f2569af61e",
+        "preview": "8a52cffaea6ef44c7c56585c017609a8fcc0f36abf84a6e0c8ddcfd3a797cf47"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "contact-tracks",
+      "form": "contact-tracks",
+      "assets": {
+        "svg": "contact-tracks/contact-tracks.svg",
+        "png": "contact-tracks/contact-tracks.png",
+        "pdf": "contact-tracks/contact-tracks.pdf",
+        "tsv": "contact-tracks/contact-tracks.tsv",
+        "example.spec.json": "contact-tracks/example.spec.json",
+        "request.json": "contact-tracks/request.json",
+        "preview": "contact-tracks/preview.jpg"
+      },
+      "sha256": {
+        "svg": "1baa2276773ab8545d0d2479cdff82992b64dfa903615b86038278921a9bf2b5",
+        "png": "5030685a8f2bbdd36acb849b9f0be8ff9964cc15f25c5d664cadc4393baffe61",
+        "pdf": "3e7ac812906cd113563ecc4fa1b8192fdfa29405c7073b1fd155bdba2ba6dd4d",
+        "tsv": "a5a6dfc7ea251a147967605a729f8abac859e718c45db5e5e8262b8a94d8c177",
+        "example.spec.json": "0909022d027a4da233165d06f9b2a503acf4eb5785efd665cd21da3b0ba91a8f",
+        "request.json": "719080c5f6dc39c4855da28e64816e406eb7f8f0c1160382e156959cda429b1a",
+        "preview": "56bbb410331d46308fcfc2e6843e0458e6313c5fb7cea65aecf9c596b5104bcf"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "network__circular",
+      "form": "network__circular",
+      "assets": {
+        "svg": "network__circular/network__circular.svg",
+        "png": "network__circular/network__circular.png",
+        "pdf": "network__circular/network__circular.pdf",
+        "tsv": "network__circular/network__circular.tsv",
+        "example.spec.json": "network__circular/example.spec.json",
+        "request.json": "network__circular/request.json",
+        "preview": "network__circular/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b74816131d960d4e435a0e19b1f08dcb867c5df45cb4e1a968e9fba86fcd09a2",
+        "png": "ad362eec509024393361cf134772ab367d3557d60658294a0842d14dbf4f6abc",
+        "pdf": "53b50785d16f0843858a1ebdd63773d0c0234c959bc2f65f63ecdf86ac071a01",
+        "tsv": "fb0e20ba6bc132670fac15c6ac0e838518c09872a662b971ba6198b5b73b1c23",
+        "example.spec.json": "c3fd1a5576d1c8db9b4df0ed61dbed91fe1047c7f5cb0bc9155d5f346dcc608e",
+        "request.json": "bfeb75da399be78e7507f5a19c941f7dbbd491373dcd991ef98c2a83abbd023e",
+        "preview": "7cf65ab65431687a1154f9c371f8c2f49a89f86cca7ea014fca57504bc240e11"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "ma__marginals",
+      "form": "ma__marginals",
+      "assets": {
+        "svg": "ma__marginals/ma__marginals.svg",
+        "png": "ma__marginals/ma__marginals.png",
+        "pdf": "ma__marginals/ma__marginals.pdf",
+        "tsv": "ma__marginals/ma__marginals.tsv",
+        "example.spec.json": "ma__marginals/example.spec.json",
+        "request.json": "ma__marginals/request.json",
+        "preview": "ma__marginals/preview.jpg"
+      },
+      "sha256": {
+        "svg": "b6b46603196d3a3411811d311bf1e5563a868ac0e0bd9e80c4dcff75dccb5537",
+        "png": "12c9e08124802b6b7dbdeb175c7287b8a1b8bc2e9563f3996f16d90018b02ec5",
+        "pdf": "699ccb56c636c56228154f9dc88c76c46a46e3ce3c7c810d09b74e5f8daf9db9",
+        "tsv": "5ca4d7f6bae67bf14f245c9f212cce7f99362fd00de25eb712c34b4165af3f83",
+        "example.spec.json": "f5ad35904853b4d7a14eef041771981db52694387d95fabdaf2bc099a3a6fd4a",
+        "request.json": "ac48f7b34a9c7ec1a6fe2bf16382a792ea976468e77001a019bb47a8fc79147f",
+        "preview": "218e27f430be3115f8a2954096c8bc75e7cb9aecdca8a2530f35e7c824700fab"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "reference-surface-grid__surface",
+      "form": "reference-surface-grid__surface",
+      "assets": {
+        "svg": "reference-surface-grid__surface/reference-surface-grid__surface.svg",
+        "png": "reference-surface-grid__surface/reference-surface-grid__surface.png",
+        "pdf": "reference-surface-grid__surface/reference-surface-grid__surface.pdf",
+        "tsv": "reference-surface-grid__surface/reference-surface-grid__surface.tsv",
+        "example.spec.json": "reference-surface-grid__surface/example.spec.json",
+        "request.json": "reference-surface-grid__surface/request.json",
+        "preview": "reference-surface-grid__surface/preview.jpg"
+      },
+      "sha256": {
+        "svg": "98b7251f950c59ebbf3fd802a9db78df1ebc05dda50ae1e731991f6a81fcba23",
+        "png": "73d971982e9090e32f09341e9337cee1208ce82031a414f6bb27752c2551a6b0",
+        "pdf": "9b6375822731b7b7ca36980ce13cd897c6e11c4e8c50fef0252526274044ae8b",
+        "tsv": "187c44f42981e0ffdbfa2110b61994fd27dec4dfa85f06aaa6d0daf5685cd6d5",
+        "example.spec.json": "293c7b784ee10f61ff15498dd03c2cbfc5779751144bfc5d5cc9ad5c3c0a588b",
+        "request.json": "38955fdb7435890199185c31a19afe6e6aecad000b7731be5b3ec75c5b9ac216",
+        "preview": "701d2739e48152e6bcc9c0c047017c2a688544ee19e3a3af601eb3b1a826d1c9"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "stacked__facets",
+      "form": "stacked__facets",
+      "assets": {
+        "svg": "stacked__facets/stacked__facets.svg",
+        "png": "stacked__facets/stacked__facets.png",
+        "pdf": "stacked__facets/stacked__facets.pdf",
+        "tsv": "stacked__facets/stacked__facets.tsv",
+        "example.spec.json": "stacked__facets/example.spec.json",
+        "request.json": "stacked__facets/request.json",
+        "preview": "stacked__facets/preview.jpg"
+      },
+      "sha256": {
+        "svg": "6883dd1ea4be0471de58825965704d8f8632c11332a8a773b0bd4c19182e47ad",
+        "png": "e747eb3bd0780e44993712493218f6ce2541ae42cf0b35adfc130d87714d5afe",
+        "pdf": "e6efdcc673e914ae8ce0c93198f116c9b30be67a1c8235d8224a5fae299f6bad",
+        "tsv": "550245618ff02a55b77fb3c68810e2461804cc13fed948423de391f2e7ceec54",
+        "example.spec.json": "d283c84085c94d627a5dc04bb413ee09a6ba720f8bb2fa3699437378392817ad",
+        "request.json": "2b3df8e4ad44f737adf2c152dd946c9d0f13bb66a3b76858b1f9ebe07f9f9cfc",
+        "preview": "1bcec16cf49181202eb82721d3b0aca64ba8f377ceebe95db701830d9eef01b8"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "roc__supplied-bounds",
+      "form": "roc__supplied-bounds",
+      "assets": {
+        "svg": "roc__supplied-bounds/roc__supplied-bounds.svg",
+        "png": "roc__supplied-bounds/roc__supplied-bounds.png",
+        "pdf": "roc__supplied-bounds/roc__supplied-bounds.pdf",
+        "tsv": "roc__supplied-bounds/roc__supplied-bounds.tsv",
+        "example.spec.json": "roc__supplied-bounds/example.spec.json",
+        "request.json": "roc__supplied-bounds/request.json",
+        "preview": "roc__supplied-bounds/preview.jpg"
+      },
+      "sha256": {
+        "svg": "1514f1a0e7aaf9ea01a1cfd2886ea255b7329a0d86293675a6f8a188ca28eec5",
+        "png": "adaaeea2fe5c739522f0320b9d81fbf911e37723ce2e5e406a417985a5c448fb",
+        "pdf": "8fd7b7195e18be545b73b9724f9323f2471af83081d03afc75266e67fa8b48ef",
+        "tsv": "07076e6fad867b0e326260973f62059cb84293ebad84e2aee041dafc91e63c20",
+        "example.spec.json": "6eedb59c8785fa70025ef9c8b8b1d43bba01d8348face1dc23fe190c2c18ef04",
+        "request.json": "96c28fe24ee13f5431dfc62e8f806c6aba71f408e13a1053cba1d441c986b114",
+        "preview": "42b7ae86d732391ff219c8cd5eb970c38c39a2de35b66c25b18e49c5609afc73"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "precision-recall__supplied-bounds",
+      "form": "precision-recall__supplied-bounds",
+      "assets": {
+        "svg": "precision-recall__supplied-bounds/precision-recall__supplied-bounds.svg",
+        "png": "precision-recall__supplied-bounds/precision-recall__supplied-bounds.png",
+        "pdf": "precision-recall__supplied-bounds/precision-recall__supplied-bounds.pdf",
+        "tsv": "precision-recall__supplied-bounds/precision-recall__supplied-bounds.tsv",
+        "example.spec.json": "precision-recall__supplied-bounds/example.spec.json",
+        "request.json": "precision-recall__supplied-bounds/request.json",
+        "preview": "precision-recall__supplied-bounds/preview.jpg"
+      },
+      "sha256": {
+        "svg": "e541ea321e1b614eb419f863d4188825413d21c01f39bfba81d068628201fff9",
+        "png": "3b7934274eeb19f05432d4797646786de6f1f4eb120b5b81a354293cdede2bc6",
+        "pdf": "52ae0a0eb540730bb6bfe2db1f14e9476f2d30cfc528905f3cfe7487806a4857",
+        "tsv": "6ca5b73a06f63382d57620cda32e0fe08f9266a40968d97f9d9a8bb0180550d0",
+        "example.spec.json": "82d5f9298732134de85db85b7180cd541a08e7ae4357a3e33091654428c8b7aa",
+        "request.json": "9ccee249d9e8e9bd48c3be8e1ca5121c19c8d4804057b23051f78c97dc2fa16d",
+        "preview": "6def23d619f8520fb2188513c82951d077b512f24fa93b44f7098d82a4a54886"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "dot-matrix__identity-support",
+      "form": "dot-matrix__identity-support",
+      "assets": {
+        "svg": "dot-matrix__identity-support/dot-matrix__identity-support.svg",
+        "png": "dot-matrix__identity-support/dot-matrix__identity-support.png",
+        "pdf": "dot-matrix__identity-support/dot-matrix__identity-support.pdf",
+        "tsv": "dot-matrix__identity-support/dot-matrix__identity-support.tsv",
+        "example.spec.json": "dot-matrix__identity-support/example.spec.json",
+        "request.json": "dot-matrix__identity-support/request.json",
+        "preview": "dot-matrix__identity-support/preview.jpg"
+      },
+      "sha256": {
+        "svg": "337be1210a1fef3b5f7c6451b56da2c310f8a2a22bde4548d772e5f299cea886",
+        "png": "f27de98161d37e28440d27cb6f16389fe4da9cdedc183c3f578bdb5dcd1780ac",
+        "pdf": "b1b78b8155b5fdc14776c2c9c1356b6f3f9176a1ceef9b82a05993acb57e0193",
+        "tsv": "d8e8b4af40fe1d0c072a95e23973083d13657d791bcc8fb6833d23391e95187c",
+        "example.spec.json": "e543ff928f4a0af6797e5d8f76963449b02e52778824223f38120c737b58798a",
+        "request.json": "130a548c3d17f0de6de097c53b66db75c61f8ce9898619263c2c704335471152",
+        "preview": "85a5659a679a8b804f47a7ac3111ab5b3bc31849ff22a6dfc2ea078bc438120d"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "palettes",
+      "form": "palettes",
+      "assets": {
+        "svg": "palettes/palettes.svg",
+        "png": "palettes/palettes.png",
+        "pdf": "palettes/palettes.pdf",
+        "reference.json": "palettes/reference.json",
+        "preview": "palettes/preview.jpg"
+      },
+      "sha256": {
+        "svg": "24ff4685314a8beef63e47f77435f01089236fc4c33fa07aa69912515e27da45",
+        "png": "cf7f16a0df5b8844b78937b09b9ff3f3f512b169424bcf1aa3f01c8cdfafb638",
+        "pdf": "2f6bc3caeef2a125ad80235c61254ad6be055fbe15721bd1d0add64db80b4184",
+        "reference.json": "9a136cae5f947733de41492559ff003b69c180c1d9f9a8be9f39358dd2353425",
+        "preview": "19192294062e1e2004a522130fb595810b5be54e9bf5eeeb3d45f89ae6c11194"
+      },
+      "scientific_acceptance": false
+    },
+    {
+      "id": "structures",
+      "form": "structures",
+      "assets": {
+        "svg": "structures/structures.svg",
+        "png": "structures/structures.png",
+        "pdf": "structures/structures.pdf",
+        "reference.json": "structures/reference.json",
+        "preview": "structures/preview.jpg"
+      },
+      "sha256": {
+        "svg": "302ebe21663ac8e56360242a41988a5090c6244139699a15fbb163f157b777c6",
+        "png": "c07d89a9ad18a0746d806c228eafbbbf9a5a6d4c3189a5ec38f3856803377f59",
+        "pdf": "3224fff5881acf69d245464e861e56e974513429e2ef858abb97f590fb57e91d",
+        "reference.json": "c196fa2805ec8f6cd4cc1fb2c89114dda3076ad5066a4f45cdef74d891ac9a68",
+        "preview": "aa3336c9b860ee5795c234312646736e8a5af2b2ef081b07a7c7c8fcca915570"
+      },
+      "scientific_acceptance": false
+    }
+  ],
+  "scope": "96 exact final singles; previews resized for navigation only",
+  "scientific_acceptance": false
+}

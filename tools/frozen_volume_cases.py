@@ -60,13 +60,32 @@ def volume(case, original, level):
         xs=sorted(data.x.unique()) if 'x' in data else sorted(data.u.unique());ys=sorted(data.y.unique()) if 'y' in data else sorted(data.v.unique());x='x' if 'x' in data else 'u';y='y' if 'y' in data else 'v'
         data=data[data[x].isin(xs[::3-level])&data[y].isin(ys[::3-level])].copy();field='supplied_regular_grid';metric=len(data);method='Exact supplied regular-grid points at declared stride; no interpolation'
     elif form=='gsea':
-        options=params['options'];n=options['ranked_universe'];keep=max(10,math.ceil(n*(level+1)/3));data=data[data['rank'].isna()|(data['rank']<=keep)].copy()
-        # These are newly declared software curves, not truncated research GSEA.
-        data.loc[(data.kind=='curve')&(data['rank']==keep),'value']=0
-        options['ranked_universe']=keep;options['gene_set_version']+=' / software fixture universe '+str(keep)
-        for pathway in data.loc[data.kind=='summary','pathway']:
-            data.loc[(data.kind=='summary')&(data.pathway==pathway),'set_size']=len(data[(data.kind=='hit')&(data.pathway==pathway)])
-        field='ranked_universe';metric=keep;method='Declared complete shorter software-ranked universe; supplied ES/NES are illustrative constants, not recomputed enrichment'
+        # Construct a declared SOFTWARE fixture across its entire artificial
+        # domain. Keep selected exact y values, never force a truncated curve
+        # to zero. This is neither a subset nor an analysis of a research GSEA.
+        import numpy as np
+        options=params['options'];n=options['ranked_universe'];keep=max(10,math.ceil(n*(level+1)/3));parts=[]
+        for kind in ['curve','metric']:
+            for _,part in data[data.kind==kind].groupby('pathway',sort=False,dropna=False):
+                part=part.sort_values('rank');indices=np.rint(np.linspace(0,len(part)-1,keep)).astype(int)
+                selected=part.iloc[indices].copy();selected['rank']=np.arange(1,keep+1);parts.append(selected)
+        hits=data[data.kind=='hit'].copy();hits['rank']=np.ceil(hits['rank']*keep/n).astype(int)
+        hits=hits.drop_duplicates(['pathway','rank'],keep='first');parts.append(hits)
+        summary=data[data.kind=='summary'].copy()
+        for pathway in summary.pathway:summary.loc[summary.pathway==pathway,'set_size']=len(hits[hits.pathway==pathway])
+        parts.append(summary);data=pd.concat(parts,ignore_index=True)
+        options['ranked_universe']=keep;options['gene_set_version']+=' / artificial drawing fixture '+str(keep)
+        field='artificial_ranked_universe';metric=keep;method='New software-only rank domain: evenly selected exact y values across the entire source curve/metric; remapped and deduplicated illustrative hit ranks; NES/FDR illustrative, no enrichment recomputation'
+    elif form=='maps':
+        grid=data[data.record_type=='matrix'];xs=sorted(grid.x.unique());ys=sorted(grid.y.unique())
+        keep_x=list(dict.fromkeys(xs[::3-level]+[xs[-1]]));keep_y=list(dict.fromkeys(ys[::3-level]+[ys[-1]]))
+        data=data[(data.record_type!='matrix')|(data.x.isin(keep_x)&data.y.isin(keep_y))].copy()
+        field='supplied_grid_cells';metric=int((data.record_type=='matrix').sum())
+        method='Exact supplied grid at declared stride plus domain endpoints; ALL coastline polygons retained; no geographic outline selection or interpolation'
+    elif form=='feature-embedding':
+        values=list(dict.fromkeys(data.cell_id));keep=values[::3-level]
+        data=data[data.cell_id.isin(keep)].copy();field='cell_id';metric=len(keep)
+        method='Deterministic source-order stride across the full synthetic coordinate field; every supplied feature retained for selected cells; no embedding fit'
     elif form=='network':
         nodes=data.loc[data.record_type=='node','node'].dropna().tolist();keep=_select(nodes,level,minimum=3)
         data=data[((data.record_type=='node')&data.node.isin(keep))|((data.record_type=='edge')&data.a.isin(keep)&data.b.isin(keep))].copy();field='node';metric=len(keep)
@@ -116,9 +135,13 @@ def volume(case, original, level):
         if form=='contribution-waterfall':params['total']=params['baseline']+float(data.contribution.sum())
     else:raise ValueError('No declared quantity dimension for '+form)
     _prune_parameters(params,data,original)
+    if form=='upset':params['unit_label']=str(data.object_id.nunique())+' supplied objects'
+    if form=='contribution':params['options']['subtitle']=f'All {data.feature.nunique():,} features and {len(data):,} contribution records / original feature order'
+    if form=='effect-distribution':params['options']['subtitle']=f'All {len(params["options"]["row_order"]):,} rows in each metric / exact points, bounds, counts and raw p'
     if form=='profile':
         span=max(float(data.y.max()-data.y.min()),.1)
         params['options']['y_limits']=[float(data.y.min()-.1*span),float(data.y.max()+.1*span)]
+        params['options']['subtitle']=f'All {len(data):,} supplied vertices / original direction and offsets'
         method+='; explicit full selected-profile display extent'
     if form=='residual-diagnostics':
         data['ordered_residual']=sorted(data.standard_residual)

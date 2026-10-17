@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "figure_id": "gsea",
+  "renderer": "refined",
+  "input": {
+    "path": "gsea.tsv",
+    "sha256": "a0ab81866e3d70cce79ba87f2fc7ea3e54116d60306345f811bcf4906fd45faf",
+    "numeric_columns": [
+      "rank",
+      "value",
+      "leading_edge",
+      "NES",
+      "padj",
+      "set_size"
+    ],
+    "max_rows": 100000,
+    "max_bytes": 20971520
+  },
+  "parameters": {
+    "view": "gsea_strip",
+    "options": {
+      "curve_order": [
+        "Interferon response"
+      ],
+      "ranked_universe": 80,
+      "metric_label": "Rank metric",
+      "contrast": "Illustrative condition B versus A",
+      "gene_set_version": "Synthetic gene sets v2 (not MSigDB) / artificial drawing fixture 80",
+      "title": "Enrichment in compact aligned tracks",
+      "line_encoding": "rank_metric"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Frozen public synthetic source: examples/package-v040/PKG01/PKG01.tsv",
+      "independent_unit": "Synthetic ranked identifiers and selected pathways; not independent biological subjects",
+      "denominator": "Complete supplied ranked universe and exact supplied pathway hit sets",
+      "value_definition": "Running ES, NES, adjusted probability, leading-edge flags and ranked metric supplied separately",
+      "uncertainty_definition": "No interval supplied; adjusted probabilities are existing display inputs"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-source-review",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Interferon response": 0
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Existing public frozen software fixture; no research inference",
+    "input_unit": "Synthetic display record",
+    "experimental_unit": "None inferred; records are not independent biomedical samples",
+    "contrast": "Fictional declared display contrast only",
+    "denominator": "Exact supplied example table; see volume preparation receipt for selected identities",
+    "model": "No scientific model fitted by this drawing example",
+    "limits": "Synthetic display verification only; no biological or clinical validity",
+    "filtering": "Explicit software fixture preparation before drawing; plotted table frozen and hashed",
+    "uncertainty": "Supplied illustrative channels only; no interval estimation",
+    "interpretation_limit": "Review new data and intended physical size again",
+    "synthetic": true
+  },
+  "export": {
+    "raster_dpi": 300,
+    "readability_policy": "warn"
+  },
+  "layout": {
+    "width_inches": 7.2
+  }
+}

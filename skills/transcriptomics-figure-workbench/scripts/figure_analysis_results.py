@@ -89,8 +89,14 @@ def plot_contribution_waterfall(data,theme,*,component_order,baseline,total,quan
         if r.contribution:ax.bar(j,abs(r.contribution),bottom=min(level,end),color=color,width=.7)
         else:ax.plot([j-.35,j+.35],[level,level],c=theme['roles']['neutral'],lw=1)
         ax.plot([j-.65,j-.35],[level,level],c=theme['roles']['border'],ls=':',lw=.7)
+        # Exact supplied contributions remain readable without estimating bar
+        # height. Labels sit above the upper endpoint, never inside short bars.
+        ax.annotate(f'{float(r.contribution):+.3g}',(j,max(level,end)),xytext=(0,5),
+                    textcoords='offset points',ha='center',va='bottom',fontsize=8,color=color)
         records.append(dict(component=id_,start=level,end=end,contribution=float(r.contribution)));level=end
     ax.bar(len(order)+1,abs(total),bottom=min(0,total),color=theme['roles']['neutral'],edgecolor=theme['roles']['border'],linewidth=.7,width=.7);ax.axhline(0,color=theme['roles']['border'],lw=.6)
+    ax.annotate(f'{total:.3g}',(len(order)+1,max(0,total)),xytext=(0,5),textcoords='offset points',ha='center',fontsize=8)
+    ax.margins(y=.17)
     ax.set(xticks=range(len(order)+2),xticklabels=['Baseline']+[textwrap.fill(str(x),13) for x in d.label]+['Total'],ylabel=quantity_definition,title=title)
     ax.tick_params(axis='x',labelrotation=30);fig.text(.12,.06,textwrap.fill(contribution_definition,110),fontsize=8)
     fig.legend(handles=[Patch(color=theme['roles']['positive'],label='Positive contribution'),Patch(color=theme['roles']['negative'],label='Negative contribution'),Patch(facecolor=theme['roles']['neutral'],edgecolor=theme['roles']['border'],label='Baseline / total')],loc='upper left',bbox_to_anchor=(.86,.84),frameon=False)

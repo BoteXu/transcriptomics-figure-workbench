@@ -9,7 +9,7 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def render_cases(output, selected=None, level=None, example_ids=None,include_all=False):
+def render_cases(output, selected=None, level=None, example_ids=None,include_all=False,case_rows=None,layout_override=None):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -19,7 +19,7 @@ def render_cases(output, selected=None, level=None, example_ids=None,include_all
     from render_frozen_table import render, load_table
     output.mkdir(parents=True, exist_ok=False)
     records=[]; inventory=[]
-    for case in cases(example_ids,include_all):
+    for case in (case_rows if case_rows is not None else cases(example_ids,include_all)):
         if case['route']!='native' or selected and case['form'] not in selected:
             continue
         key=case['form']; dest=output/key;dest.mkdir()
@@ -38,7 +38,7 @@ def render_cases(output, selected=None, level=None, example_ids=None,include_all
             palettes={}
             for name in ['palette','group_palette','stack_palette']:
                 if isinstance(case['parameters'].get(name),dict):palettes.update(case['parameters'][name])
-            groups=list(dict.fromkeys(str(v) for col in ['group','series','condition','stage'] if col in data for v in data[col].dropna()))
+            groups=list(dict.fromkeys(str(v) for col in ['group','series','condition','stage','model'] if col in data for v in data[col].dropna()))
             if case['base_form']=='mosaic':groups+=case['parameters']['category_order']
             groups=list(dict.fromkeys(list(palettes)+groups))
             if groups:
@@ -59,6 +59,7 @@ def render_cases(output, selected=None, level=None, example_ids=None,include_all
                 parameters=case['parameters'],columns={c:dict(dtype=str(data[c].dtype),unique=int(data[c].nunique()),examples=[str(v) for v in data[c].dropna().drop_duplicates().head(4)]) for c in data.columns}))
             source_hash=digest(ROOT/case['table']); before=table_bytes(data)
             layout=None if level is None else {'width_inches':[7.2,10,8.5][level]}
+            if layout_override:layout=dict(layout_override)
             if level is not None and case['form']=='feature-embedding':layout['columns']=[1,3,2][level]
             if level is not None and case['form']=='slice':case['parameters']['arrangement']=['vertical','horizontal','vertical'][level]
             fig,audit=render(case['adapter'],data,case['parameters'],case['theme'],layout=layout)
