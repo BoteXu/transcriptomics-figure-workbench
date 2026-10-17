@@ -67,7 +67,7 @@ def main():
     collection=fig.axes[0].collections[0];xy=np.asarray(collection.get_offsets());sizes=collection.get_sizes();colors=collection.get_array()
     for r in dot.itertuples():
         idx=np.flatnonzero((xy[:,0]==['c2','c1'].index(r.group))&(xy[:,1]==['r3','r1','r2'].index(r.feature))).item()
-        np.testing.assert_allclose(sizes[idx],150*r.fraction);np.testing.assert_allclose(colors[idx],r.value)
+        np.testing.assert_allclose(sizes[idx],260*r.fraction);np.testing.assert_allclose(colors[idx],r.value)
     plt.close(fig)
     wide=pd.DataFrame({'id':['r3','r1','r2'],'c2':[3.,1.,2.],'c1':[6.,4.,5.]})
     fig=plot_heatmap(wide,'Value',row_field='id',value_columns=['c2','c1'],row_order=['r1','r2','r3'],column_order=['c1','c2'],

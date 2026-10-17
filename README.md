@@ -4,7 +4,7 @@
 
 本版为 **v0.9.2**。优先选择信息更完整且易读的美化扩展，并按 **58个分析章节**组织 bulk 与单细胞绘图：每章提供实际代码、可运行模板、准确模拟表和导出实例。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
 
-## v0.9.3 原图参考落实到代码、实际示例与灵活布局
+## v0.9.4 原图参考落实到代码、实际示例与灵活布局
 
 [96个当前完整单图视图](skills/transcriptomics-figure-workbench/assets/source-gallery/index.html) · [三档数据量与48个组图布局](examples/source-v093/index.html) · [90个图型逐项来源与实现](skills/transcriptomics-figure-workbench/references/source-design-v093.md) · [实际验收范围](skills/transcriptomics-figure-workbench/references/validation-v093.md)
 
@@ -15,6 +15,8 @@
 - **可以实际复现：** 355份原生单图和数据量示例提供冻结TSV与 `example.spec.json`，经统一 `plan`、`render` 接口使用；安装包含完整的96视图与本地输入，Studio优先导航到当前版本。组图保留可检查的跨列、列宽权重及完整SVG参数。
 
 新数据、新长标签、主题和尺寸不能沿用示例的审阅结论。大幅阅读布局不保证缩到期刊栏宽仍清楚；实际投稿需按目标物理尺寸重新看图。所有新数量和布局测试均为明确虚构的软件样例，未做新的科学分析。
+
+v0.9.4补修了候选v0.9.3在跨系统、较新Matplotlib环境中的验收问题：区分跨系统弧线舍入与冻结数值变化，明确保留径向柱的原始高度，并将旧点阵测试同步到已审阅的面积尺度。图形修订档案继续使用 `source-v093` 路径，未发布的候选标签保留用于追溯。
 
 ## v0.9.2 逐类期刊检索与版式修订
 

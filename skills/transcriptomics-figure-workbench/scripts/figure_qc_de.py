@@ -147,7 +147,11 @@ def plot_frozen_qc_de(data, theme, *, mode, contract, order=None, marker_map=Non
             hole=max(float(d.effect.abs().max()),1e-12)*.30
             bars = ax.bar(angles, d.effect.abs(), width=2 * math.pi / len(d) * .76, bottom=hole,
                           color=[colors[x] for x in d.status], ec='white', lw=.5)
-            for patch, status in zip(bars, d.status):
+            for patch, status, magnitude in zip(bars, d.status, d.effect.abs()):
+                # Some Matplotlib versions convert height through top-bottom,
+                # introducing cancellation at a nonzero radial origin. Keep
+                # the supplied magnitude itself as the rectangle's height.
+                patch.set_height(float(magnitude))
                 if status == 'untested':
                     patch.set_edgecolor(theme['roles']['border']); patch.set_linewidth(.8); patch.set_hatch('///')
             ax.set_xticks(angles, order, fontsize=8); ax.set_theta_offset(math.pi / 2); ax.set_theta_direction(-1)

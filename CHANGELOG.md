@@ -1,5 +1,11 @@
 # Change log
 
+## 0.9.4
+
+- Fixed the unreleased 0.9.3 candidate's acceptance failures: preserve supplied radial bar heights after nonzero-origin unit conversion; update the stale 150-point dot-area assertion to the reviewed 260-point scale.
+- Compare exact generated geometry within the same runtime. Match archived Windows geometry fingerprints only in their reference renderer runtime; frozen scientific input bytes and explicit numerical channels remain independently checked across systems.
+- Re-exported affected radial examples and retained prior visual review only for byte-identical final PNGs. The source-v093 drawing revision and its 405-view review scope remain the stable artwork archive.
+
 ## 0.9.3
 
 - Connected all 90 consolidated base forms to actually inspected original references, adopted/rejected choices, implementation and exported examples. Added 34 source records to the prior eight; distinguish identical charts from related components, older author examples and rejection examples.

@@ -79,7 +79,18 @@ def main():
         before=table_bytes(d);f,_=render(spec['renderer'],d,spec['parameters'],spec['theme'],layout=spec.get('layout'))
         f.canvas.draw() # export geometry includes deferred colourbar/axis paths
         assert table_bytes(d)==before
-        assert geometry_signature(f)==rows[key]['quantitative_geometry_sha256'],'Portable replay changed geometry: '+key
+        signature=geometry_signature(f)
+        duplicate,_=render(spec['renderer'],d.copy(deep=True),spec['parameters'],spec['theme'],layout=spec.get('layout'))
+        duplicate.canvas.draw()
+        assert signature==geometry_signature(duplicate),'Same-runtime replay changed geometry: '+key
+        plt.close(duplicate)
+        # A Windows/Matplotlib reference is an exact rendering fingerprint,
+        # not a portable libm contract. Other systems can round generated arc
+        # vertices differently even with identical frozen scientific values.
+        import re
+        archived=re.search(r'Matplotlib v([0-9.]+)',(folder/(key+'.svg')).read_text())
+        if sys.platform=='win32' and archived and archived[1]==matplotlib.__version__:
+            assert signature==rows[key]['quantitative_geometry_sha256'],'Reference-runtime replay changed geometry: '+key
         if key in ['feature-embedding','object-schematic']:
             ratio=f._responsive_canvas_aspect;apply_native_layout(f,{'width_inches':9.6})
             assert abs(f.get_figwidth()/f.get_figheight()-ratio)<1e-10,'Width-only request stretched fixed-aspect content'
