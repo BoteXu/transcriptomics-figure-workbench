@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "version": "0.9.6",
+  "version": "0.9.7",
   "counts": {
-    "python_functions": 131,
+    "python_functions": 132,
     "fixed_aliases": 82,
-    "table_entries": 131
+    "table_entries": 132
   },
   "renderers": [
     {
@@ -651,6 +651,113 @@
         "upper_rank",
         "v",
         "value",
+        "x",
+        "y"
+      ]
+    },
+    {
+      "id": "figure_coexpression_evidence.plot_coexpression_evidence",
+      "module": "figure_coexpression_evidence",
+      "function": "plot_coexpression_evidence",
+      "display_name": "Coexpression and program evidence companions",
+      "summary": "Coexpression, pathway/regulon and donor-level companions with exact result semantics.",
+      "parameters": [
+        {
+          "name": "mode",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "context",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "module_order",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "value_label",
+          "required": false,
+          "annotation": null,
+          "default": "Oriented module eigengene"
+        },
+        {
+          "name": "value_limits",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "label_genes",
+          "required": false,
+          "annotation": null,
+          "default": []
+        },
+        {
+          "name": "edge_semantics",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "directed",
+          "required": false,
+          "annotation": null,
+          "default": false
+        },
+        {
+          "name": "cloud_shapes",
+          "required": false,
+          "annotation": null,
+          "default": null
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "e1f21114a5a102bc0a7a8fc5c78e42d1ba051f0ded4a5ef382df23b68cb65a08",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "assigned",
+        "count",
+        "eigengene",
+        "estimate",
+        "genes",
+        "kME",
+        "k_query",
+        "k_reference",
+        "lower",
+        "n",
+        "n_resamples",
+        "permutations",
+        "position",
+        "probability",
+        "q",
+        "retained_genes",
+        "tested_genes",
+        "trait",
+        "upper",
+        "value",
+        "weight",
         "x",
         "y"
       ]
@@ -7502,20 +7609,34 @@
             -3,
             3
           ]
+        },
+        {
+          "name": "diagnostics",
+          "required": false,
+          "annotation": null,
+          "default": "standard"
+        },
+        {
+          "name": "merge_reference",
+          "required": false,
+          "annotation": null,
+          "default": null
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "b05fea4f00a933228af273037f9733ea5fc87eef4e599c41dd8e46dc4ff19793",
+      "source_sha256": "a5286409f4fd540f9bdd74decd153041f26d996a4ce4a548f9e89dded24d3c3f",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "GS",
         "Zsummary",
         "kME",
         "kWithin",
+        "max_connectivity",
         "mean_connectivity",
         "medianRank",
+        "median_connectivity",
         "n",
         "n_cells",
         "n_shared",
@@ -7524,6 +7645,7 @@
         "r",
         "signed_fit",
         "size",
+        "slope",
         "value",
         "x",
         "y"

@@ -1,0 +1,82 @@
+{
+  "id": "PPI_SelectedEvidenceNetwork",
+  "title": "Selected protein interactions and module context",
+  "chapters": [
+    "bulk.ppi",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "extension",
+  "family": "hub_network",
+  "variant": false,
+  "order": 18,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "hub_network",
+    "title": "Selected protein interactions and module context",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Fictional prespecified undirected PPI evidence edges, upstream confidence scores and module membership; node area encodes separately supplied |kME|, not PPI degree. No database retrieval or inferred binding.",
+    "label_genes": [
+      "M1_G1",
+      "M2_G1",
+      "M3_G1"
+    ],
+    "edge_semantics": "Undirected fictional PPI support; differs from coexpression",
+    "directed": false
+  },
+  "definition": "Fictional prespecified undirected PPI evidence edges, upstream confidence scores and module membership; node area encodes separately supplied |kME|, not PPI degree. No database retrieval or inferred binding.",
+  "requirements": [
+    "context",
+    "definition",
+    "directed",
+    "edge_semantics",
+    "label_genes",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "PPI_SelectedEvidenceNetwork/example.png",
+    "svg": "PPI_SelectedEvidenceNetwork/example.svg",
+    "pdf": "PPI_SelectedEvidenceNetwork/example.pdf",
+    "tsv": "PPI_SelectedEvidenceNetwork/example.tsv",
+    "spec": "PPI_SelectedEvidenceNetwork/input/example.spec.json",
+    "preview": "PPI_SelectedEvidenceNetwork/preview.jpg"
+  },
+  "sha256": {
+    "png": "06a85331dbbfd63854ea189785a1ec7cc46e59f3c37775c304a5c4579e5bb560",
+    "svg": "b8e53bff49e82ee1f55b9611cf7acea4a3a2795546c67bc229a512e069b1f609",
+    "pdf": "d97305638250867489dd71fdcc9f671fcef11daa9ab080a1d032c2f79ebbb1dc",
+    "tsv": "a55683de7b65bdd2dddeb8da0420ae55e29076c1974dcf9d5643b738e5707aa9",
+    "spec": "96b079d34665bfc1da8fa4cc81b723d738a81f843342bc15baee01a880f867ff"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 8,
+    "smallest_pt": 13.980657309140707,
+    "p10_pt": 13.980657309140707,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "PPI_SelectedEvidenceNetwork",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "06a85331dbbfd63854ea189785a1ec7cc46e59f3c37775c304a5c4579e5bb560",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Explicit PPI meaning reviewed separately from coexpression; labels and guide readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

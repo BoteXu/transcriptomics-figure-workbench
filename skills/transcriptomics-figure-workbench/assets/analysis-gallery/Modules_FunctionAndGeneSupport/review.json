@@ -1,0 +1,72 @@
+{
+  "id": "Modules_FunctionAndGeneSupport",
+  "title": "Module functions with explicit supporting gene counts",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "function",
+  "family": "module_enrichment",
+  "variant": false,
+  "order": 5,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_enrichment",
+    "title": "Module functions with explicit supporting gene counts",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Selected complete fictional module/term scope; ORA using a 12000-gene tested background. BH q supplied; point area encodes overlap/query size, numeral encodes actual overlap. No test recomputation."
+  },
+  "definition": "Selected complete fictional module/term scope; ORA using a 12000-gene tested background. BH q supplied; point area encodes overlap/query size, numeral encodes actual overlap. No test recomputation.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Modules_FunctionAndGeneSupport/example.png",
+    "svg": "Modules_FunctionAndGeneSupport/example.svg",
+    "pdf": "Modules_FunctionAndGeneSupport/example.pdf",
+    "tsv": "Modules_FunctionAndGeneSupport/example.tsv",
+    "spec": "Modules_FunctionAndGeneSupport/input/example.spec.json",
+    "preview": "Modules_FunctionAndGeneSupport/preview.jpg"
+  },
+  "sha256": {
+    "png": "ca8acefba05af7afbd6318b2d6b832f699ac12221ffa3962614646ecc1d32665",
+    "svg": "8dc4dce28f0890b9983cf3503fccdb87a7745c9bde9c7fd00c5bc9137b1d83d8",
+    "pdf": "23ede2c79d9c9965a712fb20513b2800c7b59e8c3aa97f70aa3f7d83bfe31530",
+    "tsv": "8e7db933af8281b287183091a0817ebbea7a8b407ee2bcc865dac2692023da00",
+    "spec": "ab7bc32be8309be72c1276b7c5c1db26e98d99ddbddfd8b8743b296cc244d357"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 205.73999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 41,
+    "smallest_pt": 15.87926509186352,
+    "p10_pt": 15.87926509186352,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Modules_FunctionAndGeneSupport",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ca8acefba05af7afbd6318b2d6b832f699ac12221ffa3962614646ecc1d32665",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Common term rows, exact support counts and separate area/adjusted-P guides inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

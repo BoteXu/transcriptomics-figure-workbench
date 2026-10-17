@@ -1,0 +1,74 @@
+{
+  "id": "Connectivity_ReferenceAndChange",
+  "title": "Connectivity change on identical selected genes",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "validation",
+  "family": "connectivity_change",
+  "variant": false,
+  "order": 3,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "connectivity_change",
+    "title": "Connectivity change on identical selected genes",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Upstream degree difference query minus reference; illustrative 95% intervals supplied independently of drawing. Same tested genes, network definition and sample scope.",
+    "value_label": "Query − reference degree · supplied 95% interval"
+  },
+  "definition": "Upstream degree difference query minus reference; illustrative 95% intervals supplied independently of drawing. Same tested genes, network definition and sample scope.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "Connectivity_ReferenceAndChange/example.png",
+    "svg": "Connectivity_ReferenceAndChange/example.svg",
+    "pdf": "Connectivity_ReferenceAndChange/example.pdf",
+    "tsv": "Connectivity_ReferenceAndChange/example.tsv",
+    "spec": "Connectivity_ReferenceAndChange/input/example.spec.json",
+    "preview": "Connectivity_ReferenceAndChange/preview.jpg"
+  },
+  "sha256": {
+    "png": "e1033dc7b99d98b9bce2c0beccff13a254026d9c689b07fc55db52f13a9ef0f4",
+    "svg": "db92fe25ec8e3188c20c5d92c2443a3be5d434162f7b7d142ae129b1593a62a1",
+    "pdf": "4903f25e5d0104acf4800b5722efcb5c98b4b8323c7f7c1fdcfa9f77b2cf849a",
+    "tsv": "206c679e94834761cc120a88cc04a7023b86a2894d6266892de8738af9b27ae3",
+    "spec": "867c870cbef3e5837be59b3f965945119c3094169d668b64085719ab996bd884"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 281.43199999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 11.608488018420081,
+    "p10_pt": 11.608488018420081,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Connectivity_ReferenceAndChange",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e1033dc7b99d98b9bce2c0beccff13a254026d9c689b07fc55db52f13a9ef0f4",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Common selected genes, identity line and effect intervals form complementary aligned diagnostics.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

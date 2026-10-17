@@ -1,0 +1,86 @@
+{
+  "id": "Layout_Expression_OneColumn",
+  "title": "Module expression · one-column reading",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "layout",
+  "family": "module_expression",
+  "variant": true,
+  "order": 40,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_expression",
+    "title": "Module expression · one-column reading",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Seven prespecified genes per module, supplied row Z scores and separately supplied oriented eigengenes; identical 16 donor columns and group identities. No clustering or scaling.",
+    "columns": 1,
+    "value_limits": [
+      -2,
+      2
+    ],
+    "value_label": "Supplied gene row Z score",
+    "module_order": [
+      "M1",
+      "M2"
+    ]
+  },
+  "definition": "Seven prespecified genes per module, supplied row Z scores and separately supplied oriented eigengenes; identical 16 donor columns and group identities. No clustering or scaling.",
+  "requirements": [
+    "columns",
+    "context",
+    "definition",
+    "mode",
+    "module_order",
+    "title",
+    "value_label",
+    "value_limits"
+  ],
+  "assets": {
+    "png": "Layout_Expression_OneColumn/example.png",
+    "svg": "Layout_Expression_OneColumn/example.svg",
+    "pdf": "Layout_Expression_OneColumn/example.pdf",
+    "tsv": "Layout_Expression_OneColumn/example.tsv",
+    "spec": "Layout_Expression_OneColumn/input/example.spec.json",
+    "preview": "Layout_Expression_OneColumn/preview.jpg"
+  },
+  "sha256": {
+    "png": "5e9ac7dca7dc90198921685b46604d33fec7667e04d6352eb09352a43875acf0",
+    "svg": "81bbdc230ca31b563a658c464f60a65a897145b80cf7025dd9f45e6b90959d9f",
+    "pdf": "7a69653fb79f0d44a2a5d5cb30a11fdadcf7746b64b9cc6f825cd6d8f0377081",
+    "tsv": "f09cf7cbde260f959f9c2e7d7424a970dd06038feb0e5a4d2710de533f203a06",
+    "spec": "4b3430543157e89c8c203eec33d33d9e4d6d5106f8a59626172d0fd5dd9c0cbf"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 129.54,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 65,
+    "smallest_pt": 25.22000926354794,
+    "p10_pt": 25.22000926354794,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Layout_Expression_OneColumn",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5e9ac7dca7dc90198921685b46604d33fec7667e04d6352eb09352a43875acf0",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Two full module-expression/eigengene groups vertically aligned with attached condition tracks.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

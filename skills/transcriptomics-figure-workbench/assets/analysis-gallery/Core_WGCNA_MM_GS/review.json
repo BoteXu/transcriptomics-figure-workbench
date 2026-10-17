@@ -1,0 +1,78 @@
+{
+  "id": "Core_WGCNA_MM_GS",
+  "title": "Module membership and gene–trait association",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "membership_significance",
+  "variant": false,
+  "order": 25,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "membership_significance",
+    "title": "Module membership and gene–trait association",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "module_order": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "coefficient_semantics": "signed"
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "coefficient_semantics",
+    "context",
+    "mode",
+    "module_order",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_MM_GS/example.png",
+    "svg": "Core_WGCNA_MM_GS/example.svg",
+    "pdf": "Core_WGCNA_MM_GS/example.pdf",
+    "tsv": "Core_WGCNA_MM_GS/example.tsv",
+    "spec": "Core_WGCNA_MM_GS/input/example.spec.json",
+    "preview": "Core_WGCNA_MM_GS/preview.jpg"
+  },
+  "sha256": {
+    "png": "9b9d2df17277aa334d7b520f0807141159e07ccce5ca340dee5de75734b01497",
+    "svg": "0b65481c977bcdf6d5c202cad378c05082ae31005ec09f2fcd0f0dc2874b381b",
+    "pdf": "bafdc38e742dcb652f10dcfd58ed3609bc29528172d64ff73cd74230ea56aa14",
+    "tsv": "392bd8fe585719ab6c43077855d07351ade7d0febf55ac195abd5ed8382090e7",
+    "spec": "223f558cbe25e56f995bb0053c4e96ad2c963b6973136225b1ae5ccf029051f2"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 281.94,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 52,
+    "smallest_pt": 11.587571823792297,
+    "p10_pt": 11.587571823792297,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_MM_GS",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9b9d2df17277aa334d7b520f0807141159e07ccce5ca340dee5de75734b01497",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Common signed ranges, module identities and every selected gene point inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

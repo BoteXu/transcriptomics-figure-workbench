@@ -1,0 +1,72 @@
+{
+  "id": "Modules_CrossCohortOverlap",
+  "title": "Shared genes across two supplied module partitions",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "validation",
+  "family": "module_overlap",
+  "variant": false,
+  "order": 2,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_overlap",
+    "title": "Shared genes across two supplied module partitions",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Complete four-by-four intersection table on the same 597 selected genes; zero is explicit. Flow width is gene count, not Jaccard or significance."
+  },
+  "definition": "Complete four-by-four intersection table on the same 597 selected genes; zero is explicit. Flow width is gene count, not Jaccard or significance.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Modules_CrossCohortOverlap/example.png",
+    "svg": "Modules_CrossCohortOverlap/example.svg",
+    "pdf": "Modules_CrossCohortOverlap/example.pdf",
+    "tsv": "Modules_CrossCohortOverlap/example.tsv",
+    "spec": "Modules_CrossCohortOverlap/input/example.spec.json",
+    "preview": "Modules_CrossCohortOverlap/preview.jpg"
+  },
+  "sha256": {
+    "png": "e1b8cb6e281d11a7169b159d80dca3c05e339df4e90487bb07e4ca75fb20bfaf",
+    "svg": "605daf83baf6de231074360d1360d7817f993e36aebcb3263b6ca287e403a5b6",
+    "pdf": "7553fceefb8980abc663b136f3071d4381c19977760d83975097ed648b2f1e66",
+    "tsv": "600c49e8fba72392160b728e157557662c9ab851d3336cb7a6530b1f014d4952",
+    "spec": "c37af90cbf40df6e3d3e13b6afffdd7f2bc4ea4af566b28423fe2be22618c68b"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 19,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Modules_CrossCohortOverlap",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e1b8cb6e281d11a7169b159d80dca3c05e339df4e90487bb07e4ca75fb20bfaf",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Gene-flow widths and both partition totals legible; complete explicit zero intersections retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

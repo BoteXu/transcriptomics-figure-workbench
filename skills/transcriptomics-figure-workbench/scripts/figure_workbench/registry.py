@@ -24,6 +24,7 @@ def source_identity():
         result['references/'+name] = digest(REFERENCES/name)
     if (REFERENCES/'transcriptomic-chapters.json').is_file():result['references/transcriptomic-chapters.json']=digest(REFERENCES/'transcriptomic-chapters.json')
     if (REFERENCES/'analysis-views.json').is_file():result['references/analysis-views.json']=digest(REFERENCES/'analysis-views.json')
+    if (REFERENCES/'analysis-suites.json').is_file():result['references/analysis-suites.json']=digest(REFERENCES/'analysis-suites.json')
     return result
 
 

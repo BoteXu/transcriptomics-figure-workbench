@@ -71,6 +71,10 @@ def build_studio(output,gallery=None,demo_svg=None):
     content=template.replace('/*__STUDIO_CSS__*/',(assets/'studio.css').read_text(encoding='utf8'))
     content=content.replace('科研绘图工作台 · 0.8.1','科研绘图工作台 · '+(SKILL/'VERSION').read_text().strip())
     chapters=SKILL/'assets/chapter-gallery'
+    analysis=SKILL/'assets/analysis-library'
+    if analysis.is_dir():
+        prefix=Path(os.path.relpath(analysis,output.resolve().parent)).as_posix()
+        content=content.replace('</header>','<a class="button secondary" href="'+prefix+'/index.html">按分析取整套图 · WGCNA / GSVA / 调控 / 剪接</a></header>',1)
     if chapters.is_dir():
         prefix=Path(os.path.relpath(chapters,output.resolve().parent)).as_posix()
         content=content.replace('</header>','<a class="button secondary" href="'+prefix+'/index.html">58个分析章节</a></header>',1)

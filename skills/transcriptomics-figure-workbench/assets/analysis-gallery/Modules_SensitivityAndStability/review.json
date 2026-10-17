@@ -1,0 +1,74 @@
+{
+  "id": "Modules_SensitivityAndStability",
+  "title": "Module stability across prespecified network settings",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "validation",
+  "family": "stability",
+  "variant": false,
+  "order": 9,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "stability",
+    "title": "Module stability across prespecified network settings",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Supplied bootstrap matched-membership Jaccard and 95% intervals from 200 resamples per setting. No resampling, rematching, optimal-setting choice or inference during drawing.",
+    "value_label": "Matched-membership Jaccard · supplied 95% interval"
+  },
+  "definition": "Supplied bootstrap matched-membership Jaccard and 95% intervals from 200 resamples per setting. No resampling, rematching, optimal-setting choice or inference during drawing.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "Modules_SensitivityAndStability/example.png",
+    "svg": "Modules_SensitivityAndStability/example.svg",
+    "pdf": "Modules_SensitivityAndStability/example.pdf",
+    "tsv": "Modules_SensitivityAndStability/example.tsv",
+    "spec": "Modules_SensitivityAndStability/input/example.spec.json",
+    "preview": "Modules_SensitivityAndStability/preview.jpg"
+  },
+  "sha256": {
+    "png": "4eaea3012fe314036ed1e36fc53f3ce1e5b58e6f06936595bc8ff6599e8e7d34",
+    "svg": "450bad5cf9d3ddd003f7ca32d97a2c6472ce88002dfab9f53b2ca190e9ec8133",
+    "pdf": "e8fce810256708a809a28d654ea9bdc82f6ea16b8952d6180c98fb1b1144d31c",
+    "tsv": "fea9525a27cc4129520f34a0e7739791959ef6019b689c6a06870ed46377fd80",
+    "spec": "f9cedb5e0eceed7db13acdf91d123a24b32c5d7fa783c6965d496031e2b271da"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 215.89999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 20,
+    "smallest_pt": 15.132005558128764,
+    "p10_pt": 15.132005558128764,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Modules_SensitivityAndStability",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "4eaea3012fe314036ed1e36fc53f3ce1e5b58e6f06936595bc8ff6599e8e7d34",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Full [0,1] scale and explicit sensitivity settings retained; no optimal setting inferred.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

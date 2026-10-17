@@ -1,0 +1,12 @@
+record_type	node_id	module	dynamic_module	left	right	height
+leaf	M1	M1	M1			
+leaf	M2	M2	M2			
+leaf	M3	M3	M3			
+leaf	M4	M4	M4			
+leaf	M5	M5	M5			
+leaf	M6	M6	M6			
+merge	A			M1	M2	0.12
+merge	B			M3	M4	0.18
+merge	C			M5	M6	0.34
+merge	D			A	B	0.74
+merge	E			D	C	1.2

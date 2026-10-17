@@ -1,0 +1,72 @@
+{
+  "id": "Modules_GenePartition",
+  "title": "Module composition and unassigned genes",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "network",
+  "family": "module_size",
+  "variant": false,
+  "order": 0,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_size",
+    "title": "Module composition and unassigned genes",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Complete fictional disjoint gene partition. Grey genes are unassigned, not an inferred module."
+  },
+  "definition": "Complete fictional disjoint gene partition. Grey genes are unassigned, not an inferred module.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Modules_GenePartition/example.png",
+    "svg": "Modules_GenePartition/example.svg",
+    "pdf": "Modules_GenePartition/example.pdf",
+    "tsv": "Modules_GenePartition/example.tsv",
+    "spec": "Modules_GenePartition/input/example.spec.json",
+    "preview": "Modules_GenePartition/preview.jpg"
+  },
+  "sha256": {
+    "png": "5ca3dbcf72a0f74d8bb86bd4c9ad5363aac332266c7a3b29d050ae26043e21dc",
+    "svg": "5ab19c7068f7273ffb4d0803a7a95d0c88eaf5ca17853f01915b003279e3a14e",
+    "pdf": "1db49def9f99a8173da680e3d1ff3bf05a24ab56f6345e039394b6ff9054da58",
+    "tsv": "99a9c49cb0a5abeb1d0797d1fa24448357edd5e5c5c0d45cfb919764eb0e4492",
+    "spec": "aae6813986132aafd936b32a75d7b53ee05f8baac6b87e8d08584ebafeacc95e"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 228.6,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 14.291338582677167,
+    "p10_pt": 14.291338582677167,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Modules_GenePartition",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5ca3dbcf72a0f74d8bb86bd4c9ad5363aac332266c7a3b29d050ae26043e21dc",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Module identities and unassigned genes legible; exact gene counts retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

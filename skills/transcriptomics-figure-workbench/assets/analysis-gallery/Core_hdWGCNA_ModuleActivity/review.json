@@ -1,0 +1,78 @@
+{
+  "id": "Core_hdWGCNA_ModuleActivity",
+  "title": "Module activity · identical cells, coordinates and scale",
+  "chapters": [
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "module_activity",
+  "variant": false,
+  "order": 34,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "module_activity",
+    "title": "Module activity · identical cells, coordinates and scale",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "module_order": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "columns": 2
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "columns",
+    "context",
+    "mode",
+    "module_order",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_hdWGCNA_ModuleActivity/example.png",
+    "svg": "Core_hdWGCNA_ModuleActivity/example.svg",
+    "pdf": "Core_hdWGCNA_ModuleActivity/example.pdf",
+    "tsv": "Core_hdWGCNA_ModuleActivity/example.tsv",
+    "spec": "Core_hdWGCNA_ModuleActivity/input/example.spec.json",
+    "preview": "Core_hdWGCNA_ModuleActivity/preview.jpg"
+  },
+  "sha256": {
+    "png": "6ea77a84efb945f4d888eda1ef28acc0481e9d345fe978b3a3f0e645d43710fb",
+    "svg": "e796b5127ca34141e9b790bf546cc7c9a9a8c65190e0c9a191f9194f0eca6649",
+    "pdf": "6e02be7b5d8f4905b3e04e353627c4e02d73041ea346924456191ea6f35c1db1",
+    "tsv": "5df79ed7f3e92459158a08fd1f08e2d180d7b513c26e82c4a476031fd64d7d30",
+    "spec": "c6bfdbe91ba8f931c93307db3b771f38d2c69d5f52a07b52f46273cb014515df"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 177.79999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 13,
+    "smallest_pt": 18.374578177727784,
+    "p10_pt": 18.374578177727784,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_hdWGCNA_ModuleActivity",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6ea77a84efb945f4d888eda1ef28acc0481e9d345fe978b3a3f0e645d43710fb",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Repaired canvas height to actual coordinate aspect; four exact-coordinate module maps share one scale.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

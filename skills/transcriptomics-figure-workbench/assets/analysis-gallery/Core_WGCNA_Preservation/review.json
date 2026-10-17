@@ -1,0 +1,75 @@
+{
+  "id": "Core_WGCNA_Preservation",
+  "title": "External module preservation · size, Zsummary and medianRank",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "validation",
+  "family": "preservation",
+  "variant": false,
+  "order": 32,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "preservation",
+    "title": "External module preservation · size, Zsummary and medianRank",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "preservation_guides": [
+      2,
+      10
+    ]
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "mode",
+    "preservation_guides",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_Preservation/example.png",
+    "svg": "Core_WGCNA_Preservation/example.svg",
+    "pdf": "Core_WGCNA_Preservation/example.pdf",
+    "tsv": "Core_WGCNA_Preservation/example.tsv",
+    "spec": "Core_WGCNA_Preservation/input/example.spec.json",
+    "preview": "Core_WGCNA_Preservation/preview.jpg"
+  },
+  "sha256": {
+    "png": "82954416db4a6ad91813f179b6c12ec41cc182301272e5ae3b91ad34fbfa62bc",
+    "svg": "1a3fb741e3eedb664135b21098daabde9a04d418f403a0831f03bea64a552be4",
+    "pdf": "dc724ffeda211b994aa55cff923ad9d9ecea90f27fcfb8cf47460d1ff731eb16",
+    "tsv": "961bb2f0a6b8985960da98d8f72a96b3c0fabb3cb38fa2f6d826f65e073e0001",
+    "spec": "6dccd2899b54597d66e69f6cf8f901e2eba858741cd98534ba3564934210fedf"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_Preservation",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "82954416db4a6ad91813f179b6c12ec41cc182301272e5ae3b91ad34fbfa62bc",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Zsummary and medianRank retain module size context and explicitly declared guides.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

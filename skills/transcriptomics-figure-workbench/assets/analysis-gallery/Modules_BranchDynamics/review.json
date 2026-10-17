@@ -1,0 +1,77 @@
+{
+  "id": "Modules_BranchDynamics",
+  "title": "Module programs along supplied branches",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna",
+    "single_cell.trajectory"
+  ],
+  "stage": "extension",
+  "family": "module_dynamics",
+  "variant": false,
+  "order": 8,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_dynamics",
+    "title": "Module programs along supplied branches",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Frozen branch progression positions, module curves and donor-aware upstream 95% intervals; these are authored drawing fixtures, not fitted trajectories.",
+    "columns": 2,
+    "value_label": "Oriented module activity · supplied 95% CI"
+  },
+  "definition": "Frozen branch progression positions, module curves and donor-aware upstream 95% intervals; these are authored drawing fixtures, not fitted trajectories.",
+  "requirements": [
+    "columns",
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "Modules_BranchDynamics/example.png",
+    "svg": "Modules_BranchDynamics/example.svg",
+    "pdf": "Modules_BranchDynamics/example.pdf",
+    "tsv": "Modules_BranchDynamics/example.tsv",
+    "spec": "Modules_BranchDynamics/input/example.spec.json",
+    "preview": "Modules_BranchDynamics/preview.jpg"
+  },
+  "sha256": {
+    "png": "e076a7bcf07edd4361d0c9eb1765154bae65ebf963a028e2843c1c961d07860f",
+    "svg": "d1b38ee89e4eb62c48ebfb3d574fe584e6db22195e8462cdddef7c31954bf454",
+    "pdf": "a278a0adb02d25504a20a39b7be762d9462f2ffa1a39d32fe7e07012ce8b7097",
+    "tsv": "6360ffd48f575de64c87e642d212fa041929c2bba01a7dc9656b1e2164731dcd",
+    "spec": "d5ac76cc6194ac928e1b40c0191c6a15b2ae0e0823851242bb2f923f4bdf1e18"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 216.6935846354166,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 83,
+    "smallest_pt": 15.076588471673832,
+    "p10_pt": 15.076588471673832,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Modules_BranchDynamics",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e076a7bcf07edd4361d0c9eb1765154bae65ebf963a028e2843c1c961d07860f",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Repaired long axis labels; identical ordinate scales, declared branches and upstream bands inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

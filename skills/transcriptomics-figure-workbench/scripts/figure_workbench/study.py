@@ -56,6 +56,12 @@ def study_plan(manifest, request, base):
             raise ValueError('Complete study identity, contrast, unit and denominator required')
     if manifest['upstream_qc'] not in ['reviewed','unknown','failed']:
         raise ValueError('Declare actual upstream QC state')
+    from .analysis_suites import named_analysis_chapters
+    named=named_analysis_chapters(assay,request)
+    if named:
+        return dict(schema_version=1,state='ANALYSIS_SUITE_ROUTE_REQUIRED',sections=[],missing_results=[],panels=[],
+                    blocking_reasons=['Named analysis uses dedicated multi-view suites: '+', '.join(named)+'. Use analysis-library / analysis-suite for executable synthetic examples; use book-plan to bind real frozen method results. Routine study roles cannot represent this analysis.'],
+                    analysis_suites=named,analysis_performed=False,visual_acceptance=False)
     results=manifest['results'];allowed={r for stages in STAGES.values() for roles in stages.values() for r,_ in roles}
     if not isinstance(results,list) or len(results)>50:
         raise ValueError('Select at most fifty explicit result specifications')

@@ -1,0 +1,75 @@
+{
+  "id": "GSVA_AdjustedPathwayContrasts",
+  "title": "Adjusted pathway score effects across contrasts",
+  "chapters": [
+    "bulk.gsva",
+    "bulk.pathway_contrasts",
+    "single_cell.pathways"
+  ],
+  "stage": "interpretation",
+  "family": "module_effects",
+  "variant": false,
+  "order": 15,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_effects",
+    "title": "Adjusted pathway score effects across contrasts",
+    "context": {
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "method_version": "Authored display summaries v0.9.7",
+      "source_version": "Synthetic result fixtures; no analysis backend",
+      "selection": "Complete explicitly selected display scope"
+    },
+    "definition": "Supplied adjusted continuous pathway-score differences, upstream 95% CI and BH q over the displayed family; not ORA or GSEA NES.",
+    "columns": 2,
+    "value_label": "Pathway score difference · supplied 95% CI"
+  },
+  "definition": "Supplied adjusted continuous pathway-score differences, upstream 95% CI and BH q over the displayed family; not ORA or GSEA NES.",
+  "requirements": [
+    "columns",
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "GSVA_AdjustedPathwayContrasts/example.png",
+    "svg": "GSVA_AdjustedPathwayContrasts/example.svg",
+    "pdf": "GSVA_AdjustedPathwayContrasts/example.pdf",
+    "tsv": "GSVA_AdjustedPathwayContrasts/example.tsv",
+    "spec": "GSVA_AdjustedPathwayContrasts/input/example.spec.json",
+    "preview": "GSVA_AdjustedPathwayContrasts/preview.jpg"
+  },
+  "sha256": {
+    "png": "f2f9836b415661de4e11cf510de1aba0ec7a736c8a66e47281beae3196efaf3a",
+    "svg": "73fb9ed4e11ee678b71da43945e5ca34933b026406b3f3b859db19e8f7764de7",
+    "pdf": "22bc6a6512ad8824db18e5c4298c65b1c55e641b0f31f889b75f834b610d07a2",
+    "tsv": "effce129b466854552461b089a91fb0b26c0ad1fedf0ad64c608807d69dba567",
+    "spec": "cbb53f0daa96f036854c4a59764b58697a4b9a35b61b5057db18f2f2b8bc5c46"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 284.47999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 11.484111361079867,
+    "p10_pt": 11.484111361079867,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "GSVA_AdjustedPathwayContrasts",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f2f9836b415661de4e11cf510de1aba0ec7a736c8a66e47281beae3196efaf3a",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Repaired long program labels and measurement labels; both contrasts remain readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

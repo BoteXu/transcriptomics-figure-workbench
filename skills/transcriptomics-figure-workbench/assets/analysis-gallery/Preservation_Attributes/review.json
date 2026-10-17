@@ -1,0 +1,72 @@
+{
+  "id": "Preservation_Attributes",
+  "title": "Preservation evidence for each network attribute",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "validation",
+  "family": "preservation_attributes",
+  "variant": false,
+  "order": 12,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "preservation_attributes",
+    "title": "Preservation evidence for each network attribute",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Seven fictional NetRep-style attribute-wise adjusted probabilities, 5000 declared upstream permutations; correction family is all 35 displayed tests. No averaging p values; these probabilities are not WGCNA Zsummary."
+  },
+  "definition": "Seven fictional NetRep-style attribute-wise adjusted probabilities, 5000 declared upstream permutations; correction family is all 35 displayed tests. No averaging p values; these probabilities are not WGCNA Zsummary.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Preservation_Attributes/example.png",
+    "svg": "Preservation_Attributes/example.svg",
+    "pdf": "Preservation_Attributes/example.pdf",
+    "tsv": "Preservation_Attributes/example.tsv",
+    "spec": "Preservation_Attributes/input/example.spec.json",
+    "preview": "Preservation_Attributes/preview.jpg"
+  },
+  "sha256": {
+    "png": "a23ba1a3f512c33d82732f3dfd0dd64018f99c5c05e2fc08897ba5e0b14ae036",
+    "svg": "f69ef4afbf96c67bf9be494c3b664624e733984c1443319e59b7c67b66cfb5b3",
+    "pdf": "a0a48d2e7a5e86a76a9542cc9a035d2afee94ab6ecdc92a27c5eb1e35a96b58c",
+    "tsv": "aee07a00496cec4f5973c39e38bb15a8e661ffc77a2f9f3a3727d9fc00cd2431",
+    "spec": "d29e562d56eab393df31d9db0ec95d07a9be92defccb2f84911c837b76c6d123"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 285.75,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 57,
+    "smallest_pt": 11.433070866141732,
+    "p10_pt": 11.433070866141732,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Preservation_Attributes",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a23ba1a3f512c33d82732f3dfd0dd64018f99c5c05e2fc08897ba5e0b14ae036",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Separate network attributes and exact probabilities readable; no averaged-P claim.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -61,7 +61,7 @@ def render(adapter,data,params,theme,*,layout=None):
     accepted=set(inspect.signature(fn).parameters)-{'data','theme'}
     from figure_workbench.responsive import validate_layout,apply_native_layout
     layout=validate_layout(layout);native=dict(layout)
-    if 'axis_groups' not in native and row['module'] in {'figure_chapter_views','figure_enrichment_story','figure_wgcna_views','figure_lineage_views'}:
+    if 'axis_groups' not in native and row['module'] in {'figure_chapter_views','figure_enrichment_story','figure_wgcna_views','figure_lineage_views','figure_coexpression_evidence'}:
         for key in ['columns','rows']:
             if key in native:
                 if key not in accepted:raise ValueError('This chapter supports columns; rows follow the complete content')

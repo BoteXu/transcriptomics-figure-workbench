@@ -42,7 +42,7 @@ def _tree(data,order):
     if span[merges.iloc[-1].node_id]!=(0,len(order)-1):raise ValueError('Disconnected frozen hierarchy')
     return leaves.set_index('node_id').loc[order],segments,order
 
-def plot_wgcna_view(data,theme,*,mode,title,context,leaf_order=None,module_order=None,selected_power=None,fit_reference=None,probability_kind='adjusted',coefficient_semantics='signed',matrix_definition='TOM',track_labels=('Dynamic modules','Merged modules'),columns='auto',preservation_guides=None,label_genes=(),value_limits=(-3,3)):
+def plot_wgcna_view(data,theme,*,mode,title,context,leaf_order=None,module_order=None,selected_power=None,fit_reference=None,probability_kind='adjusted',coefficient_semantics='signed',matrix_definition='TOM',track_labels=('Dynamic modules','Merged modules'),columns='auto',preservation_guides=None,label_genes=(),value_limits=(-3,3),diagnostics='standard',merge_reference=None):
     """Dedicated network diagnostics, identities and result meanings; adaptive facets."""
     _context(context)
     modes={'soft_threshold','module_dendrogram','sample_tree','module_trait','membership_significance','tom','eigengene_network','eigengene_profiles','hub_connectivity','preservation','metacell_qc','module_activity'}
@@ -56,17 +56,29 @@ def plot_wgcna_view(data,theme,*,mode,title,context,leaf_order=None,module_order
         d=checked(data,['power','signed_fit','mean_connectivity'],['power','signed_fit','mean_connectivity'])
         if d.power.duplicated().any() or ((d.power<=0)|(d.power%1!=0)|(d.signed_fit<-1)|(d.signed_fit>1)|(d.mean_connectivity<0)).any() or selected_power not in set(d.power):raise ValueError('Supply valid candidate powers and an explicitly preselected observed power')
         if fit_reference is not None and (not isinstance(fit_reference,(int,float)) or not -1<=fit_reference<=1):raise ValueError('Declare the optional fit reference')
-        axes=_dual(fig,columns)
-        for ax,field,label in [(axes[0],'signed_fit','Supplied signed scale-free fit'),(axes[1],'mean_connectivity','Supplied mean connectivity')]:
+        if diagnostics not in ['standard','complete']:raise ValueError('Choose standard or complete supplied diagnostics')
+        fields=[('signed_fit','Signed scale-free fit R²'),('mean_connectivity','Mean connectivity')]
+        if diagnostics=='complete':
+            checked(d,['median_connectivity','max_connectivity','slope'],['median_connectivity','max_connectivity','slope'])
+            if ((d.median_connectivity<0)|(d.max_connectivity<d.mean_connectivity)|(d.max_connectivity<d.median_connectivity)).any():raise ValueError('Complete supplied connectivity diagnostics are inconsistent')
+            cols=2 if columns=='auto' else columns
+            if cols not in [1,2]:raise ValueError('Four complementary diagnostics support one or two columns')
+            fig.set_size_inches(10,8 if cols==2 else 14);axes=fig.subplots(4//cols,cols,squeeze=False).ravel();fields.extend([('median_connectivity','Median connectivity'),('max_connectivity','Maximum connectivity')])
+        else:axes=_dual(fig,columns)
+        for ax,(field,label) in zip(axes,fields):
             _clean(ax);q=d.sort_values('power');ax.plot(q.power,q[field],c='#B7CBD1',lw=1);ax.scatter(q.power,q[field],c='#218C8D',s=38,ec='white',lw=.5)
             chosen=q[q.power==selected_power];ax.scatter(chosen.power,chosen[field],c=theme['roles']['positive'],s=85,ec='white',lw=.8,zorder=4);ax.axvline(selected_power,c='#9AB2BA',lw=.8,ls='--');ax.set(xlabel='Candidate soft power',ylabel=label)
-            ax.set_xticks(q.power if len(q)<=15 else q.power.iloc[::2]);ax.set_title('Topology fit' if field=='signed_fit' else 'Network connectivity',loc='left',fontsize=12,fontweight='bold')
+            ax.set_xticks(q.power if len(q)<=15 else q.power.iloc[::2]);ax.set_title('Topology fit' if field=='signed_fit' else label,loc='left',fontsize=12,fontweight='bold')
+            if diagnostics=='complete' and field=='signed_fit':ax.text(.97,.07,'Selected-power slope '+f'{chosen.slope.iloc[0]:+.2f}',transform=ax.transAxes,ha='right',fontsize=10,color='#536F7B')
         if fit_reference is not None:axes[0].axhline(fit_reference,c='#B48D70',lw=.9,ls='--')
         fig.legend(handles=[Line2D([],[],marker='o',ls='',c=theme['roles']['positive'],label='Preselected power '+str(selected_power)+' / no automatic selection')],loc='outside lower center',frameon=False,fontsize=10)
     elif mode in ['module_dendrogram','sample_tree']:
         l,segments,order=_tree(data,leaf_order);gs=fig.add_gridspec(3,1,height_ratios=[7,.45,.45],hspace=.04);ax=fig.add_subplot(gs[0]);_clean(ax)
         if len(track_labels)!=2 or mode=='sample_tree' and len(order)>context['independent_n']:raise ValueError('Two named tracks and valid sample independent n required')
         ax.add_collection(LineCollection(segments,colors='#6E8591',linewidths=.7,rasterized=len(order)>2000));ax.autoscale_view();ax.set(xlim=(0,len(order)),ylim=(0,max(float(data.height.dropna().max()),.1)*1.05),ylabel='Supplied merge height');ax.set_xticks([])
+        if merge_reference is not None:
+            if not isinstance(merge_reference,(int,float)) or not np.isfinite(merge_reference) or not 0<=merge_reference<=float(data.height.dropna().max()):raise ValueError('The explicit merge reference must lie within the supplied hierarchy')
+            ax.axhline(merge_reference,c='#B88873',ls='--',lw=1);ax.text(.99,merge_reference,'Declared merge reference '+str(merge_reference),transform=ax.get_yaxis_transform(),ha='right',va='bottom',fontsize=10,color='#9A6B57')
         identities=list(dict.fromkeys(l.dynamic_module.tolist()+l.module.tolist()));pal=group_palette(theme,identities)
         for i,field in enumerate(['dynamic_module','module']):
             a=fig.add_subplot(gs[i+1]);a.imshow(np.array([[to_rgba(pal[x]) for x in l[field]]]),aspect='auto',extent=(0,len(order),0,1));a.set_yticks([.5],[track_labels[i]]);a.tick_params(length=0);a.spines[:].set_visible(False)
@@ -156,7 +168,9 @@ def plot_wgcna_view(data,theme,*,mode,title,context,leaf_order=None,module_order
             q=d[d.module==m].set_index('cell')[['x','y']].sort_index()
             if not q.index.equals(ref.index) or not np.array_equal(q.to_numpy(),ref.to_numpy()):raise ValueError('All module maps require the same cells and exact stored coordinates')
         if len(value_limits)!=2 or not all(np.isfinite(x) for x in value_limits) or not value_limits[0]<0<value_limits[1] or ((d.value<value_limits[0])|(d.value>value_limits[1])).any():raise ValueError('A common declared signed activity scale containing every value is required')
-        cols=min(3,len(modules)) if columns=='auto' else columns;rows=math.ceil(len(modules)/cols);fig.set_size_inches(cols*3.5,rows*3.5+1);axes=[];cmap=LinearSegmentedColormap.from_list('module_activity',theme['continuous']['diverging'])
+        cols=min(3,len(modules)) if columns=='auto' else columns;rows=math.ceil(len(modules)/cols)
+        aspect=float(np.ptp(ref.y))/max(float(np.ptp(ref.x)),1e-8);panel_height=3.5*max(.3,min(1.4,aspect))+.65
+        fig.set_size_inches(cols*3.5,rows*panel_height+.85);axes=[];cmap=LinearSegmentedColormap.from_list('module_activity',theme['continuous']['diverging'])
         from figure_workbench.responsive import facet_slots
         slots=facet_slots(fig,len(modules),rows,cols)
         for i,m in enumerate(modules):
@@ -165,5 +179,10 @@ def plot_wgcna_view(data,theme,*,mode,title,context,leaf_order=None,module_order
     fig.suptitle(title+'\n'+context['network_type']+' network · '+str(context['independent_n'])+' '+context['independent_unit']+' · frozen results',fontsize=14,fontweight='bold')
     fig.get_layout_engine().set(h_pad=.18,w_pad=.25,hspace=.16,wspace=.14)
     for ax in fig.axes:ax._explicit_guide_layout=True
-    stamp(fig,data,'wgcna_'+mode,mode=mode,title=title,context=context,leaf_order=leaf_order,module_order=module_order,selected_power=selected_power,fit_reference=fit_reference,probability_kind=probability_kind,coefficient_semantics=coefficient_semantics,matrix_definition=matrix_definition,track_labels=track_labels,columns=columns,preservation_guides=preservation_guides,label_genes=list(label_genes),analysis_performed=False)
-    return apply_project_style(fig,theme)
+    stamp(fig,data,'wgcna_'+mode,mode=mode,title=title,context=context,leaf_order=leaf_order,module_order=module_order,selected_power=selected_power,fit_reference=fit_reference,probability_kind=probability_kind,coefficient_semantics=coefficient_semantics,matrix_definition=matrix_definition,track_labels=track_labels,columns=columns,preservation_guides=preservation_guides,label_genes=list(label_genes),diagnostics=diagnostics,merge_reference=merge_reference,analysis_performed=False)
+    fig=apply_project_style(fig,theme)
+    if mode in ['module_dendrogram','sample_tree']:
+        fig.canvas.draw();fig.set_layout_engine(None)
+        main,first,second=fig.axes[:3];box=main.get_position()
+        main.set_position([box.x0,.30,box.width,.53]);first.set_position([box.x0,.264,box.width,.018]);second.set_position([box.x0,.228,box.width,.018])
+    return fig

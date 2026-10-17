@@ -1,0 +1,94 @@
+{
+  "id": "Core_WGCNA_SampleTree",
+  "title": "Samples · frozen clustering and design tracks",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "qc",
+  "family": "sample_tree",
+  "variant": false,
+  "order": 22,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "sample_tree",
+    "title": "Samples · frozen clustering and design tracks",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 16,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "leaf_order": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16"
+    ],
+    "track_labels": [
+      "Batch",
+      "Condition"
+    ]
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "leaf_order",
+    "mode",
+    "title",
+    "track_labels"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_SampleTree/example.png",
+    "svg": "Core_WGCNA_SampleTree/example.svg",
+    "pdf": "Core_WGCNA_SampleTree/example.pdf",
+    "tsv": "Core_WGCNA_SampleTree/example.tsv",
+    "spec": "Core_WGCNA_SampleTree/input/example.spec.json",
+    "preview": "Core_WGCNA_SampleTree/preview.jpg"
+  },
+  "sha256": {
+    "png": "5f7f1c77da604ef9319d6170e45fe61150b1ca1e72a0eadfd14efec4365b2714",
+    "svg": "e67d7418bbacd45ce99d5ac4b8d373c3c072fee8d101a2e972cf29688ea83121",
+    "pdf": "c777dee8506012b4f255330a857a3d5699b2a63f8489a35536e7c904c07ffcb3",
+    "tsv": "d92c56c0f9fda9717ff78d832a865dfc7858f428250a478068706262cedf1101",
+    "spec": "f018928b321e7e2c6daa9421b91ae6b769ae58686f49b828e01c65b8270b53e3"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 32,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_SampleTree",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5f7f1c77da604ef9319d6170e45fe61150b1ca1e72a0eadfd14efec4365b2714",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Tracks reattached to frozen hierarchy; displayed support corrected to 16 fictional donors.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

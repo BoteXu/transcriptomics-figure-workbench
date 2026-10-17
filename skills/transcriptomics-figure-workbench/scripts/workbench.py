@@ -27,6 +27,9 @@ def main():
     choose=commands.add_parser('choose');choose.add_argument('--request',required=True,type=Path);choose.add_argument('--output',required=True,type=Path)
     views=commands.add_parser('chapter-views');views.add_argument('--chapter',default='');views.add_argument('--search',default='')
     vt=commands.add_parser('view-template');vt.add_argument('--entry',required=True);vt.add_argument('--output',required=True,type=Path)
+    al=commands.add_parser('analysis-library');al.add_argument('--search',default='')
+    ast=commands.add_parser('analysis-suite');ast.add_argument('--chapter',required=True);ast.add_argument('--output',required=True,type=Path);ast.add_argument('--include-variants',action='store_true')
+    ar=commands.add_parser('analysis-render');ar.add_argument('--manifest',required=True,type=Path);ar.add_argument('--output',required=True,type=Path)
     ct=commands.add_parser('chapter-template');ct.add_argument('--entry',required=True);ct.add_argument('--output',required=True,type=Path)
     bp=commands.add_parser('book-plan');bp.add_argument('--manifest',required=True,type=Path);bp.add_argument('--output',required=True,type=Path)
     br=commands.add_parser('book-render');br.add_argument('--plan',required=True,type=Path);br.add_argument('--output',required=True,type=Path)
@@ -88,6 +91,16 @@ def main():
     elif args.command=='view-template':
         from figure_workbench.views import view_template
         result=view_template(args.entry,args.output)
+    elif args.command=='analysis-library':
+        from figure_workbench.analysis_suites import analysis_library
+        result={'suites':analysis_library(args.search),'analysis_performed':False}
+    elif args.command=='analysis-suite':
+        from figure_workbench.analysis_suites import analysis_suite
+        result=analysis_suite(args.chapter,args.output,args.include_variants)
+    elif args.command=='analysis-render':
+        from figure_workbench.analysis_suites import render_analysis_suite
+        receipt=render_analysis_suite(read_json(args.manifest),args.manifest.resolve().parent,args.output)
+        result={'state':receipt['state'],'figures':len(receipt['completed']),'analysis_performed':False,'visual_acceptance':False}
     elif args.command=='choose':
         from figure_workbench.selection import select_figure
         result=select_figure(read_json(args.request));write_new(args.output,result)

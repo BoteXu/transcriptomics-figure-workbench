@@ -1,0 +1,81 @@
+{
+  "id": "Core_WGCNA_ModuleTrait",
+  "title": "Module–trait associations · coefficient, q and effective n",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "module_trait",
+  "variant": false,
+  "order": 24,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "module_trait",
+    "title": "Module–trait associations · coefficient, q and effective n",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "module_order": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6"
+    ],
+    "probability_kind": "adjusted"
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "mode",
+    "module_order",
+    "probability_kind",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_ModuleTrait/example.png",
+    "svg": "Core_WGCNA_ModuleTrait/example.svg",
+    "pdf": "Core_WGCNA_ModuleTrait/example.pdf",
+    "tsv": "Core_WGCNA_ModuleTrait/example.tsv",
+    "spec": "Core_WGCNA_ModuleTrait/input/example.spec.json",
+    "preview": "Core_WGCNA_ModuleTrait/preview.jpg"
+  },
+  "sha256": {
+    "png": "edf9c261a616429e3f20038f699b70a0707090ce1fb979eb6869a58a4fa684c0",
+    "svg": "4c32537485aa9927f7a3defae70b6b5f9e1f1434bf798e4609364326b1f32ca8",
+    "pdf": "884dc2f9a096bbba9467da4d3db3e888997dec1362bd7cd0519f546fac0ddf95",
+    "tsv": "3d29321eedf93cb211867f8baa034cfcf56d571229c5e69b8ef5cb1c309504c7",
+    "spec": "32589bf125cd8c53bf9d35b5ec3b164cfb44721802f0e350453c3455ea935b8e"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 190.5,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 38,
+    "smallest_pt": 17.149606299212596,
+    "p10_pt": 17.149606299212596,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_ModuleTrait",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "edf9c261a616429e3f20038f699b70a0707090ce1fb979eb6869a58a4fa684c0",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Coefficient, adjusted probability and effective n readable in every selected cell.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,99 @@
+{
+  "id": "Core_WGCNA_TOM_Dissimilarity",
+  "title": "Topological dissimilarity · explicitly 1 − TOM",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "network",
+  "family": "tom",
+  "variant": true,
+  "order": 28,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "tom",
+    "title": "Topological dissimilarity · explicitly 1 − TOM",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "leaf_order": [
+      "G001",
+      "G002",
+      "G003",
+      "G004",
+      "G005",
+      "G006",
+      "G007",
+      "G008",
+      "G009",
+      "G010",
+      "G011",
+      "G012",
+      "G013",
+      "G014",
+      "G015",
+      "G016",
+      "G017",
+      "G018",
+      "G019",
+      "G020",
+      "G021",
+      "G022",
+      "G023",
+      "G024"
+    ],
+    "matrix_definition": "1 - TOM"
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "leaf_order",
+    "matrix_definition",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_TOM_Dissimilarity/example.png",
+    "svg": "Core_WGCNA_TOM_Dissimilarity/example.svg",
+    "pdf": "Core_WGCNA_TOM_Dissimilarity/example.pdf",
+    "tsv": "Core_WGCNA_TOM_Dissimilarity/example.tsv",
+    "spec": "Core_WGCNA_TOM_Dissimilarity/input/example.spec.json",
+    "preview": "Core_WGCNA_TOM_Dissimilarity/preview.jpg"
+  },
+  "sha256": {
+    "png": "1d975b596d3d0b09d47cec3edda6152fd5885228a9c705061fcd60999f2a39fd",
+    "svg": "48671afcdef32cf2e692eec147578fe5b852bbc0e12ca4c01d291f0cd00a4cb7",
+    "pdf": "8df5571a33da127019970dc953e65e855e89b2a0d637418a3c427638bc8652c2",
+    "tsv": "bb10e4c1953ade7d19f76caeb1370f49cb36bf6a4d3abde9307f4701f19ebcb7",
+    "spec": "6320d6356c02b037c564d17dcaac54b0d6fa82cea8a74902a2d1e16f770cc75e"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 199.136,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 16.405873372971236,
+    "p10_pt": 16.405873372971236,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_TOM_Dissimilarity",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1d975b596d3d0b09d47cec3edda6152fd5885228a9c705061fcd60999f2a39fd",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Alternative explicitly labels 1 - TOM; no silent reinterpretation as overlap.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,78 @@
+{
+  "id": "Core_WGCNA_MM_GS_Absolute",
+  "title": "Upstream absolute MM and GS · separate declared convention",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "membership_significance",
+  "variant": true,
+  "order": 26,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "membership_significance",
+    "title": "Upstream absolute MM and GS · separate declared convention",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "module_order": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "coefficient_semantics": "absolute"
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "coefficient_semantics",
+    "context",
+    "mode",
+    "module_order",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_MM_GS_Absolute/example.png",
+    "svg": "Core_WGCNA_MM_GS_Absolute/example.svg",
+    "pdf": "Core_WGCNA_MM_GS_Absolute/example.pdf",
+    "tsv": "Core_WGCNA_MM_GS_Absolute/example.tsv",
+    "spec": "Core_WGCNA_MM_GS_Absolute/input/example.spec.json",
+    "preview": "Core_WGCNA_MM_GS_Absolute/preview.jpg"
+  },
+  "sha256": {
+    "png": "be75f915998441b34623d4f925a5b69fe83e4dd887fc218f40de19cdc4ffbbe8",
+    "svg": "d40f50bef06c9c53fdf464a1f04862d7c66dec23d5cc679ecc886daab9f0b007",
+    "pdf": "8c5f4dbd1e32b5756cf11b5237709db5941c255300dcf6547d5ca012d1ef6859",
+    "tsv": "af1c8f8c91c0ae74e0424c98f697f3ea21b7258239ee37c23cdf5d68e8cb14d3",
+    "spec": "168aa192a08c2c6e5d77ba5410de0e4cb2b8ecbf159b528f4ada2b4dd7e54d97"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 281.94,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 11.587571823792297,
+    "p10_pt": 11.587571823792297,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_MM_GS_Absolute",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "be75f915998441b34623d4f925a5b69fe83e4dd887fc218f40de19cdc4ffbbe8",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Alternative explicitly retains upstream absolute coefficients; no sign conversion during drawing.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

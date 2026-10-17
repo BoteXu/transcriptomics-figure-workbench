@@ -2,7 +2,18 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.9.6**。优先选择信息更完整且易读的美化扩展，并按 **58个分析章节**组织 bulk 与单细胞绘图：每章提供实际代码、可运行模板、准确模拟表和导出实例。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
+本版为 **v0.9.7**。优先选择信息更完整且易读的美化扩展，并按 **58个分析章节**组织 bulk 与单细胞绘图：每章提供实际代码、可运行模板、准确模拟表和导出实例。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
+
+## v0.9.7 按分析取整套图，补齐 WGCNA 配套展示
+
+[按分析浏览完整目录](skills/transcriptomics-figure-workbench/assets/analysis-library/index.html) · [本轮43份实际导出](skills/transcriptomics-figure-workbench/assets/analysis-gallery/index.html) · [43页图册](skills/transcriptomics-figure-workbench/assets/analysis-gallery/Analysis_Companions_FigureBook.pdf) · [分析套件与调用](skills/transcriptomics-figure-workbench/references/analysis-library-v097.md) · [来源、数据契约与验收范围](skills/transcriptomics-figure-workbench/references/analysis-completion-v097.md)
+
+- **WGCNA 从一张章节图变成分阶段套件：** 设计／样本与软阈值诊断、基因树和模块、带树及注释的 TOM、模块规模与未分配基因、模块–性状、MM–GS、特征基因关系与供体云雨、枢纽网络、功能支持基因、供体效应、差异连接、跨队列重叠、投影覆盖、保留性属性和敏感性。hdWGCNA 另接供体／metacell 支持及共同坐标活动图。
+- **其他分析接入配套画法：** GSVA／通路评分有供体分布和调整后对比，TF／regulon 有活性效应与有向靶基因证据，PPI 明确区别共表达边，剪接有供体 PSI 分布，轨迹有固定分支的程序曲线与上游区间。原有58章统一可查，通路、细胞通讯、CNV、VDJ、空间和多组学等不会再被常规图库的少数示例遮住。
+- **普通请求按整套选择：** `analysis-library --search WGCNA` 查路线；`analysis-suite --chapter bulk.wgcna --output <fresh-directory>` 一次导出该分析的默认合成模板、准确 TSV 与批量绘图清单。近似画法和布局须加 `--include-variants`；真实结果仍逐项通过 `book-plan` 绑定，不能因模板存在就推断对应分析已完成。
+- **实际做数据量和布局检查：** 本轮43份包含14份既有专用诊断的重新导出、23份新增配套实例与6份模块数／供体数／单列三列等布局实例。它们是图页与布局数量，不是43种科学算法。每份有 PNG／SVG／PDF、输入和最终图片审阅绑定；新数据、新参数和新尺寸须重新审图。
+
+所有新示例都是明确虚构的绘图测试材料；未在本地运行 WGCNA、GSVA、轨迹或剪接分析，也没有把第三方软件的分析算法移植为本项目原创。来源、网络含义、量尺、统计区间和独立供体边界按实际返回结果保留。绘图覆盖范围与分析后端验证分开记录。
 
 ## v0.9.6 整套默认画法逐张返工
 

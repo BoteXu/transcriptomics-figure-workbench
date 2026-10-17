@@ -1,0 +1,75 @@
+{
+  "id": "Trajectory_ProgramProgression",
+  "title": "Gene programs along a supplied progression coordinate",
+  "chapters": [
+    "single_cell.trajectory",
+    "single_cell.states",
+    "bulk.timecourse"
+  ],
+  "stage": "extension",
+  "family": "module_dynamics",
+  "variant": false,
+  "order": 20,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_dynamics",
+    "title": "Gene programs along a supplied progression coordinate",
+    "context": {
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "method_version": "Authored display summaries v0.9.7",
+      "source_version": "Synthetic result fixtures; no analysis backend",
+      "selection": "Complete explicitly selected display scope"
+    },
+    "definition": "Upstream fixed progression coordinate, branch identities, program trajectories and donor-aware 95% intervals; no lineage, direction, smoothing or temporal inference performed.",
+    "columns": 2,
+    "value_label": "Supplied gene-program score · 95% CI"
+  },
+  "definition": "Upstream fixed progression coordinate, branch identities, program trajectories and donor-aware 95% intervals; no lineage, direction, smoothing or temporal inference performed.",
+  "requirements": [
+    "columns",
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "Trajectory_ProgramProgression/example.png",
+    "svg": "Trajectory_ProgramProgression/example.svg",
+    "pdf": "Trajectory_ProgramProgression/example.pdf",
+    "tsv": "Trajectory_ProgramProgression/example.tsv",
+    "spec": "Trajectory_ProgramProgression/input/example.spec.json",
+    "preview": "Trajectory_ProgramProgression/preview.jpg"
+  },
+  "sha256": {
+    "png": "766b781670618428b4cfc978775c820c94590e5b0821dc6f64a1579967d8dcf3",
+    "svg": "be8ebc8429344b127c67fe9a0c2710ca64988f86fb242ec6913f01f232446e34",
+    "pdf": "3af3f27281707d59ebe044d2f86fe3cdbe3751d372660fec60c4e76cf5391943",
+    "tsv": "71bb852788f9d3e0afa110c6b97ab4be1cc5e3b146e7a2b1ba2503183a4de3cf",
+    "spec": "0c169e51d4a3def76a79691ac50c66e24577594e08db342c1ec414631a0a1676"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 216.65075520833332,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 83,
+    "smallest_pt": 15.079568944305887,
+    "p10_pt": 15.079568944305887,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Trajectory_ProgramProgression",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "766b781670618428b4cfc978775c820c94590e5b0821dc6f64a1579967d8dcf3",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Four program facets, fixed branch coordinate, common score scale and supplied bands inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

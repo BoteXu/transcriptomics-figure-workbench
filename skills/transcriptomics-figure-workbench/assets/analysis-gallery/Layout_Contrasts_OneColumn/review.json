@@ -1,0 +1,76 @@
+{
+  "id": "Layout_Contrasts_OneColumn",
+  "title": "Module effects · one-column reading",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "layout",
+  "family": "module_effects",
+  "variant": true,
+  "order": 41,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_effects",
+    "title": "Module effects · one-column reading",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Fictional donor-level adjusted differences with upstream 95% confidence intervals and BH q over the supplied module/contrast family; oriented module eigengenes.",
+    "value_label": "Oriented eigengene difference · supplied 95% CI",
+    "columns": 1
+  },
+  "definition": "Fictional donor-level adjusted differences with upstream 95% confidence intervals and BH q over the supplied module/contrast family; oriented module eigengenes.",
+  "requirements": [
+    "columns",
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "Layout_Contrasts_OneColumn/example.png",
+    "svg": "Layout_Contrasts_OneColumn/example.svg",
+    "pdf": "Layout_Contrasts_OneColumn/example.pdf",
+    "tsv": "Layout_Contrasts_OneColumn/example.tsv",
+    "spec": "Layout_Contrasts_OneColumn/input/example.spec.json",
+    "preview": "Layout_Contrasts_OneColumn/preview.jpg"
+  },
+  "sha256": {
+    "png": "e99cde1fbac7c96feb89a32e9426df23af5c78a390da8c28eaaeef9d15548d82",
+    "svg": "373a83dbaaf914da40810d93b63e4e009aae08b04254853a2c611d8ded5708e2",
+    "pdf": "c4f73257e42e7888f95faaf78c0c64dfbb1056f74238016885faa51ddc147dcd",
+    "tsv": "21b60b5a1d23de9bf82e6bb274622a0a6dcf9f305a5c6f17809d35339916b85a",
+    "spec": "5c1cd6998cb06d55f7b447109dd1715a2baf0be281b5b248425f9537f13b43da"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 142.23999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 22.968222722159734,
+    "p10_pt": 22.968222722159734,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Layout_Contrasts_OneColumn",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e99cde1fbac7c96feb89a32e9426df23af5c78a390da8c28eaaeef9d15548d82",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Two full contrasts reflowed vertically; q/n lanes and all intervals remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

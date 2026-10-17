@@ -1,0 +1,86 @@
+{
+  "id": "Eigengenes_MergeHierarchy",
+  "title": "Oriented eigengene hierarchy and declared merge reference",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "network",
+  "family": "module_dendrogram",
+  "variant": false,
+  "order": 36,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "module_dendrogram",
+    "title": "Oriented eigengene hierarchy and declared merge reference",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "leaf_order": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6"
+    ],
+    "track_labels": [
+      "Input module",
+      "Retained identity"
+    ],
+    "merge_reference": 0.25
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "leaf_order",
+    "merge_reference",
+    "mode",
+    "title",
+    "track_labels"
+  ],
+  "assets": {
+    "png": "Eigengenes_MergeHierarchy/example.png",
+    "svg": "Eigengenes_MergeHierarchy/example.svg",
+    "pdf": "Eigengenes_MergeHierarchy/example.pdf",
+    "tsv": "Eigengenes_MergeHierarchy/example.tsv",
+    "spec": "Eigengenes_MergeHierarchy/input/example.spec.json",
+    "preview": "Eigengenes_MergeHierarchy/preview.jpg"
+  },
+  "sha256": {
+    "png": "02d2ef734305d852eee968d8990e8695c64bf3b9e4e65c406b0ac4b31bd9ea65",
+    "svg": "5e46ec237af0f2912fe14fe90a2663f0e2a685452c44eabf9c361ca2f5ffe53c",
+    "pdf": "7adf91ea9cd50985db99970d389001fdb855214f43094899fc1583e4944b90df",
+    "tsv": "08414dbc27320bde3643855253c57057c97bc9d5c38f74db319719a06fdec597",
+    "spec": "db881d6524f2efbdc215c2f6a045573c5694e2dd9ae7b79c8be95723b9ef7440"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Eigengenes_MergeHierarchy",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "02d2ef734305d852eee968d8990e8695c64bf3b9e4e65c406b0ac4b31bd9ea65",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Frozen oriented eigengene hierarchy and declared merge-height reference readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

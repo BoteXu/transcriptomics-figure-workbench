@@ -1,0 +1,81 @@
+{
+  "id": "Modules_ExpressionAndEigengenes",
+  "title": "Selected module genes aligned with donor eigengenes",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "module_expression",
+  "variant": false,
+  "order": 6,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_expression",
+    "title": "Selected module genes aligned with donor eigengenes",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Seven prespecified genes per module, supplied row Z scores and separately supplied oriented eigengenes; identical 16 donor columns and group identities. No clustering or scaling.",
+    "columns": 2,
+    "value_limits": [
+      -2,
+      2
+    ],
+    "value_label": "Supplied gene row Z score"
+  },
+  "definition": "Seven prespecified genes per module, supplied row Z scores and separately supplied oriented eigengenes; identical 16 donor columns and group identities. No clustering or scaling.",
+  "requirements": [
+    "columns",
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label",
+    "value_limits"
+  ],
+  "assets": {
+    "png": "Modules_ExpressionAndEigengenes/example.png",
+    "svg": "Modules_ExpressionAndEigengenes/example.svg",
+    "pdf": "Modules_ExpressionAndEigengenes/example.pdf",
+    "tsv": "Modules_ExpressionAndEigengenes/example.tsv",
+    "spec": "Modules_ExpressionAndEigengenes/input/example.spec.json",
+    "preview": "Modules_ExpressionAndEigengenes/preview.jpg"
+  },
+  "sha256": {
+    "png": "14ad423a0b137d1dbb30c6f95a7f1acfeb90ba15d30c964323581d65f0eeb456",
+    "svg": "01a9dc6d695d0bf227c3399bdb410de7a60d80fd445d03adb2cdb29c06eb46eb",
+    "pdf": "7f266409023891ecf9fb9c5fa65c6dd6b070b6481b0593ba9e57c609a57b5180",
+    "tsv": "fcefe29d2d8ea92eaf9e9179be4f172351dd8b48965bca8fe5cf3f8814af0c14",
+    "spec": "b9cfcaff5af04e6ebad24dc700f4fd0fc50b50e0e45d357a69c7529a5638be69"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 259.08,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 65,
+    "smallest_pt": 12.61000463177397,
+    "p10_pt": 12.61000463177397,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Modules_ExpressionAndEigengenes",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "14ad423a0b137d1dbb30c6f95a7f1acfeb90ba15d30c964323581d65f0eeb456",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Condition tracks attached to matrices; frozen donor columns align with eigengene bars.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

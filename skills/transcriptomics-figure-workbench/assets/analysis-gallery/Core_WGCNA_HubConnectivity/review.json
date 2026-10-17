@@ -1,0 +1,70 @@
+{
+  "id": "Core_WGCNA_HubConnectivity",
+  "title": "Prespecified hub candidates · connectivity and membership",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "hub_connectivity",
+  "variant": false,
+  "order": 31,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "hub_connectivity",
+    "title": "Prespecified hub candidates · connectivity and membership",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    }
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_HubConnectivity/example.png",
+    "svg": "Core_WGCNA_HubConnectivity/example.svg",
+    "pdf": "Core_WGCNA_HubConnectivity/example.pdf",
+    "tsv": "Core_WGCNA_HubConnectivity/example.tsv",
+    "spec": "Core_WGCNA_HubConnectivity/input/example.spec.json",
+    "preview": "Core_WGCNA_HubConnectivity/preview.jpg"
+  },
+  "sha256": {
+    "png": "fc6e25f6264ff249abc792a8c5ac47148abb24e2722e646b164ede441a797417",
+    "svg": "26d1ac487472065a033994ce39dae1b95da3face80b93996b6a73208e2bec209",
+    "pdf": "84332c45454f8f6d60586ae2bd86688f7fa1f1e0204dd3eff390fbbf312ce8e6",
+    "tsv": "1cc9d6c62b79c348337c1e4c9b16f39d60c29071ca824b9b15df5061609bf2d1",
+    "spec": "80e0f5e7ea3510db43a30b2e3bb1b6f58ff898f3ee3cc79cda24b22c1e60a883"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 16.07775590551181,
+    "p10_pt": 16.07775590551181,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_HubConnectivity",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "fc6e25f6264ff249abc792a8c5ac47148abb24e2722e646b164ede441a797417",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Exact selected hub candidates, kWithin and direct kME annotations inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

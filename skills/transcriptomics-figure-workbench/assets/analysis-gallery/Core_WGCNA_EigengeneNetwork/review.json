@@ -1,0 +1,79 @@
+{
+  "id": "Core_WGCNA_EigengeneNetwork",
+  "title": "Relationships among oriented module eigengenes",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "network",
+  "family": "eigengene_network",
+  "variant": false,
+  "order": 29,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "eigengene_network",
+    "title": "Relationships among oriented module eigengenes",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "leaf_order": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6"
+    ]
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "leaf_order",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_EigengeneNetwork/example.png",
+    "svg": "Core_WGCNA_EigengeneNetwork/example.svg",
+    "pdf": "Core_WGCNA_EigengeneNetwork/example.pdf",
+    "tsv": "Core_WGCNA_EigengeneNetwork/example.tsv",
+    "spec": "Core_WGCNA_EigengeneNetwork/input/example.spec.json",
+    "preview": "Core_WGCNA_EigengeneNetwork/preview.jpg"
+  },
+  "sha256": {
+    "png": "63b4ffb752ae1c9b6517a809ec58dcedd597c4f3863f57cadc01f62bba7cf2b3",
+    "svg": "7c20a43ef10fc6f91c5b52310d3216f8d625b7ac5705bed8bd5110f4f1871c5f",
+    "pdf": "1ce94e96d31bf0020f2c1da319512d6ff2fcce173e218ca237ce92f7b440b0fa",
+    "tsv": "157009f1f220bdc18874954f8dd35696163427cbc073914847f68e0f69529eb3",
+    "spec": "21fbc8517e82cbb12e616b7c549e33d2be09042233d10eb1fc410e5f5ef86bf0"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 21.43700787401575,
+    "p10_pt": 21.43700787401575,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_EigengeneNetwork",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "63b4ffb752ae1c9b6517a809ec58dcedd597c4f3863f57cadc01f62bba7cf2b3",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Matching oriented eigengene identities and a common signed correlation scale.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

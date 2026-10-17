@@ -142,6 +142,24 @@ grant beauty acceptance merely for adding panels or passing font checks.
 
 ### Transcriptomic figure sets and ordinary requests
 
+For an explicitly named analysis, start with the [analysis-first library](assets/analysis-library/index.html)
+and `analysis-library --search <analysis>`, then use `analysis-suite --chapter <id> --output <fresh-directory>`
+to export its full default set of executable synthetic templates. Include variants only when requested.
+The [suite map](references/analysis-library-v097.md) is generated from actual FigureSpecs; a chapter thumbnail
+is never the full method. WGCNA/hdWGCNA requests must consider QC, topology, interpretation, functional
+support and independent validation, not stop at a module–trait heatmap. Match returned results to these
+views explicitly. Never substitute a missing analytical result with a fabricated figure.
+
+Use the [current network/program companions](assets/analysis-gallery/index.html) for module partitions,
+aligned TOM hierarchy, frozen hub/PPI/regulatory graphs, module-expression/eigengene alignment,
+donor rainclouds/effects, separate preservation attributes, overlap, connectivity changes, program
+dynamics and projection support. GSVA, TF/regulon, PSI and trajectory companions have separate
+definitions and examples. Projection concordance is not topology preservation; coexpression is not
+PPI; TF activity is not TF expression; pseudotime is not observed chronological time. Do not average
+attribute P values into an invented preservation test. Keep upstream source versions, interval
+definitions, tested universe, node/edge selection and biological independent units. See
+[exact contracts and source choices](references/analysis-completion-v097.md).
+
 The [ordinary-request audit](references/routine-study-audit.md) supplies 15 bulk
 defaults, 23 single-cell defaults and five reading/custom-layout companions
 from one explicitly fictional result set. It includes five independently scoped
@@ -152,7 +170,7 @@ distinct `focus_group` specifications; other roles keep one default each.
 
 Start with scientific semantics using `choose --request FigureChoiceRequest.json --output choice.json`. Define assay, method, question, biological independent unit, supplied semantic channels, actual display counts and purpose. This selects a design only. It never manufactures missing evidence or converts a generic UMAP request into PCA uncertainty. Summary-only GSEA gets an NES summary; ORA requires an actual query and tested universe. Large gene point counts do not imply hundreds of reading pages.
 
-Then inspect [actual within-analysis views](references/analysis-depth-v091.md), using `chapter-views --chapter <id>` and `view-template --entry <id> --output <fresh-directory>`. A chapter summary is not complete method coverage. Compare basic, diagnostic and explanatory companions and use the actual implemented input contracts. WGCNA has dedicated power, hierarchy, traits, MM–GS, TOM, eigengene, hub and preservation views; hdWGCNA additionally retains donor/metacell support and shared-coordinate activity. The exact chosen views depend on the actual assay and returned results. Multiple views or reading pages in the same contrast use an explicit `view` in the book manifest.
+Then inspect [actual within-analysis suites](references/analysis-library-v097.md), using `chapter-views --chapter <id>` and `view-template --entry <id> --output <fresh-directory>`. A chapter summary is not complete method coverage. Compare basic, diagnostic and explanatory companions and use the actual implemented input contracts. WGCNA has dedicated power, hierarchy, traits, MM–GS, TOM, eigengene, hub and preservation views; hdWGCNA additionally retains donor/metacell support and shared-coordinate activity. The exact chosen views depend on the actual assay and returned results. Multiple views or reading pages in the same contrast use an explicit `view` in the book manifest.
 
 For cluster resolution use complete adjacent-resolution cell flows and fixed node positions, with explicit node/edge quantities. For trajectories retain the supplied graph, root, branch labels and pseudotime on identical cells; disconnected category clouds are not a trajectory. For splicing use physical coverage, junction counts and exon tracks plus donor-level event effects. Circles, chord diagrams and network layouts remain alternatives when their identities are legible; prefer aligned matrices or linear comparisons when they communicate more clearly.
 

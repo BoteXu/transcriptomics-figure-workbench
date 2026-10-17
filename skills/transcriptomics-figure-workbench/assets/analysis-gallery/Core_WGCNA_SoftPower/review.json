@@ -1,0 +1,74 @@
+{
+  "id": "Core_WGCNA_SoftPower",
+  "title": "Soft power · topology and connectivity",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "qc",
+  "family": "soft_threshold",
+  "variant": false,
+  "order": 21,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "soft_threshold",
+    "title": "Soft power · topology and connectivity",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "selected_power": 6,
+    "fit_reference": 0.8
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "fit_reference",
+    "mode",
+    "selected_power",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_SoftPower/example.png",
+    "svg": "Core_WGCNA_SoftPower/example.svg",
+    "pdf": "Core_WGCNA_SoftPower/example.pdf",
+    "tsv": "Core_WGCNA_SoftPower/example.tsv",
+    "spec": "Core_WGCNA_SoftPower/input/example.spec.json",
+    "preview": "Core_WGCNA_SoftPower/preview.jpg"
+  },
+  "sha256": {
+    "png": "08a9f499ea3e76a6570464b247a298695e77779b10f5227d191543cf9caa1326",
+    "svg": "8cab617412e7bca35ac35a8e061827b9b8939a1cce34780f3c624e22704e21ec",
+    "pdf": "17a0c8130a194673f0b14fe77cbf552df026e14e081c376c5cb934e001afb567",
+    "tsv": "85fa896e3ada932a731fcdbde40a180ec42610a7976e6eddb3615d180bf9b67a",
+    "spec": "9db4d8bf41672b32866dc2f2aa0df4bde83349a0a591329bbb941e439a0fa1bf"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 51,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_SoftPower",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "08a9f499ea3e76a6570464b247a298695e77779b10f5227d191543cf9caa1326",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Two-panel conservative alternative; actual candidate powers and preselected power retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

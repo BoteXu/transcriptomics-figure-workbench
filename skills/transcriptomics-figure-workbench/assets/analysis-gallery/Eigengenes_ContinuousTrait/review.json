@@ -1,0 +1,74 @@
+{
+  "id": "Eigengenes_ContinuousTrait",
+  "title": "Continuous trait relationships at the donor level",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "trait_scatter",
+  "variant": false,
+  "order": 10,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "trait_scatter",
+    "title": "Continuous trait relationships at the donor level",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Complete 24 donor values; continuous fictional age variable, exact supplied oriented eigengenes and group identities. No regression line, correlation or significance fitted.",
+    "value_label": "Fictional age / years"
+  },
+  "definition": "Complete 24 donor values; continuous fictional age variable, exact supplied oriented eigengenes and group identities. No regression line, correlation or significance fitted.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "Eigengenes_ContinuousTrait/example.png",
+    "svg": "Eigengenes_ContinuousTrait/example.svg",
+    "pdf": "Eigengenes_ContinuousTrait/example.pdf",
+    "tsv": "Eigengenes_ContinuousTrait/example.tsv",
+    "spec": "Eigengenes_ContinuousTrait/input/example.spec.json",
+    "preview": "Eigengenes_ContinuousTrait/preview.jpg"
+  },
+  "sha256": {
+    "png": "03fcd3e8d21ba2de4af942b464ceb75d2095159fa1ba79233bd4bcfba369411d",
+    "svg": "6b2aa4b0438788b817a0c458969b62b542e9517535d97d49f866d07a73d69617",
+    "pdf": "18d25a23178a4ab0c477900ac7d5c7f77b0db97d9ca1f36d7604165ecc0bd23c",
+    "tsv": "2b2b91ad2167ef229659e4268ce7443baef8543c20867f29c9ab2f0cf8cbe7aa",
+    "spec": "bc516af43c2403d432ce7dcc35d6299f45efc1ff9834bbab7b3340c3e3662abd"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 320.04,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 51,
+    "smallest_pt": 10.208098987626546,
+    "p10_pt": 10.208098987626546,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Eigengenes_ContinuousTrait",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "03fcd3e8d21ba2de4af942b464ceb75d2095159fa1ba79233bd4bcfba369411d",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Rugs moved inside plot, common eigengene scale and complete donor points inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

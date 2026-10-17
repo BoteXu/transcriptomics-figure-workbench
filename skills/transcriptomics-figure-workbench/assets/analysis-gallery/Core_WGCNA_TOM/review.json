@@ -1,0 +1,99 @@
+{
+  "id": "Core_WGCNA_TOM",
+  "title": "Topological overlap · complete selected frozen matrix",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "network",
+  "family": "tom",
+  "variant": false,
+  "order": 27,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "tom",
+    "title": "Topological overlap · complete selected frozen matrix",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "leaf_order": [
+      "G001",
+      "G002",
+      "G003",
+      "G004",
+      "G005",
+      "G006",
+      "G007",
+      "G008",
+      "G009",
+      "G010",
+      "G011",
+      "G012",
+      "G013",
+      "G014",
+      "G015",
+      "G016",
+      "G017",
+      "G018",
+      "G019",
+      "G020",
+      "G021",
+      "G022",
+      "G023",
+      "G024"
+    ],
+    "matrix_definition": "TOM"
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "leaf_order",
+    "matrix_definition",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_TOM/example.png",
+    "svg": "Core_WGCNA_TOM/example.svg",
+    "pdf": "Core_WGCNA_TOM/example.pdf",
+    "tsv": "Core_WGCNA_TOM/example.tsv",
+    "spec": "Core_WGCNA_TOM/input/example.spec.json",
+    "preview": "Core_WGCNA_TOM/preview.jpg"
+  },
+  "sha256": {
+    "png": "a42fe18a4ecbca819f8412977e3fad63286e8f90d13b4f62ddb42ade6f573f39",
+    "svg": "f780ba6368598ae5fd69821d8c7c71f23eadba454b28d394fb226e5d2d00a1fc",
+    "pdf": "9c168338b4dbaec28b72db8dfcf51bfe25d2e08fd0be2fcabf1c81ab4a20ec4e",
+    "tsv": "318dd3114ad9e97309697922334528892b7a3d87ecf5707150e4647ee068ed70",
+    "spec": "c8d581524bf4cd1b56f105e6f54bfa9361a15a4ae8e82b1c98e2e7692857641b"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 199.136,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 16.405873372971236,
+    "p10_pt": 16.405873372971236,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_TOM",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a42fe18a4ecbca819f8412977e3fad63286e8f90d13b4f62ddb42ade6f573f39",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Conservative matrix alternative retained; all gene labels and complete [0,1] scale inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

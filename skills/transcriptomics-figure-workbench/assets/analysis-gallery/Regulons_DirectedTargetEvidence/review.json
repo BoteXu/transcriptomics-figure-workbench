@@ -1,0 +1,81 @@
+{
+  "id": "Regulons_DirectedTargetEvidence",
+  "title": "Regulon target support with explicit edge direction",
+  "chapters": [
+    "bulk.tf_activity",
+    "single_cell.regulons",
+    "single_cell.ligand_target"
+  ],
+  "stage": "extension",
+  "family": "hub_network",
+  "variant": false,
+  "order": 17,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "hub_network",
+    "title": "Regulon target support with explicit edge direction",
+    "context": {
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "method_version": "Authored display summaries v0.9.7",
+      "source_version": "Synthetic result fixtures; no analysis backend",
+      "selection": "Complete explicitly selected display scope"
+    },
+    "definition": "Prespecified directed fictional TF-target evidence graph with supplied support weights; fixed display coordinates. Candidate regulatory edges do not establish causality.",
+    "label_genes": [
+      "IRF1",
+      "STAT1",
+      "RELA"
+    ],
+    "edge_semantics": "Directed TF-target candidate evidence; no causal inference",
+    "directed": true
+  },
+  "definition": "Prespecified directed fictional TF-target evidence graph with supplied support weights; fixed display coordinates. Candidate regulatory edges do not establish causality.",
+  "requirements": [
+    "context",
+    "definition",
+    "directed",
+    "edge_semantics",
+    "label_genes",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Regulons_DirectedTargetEvidence/example.png",
+    "svg": "Regulons_DirectedTargetEvidence/example.svg",
+    "pdf": "Regulons_DirectedTargetEvidence/example.pdf",
+    "tsv": "Regulons_DirectedTargetEvidence/example.tsv",
+    "spec": "Regulons_DirectedTargetEvidence/input/example.spec.json",
+    "preview": "Regulons_DirectedTargetEvidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "b26bbfcd435df1243dbfe2f2112854aa1d682ff04e93cb7f789fcf0462db8b2b",
+    "svg": "27a0fda67967383e98e27a3dfc33e902aa0aa61aee1db1a6b6bc3d436300bf08",
+    "pdf": "058a8b958da7c8a552b68b22a61553477ce4599d323c7ccb4df05579cc42664e",
+    "tsv": "cff3902d0c71cebf81be9f8c5ef13d70bac94375b01ace7c8b219b9dead80381",
+    "spec": "4cdacb8574f353300e4331cc90d9a60dafbcfd3e22033fcca36ab3be7fd79964"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 8,
+    "smallest_pt": 13.980657309140707,
+    "p10_pt": 13.980657309140707,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Regulons_DirectedTargetEvidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b26bbfcd435df1243dbfe2f2112854aa1d682ff04e93cb7f789fcf0462db8b2b",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Arrow direction, TF labels, fixed graph and declared candidate-edge support inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

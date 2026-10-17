@@ -1,0 +1,69 @@
+{
+  "id": "Core_hdWGCNA_MetacellQC",
+  "title": "Metacell support · donors, celltypes and overlap",
+  "chapters": [
+    "single_cell.hdwgcna"
+  ],
+  "stage": "qc",
+  "family": "metacell_qc",
+  "variant": false,
+  "order": 33,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "metacell_qc",
+    "title": "Metacell support · donors, celltypes and overlap",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 12,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    }
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "context",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_hdWGCNA_MetacellQC/example.png",
+    "svg": "Core_hdWGCNA_MetacellQC/example.svg",
+    "pdf": "Core_hdWGCNA_MetacellQC/example.pdf",
+    "tsv": "Core_hdWGCNA_MetacellQC/example.tsv",
+    "spec": "Core_hdWGCNA_MetacellQC/input/example.spec.json",
+    "preview": "Core_hdWGCNA_MetacellQC/preview.jpg"
+  },
+  "sha256": {
+    "png": "2858aec89354d59201b98e5505c844b6da173c232d39c1b03cf234b8b96a7ec6",
+    "svg": "dd2236c8024d50a403dfb9d62b728467a4a99184b5b529edc9e48f11cd241099",
+    "pdf": "c330dd757e4da3238561a2c6173d97eca49d9e92b51171d2acbfe4a216217733",
+    "tsv": "e945e04d2dcaa4ae744d2044dd07b7398e5ed3f517b1dcdf4585681fb1cb390c",
+    "spec": "f684e35f84388545aa28f483b069693f7f24f1bd12f8d50b0659529b83cd4e2f"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_hdWGCNA_MetacellQC",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "2858aec89354d59201b98e5505c844b6da173c232d39c1b03cf234b8b96a7ec6",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Actual 12-donor support, metacell counts and shared-cell fractions inspected.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SKILL=ROOT/'skills/transcriptomics-figure-workbench'
 
 
-def main(output,routine_only=False):
+def main(output,routine_only=False,analysis_only=False):
     output.mkdir(parents=True,exist_ok=False)
     version=(ROOT/'VERSION').read_text().strip()
     assert version==(SKILL/'VERSION').read_text().strip()
@@ -22,6 +22,24 @@ def main(output,routine_only=False):
         assert not z.testzip()
         for name,path in files.items():assert z.read('transcriptomics-figure-workbench/'+name)==path.read_bytes()
     assets=[archive]
+    if analysis_only:
+        analysis=SKILL/'assets/analysis-gallery'
+        book=output/'Analysis_Companions_FigureBook.pdf';shutil.copyfile(analysis/book.name,book);assets.append(book)
+        gallery=output/f'analysis-companion-examples-v{version}.zip'
+        with zipfile.ZipFile(gallery,'x',compression=zipfile.ZIP_DEFLATED) as z:
+            for file in sorted(analysis.rglob('*')):
+                if not file.is_file():continue
+                name='analysis-companions/'+file.relative_to(analysis).as_posix()
+                if file.name=='index.html' and file.parent==analysis:
+                    text=file.read_text(encoding='utf8');start=text.index('<a href="../routine-gallery/');end=text.index('</header>',start)
+                    text=text[:start]+'<a href="https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v'+version+'">完整技能与全部分析目录下载</a>'+text[end:];z.writestr(name,text)
+                else:z.write(file,name)
+            z.writestr('README.txt','Open analysis-companions/index.html. These 43 pages are synthetic frozen drawing examples, not validated scientific analyses. Executable FigureSpecs/TSVs require the complete separately installed workbench. The full skill ZIP contains the complete 58-chapter offline library and routine bulk/single-cell galleries.\n')
+        with zipfile.ZipFile(gallery) as z:assert not z.testzip()
+        assets.append(gallery)
+        (output/f'SHA256SUMS-v{version}.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in assets),encoding='utf8')
+        print(json.dumps(dict(status='PUBLIC_ANALYSIS_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
+        return
     if routine_only:
         routine=SKILL/'assets/routine-gallery'
         book=output/'Bulk_and_SingleCell_FigureBook.pdf';shutil.copyfile(routine/book.name,book);assets.append(book)
@@ -163,4 +181,4 @@ def main(output,routine_only=False):
     print(json.dumps(dict(status='PUBLIC_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);p.add_argument('--routine-only',action='store_true');a=p.parse_args();main(a.output,a.routine_only)
+    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);group=p.add_mutually_exclusive_group();group.add_argument('--routine-only',action='store_true');group.add_argument('--analysis-only',action='store_true');a=p.parse_args();main(a.output,a.routine_only,a.analysis_only)

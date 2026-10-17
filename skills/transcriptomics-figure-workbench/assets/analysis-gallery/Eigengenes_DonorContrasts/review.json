@@ -1,0 +1,76 @@
+{
+  "id": "Eigengenes_DonorContrasts",
+  "title": "Donor-level module effects across prespecified contrasts",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "module_effects",
+  "variant": false,
+  "order": 4,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_effects",
+    "title": "Donor-level module effects across prespecified contrasts",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Fictional donor-level adjusted differences with upstream 95% confidence intervals and BH q over the supplied module/contrast family; oriented module eigengenes.",
+    "value_label": "Oriented eigengene difference · supplied 95% CI",
+    "columns": 2
+  },
+  "definition": "Fictional donor-level adjusted differences with upstream 95% confidence intervals and BH q over the supplied module/contrast family; oriented module eigengenes.",
+  "requirements": [
+    "columns",
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "Eigengenes_DonorContrasts/example.png",
+    "svg": "Eigengenes_DonorContrasts/example.svg",
+    "pdf": "Eigengenes_DonorContrasts/example.pdf",
+    "tsv": "Eigengenes_DonorContrasts/example.tsv",
+    "spec": "Eigengenes_DonorContrasts/input/example.spec.json",
+    "preview": "Eigengenes_DonorContrasts/preview.jpg"
+  },
+  "sha256": {
+    "png": "507c91f904ef8ac26a79daa8ca94951f8ae6450b47a643622c3952f8793bfb1e",
+    "svg": "e7fe9fef5cf8afc6759141cbc3a8d71878504a1df5799512f89b451ccf94bc71",
+    "pdf": "7608c0d94e2ff07975d969e960d2e7f82fed247e77e919637c2eb9d23713d5f1",
+    "tsv": "2ff4bf9df6d6864a96109413697b0c560fa68603cae74b09596147021a5a2c3e",
+    "spec": "f67c7c521f3f68ca990af0f0710f24a82ef95a6fbd72dcae76798330a9bdfea9"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 284.47999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 11.484111361079867,
+    "p10_pt": 11.484111361079867,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Eigengenes_DonorContrasts",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "507c91f904ef8ac26a79daa8ca94951f8ae6450b47a643622c3952f8793bfb1e",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Repaired axis wrapping and label lanes; full upstream intervals, q and effective n remain visible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

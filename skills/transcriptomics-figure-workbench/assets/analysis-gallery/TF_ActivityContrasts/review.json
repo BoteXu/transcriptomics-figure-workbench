@@ -1,0 +1,74 @@
+{
+  "id": "TF_ActivityContrasts",
+  "title": "Transcription-factor activity effects and uncertainty",
+  "chapters": [
+    "bulk.tf_activity",
+    "single_cell.regulons"
+  ],
+  "stage": "interpretation",
+  "family": "module_effects",
+  "variant": false,
+  "order": 16,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "module_effects",
+    "title": "Transcription-factor activity effects and uncertainty",
+    "context": {
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "method_version": "Authored display summaries v0.9.7",
+      "source_version": "Synthetic result fixtures; no analysis backend",
+      "selection": "Complete explicitly selected display scope"
+    },
+    "definition": "Frozen fictional footprint activity differences with upstream donor-level 95% intervals; TF activity is not TF gene expression or physical binding.",
+    "columns": 2,
+    "value_label": "Footprint activity difference · supplied 95% CI"
+  },
+  "definition": "Frozen fictional footprint activity differences with upstream donor-level 95% intervals; TF activity is not TF gene expression or physical binding.",
+  "requirements": [
+    "columns",
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "TF_ActivityContrasts/example.png",
+    "svg": "TF_ActivityContrasts/example.svg",
+    "pdf": "TF_ActivityContrasts/example.pdf",
+    "tsv": "TF_ActivityContrasts/example.tsv",
+    "spec": "TF_ActivityContrasts/input/example.spec.json",
+    "preview": "TF_ActivityContrasts/preview.jpg"
+  },
+  "sha256": {
+    "png": "dd6e2fe60452cbe6371a0f0327c79874f66ac4c0a563cf369184f098d91c64aa",
+    "svg": "def39c0a9696e90ee2d3969535d48d8a257b1c85df4cb50b342bbd3b41ef5cd8",
+    "pdf": "2c44935ad433e140b44074652207e5dc716f660a06a53f6f26d69c22c7b901ac",
+    "tsv": "8ec6e5aade3e3d3e2d95fbb1835ee70db69434338e62ea7c97ddca950a982568",
+    "spec": "eead5c9db836a32b5eb8ce6b3e93c4367507352b324faec0a24142c2f15c7b6f"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 284.47999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 11.484111361079867,
+    "p10_pt": 11.484111361079867,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "TF_ActivityContrasts",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "dd6e2fe60452cbe6371a0f0327c79874f66ac4c0a563cf369184f098d91c64aa",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Footprint activity effects, supplied intervals, q and n inspected across two contrasts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

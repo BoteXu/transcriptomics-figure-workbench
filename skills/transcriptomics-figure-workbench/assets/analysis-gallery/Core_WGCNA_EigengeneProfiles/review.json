@@ -1,0 +1,79 @@
+{
+  "id": "Core_WGCNA_EigengeneProfiles",
+  "title": "Donor-level module eigengenes · all units retained",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "eigengene_profiles",
+  "variant": true,
+  "order": 30,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "eigengene_profiles",
+    "title": "Donor-level module eigengenes · all units retained",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "module_order": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "columns": 2
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "columns",
+    "context",
+    "mode",
+    "module_order",
+    "title"
+  ],
+  "assets": {
+    "png": "Core_WGCNA_EigengeneProfiles/example.png",
+    "svg": "Core_WGCNA_EigengeneProfiles/example.svg",
+    "pdf": "Core_WGCNA_EigengeneProfiles/example.pdf",
+    "tsv": "Core_WGCNA_EigengeneProfiles/example.tsv",
+    "spec": "Core_WGCNA_EigengeneProfiles/input/example.spec.json",
+    "preview": "Core_WGCNA_EigengeneProfiles/preview.jpg"
+  },
+  "sha256": {
+    "png": "f96d281c1bdb35035d239002ff3e8b9639e391653f37aec33be9acc3f106dc53",
+    "svg": "a853006b83d7c3dcd071e7a128dadb51e33d5f7119b8cd4a7af1746cf6f61caf",
+    "pdf": "40e231dc7a62430c05187dcd025f925a5b8b344729660b29b00e726d5a3a4001",
+    "tsv": "db82c747177b19b2451984f3544715832ad7dff2e1d683066d858a471f96436e",
+    "spec": "e7f8362fc8a0fc7eedf6f4324ac9a08764b1efb54c88869997bb847e1f5a003f"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 182.88,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 17.864173228346456,
+    "p10_pt": 17.864173228346456,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Core_WGCNA_EigengeneProfiles",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f96d281c1bdb35035d239002ff3e8b9639e391653f37aec33be9acc3f106dc53",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Conservative point/box alternative only; no missing density invented.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

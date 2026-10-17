@@ -1,0 +1,85 @@
+{
+  "id": "Hubs_CoexpressionNeighborhoods",
+  "title": "Coexpression neighborhoods and hub candidates",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "interpretation",
+  "family": "hub_network",
+  "variant": false,
+  "order": 1,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "hub_network",
+    "title": "Coexpression neighborhoods and hub candidates",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Frozen fictional TOM edges > 0.05, complete prespecified 27-node subgraph; fixed display coordinates. kME is supplied; no hub selection.",
+    "label_genes": [
+      "M1_G1",
+      "M1_G3",
+      "M2_G1",
+      "M2_G3",
+      "M3_G1",
+      "M3_G3"
+    ],
+    "edge_semantics": "Undirected TOM coexpression weight; not physical binding",
+    "directed": false
+  },
+  "definition": "Frozen fictional TOM edges > 0.05, complete prespecified 27-node subgraph; fixed display coordinates. kME is supplied; no hub selection.",
+  "requirements": [
+    "context",
+    "definition",
+    "directed",
+    "edge_semantics",
+    "label_genes",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "Hubs_CoexpressionNeighborhoods/example.png",
+    "svg": "Hubs_CoexpressionNeighborhoods/example.svg",
+    "pdf": "Hubs_CoexpressionNeighborhoods/example.pdf",
+    "tsv": "Hubs_CoexpressionNeighborhoods/example.tsv",
+    "spec": "Hubs_CoexpressionNeighborhoods/input/example.spec.json",
+    "preview": "Hubs_CoexpressionNeighborhoods/preview.jpg"
+  },
+  "sha256": {
+    "png": "6e5a3b7645347f2d2a2105a444e1335470dbb61c33c6368d021e98a250187f73",
+    "svg": "85121690ec1d6a756d996f59cc3a7d13a60e4531294e086be2c2ba493df8c45b",
+    "pdf": "faa1afb319c0f91284d226609d2d0e2288cce2d784ef339bc03dd80f9146c5a7",
+    "tsv": "a55683de7b65bdd2dddeb8da0420ae55e29076c1974dcf9d5643b738e5707aa9",
+    "spec": "2bad134279de939244111dcae3e5c31576f7a9d2b39b6bf4b158dc86ec1b5ea1"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 11,
+    "smallest_pt": 13.980657309140707,
+    "p10_pt": 13.980657309140707,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Hubs_CoexpressionNeighborhoods",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6e5a3b7645347f2d2a2105a444e1335470dbb61c33c6368d021e98a250187f73",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Reviewed fixed node layout, selected labels, within/cross-module edges and explicit size meaning.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,1164 @@
+{
+  "schema_version": 1,
+  "version": "0.9.7",
+  "suites": [
+    {
+      "id": "bulk.design",
+      "label": "设计与独立样本",
+      "title": "Design and independent units",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.design.p1",
+        "bulk.design.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "sample_covariates",
+        "library_counts"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.reads",
+      "label": "测序读段质控",
+      "title": "Read quality and sequence composition",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.reads.p1",
+        "bulk.reads.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "base_quality",
+        "read_classes"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.alignment",
+      "label": "比对与覆盖",
+      "title": "Alignment and gene-body coverage",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.alignment.p1",
+        "bulk.alignment.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "alignment_classes",
+        "gene_body_coverage"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.filtering",
+      "label": "基因检出与过滤",
+      "title": "Detection and filtering sensitivity",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.filtering.p1",
+        "bulk.filtering.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "threshold_profile",
+        "retained_feature_counts"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.normalization",
+      "label": "标准化与均值方差",
+      "title": "Normalization and mean-variance diagnostics",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.normalization.p1",
+        "bulk.normalization.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "rle_density",
+        "mean_variance"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.batch",
+      "label": "样本关系与批次",
+      "title": "Sample architecture and batch coverage",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.batch.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "embedding",
+        "ellipse_geometry",
+        "marginal_counts",
+        "variance_profile"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.differential",
+      "label": "差异表达",
+      "title": "Differential expression with full distributions",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.differential.complete",
+        "Method_N06"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "complete_de",
+        "effect",
+        "p_adj",
+        "marginal_counts"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.interaction",
+      "label": "交互效应",
+      "title": "Interactions across conditions and time",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.interaction.p1",
+        "bulk.interaction.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "interaction_effects",
+        "model_predictions"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.model_qc",
+      "label": "模型诊断",
+      "title": "Model fit and influence diagnostics",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.model_qc.p1",
+        "bulk.model_qc.p2",
+        "Method_M11b",
+        "Method_M11a",
+        "Method_M11c",
+        "Method_M11d"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "residuals",
+        "dispersion_curve",
+        "influence"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.programs",
+      "label": "基因程序与效应",
+      "title": "Gene programs and selected effects",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.programs.p1",
+        "bulk.programs.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "selected_expression",
+        "effect_intervals"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.ora",
+      "label": "ORA 功能富集",
+      "title": "ORA themes, ratios and supporting genes",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.ora.complete",
+        "Method_N06"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "term_ratio",
+        "term_fdr",
+        "gene_term_membership"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.gsea",
+      "label": "GSEA 完整证据",
+      "title": "Full GSEA tracks and leading edge",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.gsea.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "complete_rank_curve",
+        "rank_metric",
+        "hit_ranks",
+        "leading_edge",
+        "NES",
+        "FDR"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.pathway_contrasts",
+      "label": "通路跨对比",
+      "title": "Pathway enrichment across contrasts",
+      "assay": "bulk",
+      "primary_views": [
+        "GSVA_AdjustedPathwayContrasts",
+        "bulk.pathway_contrasts.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "NES_grid",
+        "FDR_grid",
+        "set_coverage"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.gene_support",
+      "label": "通路支持基因",
+      "title": "Pathway membership and signed gene evidence",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.gene_support.complete",
+        "Method_E08"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "term_overlap",
+        "gene_term_membership",
+        "gene_effects"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.gsea_multitrack",
+      "label": "多通路 GSEA",
+      "title": "Multiple GSEA curves with complete rank tracks",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.gsea_multitrack.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "complete_curves",
+        "rank_metric",
+        "hits",
+        "leading_edge",
+        "NES",
+        "FDR"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.gsva",
+      "label": "GSVA／基因集评分",
+      "title": "Sample-level gene-set scoring",
+      "assay": "bulk",
+      "primary_views": [
+        "GSVA_DonorScoreDistributions",
+        "GSVA_AdjustedPathwayContrasts",
+        "bulk.gsva.p1",
+        "bulk.gsva.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "sample_scores",
+        "coverage",
+        "score_effects"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.wgcna",
+      "label": "WGCNA 共表达网络",
+      "title": "Coexpression modules and preservation",
+      "assay": "bulk",
+      "primary_views": [
+        "WGCNA_SampleTree",
+        "SoftPower_CompleteDiagnostics",
+        "Modules_GenePartition",
+        "TOM_AlignedHierarchy",
+        "WGCNA_ModuleTree",
+        "WGCNA_EigengeneNetwork",
+        "Eigengenes_MergeHierarchy",
+        "Hubs_CoexpressionNeighborhoods",
+        "Eigengenes_DonorContrasts",
+        "Modules_ExpressionAndEigengenes",
+        "Eigengenes_ContinuousTrait",
+        "Eigengenes_DonorRainclouds",
+        "WGCNA_ModuleTrait",
+        "WGCNA_MM_GS",
+        "WGCNA_HubConnectivity",
+        "Modules_FunctionAndGeneSupport",
+        "Modules_CrossCohortOverlap",
+        "Connectivity_ReferenceAndChange",
+        "Modules_SensitivityAndStability",
+        "Modules_ProjectionSupport",
+        "Preservation_Attributes",
+        "WGCNA_Preservation",
+        "Modules_BranchDynamics"
+      ],
+      "alternative_views": [
+        "WGCNA_SoftPower",
+        "WGCNA_TOM",
+        "WGCNA_TOM_Dissimilarity",
+        "WGCNA_MM_GS_Absolute",
+        "WGCNA_EigengeneProfiles",
+        "Layout_OneModule_8Donors",
+        "Layout_ThreeModules_OneColumn",
+        "Layout_ThreeModules_ThreeColumns",
+        "Layout_Expression_OneColumn",
+        "Layout_Contrasts_OneColumn",
+        "Layout_Enrichment_12Modules",
+        "bulk.wgcna.complete"
+      ],
+      "required_results": [
+        "module_trait",
+        "preservation",
+        "fixed_network"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.tf_activity",
+      "label": "转录因子活性",
+      "title": "Transcription-factor footprints",
+      "assay": "bulk",
+      "primary_views": [
+        "TF_ActivityContrasts",
+        "Regulons_DirectedTargetEvidence",
+        "bulk.tf_activity.p1",
+        "bulk.tf_activity.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "TF_activity",
+        "TF_effects",
+        "targets"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.deconvolution",
+      "label": "细胞组成反卷积",
+      "title": "Cell-mixture estimates and uncertainty",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.deconvolution.p1",
+        "bulk.deconvolution.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "sample_fractions",
+        "fraction_effects"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.splicing",
+      "label": "可变剪接",
+      "title": "Alternative splicing and junction support",
+      "assay": "bulk",
+      "primary_views": [
+        "Splicing_DonorPSIDistributions",
+        "bulk.splicing.p1",
+        "bulk.splicing.p2",
+        "bulk.splicing.p3",
+        "Method_E43"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "junction_coverage",
+        "delta_PSI",
+        "isoform_usage"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.dtu",
+      "label": "转录本使用",
+      "title": "Differential transcript usage",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.dtu.p1",
+        "bulk.dtu.p2",
+        "Method_E43"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "transcript_fractions",
+        "usage_intervals"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.timecourse",
+      "label": "时间与纵向变化",
+      "title": "Longitudinal response and uncertainty",
+      "assay": "bulk",
+      "primary_views": [
+        "Trajectory_ProgramProgression",
+        "bulk.timecourse.p1",
+        "bulk.timecourse.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "time_predictions",
+        "effect_intervals"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.replication",
+      "label": "独立队列复现",
+      "title": "Independent-cohort replication",
+      "assay": "bulk",
+      "primary_views": [
+        "Modules_ProjectionSupport",
+        "bulk.replication.p1",
+        "bulk.replication.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "cohort_effects",
+        "matched_features"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.survival",
+      "label": "生存与临床关联",
+      "title": "Conditional clinical outcome association",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.survival.p1",
+        "bulk.survival.p2",
+        "bulk.survival.p3"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "survival_curves",
+        "risk_table",
+        "hazard_intervals"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.ppi",
+      "label": "蛋白互作 PPI",
+      "title": "Protein-interaction evidence",
+      "assay": "bulk",
+      "primary_views": [
+        "PPI_SelectedEvidenceNetwork",
+        "bulk.ppi.p1",
+        "bulk.ppi.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "fixed_nodes",
+        "fixed_edges",
+        "edge_weights"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.connectivity",
+      "label": "扰动签名匹配",
+      "title": "Perturbation-signature matching",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.connectivity.p1",
+        "bulk.connectivity.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "connection_scores",
+        "signature_coverage"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.noncoding",
+      "label": "非编码 RNA",
+      "title": "Noncoding RNA and target hypotheses",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.noncoding.p1",
+        "bulk.noncoding.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "RNA_effects",
+        "RNA_target_edges"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "bulk.fusions",
+      "label": "融合与转录本结构",
+      "title": "Fusion and transcript-structure evidence",
+      "assay": "bulk",
+      "primary_views": [
+        "bulk.fusions.p1",
+        "bulk.fusions.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "breakpoint_support",
+        "coverage",
+        "validation_summary"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.design",
+      "label": "供体与单细胞设计",
+      "title": "Donor, capture and condition design",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.design.p1",
+        "single_cell.design.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "donor_covariates",
+        "capture_counts"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.barcode",
+      "label": "Barcode 与检出",
+      "title": "Barcode rank and retained droplets",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.barcode.p1",
+        "single_cell.barcode.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "barcode_rank",
+        "droplet_classes"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.qc",
+      "label": "单细胞质控",
+      "title": "Cell quality across donors",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.qc.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "cell_metrics",
+        "donor_labels"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.ambient_doublet",
+      "label": "环境 RNA 与双细胞",
+      "title": "Ambient RNA and doublet diagnostics",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.ambient_doublet.p1",
+        "single_cell.ambient_doublet.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "doublet_scores",
+        "ambient_profile",
+        "donor_rates"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.integration",
+      "label": "整合与批次",
+      "title": "Batch integration and signal preservation",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.integration.p1",
+        "single_cell.integration.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "stored_embeddings",
+        "mixing_scores",
+        "biology_scores"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.hvg_pca",
+      "label": "高变基因与 PCA",
+      "title": "Feature selection and PC support",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.hvg_pca.p1",
+        "single_cell.hvg_pca.p2",
+        "HVG_MeanDispersion"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "variance_profile",
+        "loadings",
+        "feature_dispersion"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.resolution",
+      "label": "分辨率与聚类流向",
+      "title": "Cluster resolution and donor support",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.resolution.complete",
+        "ClusterFlow_2Column",
+        "Resolution_DonorSupport"
+      ],
+      "alternative_views": [
+        "ClusterFlow_1Column"
+      ],
+      "required_results": [
+        "resolution_edges",
+        "stability",
+        "donor_support"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.annotation",
+      "label": "细胞注释证据",
+      "title": "Subpopulations with marker support",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.annotation.complete",
+        "Method_N05",
+        "Subgroup_01",
+        "Subgroup_02",
+        "Subgroup_03",
+        "Subgroup_04",
+        "Subgroup_05",
+        "Layout_02Markers_1Columns",
+        "Layout_04Markers_2Columns",
+        "Layout_08Markers_3Columns"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "embedding",
+        "label_anchors",
+        "marker_means",
+        "detection_fractions"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.subcluster",
+      "label": "逐亚群与多 marker",
+      "title": "Lineage-focused subcluster atlas",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.subcluster.p1",
+        "single_cell.subcluster.p2",
+        "Subgroup_01",
+        "Subgroup_02",
+        "Subgroup_03",
+        "Subgroup_04",
+        "Subgroup_05"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "lineage_embedding",
+        "markers",
+        "parent_child_labels"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.markers",
+      "label": "Marker 特异性",
+      "title": "Marker specificity and detection",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.markers.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "marker_means",
+        "detection_fractions",
+        "annotation_blocks"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.composition",
+      "label": "供体层面细胞组成",
+      "title": "Donor-level composition",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.composition.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "donor_type_counts",
+        "donor_totals"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.abundance",
+      "label": "差异丰度",
+      "title": "Differential abundance with donor effects",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.abundance.p1",
+        "single_cell.abundance.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "neighborhood_effects",
+        "donor_fractions",
+        "coordinates"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.pseudobulk",
+      "label": "供体级伪 bulk",
+      "title": "Donor-level differential response",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.pseudobulk.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "complete_donor_de",
+        "contrast",
+        "FDR",
+        "marginal_counts"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.multi_contrast",
+      "label": "多细胞类型与多对比",
+      "title": "Celltype-by-contrast differential atlas",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.multi_contrast.p1",
+        "single_cell.multi_contrast.p2",
+        "Method_N06"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "effect_grid",
+        "FDR_grid",
+        "tested_feature_counts"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.pathways",
+      "label": "单细胞通路",
+      "title": "Celltype pathway responses",
+      "assay": "single_cell",
+      "primary_views": [
+        "GSVA_DonorScoreDistributions",
+        "GSVA_AdjustedPathwayContrasts",
+        "single_cell.pathways.complete"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "NES_grid",
+        "FDR_grid",
+        "leading_edge"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.gene_support",
+      "label": "通路与支持基因",
+      "title": "Celltype pathway membership and gene evidence",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.gene_support.complete",
+        "Method_E08"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "term_overlap",
+        "gene_term_membership",
+        "gene_effects"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.states",
+      "label": "细胞状态与程序",
+      "title": "Cell-state, stress and cycle scores",
+      "assay": "single_cell",
+      "primary_views": [
+        "Trajectory_ProgramProgression",
+        "single_cell.states.p1",
+        "single_cell.states.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "state_scores",
+        "coverage",
+        "donor_effects"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.hdwgcna",
+      "label": "hdWGCNA 共表达网络",
+      "title": "Celltype coexpression modules",
+      "assay": "single_cell",
+      "primary_views": [
+        "WGCNA_SampleTree",
+        "hdWGCNA_MetacellQC",
+        "SoftPower_CompleteDiagnostics",
+        "Modules_GenePartition",
+        "TOM_AlignedHierarchy",
+        "WGCNA_ModuleTree",
+        "WGCNA_EigengeneNetwork",
+        "Eigengenes_MergeHierarchy",
+        "Hubs_CoexpressionNeighborhoods",
+        "Eigengenes_DonorContrasts",
+        "Modules_ExpressionAndEigengenes",
+        "Eigengenes_ContinuousTrait",
+        "Eigengenes_DonorRainclouds",
+        "WGCNA_ModuleTrait",
+        "WGCNA_MM_GS",
+        "WGCNA_HubConnectivity",
+        "hdWGCNA_ModuleActivity",
+        "Modules_FunctionAndGeneSupport",
+        "Modules_CrossCohortOverlap",
+        "Connectivity_ReferenceAndChange",
+        "Modules_SensitivityAndStability",
+        "Modules_ProjectionSupport",
+        "Preservation_Attributes",
+        "WGCNA_Preservation",
+        "Modules_BranchDynamics",
+        "PPI_SelectedEvidenceNetwork"
+      ],
+      "alternative_views": [
+        "WGCNA_SoftPower",
+        "WGCNA_TOM",
+        "WGCNA_TOM_Dissimilarity",
+        "WGCNA_MM_GS_Absolute",
+        "WGCNA_EigengeneProfiles",
+        "Layout_OneModule_8Donors",
+        "Layout_ThreeModules_OneColumn",
+        "Layout_ThreeModules_ThreeColumns",
+        "Layout_Expression_OneColumn",
+        "Layout_Contrasts_OneColumn",
+        "Layout_Enrichment_12Modules",
+        "single_cell.hdwgcna.complete"
+      ],
+      "required_results": [
+        "module_trait",
+        "preservation",
+        "fixed_network"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.trajectory",
+      "label": "轨迹与程序变化",
+      "title": "Branches, progression and gene dynamics",
+      "assay": "single_cell",
+      "primary_views": [
+        "Modules_BranchDynamics",
+        "Trajectory_ProgramProgression",
+        "single_cell.trajectory.complete",
+        "Trajectory_2Column",
+        "Trajectory_GeneDynamics"
+      ],
+      "alternative_views": [
+        "Layout_ThreeModules_ThreeColumns",
+        "Trajectory_1Column"
+      ],
+      "required_results": [
+        "embedding",
+        "pseudotime",
+        "branch_curves",
+        "gene_trends"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.velocity",
+      "label": "RNA velocity",
+      "title": "RNA velocity and phase diagnostics",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.velocity.p1",
+        "single_cell.velocity.p2",
+        "Method_E18"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "vectors",
+        "spliced_unspliced",
+        "fit_diagnostics"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.communication",
+      "label": "细胞通讯",
+      "title": "Communication themes and ligand-receptor support",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.communication.p1",
+        "single_cell.communication.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "sender_receiver",
+        "LR_scores",
+        "coverage"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.ligand_target",
+      "label": "配体靶基因支持",
+      "title": "Ligand-to-target evidence chains",
+      "assay": "single_cell",
+      "primary_views": [
+        "Regulons_DirectedTargetEvidence",
+        "single_cell.ligand_target.p1",
+        "single_cell.ligand_target.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "ligand_activity",
+        "target_potential",
+        "network"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.regulons",
+      "label": "Regulon 与 TF 活性",
+      "title": "Regulon activity and target specificity",
+      "assay": "single_cell",
+      "primary_views": [
+        "TF_ActivityContrasts",
+        "Regulons_DirectedTargetEvidence",
+        "single_cell.regulons.p1",
+        "single_cell.regulons.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "regulon_scores",
+        "specificity",
+        "target_edges"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.cnv",
+      "label": "拷贝数变化 CNV",
+      "title": "Inferred copy-number patterns",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.cnv.p1",
+        "single_cell.cnv.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "ordered_CNV",
+        "reference_cells",
+        "clone_support"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.vdj",
+      "label": "VDJ 与克隆",
+      "title": "Clonotypes, expansion and sharing",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.vdj.p1",
+        "single_cell.vdj.p2",
+        "single_cell.vdj.p3",
+        "Method_N05"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "clonotype_counts",
+        "VDJ_QC",
+        "sharing"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.splicing",
+      "label": "单细胞剪接",
+      "title": "Celltype-specific RNA processing",
+      "assay": "single_cell",
+      "primary_views": [
+        "Splicing_DonorPSIDistributions",
+        "single_cell.splicing.p1",
+        "single_cell.splicing.p2",
+        "single_cell.splicing.p3",
+        "Method_E43"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "junction_coverage",
+        "delta_PSI",
+        "isoform_usage"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.perturbseq",
+      "label": "Perturb-seq",
+      "title": "Perturbation assignment and response",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.perturbseq.p1",
+        "single_cell.perturbseq.p2",
+        "single_cell.perturbseq.p3"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "guide_assignment",
+        "perturbation_effects",
+        "replicate_QC"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.replication",
+      "label": "单细胞独立复现",
+      "title": "Cross-cohort annotation and effect transfer",
+      "assay": "single_cell",
+      "primary_views": [
+        "Modules_ProjectionSupport",
+        "single_cell.replication.p1",
+        "single_cell.replication.p2"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "cohort_effects",
+        "transfer_confidence",
+        "coverage"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.spatial",
+      "label": "空间转录组",
+      "title": "Spatial localization and donor/section context",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.spatial.p1",
+        "single_cell.spatial.p2",
+        "single_cell.spatial.p3"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "registered_coordinates",
+        "region_scores",
+        "section_effects"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    },
+    {
+      "id": "single_cell.multiome",
+      "label": "多组学与调控连接",
+      "title": "Paired RNA-ATAC regulatory support",
+      "assay": "single_cell",
+      "primary_views": [
+        "single_cell.multiome.p1",
+        "single_cell.multiome.p2",
+        "single_cell.multiome.p3"
+      ],
+      "alternative_views": [],
+      "required_results": [
+        "paired_embeddings",
+        "peak_gene_links",
+        "motif_scores"
+      ],
+      "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
+      "backend_analysis_performed": false
+    }
+  ],
+  "analysis_performed": false
+}

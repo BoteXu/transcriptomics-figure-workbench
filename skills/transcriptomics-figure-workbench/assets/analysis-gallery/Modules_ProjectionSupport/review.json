@@ -1,0 +1,76 @@
+{
+  "id": "Modules_ProjectionSupport",
+  "title": "External module projection: coverage and concordance",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna",
+    "bulk.replication",
+    "single_cell.replication"
+  ],
+  "stage": "validation",
+  "family": "projection",
+  "variant": false,
+  "order": 11,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "projection",
+    "title": "External module projection: coverage and concordance",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Frozen reference gene set, query retention and independent donor-level score concordance with supplied 95% intervals. Projection concordance is not module preservation or topology reconstruction.",
+    "value_label": "Independent score concordance r · supplied 95% CI"
+  },
+  "definition": "Frozen reference gene set, query retention and independent donor-level score concordance with supplied 95% intervals. Projection concordance is not module preservation or topology reconstruction.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title",
+    "value_label"
+  ],
+  "assets": {
+    "png": "Modules_ProjectionSupport/example.png",
+    "svg": "Modules_ProjectionSupport/example.svg",
+    "pdf": "Modules_ProjectionSupport/example.pdf",
+    "tsv": "Modules_ProjectionSupport/example.tsv",
+    "spec": "Modules_ProjectionSupport/input/example.spec.json",
+    "preview": "Modules_ProjectionSupport/preview.jpg"
+  },
+  "sha256": {
+    "png": "417e8a9174e0904b8f29afe77733d0cafd2ca792ae3b459df1e87ad974d09f12",
+    "svg": "a7e88e3c23567af58082f57cf0a57bd8ad7981cc51ce45db9ec132d56bbcbc8a",
+    "pdf": "2c1d23e94531dd205a020d4868ac89a060f9eee23c7cb486d7362de7ff1a04b5",
+    "tsv": "3104e6e9dcd04192915950eee8d01f1090a631c09e41a663554e80fe25edf06d",
+    "spec": "8109085b75bc833fea256cddab6fe8d9b783b0f6f7d7e021e3e33841e31cbbf1"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 274.32,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 11.909448818897639,
+    "p10_pt": 11.909448818897639,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "Modules_ProjectionSupport",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "417e8a9174e0904b8f29afe77733d0cafd2ca792ae3b459df1e87ad974d09f12",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Repaired excess whitespace and row padding; coverage counts, intervals and n remain explicit.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

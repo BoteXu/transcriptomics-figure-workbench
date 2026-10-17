@@ -1,0 +1,78 @@
+{
+  "id": "SoftPower_CompleteDiagnostics",
+  "title": "Soft-power diagnostics across all supplied candidates",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "qc",
+  "family": "soft_threshold",
+  "variant": false,
+  "order": 35,
+  "renderer": "figure_wgcna_views.plot_wgcna_view",
+  "parameters": {
+    "mode": "soft_threshold",
+    "title": "Soft-power diagnostics across all supplied candidates",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.1",
+      "source_version": "Fictional frozen summaries; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "selected_power": 6,
+    "fit_reference": 0.8,
+    "diagnostics": "complete",
+    "columns": 2
+  },
+  "definition": "Complete explicitly selected fixture scope; no hub selection or inference during drawing",
+  "requirements": [
+    "columns",
+    "context",
+    "diagnostics",
+    "fit_reference",
+    "mode",
+    "selected_power",
+    "title"
+  ],
+  "assets": {
+    "png": "SoftPower_CompleteDiagnostics/example.png",
+    "svg": "SoftPower_CompleteDiagnostics/example.svg",
+    "pdf": "SoftPower_CompleteDiagnostics/example.pdf",
+    "tsv": "SoftPower_CompleteDiagnostics/example.tsv",
+    "spec": "SoftPower_CompleteDiagnostics/input/example.spec.json",
+    "preview": "SoftPower_CompleteDiagnostics/preview.jpg"
+  },
+  "sha256": {
+    "png": "55d7edb646d828c1bd8233a2d9014c1b0ca3368a53f5969cb5ffe876cdca55ce",
+    "svg": "e27160e423fe130268896d1d19a0d1707c118c116f03ed8913c3b6ccd4a54abb",
+    "pdf": "81abfd40a80d945a98f96c586aff22b6393f074e12bd841ce3d96443b61e6c7b",
+    "tsv": "813f6972df7084c06c1e1cf1b38b49373a384b8db2e9819c14bf5f4bd58a9b2c",
+    "spec": "3a9cd84d92096e6d0098bfe79c35f1d7b4e4bed53a068ad8cb7b1a2a7d355a7c"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 88,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "SoftPower_CompleteDiagnostics",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "55d7edb646d828c1bd8233a2d9014c1b0ca3368a53f5969cb5ffe876cdca55ce",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Four metrics, all candidate powers and slope retained; slope text moved away from first observation.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

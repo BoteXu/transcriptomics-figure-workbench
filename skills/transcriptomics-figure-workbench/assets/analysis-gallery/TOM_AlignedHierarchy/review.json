@@ -1,0 +1,72 @@
+{
+  "id": "TOM_AlignedHierarchy",
+  "title": "Topological overlap with frozen gene hierarchy and modules",
+  "chapters": [
+    "bulk.wgcna",
+    "single_cell.hdwgcna"
+  ],
+  "stage": "network",
+  "family": "topology",
+  "variant": false,
+  "order": 7,
+  "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
+  "parameters": {
+    "mode": "topology",
+    "title": "Topological overlap with frozen gene hierarchy and modules",
+    "context": {
+      "network_type": "signed",
+      "correlation_method": "Pearson",
+      "independent_unit": "fictional donors",
+      "independent_n": 24,
+      "module_version": "Illustrative modules v0.9.7",
+      "source_version": "Fictional frozen display inputs v0.9.7; no WGCNA backend",
+      "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+    },
+    "definition": "Complete fictional symmetric TOM, frozen 24-leaf merge table and module partition. Same genes and supplied order across hierarchy, tracks and matrix. No TOM computation or clustering."
+  },
+  "definition": "Complete fictional symmetric TOM, frozen 24-leaf merge table and module partition. Same genes and supplied order across hierarchy, tracks and matrix. No TOM computation or clustering.",
+  "requirements": [
+    "context",
+    "definition",
+    "mode",
+    "title"
+  ],
+  "assets": {
+    "png": "TOM_AlignedHierarchy/example.png",
+    "svg": "TOM_AlignedHierarchy/example.svg",
+    "pdf": "TOM_AlignedHierarchy/example.pdf",
+    "tsv": "TOM_AlignedHierarchy/example.tsv",
+    "spec": "TOM_AlignedHierarchy/input/example.spec.json",
+    "preview": "TOM_AlignedHierarchy/preview.jpg"
+  },
+  "sha256": {
+    "png": "c254dcf2b0b350304befa5d46226ccd3694d4227b29bf3d77bc0f64427273144",
+    "svg": "3cc8e18194f306652368d4cf7861d2078f9614eec784ec80920df1f002e87b46",
+    "pdf": "cc8d47cecd4152907f1b809f36c86856c95c07e13015ad906c50cbf3d9383b89",
+    "tsv": "4677a1dfce25dde2924f9cf1a29d44b510975eb0ac14a413a1a261f53189b4cf",
+    "spec": "1dc0d6d72474f81c611bf13bed356204b55c890ae2dc89994192f74f316eb0ba"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 215.89999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 59,
+    "smallest_pt": 15.132005558128764,
+    "p10_pt": 15.132005558128764,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "TOM_AlignedHierarchy",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "c254dcf2b0b350304befa5d46226ccd3694d4227b29bf3d77bc0f64427273144",
+    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
+    "notes": "Repaired attached module strips and outer labels; tree, matrix and identities align exactly.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

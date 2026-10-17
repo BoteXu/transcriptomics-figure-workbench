@@ -1,7 +1,7 @@
 """Dependency-free publication checks; no research code or external tools executed."""
 from pathlib import Path
 from urllib.parse import unquote
-import ast, collections, hashlib, json, re, sys
+import ast, collections, hashlib, json, re, sys, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT/'skills/transcriptomics-figure-workbench'
@@ -23,8 +23,14 @@ def main():
     entry=(SKILL/'SKILL.md').read_text(encoding='utf8')
     assert entry.startswith('---\n') and 'name: transcriptomics-figure-workbench' in entry
     assert (ROOT/'LICENSE').is_file() and (SKILL/'references/colorbrewer-license.txt').is_file()
-    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.9.6'
-    files=[p for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and 'dist' not in p.parts]
+    assert (ROOT/'VERSION').read_text().strip()==(SKILL/'VERSION').read_text().strip()=='0.9.7'
+    # Inspect everything eligible for publication, including untracked files.
+    # Ignored private QA receipts are not public artifacts; force-added private
+    # files remain visible to git and are explicitly rejected here.
+    inventory=subprocess.check_output(['git','ls-files','-z','--cached','--others','--exclude-standard'],cwd=ROOT).decode('utf8').split('\0')
+    names=sorted(set(x for x in inventory if x))
+    assert not any(set(Path(x).parts)&{'private','.env','.venv'} for x in names),'Private file staged for publication'
+    files=[ROOT/x for x in names if (ROOT/x).is_file()]
     for p in files:
         assert p.stat().st_size < 100_000_000, 'GitHub file size exceeded'
         assert not p.is_symlink(), 'Symlink in publication package'

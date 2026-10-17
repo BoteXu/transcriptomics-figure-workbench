@@ -17,6 +17,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_biomni_views.plot_registration_check | registration_check | yes | intensity_limits, difference_limits, tile_pixels, coordinate_labels, registration_definition |
 | figure_chapter_views.plot_transcriptomic_chapter | canonical ID | yes | panels, title, scope_note |
 | figure_clarity_views.plot_clarity_views | clarity | yes | view, contract, options |
+| figure_coexpression_evidence.plot_coexpression_evidence | canonical ID | yes | mode, title, context, definition |
 | figure_core.plot_embedding | embedding | yes | palette |
 | figure_core.plot_samples | canonical ID | yes | palette, y_label |
 | figure_core.plot_forest | canonical ID | yes | x_label, interval_label, effect_scale |
@@ -291,6 +292,25 @@ Fine profiles, readable dense panels, imaging and supplied evaluation views.
 | view | true | — |
 | contract | true | — |
 | options | true | — |
+
+## figure_coexpression_evidence.plot_coexpression_evidence
+
+Coexpression, pathway/regulon and donor-level companions with exact result semantics.
+
+| Parameter | Required | Default |
+|---|---|---|
+| mode | true | — |
+| title | true | — |
+| context | true | — |
+| definition | true | — |
+| module_order | false | null |
+| columns | false | "auto" |
+| value_label | false | "Oriented module eigengene" |
+| value_limits | false | null |
+| label_genes | false | [] |
+| edge_semantics | false | null |
+| directed | false | false |
+| cloud_shapes | false | null |
 
 ## figure_core.plot_embedding
 
@@ -1931,3 +1951,5 @@ Dedicated network diagnostics, identities and result meanings; adaptive facets.
 | preservation_guides | false | null |
 | label_genes | false | [] |
 | value_limits | false | [-3, 3] |
+| diagnostics | false | "standard" |
+| merge_reference | false | null |
