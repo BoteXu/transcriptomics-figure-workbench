@@ -18,6 +18,9 @@ jobs:
         with:
           python-version: '3.11'
       - name: Verify dependency-free contracts and generated references
+        shell: bash
+        env:
+          PYTHONUTF8: '1'
         run: |
           python tools/sync_renderer_registry.py --check
           python tests/check_workbench.py

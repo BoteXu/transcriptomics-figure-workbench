@@ -45,7 +45,8 @@ def check():
     assert updated==23
     studio=(SKILL/'assets/figure-studio.html').read_text(encoding='utf8')
     state=json.loads(studio.split('studio-data',1)[1].split('>',1)[1].split('</script>',1)[0])
-    assert not state['examples'] and len(state['design_examples'])==92
+    assert not state['examples'] and len(state['design_examples'])==94
+    assert [r['id'] for r in state['design_examples'][:2]]==['RoutineBulkPCA','RoutineCellTypes']
     assert state['registry']==load(SKILL/'references/renderer-registry.json')
     for r in state['design_examples']:
         p=(SKILL/'assets'/r['png']).resolve()
