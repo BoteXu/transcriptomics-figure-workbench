@@ -1,0 +1,65 @@
+{
+  "id": "bulk.connectivity",
+  "title": "Perturbation-signature matching",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.connectivity/example.png",
+    "svg": "bulk.connectivity/example.svg",
+    "pdf": "bulk.connectivity/example.pdf",
+    "tsv": "bulk.connectivity/example.tsv",
+    "spec": "bulk.connectivity/input/example.spec.json",
+    "preview": "bulk.connectivity/preview.jpg"
+  },
+  "sha256": {
+    "png": "2b52b921e225e7df096d652d1c7b04b5ed96be43bf12698e1261bcc823cf5da7",
+    "svg": "9435933bc079f8ab7b0582705392529001f00a3187b93b67e44852a0f7c46c31",
+    "pdf": "020490b67358f41a8833fffe43ab255e4f02b6f6b61d571c64c73745859d160d",
+    "tsv": "93292b24a0e931e85bf3276113c4c20ad0db98642edd8aa87b43b598fbb6bb28",
+    "spec": "976d303da8b6ad4510c174c080314060aa156b1e5415e152565da609907fbcaf"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 76,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.connectivity",
+    "png_sha256": "2b52b921e225e7df096d652d1c7b04b5ed96be43bf12698e1261bcc823cf5da7",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

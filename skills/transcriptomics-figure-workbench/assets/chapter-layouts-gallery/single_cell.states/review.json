@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.states",
+  "title": "Cell-state, stress and cycle scores",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.states/example.png",
+    "svg": "single_cell.states/example.svg",
+    "pdf": "single_cell.states/example.pdf",
+    "tsv": "single_cell.states/example.tsv",
+    "spec": "single_cell.states/input/example.spec.json",
+    "preview": "single_cell.states/preview.jpg"
+  },
+  "sha256": {
+    "png": "9657b3396cf9fdee423c0c84e04b1baa7e5c911293933f0a3a54ae768c0e50c1",
+    "svg": "d70be3283b4864b5e5f669e942e12a2990e9bce1350c39c5bf16c8685947cc53",
+    "pdf": "d69b2a34f1a1cec216295f17bc816433388c310bd0eb3c91b5636f9fce007340",
+    "tsv": "ba27c8cd1b859d1c1b901a0bf79393ebc61c38bdb48329e54c70044fb0531922",
+    "spec": "4dc31f8b5d8dfc422faf09ba61007859d15d3032477c239b615d39cc26a38523"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 48,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.states",
+    "png_sha256": "9657b3396cf9fdee423c0c84e04b1baa7e5c911293933f0a3a54ae768c0e50c1",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

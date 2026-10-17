@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "figure_id": "LibrarySizes",
-  "renderer": "figure_core.plot_samples",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "LibrarySizes.tsv",
     "sha256": "312f582c0b9f5031829a532a543749f19ab15631b611c138c29fa8e2a7a50457",
@@ -10,11 +10,11 @@
     ]
   },
   "parameters": {
-    "palette": {
-      "Control": "#218C8D",
-      "Treated": "#D8795B"
-    },
-    "y_label": "Stored assigned reads (million)"
+    "mode": "unit_profile",
+    "title": "Library coverage by sample",
+    "axis_labels": [
+      "Stored assigned reads (million)"
+    ]
   },
   "theme": {
     "schema_version": 1,
@@ -86,7 +86,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic donor",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -104,7 +104,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

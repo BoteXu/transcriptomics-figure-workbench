@@ -2,9 +2,52 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.9.0**。从普通研究指令组织整套 bulk 和单细胞图表，统一配色、信息层次、单图与主图布局。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
+本版为 **v0.9.1**。优先选择信息更完整的美化扩展，并按 **58个分析章节**组织 bulk 与单细胞绘图：每章提供实际代码、可运行模板、准确模拟表和导出实例。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
 
-## v0.9 整套图表、全库复查与社区方案
+## v0.9.1 丰富默认画法与完整分析章节
+
+[当前默认图组](examples/rich-v091/index.html) · [58个章节的实际出图](examples/chapters-v091/index.html) · [章节、输入和调用方法](skills/transcriptomics-figure-workbench/references/transcriptomic-chapters-v091.md) · [社区方案的取舍](skills/transcriptomics-figure-workbench/references/rich-defaults-v091.md)
+
+**版式验收已收紧：** 撤回拥挤旧总图作为默认方案的推荐，保留[被否定的候选](examples/rejected-v091/README.md)供对照。每个亚群现在有单独的多 marker 证据页，支持完整背景、跨群特异性对照和可调布局。屏幕检查记录不等于美观认可或期刊接收。[具体返工与验收规则](skills/transcriptomics-figure-workbench/references/editorial-acceptance-v091.md) · [166份示例导出及检查范围](skills/transcriptomics-figure-workbench/references/validation-v091.md) · [45份较大数据量阅读布局](examples/chapter-layouts-v091/index.html)。
+
+**更新已有安装时：** 使用 `tools/sync_public_skill.py` 先预览，确认后加 `--apply`。已有 `references/lps-profile.md`、私有目录和本地覆盖配置默认保留；其他已自定义的同名文件用 `--protect` 显式保护。该工具核对拷贝后的字节，保留额外文件，不自动合并用户改过的代码，也不提供事务回滚。不要直接用公开占位模板覆盖私人课题配置。
+
+### 分析内部的画法也要齐全
+
+当前目录绑定 **143个具体视图**，包括章节内的独立面板、**14份 WGCNA/hdWGCNA 专用实例**、**16份方法配套实例**和 **8份逐亚群 marker / 布局实例**。[逐项视图表与调用方法](skills/transcriptomics-figure-workbench/references/analysis-depth-v091.md) · [WGCNA 专用图库](examples/wgcna-v091/index.html) · [方法配套图库](examples/method-depth-v091/index.html) · [逐亚群 marker](examples/subgroup-v091/index.html)。这些是画法与显示实例数，不是独立分析算法数。
+
+- **WGCNA：** power 拟合度与连接度、样本树、基因树与 dynamic/merged 模块条、r/p/q/n 模块性状图、signed/absolute MM–GS、TOM 与 1−TOM、eigengene 关系/供者分布、hub、保存性；hdWGCNA 补 metacell 供者支持和同坐标模块评分图。
+- **其他方法配套：** 完整分辨率细胞流向、带根和分支的拟时序图、基因动态与供者支持、HVG 均值/离散度、四类模型诊断、junction/coverage/isoform 轨道、完整成员交集和流向、基因—通路关系与冻结矢量场。相近画法作为扩展复用。
+- **先检查选择逻辑：** `choose` 根据研究问题、数据语义和独立单位选图；`chapter-views` 检索分析内部的画法；`view-template` 导出独立单图；同一分析/对比可用不同 `view` 保存诊断、解释图和阅读页。GSEA 摘要不能生成虚构 ES 曲线，ORA 不冒充有方向的活性结果。
+- **重新审图：** 采用实际像素图和最终尺寸检查。代码通过、数值编码检查、屏幕自检、纸面印刷与科学分析验收分别记录；换数据或布局不沿用旧图的审阅结果。
+
+上一版的11张 bulk、14张单细胞只是两套小示例。它们既不能代表完整工作台，也不应让最基础的散点图成为默认优选。旧图和当时的检查记录保留，当前推荐由下面这些扩展和章节替代。
+
+| 场景 | 当前优先画法 |
+|---|---|
+| 样本 PCA | 有明确含义的供应椭圆、组内边际分布比例、样本点和解释方差；不在绘图时拟合置信区间 |
+| 火山与 MA | 完整受检基因、堆积边际分布、清晰方向色、经过避让的选定标签 |
+| 单细胞注释/亚群 | 总览显示身份与按注释分块的 marker 证据；逐亚群另页显示多个对应 marker、全细胞背景表达图与跨群特异性对照 |
+| ORA | 主题分组、GeneRatio、命中数、FDR与选定基因的通路归属联合呈现 |
+| GSEA | 完整ES、命中轨道、排序量与leading-edge；多通路对齐、跨对比NES和基因支持分别保留真实含义 |
+| 完整课题 | 按分析章节组织多对比、多亚群、多队列的图册，另选互补面板组成主图 |
+
+### 58个章节均有可执行绘图实例
+
+- **28个 bulk 章节：** 设计、读段QC、比对/覆盖、过滤、归一化、批次/PCA、差异、交互、模型诊断、基因程序、ORA、GSEA、跨对比通路、基因—通路支持、多通路轨迹、GSVA、WGCNA、TF活性、去卷积、剪接、DTU、时间序列、独立复现、条件性生存关联、PPI、扰动签名、非编码RNA、融合证据。
+- **30个单细胞章节：** 供者设计、barcode、QC、ambient/doublet、整合、HVG/PC、分辨率、注释、亚群复分析、marker、组成、丰度、pseudobulk、多细胞类型对比、通路及基因支持、状态分数、hdWGCNA、轨迹、velocity、通讯、ligand-target、regulon、CNV、VDJ、剪接、Perturb-seq、跨队列复现、空间和multiome。
+- **可直接试画：** `chapters` 检索；`chapter-template` 导出一章的可运行模板；`book-plan` / `book-render` 按多个对比、亚群、队列保留独立身份。每章有完整输入要求、专用QC和解释边界，不用“待补”代替绘图实现。
+- **布局继续可调：** 章节按实际面板数量自动排版，也可自定义列数；沿用独立单图、跨行跨列与分页组图。更换数据量、参数或尺寸后重新看实际导出。
+
+这是一套冻结结果的绘图能力。所有新示例均使用明确标注的虚构输入，不等于这些分析已经在真实数据上执行。原始计数分析、建模、轨迹/通讯推断等继续使用已有服务器；实际项目缺少结果时可以先运行该章节的模拟模板审阅画法，正式结果必须来自真实且通过QC的分析。条件性VDJ、空间、ATAC、velocity等章节需要对应测量数据。
+
+借鉴了 [scRNAtoolVis](https://junjunlab.github.io/scRNAtoolVis-manual/)、[scplotter](https://pwwang.github.io/scplotter/)、[GseaVis](https://junjunlab.github.io/gseavis-manual/basic-usage.html)、[YuLab](https://yulab-smu.top/clusterProfiler-book/) 和 [hdWGCNA](https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html) 等作者方案的信息组织。代码独立实现，保留归属，不分发未经审查的第三方脚本，也不声称运行了这些原生分析包。
+
+![当前单细胞注释与供者响应组合](skills/transcriptomics-figure-workbench/assets/study-gallery/SingleCellMain.jpg)
+
+![ORA与选定基因支持的联动实例](skills/transcriptomics-figure-workbench/assets/chapter-gallery/bulk.ora/preview.jpg)
+
+## v0.9.0 历史整套示例与检查记录
 
 [打开本轮完整图库](examples/validated-v090/index.html) · [bulk 与单细胞使用规则](skills/transcriptomics-figure-workbench/references/transcriptomic-study-v090.md) · [实际验收范围](skills/transcriptomics-figure-workbench/references/validation-v090.md) · [27个作者项目的参考与取舍](skills/transcriptomics-figure-workbench/references/community-designs-v090.md)
 
@@ -22,7 +65,7 @@
 
 ![单细胞整套示例的互补主图](skills/transcriptomics-figure-workbench/assets/study-gallery/SingleCellMain.jpg)
 
-### 本轮实际完成
+### v0.9.0 历史检查记录
 
 - **803份完整渲染页面完成屏幕自检：** 313张可重绘源图、87个基础画法的三档数据量261张、42组独立组件关系的三种拼版146页、19个固定参考的两种宽度38页、25张整套转录组示例、8种主图自定义布局、12张公开测量与多曲线检查。页面数不等于图型或统计方法数。
 - **布局修订：** 实测标签与页脚间距；右侧计数轨道保留物理间隔并精确对齐；完整注释图例；多曲线自动分面；分面末行居中；长类别切换到更易读的线性扩展；浅色点增加中性轮廓；密集MA先绘背景再突出差异。
@@ -58,7 +101,7 @@
 
 Studio默认进入合并后的图型目录，支持“同图型美化”。外观预览仍需检查，正式研究图应按自己的最终尺寸验收。
 
-以下为历史版本的功能与验收记录，保留当时范围；当前示例以v0.9图库为准。
+以下为历史版本的功能与验收记录，保留当时范围；当前优选以v0.9.1的默认图组和章节实例为准。
 
 ## v0.7 旧图重排与拓展画法
 

@@ -1,0 +1,65 @@
+{
+  "id": "bulk.programs",
+  "assay": "bulk",
+  "title": "Gene programs and selected effects",
+  "family": "programs",
+  "required_results": [
+    "selected_expression",
+    "effect_intervals"
+  ],
+  "specific_qc_and_limit": "Freeze selection and scale; interval level and denominator must be declared.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.programs/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.programs/example.png",
+    "svg": "bulk.programs/example.svg",
+    "pdf": "bulk.programs/example.pdf",
+    "tsv": "bulk.programs/example.tsv",
+    "spec": "bulk.programs/input/example.spec.json",
+    "preview": "bulk.programs/preview.jpg"
+  },
+  "sha256": {
+    "png": "4d0bd7a25118c99cf78ffc02ecdd190bee33cd80d8e15df6e96ba2e93b91f897",
+    "svg": "a2ea4377b1f33b5e35eabf242053cf6e28c2e2779ae45a764edbd3db06ead0cc",
+    "pdf": "ba4ebb67891b96cfc356e74458e687afa7feeb0f989728356091baf3fde23a68",
+    "tsv": "2988cef7668b3d1d509854c4080b3dcf6ec907079c71dd474a27f5ff5320aef1",
+    "spec": "b97fa0ae59b9862e16b7dd12cf0c7e4f1008a251d443fb92be85e4a6f2911df1"
+  },
+  "visual_review": {
+    "id": "bulk.programs",
+    "png_sha256": "4d0bd7a25118c99cf78ffc02ecdd190bee33cd80d8e15df6e96ba2e93b91f897",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 78,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

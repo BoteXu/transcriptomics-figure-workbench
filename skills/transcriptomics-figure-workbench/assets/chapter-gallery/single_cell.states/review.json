@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.states",
+  "assay": "single_cell",
+  "title": "Cell-state, stress and cycle scores",
+  "family": "scores",
+  "required_results": [
+    "state_scores",
+    "coverage",
+    "donor_effects"
+  ],
+  "specific_qc_and_limit": "Score coverage/cell cycle and donor model need review; cell scores do not increase independent n.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.states/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.states/example.png",
+    "svg": "single_cell.states/example.svg",
+    "pdf": "single_cell.states/example.pdf",
+    "tsv": "single_cell.states/example.tsv",
+    "spec": "single_cell.states/input/example.spec.json",
+    "preview": "single_cell.states/preview.jpg"
+  },
+  "sha256": {
+    "png": "1fe184c970b201c228c9b749ba85726b240ac4fe920348fe57bec5146b694b23",
+    "svg": "46ed81b5d3c2b3819bf6edf3ea55b27c1479a5b26db806849686320d78ca61c9",
+    "pdf": "97d89761571068017649d4c9e44b7333a44a1ad1797cbc5c62eeba94c8561fba",
+    "tsv": "377df0f5f9a0ab7387488f6bbe113775449cdc596bd5ce6bdfaa4a1f95bc2d32",
+    "spec": "884ada5d06fd182ac75f2e237d05a51fa3b8bbd3e4b2eb4a396d194ff413c350"
+  },
+  "visual_review": {
+    "id": "single_cell.states",
+    "png_sha256": "1fe184c970b201c228c9b749ba85726b240ac4fe920348fe57bec5146b694b23",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 321.8246502862882,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 79,
+    "smallest_pt": 10.15149087272758,
+    "p10_pt": 10.15149087272758,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,31 +1,54 @@
 {
   "schema_version": 1,
   "figure_id": "SingleCellMain",
-  "renderer": "figure_study_overview.plot_transcriptomic_overview",
+  "renderer": "figure_annotation_views.plot_annotation_evidence",
   "input": {
     "path": "SingleCellMain.tsv",
-    "sha256": "45e68abddfe090e67d05caf10b66bbf362edc42d6cad471cb5925ffd32c99d84",
+    "sha256": "c79c07fe74c1e5e00916d051d96a3b136c70993fb56bb10a15034f732fbd86cc",
     "numeric_columns": [
       "x",
       "y",
-      "log2FC",
-      "padj",
       "value",
-      "fraction",
-      "count"
+      "fraction"
     ]
   },
   "parameters": {
-    "assay": "single_cell",
-    "contrast": "Cell identity and myeloid donor response / illustrative",
-    "independent_unit": "12 synthetic donors / 900 nested cells / fictional results",
-    "denominator": "All 900 stored cell coordinates; 20 markers; all 12 donor compositions; 1200 myeloid donor-level gene results",
-    "panel_titles": {
-      "de": "Myeloid donor response"
-    },
-    "labels": [
-      "G0009",
-      "G0091"
+    "mode": "atlas",
+    "title": "Single-cell atlas · annotation evidence",
+    "expression_label": "log1p normalized expression",
+    "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+    "expression_limits": [
+      0,
+      5
+    ],
+    "group_order": [
+      "T cells",
+      "B cells",
+      "Myeloid",
+      "Stromal",
+      "Endothelial"
+    ],
+    "marker_order": [
+      "CD3D",
+      "TRAC",
+      "IL7R",
+      "CD2",
+      "MS4A1",
+      "CD79A",
+      "CD74",
+      "CD37",
+      "LYZ",
+      "LST1",
+      "FCER1G",
+      "CTSS",
+      "COL1A1",
+      "DCN",
+      "LUM",
+      "COL3A1",
+      "PECAM1",
+      "VWF",
+      "KDR",
+      "EMCN"
     ]
   },
   "theme": {
@@ -98,7 +121,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic frozen study channel",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -116,7 +139,7 @@
   },
   "export": {
     "raster_dpi": 300,
-    "target_width_mm": 178,
+    "target_width_mm": 240,
     "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }

@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.multiome",
+  "title": "Paired RNA-ATAC regulatory support",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.multiome/example.png",
+    "svg": "single_cell.multiome/example.svg",
+    "pdf": "single_cell.multiome/example.pdf",
+    "tsv": "single_cell.multiome/example.tsv",
+    "spec": "single_cell.multiome/input/example.spec.json",
+    "preview": "single_cell.multiome/preview.jpg"
+  },
+  "sha256": {
+    "png": "2a5050a613b376f100734c058406a31a993ba6bac71e787ad2bbf6dafe5cf68e",
+    "svg": "a2ec6340f543520f45666838214cca3babb52d88e1568787cfa0e02ad5e89e8b",
+    "pdf": "2cad63fd3fc130acec04a94ce9143fc9b2c3c635ae573e8a7e7ba1871f34d661",
+    "tsv": "6d3b48e165b0a84e3cb67df65e8e5ab1c949fe9bae58154c6016be860506f042",
+    "spec": "68a9bf4eedcca7e0700b68dc46eea42b0f13f7aba01dddfb96e99e471081283d"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 81,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.multiome",
+    "png_sha256": "2a5050a613b376f100734c058406a31a993ba6bac71e787ad2bbf6dafe5cf68e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

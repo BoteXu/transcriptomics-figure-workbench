@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.spatial",
+  "title": "Spatial localization and donor/section context",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.spatial/example.png",
+    "svg": "single_cell.spatial/example.svg",
+    "pdf": "single_cell.spatial/example.pdf",
+    "tsv": "single_cell.spatial/example.tsv",
+    "spec": "single_cell.spatial/input/example.spec.json",
+    "preview": "single_cell.spatial/preview.jpg"
+  },
+  "sha256": {
+    "png": "4cedd36833fc5b294af242b4afce1e3030c9e61eb7c3bdb30e83be20aef73659",
+    "svg": "6168d2e7b025ad41b1ce093aba3e130926d9ce28470085c1aaf34f1b08cdc5d9",
+    "pdf": "e05820659f65864fac9c43ed1b481e569076686878ce1726fe64c4a628ff19f7",
+    "tsv": "958dffbe58896ffc6f661599971b84df2745b3098c29e2c70ff34e00cd0e2a40",
+    "spec": "d9a6d6abda51a75be3733a42d99161ff9079a1ad38dab4185f233bdb4454017a"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 84,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.spatial",
+    "png_sha256": "4cedd36833fc5b294af242b4afce1e3030c9e61eb7c3bdb30e83be20aef73659",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

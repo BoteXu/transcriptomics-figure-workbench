@@ -1,0 +1,66 @@
+{
+  "id": "WGCNA_EigengeneProfiles",
+  "title": "Donor-level module eigengenes · all units retained",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_EigengeneProfiles/example.png",
+    "svg": "WGCNA_EigengeneProfiles/example.svg",
+    "pdf": "WGCNA_EigengeneProfiles/example.pdf",
+    "tsv": "WGCNA_EigengeneProfiles/example.tsv",
+    "spec": "WGCNA_EigengeneProfiles/input/example.spec.json",
+    "preview": "WGCNA_EigengeneProfiles/preview.jpg"
+  },
+  "sha256": {
+    "png": "30898ddbbaa823b651ce188690ba2a754a9b8f6d682b767e6b1dc1fbbcb4b477",
+    "svg": "ec8b69433422efd76107e3f6cfaf0744914a9cffac8c3666e09536628ea70703",
+    "pdf": "c3958fbc94813d2e6ca33ae50a0cb531ca5c9c43b840e3108e9ff15b0a0af92f",
+    "tsv": "447b6ed2619653b5134e016ff82ee95b6dc211e59cedda2a74333ef23aa8f355",
+    "spec": "15d8e263212c5ab8840b1ab1807db1ec82ea2757ef65f730789980c60ef228aa"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 182.88,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 17.864173228346456,
+    "p10_pt": 17.864173228346456,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_EigengeneProfiles",
+    "png_sha256": "30898ddbbaa823b651ce188690ba2a754a9b8f6d682b767e6b1dc1fbbcb4b477",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "context",
+    "mode",
+    "module_order",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

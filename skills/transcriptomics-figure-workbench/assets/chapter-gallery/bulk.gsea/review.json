@@ -1,0 +1,69 @@
+{
+  "id": "bulk.gsea",
+  "assay": "bulk",
+  "title": "Full GSEA tracks and leading edge",
+  "family": "rich:EnrichmentTracks",
+  "required_results": [
+    "complete_rank_curve",
+    "rank_metric",
+    "hit_ranks",
+    "leading_edge",
+    "NES",
+    "FDR"
+  ],
+  "specific_qc_and_limit": "Full signed ranked universe, ties and gene-set version required; never reconstruct a curve from NES.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.gsea/input/example.spec.json",
+  "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+  "sources": [
+    "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+    "https://yulab-smu.top/clusterProfiler-book/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.gsea/example.png",
+    "svg": "bulk.gsea/example.svg",
+    "pdf": "bulk.gsea/example.pdf",
+    "tsv": "bulk.gsea/example.tsv",
+    "spec": "bulk.gsea/input/example.spec.json",
+    "preview": "bulk.gsea/preview.jpg"
+  },
+  "sha256": {
+    "png": "7690199abd5225e3335798ddefa12524c52ce28ce00d50d13f604767d1c9b0b1",
+    "svg": "3a5b3f30d2d39d08f28979757b8fea4123ac628bad97a0067e858ac8de2f0a5e",
+    "pdf": "2bc25ec6bde06ad72c2f6ff8663d865fd49888ea183f42be7ecdd9e342c4ef7d",
+    "tsv": "c2dfb3de1071ea4558292032455e020e0b38ebe173e79067829aea16b05f8ad6",
+    "spec": "7aae6e5aea0361beab527db7d71113512d29cb633637d182e1a2224ee821b2cd"
+  },
+  "visual_review": {
+    "id": "bulk.gsea",
+    "png_sha256": "7690199abd5225e3335798ddefa12524c52ce28ce00d50d13f604767d1c9b0b1",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 172.72,
+    "minimum_required_pt": 7,
+    "essential_text_count": 31,
+    "smallest_pt": 8.997220935618342,
+    "p10_pt": 8.997220935618342,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

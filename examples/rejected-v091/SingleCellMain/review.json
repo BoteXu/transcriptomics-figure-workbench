@@ -1,0 +1,56 @@
+{
+  "id": "SingleCellMain",
+  "assay": "single_cell",
+  "role": "study_overview",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "single_cell_main",
+    "title": "Cell identities, marker evidence and donor-level response"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 248.13766015624998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 121,
+    "smallest_pt": 7.616739832276505,
+    "p10_pt": 8.039892045180755,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/SingleCellMain/SingleCellMain.png",
+    "svg": "study/SingleCellMain/SingleCellMain.svg",
+    "pdf": "study/SingleCellMain/SingleCellMain.pdf",
+    "tsv": "study/SingleCellMain/SingleCellMain.tsv",
+    "spec": "study/SingleCellMain/input/SingleCellMain.spec.json",
+    "previous": "study/SingleCellMain/previous.png"
+  },
+  "sha256": {
+    "png": "e37bb5db12bbab9d85dbbc79463ba5b8e97839457db8b8d14956273be9ec2abe",
+    "svg": "ad6b72ca9ea8a30a521ca4921de83ae2966c59299b663e4417af63200d441b31",
+    "pdf": "0e76ea5cb93a827fd3c42e2d26f76d2f4dfaefd14dacef0618d187d4a571a9eb",
+    "tsv": "51738915d847c3e3595988ea7589c8fac43348be0a5fcc02f96291ed6ff93e3b",
+    "previous": "530254276806a4e429303e99064541cfc22a516af1eb9546f738992878223285"
+  },
+  "visual_review": {
+    "id": "SingleCellMain",
+    "png_sha256": "e37bb5db12bbab9d85dbbc79463ba5b8e97839457db8b8d14956273be9ec2abe",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

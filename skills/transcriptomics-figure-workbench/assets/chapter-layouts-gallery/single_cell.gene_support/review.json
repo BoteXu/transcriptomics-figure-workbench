@@ -1,0 +1,72 @@
+{
+  "id": "single_cell.gene_support",
+  "title": "Celltype pathway membership and gene evidence",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.gene_support/example.png",
+    "svg": "single_cell.gene_support/example.svg",
+    "pdf": "single_cell.gene_support/example.pdf",
+    "tsv": "single_cell.gene_support/example.tsv",
+    "spec": "single_cell.gene_support/input/example.spec.json",
+    "preview": "single_cell.gene_support/preview.jpg"
+  },
+  "sha256": {
+    "png": "5ce70fc51e5f92014c04dc6657891cd3c2146e139e281ca2c3ec142769382b07",
+    "svg": "c7fd9c23c0f5fa61fe17b3a56fa499ec4c2906c54705eed2ed2261eba3f8efd4",
+    "pdf": "4417b19e8f5eb443f94d0d1d1842960ec4f327eb34dec3e58ab98227788dbb18",
+    "tsv": "8a0ebb72c4aa5128cdf182fd2104760ceff8edab756a5b106cc80d15bd489f76",
+    "spec": "75288c03ae7e490e24d3f7a9f1bc140d5cb1de6e476311f7202cf7988421f2a4"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 53,
+    "smallest_pt": 16.07775590551181,
+    "p10_pt": 16.07775590551181,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.gene_support",
+    "png_sha256": "5ce70fc51e5f92014c04dc6657891cd3c2146e139e281ca2c3ec142769382b07",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "columns",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "nes_limits",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

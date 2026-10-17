@@ -1,0 +1,65 @@
+{
+  "id": "bulk.deconvolution",
+  "title": "Cell-mixture estimates and uncertainty",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.deconvolution/example.png",
+    "svg": "bulk.deconvolution/example.svg",
+    "pdf": "bulk.deconvolution/example.pdf",
+    "tsv": "bulk.deconvolution/example.tsv",
+    "spec": "bulk.deconvolution/input/example.spec.json",
+    "preview": "bulk.deconvolution/preview.jpg"
+  },
+  "sha256": {
+    "png": "2210b2e6725b8eebd926dfe36359d59cf8378832072f058c55db78a3ebe8443e",
+    "svg": "f056ca73671bbe49cf483af7d179c9b7491266188c00648d4c531699911125dd",
+    "pdf": "09ea5422804c2a6b038b8620c338fe4de5b179d95b9cf2672369f3e6b4ba9fbc",
+    "tsv": "5c0baa6a68459e4134cd17f098df89370452b6b1e8d60347717d722407664762",
+    "spec": "d1b1f80fbdb770d073617a1f4b71f8320070627da856efdc3d193255e7479a12"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 52,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.deconvolution",
+    "png_sha256": "2210b2e6725b8eebd926dfe36359d59cf8378832072f058c55db78a3ebe8443e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

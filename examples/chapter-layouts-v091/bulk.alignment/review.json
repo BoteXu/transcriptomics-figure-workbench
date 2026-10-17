@@ -1,0 +1,65 @@
+{
+  "id": "bulk.alignment",
+  "title": "Alignment and gene-body coverage",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.alignment/example.png",
+    "svg": "bulk.alignment/example.svg",
+    "pdf": "bulk.alignment/example.pdf",
+    "tsv": "bulk.alignment/example.tsv",
+    "spec": "bulk.alignment/input/example.spec.json",
+    "preview": "bulk.alignment/preview.jpg"
+  },
+  "sha256": {
+    "png": "c418b121e4ca98a94efe34b3bc321f25818eccd27498e5f1aa4f2894735c140f",
+    "svg": "d483a3212d2f075adc2cfdaeb7aeb28544e5ea26d1312dc66172f2310474f70c",
+    "pdf": "c1c41b61a6fa5c4d5ba7363a66328b6b774598d30b6bf5722ea68450d0c57bf0",
+    "tsv": "ab00d52d8d4f49bc87fe934f3c2dda3c1a0c2830c1da018ccaa745a000fae539",
+    "spec": "1404761b87d4c415c84be7e83e8d73aae0f073e72288b939fefaa995028aed97"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 44,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.alignment",
+    "png_sha256": "c418b121e4ca98a94efe34b3bc321f25818eccd27498e5f1aa4f2894735c140f",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

@@ -1,0 +1,1257 @@
+{
+  "schema_version": 1,
+  "version": "0.9.1",
+  "chapters": [
+    {
+      "id": "bulk.design",
+      "assay": "bulk",
+      "title": "Design and independent units",
+      "family": "design",
+      "required_results": [
+        "sample_covariates",
+        "library_counts"
+      ],
+      "specific_qc_and_limit": "Review design rank, pairing and confounding; technical libraries do not increase biological n.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.design/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.reads",
+      "assay": "bulk",
+      "title": "Read quality and sequence composition",
+      "family": "reads",
+      "required_results": [
+        "base_quality",
+        "read_classes"
+      ],
+      "specific_qc_and_limit": "Complete base positions and all read classes; no silent removal of failed libraries.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.reads/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.alignment",
+      "assay": "bulk",
+      "title": "Alignment and gene-body coverage",
+      "family": "alignment",
+      "required_results": [
+        "alignment_classes",
+        "gene_body_coverage"
+      ],
+      "specific_qc_and_limit": "Reference build, strandedness and assay must match; coverage is not expression.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.alignment/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.filtering",
+      "assay": "bulk",
+      "title": "Detection and filtering sensitivity",
+      "family": "filtering",
+      "required_results": [
+        "threshold_profile",
+        "retained_feature_counts"
+      ],
+      "specific_qc_and_limit": "Freeze tested universe and rule; do not choose thresholds for more discoveries.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.filtering/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.normalization",
+      "assay": "bulk",
+      "title": "Normalization and mean-variance diagnostics",
+      "family": "normalization",
+      "required_results": [
+        "rle_density",
+        "mean_variance"
+      ],
+      "specific_qc_and_limit": "Declare RLE/reference and transformed scale; drawing never estimates density or normalization.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.normalization/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.batch",
+      "assay": "bulk",
+      "title": "Sample architecture and batch coverage",
+      "family": "rich:BulkPCA",
+      "required_results": [
+        "embedding",
+        "ellipse_geometry",
+        "marginal_counts",
+        "variance_profile"
+      ],
+      "specific_qc_and_limit": "Ellipse meaning and all samples required; separation does not establish successful batch correction.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.batch/input/example.spec.json",
+      "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.differential",
+      "assay": "bulk",
+      "title": "Differential expression with full distributions",
+      "family": "rich:BulkDE",
+      "required_results": [
+        "complete_de",
+        "effect",
+        "p_adj",
+        "marginal_counts"
+      ],
+      "specific_qc_and_limit": "Freeze contrast, independent units and FDR family; no selected-gene-only volcano.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.differential/input/example.spec.json",
+      "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.interaction",
+      "assay": "bulk",
+      "title": "Interactions across conditions and time",
+      "family": "interaction",
+      "required_results": [
+        "interaction_effects",
+        "model_predictions"
+      ],
+      "specific_qc_and_limit": "Require a same-study factorial design and estimable interaction; separate cohorts cannot identify interaction.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.interaction/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.model_qc",
+      "assay": "bulk",
+      "title": "Model fit and influence diagnostics",
+      "family": "diagnostics",
+      "required_results": [
+        "residuals",
+        "dispersion_curve",
+        "influence"
+      ],
+      "specific_qc_and_limit": "Use actual fitted-model residuals and influential observations; a model is not accepted by a pretty plot.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.model_qc/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.programs",
+      "assay": "bulk",
+      "title": "Gene programs and selected effects",
+      "family": "programs",
+      "required_results": [
+        "selected_expression",
+        "effect_intervals"
+      ],
+      "specific_qc_and_limit": "Freeze selection and scale; interval level and denominator must be declared.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.programs/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.ora",
+      "assay": "bulk",
+      "title": "ORA themes, ratios and supporting genes",
+      "family": "story:ora",
+      "required_results": [
+        "term_ratio",
+        "term_fdr",
+        "gene_term_membership"
+      ],
+      "specific_qc_and_limit": "Actual tested background and mapping versions required; ORA does not establish activity direction.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.ora/input/example.spec.json",
+      "code": "scripts/figure_enrichment_story.py",
+      "sources": [
+        "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+        "https://yulab-smu.top/clusterProfiler-book/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.gsea",
+      "assay": "bulk",
+      "title": "Full GSEA tracks and leading edge",
+      "family": "rich:EnrichmentTracks",
+      "required_results": [
+        "complete_rank_curve",
+        "rank_metric",
+        "hit_ranks",
+        "leading_edge",
+        "NES",
+        "FDR"
+      ],
+      "specific_qc_and_limit": "Full signed ranked universe, ties and gene-set version required; never reconstruct a curve from NES.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.gsea/input/example.spec.json",
+      "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+      "sources": [
+        "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+        "https://yulab-smu.top/clusterProfiler-book/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.pathway_contrasts",
+      "assay": "bulk",
+      "title": "Pathway enrichment across contrasts",
+      "family": "story:gsea_comparison",
+      "required_results": [
+        "NES_grid",
+        "FDR_grid",
+        "set_coverage"
+      ],
+      "specific_qc_and_limit": "Keep not-tested distinct from nonsignificant; cross-contrast effect and FDR families must be explicit.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.pathway_contrasts/input/example.spec.json",
+      "code": "scripts/figure_enrichment_story.py",
+      "sources": [
+        "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+        "https://yulab-smu.top/clusterProfiler-book/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.gene_support",
+      "assay": "bulk",
+      "title": "Pathway membership and signed gene evidence",
+      "family": "story:gene_support",
+      "required_results": [
+        "term_overlap",
+        "gene_term_membership",
+        "gene_effects"
+      ],
+      "specific_qc_and_limit": "Absence of membership differs from missing annotation; selection and background must be frozen.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.gene_support/input/example.spec.json",
+      "code": "scripts/figure_enrichment_story.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.gsea_multitrack",
+      "assay": "bulk",
+      "title": "Multiple GSEA curves with complete rank tracks",
+      "family": "multi_gsea",
+      "required_results": [
+        "complete_curves",
+        "rank_metric",
+        "hits",
+        "leading_edge",
+        "NES",
+        "FDR"
+      ],
+      "specific_qc_and_limit": "Every curve and rank is supplied; no invented ES curve, recomputed FDR or selected-rank truncation.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.gsea_multitrack/input/example.spec.json",
+      "code": "scripts/figure_refined_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.gsva",
+      "assay": "bulk",
+      "title": "Sample-level gene-set scoring",
+      "family": "scores",
+      "required_results": [
+        "sample_scores",
+        "coverage",
+        "score_effects"
+      ],
+      "specific_qc_and_limit": "GSVA/ssGSEA scale and subsequent donor-level model differ; do not interpret scores as absolute activity.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.gsva/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+        "https://yulab-smu.top/clusterProfiler-book/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.wgcna",
+      "assay": "bulk",
+      "title": "Coexpression modules and preservation",
+      "family": "modules",
+      "required_results": [
+        "module_trait",
+        "preservation",
+        "fixed_network"
+      ],
+      "specific_qc_and_limit": "Freeze module assignment and test/train cohorts; coexpression does not prove regulation.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.wgcna/input/example.spec.json",
+      "code": "scripts/figure_wgcna_views.py",
+      "sources": [
+        "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.tf_activity",
+      "assay": "bulk",
+      "title": "Transcription-factor footprints",
+      "family": "regulation",
+      "required_results": [
+        "TF_activity",
+        "TF_effects",
+        "targets"
+      ],
+      "specific_qc_and_limit": "Record regulon/sign and coverage; inferred activity is not direct binding evidence.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.tf_activity/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.deconvolution",
+      "assay": "bulk",
+      "title": "Cell-mixture estimates and uncertainty",
+      "family": "mixture",
+      "required_results": [
+        "sample_fractions",
+        "fraction_effects"
+      ],
+      "specific_qc_and_limit": "Declare reference and compositional denominator; model fractions are not measured cell counts.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.deconvolution/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.splicing",
+      "assay": "bulk",
+      "title": "Alternative splicing and junction support",
+      "family": "splicing",
+      "required_results": [
+        "junction_coverage",
+        "delta_PSI",
+        "isoform_usage"
+      ],
+      "specific_qc_and_limit": "Freeze event coordinates/build and donor support; gene DE and splicing are distinct tests.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.splicing/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.dtu",
+      "assay": "bulk",
+      "title": "Differential transcript usage",
+      "family": "usage",
+      "required_results": [
+        "transcript_fractions",
+        "usage_intervals"
+      ],
+      "specific_qc_and_limit": "Require transcript-version mapping and parent-gene denominator; transcript fractions are compositional.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.dtu/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.timecourse",
+      "assay": "bulk",
+      "title": "Longitudinal response and uncertainty",
+      "family": "time",
+      "required_results": [
+        "time_predictions",
+        "effect_intervals"
+      ],
+      "specific_qc_and_limit": "Repeated donors and time units required; supplied model curves only, no smoothing for appearance.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.timecourse/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.replication",
+      "assay": "bulk",
+      "title": "Independent-cohort replication",
+      "family": "replication",
+      "required_results": [
+        "cohort_effects",
+        "matched_features"
+      ],
+      "specific_qc_and_limit": "Harmonize effect scale and biological context; prevent overlap and discovery-validation leakage.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.replication/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.survival",
+      "assay": "bulk",
+      "title": "Conditional clinical outcome association",
+      "family": "survival",
+      "required_results": [
+        "survival_curves",
+        "risk_table",
+        "hazard_intervals"
+      ],
+      "specific_qc_and_limit": "Clinical use requires endpoint/censoring/design review; association is not clinical prediction validation.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.survival/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.ppi",
+      "assay": "bulk",
+      "title": "Protein-interaction evidence",
+      "family": "network",
+      "required_results": [
+        "fixed_nodes",
+        "fixed_edges",
+        "edge_weights"
+      ],
+      "specific_qc_and_limit": "Record evidence class, full selected edges and species; graph proximity is not mechanism.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.ppi/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.connectivity",
+      "assay": "bulk",
+      "title": "Perturbation-signature matching",
+      "family": "connectivity",
+      "required_results": [
+        "connection_scores",
+        "signature_coverage"
+      ],
+      "specific_qc_and_limit": "Preserve perturbation/dose/cell context; reversed signatures do not establish efficacy.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.connectivity/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.noncoding",
+      "assay": "bulk",
+      "title": "Noncoding RNA and target hypotheses",
+      "family": "noncoding",
+      "required_results": [
+        "RNA_effects",
+        "RNA_target_edges"
+      ],
+      "specific_qc_and_limit": "Require RNA biotype and target-evidence provenance; coexpression is not a validated ceRNA mechanism.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.noncoding/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "bulk.fusions",
+      "assay": "bulk",
+      "title": "Fusion and transcript-structure evidence",
+      "family": "fusion",
+      "required_results": [
+        "breakpoint_support",
+        "coverage",
+        "validation_summary"
+      ],
+      "specific_qc_and_limit": "Needs sequence-level evidence and artifact checks; a breakpoint call is not validated oncogenicity.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/bulk.fusions/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+        "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.design",
+      "assay": "single_cell",
+      "title": "Donor, capture and condition design",
+      "family": "design",
+      "required_results": [
+        "donor_covariates",
+        "capture_counts"
+      ],
+      "specific_qc_and_limit": "Cells, captures and donors differ; record nested design and donor replication.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.design/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.barcode",
+      "assay": "single_cell",
+      "title": "Barcode rank and retained droplets",
+      "family": "barcode",
+      "required_results": [
+        "barcode_rank",
+        "droplet_classes"
+      ],
+      "specific_qc_and_limit": "Need raw droplet totals and selected threshold; cell calling does not validate cell identity.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.barcode/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.qc",
+      "assay": "single_cell",
+      "title": "Cell quality across donors",
+      "family": "rich:CellQC",
+      "required_results": [
+        "cell_metrics",
+        "donor_labels"
+      ],
+      "specific_qc_and_limit": "Retain metric units and actual thresholds; cells remain nested within donors.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.qc/input/example.spec.json",
+      "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.ambient_doublet",
+      "assay": "single_cell",
+      "title": "Ambient RNA and doublet diagnostics",
+      "family": "ambient",
+      "required_results": [
+        "doublet_scores",
+        "ambient_profile",
+        "donor_rates"
+      ],
+      "specific_qc_and_limit": "Method scores and reviewed calls are separate; preserve flagged cells and removal rules.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.ambient_doublet/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.integration",
+      "assay": "single_cell",
+      "title": "Batch integration and signal preservation",
+      "family": "integration",
+      "required_results": [
+        "stored_embeddings",
+        "mixing_scores",
+        "biology_scores"
+      ],
+      "specific_qc_and_limit": "Use frozen pre/post diagnostics and batch-donor mapping; good mixing can erase biology.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.integration/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.hvg_pca",
+      "assay": "single_cell",
+      "title": "Feature selection and PC support",
+      "family": "pca",
+      "required_results": [
+        "variance_profile",
+        "loadings",
+        "feature_dispersion"
+      ],
+      "specific_qc_and_limit": "Selection source and PC loading signs required; no PCA fit during plotting.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.hvg_pca/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.resolution",
+      "assay": "single_cell",
+      "title": "Cluster resolution and donor support",
+      "family": "resolution",
+      "required_results": [
+        "resolution_edges",
+        "stability",
+        "donor_support"
+      ],
+      "specific_qc_and_limit": "Freeze cluster lineage and selected resolution; stability does not establish biological identity.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.resolution/input/example.spec.json",
+      "code": "scripts/figure_lineage_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.annotation",
+      "assay": "single_cell",
+      "title": "Subpopulations with marker support",
+      "family": "rich:CellTypes",
+      "required_results": [
+        "embedding",
+        "label_anchors",
+        "marker_means",
+        "detection_fractions"
+      ],
+      "specific_qc_and_limit": "Atlas identity and specificity; per-subgroup multi-marker pages are complete separate companions. Annotation specificity and uncertainty require review.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.annotation/input/example.spec.json",
+      "code": "scripts/figure_annotation_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.subcluster",
+      "assay": "single_cell",
+      "title": "Lineage-focused subcluster atlas",
+      "family": "subcluster",
+      "required_results": [
+        "lineage_embedding",
+        "markers",
+        "parent_child_labels"
+      ],
+      "specific_qc_and_limit": "Explicit parent selection and child annotation; subclustering requires actual reanalysis upstream.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.subcluster/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.markers",
+      "assay": "single_cell",
+      "title": "Marker specificity and detection",
+      "family": "rich:MarkerDot",
+      "required_results": [
+        "marker_means",
+        "detection_fractions",
+        "annotation_blocks"
+      ],
+      "specific_qc_and_limit": "Denominator must be all declared cells in a group; marker ranking is not donor-level DE.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.markers/input/example.spec.json",
+      "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.composition",
+      "assay": "single_cell",
+      "title": "Donor-level composition",
+      "family": "rich:DonorComposition",
+      "required_results": [
+        "donor_type_counts",
+        "donor_totals"
+      ],
+      "specific_qc_and_limit": "Use complete donor denominators; pooled cell fractions do not provide independent replication.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.composition/input/example.spec.json",
+      "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.abundance",
+      "assay": "single_cell",
+      "title": "Differential abundance with donor effects",
+      "family": "abundance",
+      "required_results": [
+        "neighborhood_effects",
+        "donor_fractions",
+        "coordinates"
+      ],
+      "specific_qc_and_limit": "Milo/scCODA need distinct model/null/denominator; abundance and expression are different estimands.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.abundance/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.pseudobulk",
+      "assay": "single_cell",
+      "title": "Donor-level differential response",
+      "family": "rich:DonorDE",
+      "required_results": [
+        "complete_donor_de",
+        "contrast",
+        "FDR",
+        "marginal_counts"
+      ],
+      "specific_qc_and_limit": "Donor/celltype counts and design must be reviewed; no cell-level pseudoreplication.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.pseudobulk/input/example.spec.json",
+      "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.multi_contrast",
+      "assay": "single_cell",
+      "title": "Celltype-by-contrast differential atlas",
+      "family": "multi_contrast",
+      "required_results": [
+        "effect_grid",
+        "FDR_grid",
+        "tested_feature_counts"
+      ],
+      "specific_qc_and_limit": "Keep separate comparison families and not-tested entries; do not pool donor and cell p-values.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.multi_contrast/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.pathways",
+      "assay": "single_cell",
+      "title": "Celltype pathway responses",
+      "family": "story:gsea_comparison",
+      "required_results": [
+        "NES_grid",
+        "FDR_grid",
+        "leading_edge"
+      ],
+      "specific_qc_and_limit": "Preserve celltype contrast and set coverage; activity direction cannot be inferred from ORA.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.pathways/input/example.spec.json",
+      "code": "scripts/figure_enrichment_story.py",
+      "sources": [
+        "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+        "https://yulab-smu.top/clusterProfiler-book/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.gene_support",
+      "assay": "single_cell",
+      "title": "Celltype pathway membership and gene evidence",
+      "family": "story:gene_support",
+      "required_results": [
+        "term_overlap",
+        "gene_term_membership",
+        "gene_effects"
+      ],
+      "specific_qc_and_limit": "Preserve celltype-specific tested universe and exact annotation membership.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.gene_support/input/example.spec.json",
+      "code": "scripts/figure_enrichment_story.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.states",
+      "assay": "single_cell",
+      "title": "Cell-state, stress and cycle scores",
+      "family": "scores",
+      "required_results": [
+        "state_scores",
+        "coverage",
+        "donor_effects"
+      ],
+      "specific_qc_and_limit": "Score coverage/cell cycle and donor model need review; cell scores do not increase independent n.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.states/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.hdwgcna",
+      "assay": "single_cell",
+      "title": "Celltype coexpression modules",
+      "family": "modules",
+      "required_results": [
+        "module_trait",
+        "preservation",
+        "fixed_network"
+      ],
+      "specific_qc_and_limit": "Declare metacell/donor independence and module preservation; metacells are not new donors.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.hdwgcna/input/example.spec.json",
+      "code": "scripts/figure_wgcna_views.py",
+      "sources": [
+        "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.trajectory",
+      "assay": "single_cell",
+      "title": "Branches, progression and gene dynamics",
+      "family": "trajectory",
+      "required_results": [
+        "embedding",
+        "pseudotime",
+        "branch_curves",
+        "gene_trends"
+      ],
+      "specific_qc_and_limit": "Freeze root/branch and uncertainty; pseudotime is not chronological time or lineage proof.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.trajectory/input/example.spec.json",
+      "code": "scripts/figure_lineage_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.velocity",
+      "assay": "single_cell",
+      "title": "RNA velocity and phase diagnostics",
+      "family": "velocity",
+      "required_results": [
+        "vectors",
+        "spliced_unspliced",
+        "fit_diagnostics"
+      ],
+      "specific_qc_and_limit": "Require assay-compatible splicing layers, fitted vectors and scale; arrows do not prove fate.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.velocity/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.communication",
+      "assay": "single_cell",
+      "title": "Communication themes and ligand-receptor support",
+      "family": "communication",
+      "required_results": [
+        "sender_receiver",
+        "LR_scores",
+        "coverage"
+      ],
+      "specific_qc_and_limit": "CellChat/LIANA/CellPhoneDB scores are method-specific; donor-aware contrast and permutations required.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.communication/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.ligand_target",
+      "assay": "single_cell",
+      "title": "Ligand-to-target evidence chains",
+      "family": "ligand_target",
+      "required_results": [
+        "ligand_activity",
+        "target_potential",
+        "network"
+      ],
+      "specific_qc_and_limit": "NicheNet prior and receiver context required; target potential does not prove signaling causality.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.ligand_target/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.regulons",
+      "assay": "single_cell",
+      "title": "Regulon activity and target specificity",
+      "family": "regulation",
+      "required_results": [
+        "regulon_scores",
+        "specificity",
+        "target_edges"
+      ],
+      "specific_qc_and_limit": "SCENIC/AUCell motif/score evidence is not direct binding or causal regulation.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.regulons/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.cnv",
+      "assay": "single_cell",
+      "title": "Inferred copy-number patterns",
+      "family": "cnv",
+      "required_results": [
+        "ordered_CNV",
+        "reference_cells",
+        "clone_support"
+      ],
+      "specific_qc_and_limit": "Genomic coordinates and normal reference required; RNA-inferred CNV needs independent genomic validation.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.cnv/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.vdj",
+      "assay": "single_cell",
+      "title": "Clonotypes, expansion and sharing",
+      "family": "clones",
+      "required_results": [
+        "clonotype_counts",
+        "VDJ_QC",
+        "sharing"
+      ],
+      "specific_qc_and_limit": "Require real VDJ calls and donor denominators; transcriptome-only data do not identify clonotypes.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.vdj/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.splicing",
+      "assay": "single_cell",
+      "title": "Celltype-specific RNA processing",
+      "family": "splicing",
+      "required_results": [
+        "junction_coverage",
+        "delta_PSI",
+        "isoform_usage"
+      ],
+      "specific_qc_and_limit": "Donor support and event mapping required; cell-level detection sparsity must be reviewed.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.splicing/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.perturbseq",
+      "assay": "single_cell",
+      "title": "Perturbation assignment and response",
+      "family": "perturbation",
+      "required_results": [
+        "guide_assignment",
+        "perturbation_effects",
+        "replicate_QC"
+      ],
+      "specific_qc_and_limit": "Actual guide calls, controls and independent replicates required; guide abundance is not perturbation efficacy.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.perturbseq/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.replication",
+      "assay": "single_cell",
+      "title": "Cross-cohort annotation and effect transfer",
+      "family": "replication",
+      "required_results": [
+        "cohort_effects",
+        "transfer_confidence",
+        "coverage"
+      ],
+      "specific_qc_and_limit": "Independent cohorts and matching cell ontology required; transfer confidence is not validation truth.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.replication/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.spatial",
+      "assay": "single_cell",
+      "title": "Spatial localization and donor/section context",
+      "family": "spatial",
+      "required_results": [
+        "registered_coordinates",
+        "region_scores",
+        "section_effects"
+      ],
+      "specific_qc_and_limit": "Requires measured spatial assay and registration; dissociated UMAP is not tissue geography.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.spatial/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    },
+    {
+      "id": "single_cell.multiome",
+      "assay": "single_cell",
+      "title": "Paired RNA-ATAC regulatory support",
+      "family": "multiome",
+      "required_results": [
+        "paired_embeddings",
+        "peak_gene_links",
+        "motif_scores"
+      ],
+      "specific_qc_and_limit": "Paired assay, build and peak/link evidence required; peak-gene association is not causal regulation.",
+      "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+      "example": "assets/chapter-gallery/single_cell.multiome/input/example.spec.json",
+      "code": "scripts/figure_chapter_views.py",
+      "sources": [
+        "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+        "https://pwwang.github.io/scplotter/",
+        "https://www.sc-best-practices.org/"
+      ],
+      "analysis_execution": "Existing server workflow; separately validated actual backend",
+      "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed"
+    }
+  ],
+  "sources": {
+    "scrna": "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "volcano": "https://junjunlab.github.io/scRNAtoolVis-manual/jjvolcano.html",
+    "scplotter": "https://pwwang.github.io/scplotter/",
+    "gseavis": "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+    "enrichplot": "https://yulab-smu.top/clusterProfiler-book/",
+    "hdwgcna": "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html",
+    "deseq": "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "bestpractices": "https://www.sc-best-practices.org/",
+    "complexheatmap": "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  },
+  "source_adoption": "Original drawing code; community/author layout ideas reviewed. No third-party source, data, scripts or weights redistributed.",
+  "example_scope": "Fictional frozen display inputs; every chapter has a runnable example; no analysis engines executed"
+}

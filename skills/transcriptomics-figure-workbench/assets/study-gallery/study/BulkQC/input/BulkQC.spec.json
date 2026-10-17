@@ -1,16 +1,17 @@
 {
   "schema_version": 1,
   "figure_id": "BulkQC",
-  "renderer": "figure_core.plot_qc",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "BulkQC.tsv",
-    "sha256": "1b10f844b2ff4b6148cc2bb62bc7a70ba846c3da9e169843481a522794b2ff5f",
+    "sha256": "07b1dafe57c1a3cdd5448a3e456cebe222043a80eb802f3a01e2241d9df49594",
     "numeric_columns": [
       "value"
     ]
   },
   "parameters": {
-    "y_label": "Stored log2 expression"
+    "mode": "qc",
+    "title": "Sample distributions"
   },
   "theme": {
     "schema_version": 1,
@@ -82,7 +83,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic gene-sample measurement",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -100,7 +101,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

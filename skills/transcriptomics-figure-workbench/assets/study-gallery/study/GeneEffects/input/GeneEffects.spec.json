@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "figure_id": "GeneEffects",
-  "renderer": "figure_core.plot_forest",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "GeneEffects.tsv",
-    "sha256": "b9a33c4909dea6f7c4e5373c175550d95cbd7b36be25b4cde102b0b07f078259",
+    "sha256": "1ab0e1545d710eb9478dfe6e37aa182faa5d9ccf4af9a9b68e980aa898da322b",
     "numeric_columns": [
       "estimate",
       "lower",
@@ -12,9 +12,8 @@
     ]
   },
   "parameters": {
-    "x_label": "Stored log2 fold change",
-    "interval_label": "Four prespecified genes / supplied 95% intervals",
-    "effect_scale": "difference"
+    "mode": "effect_table",
+    "title": "Prespecified effects · estimates and supplied intervals"
   },
   "theme": {
     "schema_version": 1,
@@ -86,7 +85,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic gene estimate",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -104,7 +103,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.velocity",
+  "assay": "single_cell",
+  "title": "RNA velocity and phase diagnostics",
+  "family": "velocity",
+  "required_results": [
+    "vectors",
+    "spliced_unspliced",
+    "fit_diagnostics"
+  ],
+  "specific_qc_and_limit": "Require assay-compatible splicing layers, fitted vectors and scale; arrows do not prove fate.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.velocity/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.velocity/example.png",
+    "svg": "single_cell.velocity/example.svg",
+    "pdf": "single_cell.velocity/example.pdf",
+    "tsv": "single_cell.velocity/example.tsv",
+    "spec": "single_cell.velocity/input/example.spec.json",
+    "preview": "single_cell.velocity/preview.jpg"
+  },
+  "sha256": {
+    "png": "4f205c5b9943d79d3cbb41456d78070615e3cbd99a595203e5947e087acbab2a",
+    "svg": "8443d36334c86c43cb01e09aa2e2598a44a784065c171711ab665796f13a59f9",
+    "pdf": "8dfac764d58ab2af2165371ea59f70c358649ab484c89b3019a734d60dd8243e",
+    "tsv": "c6187c234dc007b7c0fffcbc373165be33ed79b994f85fa42d95425695e8a424",
+    "spec": "1be0636e7b3fe795f1f0dff98e76f982c609d5c696946259f7e26dfa146b11d8"
+  },
+  "visual_review": {
+    "id": "single_cell.velocity",
+    "png_sha256": "4f205c5b9943d79d3cbb41456d78070615e3cbd99a595203e5947e087acbab2a",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 39,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

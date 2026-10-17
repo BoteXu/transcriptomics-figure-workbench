@@ -1,0 +1,66 @@
+{
+  "id": "single_cell.pathways",
+  "assay": "single_cell",
+  "title": "Celltype pathway responses",
+  "family": "story:gsea_comparison",
+  "required_results": [
+    "NES_grid",
+    "FDR_grid",
+    "leading_edge"
+  ],
+  "specific_qc_and_limit": "Preserve celltype contrast and set coverage; activity direction cannot be inferred from ORA.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.pathways/input/example.spec.json",
+  "code": "scripts/figure_enrichment_story.py",
+  "sources": [
+    "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+    "https://yulab-smu.top/clusterProfiler-book/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.pathways/example.png",
+    "svg": "single_cell.pathways/example.svg",
+    "pdf": "single_cell.pathways/example.pdf",
+    "tsv": "single_cell.pathways/example.tsv",
+    "spec": "single_cell.pathways/input/example.spec.json",
+    "preview": "single_cell.pathways/preview.jpg"
+  },
+  "sha256": {
+    "png": "fe9dae63bffd0a1a830d35278c300c86bb1730004e65bc3138c4cf56a0019d6e",
+    "svg": "b7dfdcbb2e384422dd9ab31ed166f5c27f02f5e25b9d6bdf2caa99c9b2eb6e2d",
+    "pdf": "ddac5c658cd341ccce302b9678cde2ffc08807c0a85f2f7c4b4d8464da93bf5f",
+    "tsv": "727f92097cf6e98e1ef6f95e42f7d06e1be3dce83a87689065c5b539696ba544",
+    "spec": "eae2d37e2df6f6afc109f1a0f24cca667862021843cd979fe53e54397458ecb5"
+  },
+  "visual_review": {
+    "id": "single_cell.pathways",
+    "png_sha256": "fe9dae63bffd0a1a830d35278c300c86bb1730004e65bc3138c4cf56a0019d6e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 405.92790619542114,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 8.048227160877198,
+    "p10_pt": 8.048227160877198,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.hdwgcna",
+  "assay": "single_cell",
+  "title": "Celltype coexpression modules",
+  "family": "modules",
+  "required_results": [
+    "module_trait",
+    "preservation",
+    "fixed_network"
+  ],
+  "specific_qc_and_limit": "Declare metacell/donor independence and module preservation; metacells are not new donors.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.hdwgcna/input/example.spec.json",
+  "code": "scripts/figure_wgcna_views.py",
+  "sources": [
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.hdwgcna/example.png",
+    "svg": "single_cell.hdwgcna/example.svg",
+    "pdf": "single_cell.hdwgcna/example.pdf",
+    "tsv": "single_cell.hdwgcna/example.tsv",
+    "spec": "single_cell.hdwgcna/input/example.spec.json",
+    "preview": "single_cell.hdwgcna/preview.jpg"
+  },
+  "sha256": {
+    "png": "e674f94f99e4ad4961821422ca979a22cdd56e2c229403fe3f7927f622e1e2e6",
+    "svg": "e7fdb2067a4436c549d829262b49d5fb984da4b89bba755954e76dcd36619f40",
+    "pdf": "a5209d2c1306ad4d270f146f3b26e9101724c0c99845f9412cd3e932a9ff66f8",
+    "tsv": "e945e04d2dcaa4ae744d2044dd07b7398e5ed3f517b1dcdf4585681fb1cb390c",
+    "spec": "d4242e735bc3b65bd31a428734ea35bea6f87ddcb0c2363a550fced385bfca69"
+  },
+  "visual_review": {
+    "id": "single_cell.hdwgcna",
+    "png_sha256": "e674f94f99e4ad4961821422ca979a22cdd56e2c229403fe3f7927f622e1e2e6",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

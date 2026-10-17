@@ -75,7 +75,8 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
                            row_field='feature',column_field='sample',value_field='value',
                            column_annotation_field='sample_group',row_annotation_field='feature_block',
                            row_order=None,column_order=None,row_aliases=None,column_aliases=None,
-                           cell_width=.45,cell_height=.30,row_label_wrap=None,column_label_wrap=None):
+                           cell_width=.45,cell_height=.30,row_label_wrap=None,column_label_wrap=None,
+                           merge_annotation_legends=False):
     d=checked(data,[row_field,column_field,value_field,column_annotation_field,row_annotation_field],[value_field])
     d=d.rename(columns={row_field:'feature',column_field:'sample',value_field:'value',column_annotation_field:'sample_group',row_annotation_field:'feature_block'})
     if d.duplicated(['feature','sample']).any() or len(d)!=d.feature.nunique()*d['sample'].nunique(): raise ValueError('Incomplete or duplicate heatmap grid')
@@ -120,11 +121,14 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
     colorbar.ax.tick_params(labelsize=8)
     group_handles=[Patch(color=group_palette[g],label=str(g)) for g in pd.unique(groups)]
     block_handles=[Patch(color=block_palette[g],label=str(g)) for g in pd.unique(blocks)]
+    if type(merge_annotation_legends) is not bool:raise ValueError('Declare whether identical annotation legends may be merged')
+    if merge_annotation_legends and (column_annotation_label!=row_annotation_label or group_palette!=block_palette or set(groups)!=set(blocks)):raise ValueError('Merge only explicitly identical annotation meanings and colours')
     fig.legend(handles=group_handles,loc='upper left',bbox_to_anchor=(.73,.90),frameon=False,
                title=column_annotation_label,fontsize=8,title_fontsize=8)
     next_y=.90-(len(group_handles)+2)*12/(fig.get_figheight()*72)
-    fig.legend(handles=block_handles,loc='upper left',bbox_to_anchor=(.73,next_y),frameon=False,
-               title=row_annotation_label,fontsize=8,title_fontsize=8)
+    if not merge_annotation_legends:
+        fig.legend(handles=block_handles,loc='upper left',bbox_to_anchor=(.73,next_y),frameon=False,
+                   title=row_annotation_label,fontsize=8,title_fontsize=8)
     return stamp(fig,data,'annotated_heatmap',value_label=value_label,scale_type=scale_type,
                  group_palette=group_palette,block_palette=block_palette,
                  column_annotation_label=column_annotation_label,row_annotation_label=row_annotation_label,

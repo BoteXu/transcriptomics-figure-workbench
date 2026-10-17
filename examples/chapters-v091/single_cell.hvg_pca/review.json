@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.hvg_pca",
+  "assay": "single_cell",
+  "title": "Feature selection and PC support",
+  "family": "pca",
+  "required_results": [
+    "variance_profile",
+    "loadings",
+    "feature_dispersion"
+  ],
+  "specific_qc_and_limit": "Selection source and PC loading signs required; no PCA fit during plotting.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.hvg_pca/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.hvg_pca/example.png",
+    "svg": "single_cell.hvg_pca/example.svg",
+    "pdf": "single_cell.hvg_pca/example.pdf",
+    "tsv": "single_cell.hvg_pca/example.tsv",
+    "spec": "single_cell.hvg_pca/input/example.spec.json",
+    "preview": "single_cell.hvg_pca/preview.jpg"
+  },
+  "sha256": {
+    "png": "b24e50aed2e7feecfa146e0cec8556e149f460f734426942e7709767b36d071b",
+    "svg": "d59de4afcd332d7c408d4d486b47616d7d8188125bfc65ca3b764dc52eb6a15e",
+    "pdf": "9e6341c3e6c9f7cdcefcac263f7bed435ae1cdd88dbf4c19636ceef0aedae448",
+    "tsv": "6dfc11208300a9d28b03d9b0f39072c325132c35c68aeda76ff0686110aa9ab3",
+    "spec": "b256f8cc4d1e64ce2a64e34ba9a048ce174aa95af99c39e7e95df5d4f4808530"
+  },
+  "visual_review": {
+    "id": "single_cell.hvg_pca",
+    "png_sha256": "b24e50aed2e7feecfa146e0cec8556e149f460f734426942e7709767b36d071b",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 60,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -4,7 +4,7 @@
   "renderer": "figure_study_overview.plot_transcriptomic_overview",
   "input": {
     "path": "BulkMain.tsv",
-    "sha256": "211f2d0ade73eb5c746315925f521754fc7d7212964133da7306fc56d5818f4b",
+    "sha256": "506af1ed5467cdac08964c4ce358658a7ad8706688bcfe2a145962546cc93ea8",
     "numeric_columns": [
       "x",
       "y",
@@ -12,7 +12,13 @@
       "padj",
       "value",
       "score",
-      "count"
+      "count",
+      "width",
+      "height",
+      "angle",
+      "coverage",
+      "left",
+      "right"
     ]
   },
   "parameters": {
@@ -27,7 +33,11 @@
     "labels": [
       "G0009",
       "G0091"
-    ]
+    ],
+    "presentation": "integrated",
+    "ellipse_definition": "Supplied 95% reference ellipses; illustrative dispersion, not mean confidence or a group test",
+    "panel_width": 5.6,
+    "panel_height": 4.2
   },
   "theme": {
     "schema_version": 1,
@@ -99,7 +109,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic frozen study channel",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -117,7 +127,7 @@
   },
   "export": {
     "raster_dpi": 300,
-    "target_width_mm": 178,
+    "target_width_mm": 297,
     "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }

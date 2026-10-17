@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.subcluster",
+  "assay": "single_cell",
+  "title": "Lineage-focused subcluster atlas",
+  "family": "subcluster",
+  "required_results": [
+    "lineage_embedding",
+    "markers",
+    "parent_child_labels"
+  ],
+  "specific_qc_and_limit": "Explicit parent selection and child annotation; subclustering requires actual reanalysis upstream.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.subcluster/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.subcluster/example.png",
+    "svg": "single_cell.subcluster/example.svg",
+    "pdf": "single_cell.subcluster/example.pdf",
+    "tsv": "single_cell.subcluster/example.tsv",
+    "spec": "single_cell.subcluster/input/example.spec.json",
+    "preview": "single_cell.subcluster/preview.jpg"
+  },
+  "sha256": {
+    "png": "5c1178a59bf550296c24487e0e03016601b70262bec46830481e501e93bf5e47",
+    "svg": "58ee108a0408ec06027a0070b992b1fa0faf039f783512f6ea6c7e15b3c90fc6",
+    "pdf": "11ce2d10fb1ee07c3b74dccf4afdf2f74b49f195333938a4cf276cf1bfe40abb",
+    "tsv": "80fb3bbe22614b082dfbc67d19e2db0373c510e8ee18ea0ea955454d33b9d029",
+    "spec": "ad1c118583ef3808436614b68ce9cfdea7d5b1e028df54bea3ad982f92d1847c"
+  },
+  "visual_review": {
+    "id": "single_cell.subcluster",
+    "png_sha256": "5c1178a59bf550296c24487e0e03016601b70262bec46830481e501e93bf5e47",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 31,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

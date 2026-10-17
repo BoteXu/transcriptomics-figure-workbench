@@ -1,24 +1,55 @@
 {
   "schema_version": 1,
   "figure_id": "CellTypes",
-  "renderer": "figure_core.plot_embedding",
+  "renderer": "figure_annotation_views.plot_annotation_evidence",
   "input": {
     "path": "CellTypes.tsv",
-    "sha256": "03e426e56f6f3b45f34d4648ebd29efcaf045d907c6fc2851b3fbcbc316b32e6",
+    "sha256": "c79c07fe74c1e5e00916d051d96a3b136c70993fb56bb10a15034f732fbd86cc",
     "numeric_columns": [
       "x",
-      "y"
+      "y",
+      "value",
+      "fraction"
     ]
   },
   "parameters": {
-    "palette": {
-      "T cells": "#218C8D",
-      "B cells": "#D8795B",
-      "Myeloid": "#5676A5",
-      "Stromal": "#A795BD",
-      "Endothelial": "#C8A34E"
-    },
-    "axis_prefix": "Stored mock UMAP"
+    "mode": "atlas",
+    "title": "Cell identities and marker evidence",
+    "expression_label": "log1p normalized expression",
+    "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+    "expression_limits": [
+      0,
+      5
+    ],
+    "group_order": [
+      "T cells",
+      "B cells",
+      "Myeloid",
+      "Stromal",
+      "Endothelial"
+    ],
+    "marker_order": [
+      "CD3D",
+      "TRAC",
+      "IL7R",
+      "CD2",
+      "MS4A1",
+      "CD79A",
+      "CD74",
+      "CD37",
+      "LYZ",
+      "LST1",
+      "FCER1G",
+      "CTSS",
+      "COL1A1",
+      "DCN",
+      "LUM",
+      "COL3A1",
+      "PECAM1",
+      "VWF",
+      "KDR",
+      "EMCN"
+    ]
   },
   "theme": {
     "schema_version": 1,
@@ -90,7 +121,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic cell",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -107,8 +138,8 @@
   },
   "export": {
     "raster_dpi": 300,
-    "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "target_width_mm": 240,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

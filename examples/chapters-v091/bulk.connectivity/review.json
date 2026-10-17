@@ -1,0 +1,65 @@
+{
+  "id": "bulk.connectivity",
+  "assay": "bulk",
+  "title": "Perturbation-signature matching",
+  "family": "connectivity",
+  "required_results": [
+    "connection_scores",
+    "signature_coverage"
+  ],
+  "specific_qc_and_limit": "Preserve perturbation/dose/cell context; reversed signatures do not establish efficacy.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.connectivity/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.connectivity/example.png",
+    "svg": "bulk.connectivity/example.svg",
+    "pdf": "bulk.connectivity/example.pdf",
+    "tsv": "bulk.connectivity/example.tsv",
+    "spec": "bulk.connectivity/input/example.spec.json",
+    "preview": "bulk.connectivity/preview.jpg"
+  },
+  "sha256": {
+    "png": "6fc0a06c7f46ea0ee47961802af6305270e95d34e12556c4763c999403e763ea",
+    "svg": "23a2f350ed611040874fe234cc1e47f7b6f119f4b8c2c787e1bdb38579b2b73b",
+    "pdf": "bdf8c835df5b6d3618dc82c1f11e662b9b39c3a4dbab8111407e0df755344962",
+    "tsv": "8f4c70fce7f4c823e6200198f235c47e3d61d74ba3218cfe227917d1a511c414",
+    "spec": "077efcc562084b79b29e28f576474ada373ec828e902651298a8455261d737e4"
+  },
+  "visual_review": {
+    "id": "bulk.connectivity",
+    "png_sha256": "6fc0a06c7f46ea0ee47961802af6305270e95d34e12556c4763c999403e763ea",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 52,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

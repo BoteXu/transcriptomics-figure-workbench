@@ -1,0 +1,56 @@
+{
+  "id": "DonorEffects",
+  "assay": "single_cell",
+  "role": "effect_intervals",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "effect_table",
+    "title": "Prespecified effects · estimates and supplied intervals"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 20,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/DonorEffects/DonorEffects.png",
+    "svg": "study/DonorEffects/DonorEffects.svg",
+    "pdf": "study/DonorEffects/DonorEffects.pdf",
+    "tsv": "study/DonorEffects/DonorEffects.tsv",
+    "spec": "study/DonorEffects/input/DonorEffects.spec.json",
+    "previous": "study/DonorEffects/previous.png"
+  },
+  "sha256": {
+    "png": "a089649c206967df3949ac35abe695b2197802a2235a418a1b65ef4dc3360f6f",
+    "svg": "72870e6ed45dda07f25dfd90a2203f8946fe74281295f4a3b9b7754013d1c738",
+    "pdf": "1e82a86c393db494ed3c09ac92d73731ed29f15fe538934ba0488d9238c554a7",
+    "tsv": "1ab0e1545d710eb9478dfe6e37aa182faa5d9ccf4af9a9b68e980aa898da322b",
+    "previous": "6721920ce1107d325a65173f1ecee308d95cf5e30b30967e62e6f2c377975402"
+  },
+  "visual_review": {
+    "id": "DonorEffects",
+    "png_sha256": "a089649c206967df3949ac35abe695b2197802a2235a418a1b65ef4dc3360f6f",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

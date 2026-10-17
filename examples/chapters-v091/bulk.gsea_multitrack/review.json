@@ -1,0 +1,69 @@
+{
+  "id": "bulk.gsea_multitrack",
+  "assay": "bulk",
+  "title": "Multiple GSEA curves with complete rank tracks",
+  "family": "multi_gsea",
+  "required_results": [
+    "complete_curves",
+    "rank_metric",
+    "hits",
+    "leading_edge",
+    "NES",
+    "FDR"
+  ],
+  "specific_qc_and_limit": "Every curve and rank is supplied; no invented ES curve, recomputed FDR or selected-rank truncation.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.gsea_multitrack/input/example.spec.json",
+  "code": "scripts/figure_refined_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.gsea_multitrack/example.png",
+    "svg": "bulk.gsea_multitrack/example.svg",
+    "pdf": "bulk.gsea_multitrack/example.pdf",
+    "tsv": "bulk.gsea_multitrack/example.tsv",
+    "spec": "bulk.gsea_multitrack/input/example.spec.json",
+    "preview": "bulk.gsea_multitrack/preview.jpg"
+  },
+  "sha256": {
+    "png": "396c42330b937b7af661161f790c17d7b5faf2a492e1b515a85dc1b6c5b490b8",
+    "svg": "933a3cec623a883b251d83fb65766c4457e84146b74e90421bf4edc721572052",
+    "pdf": "1f7e2060ca338b89dc3805acd6f7949024fe085d73b17b5169940b0e53ee6b08",
+    "tsv": "795a41fe88b17199d0846360600be56e06e41ae9e605ee9124a3b9b6293f26e3",
+    "spec": "2d60a27a243a7f29687e1512320fdb557f8f59be4403a1dd74328d16e0f954f3"
+  },
+  "visual_review": {
+    "id": "bulk.gsea_multitrack",
+    "png_sha256": "396c42330b937b7af661161f790c17d7b5faf2a492e1b515a85dc1b6c5b490b8",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 181.77916400000004,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 82,
+    "smallest_pt": 8.086735397242775,
+    "p10_pt": 8.086735397242775,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

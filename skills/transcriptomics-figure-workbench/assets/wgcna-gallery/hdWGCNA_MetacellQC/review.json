@@ -1,0 +1,64 @@
+{
+  "id": "hdWGCNA_MetacellQC",
+  "title": "Metacell support · donors, celltypes and overlap",
+  "assay": "single_cell",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "hdWGCNA_MetacellQC/example.png",
+    "svg": "hdWGCNA_MetacellQC/example.svg",
+    "pdf": "hdWGCNA_MetacellQC/example.pdf",
+    "tsv": "hdWGCNA_MetacellQC/example.tsv",
+    "spec": "hdWGCNA_MetacellQC/input/example.spec.json",
+    "preview": "hdWGCNA_MetacellQC/preview.jpg"
+  },
+  "sha256": {
+    "png": "3bb846645a0380fa123b932d7d31a5595f8c83079a3e79e301b2f26f913dffbf",
+    "svg": "81143795e09b5719fbaa4723abe6529b16d88052e318ae6640add096e0445b7d",
+    "pdf": "05740adb5383f817c53b0d3cf3198cb498694586e7a0f3382eea461b1edeb57c",
+    "tsv": "e945e04d2dcaa4ae744d2044dd07b7398e5ed3f517b1dcdf4585681fb1cb390c",
+    "spec": "f55e1cc990ed6bf22236cb0b2cb3abb629005c506cdaa808f18950ee369fd927"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "hdWGCNA_MetacellQC",
+    "png_sha256": "3bb846645a0380fa123b932d7d31a5595f8c83079a3e79e301b2f26f913dffbf",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "context",
+    "mode",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

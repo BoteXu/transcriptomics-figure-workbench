@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.abundance",
+  "title": "Differential abundance with donor effects",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.abundance/example.png",
+    "svg": "single_cell.abundance/example.svg",
+    "pdf": "single_cell.abundance/example.pdf",
+    "tsv": "single_cell.abundance/example.tsv",
+    "spec": "single_cell.abundance/input/example.spec.json",
+    "preview": "single_cell.abundance/preview.jpg"
+  },
+  "sha256": {
+    "png": "c27f71541496a3c709a65222e2b6c03d68dd61f00f3bad0fcc1004e11b6a3367",
+    "svg": "85c009e84ceceabee29bb72a2372451e56ad273f17998f6d56d3c01b7b3b2362",
+    "pdf": "6b12f6da8d5da3034b1397e45800223804d90fc4418ab244677409ad5e814ffc",
+    "tsv": "ac1ae118258415d1dd228778d4e9c118864228b58e06ee5e57344f5720fd24bb",
+    "spec": "105a5aac24cfbf7e56bc0c0b7edbbbb1075c97bfba75daad7920bdaa0a3126c7"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 44,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.abundance",
+    "png_sha256": "c27f71541496a3c709a65222e2b6c03d68dd61f00f3bad0fcc1004e11b6a3367",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "BulkCorrelation",
+  "assay": "bulk",
+  "role": "sample_correlation",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_extensions.plot_annotated_heatmap",
+  "parameters": {
+    "value_label": "Stored sample correlation r",
+    "scale_type": "sequential",
+    "group_palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "block_palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "row_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "column_annotation_label": "Condition",
+    "row_annotation_label": "Condition",
+    "merge_annotation_legends": true
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 205.10500000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 33,
+    "smallest_pt": 9.214792423392895,
+    "p10_pt": 9.214792423392895,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/BulkCorrelation/BulkCorrelation.png",
+    "svg": "study/BulkCorrelation/BulkCorrelation.svg",
+    "pdf": "study/BulkCorrelation/BulkCorrelation.pdf",
+    "tsv": "study/BulkCorrelation/BulkCorrelation.tsv",
+    "spec": "study/BulkCorrelation/input/BulkCorrelation.spec.json",
+    "previous": "study/BulkCorrelation/previous.png"
+  },
+  "sha256": {
+    "png": "3b046d279701024cb296364c8b22aa03cdc5d2da9022eca4f0442a9b3d8f35f4",
+    "svg": "59f4733a135a74efa12fb0894b76cb4906677c4d235aacb5c1c7132426beec26",
+    "pdf": "2eba3e0a05237c7c3f0eac8dc8fe2ef4c2f6a52ca4b8d38aede63a424ee2b090",
+    "tsv": "91e675dfc4052262148c9d472f0ae26e575767756bef6dca028f8aea584fd17c",
+    "previous": "cfe2b80f21e6c5ee2d9ba463fe0a37878eb2a71b171885565ba048d8a05a19b5"
+  },
+  "visual_review": {
+    "id": "BulkCorrelation",
+    "png_sha256": "3b046d279701024cb296364c8b22aa03cdc5d2da9022eca4f0442a9b3d8f35f4",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

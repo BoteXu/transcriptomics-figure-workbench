@@ -1,47 +1,56 @@
 {
-  "form": "batch_embedding",
+  "id": "CellBatches",
+  "assay": "single_cell",
+  "role": "batch_embedding",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "batch_facets",
+    "title": "Batch coverage · identical embedding coordinates"
+  },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 180.33999999999997,
-    "minimum_required_pt": 7,
-    "essential_text_count": 23,
-    "smallest_pt": 10.48020405899967,
-    "p10_pt": 10.48020405899967,
+    "native_width_mm": 236.22,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 4,
+    "smallest_pt": 9.779019558039117,
+    "p10_pt": 9.779019558039117,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "assay": "single_cell",
-  "role": "batch_embedding",
-  "id": "CellBatches",
-  "section": "study",
-  "level": null,
   "assets": {
     "png": "study/CellBatches/CellBatches.png",
     "svg": "study/CellBatches/CellBatches.svg",
     "pdf": "study/CellBatches/CellBatches.pdf",
     "tsv": "study/CellBatches/CellBatches.tsv",
-    "spec": "study/CellBatches/input/CellBatches.spec.json"
+    "spec": "study/CellBatches/input/CellBatches.spec.json",
+    "previous": "study/CellBatches/previous.png"
   },
   "sha256": {
-    "png": "f356757fe05f9de695f3952dfa186f9bdc963f46da9488e80b9801ecdeae6183",
-    "svg": "28c0e1f854df3772fca5b763f23565025027a4f96579a51114cb54be18e6f9e7",
-    "pdf": "28f5254c3879aaff6a9ca923b61c8fc3c9564ddf340b7594b4ccfdcf35fccb26",
-    "tsv": "122f44e8f3fb4444d7bf255879002cb71958bda31e78ecb9627a62d06440a63a"
+    "png": "d3bf316be3d6063a889cd3e6e6947a70e83e1873f4764b7be115985226552de2",
+    "svg": "718569e917e279804e1dbb54591b17216a595a4c3a042efbe943bd0d6dee2fd9",
+    "pdf": "ff41f69729f9807594d92bab86d68b4bd84483d4aa74c9cdbf71e76445848e66",
+    "tsv": "284326b9a7a92ff62458a82cc8b1471ebb2414674328eb45f39edbc7b1ca6bfc",
+    "previous": "f356757fe05f9de695f3952dfa186f9bdc963f46da9488e80b9801ecdeae6183"
   },
   "visual_review": {
-    "key": "study/CellBatches",
-    "png_sha256": "f356757fe05f9de695f3952dfa186f9bdc963f46da9488e80b9801ecdeae6183",
-    "status": "SCREEN_REVIEWED",
-    "reviewer": "Codex visual self-review",
+    "id": "CellBatches",
+    "png_sha256": "d3bf316be3d6063a889cd3e6e6947a70e83e1873f4764b7be115985226552de2",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-    "target_width_mm": 210,
-    "font_measurement": "MEASUREMENT_PASS",
-    "pdf_readback": false
+    "scientific_acceptance": false
   },
   "scientific_acceptance": false
 }

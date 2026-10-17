@@ -1,0 +1,66 @@
+{
+  "id": "Pathways",
+  "assay": "bulk",
+  "role": "enrichment_summary",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_enrichment_story.plot_enrichment_story",
+  "parameters": {
+    "mode": "ora",
+    "title": "Enrichment themes · ratios, FDR and selected gene support",
+    "background_definition": "Fictional 200-gene query / 1200 tested genes",
+    "tested_size": 1200,
+    "query_size": 200,
+    "gene_effect_limits": [
+      -4,
+      4
+    ],
+    "gene_set_version": "Illustrative frozen study sets v0.9.1",
+    "selection_definition": "All six original ORA terms; four explicitly selected genes with fictional membership",
+    "support_contrast": "Treated versus Control"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/Pathways/Pathways.png",
+    "svg": "study/Pathways/Pathways.svg",
+    "pdf": "study/Pathways/Pathways.pdf",
+    "tsv": "study/Pathways/Pathways.tsv",
+    "spec": "study/Pathways/input/Pathways.spec.json",
+    "previous": "study/Pathways/previous.png"
+  },
+  "sha256": {
+    "png": "d878ac7b221eb1b5db4bae530d4c4824763a17b73fbbea8e0a63ecb7bb5cb258",
+    "svg": "f7f6792cd65f661fbd0ac892b3f76a6683d9718ba6c6532d242a6823d9805c8f",
+    "pdf": "19078e5cf47522799db59398871d8db5dd59dffd9769bf52940d4f5c36817205",
+    "tsv": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
+    "previous": "f669f7bd701c4e2ead047822c6d072657418fe737ae84369197b38c70496771f"
+  },
+  "visual_review": {
+    "id": "Pathways",
+    "png_sha256": "d878ac7b221eb1b5db4bae530d4c4824763a17b73fbbea8e0a63ecb7bb5cb258",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

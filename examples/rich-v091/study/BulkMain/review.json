@@ -1,0 +1,70 @@
+{
+  "id": "BulkMain",
+  "assay": "bulk",
+  "role": "study_overview",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_study_overview.plot_transcriptomic_overview",
+  "parameters": {
+    "assay": "bulk",
+    "contrast": "Treated versus Control / illustrative",
+    "independent_unit": "12 synthetic donors / all results are fictional",
+    "denominator": "Complete 1200 gene results; prespecified 24-gene matrix; six supplied ORA terms",
+    "embedding_axes": [
+      "PC1 (38.4%)",
+      "PC2 (17.6%)"
+    ],
+    "labels": [
+      "G0009",
+      "G0091"
+    ],
+    "presentation": "integrated",
+    "ellipse_definition": "Supplied 95% reference ellipses; illustrative dispersion, not mean confidence or a group test",
+    "panel_width": 5.6,
+    "panel_height": 4.2
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 292.3627092013889,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 137,
+    "smallest_pt": 9.142752874679209,
+    "p10_pt": 9.142752874679209,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/BulkMain/BulkMain.png",
+    "svg": "study/BulkMain/BulkMain.svg",
+    "pdf": "study/BulkMain/BulkMain.pdf",
+    "tsv": "study/BulkMain/BulkMain.tsv",
+    "spec": "study/BulkMain/input/BulkMain.spec.json",
+    "previous": "study/BulkMain/previous.png"
+  },
+  "sha256": {
+    "png": "c11cf1d2ed95ab38fb113960014c026dba7dcd2c458c13bcdb11663b671cafa6",
+    "svg": "00fc6a1b64e45822eb6d4f35ec823117461c1f348f4d3dd3b9976ef9ca37d14e",
+    "pdf": "a6855a28efbb83d86d10faffa0a9f9855e4fa0b55dee11ccac140bacc95baa22",
+    "tsv": "653c499b8a4cdd12a0ec53bf9989c4140a8bccc49eae41237ea1f5b568ecb37d",
+    "previous": "5070c9d2be7046c9aa8cc0e83d7e927cb9801273f1f09352c535f535d3824f4c"
+  },
+  "visual_review": {
+    "id": "BulkMain",
+    "png_sha256": "c11cf1d2ed95ab38fb113960014c026dba7dcd2c458c13bcdb11663b671cafa6",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

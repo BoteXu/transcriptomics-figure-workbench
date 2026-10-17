@@ -1,0 +1,64 @@
+{
+  "id": "WGCNA_HubConnectivity",
+  "title": "Prespecified hub candidates · connectivity and membership",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_HubConnectivity/example.png",
+    "svg": "WGCNA_HubConnectivity/example.svg",
+    "pdf": "WGCNA_HubConnectivity/example.pdf",
+    "tsv": "WGCNA_HubConnectivity/example.tsv",
+    "spec": "WGCNA_HubConnectivity/input/example.spec.json",
+    "preview": "WGCNA_HubConnectivity/preview.jpg"
+  },
+  "sha256": {
+    "png": "38ceed3d5735015b64e83196908bf70694b7f41101229c07048562d3d34ec171",
+    "svg": "4736068602791d44f9781c1eb054145011dc82f6571041527be5e23f267fef60",
+    "pdf": "c9417b5888c761f524535c8d62964912cd78687ef2240b6af5f71c89d9936811",
+    "tsv": "6aaeaa69b03f0c71bcd9ffc5164a8d8d3c5bb05f13f7150edfe674053f05e7ed",
+    "spec": "4a8baba6fecc9f05abddfc71775091b323f10ae084ca1cd9e21e8534bd3d0579"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 16.07775590551181,
+    "p10_pt": 16.07775590551181,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_HubConnectivity",
+    "png_sha256": "38ceed3d5735015b64e83196908bf70694b7f41101229c07048562d3d34ec171",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "context",
+    "mode",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

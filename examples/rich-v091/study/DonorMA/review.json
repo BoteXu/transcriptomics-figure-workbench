@@ -1,0 +1,56 @@
+{
+  "id": "DonorMA",
+  "assay": "single_cell",
+  "role": "ma",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "ma",
+    "title": "Myeloid donor mean–effect · complete marginal counts"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 31,
+    "smallest_pt": 9.301181102362206,
+    "p10_pt": 9.301181102362206,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/DonorMA/DonorMA.png",
+    "svg": "study/DonorMA/DonorMA.svg",
+    "pdf": "study/DonorMA/DonorMA.pdf",
+    "tsv": "study/DonorMA/DonorMA.tsv",
+    "spec": "study/DonorMA/input/DonorMA.spec.json",
+    "previous": "study/DonorMA/previous.png"
+  },
+  "sha256": {
+    "png": "5645789e1521756ba786125a9251b7a8682e4a38a035ccf2d8f2e1664015e30b",
+    "svg": "685cfe1b337d09a76bacca6b7726eb00e943c9e0602dd99a73077e0366494172",
+    "pdf": "fee13bdfe0570e133fd54888cc097faf5add98a724e2f11c926ae3c2b163550f",
+    "tsv": "18c29236ed05e93c2fb9c93b2c5640a43e2b3e630e53591700566d02c75fb6f6",
+    "previous": "35d0a97cd56f52c87bd83ca599a29edfa93c018bd29a01688a1cbf2008bd22b3"
+  },
+  "visual_review": {
+    "id": "DonorMA",
+    "png_sha256": "5645789e1521756ba786125a9251b7a8682e4a38a035ccf2d8f2e1664015e30b",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

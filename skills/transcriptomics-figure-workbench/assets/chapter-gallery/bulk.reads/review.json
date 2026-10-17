@@ -1,0 +1,65 @@
+{
+  "id": "bulk.reads",
+  "assay": "bulk",
+  "title": "Read quality and sequence composition",
+  "family": "reads",
+  "required_results": [
+    "base_quality",
+    "read_classes"
+  ],
+  "specific_qc_and_limit": "Complete base positions and all read classes; no silent removal of failed libraries.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.reads/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.reads/example.png",
+    "svg": "bulk.reads/example.svg",
+    "pdf": "bulk.reads/example.pdf",
+    "tsv": "bulk.reads/example.tsv",
+    "spec": "bulk.reads/input/example.spec.json",
+    "preview": "bulk.reads/preview.jpg"
+  },
+  "sha256": {
+    "png": "f0c61088e5ac4c85761aae12d4c7a85f28218b575b1f2f663743656f7a45a0da",
+    "svg": "575e82bec6d7a6f01e32ed1229874372a7f23a5f21dad5879b6177222073f5a5",
+    "pdf": "5199421babda098caeed30d21192b157442b7e6d300ff668d4359411bbc689f2",
+    "tsv": "32e0de5021a7b2d54018ada1dfa2544f781412180a4521a2743ebf6f1014e959",
+    "spec": "4919d319e74d253416a424d512a652468c702055542e525bcdd02f96d8b55860"
+  },
+  "visual_review": {
+    "id": "bulk.reads",
+    "png_sha256": "f0c61088e5ac4c85761aae12d4c7a85f28218b575b1f2f663743656f7a45a0da",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

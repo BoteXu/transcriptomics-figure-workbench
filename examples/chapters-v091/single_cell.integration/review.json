@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.integration",
+  "assay": "single_cell",
+  "title": "Batch integration and signal preservation",
+  "family": "integration",
+  "required_results": [
+    "stored_embeddings",
+    "mixing_scores",
+    "biology_scores"
+  ],
+  "specific_qc_and_limit": "Use frozen pre/post diagnostics and batch-donor mapping; good mixing can erase biology.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.integration/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.integration/example.png",
+    "svg": "single_cell.integration/example.svg",
+    "pdf": "single_cell.integration/example.pdf",
+    "tsv": "single_cell.integration/example.tsv",
+    "spec": "single_cell.integration/input/example.spec.json",
+    "preview": "single_cell.integration/preview.jpg"
+  },
+  "sha256": {
+    "png": "cbae2b1dd9cb8f17fb69170569916ddf48ebf257dc1f721fbd136453f1c0c2bb",
+    "svg": "1298510b012dea4cfeb58384665533234dabdc6337ee53d61c41a3892f922e3c",
+    "pdf": "4a69da0779eeb48993aa720a7bfdf37f8580a06378fe16e055d005268466a74b",
+    "tsv": "f5c8a8fdf8875695801b414dee0e0f49de0e1ab9163ffb2702f43799dda6d40a",
+    "spec": "0acbe444d6fba6b9f969abc68f25f85b62be6073ae735a6be875eec4c2c1caf3"
+  },
+  "visual_review": {
+    "id": "single_cell.integration",
+    "png_sha256": "cbae2b1dd9cb8f17fb69170569916ddf48ebf257dc1f721fbd136453f1c0c2bb",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 38,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

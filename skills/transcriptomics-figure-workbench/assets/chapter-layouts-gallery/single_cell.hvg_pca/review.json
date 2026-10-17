@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.hvg_pca",
+  "title": "Feature selection and PC support",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.hvg_pca/example.png",
+    "svg": "single_cell.hvg_pca/example.svg",
+    "pdf": "single_cell.hvg_pca/example.pdf",
+    "tsv": "single_cell.hvg_pca/example.tsv",
+    "spec": "single_cell.hvg_pca/input/example.spec.json",
+    "preview": "single_cell.hvg_pca/preview.jpg"
+  },
+  "sha256": {
+    "png": "f3af5fce3346318d7cebcf8a98d25ce9463b7484569f519571b4afddf6a0ca2a",
+    "svg": "fd20e44aae880588d157e70b6599daef4b76d3e4df77a6d9d73e50d5ee032023",
+    "pdf": "f8f371ff4adebd8dd8294f50583adf7a771f4df7e5360073aff7411182b5b7a9",
+    "tsv": "d0015aac0bfd23b6dab4ca498f013a5a54e45f87d881e0e1cea3a18261011c58",
+    "spec": "f3da144697459823405ce691fd9712fe15ae0f1bdf5d4547e9bdc29375d15711"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 88,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.hvg_pca",
+    "png_sha256": "f3af5fce3346318d7cebcf8a98d25ce9463b7484569f519571b4afddf6a0ca2a",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

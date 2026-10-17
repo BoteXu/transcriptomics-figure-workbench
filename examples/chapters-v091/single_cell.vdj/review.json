@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.vdj",
+  "assay": "single_cell",
+  "title": "Clonotypes, expansion and sharing",
+  "family": "clones",
+  "required_results": [
+    "clonotype_counts",
+    "VDJ_QC",
+    "sharing"
+  ],
+  "specific_qc_and_limit": "Require real VDJ calls and donor denominators; transcriptome-only data do not identify clonotypes.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.vdj/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.vdj/example.png",
+    "svg": "single_cell.vdj/example.svg",
+    "pdf": "single_cell.vdj/example.pdf",
+    "tsv": "single_cell.vdj/example.tsv",
+    "spec": "single_cell.vdj/input/example.spec.json",
+    "preview": "single_cell.vdj/preview.jpg"
+  },
+  "sha256": {
+    "png": "f3855c534c987b060e022c401d8baac650899ca07fb32e43b4f0afd36db3e4f2",
+    "svg": "cc0f278400d0c074bd17d4e1b401a169c6cfb7431a0f86838fd3544c6365c709",
+    "pdf": "e38a735713b2af4c566f19ac1824c2c2e989c0cb3af05a44800d8c1e2291a68c",
+    "tsv": "66b0ae0f21cf1f5c6ace187cf975be71aa04a85769c3af225a61873053299a2b",
+    "spec": "dfacc111621e36e7df9bfdf47738c5278ccbf41e703db415616bcc7e61f0adf2"
+  },
+  "visual_review": {
+    "id": "single_cell.vdj",
+    "png_sha256": "f3855c534c987b060e022c401d8baac650899ca07fb32e43b4f0afd36db3e4f2",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 66,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.subcluster",
+  "title": "Lineage-focused subcluster atlas",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.subcluster/example.png",
+    "svg": "single_cell.subcluster/example.svg",
+    "pdf": "single_cell.subcluster/example.pdf",
+    "tsv": "single_cell.subcluster/example.tsv",
+    "spec": "single_cell.subcluster/input/example.spec.json",
+    "preview": "single_cell.subcluster/preview.jpg"
+  },
+  "sha256": {
+    "png": "f4f2db6641f06e5078c538c0ec32d5f38460451775d9f5aaa48d75e47603f393",
+    "svg": "7970275b6c962c3b4459bd8452c7f9a77fa19db5fc9602b486e44f040bf322fa",
+    "pdf": "42c2375e85127c947ed67829e74b3148d983606a1e77736449d14d10b9e52b59",
+    "tsv": "2d96b3f8120e092d8c8c01268fd6f44c06b1347290cd433b784d40aa00713a94",
+    "spec": "b20136141b5cc3450826bbc960a74f1afc35f7f53807567adb7997018de814ed"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 41,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.subcluster",
+    "png_sha256": "f4f2db6641f06e5078c538c0ec32d5f38460451775d9f5aaa48d75e47603f393",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

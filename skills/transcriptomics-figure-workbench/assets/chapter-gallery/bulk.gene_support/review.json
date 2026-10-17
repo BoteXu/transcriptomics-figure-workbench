@@ -1,0 +1,66 @@
+{
+  "id": "bulk.gene_support",
+  "assay": "bulk",
+  "title": "Pathway membership and signed gene evidence",
+  "family": "story:gene_support",
+  "required_results": [
+    "term_overlap",
+    "gene_term_membership",
+    "gene_effects"
+  ],
+  "specific_qc_and_limit": "Absence of membership differs from missing annotation; selection and background must be frozen.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.gene_support/input/example.spec.json",
+  "code": "scripts/figure_enrichment_story.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.gene_support/example.png",
+    "svg": "bulk.gene_support/example.svg",
+    "pdf": "bulk.gene_support/example.pdf",
+    "tsv": "bulk.gene_support/example.tsv",
+    "spec": "bulk.gene_support/input/example.spec.json",
+    "preview": "bulk.gene_support/preview.jpg"
+  },
+  "sha256": {
+    "png": "b9a1bd94520e4340f2e766f8b3fd21010a5a53c7f5c0f08c550c536576f3fbeb",
+    "svg": "75bb8d2188b81572e5345d3263dac11b59154b66b0a5114b4778ca37f4f83dfa",
+    "pdf": "fb8110e17c769b20674787e35b227aa179e1fa408fc3594ec00ff4088148adad",
+    "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
+    "spec": "3b289c3194da07b9bef76d37b94fe971440e600c373eae8f7f70c74f71086a4e"
+  },
+  "visual_review": {
+    "id": "bulk.gene_support",
+    "png_sha256": "b9a1bd94520e4340f2e766f8b3fd21010a5a53c7f5c0f08c550c536576f3fbeb",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 325.2340771724834,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 39,
+    "smallest_pt": 10.0450728546117,
+    "p10_pt": 10.0450728546117,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

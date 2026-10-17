@@ -164,7 +164,13 @@ def plot_gene_term_chord(data,theme,*,gene_order,term_order,effect_limits,effect
     gene_a=np.linspace(np.pi*.58,np.pi*1.42,len(gene_order));term_a=np.linspace(-np.pi*.40,np.pi*.40,len(term_order));angles=dict(zip(gene_order,gene_a));angles.update(dict(zip(term_order,term_a)))
     radius=.92;width=min(.055,.70/max(d.gene_id.value_counts().max(),d.term_id.value_counts().max()));offset={k:0 for k in angles}
     for g,a in zip(gene_order,gene_a):
-        v=float(d.loc[d.gene_id==g,'effect'].iloc[0]);ax.add_patch(Wedge((0,0),1,np.degrees(a)-2.1,np.degrees(a)+2.1,width=.075,fc=cmap(norm(v)),ec='white',lw=.5));ax.text(1.13*np.cos(a),1.13*np.sin(a),g,ha='center',va='center',fontsize=8)
+        v=float(d.loc[d.gene_id==g,'effect'].iloc[0]);ax.add_patch(Wedge((0,0),1,np.degrees(a)-2.1,np.degrees(a)+2.1,width=.075,fc=cmap(norm(v)),ec='white',lw=.5))
+    # Full IDs are aligned in a separate label lane; near-vertical radial
+    # labels collided when the same complete input contained many genes.
+    label_y=np.linspace(1.16,-1.16,len(gene_order))
+    for g,a,y in zip(gene_order,gene_a,label_y):
+        ax.plot([1.02*np.cos(a),-1.20],[1.02*np.sin(a),y],c='#AFBEC6',lw=.45,zorder=1);ax.text(-1.24,y,g,ha='right',va='center',fontsize=8)
+    ax.set_xlim(-1.65,1.45)
     for t,a in zip(term_order,term_a):
         ax.add_patch(Wedge((0,0),1,np.degrees(a)-3,np.degrees(a)+3,width=.075,fc=theme['roles']['primary'],ec='white',lw=.5));ax.text(1.13*np.cos(a),1.13*np.sin(a),t,ha='center',va='center',fontsize=8)
     def pt(a):return (radius*np.cos(a),radius*np.sin(a))

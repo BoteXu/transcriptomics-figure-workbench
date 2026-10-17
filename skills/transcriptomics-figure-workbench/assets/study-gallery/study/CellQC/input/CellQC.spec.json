@@ -1,22 +1,17 @@
 {
   "schema_version": 1,
   "figure_id": "CellQC",
-  "renderer": "figure_core.plot_qc",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "CellQC.tsv",
-    "sha256": "b1b3671e6b0d5e1522371c8165b8a5e00881531866a94c59425acddfdf1839ff",
+    "sha256": "43927ad3292790e55eb3f6b1eea26d1a32d1919829cd5889b05b14ae71a155bb",
     "numeric_columns": [
       "value"
     ]
   },
   "parameters": {
-    "y_label": "Stored cell QC",
-    "metric_field": "metric",
-    "metric_labels": {
-      "genes": "Detected genes / cell",
-      "umis": "Total UMIs / cell",
-      "mitochondrial": "Mitochondrial fraction (%)"
-    }
+    "mode": "qc",
+    "title": "Sample distributions"
   },
   "theme": {
     "schema_version": 1,
@@ -88,7 +83,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic cell-metric",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -106,7 +101,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

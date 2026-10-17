@@ -1,48 +1,18 @@
 {
   "schema_version": 1,
   "figure_id": "MarkerDot",
-  "renderer": "figure_core.plot_dot",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "MarkerDot.tsv",
-    "sha256": "520dea5792bc48d98416af4c05e3d9d16ca42d0293e005b221e468729eea5b88",
+    "sha256": "e8d5bfebe2513eff629f23fdb22fb7f98793cbb099e76c253dc3f46137fb5a99",
     "numeric_columns": [
       "value",
       "fraction"
     ]
   },
   "parameters": {
-    "value_label": "Stored mean expression",
-    "value_semantics": "mean_all",
-    "denominator_label": "All cells in each type",
-    "row_order": [
-      "G0001",
-      "G0002",
-      "G0003",
-      "G0004",
-      "G0005",
-      "G0006",
-      "G0007",
-      "G0008",
-      "G0009",
-      "G0010",
-      "G0011",
-      "G0012",
-      "G0013",
-      "G0014",
-      "G0015",
-      "G0016",
-      "G0017",
-      "G0018",
-      "G0019",
-      "G0020"
-    ],
-    "column_order": [
-      "T cells",
-      "B cells",
-      "Myeloid",
-      "Stromal",
-      "Endothelial"
-    ]
+    "mode": "marker_dot",
+    "title": "Marker specificity · annotation blocks and detection fractions"
   },
   "theme": {
     "schema_version": 1,
@@ -114,7 +84,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic gene-celltype result",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -132,7 +102,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

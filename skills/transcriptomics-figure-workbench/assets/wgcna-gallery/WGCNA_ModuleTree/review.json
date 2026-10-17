@@ -1,0 +1,65 @@
+{
+  "id": "WGCNA_ModuleTree",
+  "title": "Gene hierarchy · dynamic and merged modules",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_ModuleTree/example.png",
+    "svg": "WGCNA_ModuleTree/example.svg",
+    "pdf": "WGCNA_ModuleTree/example.pdf",
+    "tsv": "WGCNA_ModuleTree/example.tsv",
+    "spec": "WGCNA_ModuleTree/input/example.spec.json",
+    "preview": "WGCNA_ModuleTree/preview.jpg"
+  },
+  "sha256": {
+    "png": "ca0df82845a1547e712c79e9d04f595328fdb5b5eeeb3f5a6828b05aed2fdd99",
+    "svg": "2c2f4c5060b39feaab15817b9d6b5c9bccf6ae5ac59af80c30d56925101e9f40",
+    "pdf": "82b5b0e19466a059d2d9a5d4f7b40b70c06ee2fb1eab49411924ab1e47675f40",
+    "tsv": "5ac3cfa6c5c7ace57387ed7d9cb5dafa27d7f45d8f5be716063f1504a23c9cb5",
+    "spec": "643452e9b4348b078f5485a5375a6c356a7af7e6801c4ee69e1b03ecb9e5ba64"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_ModuleTree",
+    "png_sha256": "ca0df82845a1547e712c79e9d04f595328fdb5b5eeeb3f5a6828b05aed2fdd99",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "context",
+    "leaf_order",
+    "mode",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

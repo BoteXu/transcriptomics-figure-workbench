@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.splicing",
+  "assay": "single_cell",
+  "title": "Celltype-specific RNA processing",
+  "family": "splicing",
+  "required_results": [
+    "junction_coverage",
+    "delta_PSI",
+    "isoform_usage"
+  ],
+  "specific_qc_and_limit": "Donor support and event mapping required; cell-level detection sparsity must be reviewed.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.splicing/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.splicing/example.png",
+    "svg": "single_cell.splicing/example.svg",
+    "pdf": "single_cell.splicing/example.pdf",
+    "tsv": "single_cell.splicing/example.tsv",
+    "spec": "single_cell.splicing/input/example.spec.json",
+    "preview": "single_cell.splicing/preview.jpg"
+  },
+  "sha256": {
+    "png": "f745a94fabebe462efdb7ddf55e1a8b81de331765daeba3bc2b4091918098fcf",
+    "svg": "cf3971e478fcda527cce728ba2ef79c7346b29c3ebf20b31808527f724f52030",
+    "pdf": "2791b6c139eff28cd984a29ae9a7203d6f2641c49959146767b966ff592ebb04",
+    "tsv": "4b1fe86bbdd22c37b9023e2a946bfa06096cd631a4c2742c227e172ac120927d",
+    "spec": "8c28034a8a10a4c1cc627fb6b82b28484adef84edd7cd9bcee850b72d528a730"
+  },
+  "visual_review": {
+    "id": "single_cell.splicing",
+    "png_sha256": "f745a94fabebe462efdb7ddf55e1a8b81de331765daeba3bc2b4091918098fcf",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 55,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

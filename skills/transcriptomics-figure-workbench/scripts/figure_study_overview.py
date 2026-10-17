@@ -12,7 +12,7 @@ from figure_workbench.responsive import grid_shape,facet_slots,canvas_budget
 
 def plot_transcriptomic_overview(data,theme,*,assay,contrast,independent_unit,denominator,
                                 matrix_label='Row z-score',panels=None,labels=(),alpha=.05,fc=1,
-                                embedding_axes=None,panel_titles=None,
+                                embedding_axes=None,panel_titles=None,presentation='basic',ellipse_definition=None,
                                 ncols='auto',nrows=None,panel_width=3.9,panel_height=3.6):
     """A coherent main figure; complete companion results remain independently exported.
 
@@ -23,8 +23,10 @@ def plot_transcriptomic_overview(data,theme,*,assay,contrast,independent_unit,de
     choices={'bulk':['embedding','de','matrix','enrichment'],'single_cell':['embedding','marker_dot','composition','de']}
     if assay not in choices or not 0<alpha<1 or not np.isfinite(fc) or fc<=0:raise ValueError('Declare assay and valid display thresholds')
     if any(not isinstance(v,str) or not v.strip() for v in [contrast,independent_unit,denominator,matrix_label]):raise ValueError('Complete contrast, unit, denominator and matrix scale required')
+    if presentation not in ['basic','integrated']:raise ValueError('Choose an explicit presentation')
+    auxiliary={'ellipse','pca_x_bin','pca_y_bin','de_x_bin','de_y_bin','pc_variance'} if presentation=='integrated' else set()
     d=checked(data,['record_type']);selected=list(panels or choices[assay])
-    if not selected or len(selected)!=len(set(selected)) or set(selected)-set(choices[assay]) or set(d.record_type)-set(choices[assay]):raise ValueError('Choose unique supported whole panels')
+    if not selected or len(selected)!=len(set(selected)) or set(selected)-set(choices[assay]) or set(d.record_type)-set(choices[assay])-auxiliary:raise ValueError('Choose unique supported whole panels')
     if set(selected)-set(d.record_type):raise ValueError('A selected overview channel is missing; never invent its result')
     embedding_axes=embedding_axes or (['UMAP 1','UMAP 2'] if assay=='single_cell' else ['PC1','PC2'])
     if not isinstance(embedding_axes,(tuple,list)) or len(embedding_axes)!=2 or any(not isinstance(s,str) or not s.strip() for s in embedding_axes):raise ValueError('Two explicit embedding axis labels required')
@@ -71,7 +73,20 @@ def plot_transcriptomic_overview(data,theme,*,assay,contrast,independent_unit,de
             cb.ax.tick_params(labelsize=7.5)
             return cb
         ax.spines[['top','right']].set_visible(False);ax.tick_params(labelsize=8)
-        if kind=='embedding':
+        if presentation=='integrated' and kind in ['embedding','de']:
+            from figure_integrated_views import _pca_panel,_volcano_panel
+            ax.set_axis_off();region=[x,y,w,h]
+            if kind=='embedding':
+                if assay!='bulk':raise ValueError('Use the annotation-atlas presentation for a detailed single-cell identity figure')
+                ax=_pca_panel(fig,region,d,theme,embedding_axes,ellipse_definition)
+                names=list(q.group.unique());pal=group_palette(theme,names)
+                ax.legend(handles=[Line2D([],[],ls='',marker='o',color=pal[g],label=g) for g in names],frameon=False,fontsize=9,ncols=len(names))
+                title='Sample architecture';semantic[kind]='Supplied PCA, declared ellipses and exact marginal proportions; no fit'
+            else:
+                ax,n=_volcano_panel(fig,region,d,theme,labels,alpha,fc)
+                ax.legend(handles=[Line2D([],[],ls='',marker='o',color=c,label=g+' '+str(n[g])) for g,c in [('Down',negative),('Up',positive)]],frameon=False,fontsize=9,ncols=2)
+                title='Differential response';semantic[kind]='Complete gene results plus checked supplied stacked marginal counts'
+        elif kind=='embedding':
             q=checked(q,['object_id','group','x','y'],['x','y'])
             if q.object_id.duplicated().any():raise ValueError('Unique supplied coordinate identities required')
             names=list(q.group.unique());pal=group_palette(theme,names)

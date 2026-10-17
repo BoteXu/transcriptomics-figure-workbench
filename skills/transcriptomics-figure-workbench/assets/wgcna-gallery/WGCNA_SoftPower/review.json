@@ -1,0 +1,66 @@
+{
+  "id": "WGCNA_SoftPower",
+  "title": "Soft power · topology and connectivity",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_SoftPower/example.png",
+    "svg": "WGCNA_SoftPower/example.svg",
+    "pdf": "WGCNA_SoftPower/example.pdf",
+    "tsv": "WGCNA_SoftPower/example.tsv",
+    "spec": "WGCNA_SoftPower/input/example.spec.json",
+    "preview": "WGCNA_SoftPower/preview.jpg"
+  },
+  "sha256": {
+    "png": "fe3d2799e7da0023314b4676d6195bf58cdf35a6dee2051666ea79940a86d831",
+    "svg": "b391e733c7da173d4e33c32e2caa91190d8c4de849fa8b404b1119788814c60e",
+    "pdf": "66935d785aefa11270f35cc3837d46869e5c5878be4391903aec2634bd3d6764",
+    "tsv": "85fa896e3ada932a731fcdbde40a180ec42610a7976e6eddb3615d180bf9b67a",
+    "spec": "31f917b0e64c07520f14a0a1fecc3156e18bfc33354e577046ab0cbabbf9798b"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 51,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_SoftPower",
+    "png_sha256": "fe3d2799e7da0023314b4676d6195bf58cdf35a6dee2051666ea79940a86d831",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "context",
+    "fit_reference",
+    "mode",
+    "selected_power",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

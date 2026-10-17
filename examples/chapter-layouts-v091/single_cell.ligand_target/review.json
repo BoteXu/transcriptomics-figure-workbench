@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.ligand_target",
+  "title": "Ligand-to-target evidence chains",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.ligand_target/example.png",
+    "svg": "single_cell.ligand_target/example.svg",
+    "pdf": "single_cell.ligand_target/example.pdf",
+    "tsv": "single_cell.ligand_target/example.tsv",
+    "spec": "single_cell.ligand_target/input/example.spec.json",
+    "preview": "single_cell.ligand_target/preview.jpg"
+  },
+  "sha256": {
+    "png": "4ef9d9b614fb72b9c17ba10fc49f7f33f73506e09a9d4e96b1355a82587aca39",
+    "svg": "30929adfb3ad8d427701681495eca6cd370114901a4292ad97a3aefcaf26dc22",
+    "pdf": "d615ae1ca6d191647e09eb741fb7d0a2b1292c70ec9fd47ae320a00547f88966",
+    "tsv": "6ddaee7faa9300afc8d974ccbac077b02b206fce36691af438d055638ff5483f",
+    "spec": "73c31ed1bd28116cd8e76517a868b3f4580be6f5fb99aa95040d3d8c1ede85da"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 47,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.ligand_target",
+    "png_sha256": "4ef9d9b614fb72b9c17ba10fc49f7f33f73506e09a9d4e96b1355a82587aca39",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

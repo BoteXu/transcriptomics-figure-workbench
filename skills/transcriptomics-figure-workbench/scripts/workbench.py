@@ -23,6 +23,13 @@ def main():
     design=commands.add_parser('design');design.add_argument('--brief',required=True,type=Path);design.add_argument('--output',required=True,type=Path)
     study=commands.add_parser('study-plan');study.add_argument('--manifest',required=True,type=Path);study.add_argument('--request',required=True);study.add_argument('--output',required=True,type=Path)
     study_render=commands.add_parser('study-render');study_render.add_argument('--plan',required=True,type=Path);study_render.add_argument('--output',required=True,type=Path)
+    chapters=commands.add_parser('chapters');chapters.add_argument('--assay',default='');chapters.add_argument('--search',default='')
+    choose=commands.add_parser('choose');choose.add_argument('--request',required=True,type=Path);choose.add_argument('--output',required=True,type=Path)
+    views=commands.add_parser('chapter-views');views.add_argument('--chapter',default='');views.add_argument('--search',default='')
+    vt=commands.add_parser('view-template');vt.add_argument('--entry',required=True);vt.add_argument('--output',required=True,type=Path)
+    ct=commands.add_parser('chapter-template');ct.add_argument('--entry',required=True);ct.add_argument('--output',required=True,type=Path)
+    bp=commands.add_parser('book-plan');bp.add_argument('--manifest',required=True,type=Path);bp.add_argument('--output',required=True,type=Path)
+    br=commands.add_parser('book-render');br.add_argument('--plan',required=True,type=Path);br.add_argument('--output',required=True,type=Path)
     method_spec=commands.add_parser('method-spec');method_spec.add_argument('--entry',required=True)
     method_spec.add_argument('--template',required=True,type=Path);method_spec.add_argument('--output',required=True,type=Path)
     plan=commands.add_parser('plan');plan.add_argument('--spec',required=True,type=Path);plan.add_argument('--output',required=True,type=Path)
@@ -75,6 +82,28 @@ def main():
         from figure_workbench.methods import prepare_method_spec
         spec=prepare_method_spec(args.entry,read_json(args.template),args.template.resolve().parent,args.output)
         write_new(args.output,spec);result={'status':'METHOD_SPEC_PREPARED','entry':args.entry,'output':str(args.output),'native_package_executed':False}
+    elif args.command=='chapter-views':
+        from figure_workbench.views import chapter_views
+        result={'views':chapter_views(args.chapter,args.search),'analysis_performed':False}
+    elif args.command=='view-template':
+        from figure_workbench.views import view_template
+        result=view_template(args.entry,args.output)
+    elif args.command=='choose':
+        from figure_workbench.selection import select_figure
+        result=select_figure(read_json(args.request));write_new(args.output,result)
+    elif args.command=='chapters':
+        from figure_workbench.book import chapters
+        result={'chapters':chapters(args.assay,args.search),'analysis_performed':False}
+    elif args.command=='chapter-template':
+        from figure_workbench.book import chapter_template
+        result=chapter_template(args.entry,args.output)
+    elif args.command=='book-plan':
+        from figure_workbench.book import book_plan
+        result=book_plan(read_json(args.manifest),args.manifest.resolve().parent);write_new(args.output,result)
+        result={'status':result['state'],'implemented_chapters':result['implemented_chapters'],'selected_result_figures':result['result_figures'],'analysis_performed':False}
+    elif args.command=='book-render':
+        from figure_workbench.book import render_book
+        receipt=render_book(read_json(args.plan),args.output);result={'status':receipt['state'],'figures':len(receipt['completed']),'analysis_performed':False}
     elif args.command=='study-plan':
         from figure_workbench.study import study_plan
         result=study_plan(read_json(args.manifest),args.request,args.manifest.resolve().parent);write_new(args.output,result)

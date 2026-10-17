@@ -1,0 +1,74 @@
+{
+  "id": "DonorEnrichmentTracks",
+  "assay": "single_cell",
+  "role": "gsea_curves",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "refined",
+  "parameters": {
+    "view": "gsea_strip",
+    "options": {
+      "curve_order": [
+        "Interferon response"
+      ],
+      "ranked_universe": 1200,
+      "metric_label": "Rank metric",
+      "contrast": "Treated versus Control / illustrative",
+      "gene_set_version": "Fictional complete gene set v0.9",
+      "title": "Stored enrichment / exact ranked tracks",
+      "line_encoding": "rank_metric"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Fictional complete ranked result v0.9",
+      "independent_unit": "Synthetic ranked genes from the declared myeloid donor contrast",
+      "denominator": "Complete supplied ranked universe and exact supplied pathway hit sets",
+      "value_definition": "Running ES, NES, adjusted probability, leading-edge flags and ranked metric supplied separately",
+      "uncertainty_definition": "No interval supplied; adjusted probabilities are existing display inputs"
+    }
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 172.72,
+    "minimum_required_pt": 7,
+    "essential_text_count": 31,
+    "smallest_pt": 8.997220935618342,
+    "p10_pt": 8.997220935618342,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/DonorEnrichmentTracks/DonorEnrichmentTracks.png",
+    "svg": "study/DonorEnrichmentTracks/DonorEnrichmentTracks.svg",
+    "pdf": "study/DonorEnrichmentTracks/DonorEnrichmentTracks.pdf",
+    "tsv": "study/DonorEnrichmentTracks/DonorEnrichmentTracks.tsv",
+    "spec": "study/DonorEnrichmentTracks/input/DonorEnrichmentTracks.spec.json",
+    "previous": "study/DonorEnrichmentTracks/previous.png"
+  },
+  "sha256": {
+    "png": "56d58cd7340ff4275336b8e5ccc808c5252a22ef6861e968490c0486e8f6bc64",
+    "svg": "3152812701bc385c011b6a4753095b9b157606d712c54d4b44a440e37f3a3b8b",
+    "pdf": "7f5eef56ef642fd95960c978e843a27e7855094d17e3b3e68deec63004bcb741",
+    "tsv": "a7a8a8fd51bd5c2217bf8eb576a9eefa05b5a27af7bbf297f63cb920f8bcef10",
+    "previous": "56d58cd7340ff4275336b8e5ccc808c5252a22ef6861e968490c0486e8f6bc64"
+  },
+  "visual_review": {
+    "id": "DonorEnrichmentTracks",
+    "png_sha256": "56d58cd7340ff4275336b8e5ccc808c5252a22ef6861e968490c0486e8f6bc64",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.replication",
+  "title": "Cross-cohort annotation and effect transfer",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.replication/example.png",
+    "svg": "single_cell.replication/example.svg",
+    "pdf": "single_cell.replication/example.pdf",
+    "tsv": "single_cell.replication/example.tsv",
+    "spec": "single_cell.replication/input/example.spec.json",
+    "preview": "single_cell.replication/preview.jpg"
+  },
+  "sha256": {
+    "png": "f12d1ccc551c1d0b742949e211642bbdb567c9bfbb386a9ada7bd6bc85655698",
+    "svg": "842511245f7766ba5dbe278293a8633715324c6b470b25ba53d74629c19b97cc",
+    "pdf": "763b6b1515bbd403a07859e46c2270cdd6d0d63447a194796cc3a178ad03effb",
+    "tsv": "693f591e0e8cd5956c32364e833c36ce86818b457c9171c65b12ee79bb3820bf",
+    "spec": "0e9922761f7c205f8d88ce0c5f81761463ba1f9e885566ae2680e16158cf4447"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 79,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.replication",
+    "png_sha256": "f12d1ccc551c1d0b742949e211642bbdb567c9bfbb386a9ada7bd6bc85655698",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

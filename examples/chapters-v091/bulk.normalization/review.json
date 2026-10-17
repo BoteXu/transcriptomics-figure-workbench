@@ -1,0 +1,65 @@
+{
+  "id": "bulk.normalization",
+  "assay": "bulk",
+  "title": "Normalization and mean-variance diagnostics",
+  "family": "normalization",
+  "required_results": [
+    "rle_density",
+    "mean_variance"
+  ],
+  "specific_qc_and_limit": "Declare RLE/reference and transformed scale; drawing never estimates density or normalization.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.normalization/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.normalization/example.png",
+    "svg": "bulk.normalization/example.svg",
+    "pdf": "bulk.normalization/example.pdf",
+    "tsv": "bulk.normalization/example.tsv",
+    "spec": "bulk.normalization/input/example.spec.json",
+    "preview": "bulk.normalization/preview.jpg"
+  },
+  "sha256": {
+    "png": "238ab584bcb65962e432fec9bde54a5fa41e364e90bf25384b7cb512e8a32855",
+    "svg": "ac5d9a55ed5ee65ab13e8c8c79bfe691314685cc3d881ee32534eb387088c531",
+    "pdf": "a5c257ede9445cfbe1c4e4dd38291af1e6ebc1682d8d2d10ac0158acfe7d55e0",
+    "tsv": "49cfb860218455491eec9f07b9d8d8e4c09a22bf0b8df331c89a78bb48e080fa",
+    "spec": "6e3faad2d12d14f99e31e4cc9fb541a5c4772c7829784415865cc7d23164c949"
+  },
+  "visual_review": {
+    "id": "bulk.normalization",
+    "png_sha256": "238ab584bcb65962e432fec9bde54a5fa41e364e90bf25384b7cb512e8a32855",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

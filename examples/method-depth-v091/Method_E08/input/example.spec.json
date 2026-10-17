@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "figure_id": "Method_E08",
+  "renderer": "figure_method_extensions.plot_gene_term_chord",
+  "input": {
+    "path": "example.tsv",
+    "sha256": "acf96181eaba0ae8825cd099f92b8acf1be7b9568733938c6b364112f0022356",
+    "numeric_columns": [
+      "effect"
+    ]
+  },
+  "parameters": {
+    "gene_order": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "F13",
+      "F14",
+      "F15",
+      "F16",
+      "F17",
+      "F18",
+      "F19",
+      "F20",
+      "F21",
+      "F22"
+    ],
+    "term_order": [
+      "BP01",
+      "BP02",
+      "BP03",
+      "BP04",
+      "BP05",
+      "BP06"
+    ],
+    "effect_limits": [
+      -2,
+      2
+    ],
+    "effect_label": "Supplied log2 fold change"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "figure-library-v0.2-preview",
+    "palette_name": "card_06",
+    "palette_colors": [
+      "#506AAA",
+      "#728DC1",
+      "#91BBDF",
+      "#B6DBF1",
+      "#F6D3D9",
+      "#E79FBF",
+      "#E17692"
+    ],
+    "group_slots": {
+      "G1": 0,
+      "G2": 1,
+      "G3": 2,
+      "G4": 3,
+      "G5": 4,
+      "G6": 5,
+      "G7": 6,
+      "CT1": 2,
+      "CT2": 3,
+      "CT3": 5,
+      "Set A": 0,
+      "Set B": 3,
+      "Before": 0,
+      "After": 6,
+      "Neither": 3,
+      "X only": 0,
+      "Y only": 4,
+      "Both": 6,
+      "RNA": 0,
+      "Protein": 6,
+      "ATAC": 2,
+      "Metabolite": 4,
+      "Observed": 0,
+      "Reference": 6,
+      "M+0": 0,
+      "M+1": 2,
+      "M+2": 4,
+      "M+3": 6
+    },
+    "roles": {
+      "primary": "#506AAA",
+      "negative": "#506AAA",
+      "positive": "#E17692",
+      "accent": "#E17692",
+      "neutral": "#A8ADB3",
+      "significant": "#E17692",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#506AAA"
+      ],
+      "diverging": [
+        "#506AAA",
+        "#F7F7F7",
+        "#E17692"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Fictional frozen method-depth display inputs v0.9.1",
+    "input_unit": "Synthetic gene-sample measurement",
+    "experimental_unit": "Synthetic donor; cells nested within donors",
+    "contrast": "Treated versus Control; purely illustrative",
+    "denominator": "All 180 illustrative genes in each of 12 samples",
+    "model": "No analysis, graph inference, model fit or significance calculation",
+    "limits": "Declared complete display scope; data have no biomedical validity",
+    "filtering": "Declared fixture selection only; no research filtering",
+    "uncertainty": "Only explicitly supplied illustrative intervals; no new uncertainty estimation",
+    "interpretation_limit": "Software and visual acceptance only; no biological or clinical conclusions",
+    "synthetic": true
+  },
+  "appearance": {
+    "preset": "paper",
+    "label_pt": 12,
+    "tick_pt": 11,
+    "note_pt": 11
+  },
+  "export": {
+    "raster_dpi": 300,
+    "target_width_mm": 297,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "block"
+  }
+}

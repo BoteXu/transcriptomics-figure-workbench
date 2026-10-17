@@ -1,0 +1,65 @@
+{
+  "id": "bulk.deconvolution",
+  "assay": "bulk",
+  "title": "Cell-mixture estimates and uncertainty",
+  "family": "mixture",
+  "required_results": [
+    "sample_fractions",
+    "fraction_effects"
+  ],
+  "specific_qc_and_limit": "Declare reference and compositional denominator; model fractions are not measured cell counts.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.deconvolution/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.deconvolution/example.png",
+    "svg": "bulk.deconvolution/example.svg",
+    "pdf": "bulk.deconvolution/example.pdf",
+    "tsv": "bulk.deconvolution/example.tsv",
+    "spec": "bulk.deconvolution/input/example.spec.json",
+    "preview": "bulk.deconvolution/preview.jpg"
+  },
+  "sha256": {
+    "png": "9f790144b4c8f745a920faf9ee9ca1b620abb5c3e8150d10acc73a967824a665",
+    "svg": "6b098c41a1944c24c4c9b7e3835a55052acee0f079ac4620b8e493533a2062e2",
+    "pdf": "8e76fa9b989f913a06a311c9b31b6f70e651060d592bf436ca70aa125739fd07",
+    "tsv": "584705e1e651ab6448470f38d1026dd7268678134a0bcb0341d0a9b4f991d265",
+    "spec": "b32588f0446f943f65848ed02ba7fa9946abdf78623af4624f70c7c6b744d592"
+  },
+  "visual_review": {
+    "id": "bulk.deconvolution",
+    "png_sha256": "9f790144b4c8f745a920faf9ee9ca1b620abb5c3e8150d10acc73a967824a665",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 41,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

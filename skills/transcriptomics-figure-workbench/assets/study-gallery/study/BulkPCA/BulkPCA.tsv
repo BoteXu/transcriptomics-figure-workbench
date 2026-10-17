@@ -1,13 +1,61 @@
-unit_id	group	x	y
-S01	Control	-2.8	-0.5
-S02	Control	-2.1	0.8
-S03	Control	-2.5	0.1
-S04	Control	-1.9	-1.0
-S05	Control	-2.4	0.5
-S06	Control	-1.6	-0.2
-S07	Treated	1.5	0.4
-S08	Treated	2.0	-0.7
-S09	Treated	2.6	0.2
-S10	Treated	2.1	1.0
-S11	Treated	3.0	-0.4
-S12	Treated	2.3	0.6
+object_id	group	x	y	record_type	width	height	angle	coverage	left	right	count	component	percent
+S01	Control	-2.8	-0.5	embedding									
+S02	Control	-2.1	0.8	embedding									
+S03	Control	-2.5	0.1	embedding									
+S04	Control	-1.9	-1.0	embedding									
+S05	Control	-2.4	0.5	embedding									
+S06	Control	-1.6	-0.2	embedding									
+S07	Treated	1.5	0.4	embedding									
+S08	Treated	2.0	-0.7	embedding									
+S09	Treated	2.6	0.2	embedding									
+S10	Treated	2.1	1.0	embedding									
+S11	Treated	3.0	-0.4	embedding									
+S12	Treated	2.3	0.6	embedding									
+	Control	-2.2	-0.05	ellipse	1.7	2.35	-12.0	0.95					
+	Treated	2.25	0.15	ellipse	2.1	2.3	12.0	0.95					
+	Control			pca_x_bin					-2.916	-2.2457777777777777	3.0		
+	Control			pca_x_bin					-2.2457777777777777	-1.5755555555555554	3.0		
+	Control			pca_x_bin					-1.5755555555555554	-0.9053333333333332	0.0		
+	Control			pca_x_bin					-0.9053333333333332	-0.2351111111111108	0.0		
+	Control			pca_x_bin					-0.2351111111111108	0.4351111111111114	0.0		
+	Control			pca_x_bin					0.4351111111111114	1.1053333333333335	0.0		
+	Control			pca_x_bin					1.1053333333333335	1.7755555555555564	0.0		
+	Control			pca_x_bin					1.7755555555555564	2.4457777777777783	0.0		
+	Control			pca_x_bin					2.4457777777777783	3.116	0.0		
+	Treated			pca_x_bin					-2.916	-2.2457777777777777	0.0		
+	Treated			pca_x_bin					-2.2457777777777777	-1.5755555555555554	0.0		
+	Treated			pca_x_bin					-1.5755555555555554	-0.9053333333333332	0.0		
+	Treated			pca_x_bin					-0.9053333333333332	-0.2351111111111108	0.0		
+	Treated			pca_x_bin					-0.2351111111111108	0.4351111111111114	0.0		
+	Treated			pca_x_bin					0.4351111111111114	1.1053333333333335	0.0		
+	Treated			pca_x_bin					1.1053333333333335	1.7755555555555564	1.0		
+	Treated			pca_x_bin					1.7755555555555564	2.4457777777777783	3.0		
+	Treated			pca_x_bin					2.4457777777777783	3.116	2.0		
+	Control			pca_y_bin					-1.04	-0.8088888888888889	1.0		
+	Control			pca_y_bin					-0.8088888888888889	-0.5777777777777777	0.0		
+	Control			pca_y_bin					-0.5777777777777777	-0.3466666666666667	1.0		
+	Control			pca_y_bin					-0.3466666666666667	-0.1155555555555555	1.0		
+	Control			pca_y_bin					-0.1155555555555555	0.1155555555555556	1.0		
+	Control			pca_y_bin					0.1155555555555556	0.3466666666666667	0.0		
+	Control			pca_y_bin					0.3466666666666667	0.577777777777778	1.0		
+	Control			pca_y_bin					0.577777777777778	0.808888888888889	1.0		
+	Control			pca_y_bin					0.808888888888889	1.04	0.0		
+	Treated			pca_y_bin					-1.04	-0.8088888888888889	0.0		
+	Treated			pca_y_bin					-0.8088888888888889	-0.5777777777777777	1.0		
+	Treated			pca_y_bin					-0.5777777777777777	-0.3466666666666667	1.0		
+	Treated			pca_y_bin					-0.3466666666666667	-0.1155555555555555	0.0		
+	Treated			pca_y_bin					-0.1155555555555555	0.1155555555555556	0.0		
+	Treated			pca_y_bin					0.1155555555555556	0.3466666666666667	1.0		
+	Treated			pca_y_bin					0.3466666666666667	0.577777777777778	1.0		
+	Treated			pca_y_bin					0.577777777777778	0.808888888888889	1.0		
+	Treated			pca_y_bin					0.808888888888889	1.04	1.0		
+				pc_variance								PC1	38.4
+				pc_variance								PC2	17.6
+				pc_variance								PC3	12.0
+				pc_variance								PC4	8.0
+				pc_variance								PC5	6.0
+				pc_variance								PC6	5.0
+				pc_variance								PC7	4.0
+				pc_variance								PC8	3.5
+				pc_variance								PC9	3.0
+				pc_variance								PC10	2.5

@@ -1,1193 +1,1060 @@
 {
+  "version": "0.9.1",
   "records": [
     {
       "key": "study/BulkMain",
       "id": "BulkMain",
       "section": "study",
-      "level": null,
       "form": "study_overview",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/BulkMain/BulkMain.png",
         "svg": "study/BulkMain/BulkMain.svg",
         "pdf": "study/BulkMain/BulkMain.pdf",
         "tsv": "study/BulkMain/BulkMain.tsv",
-        "spec": "study/BulkMain/input/BulkMain.spec.json"
+        "spec": "study/BulkMain/input/BulkMain.spec.json",
+        "previous": "study/BulkMain/previous.png"
       },
       "sha256": {
-        "png": "8d20651664092925e5e00dc429c52de58a88b5e697e11d53251f3feaa83ac1ea",
-        "svg": "26bff3ca77a4364d34473c40f926677e5fdf8750674c7263f10584b559e327aa",
-        "pdf": "9cd133806c9bc86367d0efdece5ad1b177ed8a4ee30d44e87dff92c17d37055c",
-        "tsv": "f1b9e1f4621bd4038601b06cb5c121370274eaf46bd80c36b2cb0a696474f690"
+        "png": "c11cf1d2ed95ab38fb113960014c026dba7dcd2c458c13bcdb11663b671cafa6",
+        "svg": "00fc6a1b64e45822eb6d4f35ec823117461c1f348f4d3dd3b9976ef9ca37d14e",
+        "pdf": "a6855a28efbb83d86d10faffa0a9f9855e4fa0b55dee11ccac140bacc95baa22",
+        "tsv": "653c499b8a4cdd12a0ec53bf9989c4140a8bccc49eae41237ea1f5b568ecb37d",
+        "previous": "5070c9d2be7046c9aa8cc0e83d7e927cb9801273f1f09352c535f535d3824f4c"
       },
       "preview": "study/BulkMain/preview.jpg",
       "review": "study/BulkMain/review.json",
       "visual_review": {
-        "key": "study/BulkMain",
-        "png_sha256": "8d20651664092925e5e00dc429c52de58a88b5e697e11d53251f3feaa83ac1ea",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "BulkMain",
+        "png_sha256": "c11cf1d2ed95ab38fb113960014c026dba7dcd2c458c13bcdb11663b671cafa6",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 178,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": true
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/BulkQC",
       "id": "BulkQC",
       "section": "study",
-      "level": null,
       "form": "qc_distribution",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/BulkQC/BulkQC.png",
         "svg": "study/BulkQC/BulkQC.svg",
         "pdf": "study/BulkQC/BulkQC.pdf",
         "tsv": "study/BulkQC/BulkQC.tsv",
-        "spec": "study/BulkQC/input/BulkQC.spec.json"
+        "spec": "study/BulkQC/input/BulkQC.spec.json",
+        "previous": "study/BulkQC/previous.png"
       },
       "sha256": {
-        "png": "497c51476464c8ea8f375b46b4d5ea5f0baf52e360a679eae15603ca52f5a1dc",
-        "svg": "8fe75483397ee77ee6aace49abe3b4460a3100dcc1c11ebc183548f9f6dc53f1",
-        "pdf": "67a131040b71a33d6a852465a3f8b684b63e9dd1367da59c4d02af584d0d10c4",
-        "tsv": "a3377d5f2d78e7d5e6104bb875089cdb557fcd6c62db446985387d6a179ea9d0"
+        "png": "70da560a946678f608dcf923faa3fc963e5d22e888ec66178be5c5406cab5d37",
+        "svg": "871b0dbe927d72fc2adff088ad40c5d61cf0d1d3a0c72b2192281d1ef5d4a60a",
+        "pdf": "32edd7cc5d0949057339baa0cfb273d1a2e4065804184f70bc885aaff6229912",
+        "tsv": "77ad885abc809af0b238aa11b95f89271b7621c0fddfa90256ec439e566a69ff",
+        "previous": "497c51476464c8ea8f375b46b4d5ea5f0baf52e360a679eae15603ca52f5a1dc"
       },
       "preview": "study/BulkQC/preview.jpg",
       "review": "study/BulkQC/review.json",
       "visual_review": {
-        "key": "study/BulkQC",
-        "png_sha256": "497c51476464c8ea8f375b46b4d5ea5f0baf52e360a679eae15603ca52f5a1dc",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "BulkQC",
+        "png_sha256": "70da560a946678f608dcf923faa3fc963e5d22e888ec66178be5c5406cab5d37",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/BulkPCA",
       "id": "BulkPCA",
       "section": "study",
-      "level": null,
       "form": "sample_embedding",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/BulkPCA/BulkPCA.png",
         "svg": "study/BulkPCA/BulkPCA.svg",
         "pdf": "study/BulkPCA/BulkPCA.pdf",
         "tsv": "study/BulkPCA/BulkPCA.tsv",
-        "spec": "study/BulkPCA/input/BulkPCA.spec.json"
+        "spec": "study/BulkPCA/input/BulkPCA.spec.json",
+        "previous": "study/BulkPCA/previous.png"
       },
       "sha256": {
-        "png": "11e9d44997beebf33d402ec2db6bb3fb9cde5f6fba7c00235bf277f8e2a49e95",
-        "svg": "644b01386bdfc4d74f9f9b520d34d61671032d5cabe09bf0fda53ec15afaf288",
-        "pdf": "28127c9060d76ca09a4d70767d627ea9046d8db70b01ff7009ad6e4e5c8a0f0a",
-        "tsv": "844e87bdcc2d7fe254c94932fa73a7c510e40121b1adfb41b9dd2e65006e8364"
+        "png": "4b273b875234d4d5cb2b5bfdd0eb3859bddf38594dfe0c6355dbb9e35e84cf06",
+        "svg": "3277971a6ba8b3c5549809b2e2f37085173faa69015f63b6119ae159c6ca7cd2",
+        "pdf": "8d3eaad957fe4e3559561772b923ebcbb46347698e708cbc3b1dbe8e8cb0d1d7",
+        "tsv": "e6f183c4ccd627829ea44c67dc23a977c0989a5345cea6e4064b98ae936e9c65",
+        "previous": "11e9d44997beebf33d402ec2db6bb3fb9cde5f6fba7c00235bf277f8e2a49e95"
       },
       "preview": "study/BulkPCA/preview.jpg",
       "review": "study/BulkPCA/review.json",
       "visual_review": {
-        "key": "study/BulkPCA",
-        "png_sha256": "11e9d44997beebf33d402ec2db6bb3fb9cde5f6fba7c00235bf277f8e2a49e95",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "BulkPCA",
+        "png_sha256": "4b273b875234d4d5cb2b5bfdd0eb3859bddf38594dfe0c6355dbb9e35e84cf06",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/BulkCorrelation",
       "id": "BulkCorrelation",
       "section": "study",
-      "level": null,
       "form": "sample_correlation",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/BulkCorrelation/BulkCorrelation.png",
         "svg": "study/BulkCorrelation/BulkCorrelation.svg",
         "pdf": "study/BulkCorrelation/BulkCorrelation.pdf",
         "tsv": "study/BulkCorrelation/BulkCorrelation.tsv",
-        "spec": "study/BulkCorrelation/input/BulkCorrelation.spec.json"
+        "spec": "study/BulkCorrelation/input/BulkCorrelation.spec.json",
+        "previous": "study/BulkCorrelation/previous.png"
       },
       "sha256": {
-        "png": "cfe2b80f21e6c5ee2d9ba463fe0a37878eb2a71b171885565ba048d8a05a19b5",
-        "svg": "946557e4f66e11aa9233646172ba48ce2e7d1607b2ea146f4d1ff514ff5c56fb",
-        "pdf": "ec3bafe0bcce06ef6f27da0acd3387e82786f4543e81e9892fb16b19adac62ef",
-        "tsv": "a9a0aa8aa295419a5524a69a858c8611354249d1073f3f6a450708a33fc87d10"
+        "png": "3b046d279701024cb296364c8b22aa03cdc5d2da9022eca4f0442a9b3d8f35f4",
+        "svg": "59f4733a135a74efa12fb0894b76cb4906677c4d235aacb5c1c7132426beec26",
+        "pdf": "2eba3e0a05237c7c3f0eac8dc8fe2ef4c2f6a52ca4b8d38aede63a424ee2b090",
+        "tsv": "91e675dfc4052262148c9d472f0ae26e575767756bef6dca028f8aea584fd17c",
+        "previous": "cfe2b80f21e6c5ee2d9ba463fe0a37878eb2a71b171885565ba048d8a05a19b5"
       },
       "preview": "study/BulkCorrelation/preview.jpg",
       "review": "study/BulkCorrelation/review.json",
       "visual_review": {
-        "key": "study/BulkCorrelation",
-        "png_sha256": "cfe2b80f21e6c5ee2d9ba463fe0a37878eb2a71b171885565ba048d8a05a19b5",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "BulkCorrelation",
+        "png_sha256": "3b046d279701024cb296364c8b22aa03cdc5d2da9022eca4f0442a9b3d8f35f4",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/LibrarySizes",
       "id": "LibrarySizes",
       "section": "study",
-      "level": null,
       "form": "library_summary",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/LibrarySizes/LibrarySizes.png",
         "svg": "study/LibrarySizes/LibrarySizes.svg",
         "pdf": "study/LibrarySizes/LibrarySizes.pdf",
         "tsv": "study/LibrarySizes/LibrarySizes.tsv",
-        "spec": "study/LibrarySizes/input/LibrarySizes.spec.json"
+        "spec": "study/LibrarySizes/input/LibrarySizes.spec.json",
+        "previous": "study/LibrarySizes/previous.png"
       },
       "sha256": {
-        "png": "24bd783ed33be6e7b135a5b434540dfe7ecafb8ebd029f1d57464bdfccb89f3e",
-        "svg": "ac76f70e1ba314705d2d1ad4291f727e982c223391b56d223156c35ce8a645e6",
-        "pdf": "71d67466c37283ba1034028f417266ba0339f2a1cbe7674557f1cdd0b1c22a4f",
-        "tsv": "312f582c0b9f5031829a532a543749f19ab15631b611c138c29fa8e2a7a50457"
+        "png": "7c8f2d273d41426c35e91ccd5195c2b91f8a28d1c13f95127b9da4529a82228c",
+        "svg": "602b7c9a01460410861e0c40927e7f21d0cf046c05f85bb3582adf8eb138c8a1",
+        "pdf": "316663f358b5e6f89c73a869b82862988d969f490257a070803beaf9ad1a9e37",
+        "tsv": "312f582c0b9f5031829a532a543749f19ab15631b611c138c29fa8e2a7a50457",
+        "previous": "24bd783ed33be6e7b135a5b434540dfe7ecafb8ebd029f1d57464bdfccb89f3e"
       },
       "preview": "study/LibrarySizes/preview.jpg",
       "review": "study/LibrarySizes/review.json",
       "visual_review": {
-        "key": "study/LibrarySizes",
-        "png_sha256": "24bd783ed33be6e7b135a5b434540dfe7ecafb8ebd029f1d57464bdfccb89f3e",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "LibrarySizes",
+        "png_sha256": "7c8f2d273d41426c35e91ccd5195c2b91f8a28d1c13f95127b9da4529a82228c",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/BulkDE",
       "id": "BulkDE",
       "section": "study",
-      "level": null,
       "form": "differential_expression",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/BulkDE/BulkDE.png",
         "svg": "study/BulkDE/BulkDE.svg",
         "pdf": "study/BulkDE/BulkDE.pdf",
         "tsv": "study/BulkDE/BulkDE.tsv",
-        "spec": "study/BulkDE/input/BulkDE.spec.json"
+        "spec": "study/BulkDE/input/BulkDE.spec.json",
+        "previous": "study/BulkDE/previous.png"
       },
       "sha256": {
-        "png": "d9a304bff1f2051db2efc9a3a7bd42481087056955a18496bcbcc206ae617e1d",
-        "svg": "aca4b383f8018dbdc2934ca77f416b39098528028718fad88a14383766ddc956",
-        "pdf": "ec4a923b679de55b4b7dd9c26e116e30c8cb625f8337a725035646ed60078208",
-        "tsv": "df439ee21186f3fe7e78ca1c8ce9e9999cad2d944312011b4c2a4838011037a9"
+        "png": "013b24463cb04a847015258b5aee8b932cfd22928fdf55255f2fedc04a72a3f9",
+        "svg": "f5e3fb2556cc9f8f3dc184ced3fd8ee48693c8d7af5a3a3c3136e91dbd9958f7",
+        "pdf": "441c8740bceadec49c250fffecc112545699b5b70c8e6967a949e04f9a97e842",
+        "tsv": "2043bd0715408de925227544cb406505c251bef93ce3f5b0b01ad3f45d1c5d6a",
+        "previous": "d9a304bff1f2051db2efc9a3a7bd42481087056955a18496bcbcc206ae617e1d"
       },
       "preview": "study/BulkDE/preview.jpg",
       "review": "study/BulkDE/review.json",
       "visual_review": {
-        "key": "study/BulkDE",
-        "png_sha256": "d9a304bff1f2051db2efc9a3a7bd42481087056955a18496bcbcc206ae617e1d",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "BulkDE",
+        "png_sha256": "013b24463cb04a847015258b5aee8b932cfd22928fdf55255f2fedc04a72a3f9",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/BulkHeatmap",
       "id": "BulkHeatmap",
       "section": "study",
-      "level": null,
       "form": "differential_heatmap",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/BulkHeatmap/BulkHeatmap.png",
         "svg": "study/BulkHeatmap/BulkHeatmap.svg",
         "pdf": "study/BulkHeatmap/BulkHeatmap.pdf",
         "tsv": "study/BulkHeatmap/BulkHeatmap.tsv",
-        "spec": "study/BulkHeatmap/input/BulkHeatmap.spec.json"
+        "spec": "study/BulkHeatmap/input/BulkHeatmap.spec.json",
+        "previous": "study/BulkHeatmap/previous.png"
       },
       "sha256": {
         "png": "e56550100b7d0ea963a5ee752a991338d1cb1258c4867f2f5457d2cb363ab946",
-        "svg": "197e9cffc199bc08762f8e20dcb863637362d7daf91900241364c543e4777cf4",
-        "pdf": "eb6922dbc1c3dcda3f037cffce34900c593cc92e8d83800bcbf676d495d073bf",
-        "tsv": "5f63da23a3d269e7e3d1f568e7f43aaee173f0c9fc11d8d4241f630a8bf02e0a"
+        "svg": "c9e4ea947d4df7f8b9ccc9b7ec701b2df6d69fca3e4d1e178108241a6f93676b",
+        "pdf": "c897f83cc490003ee0be5478291d7aad21c5a3f8d67a5a9547c0d63e5733a538",
+        "tsv": "5f63da23a3d269e7e3d1f568e7f43aaee173f0c9fc11d8d4241f630a8bf02e0a",
+        "previous": "e56550100b7d0ea963a5ee752a991338d1cb1258c4867f2f5457d2cb363ab946"
       },
       "preview": "study/BulkHeatmap/preview.jpg",
       "review": "study/BulkHeatmap/review.json",
       "visual_review": {
-        "key": "study/BulkHeatmap",
+        "id": "BulkHeatmap",
         "png_sha256": "e56550100b7d0ea963a5ee752a991338d1cb1258c4867f2f5457d2cb363ab946",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/GeneEffects",
       "id": "GeneEffects",
       "section": "study",
-      "level": null,
       "form": "effect_intervals",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/GeneEffects/GeneEffects.png",
         "svg": "study/GeneEffects/GeneEffects.svg",
         "pdf": "study/GeneEffects/GeneEffects.pdf",
         "tsv": "study/GeneEffects/GeneEffects.tsv",
-        "spec": "study/GeneEffects/input/GeneEffects.spec.json"
+        "spec": "study/GeneEffects/input/GeneEffects.spec.json",
+        "previous": "study/GeneEffects/previous.png"
       },
       "sha256": {
-        "png": "c0aa78f83bdb0bedd3f07de6c8f373876f00d7d6aa40466bd46fd93e21cdc407",
-        "svg": "35332a0ff1ea667239017ab3fdfe181eba5e660b62e6efc681a70e25746e1bef",
-        "pdf": "0cdb626012d1f42a0bdf134497f4df107d86e466e6e531abcdd45bccf9d9676f",
-        "tsv": "1ab0e1545d710eb9478dfe6e37aa182faa5d9ccf4af9a9b68e980aa898da322b"
+        "png": "3b8ef79a6ac7a05c8c9e9742ab1f8ddfed9c2cf39618db451c237d4cf26291a5",
+        "svg": "5835e20f59d8aba6eb478dd426ac4938a5e21698063bb4cd25252ce4a3bec7e8",
+        "pdf": "77546d1f26afd1e6f6b845bd34348204478caeb53668fe8c62c0b562ff56f3e0",
+        "tsv": "1ab0e1545d710eb9478dfe6e37aa182faa5d9ccf4af9a9b68e980aa898da322b",
+        "previous": "c0aa78f83bdb0bedd3f07de6c8f373876f00d7d6aa40466bd46fd93e21cdc407"
       },
       "preview": "study/GeneEffects/preview.jpg",
       "review": "study/GeneEffects/review.json",
       "visual_review": {
-        "key": "study/GeneEffects",
-        "png_sha256": "c0aa78f83bdb0bedd3f07de6c8f373876f00d7d6aa40466bd46fd93e21cdc407",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "GeneEffects",
+        "png_sha256": "3b8ef79a6ac7a05c8c9e9742ab1f8ddfed9c2cf39618db451c237d4cf26291a5",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/BulkMA",
       "id": "BulkMA",
       "section": "study",
-      "level": null,
       "form": "ma",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/BulkMA/BulkMA.png",
         "svg": "study/BulkMA/BulkMA.svg",
         "pdf": "study/BulkMA/BulkMA.pdf",
         "tsv": "study/BulkMA/BulkMA.tsv",
-        "spec": "study/BulkMA/input/BulkMA.spec.json"
+        "spec": "study/BulkMA/input/BulkMA.spec.json",
+        "previous": "study/BulkMA/previous.png"
       },
       "sha256": {
-        "png": "b302a101f26b8b992ab8ede90ce9ba508c2abbe40d99f43a2fa63131dcba60fe",
-        "svg": "1ddc80b718b663e9460e4cb31ee440f27a387af413b2ea92a9a41423787ab5d9",
-        "pdf": "d40552c488e086b74c1df559c8eb032b433cc9e5ac0f6f519975cd71ca9c3498",
-        "tsv": "a4d4798fd085b7005093a13020fda2bc745e9b2b7e8112f22d22e2e0a5cc8639"
+        "png": "e16e150b8fbc9cbe8f645db95d77bd49cc49595aca7a9bb7be89414bb607f668",
+        "svg": "e07b17b390512ff0bd4e43eb0347c528620c8d2174667e21b7ad537b77d07eb8",
+        "pdf": "f5295b1e925f04766b67c110c8588cd4631479b3e44629eaeb0cc970f67d6b36",
+        "tsv": "18c29236ed05e93c2fb9c93b2c5640a43e2b3e630e53591700566d02c75fb6f6",
+        "previous": "b302a101f26b8b992ab8ede90ce9ba508c2abbe40d99f43a2fa63131dcba60fe"
       },
       "preview": "study/BulkMA/preview.jpg",
       "review": "study/BulkMA/review.json",
       "visual_review": {
-        "key": "study/BulkMA",
-        "png_sha256": "b302a101f26b8b992ab8ede90ce9ba508c2abbe40d99f43a2fa63131dcba60fe",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "BulkMA",
+        "png_sha256": "e16e150b8fbc9cbe8f645db95d77bd49cc49595aca7a9bb7be89414bb607f668",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/Pathways",
       "id": "Pathways",
       "section": "study",
-      "level": null,
       "form": "enrichment_summary",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/Pathways/Pathways.png",
         "svg": "study/Pathways/Pathways.svg",
         "pdf": "study/Pathways/Pathways.pdf",
         "tsv": "study/Pathways/Pathways.tsv",
-        "spec": "study/Pathways/input/Pathways.spec.json"
+        "spec": "study/Pathways/input/Pathways.spec.json",
+        "previous": "study/Pathways/previous.png"
       },
       "sha256": {
-        "png": "f669f7bd701c4e2ead047822c6d072657418fe737ae84369197b38c70496771f",
-        "svg": "6b7602785b47ee5e788b7ff9267b70dd0dc6877e0d85417dd488a9317165c25a",
-        "pdf": "8d269422cb1d5abae2999bbac2803d0e1e021da7a4e3b2ec970b5c5a96651781",
-        "tsv": "747fc691c394a18e19f75762a315a17677f4392e944ce512c29564440d535271"
+        "png": "d878ac7b221eb1b5db4bae530d4c4824763a17b73fbbea8e0a63ecb7bb5cb258",
+        "svg": "f7f6792cd65f661fbd0ac892b3f76a6683d9718ba6c6532d242a6823d9805c8f",
+        "pdf": "19078e5cf47522799db59398871d8db5dd59dffd9769bf52940d4f5c36817205",
+        "tsv": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
+        "previous": "f669f7bd701c4e2ead047822c6d072657418fe737ae84369197b38c70496771f"
       },
       "preview": "study/Pathways/preview.jpg",
       "review": "study/Pathways/review.json",
       "visual_review": {
-        "key": "study/Pathways",
-        "png_sha256": "f669f7bd701c4e2ead047822c6d072657418fe737ae84369197b38c70496771f",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "Pathways",
+        "png_sha256": "d878ac7b221eb1b5db4bae530d4c4824763a17b73fbbea8e0a63ecb7bb5cb258",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/EnrichmentTracks",
       "id": "EnrichmentTracks",
       "section": "study",
-      "level": null,
       "form": "gsea_curves",
       "assay": "bulk",
+      "level": null,
       "assets": {
         "png": "study/EnrichmentTracks/EnrichmentTracks.png",
         "svg": "study/EnrichmentTracks/EnrichmentTracks.svg",
         "pdf": "study/EnrichmentTracks/EnrichmentTracks.pdf",
         "tsv": "study/EnrichmentTracks/EnrichmentTracks.tsv",
-        "spec": "study/EnrichmentTracks/input/EnrichmentTracks.spec.json"
+        "spec": "study/EnrichmentTracks/input/EnrichmentTracks.spec.json",
+        "previous": "study/EnrichmentTracks/previous.png"
       },
       "sha256": {
         "png": "d5fef04ba9fb1fa3d84fa71e69491c2cd8bee33974614473486e5a47bbb27a92",
-        "svg": "b04e9547444652c57134e5aaabde24d4da32030710e0ae4ec275031bb4af4fc8",
-        "pdf": "bfd7378e37ebff119d825299dbef8b10416a7b44ca7841c8010b7fb59e2fc438",
-        "tsv": "a7a8a8fd51bd5c2217bf8eb576a9eefa05b5a27af7bbf297f63cb920f8bcef10"
+        "svg": "d2a92aad3ee2fc4f49224fbea6f2badd7cd5bf2b25db93874a393a06cac45bd1",
+        "pdf": "a2a4438871ce98198c3c09dd04432fc038104ec48c8ebd3d588db53eaab64519",
+        "tsv": "a7a8a8fd51bd5c2217bf8eb576a9eefa05b5a27af7bbf297f63cb920f8bcef10",
+        "previous": "d5fef04ba9fb1fa3d84fa71e69491c2cd8bee33974614473486e5a47bbb27a92"
       },
       "preview": "study/EnrichmentTracks/preview.jpg",
       "review": "study/EnrichmentTracks/review.json",
       "visual_review": {
-        "key": "study/EnrichmentTracks",
+        "id": "EnrichmentTracks",
         "png_sha256": "d5fef04ba9fb1fa3d84fa71e69491c2cd8bee33974614473486e5a47bbb27a92",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/SingleCellMain",
       "id": "SingleCellMain",
       "section": "study",
-      "level": null,
       "form": "study_overview",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/SingleCellMain/SingleCellMain.png",
         "svg": "study/SingleCellMain/SingleCellMain.svg",
         "pdf": "study/SingleCellMain/SingleCellMain.pdf",
         "tsv": "study/SingleCellMain/SingleCellMain.tsv",
-        "spec": "study/SingleCellMain/input/SingleCellMain.spec.json"
+        "spec": "study/SingleCellMain/input/SingleCellMain.spec.json",
+        "previous": "study/SingleCellMain/previous.png"
       },
       "sha256": {
-        "png": "530254276806a4e429303e99064541cfc22a516af1eb9546f738992878223285",
-        "svg": "d3e91576b892a26ca02d45cc3ffadd515ac30605c78bb863d76501ea995e8628",
-        "pdf": "c5f80e69cc7368174008b3af56f5ea823169bcd7e13bcb1e2fdf7d93c3dfd249",
-        "tsv": "594fed26870fd7e384e779b56418035036e142e44b5238c5c3c9e1e74fbbdf9e"
+        "png": "354f8fbb95ac1731f9adbc2dc610830db6877b12b99cab6df77d3e5a7c97ad96",
+        "svg": "04a3ad847c038b5e90491d69d862c1e1705f7cc68e81d17dd2cd812e66dc3406",
+        "pdf": "5600abe9f0400dae35a67e7c11c65f907034ea19fcc1472c5ba465526f54775b",
+        "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
+        "previous": "e37bb5db12bbab9d85dbbc79463ba5b8e97839457db8b8d14956273be9ec2abe"
       },
       "preview": "study/SingleCellMain/preview.jpg",
       "review": "study/SingleCellMain/review.json",
       "visual_review": {
-        "key": "study/SingleCellMain",
-        "png_sha256": "530254276806a4e429303e99064541cfc22a516af1eb9546f738992878223285",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "SingleCellMain",
+        "png_sha256": "354f8fbb95ac1731f9adbc2dc610830db6877b12b99cab6df77d3e5a7c97ad96",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 178,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": true
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/CellQC",
       "id": "CellQC",
       "section": "study",
-      "level": null,
       "form": "qc_distribution",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/CellQC/CellQC.png",
         "svg": "study/CellQC/CellQC.svg",
         "pdf": "study/CellQC/CellQC.pdf",
         "tsv": "study/CellQC/CellQC.tsv",
-        "spec": "study/CellQC/input/CellQC.spec.json"
+        "spec": "study/CellQC/input/CellQC.spec.json",
+        "previous": "study/CellQC/previous.png"
       },
       "sha256": {
-        "png": "33b183b77eaa0d1cedbc502d52db479a0926007753d1faba2be70256307ab434",
-        "svg": "d0f6b443ce84dd9e29fbc7604a88b0baa991bc7726acc5d7cccafcf3edb5b89f",
-        "pdf": "02611b7c913a3ef2a6dc5d47b23a0193366698047bf596e5331130ddf9e682de",
-        "tsv": "79d01ea1ce6117525340c9dde0511205e12a6c677e3bdb99af3e6162b0e3be14"
+        "png": "3b187f0b98e05321499e49160aaaea0dd5a4f260d660d00bec7a184e593574b5",
+        "svg": "6e7bd24d21659842f09d2c2588f8e96dfa0a76e7760a02df1dce62a67c91e529",
+        "pdf": "6348dfbf021fef96e5831807f7586b91338854286297218d21d3ab6a4c96eb52",
+        "tsv": "6bd4de4bd92a969e9a16351c3864fa79a27c44ff5626299810ae5e3cf696092c",
+        "previous": "33b183b77eaa0d1cedbc502d52db479a0926007753d1faba2be70256307ab434"
       },
       "preview": "study/CellQC/preview.jpg",
       "review": "study/CellQC/review.json",
       "visual_review": {
-        "key": "study/CellQC",
-        "png_sha256": "33b183b77eaa0d1cedbc502d52db479a0926007753d1faba2be70256307ab434",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "CellQC",
+        "png_sha256": "3b187f0b98e05321499e49160aaaea0dd5a4f260d660d00bec7a184e593574b5",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/DonorCounts",
       "id": "DonorCounts",
       "section": "study",
-      "level": null,
       "form": "donor_summary",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/DonorCounts/DonorCounts.png",
         "svg": "study/DonorCounts/DonorCounts.svg",
         "pdf": "study/DonorCounts/DonorCounts.pdf",
         "tsv": "study/DonorCounts/DonorCounts.tsv",
-        "spec": "study/DonorCounts/input/DonorCounts.spec.json"
+        "spec": "study/DonorCounts/input/DonorCounts.spec.json",
+        "previous": "study/DonorCounts/previous.png"
       },
       "sha256": {
-        "png": "9f3e7fbf7c96cd84ab6b90cf9f9600bf19addd5bf32e6df16c6a9f01fadd202e",
-        "svg": "278f2a3fd72c1914a2ed267fac4ebce471d7d70195f84333a63a46ed8654b755",
-        "pdf": "a19657bc95d7aa2985ec47fb337ce136d7b782619ada9389b733506d88a59d0b",
-        "tsv": "917667b2ee1793b81b8a98bd425849b61e703d13c7572c62ea028efe9d4df2ff"
+        "png": "3e19dc9cd765e8ba384167b50fc80cd40327e6fc9e9c677ecc19853564d3d5c2",
+        "svg": "3aa33a6b4dc5091a9ad839281bf517e020f41d2ccb44d01d94038c2c70ca8d97",
+        "pdf": "a533c09c6711cab5b366cb99beac28ad282bec7f6bffc16a6a86d34b885478a6",
+        "tsv": "917667b2ee1793b81b8a98bd425849b61e703d13c7572c62ea028efe9d4df2ff",
+        "previous": "9f3e7fbf7c96cd84ab6b90cf9f9600bf19addd5bf32e6df16c6a9f01fadd202e"
       },
       "preview": "study/DonorCounts/preview.jpg",
       "review": "study/DonorCounts/review.json",
       "visual_review": {
-        "key": "study/DonorCounts",
-        "png_sha256": "9f3e7fbf7c96cd84ab6b90cf9f9600bf19addd5bf32e6df16c6a9f01fadd202e",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "DonorCounts",
+        "png_sha256": "3e19dc9cd765e8ba384167b50fc80cd40327e6fc9e9c677ecc19853564d3d5c2",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/CellBatches",
       "id": "CellBatches",
       "section": "study",
-      "level": null,
       "form": "batch_embedding",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/CellBatches/CellBatches.png",
         "svg": "study/CellBatches/CellBatches.svg",
         "pdf": "study/CellBatches/CellBatches.pdf",
         "tsv": "study/CellBatches/CellBatches.tsv",
-        "spec": "study/CellBatches/input/CellBatches.spec.json"
+        "spec": "study/CellBatches/input/CellBatches.spec.json",
+        "previous": "study/CellBatches/previous.png"
       },
       "sha256": {
-        "png": "f356757fe05f9de695f3952dfa186f9bdc963f46da9488e80b9801ecdeae6183",
-        "svg": "28c0e1f854df3772fca5b763f23565025027a4f96579a51114cb54be18e6f9e7",
-        "pdf": "28f5254c3879aaff6a9ca923b61c8fc3c9564ddf340b7594b4ccfdcf35fccb26",
-        "tsv": "122f44e8f3fb4444d7bf255879002cb71958bda31e78ecb9627a62d06440a63a"
+        "png": "d3bf316be3d6063a889cd3e6e6947a70e83e1873f4764b7be115985226552de2",
+        "svg": "718569e917e279804e1dbb54591b17216a595a4c3a042efbe943bd0d6dee2fd9",
+        "pdf": "ff41f69729f9807594d92bab86d68b4bd84483d4aa74c9cdbf71e76445848e66",
+        "tsv": "284326b9a7a92ff62458a82cc8b1471ebb2414674328eb45f39edbc7b1ca6bfc",
+        "previous": "f356757fe05f9de695f3952dfa186f9bdc963f46da9488e80b9801ecdeae6183"
       },
       "preview": "study/CellBatches/preview.jpg",
       "review": "study/CellBatches/review.json",
       "visual_review": {
-        "key": "study/CellBatches",
-        "png_sha256": "f356757fe05f9de695f3952dfa186f9bdc963f46da9488e80b9801ecdeae6183",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "CellBatches",
+        "png_sha256": "d3bf316be3d6063a889cd3e6e6947a70e83e1873f4764b7be115985226552de2",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/CellTypes",
       "id": "CellTypes",
       "section": "study",
-      "level": null,
       "form": "celltype_embedding",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/CellTypes/CellTypes.png",
         "svg": "study/CellTypes/CellTypes.svg",
         "pdf": "study/CellTypes/CellTypes.pdf",
         "tsv": "study/CellTypes/CellTypes.tsv",
-        "spec": "study/CellTypes/input/CellTypes.spec.json"
+        "spec": "study/CellTypes/input/CellTypes.spec.json",
+        "previous": "study/CellTypes/previous.png"
       },
       "sha256": {
-        "png": "b3c574525dd678752e066940582ee985468cc337e3de8763fe861e3c1dd9fc71",
-        "svg": "01af77dcc281f56ab36937414409b3c915452bc12061f289665f4c7070c5f273",
-        "pdf": "a236790717af49754732320331a968e4148c65b582a3350ccac6e8c9298890a1",
-        "tsv": "09586fdcfc2f76b57160706f00c1d2ef8c02bea25a23ee4c5df20baf8c905ea4"
+        "png": "812a64646cd53bc968449e96474cc70cd5bc5e7005978bfbb9cec1cc3e82116d",
+        "svg": "f70780884bbda9df215e35c7313c1bbbfe1d93ca5f40fa3de8b69e0374f4066e",
+        "pdf": "b921be7259ae966d85789a0befd4a0127a01c3134694737ec7aa5c646973217b",
+        "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
+        "previous": "3335963492525d15289cbba5bdc707145c75ec7b068c612ddd6fa2f5f402ff42"
       },
       "preview": "study/CellTypes/preview.jpg",
       "review": "study/CellTypes/review.json",
       "visual_review": {
-        "key": "study/CellTypes",
-        "png_sha256": "b3c574525dd678752e066940582ee985468cc337e3de8763fe861e3c1dd9fc71",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "CellTypes",
+        "png_sha256": "812a64646cd53bc968449e96474cc70cd5bc5e7005978bfbb9cec1cc3e82116d",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/MarkerDot",
       "id": "MarkerDot",
       "section": "study",
-      "level": null,
       "form": "marker_dot",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/MarkerDot/MarkerDot.png",
         "svg": "study/MarkerDot/MarkerDot.svg",
         "pdf": "study/MarkerDot/MarkerDot.pdf",
         "tsv": "study/MarkerDot/MarkerDot.tsv",
-        "spec": "study/MarkerDot/input/MarkerDot.spec.json"
+        "spec": "study/MarkerDot/input/MarkerDot.spec.json",
+        "previous": "study/MarkerDot/previous.png"
       },
       "sha256": {
-        "png": "b44703d5ee7e43732b024f4618f133b7d937e435fcd9d410f1a0c33ecf712c21",
-        "svg": "9f8265e13042e1beeab4ec965ded6cab8648d6e973375e7aa97f16f9710bcb1f",
-        "pdf": "04095564ff8be6016ed11dc6e3ab79b81e4f3107583ecda321454b6989b84ee5",
-        "tsv": "dcc1d38c0fb3b0c55d48e3c18891fca67d22ecfebc68f8d5bf03582f8c89e1e1"
+        "png": "c4c8a4a1cab5228046200263b644ee629e7e0f329fb2fcba6233f15b41b40837",
+        "svg": "2f4af3dc9d778df59791156c33f974619f9433c72f25097375f307cf9b163ac4",
+        "pdf": "08efafca282e62addf2175471ba00580528b7360e3555563dfdd1b2c62d63471",
+        "tsv": "084691ca6c6afa2d8deb7bf77264490d31c052f721a3a4e7e32bf815e7216745",
+        "previous": "b44703d5ee7e43732b024f4618f133b7d937e435fcd9d410f1a0c33ecf712c21"
       },
       "preview": "study/MarkerDot/preview.jpg",
       "review": "study/MarkerDot/review.json",
       "visual_review": {
-        "key": "study/MarkerDot",
-        "png_sha256": "b44703d5ee7e43732b024f4618f133b7d937e435fcd9d410f1a0c33ecf712c21",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "MarkerDot",
+        "png_sha256": "c4c8a4a1cab5228046200263b644ee629e7e0f329fb2fcba6233f15b41b40837",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/MarkerFeatures",
       "id": "MarkerFeatures",
       "section": "study",
-      "level": null,
       "form": "marker_features",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/MarkerFeatures/MarkerFeatures.png",
         "svg": "study/MarkerFeatures/MarkerFeatures.svg",
         "pdf": "study/MarkerFeatures/MarkerFeatures.pdf",
         "tsv": "study/MarkerFeatures/MarkerFeatures.tsv",
-        "spec": "study/MarkerFeatures/input/MarkerFeatures.spec.json"
+        "spec": "study/MarkerFeatures/input/MarkerFeatures.spec.json",
+        "previous": "study/MarkerFeatures/previous.png"
       },
       "sha256": {
-        "png": "75274b70bdca5ff68db3da5964b6302d022c0dc8d7d2a9ced721f39a90b899c5",
-        "svg": "3051f3dab2c2bcbe67e7004ecff77603f9259649d1eed652e485169ed47b720e",
-        "pdf": "2470c6f242b95c42301c55224b48b82ddf36ed4dc1bce89c40551f716ec1cbfd",
-        "tsv": "d6cc0c1a30f25b1b208d253e335698d9faa4a6f6c979b0bf94cfd1ca4106f8d7"
+        "png": "c37779d72b26a15bfaf784f8dabdc1287d40f372c027f43838efe238fbc4bd8a",
+        "svg": "7c5e6960a4fbb44d4f97ca2b8be554e0c3dd24bef0de6ae7f571ce8d330fe13b",
+        "pdf": "7cedd913f8b570672387f0b290402742096ac14b40b80c5dbd995bc76599ee03",
+        "tsv": "76c11e9ffa15b9d801484285de9435874ed3739cd8f8618b1b7cda3a715e8186",
+        "previous": "75274b70bdca5ff68db3da5964b6302d022c0dc8d7d2a9ced721f39a90b899c5"
       },
       "preview": "study/MarkerFeatures/preview.jpg",
       "review": "study/MarkerFeatures/review.json",
       "visual_review": {
-        "key": "study/MarkerFeatures",
-        "png_sha256": "75274b70bdca5ff68db3da5964b6302d022c0dc8d7d2a9ced721f39a90b899c5",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "MarkerFeatures",
+        "png_sha256": "c37779d72b26a15bfaf784f8dabdc1287d40f372c027f43838efe238fbc4bd8a",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/DonorComposition",
       "id": "DonorComposition",
       "section": "study",
-      "level": null,
       "form": "donor_composition",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/DonorComposition/DonorComposition.png",
         "svg": "study/DonorComposition/DonorComposition.svg",
         "pdf": "study/DonorComposition/DonorComposition.pdf",
         "tsv": "study/DonorComposition/DonorComposition.tsv",
-        "spec": "study/DonorComposition/input/DonorComposition.spec.json"
+        "spec": "study/DonorComposition/input/DonorComposition.spec.json",
+        "previous": "study/DonorComposition/previous.png"
       },
       "sha256": {
         "png": "5ced9b8b4c87c21f788f78133a86389c8b9e59377583f856f12633f2602d833e",
-        "svg": "d30416f6216794a9e9fe17e8ad8bcea21260654d1b96b20f6a1333c95112de3f",
-        "pdf": "652d58f1c832cb3a59ec7c209ff0928dbfacd5c7b4a7014af7dbf9aed2dbde79",
-        "tsv": "580351bb8a1332b9af951769e9d26e83e50b51540b2853c7ed853bf13ffc63b3"
+        "svg": "bc46a7b1146b9a46cd97dd0add03f787cce99d728d597534ddd5c3ab1cc2839f",
+        "pdf": "f585f3e54d75928b07596c8ebf3af52e4cd335b97c826363fefbe50578fe88e8",
+        "tsv": "580351bb8a1332b9af951769e9d26e83e50b51540b2853c7ed853bf13ffc63b3",
+        "previous": "5ced9b8b4c87c21f788f78133a86389c8b9e59377583f856f12633f2602d833e"
       },
       "preview": "study/DonorComposition/preview.jpg",
       "review": "study/DonorComposition/review.json",
       "visual_review": {
-        "key": "study/DonorComposition",
+        "id": "DonorComposition",
         "png_sha256": "5ced9b8b4c87c21f788f78133a86389c8b9e59377583f856f12633f2602d833e",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/DonorDE",
       "id": "DonorDE",
       "section": "study",
-      "level": null,
       "form": "donor_differential",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/DonorDE/DonorDE.png",
         "svg": "study/DonorDE/DonorDE.svg",
         "pdf": "study/DonorDE/DonorDE.pdf",
         "tsv": "study/DonorDE/DonorDE.tsv",
-        "spec": "study/DonorDE/input/DonorDE.spec.json"
+        "spec": "study/DonorDE/input/DonorDE.spec.json",
+        "previous": "study/DonorDE/previous.png"
       },
       "sha256": {
-        "png": "4ba3bb3a0fc03b9055b7cc0d9ebe461fd8c8a2da699e435c0bc7ef0ab80b90f1",
-        "svg": "8ce6d0ca6d7469bae74626c128487e9615c47836b3676d8e892e1b0ea178a0ff",
-        "pdf": "db4a8871e06883758a5b6266d7b6bcb3631db40c124596e19d7c4e0716113f55",
-        "tsv": "df439ee21186f3fe7e78ca1c8ce9e9999cad2d944312011b4c2a4838011037a9"
+        "png": "7926091573d5cd8e8113e0f508a4bbe6d0853233b199cd424e1ab5165c6d5a1c",
+        "svg": "dc23ce220151328313e6d3d9ca2307ce47cc5e514c364cd0a86c06e840162150",
+        "pdf": "92aef54fe503d0bdbe4e3356f5ce01d761c7770b516be62251d1c3353063a9c0",
+        "tsv": "2043bd0715408de925227544cb406505c251bef93ce3f5b0b01ad3f45d1c5d6a",
+        "previous": "4ba3bb3a0fc03b9055b7cc0d9ebe461fd8c8a2da699e435c0bc7ef0ab80b90f1"
       },
       "preview": "study/DonorDE/preview.jpg",
       "review": "study/DonorDE/review.json",
       "visual_review": {
-        "key": "study/DonorDE",
-        "png_sha256": "4ba3bb3a0fc03b9055b7cc0d9ebe461fd8c8a2da699e435c0bc7ef0ab80b90f1",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "DonorDE",
+        "png_sha256": "7926091573d5cd8e8113e0f508a4bbe6d0853233b199cd424e1ab5165c6d5a1c",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/DonorEffects",
       "id": "DonorEffects",
       "section": "study",
-      "level": null,
       "form": "effect_intervals",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/DonorEffects/DonorEffects.png",
         "svg": "study/DonorEffects/DonorEffects.svg",
         "pdf": "study/DonorEffects/DonorEffects.pdf",
         "tsv": "study/DonorEffects/DonorEffects.tsv",
-        "spec": "study/DonorEffects/input/DonorEffects.spec.json"
+        "spec": "study/DonorEffects/input/DonorEffects.spec.json",
+        "previous": "study/DonorEffects/previous.png"
       },
       "sha256": {
-        "png": "6721920ce1107d325a65173f1ecee308d95cf5e30b30967e62e6f2c377975402",
-        "svg": "8441b461d49926caa6e72254fd2f9c8f6f6e0e1398647be81cb60e4dc27324ed",
-        "pdf": "ab067280a5ae338fb58921621e6f774ef56023449e0c2eb62d780f03551da8a1",
-        "tsv": "1ab0e1545d710eb9478dfe6e37aa182faa5d9ccf4af9a9b68e980aa898da322b"
+        "png": "a089649c206967df3949ac35abe695b2197802a2235a418a1b65ef4dc3360f6f",
+        "svg": "72870e6ed45dda07f25dfd90a2203f8946fe74281295f4a3b9b7754013d1c738",
+        "pdf": "1e82a86c393db494ed3c09ac92d73731ed29f15fe538934ba0488d9238c554a7",
+        "tsv": "1ab0e1545d710eb9478dfe6e37aa182faa5d9ccf4af9a9b68e980aa898da322b",
+        "previous": "6721920ce1107d325a65173f1ecee308d95cf5e30b30967e62e6f2c377975402"
       },
       "preview": "study/DonorEffects/preview.jpg",
       "review": "study/DonorEffects/review.json",
       "visual_review": {
-        "key": "study/DonorEffects",
-        "png_sha256": "6721920ce1107d325a65173f1ecee308d95cf5e30b30967e62e6f2c377975402",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "DonorEffects",
+        "png_sha256": "a089649c206967df3949ac35abe695b2197802a2235a418a1b65ef4dc3360f6f",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/DonorHeatmap",
       "id": "DonorHeatmap",
       "section": "study",
-      "level": null,
       "form": "differential_heatmap",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/DonorHeatmap/DonorHeatmap.png",
         "svg": "study/DonorHeatmap/DonorHeatmap.svg",
         "pdf": "study/DonorHeatmap/DonorHeatmap.pdf",
         "tsv": "study/DonorHeatmap/DonorHeatmap.tsv",
-        "spec": "study/DonorHeatmap/input/DonorHeatmap.spec.json"
+        "spec": "study/DonorHeatmap/input/DonorHeatmap.spec.json",
+        "previous": "study/DonorHeatmap/previous.png"
       },
       "sha256": {
         "png": "94295fc5c5e93108df97f74ba71f4bc7d2250c4232eddfb68c57113cc22e3671",
-        "svg": "e0753af64f59bb43a79a01e5bce538c61f5edb9f0c3f7d69e7f1f2b8f8577ddb",
-        "pdf": "a624285440e1bbb251fb87049747a635fd965e32d455311a6cb22e4073c86d7f",
-        "tsv": "5f63da23a3d269e7e3d1f568e7f43aaee173f0c9fc11d8d4241f630a8bf02e0a"
+        "svg": "d9b3200abe736c4358d680eb0adae6753d556e3c58b13707d2caed2703a6713f",
+        "pdf": "d34a90ad60d66d1278f3decb9919b297be9254bb5824d081c2dc5cf272edbebc",
+        "tsv": "5f63da23a3d269e7e3d1f568e7f43aaee173f0c9fc11d8d4241f630a8bf02e0a",
+        "previous": "94295fc5c5e93108df97f74ba71f4bc7d2250c4232eddfb68c57113cc22e3671"
       },
       "preview": "study/DonorHeatmap/preview.jpg",
       "review": "study/DonorHeatmap/review.json",
       "visual_review": {
-        "key": "study/DonorHeatmap",
+        "id": "DonorHeatmap",
         "png_sha256": "94295fc5c5e93108df97f74ba71f4bc7d2250c4232eddfb68c57113cc22e3671",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/DonorMA",
       "id": "DonorMA",
       "section": "study",
-      "level": null,
       "form": "ma",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/DonorMA/DonorMA.png",
         "svg": "study/DonorMA/DonorMA.svg",
         "pdf": "study/DonorMA/DonorMA.pdf",
         "tsv": "study/DonorMA/DonorMA.tsv",
-        "spec": "study/DonorMA/input/DonorMA.spec.json"
+        "spec": "study/DonorMA/input/DonorMA.spec.json",
+        "previous": "study/DonorMA/previous.png"
       },
       "sha256": {
-        "png": "35d0a97cd56f52c87bd83ca599a29edfa93c018bd29a01688a1cbf2008bd22b3",
-        "svg": "a1477d49133561373a9efd5de42c81d2ec399af21b5538d571e9c10a41f26a64",
-        "pdf": "c1803bef1a088545fbaf622e20e3d590d50710e166d744426f4db50da83cb58d",
-        "tsv": "a4d4798fd085b7005093a13020fda2bc745e9b2b7e8112f22d22e2e0a5cc8639"
+        "png": "5645789e1521756ba786125a9251b7a8682e4a38a035ccf2d8f2e1664015e30b",
+        "svg": "685cfe1b337d09a76bacca6b7726eb00e943c9e0602dd99a73077e0366494172",
+        "pdf": "fee13bdfe0570e133fd54888cc097faf5add98a724e2f11c926ae3c2b163550f",
+        "tsv": "18c29236ed05e93c2fb9c93b2c5640a43e2b3e630e53591700566d02c75fb6f6",
+        "previous": "35d0a97cd56f52c87bd83ca599a29edfa93c018bd29a01688a1cbf2008bd22b3"
       },
       "preview": "study/DonorMA/preview.jpg",
       "review": "study/DonorMA/review.json",
       "visual_review": {
-        "key": "study/DonorMA",
-        "png_sha256": "35d0a97cd56f52c87bd83ca599a29edfa93c018bd29a01688a1cbf2008bd22b3",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "DonorMA",
+        "png_sha256": "5645789e1521756ba786125a9251b7a8682e4a38a035ccf2d8f2e1664015e30b",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/DonorPathways",
       "id": "DonorPathways",
       "section": "study",
-      "level": null,
       "form": "enrichment_summary",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/DonorPathways/DonorPathways.png",
         "svg": "study/DonorPathways/DonorPathways.svg",
         "pdf": "study/DonorPathways/DonorPathways.pdf",
         "tsv": "study/DonorPathways/DonorPathways.tsv",
-        "spec": "study/DonorPathways/input/DonorPathways.spec.json"
+        "spec": "study/DonorPathways/input/DonorPathways.spec.json",
+        "previous": "study/DonorPathways/previous.png"
       },
       "sha256": {
-        "png": "2249100c0d6768b39130dcb9e024d3831f3b182d1d4cdc9e05fdb49a682eea78",
-        "svg": "aa04527b1e33facce626f3fcc8ceec1504563299de0dbf5dc90e92edf9a18937",
-        "pdf": "fdbbeee6e018ada173aa3d38620c10ca19564945056775fa024e1c17b1d73fcf",
-        "tsv": "747fc691c394a18e19f75762a315a17677f4392e944ce512c29564440d535271"
+        "png": "fb04b2767045410f8ab91e45b3d019a60e6b6e3495fb1db87b20c9448d5e829e",
+        "svg": "d17c16051991be7dc62d1f164a5a558b30870487dec43d3e48906a034d714de3",
+        "pdf": "657edbfb32b26c00e4efa64b2143dbe834480e8228fe4e4c6ef1ff785d4995e9",
+        "tsv": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
+        "previous": "2249100c0d6768b39130dcb9e024d3831f3b182d1d4cdc9e05fdb49a682eea78"
       },
       "preview": "study/DonorPathways/preview.jpg",
       "review": "study/DonorPathways/review.json",
       "visual_review": {
-        "key": "study/DonorPathways",
-        "png_sha256": "2249100c0d6768b39130dcb9e024d3831f3b182d1d4cdc9e05fdb49a682eea78",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "id": "DonorPathways",
+        "png_sha256": "fb04b2767045410f8ab91e45b3d019a60e6b6e3495fb1db87b20c9448d5e829e",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     },
     {
       "key": "study/DonorEnrichmentTracks",
       "id": "DonorEnrichmentTracks",
       "section": "study",
-      "level": null,
       "form": "gsea_curves",
       "assay": "single_cell",
+      "level": null,
       "assets": {
         "png": "study/DonorEnrichmentTracks/DonorEnrichmentTracks.png",
         "svg": "study/DonorEnrichmentTracks/DonorEnrichmentTracks.svg",
         "pdf": "study/DonorEnrichmentTracks/DonorEnrichmentTracks.pdf",
         "tsv": "study/DonorEnrichmentTracks/DonorEnrichmentTracks.tsv",
-        "spec": "study/DonorEnrichmentTracks/input/DonorEnrichmentTracks.spec.json"
+        "spec": "study/DonorEnrichmentTracks/input/DonorEnrichmentTracks.spec.json",
+        "previous": "study/DonorEnrichmentTracks/previous.png"
       },
       "sha256": {
         "png": "56d58cd7340ff4275336b8e5ccc808c5252a22ef6861e968490c0486e8f6bc64",
-        "svg": "49eb77d43358a1417d9ebc92e4418f10ef42d06fc73976e2cf201e393989cbea",
-        "pdf": "403367bab628a68b33164e411a6b2338228fd6295f9745817eab251f6e60f7ab",
-        "tsv": "a7a8a8fd51bd5c2217bf8eb576a9eefa05b5a27af7bbf297f63cb920f8bcef10"
+        "svg": "3152812701bc385c011b6a4753095b9b157606d712c54d4b44a440e37f3a3b8b",
+        "pdf": "7f5eef56ef642fd95960c978e843a27e7855094d17e3b3e68deec63004bcb741",
+        "tsv": "a7a8a8fd51bd5c2217bf8eb576a9eefa05b5a27af7bbf297f63cb920f8bcef10",
+        "previous": "56d58cd7340ff4275336b8e5ccc808c5252a22ef6861e968490c0486e8f6bc64"
       },
       "preview": "study/DonorEnrichmentTracks/preview.jpg",
       "review": "study/DonorEnrichmentTracks/review.json",
       "visual_review": {
-        "key": "study/DonorEnrichmentTracks",
+        "id": "DonorEnrichmentTracks",
         "png_sha256": "56d58cd7340ff4275336b8e5ccc808c5252a22ef6861e968490c0486e8f6bc64",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
-      }
-    },
-    {
-      "key": "study-layout/BulkMain_column",
-      "id": "BulkMain_column",
-      "section": "study-layout",
-      "level": null,
-      "form": "study_overview",
-      "assay": null,
-      "assets": {
-        "png": "study-layout/BulkMain_column/BulkMain_column.png",
-        "svg": "study-layout/BulkMain_column/BulkMain_column.svg",
-        "pdf": "study-layout/BulkMain_column/BulkMain_column.pdf",
-        "tsv": "study-layout/BulkMain_column/BulkMain_column.tsv",
-        "spec": "study-layout/BulkMain_column/input/BulkMain_column.spec.json"
-      },
-      "sha256": {
-        "png": "61ff894693e6c7e7a173e04bd4facb1f68c62e773044ded0aa6d1a055e9dc464",
-        "svg": "78e8ea072d52a8d89e81f6e458546f66078f48b3b6b90c28ad2adf660255b143",
-        "pdf": "91bb4c9be89e4bdd1b3d8885e29c08d51b398502b83411a38daa86fc8947413c",
-        "tsv": "f1b9e1f4621bd4038601b06cb5c121370274eaf46bd80c36b2cb0a696474f690"
-      },
-      "preview": "study-layout/BulkMain_column/preview.jpg",
-      "review": "study-layout/BulkMain_column/review.json",
-      "visual_review": {
-        "key": "study-layout/BulkMain_column",
-        "png_sha256": "61ff894693e6c7e7a173e04bd4facb1f68c62e773044ded0aa6d1a055e9dc464",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 178,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
-      }
-    },
-    {
-      "key": "study-layout/BulkMain_wide",
-      "id": "BulkMain_wide",
-      "section": "study-layout",
-      "level": null,
-      "form": "study_overview",
-      "assay": null,
-      "assets": {
-        "png": "study-layout/BulkMain_wide/BulkMain_wide.png",
-        "svg": "study-layout/BulkMain_wide/BulkMain_wide.svg",
-        "pdf": "study-layout/BulkMain_wide/BulkMain_wide.pdf",
-        "tsv": "study-layout/BulkMain_wide/BulkMain_wide.tsv",
-        "spec": "study-layout/BulkMain_wide/input/BulkMain_wide.spec.json"
-      },
-      "sha256": {
-        "png": "2b70de708da8e32e6fb43b602501adb2b0d29e8d825becc3f1d6549cf0c84e3b",
-        "svg": "2a4642221ca1a4e25333bb9a7981a1d7547f7643f972ba0b2a39336d4dc36992",
-        "pdf": "3b3cd6786571b52bc3dcd887f843855d30188c463145480ed20031e49e630639",
-        "tsv": "f1b9e1f4621bd4038601b06cb5c121370274eaf46bd80c36b2cb0a696474f690"
-      },
-      "preview": "study-layout/BulkMain_wide/preview.jpg",
-      "review": "study-layout/BulkMain_wide/review.json",
-      "visual_review": {
-        "key": "study-layout/BulkMain_wide",
-        "png_sha256": "2b70de708da8e32e6fb43b602501adb2b0d29e8d825becc3f1d6549cf0c84e3b",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 330,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
-      }
-    },
-    {
-      "key": "study-layout/BulkMain_focused",
-      "id": "BulkMain_focused",
-      "section": "study-layout",
-      "level": null,
-      "form": "study_overview",
-      "assay": null,
-      "assets": {
-        "png": "study-layout/BulkMain_focused/BulkMain_focused.png",
-        "svg": "study-layout/BulkMain_focused/BulkMain_focused.svg",
-        "pdf": "study-layout/BulkMain_focused/BulkMain_focused.pdf",
-        "tsv": "study-layout/BulkMain_focused/BulkMain_focused.tsv",
-        "spec": "study-layout/BulkMain_focused/input/BulkMain_focused.spec.json"
-      },
-      "sha256": {
-        "png": "2bb127c40b6077157a623545cdd6d048140d261e5e25b49dc98adcddb7051c0b",
-        "svg": "6362835e4638bafad71885cb440abf6d580d546a44fda8d0b48c8073b93a3c46",
-        "pdf": "599d5b14c7b6ca5c4b7fcfac2cab98c86107a3fc01cceb11f32030e5c7fe94aa",
-        "tsv": "f1b9e1f4621bd4038601b06cb5c121370274eaf46bd80c36b2cb0a696474f690"
-      },
-      "preview": "study-layout/BulkMain_focused/preview.jpg",
-      "review": "study-layout/BulkMain_focused/review.json",
-      "visual_review": {
-        "key": "study-layout/BulkMain_focused",
-        "png_sha256": "2bb127c40b6077157a623545cdd6d048140d261e5e25b49dc98adcddb7051c0b",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
-      }
-    },
-    {
-      "key": "study-layout/BulkMain_detail",
-      "id": "BulkMain_detail",
-      "section": "study-layout",
-      "level": null,
-      "form": "study_overview",
-      "assay": null,
-      "assets": {
-        "png": "study-layout/BulkMain_detail/BulkMain_detail.png",
-        "svg": "study-layout/BulkMain_detail/BulkMain_detail.svg",
-        "pdf": "study-layout/BulkMain_detail/BulkMain_detail.pdf",
-        "tsv": "study-layout/BulkMain_detail/BulkMain_detail.tsv",
-        "spec": "study-layout/BulkMain_detail/input/BulkMain_detail.spec.json"
-      },
-      "sha256": {
-        "png": "94c8f314faa6b421cacb866b9963e9823c48e8a0c8249ea5c6482842457db47d",
-        "svg": "9375522ceae5568bfa520158eea3504eb3ced3d1a1e5f9d315a3109d881790d2",
-        "pdf": "027f56f90d31524db22899361b1e17036d3f7218efb37f933fd3204a102526ad",
-        "tsv": "f1b9e1f4621bd4038601b06cb5c121370274eaf46bd80c36b2cb0a696474f690"
-      },
-      "preview": "study-layout/BulkMain_detail/preview.jpg",
-      "review": "study-layout/BulkMain_detail/review.json",
-      "visual_review": {
-        "key": "study-layout/BulkMain_detail",
-        "png_sha256": "94c8f314faa6b421cacb866b9963e9823c48e8a0c8249ea5c6482842457db47d",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 178,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
-      }
-    },
-    {
-      "key": "study-layout/SingleCellMain_column",
-      "id": "SingleCellMain_column",
-      "section": "study-layout",
-      "level": null,
-      "form": "study_overview",
-      "assay": null,
-      "assets": {
-        "png": "study-layout/SingleCellMain_column/SingleCellMain_column.png",
-        "svg": "study-layout/SingleCellMain_column/SingleCellMain_column.svg",
-        "pdf": "study-layout/SingleCellMain_column/SingleCellMain_column.pdf",
-        "tsv": "study-layout/SingleCellMain_column/SingleCellMain_column.tsv",
-        "spec": "study-layout/SingleCellMain_column/input/SingleCellMain_column.spec.json"
-      },
-      "sha256": {
-        "png": "10c16e2536de5a79195044f683adfb6d0dece5427e00802e9e0c031a4e536666",
-        "svg": "9d8788ace2342e51308bd3f1f137f02e4c946059cda6f2c31c6b167c4149687a",
-        "pdf": "aa3e39155dba3fceaa02f391cc75b0f757dcb93f5f991c4622645ce59005bf74",
-        "tsv": "594fed26870fd7e384e779b56418035036e142e44b5238c5c3c9e1e74fbbdf9e"
-      },
-      "preview": "study-layout/SingleCellMain_column/preview.jpg",
-      "review": "study-layout/SingleCellMain_column/review.json",
-      "visual_review": {
-        "key": "study-layout/SingleCellMain_column",
-        "png_sha256": "10c16e2536de5a79195044f683adfb6d0dece5427e00802e9e0c031a4e536666",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 178,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
-      }
-    },
-    {
-      "key": "study-layout/SingleCellMain_wide",
-      "id": "SingleCellMain_wide",
-      "section": "study-layout",
-      "level": null,
-      "form": "study_overview",
-      "assay": null,
-      "assets": {
-        "png": "study-layout/SingleCellMain_wide/SingleCellMain_wide.png",
-        "svg": "study-layout/SingleCellMain_wide/SingleCellMain_wide.svg",
-        "pdf": "study-layout/SingleCellMain_wide/SingleCellMain_wide.pdf",
-        "tsv": "study-layout/SingleCellMain_wide/SingleCellMain_wide.tsv",
-        "spec": "study-layout/SingleCellMain_wide/input/SingleCellMain_wide.spec.json"
-      },
-      "sha256": {
-        "png": "b51f8dd5014cadddfd8a3b0088f7774514ef31992ca153eaa69d2d2b2df06796",
-        "svg": "24f8eea64d7cd3f235d9efe1113535f9567982cf17ccb8c67fe74f3084cdd1ee",
-        "pdf": "295c08d078bb7ab65f784de1f6c4290d9a4746e2de6277d6be58956ca32645d0",
-        "tsv": "594fed26870fd7e384e779b56418035036e142e44b5238c5c3c9e1e74fbbdf9e"
-      },
-      "preview": "study-layout/SingleCellMain_wide/preview.jpg",
-      "review": "study-layout/SingleCellMain_wide/review.json",
-      "visual_review": {
-        "key": "study-layout/SingleCellMain_wide",
-        "png_sha256": "b51f8dd5014cadddfd8a3b0088f7774514ef31992ca153eaa69d2d2b2df06796",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 330,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
-      }
-    },
-    {
-      "key": "study-layout/SingleCellMain_focused",
-      "id": "SingleCellMain_focused",
-      "section": "study-layout",
-      "level": null,
-      "form": "study_overview",
-      "assay": null,
-      "assets": {
-        "png": "study-layout/SingleCellMain_focused/SingleCellMain_focused.png",
-        "svg": "study-layout/SingleCellMain_focused/SingleCellMain_focused.svg",
-        "pdf": "study-layout/SingleCellMain_focused/SingleCellMain_focused.pdf",
-        "tsv": "study-layout/SingleCellMain_focused/SingleCellMain_focused.tsv",
-        "spec": "study-layout/SingleCellMain_focused/input/SingleCellMain_focused.spec.json"
-      },
-      "sha256": {
-        "png": "fa18421a6149ff2d8e0686a626dd3e7b723926a1844b48ee5de0803c7fb04d4a",
-        "svg": "79219e364a2015aab760ff61b7427b26e042f3b3305a4b499bd12300e429ffb5",
-        "pdf": "20ed88331003400093067a529ec0d26dc855645859a8d29c0601f5f643314771",
-        "tsv": "594fed26870fd7e384e779b56418035036e142e44b5238c5c3c9e1e74fbbdf9e"
-      },
-      "preview": "study-layout/SingleCellMain_focused/preview.jpg",
-      "review": "study-layout/SingleCellMain_focused/review.json",
-      "visual_review": {
-        "key": "study-layout/SingleCellMain_focused",
-        "png_sha256": "fa18421a6149ff2d8e0686a626dd3e7b723926a1844b48ee5de0803c7fb04d4a",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 210,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
-      }
-    },
-    {
-      "key": "study-layout/SingleCellMain_detail",
-      "id": "SingleCellMain_detail",
-      "section": "study-layout",
-      "level": null,
-      "form": "study_overview",
-      "assay": null,
-      "assets": {
-        "png": "study-layout/SingleCellMain_detail/SingleCellMain_detail.png",
-        "svg": "study-layout/SingleCellMain_detail/SingleCellMain_detail.svg",
-        "pdf": "study-layout/SingleCellMain_detail/SingleCellMain_detail.pdf",
-        "tsv": "study-layout/SingleCellMain_detail/SingleCellMain_detail.tsv",
-        "spec": "study-layout/SingleCellMain_detail/input/SingleCellMain_detail.spec.json"
-      },
-      "sha256": {
-        "png": "018c984ab78c89cd57204d458f69d268eb828f716dd13c922487d38f95701944",
-        "svg": "b8196854b9b2ac11a8c6b29b023ff419503006df795f75eb87708c71d1577d27",
-        "pdf": "1e525d481afba13e1916165399891aecaedb28829620d725a34c07465589fd5d",
-        "tsv": "594fed26870fd7e384e779b56418035036e142e44b5238c5c3c9e1e74fbbdf9e"
-      },
-      "preview": "study-layout/SingleCellMain_detail/preview.jpg",
-      "review": "study-layout/SingleCellMain_detail/review.json",
-      "visual_review": {
-        "key": "study-layout/SingleCellMain_detail",
-        "png_sha256": "018c984ab78c89cd57204d458f69d268eb828f716dd13c922487d38f95701944",
-        "status": "SCREEN_REVIEWED",
-        "reviewer": "Codex visual self-review",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-        "target_width_mm": 178,
-        "font_measurement": "MEASUREMENT_PASS",
-        "pdf_readback": false
+        "scientific_acceptance": false
       }
     }
   ],
+  "counts": {
+    "study": 25
+  },
+  "review_scope": "Actual complete final PNG self-inspection; dense/flagged views enlarged. Screen observation is not blanket aesthetic approval, journal acceptance, calibrated print proof or independent scientific acceptance.",
   "scientific_acceptance": false
 }

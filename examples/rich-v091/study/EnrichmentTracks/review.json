@@ -1,0 +1,74 @@
+{
+  "id": "EnrichmentTracks",
+  "assay": "bulk",
+  "role": "gsea_curves",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "refined",
+  "parameters": {
+    "view": "gsea_strip",
+    "options": {
+      "curve_order": [
+        "Interferon response"
+      ],
+      "ranked_universe": 1200,
+      "metric_label": "Rank metric",
+      "contrast": "Treated versus Control / illustrative",
+      "gene_set_version": "Fictional complete gene set v0.9",
+      "title": "Stored enrichment / exact ranked tracks",
+      "line_encoding": "rank_metric"
+    },
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Fictional complete ranked result v0.9",
+      "independent_unit": "Synthetic ranked identifiers; donor contrast supplied separately",
+      "denominator": "Complete supplied ranked universe and exact supplied pathway hit sets",
+      "value_definition": "Running ES, NES, adjusted probability, leading-edge flags and ranked metric supplied separately",
+      "uncertainty_definition": "No interval supplied; adjusted probabilities are existing display inputs"
+    }
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 172.72,
+    "minimum_required_pt": 7,
+    "essential_text_count": 31,
+    "smallest_pt": 8.997220935618342,
+    "p10_pt": 8.997220935618342,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/EnrichmentTracks/EnrichmentTracks.png",
+    "svg": "study/EnrichmentTracks/EnrichmentTracks.svg",
+    "pdf": "study/EnrichmentTracks/EnrichmentTracks.pdf",
+    "tsv": "study/EnrichmentTracks/EnrichmentTracks.tsv",
+    "spec": "study/EnrichmentTracks/input/EnrichmentTracks.spec.json",
+    "previous": "study/EnrichmentTracks/previous.png"
+  },
+  "sha256": {
+    "png": "d5fef04ba9fb1fa3d84fa71e69491c2cd8bee33974614473486e5a47bbb27a92",
+    "svg": "d2a92aad3ee2fc4f49224fbea6f2badd7cd5bf2b25db93874a393a06cac45bd1",
+    "pdf": "a2a4438871ce98198c3c09dd04432fc038104ec48c8ebd3d588db53eaab64519",
+    "tsv": "a7a8a8fd51bd5c2217bf8eb576a9eefa05b5a27af7bbf297f63cb920f8bcef10",
+    "previous": "d5fef04ba9fb1fa3d84fa71e69491c2cd8bee33974614473486e5a47bbb27a92"
+  },
+  "visual_review": {
+    "id": "EnrichmentTracks",
+    "png_sha256": "d5fef04ba9fb1fa3d84fa71e69491c2cd8bee33974614473486e5a47bbb27a92",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

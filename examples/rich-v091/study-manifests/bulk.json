@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "assay": "bulk",
+  "title": "Fictional bulk transcriptomic result package",
+  "contrast": "Treated versus Control / illustrative",
+  "independent_unit": "Synthetic donor; n=12; cells nested within donors",
+  "denominator": "12 synthetic donors; 1200 fictional gene results; explicit cell-level display denominators",
+  "frozen_results": true,
+  "upstream_qc": "reviewed",
+  "results": [
+    {
+      "role": "qc_distribution",
+      "spec": "../study/BulkQC/input/BulkQC.spec.json"
+    },
+    {
+      "role": "sample_embedding",
+      "spec": "../study/BulkPCA/input/BulkPCA.spec.json"
+    },
+    {
+      "role": "sample_correlation",
+      "spec": "../study/BulkCorrelation/input/BulkCorrelation.spec.json"
+    },
+    {
+      "role": "library_summary",
+      "spec": "../study/LibrarySizes/input/LibrarySizes.spec.json"
+    },
+    {
+      "role": "differential_expression",
+      "spec": "../study/BulkDE/input/BulkDE.spec.json"
+    },
+    {
+      "role": "differential_heatmap",
+      "spec": "../study/BulkHeatmap/input/BulkHeatmap.spec.json"
+    },
+    {
+      "role": "effect_intervals",
+      "spec": "../study/GeneEffects/input/GeneEffects.spec.json"
+    },
+    {
+      "role": "ma",
+      "spec": "../study/BulkMA/input/BulkMA.spec.json"
+    },
+    {
+      "role": "enrichment_summary",
+      "spec": "../study/Pathways/input/Pathways.spec.json"
+    },
+    {
+      "role": "gsea_curves",
+      "spec": "../study/EnrichmentTracks/input/EnrichmentTracks.spec.json"
+    },
+    {
+      "role": "study_overview",
+      "spec": "../study/BulkMain/input/BulkMain.spec.json"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "bulk.wgcna",
+  "assay": "bulk",
+  "title": "Coexpression modules and preservation",
+  "family": "modules",
+  "required_results": [
+    "module_trait",
+    "preservation",
+    "fixed_network"
+  ],
+  "specific_qc_and_limit": "Freeze module assignment and test/train cohorts; coexpression does not prove regulation.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.wgcna/input/example.spec.json",
+  "code": "scripts/figure_wgcna_views.py",
+  "sources": [
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.wgcna/example.png",
+    "svg": "bulk.wgcna/example.svg",
+    "pdf": "bulk.wgcna/example.pdf",
+    "tsv": "bulk.wgcna/example.tsv",
+    "spec": "bulk.wgcna/input/example.spec.json",
+    "preview": "bulk.wgcna/preview.jpg"
+  },
+  "sha256": {
+    "png": "fa78358ff9a3951f23bd70d4e06d6cf1b6f3b3ec96326c34cad8132b42f2da3c",
+    "svg": "4136cb2bab6097f824155022a81b5d83c59e71b3af5427444754a610f89afd5d",
+    "pdf": "e2c98f63b872f6709a86ebf4a7873fc53a7211e5e4a28e914a46091337874b2b",
+    "tsv": "3d29321eedf93cb211867f8baa034cfcf56d571229c5e69b8ef5cb1c309504c7",
+    "spec": "893dda7fcfc8874ad5c94e04f841bcd58c381115feb640349ccb6a1b12d45865"
+  },
+  "visual_review": {
+    "id": "bulk.wgcna",
+    "png_sha256": "fa78358ff9a3951f23bd70d4e06d6cf1b6f3b3ec96326c34cad8132b42f2da3c",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 190.5,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 38,
+    "smallest_pt": 17.149606299212596,
+    "p10_pt": 17.149606299212596,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

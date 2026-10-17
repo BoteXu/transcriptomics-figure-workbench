@@ -86,6 +86,15 @@ def study_plan(manifest, request, base):
                 slots[label]=color
             panels.append({'role':role,'stage':stage,'spec_sha256':hash_value(spec),'plan':plan})
         sections.append({'stage':stage,'panels':keys})
+    presentation_decisions=[]
+    for panel in panels:
+        spec=panel['plan']['spec'];renderer=spec['renderer'];mode=spec['parameters'].get('mode')
+        rich=renderer in ['figure_integrated_views.plot_integrated_view','figure_enrichment_story.plot_enrichment_story','figure_annotation_views.plot_annotation_evidence'] or spec['parameters'].get('presentation')=='integrated'
+        comparison=panel['role']
+        important=comparison in ['sample_embedding','celltype_embedding','differential_expression','donor_differential','marker_dot','study_overview','enrichment_summary']
+        presentation_decisions.append(dict(role=comparison,renderer=renderer,mode=mode,
+            state='RICH_PRESENTATION_SELECTED' if rich else 'COMPARE_POLISHED_EXTENSIONS' if important else 'CHECK_COMPLEMENTARY_INFORMATION',
+            review='Compare compatible ellipse/marginal/marker-atlas extensions before accepting a basic fallback; record missing channels or explicit user preference' if important and not rich else 'Inspect actual information hierarchy and final exports'))
     return {'schema_version':1,'state':'HOLD' if blocking else 'FIGURE_SET_PLANNED',
         'assay':assay,'title':manifest['title'],'request':request,'contrast':manifest['contrast'],
         'independent_unit':manifest['independent_unit'],'denominator':manifest['denominator'],
@@ -95,6 +104,7 @@ def study_plan(manifest, request, base):
         'review_requirements':['Inspect every single figure and every composition page at the actual target size',
             'Review hierarchy, complementary information, redundant panels, scale/units, colour meaning, labels and balance',
             'Missing upstream results remain missing; an attractive export never certifies the analysis'],
+        'presentation_decisions':presentation_decisions,
         'analysis_performed':False,'visual_acceptance':False,'scientific_acceptance':False}
 
 

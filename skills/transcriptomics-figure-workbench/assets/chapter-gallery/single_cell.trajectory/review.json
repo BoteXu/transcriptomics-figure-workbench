@@ -1,0 +1,68 @@
+{
+  "id": "single_cell.trajectory",
+  "assay": "single_cell",
+  "title": "Branches, progression and gene dynamics",
+  "family": "trajectory",
+  "required_results": [
+    "embedding",
+    "pseudotime",
+    "branch_curves",
+    "gene_trends"
+  ],
+  "specific_qc_and_limit": "Freeze root/branch and uncertainty; pseudotime is not chronological time or lineage proof.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.trajectory/input/example.spec.json",
+  "code": "scripts/figure_lineage_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.trajectory/example.png",
+    "svg": "single_cell.trajectory/example.svg",
+    "pdf": "single_cell.trajectory/example.pdf",
+    "tsv": "single_cell.trajectory/example.tsv",
+    "spec": "single_cell.trajectory/input/example.spec.json",
+    "preview": "single_cell.trajectory/preview.jpg"
+  },
+  "sha256": {
+    "png": "38b6dea88c52283a83458c4a25ee658cab255401ffc7e6d9080d71e68a9e9c2a",
+    "svg": "77f26e741fc17d1f48b7388a0c7d04a02ac2a1592ad9bc113b24a90f7ab84f28",
+    "pdf": "1ab98ce58d5083c448af8bbe92894d7f436ba6cefa913a3fd72dae0a326c1f6d",
+    "tsv": "faff137eec2c362588db85ca63ddddf5e9da40b01af085a2d1002095475d9c4f",
+    "spec": "0228a3c336191f622e47339841b8dc979ea64db35d0447be63fd56f713425943"
+  },
+  "visual_review": {
+    "id": "single_cell.trajectory",
+    "png_sha256": "38b6dea88c52283a83458c4a25ee658cab255401ffc7e6d9080d71e68a9e9c2a",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 15,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

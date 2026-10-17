@@ -1,5 +1,26 @@
 # WGCNA、已有层次结果与关联网络的绘图路由
 
+## v0.9.1 专用实现与实际实例
+
+当前使用 `figure_wgcna_views.plot_wgcna_view`。下列均有可运行 FigureSpec、准确输入 TSV 和 PNG/SVG/PDF：[专用图库](../assets/wgcna-gallery/index.html)。通过 `chapter-views --chapter bulk.wgcna` 或 `single_cell.hdwgcna` 查看具体入口，再用 `view-template` 导出。下方早期通用路由保留为替代画法，不再把通用组合图当作基础覆盖已经齐全的证据。
+
+|具体视图|冻结输入与必需含义|
+|---|---|
+|SoftPower|候选 power、signed fit、mean connectivity；明确预选值和可选参考线，不自动选 power|
+|SampleTree|样本叶序、完整合并树、批次/条件两条分类轨道|
+|ModuleTree|基因叶序、完整合并树、dynamic/merged 模块条；合并高度与叶序必须一致|
+|ModuleTrait|完整模块×性状的 r、已给 p/q 和有效独立 n，明确 raw/adjusted|
+|MM_GS / Absolute|每基因的模块、kME/MM、GS；signed 与上游 absolute 两种约定分别保留|
+|TOM / Dissimilarity|对称完整矩阵与固定顺序；TOM、adjacency、1−TOM 分别标名，不自动混换|
+|EigengeneNetwork|定向后的模块 eigengene 相关矩阵，不在绘图时计算相关|
+|EigengeneProfiles|每个独立供者的模块代表值与条件，保留全部供者点|
+|HubConnectivity|明确选择的基因、模块、kWithin 和 kME，不按图形美观筛 hub|
+|Preservation|模块大小、Zsummary、medianRank；参考线只来自明确参数|
+|MetacellQC|metacell→供者/细胞型、构成细胞数、共享细胞数；metacell 不增加供者 n|
+|ModuleActivity|每个模块的同一批细胞、完全相同坐标和共同声明的评分范围|
+
+`context` 必须声明网络类型（signed/unsigned/signed hybrid）、相关方法、独立单位及网络来源 n、模块版本、来源版本和选择范围。图中 n 是上下文声明；样本子集、metacell 和细胞显示需同时检查精确输入数量，不能以网络总 n 代替性状相关的有效 n。`module_order` 必须完整覆盖选中模块。分面列数由数据量与用户要求决定；大型矩阵保留全表并使用阅读版，不能为了标签方便删掉叶或基因。
+
 依据输入结构选择画法；WGCNA 是上游分析方法，不是一个新的通用图形种类。本包读取已审核的诊断表、树、模块身份、矩阵、评分和边表；不运行相关检验、软阈值选择、模块检测、TOM 计算或 hub 筛选。
 
 |已有数据|需要保留的字段/语义|推荐画法与表达|

@@ -1,0 +1,66 @@
+{
+  "id": "DonorPathways",
+  "assay": "single_cell",
+  "role": "enrichment_summary",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_enrichment_story.plot_enrichment_story",
+  "parameters": {
+    "mode": "ora",
+    "title": "Enrichment themes · ratios, FDR and selected gene support",
+    "background_definition": "Fictional 200-gene query / 1200 tested genes",
+    "tested_size": 1200,
+    "query_size": 200,
+    "gene_effect_limits": [
+      -4,
+      4
+    ],
+    "gene_set_version": "Illustrative frozen study sets v0.9.1",
+    "selection_definition": "All six original ORA terms; four explicitly selected genes with fictional membership",
+    "support_contrast": "Treated versus Control"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/DonorPathways/DonorPathways.png",
+    "svg": "study/DonorPathways/DonorPathways.svg",
+    "pdf": "study/DonorPathways/DonorPathways.pdf",
+    "tsv": "study/DonorPathways/DonorPathways.tsv",
+    "spec": "study/DonorPathways/input/DonorPathways.spec.json",
+    "previous": "study/DonorPathways/previous.png"
+  },
+  "sha256": {
+    "png": "fb04b2767045410f8ab91e45b3d019a60e6b6e3495fb1db87b20c9448d5e829e",
+    "svg": "d17c16051991be7dc62d1f164a5a558b30870487dec43d3e48906a034d714de3",
+    "pdf": "657edbfb32b26c00e4efa64b2143dbe834480e8228fe4e4c6ef1ff785d4995e9",
+    "tsv": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
+    "previous": "2249100c0d6768b39130dcb9e024d3831f3b182d1d4cdc9e05fdb49a682eea78"
+  },
+  "visual_review": {
+    "id": "DonorPathways",
+    "png_sha256": "fb04b2767045410f8ab91e45b3d019a60e6b6e3495fb1db87b20c9448d5e829e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.splicing",
+  "title": "Celltype-specific RNA processing",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.splicing/example.png",
+    "svg": "single_cell.splicing/example.svg",
+    "pdf": "single_cell.splicing/example.pdf",
+    "tsv": "single_cell.splicing/example.tsv",
+    "spec": "single_cell.splicing/input/example.spec.json",
+    "preview": "single_cell.splicing/preview.jpg"
+  },
+  "sha256": {
+    "png": "b4af0b8c83355f6102b23686f67b11e6e5fdf75443f904583797c29f78746559",
+    "svg": "6247ccbf294dc15d4204f3d21dcc45f1d451c1b315dec746022295001ea38a3a",
+    "pdf": "e3eec71548395a023b7f979287506db9468ac6fb81de219460176f9c1bdec058",
+    "tsv": "b2d2046a0f55276eb2c027b632632f893226059aa5e9dd6768d65ea0968a648e",
+    "spec": "9780f6a79c0840656374843cdb6d5ddf9748a7fcdd581a33811358957f592c86"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 63,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.splicing",
+    "png_sha256": "b4af0b8c83355f6102b23686f67b11e6e5fdf75443f904583797c29f78746559",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

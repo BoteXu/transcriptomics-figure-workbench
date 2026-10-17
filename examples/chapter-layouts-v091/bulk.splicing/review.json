@@ -1,0 +1,65 @@
+{
+  "id": "bulk.splicing",
+  "title": "Alternative splicing and junction support",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.splicing/example.png",
+    "svg": "bulk.splicing/example.svg",
+    "pdf": "bulk.splicing/example.pdf",
+    "tsv": "bulk.splicing/example.tsv",
+    "spec": "bulk.splicing/input/example.spec.json",
+    "preview": "bulk.splicing/preview.jpg"
+  },
+  "sha256": {
+    "png": "c856a02bfb1fce17eda55e0d4a7e5ba44615d0e3f1f8f65e5d812184483bbc6f",
+    "svg": "265e79a19e942080a2d0c9fdd0e44685e77e8c84042299ec1771e3b08f33191c",
+    "pdf": "2fc1f006ea8a515181ff4a4897fcbe1eafc83046c2763f472a7105f0f1c17a59",
+    "tsv": "b2d2046a0f55276eb2c027b632632f893226059aa5e9dd6768d65ea0968a648e",
+    "spec": "545d6a4d742103d4adcca6b2b7ecdd9c966e9367721533d3021367fd011b9667"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 63,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.splicing",
+    "png_sha256": "c856a02bfb1fce17eda55e0d4a7e5ba44615d0e3f1f8f65e5d812184483bbc6f",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.integration",
+  "title": "Batch integration and signal preservation",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.integration/example.png",
+    "svg": "single_cell.integration/example.svg",
+    "pdf": "single_cell.integration/example.pdf",
+    "tsv": "single_cell.integration/example.tsv",
+    "spec": "single_cell.integration/input/example.spec.json",
+    "preview": "single_cell.integration/preview.jpg"
+  },
+  "sha256": {
+    "png": "b4de95251f92dca977c9e70c26fa4190c2e8ddd7a615564bac53403c0cc961ef",
+    "svg": "ddc509e61b831bb74b8b6cad8184ef38085a09aa12a19324bbdee1cde1e25020",
+    "pdf": "484f8cf87988e55b434291d51fd0afbb95cfe28e1a48eb3fab6d779ab18fdceb",
+    "tsv": "27f9f743d8708910b80dcebe3cd6db99a1628ee00cfd4c50afb004f994c19c2c",
+    "spec": "8e96e8b505489266ef3ec4f7d3e9dbeea8d788b235829d04e1948caf34895b09"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.integration",
+    "png_sha256": "b4de95251f92dca977c9e70c26fa4190c2e8ddd7a615564bac53403c0cc961ef",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

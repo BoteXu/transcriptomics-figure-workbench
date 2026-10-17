@@ -1,0 +1,65 @@
+{
+  "id": "bulk.tf_activity",
+  "title": "Transcription-factor footprints",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.tf_activity/example.png",
+    "svg": "bulk.tf_activity/example.svg",
+    "pdf": "bulk.tf_activity/example.pdf",
+    "tsv": "bulk.tf_activity/example.tsv",
+    "spec": "bulk.tf_activity/input/example.spec.json",
+    "preview": "bulk.tf_activity/preview.jpg"
+  },
+  "sha256": {
+    "png": "550a39ea07170657ada4cf97bcd8b6228f649b6fd217355a639c5d1059b53beb",
+    "svg": "baf959bc0fdbeeb964a3d49a402f2daa9ea7d708c8c97544e5380a9aa4517f44",
+    "pdf": "32546674b165f486edc2e74196604d9494de6a8a027044d6209a8b18bc595026",
+    "tsv": "e5c0b6c120690750c23ff70211b1ea21930e85a369e1abdf8e77da3dd1db67dd",
+    "spec": "ba6f12c8986dc9a5208e6faf7264bc75430b627d51eb18de7c416eb321ea2fbb"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 48,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.tf_activity",
+    "png_sha256": "550a39ea07170657ada4cf97bcd8b6228f649b6fd217355a639c5d1059b53beb",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

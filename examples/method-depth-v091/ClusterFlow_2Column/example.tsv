@@ -1,0 +1,20 @@
+record_type	node	level	x	n	source	target
+node	A	Resolution 0.2	0.0	120		
+node	B	Resolution 0.2	2.0	120		
+node	A1	Resolution 0.5	-0.4	70		
+node	A2	Resolution 0.5	0.8	50		
+node	B1	Resolution 0.5	2.0	120		
+node	A1a	Resolution 0.8	-0.7	45		
+node	A1b	Resolution 0.8	0.1	40		
+node	A2a	Resolution 0.8	1.0	35		
+node	B1a	Resolution 0.8	1.8	70		
+node	B1b	Resolution 0.8	2.8	50		
+edge				70	A	A1
+edge				50	A	A2
+edge				120	B	B1
+edge				45	A1	A1a
+edge				25	A1	A1b
+edge				15	A2	A1b
+edge				35	A2	A2a
+edge				70	B1	B1a
+edge				50	B1	B1b

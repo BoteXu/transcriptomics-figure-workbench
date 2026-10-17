@@ -1,0 +1,65 @@
+{
+  "id": "bulk.alignment",
+  "assay": "bulk",
+  "title": "Alignment and gene-body coverage",
+  "family": "alignment",
+  "required_results": [
+    "alignment_classes",
+    "gene_body_coverage"
+  ],
+  "specific_qc_and_limit": "Reference build, strandedness and assay must match; coverage is not expression.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.alignment/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.alignment/example.png",
+    "svg": "bulk.alignment/example.svg",
+    "pdf": "bulk.alignment/example.pdf",
+    "tsv": "bulk.alignment/example.tsv",
+    "spec": "bulk.alignment/input/example.spec.json",
+    "preview": "bulk.alignment/preview.jpg"
+  },
+  "sha256": {
+    "png": "4e59056636d135e75135aff49dab366938ccf98b7b7d647e3a1a2ca359229629",
+    "svg": "77af0b681bf49a27a06f837ac3eebd0640adf218a680f3c835f19202f4aec9c6",
+    "pdf": "6c547490e47b704cc7bd4c16d6fb1c11cc2f0e7b852abba046e74a1affbe8635",
+    "tsv": "f79846d05b201ce0624b2182ff2e2720a8cb9587c00bb9f8fb5ba17862812f9c",
+    "spec": "f0d6c82a7d4a9ef43593128f92c3ce44371ba80393e6fd39fefd165a6ecc310c"
+  },
+  "visual_review": {
+    "id": "bulk.alignment",
+    "png_sha256": "4e59056636d135e75135aff49dab366938ccf98b7b7d647e3a1a2ca359229629",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 40,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

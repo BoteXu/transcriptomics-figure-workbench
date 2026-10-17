@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "assay": "single_cell",
+  "title": "One marker page per identity",
+  "chapters": [
+    "single_cell.annotation"
+  ],
+  "results": [
+    {
+      "id": "Subgroup_01",
+      "chapter": "single_cell.annotation",
+      "view": "own_markers",
+      "scope": {
+        "contrast": "Descriptive identity-specific marker evidence",
+        "cell_type": "B cells",
+        "cohort": "Fictional 900-cell drawing fixture",
+        "independent_unit": "Donor; cell-level display without inference",
+        "denominator": "All 900 displayed cells; each specificity fraction uses all cells in that identity"
+      },
+      "spec": "Subgroup_01/input/example.spec.json",
+      "frozen_results": true,
+      "upstream_qc": "reviewed"
+    },
+    {
+      "id": "Subgroup_02",
+      "chapter": "single_cell.annotation",
+      "view": "own_markers",
+      "scope": {
+        "contrast": "Descriptive identity-specific marker evidence",
+        "cell_type": "T cells",
+        "cohort": "Fictional 900-cell drawing fixture",
+        "independent_unit": "Donor; cell-level display without inference",
+        "denominator": "All 900 displayed cells; each specificity fraction uses all cells in that identity"
+      },
+      "spec": "Subgroup_02/input/example.spec.json",
+      "frozen_results": true,
+      "upstream_qc": "reviewed"
+    },
+    {
+      "id": "Subgroup_03",
+      "chapter": "single_cell.annotation",
+      "view": "own_markers",
+      "scope": {
+        "contrast": "Descriptive identity-specific marker evidence",
+        "cell_type": "Stromal",
+        "cohort": "Fictional 900-cell drawing fixture",
+        "independent_unit": "Donor; cell-level display without inference",
+        "denominator": "All 900 displayed cells; each specificity fraction uses all cells in that identity"
+      },
+      "spec": "Subgroup_03/input/example.spec.json",
+      "frozen_results": true,
+      "upstream_qc": "reviewed"
+    },
+    {
+      "id": "Subgroup_04",
+      "chapter": "single_cell.annotation",
+      "view": "own_markers",
+      "scope": {
+        "contrast": "Descriptive identity-specific marker evidence",
+        "cell_type": "Endothelial",
+        "cohort": "Fictional 900-cell drawing fixture",
+        "independent_unit": "Donor; cell-level display without inference",
+        "denominator": "All 900 displayed cells; each specificity fraction uses all cells in that identity"
+      },
+      "spec": "Subgroup_04/input/example.spec.json",
+      "frozen_results": true,
+      "upstream_qc": "reviewed"
+    },
+    {
+      "id": "Subgroup_05",
+      "chapter": "single_cell.annotation",
+      "view": "own_markers",
+      "scope": {
+        "contrast": "Descriptive identity-specific marker evidence",
+        "cell_type": "Myeloid",
+        "cohort": "Fictional 900-cell drawing fixture",
+        "independent_unit": "Donor; cell-level display without inference",
+        "denominator": "All 900 displayed cells; each specificity fraction uses all cells in that identity"
+      },
+      "spec": "Subgroup_05/input/example.spec.json",
+      "frozen_results": true,
+      "upstream_qc": "reviewed"
+    }
+  ]
+}

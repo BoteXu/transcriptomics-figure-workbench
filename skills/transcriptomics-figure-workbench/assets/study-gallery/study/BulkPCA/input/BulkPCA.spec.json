@@ -1,24 +1,31 @@
 {
   "schema_version": 1,
   "figure_id": "BulkPCA",
-  "renderer": "xy_points",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "BulkPCA.tsv",
-    "sha256": "844e87bdcc2d7fe254c94932fa73a7c510e40121b1adfb41b9dd2e65006e8364",
+    "sha256": "94cc6a30e0e7ca2bec34498bcbac5ffbf15e4938a0f67589c086dbdf3de38821",
     "numeric_columns": [
       "x",
-      "y"
+      "y",
+      "width",
+      "height",
+      "angle",
+      "coverage",
+      "left",
+      "right",
+      "count",
+      "percent"
     ]
   },
   "parameters": {
-    "palette": {
-      "Control": "#218C8D",
-      "Treated": "#D8795B"
-    },
-    "x_label": "Stored PC1 (38.4%)",
-    "y_label": "Stored PC2 (17.6%)",
-    "unit_label": "Synthetic donor",
-    "label_points": true
+    "mode": "pca",
+    "title": "Sample structure · dispersion and marginal proportions",
+    "axis_labels": [
+      "PC1 (38.4%)",
+      "PC2 (17.6%)"
+    ],
+    "ellipse_definition": "Supplied 95% reference ellipses; illustrative dispersion, not mean confidence or a group test"
   },
   "theme": {
     "schema_version": 1,
@@ -90,7 +97,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic donor",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -108,7 +115,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

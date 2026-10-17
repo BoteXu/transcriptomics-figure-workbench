@@ -1,10 +1,22 @@
 {
-  "form": "marker_features",
+  "id": "MarkerFeatures",
+  "assay": "single_cell",
+  "role": "marker_features",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_publication.plot_feature_facets",
+  "parameters": {
+    "value_label": "Stored expression",
+    "limits": [
+      0,
+      5
+    ],
+    "ncols": 2
+  },
   "readability": {
     "target_width_mm": 210,
     "native_width_mm": 146.07214142535844,
-    "minimum_required_pt": 7,
-    "essential_text_count": 55,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 67,
     "smallest_pt": 12.938812161973905,
     "p10_pt": 12.938812161973905,
     "below_threshold": [],
@@ -12,36 +24,37 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "assay": "single_cell",
-  "role": "marker_features",
-  "id": "MarkerFeatures",
-  "section": "study",
-  "level": null,
   "assets": {
     "png": "study/MarkerFeatures/MarkerFeatures.png",
     "svg": "study/MarkerFeatures/MarkerFeatures.svg",
     "pdf": "study/MarkerFeatures/MarkerFeatures.pdf",
     "tsv": "study/MarkerFeatures/MarkerFeatures.tsv",
-    "spec": "study/MarkerFeatures/input/MarkerFeatures.spec.json"
+    "spec": "study/MarkerFeatures/input/MarkerFeatures.spec.json",
+    "previous": "study/MarkerFeatures/previous.png"
   },
   "sha256": {
-    "png": "75274b70bdca5ff68db3da5964b6302d022c0dc8d7d2a9ced721f39a90b899c5",
-    "svg": "3051f3dab2c2bcbe67e7004ecff77603f9259649d1eed652e485169ed47b720e",
-    "pdf": "2470c6f242b95c42301c55224b48b82ddf36ed4dc1bce89c40551f716ec1cbfd",
-    "tsv": "d6cc0c1a30f25b1b208d253e335698d9faa4a6f6c979b0bf94cfd1ca4106f8d7"
+    "png": "c37779d72b26a15bfaf784f8dabdc1287d40f372c027f43838efe238fbc4bd8a",
+    "svg": "7c5e6960a4fbb44d4f97ca2b8be554e0c3dd24bef0de6ae7f571ce8d330fe13b",
+    "pdf": "7cedd913f8b570672387f0b290402742096ac14b40b80c5dbd995bc76599ee03",
+    "tsv": "76c11e9ffa15b9d801484285de9435874ed3739cd8f8618b1b7cda3a715e8186",
+    "previous": "75274b70bdca5ff68db3da5964b6302d022c0dc8d7d2a9ced721f39a90b899c5"
   },
   "visual_review": {
-    "key": "study/MarkerFeatures",
-    "png_sha256": "75274b70bdca5ff68db3da5964b6302d022c0dc8d7d2a9ced721f39a90b899c5",
-    "status": "SCREEN_REVIEWED",
-    "reviewer": "Codex visual self-review",
+    "id": "MarkerFeatures",
+    "png_sha256": "c37779d72b26a15bfaf784f8dabdc1287d40f372c027f43838efe238fbc4bd8a",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-    "target_width_mm": 210,
-    "font_measurement": "MEASUREMENT_PASS",
-    "pdf_readback": false
+    "scientific_acceptance": false
   },
   "scientific_acceptance": false
 }

@@ -1,0 +1,66 @@
+{
+  "id": "WGCNA_MM_GS",
+  "title": "Module membership and gene–trait association",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_MM_GS/example.png",
+    "svg": "WGCNA_MM_GS/example.svg",
+    "pdf": "WGCNA_MM_GS/example.pdf",
+    "tsv": "WGCNA_MM_GS/example.tsv",
+    "spec": "WGCNA_MM_GS/input/example.spec.json",
+    "preview": "WGCNA_MM_GS/preview.jpg"
+  },
+  "sha256": {
+    "png": "1ff169645994c3464da5181bf4354ea88c6e96c8aec8bc8e8aa6253a84ce8a17",
+    "svg": "1e5454e0e1fd88d98990daf8c1130cad46b4bed818c5ae58152617c30211de05",
+    "pdf": "1561b9cb49aab6707921f9dc9dc11894325cbe9a51f39c1711389269e959ba0f",
+    "tsv": "ebaea8cb8043bbbc6e7ac46ed0acb10e868993daf03f66dbbb6c2bc268936759",
+    "spec": "4795e9e61c720375fc66bab27468d845aca8efa42907590ab09d3b8e2409a4d5"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 281.94,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 52,
+    "smallest_pt": 11.587571823792297,
+    "p10_pt": 11.587571823792297,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_MM_GS",
+    "png_sha256": "1ff169645994c3464da5181bf4354ea88c6e96c8aec8bc8e8aa6253a84ce8a17",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "coefficient_semantics",
+    "context",
+    "mode",
+    "module_order",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

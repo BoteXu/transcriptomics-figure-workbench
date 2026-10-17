@@ -29,6 +29,11 @@ jobs:
           python tests/check_flexible_layout.py
           python tests/check_responsive_release.py
           python tests/check_v090_release.py
+          python tests/check_rich_release.py
+          python tests/check_chapter_release.py
+          python tests/check_chapter_contracts.py
+          python tests/check_selection_depth.py
+          python tests/check_private_profile_sync.py
           python skills/transcriptomics-figure-workbench/scripts/workbench.py methods --search GSEA
           python skills/transcriptomics-figure-workbench/scripts/render_frozen_table.py --help
   render:
@@ -47,6 +52,9 @@ jobs:
         run: |
           python tests/check_study_figures.py
           python tests/check_layout_depth_v090.py
+          python tests/check_rich_defaults.py
+          python tests/check_method_depth.py
+          python tests/check_subgroup_markers.py
       - name: Exercise ordinary requests on two coherent fictional result packages
         run: |
           python tools/build_transcriptomic_study_examples.py --output study-ci-fixtures
@@ -91,6 +99,8 @@ jobs:
           node tests/check_clarity_browser.mjs clarity-browser-ci
           node tests/check_forms_browser.mjs forms-browser-ci
           node tests/check_v090_browser.mjs v090-browser-ci
+          node tests/check_chapter_browser.mjs chapter-browser-ci
+          node tests/check_dedicated_browser.mjs dedicated-browser-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

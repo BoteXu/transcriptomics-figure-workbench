@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.abundance",
+  "assay": "single_cell",
+  "title": "Differential abundance with donor effects",
+  "family": "abundance",
+  "required_results": [
+    "neighborhood_effects",
+    "donor_fractions",
+    "coordinates"
+  ],
+  "specific_qc_and_limit": "Milo/scCODA need distinct model/null/denominator; abundance and expression are different estimands.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.abundance/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.abundance/example.png",
+    "svg": "single_cell.abundance/example.svg",
+    "pdf": "single_cell.abundance/example.pdf",
+    "tsv": "single_cell.abundance/example.tsv",
+    "spec": "single_cell.abundance/input/example.spec.json",
+    "preview": "single_cell.abundance/preview.jpg"
+  },
+  "sha256": {
+    "png": "eb01efa73eca5207288f98335e018cd2bbd5b37904971563e1aeb2a78ede3f41",
+    "svg": "c056abc4232ed6a2a1d95635fa57bd898f6b84c6dcd07d800af0aa7ca5f699f2",
+    "pdf": "e1a0113a6fa0ef38e866b5579b939fb5bf70e9b54d625b4ac82e66db45a7d489",
+    "tsv": "4bf1cc82ef5123a960744f0662d62eedcaa42a8de4bec042045d5cb56349653d",
+    "spec": "b76b58902969bd8a0e4cb581f9efdf87f490ef5c757eb1eff725409530125ec0"
+  },
+  "visual_review": {
+    "id": "single_cell.abundance",
+    "png_sha256": "eb01efa73eca5207288f98335e018cd2bbd5b37904971563e1aeb2a78ede3f41",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -9,9 +9,12 @@ from .registry import digest, resolve, source_identity
 # usable only when its required frozen channels are explicitly mapped.
 ROUTES = {
  'differential_expression': [
+   ('figure_integrated_views.plot_integrated_view','volcano',['label','effect','adjusted_probability','record_type','bin_left','bin_right','bin_count'],'Volcano with stacked marginal distributions','Prefer complete checked marginal counts and a count/proportion key; retain the same effects, probabilities and thresholds.'),
    ('package_style', 'volcano', ['label','effect','adjusted_probability'], 'Sparse labelled volcano', 'Use restrained direction colours and selected labels; retain every point.'),
    ('editorial', 'forest', ['label','effect','lower','upper'], 'Effect and interval', 'Prefer for a short, declared gene set when effect magnitudes matter.')],
  'enrichment': [
+   ('figure_enrichment_story.plot_enrichment_story','ora',['label','count','denominator','adjusted_probability','membership','gene_effect','theme','tested_universe'],'ORA themes with linked gene evidence','Use exact query/background and hit counts; ORA does not encode signed activity. Pair selected themes with complete selected gene membership and supplied effects.'),
+   ('figure_enrichment_story.plot_enrichment_story','gsea_comparison',['row','column','effect','adjusted_probability','membership','gene_effect','support_contrast','ranked_universe'],'NES contrasts with gene support','Keep a common NES scale and explicitly named support contrast; do not infer enrichment curves from summaries.'),
    ('refined','gsea_strip',['rank','running_score','rank_metric','membership','leading_edge'],'Compact aligned enrichment tracks','Prefer a gradient single pathway or aligned pathway facets when the complete ranked universe is supplied; preserve ES and all hits.'),
    ('package_style','nes',['row','column','effect','adjusted_probability','size'],'Aligned NES dot matrix','Separate effect colour, set-size area and test status.'),
    ('package_style','gsea',['rank','running_score','rank_metric','membership','leading_edge'],'ES tracks with hit barcode','Use genuine supplied ES curves; a term-summary table is insufficient.'),
@@ -24,6 +27,8 @@ ROUTES = {
    ('package_style','dot',['row','column','value','fraction'],'Expression dot matrix','Colour encodes supplied expression and area encodes an explicit fraction.'),
    ('editorial','matrix',['row','column','value'],'Ordered heatmap','Keep supplied row/column order; do not invent a dendrogram.')],
  'embedding': [
+   ('figure_integrated_views.plot_integrated_view','pca',['x','y','group','record_type','ellipse_width','ellipse_height','ellipse_angle','bin_count'],'PCA with supplied ellipses and marginal proportions','Prefer when the ellipse definition and complete reference geometry/bins exist; never invent a confidence region.'),
+   ('figure_integrated_views.plot_integrated_view','annotation_atlas',['x','y','group','record_type','marker','fraction','expression','annotation_block'],'Subpopulation and marker atlas','Prefer labelled subpopulations, annotated marker specificity and shared-coordinate representative-gene maps when complete channels exist.'),
    ('package_style','embedding',['x','y','group'],'Restrained embedding','Use supplied coordinates, a stable categorical map and a compact key.')],
  'network': [
    ('package_style','network',['source','target','weight','x','y'],'Sparse supplied network','Use only declared edges and coordinates; label nodes directly.'),
@@ -118,7 +123,8 @@ def design_plan(brief, base):
     if blockers:state='HOLD'
     return dict(schema_version=1,state=state,brief=brief,brief_sha256=hash_value(brief),
         source_identity=source_identity(),input_sha256=inp['sha256'],rows=rows,columns=header,
-        preference='Attractive, readable displays with sparse decoration; scientific channel compatibility is mandatory',
+        preference='Prefer the most informative polished compatible extension. A bare scatter is a documented fallback when extra scientific channels are absent or the user requests simplicity.',
+        fallback_reasons=[dict(view=c['view'],missing_roles=c['missing_roles']) for c in candidates[:candidates.index(available[0])] if c['state']=='NEEDS_CHANNELS'] if available else [],
         preferred=available[0] if available and state!='HOLD' else None,candidates=candidates,blocking_reasons=blockers,
         next_steps=['Review actual examples and select one candidate',
                     'Map the selected renderer exact contract into a FigureSpec',

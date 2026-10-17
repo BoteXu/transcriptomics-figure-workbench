@@ -1,0 +1,66 @@
+{
+  "id": "WGCNA_MM_GS_Absolute",
+  "title": "Upstream absolute MM and GS · separate declared convention",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_MM_GS_Absolute/example.png",
+    "svg": "WGCNA_MM_GS_Absolute/example.svg",
+    "pdf": "WGCNA_MM_GS_Absolute/example.pdf",
+    "tsv": "WGCNA_MM_GS_Absolute/example.tsv",
+    "spec": "WGCNA_MM_GS_Absolute/input/example.spec.json",
+    "preview": "WGCNA_MM_GS_Absolute/preview.jpg"
+  },
+  "sha256": {
+    "png": "8216131f0d9d4473179498186e2dc3c6e17c7e2060a8b7e5bc188a4e79a65b2c",
+    "svg": "db03b5b2cecf6ea9b7f48da0bcb0b3e148b38bd30b2f210dec1de1ee03b7f1da",
+    "pdf": "1e4a65bead4a3dc611e2be4f1123981cfe8a14c18a01f5290e88a7b6bb91b209",
+    "tsv": "7903781935a377f619849eb121575dc08a208047cae564d46f1838054d14a44d",
+    "spec": "c6433836a8facfbc7c3ec52e87e039dfb1a449680b0497b0bcffe579475b8f42"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 281.94,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 11.587571823792297,
+    "p10_pt": 11.587571823792297,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_MM_GS_Absolute",
+    "png_sha256": "8216131f0d9d4473179498186e2dc3c6e17c7e2060a8b7e5bc188a4e79a65b2c",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "coefficient_semantics",
+    "context",
+    "mode",
+    "module_order",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

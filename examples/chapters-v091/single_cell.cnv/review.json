@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.cnv",
+  "assay": "single_cell",
+  "title": "Inferred copy-number patterns",
+  "family": "cnv",
+  "required_results": [
+    "ordered_CNV",
+    "reference_cells",
+    "clone_support"
+  ],
+  "specific_qc_and_limit": "Genomic coordinates and normal reference required; RNA-inferred CNV needs independent genomic validation.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.cnv/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.cnv/example.png",
+    "svg": "single_cell.cnv/example.svg",
+    "pdf": "single_cell.cnv/example.pdf",
+    "tsv": "single_cell.cnv/example.tsv",
+    "spec": "single_cell.cnv/input/example.spec.json",
+    "preview": "single_cell.cnv/preview.jpg"
+  },
+  "sha256": {
+    "png": "37052d953d3e091f545c088efb08c6938d9550f02136490557cc8da03cd9352e",
+    "svg": "a635c62d88a66874aaee09e1a06549b5bcdf25705b526372b54da0887f8a767f",
+    "pdf": "4085a66eceb84a223eb7a4e73cc0ddff964d214b18a7010990c49dce4348afed",
+    "tsv": "53563e1436db69ce2d6780b4244a1a7b3f41dcdad61e06cd2656667d8c20e5b3",
+    "spec": "e8932835b01de9d8b5192394419706fef621c0925c5ae1dabdbc3941ab1a7fe0"
+  },
+  "visual_review": {
+    "id": "single_cell.cnv",
+    "png_sha256": "37052d953d3e091f545c088efb08c6938d9550f02136490557cc8da03cd9352e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 64,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

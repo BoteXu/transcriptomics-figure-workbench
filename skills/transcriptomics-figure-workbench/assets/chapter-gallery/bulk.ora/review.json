@@ -1,0 +1,66 @@
+{
+  "id": "bulk.ora",
+  "assay": "bulk",
+  "title": "ORA themes, ratios and supporting genes",
+  "family": "story:ora",
+  "required_results": [
+    "term_ratio",
+    "term_fdr",
+    "gene_term_membership"
+  ],
+  "specific_qc_and_limit": "Actual tested background and mapping versions required; ORA does not establish activity direction.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.ora/input/example.spec.json",
+  "code": "scripts/figure_enrichment_story.py",
+  "sources": [
+    "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+    "https://yulab-smu.top/clusterProfiler-book/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.ora/example.png",
+    "svg": "bulk.ora/example.svg",
+    "pdf": "bulk.ora/example.pdf",
+    "tsv": "bulk.ora/example.tsv",
+    "spec": "bulk.ora/input/example.spec.json",
+    "preview": "bulk.ora/preview.jpg"
+  },
+  "sha256": {
+    "png": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd",
+    "svg": "40fb74add24c6e73c31d5cc174504e6939e146a16eedaeac62c83f58edfcd4f0",
+    "pdf": "4ae74e7f12ed88f360c96b89c4310d2f10a4f37b47b5cdfbd998cab00cb5e1d4",
+    "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
+    "spec": "cbcdf115109f929570d424a8dd15c1c230e51b38d3dfc396ca3f12bf02404c39"
+  },
+  "visual_review": {
+    "id": "bulk.ora",
+    "png_sha256": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 384.2226538433559,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 8.502882293171412,
+    "p10_pt": 8.502882293171412,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

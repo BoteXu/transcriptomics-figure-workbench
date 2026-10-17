@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "figure_id": "BulkCorrelation",
-  "renderer": "figure_core.plot_heatmap",
+  "renderer": "figure_extensions.plot_annotated_heatmap",
   "input": {
     "path": "BulkCorrelation.tsv",
-    "sha256": "4be28bc0d5d721ed8191c44c0a09418ab16d2832fa6869132a47a22d4e2cfb93",
+    "sha256": "91e675dfc4052262148c9d472f0ae26e575767756bef6dca028f8aea584fd17c",
     "numeric_columns": [
       "value"
     ]
@@ -12,7 +12,45 @@
   "parameters": {
     "value_label": "Stored sample correlation r",
     "scale_type": "sequential",
-    "center": 0
+    "group_palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "block_palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "row_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "column_annotation_label": "Condition",
+    "row_annotation_label": "Condition",
+    "merge_annotation_legends": true
   },
   "theme": {
     "schema_version": 1,
@@ -84,7 +122,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic sample pair",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -102,7 +140,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

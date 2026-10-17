@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.ligand_target",
+  "assay": "single_cell",
+  "title": "Ligand-to-target evidence chains",
+  "family": "ligand_target",
+  "required_results": [
+    "ligand_activity",
+    "target_potential",
+    "network"
+  ],
+  "specific_qc_and_limit": "NicheNet prior and receiver context required; target potential does not prove signaling causality.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.ligand_target/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.ligand_target/example.png",
+    "svg": "single_cell.ligand_target/example.svg",
+    "pdf": "single_cell.ligand_target/example.pdf",
+    "tsv": "single_cell.ligand_target/example.tsv",
+    "spec": "single_cell.ligand_target/input/example.spec.json",
+    "preview": "single_cell.ligand_target/preview.jpg"
+  },
+  "sha256": {
+    "png": "e7910675ad7af5baf529bc153a548b471b5a73d6ef15b4bbaa3880aa31972c2a",
+    "svg": "b6bf1e936426b4b151fc4156191ee008a71043b255310dad3f22597d1b950187",
+    "pdf": "6b825109cbb491fe9478bbc32fffb41d1b76b57d9751b4283d9781ad0627108e",
+    "tsv": "3a19c73ce9e5ee590fd74c8dd48f6d6ad98b15c4aaeb511bc4df2c1f9c54f1f9",
+    "spec": "ce292dace6389f7f10a4e706e86f4a8bb36e8fd1dbde9c17645461819ef402d1"
+  },
+  "visual_review": {
+    "id": "single_cell.ligand_target",
+    "png_sha256": "e7910675ad7af5baf529bc153a548b471b5a73d6ef15b4bbaa3880aa31972c2a",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 39,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

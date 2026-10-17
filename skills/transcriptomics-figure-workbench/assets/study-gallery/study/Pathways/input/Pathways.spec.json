@@ -1,20 +1,31 @@
 {
   "schema_version": 1,
   "figure_id": "Pathways",
-  "renderer": "figure_styles.plot_enrichment_lollipop",
+  "renderer": "figure_enrichment_story.plot_enrichment_story",
   "input": {
     "path": "Pathways.tsv",
-    "sha256": "747fc691c394a18e19f75762a315a17677f4392e944ce512c29564440d535271",
+    "sha256": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
     "numeric_columns": [
-      "score",
+      "ratio",
       "padj",
-      "count"
+      "count",
+      "effect",
+      "member"
     ]
   },
   "parameters": {
-    "score_type": "GeneRatio",
-    "denominator_label": "Stored ORA / 200 query genes",
-    "count_label": "Overlap genes"
+    "mode": "ora",
+    "title": "Enrichment themes · ratios, FDR and selected gene support",
+    "background_definition": "Fictional 200-gene query / 1200 tested genes",
+    "tested_size": 1200,
+    "query_size": 200,
+    "gene_effect_limits": [
+      -4,
+      4
+    ],
+    "gene_set_version": "Illustrative frozen study sets v0.9.1",
+    "selection_definition": "All six original ORA terms; four explicitly selected genes with fictional membership",
+    "support_contrast": "Treated versus Control"
   },
   "theme": {
     "schema_version": 1,
@@ -48,7 +59,12 @@
       "Mitochondrial function": 2,
       "RNA processing": 3,
       "Cell cycle": 4,
-      "Inflammatory response": 5
+      "Inflammatory response": 5,
+      "Immune theme": 0,
+      "Matrix theme": 1,
+      "Metabolic theme": 2,
+      "RNA theme": 3,
+      "Cellular theme": 4
     },
     "roles": {
       "primary": "#218C8D",
@@ -86,7 +102,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic pathway result",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -99,12 +115,15 @@
     "synthetic": true
   },
   "appearance": {
-    "preset": "paper"
+    "preset": "paper",
+    "label_pt": 12,
+    "tick_pt": 11,
+    "note_pt": 11
   },
   "export": {
     "raster_dpi": 300,
-    "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "target_width_mm": 297,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

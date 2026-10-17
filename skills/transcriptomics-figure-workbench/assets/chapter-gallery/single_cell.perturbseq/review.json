@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.perturbseq",
+  "assay": "single_cell",
+  "title": "Perturbation assignment and response",
+  "family": "perturbation",
+  "required_results": [
+    "guide_assignment",
+    "perturbation_effects",
+    "replicate_QC"
+  ],
+  "specific_qc_and_limit": "Actual guide calls, controls and independent replicates required; guide abundance is not perturbation efficacy.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.perturbseq/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.perturbseq/example.png",
+    "svg": "single_cell.perturbseq/example.svg",
+    "pdf": "single_cell.perturbseq/example.pdf",
+    "tsv": "single_cell.perturbseq/example.tsv",
+    "spec": "single_cell.perturbseq/input/example.spec.json",
+    "preview": "single_cell.perturbseq/preview.jpg"
+  },
+  "sha256": {
+    "png": "efb529595c13d4c66b4fe1696bfd6b0eadffba79cff038c18cad33bfa23e2853",
+    "svg": "6d4870da0d540031bdb39eaa6dea16206e7965b32223de5ea68f1dcfd0b5b599",
+    "pdf": "dd7c6f78fc76e793f6d24b3180cdd547322c3cf60633eb0659016bd2c06f6341",
+    "tsv": "46af3eeb59b00e0be0bc51e9001d1f6084f9eec8495090d520bdfef7ceaa3e2f",
+    "spec": "2b2970bc76f8a60cd0de9e54bd5676564f72d492c636735b5cb44289f4134010"
+  },
+  "visual_review": {
+    "id": "single_cell.perturbseq",
+    "png_sha256": "efb529595c13d4c66b4fe1696bfd6b0eadffba79cff038c18cad33bfa23e2853",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 69,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

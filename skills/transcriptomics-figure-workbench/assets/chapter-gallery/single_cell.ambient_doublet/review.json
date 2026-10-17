@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.ambient_doublet",
+  "assay": "single_cell",
+  "title": "Ambient RNA and doublet diagnostics",
+  "family": "ambient",
+  "required_results": [
+    "doublet_scores",
+    "ambient_profile",
+    "donor_rates"
+  ],
+  "specific_qc_and_limit": "Method scores and reviewed calls are separate; preserve flagged cells and removal rules.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.ambient_doublet/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.ambient_doublet/example.png",
+    "svg": "single_cell.ambient_doublet/example.svg",
+    "pdf": "single_cell.ambient_doublet/example.pdf",
+    "tsv": "single_cell.ambient_doublet/example.tsv",
+    "spec": "single_cell.ambient_doublet/input/example.spec.json",
+    "preview": "single_cell.ambient_doublet/preview.jpg"
+  },
+  "sha256": {
+    "png": "001b2655f5d35860b0910eddfb30890a6b84dab8d8936e047704b2473c4f46fe",
+    "svg": "c1d16df434504faf03a60eb85c07d6b0f5582be6eb62cba902b193114e55aa00",
+    "pdf": "7c1099d069cef083e2c9bd8d99b58788ff0cece39664f47ccd4400de93998af7",
+    "tsv": "41bb3265d22de721c887312e60b4c96e3ed4478b57407f5ed32ab1409dd482e3",
+    "spec": "259ed1df49986b1d482ad44a272efb0305a62a6ba245b8c673d0b6d807c1da05"
+  },
+  "visual_review": {
+    "id": "single_cell.ambient_doublet",
+    "png_sha256": "001b2655f5d35860b0910eddfb30890a6b84dab8d8936e047704b2473c4f46fe",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 41,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

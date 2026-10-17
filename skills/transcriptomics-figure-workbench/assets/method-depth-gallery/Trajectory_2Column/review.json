@@ -1,0 +1,67 @@
+{
+  "id": "Trajectory_2Column",
+  "title": "Branch identity and progression · shared frozen graph",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "Trajectory_2Column/example.png",
+    "svg": "Trajectory_2Column/example.svg",
+    "pdf": "Trajectory_2Column/example.pdf",
+    "tsv": "Trajectory_2Column/example.tsv",
+    "spec": "Trajectory_2Column/input/example.spec.json",
+    "preview": "Trajectory_2Column/preview.jpg"
+  },
+  "sha256": {
+    "png": "7e67be5f1263761d5dd066cf141e562e1e95e2fbeeed522dc61c78ff734cef2d",
+    "svg": "cd1ea0331fc71f1f43ee5e7ac2dd970f2e91cc1784b2aef4e70d290e166eebf2",
+    "pdf": "be6ad156469554ceb9ec201f644636daef80d471c0a1e961f737335d8a1b9ca7",
+    "tsv": "8bb9d9827440934ff21c08c3e8736f35eab6cd0e7244e1315c07f099648212f3",
+    "spec": "341a620126bb61198c3650bab2206625db4459fe5881c5d0cc94f24dfa9a4ce3"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 15,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "Trajectory_2Column",
+    "png_sha256": "7e67be5f1263761d5dd066cf141e562e1e95e2fbeeed522dc61c78ff734cef2d",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "definition",
+    "mode",
+    "root_id",
+    "title",
+    "value_limits"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

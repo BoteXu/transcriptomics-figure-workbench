@@ -1,0 +1,66 @@
+{
+  "id": "single_cell.barcode",
+  "assay": "single_cell",
+  "title": "Barcode rank and retained droplets",
+  "family": "barcode",
+  "required_results": [
+    "barcode_rank",
+    "droplet_classes"
+  ],
+  "specific_qc_and_limit": "Need raw droplet totals and selected threshold; cell calling does not validate cell identity.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.barcode/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.barcode/example.png",
+    "svg": "single_cell.barcode/example.svg",
+    "pdf": "single_cell.barcode/example.pdf",
+    "tsv": "single_cell.barcode/example.tsv",
+    "spec": "single_cell.barcode/input/example.spec.json",
+    "preview": "single_cell.barcode/preview.jpg"
+  },
+  "sha256": {
+    "png": "e9296e5ba42b2873d77d1fdb7a9eba9598a0d3a2b06f67bbe5d1a42a23538a9b",
+    "svg": "3ad49ad822907f42d199172c1862b7bc05dd3c3f24449ff2692c9b40d5224fb8",
+    "pdf": "bbf49e7dad8928a2a07449cb1da3bb08b3250974c855da10c588dbfa8650f13c",
+    "tsv": "24e6a5ad9f8a5b4e9d8012e60024fa7d68beeaf3c7ed37e1ab9937243e1fe9dc",
+    "spec": "dfb8f49972bd2ac294c17c9848a41afec8eca2e856525dfa6f3fc2c723fb654a"
+  },
+  "visual_review": {
+    "id": "single_cell.barcode",
+    "png_sha256": "e9296e5ba42b2873d77d1fdb7a9eba9598a0d3a2b06f67bbe5d1a42a23538a9b",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 39,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

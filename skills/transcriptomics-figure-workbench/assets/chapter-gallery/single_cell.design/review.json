@@ -1,0 +1,66 @@
+{
+  "id": "single_cell.design",
+  "assay": "single_cell",
+  "title": "Donor, capture and condition design",
+  "family": "design",
+  "required_results": [
+    "donor_covariates",
+    "capture_counts"
+  ],
+  "specific_qc_and_limit": "Cells, captures and donors differ; record nested design and donor replication.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.design/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.design/example.png",
+    "svg": "single_cell.design/example.svg",
+    "pdf": "single_cell.design/example.pdf",
+    "tsv": "single_cell.design/example.tsv",
+    "spec": "single_cell.design/input/example.spec.json",
+    "preview": "single_cell.design/preview.jpg"
+  },
+  "sha256": {
+    "png": "782718ec367e86be64020dfe1de0749ba38496eb8d1dc2ae2606f930d92ccc32",
+    "svg": "caa3b5acf5c6d1276136220948413b2f3dbe247189f149a20d9efca4192fc66a",
+    "pdf": "739fceba12b3ba93662e7891e23c5dbe11e68955a407a91d2fcebd6ce4af08c8",
+    "tsv": "6046c140188a8fec068a54992fbbf4c570add0b74b0b0b996de8ca83cdfb6c2e",
+    "spec": "10ab6ecfbef2db02302d73de1d82e5db110449e1465912f5b23d76a8868f8988"
+  },
+  "visual_review": {
+    "id": "single_cell.design",
+    "png_sha256": "782718ec367e86be64020dfe1de0749ba38496eb8d1dc2ae2606f930d92ccc32",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 58,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

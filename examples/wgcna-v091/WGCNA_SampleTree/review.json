@@ -1,0 +1,66 @@
+{
+  "id": "WGCNA_SampleTree",
+  "title": "Samples · frozen clustering and design tracks",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_SampleTree/example.png",
+    "svg": "WGCNA_SampleTree/example.svg",
+    "pdf": "WGCNA_SampleTree/example.pdf",
+    "tsv": "WGCNA_SampleTree/example.tsv",
+    "spec": "WGCNA_SampleTree/input/example.spec.json",
+    "preview": "WGCNA_SampleTree/preview.jpg"
+  },
+  "sha256": {
+    "png": "ac5e1794ea512589f6114997f9277e6c0fd66fad8fce698023b77ada75386aad",
+    "svg": "93c092b89d00546b9a6d852363807b689511ee4b99ac8ff7f7d94fe709499447",
+    "pdf": "3a07669cc4df2e202d19b04f751b887b9430ce741e510763084827ee9d865d35",
+    "tsv": "0fca9df13949f6f696a808505a8c897dbc024c7ba357093b3476a56d327d3454",
+    "spec": "e6abbb227250796ff5da0f631d4051b77530494b0fb0093641b81e9f55e1eab4"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 32,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_SampleTree",
+    "png_sha256": "ac5e1794ea512589f6114997f9277e6c0fd66fad8fce698023b77ada75386aad",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "context",
+    "leaf_order",
+    "mode",
+    "title",
+    "track_labels"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

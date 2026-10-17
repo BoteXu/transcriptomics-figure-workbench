@@ -1,0 +1,65 @@
+{
+  "id": "bulk.timecourse",
+  "assay": "bulk",
+  "title": "Longitudinal response and uncertainty",
+  "family": "time",
+  "required_results": [
+    "time_predictions",
+    "effect_intervals"
+  ],
+  "specific_qc_and_limit": "Repeated donors and time units required; supplied model curves only, no smoothing for appearance.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.timecourse/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.timecourse/example.png",
+    "svg": "bulk.timecourse/example.svg",
+    "pdf": "bulk.timecourse/example.pdf",
+    "tsv": "bulk.timecourse/example.tsv",
+    "spec": "bulk.timecourse/input/example.spec.json",
+    "preview": "bulk.timecourse/preview.jpg"
+  },
+  "sha256": {
+    "png": "62da94d999f257dc81a3622d6d1dc41dfe90e3d5fc0304449fdb340c240474c0",
+    "svg": "90d646bb3648722aa4db65b8f77143381c52013636ae1c3e166b58d5649e2840",
+    "pdf": "978b1071ffa16bc80ca5b6c9f754d93d8b18bcbfff9a7d1facf6548062f10f2b",
+    "tsv": "64d656784a7597364782f09a89442f34a1b0ff5960d897c282e6c9e178dba3c1",
+    "spec": "d03aeb7f691e6f07a4b69aec0a885e6a8993995ba3921bc99235c678f7ab8791"
+  },
+  "visual_review": {
+    "id": "bulk.timecourse",
+    "png_sha256": "62da94d999f257dc81a3622d6d1dc41dfe90e3d5fc0304449fdb340c240474c0",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 40,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

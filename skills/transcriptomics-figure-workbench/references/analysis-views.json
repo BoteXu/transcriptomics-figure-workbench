@@ -1,0 +1,4846 @@
+{
+  "schema_version": 1,
+  "version": "0.9.1",
+  "views": [
+    {
+      "id": "bulk.design.p1",
+      "chapters": [
+        "bulk.design"
+      ],
+      "title": "Covariates and independent units",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.design/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Covariates and independent units",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Declared design code",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.design.p2",
+      "chapters": [
+        "bulk.design"
+      ],
+      "title": "Capture contribution by donor",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.design/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Capture contribution by donor",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.reads.p1",
+      "chapters": [
+        "bulk.reads"
+      ],
+      "title": "Per-base quality profile",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.reads/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Per-base quality profile",
+        "x_label": "Scaled read position",
+        "y_label": "Supplied quality score",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.reads.p2",
+      "chapters": [
+        "bulk.reads"
+      ],
+      "title": "Complete read classes",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.reads/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Complete read classes",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.alignment.p1",
+      "chapters": [
+        "bulk.alignment"
+      ],
+      "title": "Alignment categories",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.alignment/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Alignment categories",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.alignment.p2",
+      "chapters": [
+        "bulk.alignment"
+      ],
+      "title": "Gene-body coverage",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.alignment/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Gene-body coverage",
+        "x_label": "Relative gene position",
+        "y_label": "Supplied normalized coverage",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.filtering.p1",
+      "chapters": [
+        "bulk.filtering"
+      ],
+      "title": "Filtering sensitivity",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.filtering/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Filtering sensitivity",
+        "x_label": "Declared filter threshold",
+        "y_label": "Supplied retained fraction",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.filtering.p2",
+      "chapters": [
+        "bulk.filtering"
+      ],
+      "title": "Sensitivity of selected effects",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.filtering/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Sensitivity of selected effects",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.normalization.p1",
+      "chapters": [
+        "bulk.normalization"
+      ],
+      "title": "Supplied RLE profiles",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.normalization/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Supplied RLE profiles",
+        "x_label": "Relative log expression",
+        "y_label": "Supplied density",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.normalization.p2",
+      "chapters": [
+        "bulk.normalization"
+      ],
+      "title": "Mean-variance relationship",
+      "form": "points",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.normalization/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "point_unit",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "points",
+        "title": "Mean-variance relationship",
+        "x_label": "Supplied mean",
+        "y_label": "Supplied variance",
+        "point_unit": "Gene",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.batch.complete",
+      "chapters": [
+        "bulk.batch"
+      ],
+      "title": "Sample structure · dispersion and marginal proportions",
+      "form": "pca",
+      "renderer": "figure_integrated_views.plot_integrated_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/bulk.batch/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Sample structure · dispersion and marginal proportions",
+        "kind": "pca"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.differential.complete",
+      "chapters": [
+        "bulk.differential"
+      ],
+      "title": "Differential response · stacked distributions",
+      "form": "volcano",
+      "renderer": "figure_integrated_views.plot_integrated_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/bulk.differential/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Differential response · stacked distributions",
+        "kind": "volcano"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.interaction.p1",
+      "chapters": [
+        "bulk.interaction"
+      ],
+      "title": "Condition-by-time predictions",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.interaction/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Condition-by-time predictions",
+        "x_label": "Scaled time",
+        "y_label": "Supplied prediction",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.interaction.p2",
+      "chapters": [
+        "bulk.interaction"
+      ],
+      "title": "Interaction terms",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.interaction/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Interaction terms",
+        "x_label": "Supplied interaction coefficient and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.model_qc.p1",
+      "chapters": [
+        "bulk.model_qc"
+      ],
+      "title": "Residual structure",
+      "form": "points",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.model_qc/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "point_unit",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "points",
+        "title": "Residual structure",
+        "x_label": "Supplied fitted value",
+        "y_label": "Supplied residual",
+        "point_unit": "Supplied model observation",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.model_qc.p2",
+      "chapters": [
+        "bulk.model_qc"
+      ],
+      "title": "Dispersion trend",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.model_qc/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Dispersion trend",
+        "x_label": "Supplied mean",
+        "y_label": "Supplied dispersion",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.programs.p1",
+      "chapters": [
+        "bulk.programs"
+      ],
+      "title": "Coordinated sample-level patterns",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.programs/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Coordinated sample-level patterns",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied score",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.programs.p2",
+      "chapters": [
+        "bulk.programs"
+      ],
+      "title": "Donor-level effects and uncertainty",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.programs/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Donor-level effects and uncertainty",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.ora.complete",
+      "chapters": [
+        "bulk.ora"
+      ],
+      "title": "ORA themes, ratios and supporting genes",
+      "form": "ora",
+      "renderer": "figure_enrichment_story.plot_enrichment_story",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/bulk.ora/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "ORA themes, ratios and supporting genes",
+        "kind": "ora"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.gsea.complete",
+      "chapters": [
+        "bulk.gsea"
+      ],
+      "title": "bulk.gsea",
+      "form": "complete",
+      "renderer": "refined",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/bulk.gsea/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "bulk.gsea",
+        "kind": "complete"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.pathway_contrasts.complete",
+      "chapters": [
+        "bulk.pathway_contrasts"
+      ],
+      "title": "Pathway enrichment across contrasts",
+      "form": "gsea_comparison",
+      "renderer": "figure_enrichment_story.plot_enrichment_story",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/bulk.pathway_contrasts/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Pathway enrichment across contrasts",
+        "kind": "gsea_comparison"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.gene_support.complete",
+      "chapters": [
+        "bulk.gene_support"
+      ],
+      "title": "Pathway membership and signed gene evidence",
+      "form": "gene_support",
+      "renderer": "figure_enrichment_story.plot_enrichment_story",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/bulk.gene_support/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Pathway membership and signed gene evidence",
+        "kind": "gene_support"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.gsea_multitrack.complete",
+      "chapters": [
+        "bulk.gsea_multitrack"
+      ],
+      "title": "bulk.gsea_multitrack",
+      "form": "complete",
+      "renderer": "refined",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/bulk.gsea_multitrack/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "bulk.gsea_multitrack",
+        "kind": "complete"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.gsva.p1",
+      "chapters": [
+        "bulk.gsva"
+      ],
+      "title": "Coordinated sample-level patterns",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.gsva/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Coordinated sample-level patterns",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied score",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.gsva.p2",
+      "chapters": [
+        "bulk.gsva"
+      ],
+      "title": "Donor-level effects and uncertainty",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.gsva/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Donor-level effects and uncertainty",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.wgcna.complete",
+      "chapters": [
+        "bulk.wgcna"
+      ],
+      "title": "Module–trait associations · coefficient, q and effective n",
+      "form": "module_trait",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/bulk.wgcna/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Module–trait associations · coefficient, q and effective n",
+        "kind": "module_trait"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.tf_activity.p1",
+      "chapters": [
+        "bulk.tf_activity"
+      ],
+      "title": "Coordinated sample-level patterns",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.tf_activity/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Coordinated sample-level patterns",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied score",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.tf_activity.p2",
+      "chapters": [
+        "bulk.tf_activity"
+      ],
+      "title": "Donor-level effects and uncertainty",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.tf_activity/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Donor-level effects and uncertainty",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.deconvolution.p1",
+      "chapters": [
+        "bulk.deconvolution"
+      ],
+      "title": "Within-donor composition",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.deconvolution/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Within-donor composition",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.deconvolution.p2",
+      "chapters": [
+        "bulk.deconvolution"
+      ],
+      "title": "Prespecified compositional comparisons",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.deconvolution/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Prespecified compositional comparisons",
+        "x_label": "Supplied log-ratio effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.splicing.p1",
+      "chapters": [
+        "bulk.splicing"
+      ],
+      "title": "Frozen junction/coverage profiles",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.splicing/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Frozen junction/coverage profiles",
+        "x_label": "Declared genomic offset",
+        "y_label": "Supplied coverage",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.splicing.p2",
+      "chapters": [
+        "bulk.splicing"
+      ],
+      "title": "Junction usage differences",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.splicing/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Junction usage differences",
+        "x_label": "Supplied delta PSI and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.splicing.p3",
+      "chapters": [
+        "bulk.splicing"
+      ],
+      "title": "Transcript usage",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p3",
+      "spec": "assets/chapter-gallery/bulk.splicing/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Transcript usage",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p3"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.dtu.p1",
+      "chapters": [
+        "bulk.dtu"
+      ],
+      "title": "Within-donor composition",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.dtu/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Within-donor composition",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.dtu.p2",
+      "chapters": [
+        "bulk.dtu"
+      ],
+      "title": "Prespecified compositional comparisons",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.dtu/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Prespecified compositional comparisons",
+        "x_label": "Supplied log-ratio effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.timecourse.p1",
+      "chapters": [
+        "bulk.timecourse"
+      ],
+      "title": "Longitudinal expression profiles",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.timecourse/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Longitudinal expression profiles",
+        "x_label": "Scaled study time",
+        "y_label": "Supplied response",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.timecourse.p2",
+      "chapters": [
+        "bulk.timecourse"
+      ],
+      "title": "Time interaction estimates",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.timecourse/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Time interaction estimates",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.replication.p1",
+      "chapters": [
+        "bulk.replication"
+      ],
+      "title": "Independent-cohort effect estimates",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.replication/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Independent-cohort effect estimates",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.replication.p2",
+      "chapters": [
+        "bulk.replication"
+      ],
+      "title": "Feature-level direction and magnitude",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.replication/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Feature-level direction and magnitude",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied log2 effect",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.survival.p1",
+      "chapters": [
+        "bulk.survival"
+      ],
+      "title": "Supplied survival estimates",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.survival/input/example.spec.json",
+      "input_channels": [
+        "drawstyle",
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Supplied survival estimates",
+        "x_label": "Time (declared units)",
+        "y_label": "Survival probability",
+        "interval_definition": "Explicit fictional 95% survival intervals",
+        "interval_label": "Shading: supplied 95% interval",
+        "drawstyle": "steps-post",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.survival.p2",
+      "chapters": [
+        "bulk.survival"
+      ],
+      "title": "At-risk counts",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.survival/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "At-risk counts",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied people at risk",
+        "limits": [
+          0,
+          40
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.survival.p3",
+      "chapters": [
+        "bulk.survival"
+      ],
+      "title": "Adjusted outcome associations",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p3",
+      "spec": "assets/chapter-gallery/bulk.survival/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Adjusted outcome associations",
+        "x_label": "Supplied log hazard ratio and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p3"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.ppi.p1",
+      "chapters": [
+        "bulk.ppi"
+      ],
+      "title": "Explicit evidence relationships",
+      "form": "network",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.ppi/input/example.spec.json",
+      "input_channels": [
+        "edge_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "network",
+        "title": "Explicit evidence relationships",
+        "x_label": "",
+        "y_label": "",
+        "edge_definition": "Complete explicitly selected illustrative edge list; weights and coordinates supplied; no layout fit or pruning",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.ppi.p2",
+      "chapters": [
+        "bulk.ppi"
+      ],
+      "title": "Selected relationship support",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.ppi/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Selected relationship support",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied evidence score",
+        "limits": [
+          0,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.connectivity.p1",
+      "chapters": [
+        "bulk.connectivity"
+      ],
+      "title": "Signature connection scores",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.connectivity/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Signature connection scores",
+        "x_label": "Supplied connection score and interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.connectivity.p2",
+      "chapters": [
+        "bulk.connectivity"
+      ],
+      "title": "Signature coverage across contexts",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.connectivity/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Signature coverage across contexts",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied connection score",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.noncoding.p1",
+      "chapters": [
+        "bulk.noncoding"
+      ],
+      "title": "Coordinated sample-level patterns",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.noncoding/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Coordinated sample-level patterns",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied score",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.noncoding.p2",
+      "chapters": [
+        "bulk.noncoding"
+      ],
+      "title": "Donor-level effects and uncertainty",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.noncoding/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Donor-level effects and uncertainty",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.fusions.p1",
+      "chapters": [
+        "bulk.fusions"
+      ],
+      "title": "Independent breakpoint support",
+      "form": "bars",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/bulk.fusions/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "bars",
+        "title": "Independent breakpoint support",
+        "x_label": "Supplied supporting read count",
+        "y_label": "",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "bulk.fusions.p2",
+      "chapters": [
+        "bulk.fusions"
+      ],
+      "title": "Breakpoint evidence checklist",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/bulk.fusions/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Breakpoint evidence checklist",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Declared binary evidence / not validation",
+        "limits": [
+          0,
+          1
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.design.p1",
+      "chapters": [
+        "single_cell.design"
+      ],
+      "title": "Covariates and independent units",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.design/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Covariates and independent units",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Declared design code",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.design.p2",
+      "chapters": [
+        "single_cell.design"
+      ],
+      "title": "Capture contribution by donor",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.design/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Capture contribution by donor",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.barcode.p1",
+      "chapters": [
+        "single_cell.barcode"
+      ],
+      "title": "Barcode rank profile",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.barcode/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Barcode rank profile",
+        "x_label": "Scaled barcode rank",
+        "y_label": "Supplied log UMI count",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.barcode.p2",
+      "chapters": [
+        "single_cell.barcode"
+      ],
+      "title": "Droplet classification",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.barcode/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Droplet classification",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.qc.complete",
+      "chapters": [
+        "single_cell.qc"
+      ],
+      "title": "Sample distributions",
+      "form": "qc",
+      "renderer": "figure_integrated_views.plot_integrated_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.qc/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Sample distributions",
+        "kind": "qc"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.ambient_doublet.p1",
+      "chapters": [
+        "single_cell.ambient_doublet"
+      ],
+      "title": "Doublet and ambient diagnostics",
+      "form": "points",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.ambient_doublet/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "point_unit",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "points",
+        "title": "Doublet and ambient diagnostics",
+        "x_label": "Supplied doublet score",
+        "y_label": "Supplied ambient fraction",
+        "point_unit": "Cell",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.ambient_doublet.p2",
+      "chapters": [
+        "single_cell.ambient_doublet"
+      ],
+      "title": "Reviewed calls by donor",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.ambient_doublet/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Reviewed calls by donor",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.integration.p1",
+      "chapters": [
+        "single_cell.integration"
+      ],
+      "title": "Fixed integrated coordinates",
+      "form": "embedding",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.integration/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "embedding",
+        "title": "Fixed integrated coordinates",
+        "x_label": "Stored coordinate 1",
+        "y_label": "Stored coordinate 2",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.integration.p2",
+      "chapters": [
+        "single_cell.integration"
+      ],
+      "title": "Biology and batch diagnostics",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.integration/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Biology and batch diagnostics",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied diagnostic score",
+        "limits": [
+          0,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.hvg_pca.p1",
+      "chapters": [
+        "single_cell.hvg_pca"
+      ],
+      "title": "Explained-variance profile",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.hvg_pca/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Explained-variance profile",
+        "x_label": "Scaled PC order",
+        "y_label": "Supplied variance percent",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.hvg_pca.p2",
+      "chapters": [
+        "single_cell.hvg_pca"
+      ],
+      "title": "Selected PC loadings",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.hvg_pca/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Selected PC loadings",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied loading",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.resolution.complete",
+      "chapters": [
+        "single_cell.resolution"
+      ],
+      "title": "Resolution changes · cell flows and cluster sizes",
+      "form": "cluster_tree",
+      "renderer": "figure_lineage_views.plot_lineage_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.resolution/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Resolution changes · cell flows and cluster sizes",
+        "kind": "cluster_tree"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.annotation.complete",
+      "chapters": [
+        "single_cell.annotation"
+      ],
+      "title": "Cell identities and marker evidence",
+      "form": "atlas",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.annotation/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Cell identities and marker evidence",
+        "kind": "atlas"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.subcluster.p1",
+      "chapters": [
+        "single_cell.subcluster"
+      ],
+      "title": "Selected lineage and child annotations",
+      "form": "embedding",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.subcluster/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "embedding",
+        "title": "Selected lineage and child annotations",
+        "x_label": "Stored coordinate 1",
+        "y_label": "Stored coordinate 2",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.subcluster.p2",
+      "chapters": [
+        "single_cell.subcluster"
+      ],
+      "title": "Child-state marker specificity",
+      "form": "bubble",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.subcluster/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "bubble",
+        "title": "Child-state marker specificity",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied mean expression",
+        "limits": [
+          0,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.markers.complete",
+      "chapters": [
+        "single_cell.markers"
+      ],
+      "title": "Marker specificity · annotation blocks and detection fractions",
+      "form": "marker_dot",
+      "renderer": "figure_integrated_views.plot_integrated_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.markers/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Marker specificity · annotation blocks and detection fractions",
+        "kind": "marker_dot"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.composition.complete",
+      "chapters": [
+        "single_cell.composition"
+      ],
+      "title": "single_cell.composition",
+      "form": "complete",
+      "renderer": "figure_styles.plot_composition_panels",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.composition/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "single_cell.composition",
+        "kind": "complete"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.abundance.p1",
+      "chapters": [
+        "single_cell.abundance"
+      ],
+      "title": "Donor-aware abundance contrasts",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.abundance/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Donor-aware abundance contrasts",
+        "x_label": "Supplied log abundance ratio and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.abundance.p2",
+      "chapters": [
+        "single_cell.abundance"
+      ],
+      "title": "Complete donor composition",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.abundance/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Complete donor composition",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.pseudobulk.complete",
+      "chapters": [
+        "single_cell.pseudobulk"
+      ],
+      "title": "Myeloid donor response · stacked distributions",
+      "form": "volcano",
+      "renderer": "figure_integrated_views.plot_integrated_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.pseudobulk/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Myeloid donor response · stacked distributions",
+        "kind": "volcano"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.multi_contrast.p1",
+      "chapters": [
+        "single_cell.multi_contrast"
+      ],
+      "title": "Celltype-by-contrast effect atlas",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.multi_contrast/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Celltype-by-contrast effect atlas",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied log2 effect",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.multi_contrast.p2",
+      "chapters": [
+        "single_cell.multi_contrast"
+      ],
+      "title": "Prespecified celltype comparisons",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.multi_contrast/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Prespecified celltype comparisons",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.pathways.complete",
+      "chapters": [
+        "single_cell.pathways"
+      ],
+      "title": "Celltype pathway responses",
+      "form": "gsea_comparison",
+      "renderer": "figure_enrichment_story.plot_enrichment_story",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.pathways/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Celltype pathway responses",
+        "kind": "gsea_comparison"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.gene_support.complete",
+      "chapters": [
+        "single_cell.gene_support"
+      ],
+      "title": "Celltype pathway membership and gene evidence",
+      "form": "gene_support",
+      "renderer": "figure_enrichment_story.plot_enrichment_story",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.gene_support/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Celltype pathway membership and gene evidence",
+        "kind": "gene_support"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.states.p1",
+      "chapters": [
+        "single_cell.states"
+      ],
+      "title": "Coordinated sample-level patterns",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.states/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Coordinated sample-level patterns",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied score",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.states.p2",
+      "chapters": [
+        "single_cell.states"
+      ],
+      "title": "Donor-level effects and uncertainty",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.states/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Donor-level effects and uncertainty",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.hdwgcna.complete",
+      "chapters": [
+        "single_cell.hdwgcna"
+      ],
+      "title": "Metacell support · donors, celltypes and overlap",
+      "form": "metacell_qc",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.hdwgcna/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Metacell support · donors, celltypes and overlap",
+        "kind": "metacell_qc"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.trajectory.complete",
+      "chapters": [
+        "single_cell.trajectory"
+      ],
+      "title": "Branch identity and progression · shared frozen graph",
+      "form": "trajectory",
+      "renderer": "figure_lineage_views.plot_lineage_view",
+      "panel_id": null,
+      "spec": "assets/chapter-gallery/single_cell.trajectory/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title"
+      ],
+      "meaning": {
+        "id": "complete",
+        "title": "Branch identity and progression · shared frozen graph",
+        "kind": "trajectory"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.velocity.p1",
+      "chapters": [
+        "single_cell.velocity"
+      ],
+      "title": "Supplied velocity field",
+      "form": "vector",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.velocity/input/example.spec.json",
+      "input_channels": [
+        "arrow_scale",
+        "id",
+        "kind",
+        "title",
+        "value_label",
+        "vector_definition",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "vector",
+        "title": "Supplied velocity field",
+        "x_label": "Frozen coordinate 1",
+        "y_label": "Frozen coordinate 2",
+        "vector_definition": "Supplied illustrative velocities in frozen embedding coordinates",
+        "arrow_scale": 1,
+        "value_label": "Supplied latent time",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.velocity.p2",
+      "chapters": [
+        "single_cell.velocity"
+      ],
+      "title": "Splicing phase diagnostics",
+      "form": "points",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.velocity/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "point_unit",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "points",
+        "title": "Splicing phase diagnostics",
+        "x_label": "Supplied spliced",
+        "y_label": "Supplied unspliced",
+        "point_unit": "Cell-phase observation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.communication.p1",
+      "chapters": [
+        "single_cell.communication"
+      ],
+      "title": "Sender-receiver landscape",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.communication/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Sender-receiver landscape",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied interaction score",
+        "limits": [
+          0,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.communication.p2",
+      "chapters": [
+        "single_cell.communication"
+      ],
+      "title": "Ligand-receptor support",
+      "form": "bubble",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.communication/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "bubble",
+        "title": "Ligand-receptor support",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied LR score",
+        "limits": [
+          0,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.ligand_target.p1",
+      "chapters": [
+        "single_cell.ligand_target"
+      ],
+      "title": "Explicit evidence relationships",
+      "form": "network",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.ligand_target/input/example.spec.json",
+      "input_channels": [
+        "edge_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "network",
+        "title": "Explicit evidence relationships",
+        "x_label": "",
+        "y_label": "",
+        "edge_definition": "Complete explicitly selected illustrative edge list; weights and coordinates supplied; no layout fit or pruning",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.ligand_target.p2",
+      "chapters": [
+        "single_cell.ligand_target"
+      ],
+      "title": "Selected relationship support",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.ligand_target/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Selected relationship support",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied evidence score",
+        "limits": [
+          0,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.regulons.p1",
+      "chapters": [
+        "single_cell.regulons"
+      ],
+      "title": "Coordinated sample-level patterns",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.regulons/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Coordinated sample-level patterns",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied score",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.regulons.p2",
+      "chapters": [
+        "single_cell.regulons"
+      ],
+      "title": "Donor-level effects and uncertainty",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.regulons/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Donor-level effects and uncertainty",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.cnv.p1",
+      "chapters": [
+        "single_cell.cnv"
+      ],
+      "title": "Genomically ordered copy-number scores",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.cnv/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Genomically ordered copy-number scores",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied relative CNV",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.cnv.p2",
+      "chapters": [
+        "single_cell.cnv"
+      ],
+      "title": "Clone support by donor",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.cnv/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Clone support by donor",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.vdj.p1",
+      "chapters": [
+        "single_cell.vdj"
+      ],
+      "title": "Within-donor composition",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.vdj/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Within-donor composition",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.vdj.p2",
+      "chapters": [
+        "single_cell.vdj"
+      ],
+      "title": "Prespecified compositional comparisons",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.vdj/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Prespecified compositional comparisons",
+        "x_label": "Supplied log-ratio effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.vdj.p3",
+      "chapters": [
+        "single_cell.vdj"
+      ],
+      "title": "Clonotype sharing",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p3",
+      "spec": "assets/chapter-gallery/single_cell.vdj/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Clonotype sharing",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied overlap index",
+        "limits": [
+          0,
+          1
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p3"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.splicing.p1",
+      "chapters": [
+        "single_cell.splicing"
+      ],
+      "title": "Frozen junction/coverage profiles",
+      "form": "curve",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.splicing/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "interval_label",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "curve",
+        "title": "Frozen junction/coverage profiles",
+        "x_label": "Declared genomic offset",
+        "y_label": "Supplied coverage",
+        "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+        "interval_label": "Shading: supplied illustrative range",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.splicing.p2",
+      "chapters": [
+        "single_cell.splicing"
+      ],
+      "title": "Junction usage differences",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.splicing/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Junction usage differences",
+        "x_label": "Supplied delta PSI and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.splicing.p3",
+      "chapters": [
+        "single_cell.splicing"
+      ],
+      "title": "Transcript usage",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p3",
+      "spec": "assets/chapter-gallery/single_cell.splicing/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Transcript usage",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p3"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.perturbseq.p1",
+      "chapters": [
+        "single_cell.perturbseq"
+      ],
+      "title": "Guide assignments by replicate",
+      "form": "stack",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.perturbseq/input/example.spec.json",
+      "input_channels": [
+        "denominator_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "stack",
+        "title": "Guide assignments by replicate",
+        "x_label": "Supplied fraction",
+        "y_label": "",
+        "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.perturbseq.p2",
+      "chapters": [
+        "single_cell.perturbseq"
+      ],
+      "title": "Guide-level donor response",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.perturbseq/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Guide-level donor response",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.perturbseq.p3",
+      "chapters": [
+        "single_cell.perturbseq"
+      ],
+      "title": "Perturbation programs",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p3",
+      "spec": "assets/chapter-gallery/single_cell.perturbseq/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Perturbation programs",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied effect",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p3"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.replication.p1",
+      "chapters": [
+        "single_cell.replication"
+      ],
+      "title": "Independent-cohort effect estimates",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.replication/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Independent-cohort effect estimates",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.replication.p2",
+      "chapters": [
+        "single_cell.replication"
+      ],
+      "title": "Feature-level direction and magnitude",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.replication/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Feature-level direction and magnitude",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied log2 effect",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.spatial.p1",
+      "chapters": [
+        "single_cell.spatial"
+      ],
+      "title": "Registered measured spatial coordinates",
+      "form": "embedding",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.spatial/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "embedding",
+        "title": "Registered measured spatial coordinates",
+        "x_label": "Stored coordinate 1",
+        "y_label": "Stored coordinate 2",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.spatial.p2",
+      "chapters": [
+        "single_cell.spatial"
+      ],
+      "title": "Donor/section region contrasts",
+      "form": "interval",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.spatial/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "interval_definition",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "interval",
+        "title": "Donor/section region contrasts",
+        "x_label": "Supplied effect and 95% interval",
+        "y_label": "",
+        "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.spatial.p3",
+      "chapters": [
+        "single_cell.spatial"
+      ],
+      "title": "Regional molecular programs",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p3",
+      "spec": "assets/chapter-gallery/single_cell.spatial/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Regional molecular programs",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied regional score",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p3"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.multiome.p1",
+      "chapters": [
+        "single_cell.multiome"
+      ],
+      "title": "Frozen paired-cell coordinates",
+      "form": "embedding",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p1",
+      "spec": "assets/chapter-gallery/single_cell.multiome/input/example.spec.json",
+      "input_channels": [
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "embedding",
+        "title": "Frozen paired-cell coordinates",
+        "x_label": "Stored coordinate 1",
+        "y_label": "Stored coordinate 2",
+        "id": "p1"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.multiome.p2",
+      "chapters": [
+        "single_cell.multiome"
+      ],
+      "title": "Motif and RNA support",
+      "form": "matrix",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p2",
+      "spec": "assets/chapter-gallery/single_cell.multiome/input/example.spec.json",
+      "input_channels": [
+        "fraction_definition",
+        "id",
+        "kind",
+        "limits",
+        "show_values",
+        "size_label",
+        "title",
+        "value_label",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "matrix",
+        "title": "Motif and RNA support",
+        "x_label": "",
+        "y_label": "",
+        "value_label": "Supplied standardized evidence",
+        "limits": [
+          -2,
+          2
+        ],
+        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+        "size_label": "Coverage",
+        "show_values": true,
+        "id": "p2"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "single_cell.multiome.p3",
+      "chapters": [
+        "single_cell.multiome"
+      ],
+      "title": "Frozen peak-gene links",
+      "form": "network",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": "p3",
+      "spec": "assets/chapter-gallery/single_cell.multiome/input/example.spec.json",
+      "input_channels": [
+        "edge_definition",
+        "id",
+        "kind",
+        "title",
+        "x_label",
+        "y_label"
+      ],
+      "meaning": {
+        "kind": "network",
+        "title": "Frozen peak-gene links",
+        "x_label": "",
+        "y_label": "",
+        "edge_definition": "Complete explicitly selected illustrative edge list; weights and coordinates supplied; no layout fit or pruning",
+        "id": "p3"
+      },
+      "example": "assets/chapter-gallery/index.html",
+      "review_scope": "Complete panel actually drawn in its chapter; a newly exported single/layout view needs its own review"
+    },
+    {
+      "id": "WGCNA_SoftPower",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Soft power · topology and connectivity",
+      "form": "soft_threshold",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_SoftPower/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "fit_reference",
+        "mode",
+        "selected_power",
+        "title"
+      ],
+      "meaning": {
+        "mode": "soft_threshold",
+        "title": "Soft power · topology and connectivity",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "selected_power": 6,
+        "fit_reference": 0.8
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_SampleTree",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Samples · frozen clustering and design tracks",
+      "form": "sample_tree",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_SampleTree/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "leaf_order",
+        "mode",
+        "title",
+        "track_labels"
+      ],
+      "meaning": {
+        "mode": "sample_tree",
+        "title": "Samples · frozen clustering and design tracks",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "leaf_order": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D08",
+          "D09",
+          "D10",
+          "D11",
+          "D12",
+          "D13",
+          "D14",
+          "D15",
+          "D16"
+        ],
+        "track_labels": [
+          "Batch",
+          "Condition"
+        ]
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_ModuleTree",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Gene hierarchy · dynamic and merged modules",
+      "form": "module_dendrogram",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_ModuleTree/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "leaf_order",
+        "mode",
+        "title"
+      ],
+      "meaning": {
+        "mode": "module_dendrogram",
+        "title": "Gene hierarchy · dynamic and merged modules",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "leaf_order": [
+          "G001",
+          "G002",
+          "G003",
+          "G004",
+          "G005",
+          "G006",
+          "G007",
+          "G008",
+          "G009",
+          "G010",
+          "G011",
+          "G012",
+          "G013",
+          "G014",
+          "G015",
+          "G016",
+          "G017",
+          "G018",
+          "G019",
+          "G020",
+          "G021",
+          "G022",
+          "G023",
+          "G024",
+          "G025",
+          "G026",
+          "G027",
+          "G028",
+          "G029",
+          "G030",
+          "G031",
+          "G032",
+          "G033",
+          "G034",
+          "G035",
+          "G036",
+          "G037",
+          "G038",
+          "G039",
+          "G040",
+          "G041",
+          "G042",
+          "G043",
+          "G044",
+          "G045",
+          "G046",
+          "G047",
+          "G048",
+          "G049",
+          "G050",
+          "G051",
+          "G052",
+          "G053",
+          "G054",
+          "G055",
+          "G056",
+          "G057",
+          "G058",
+          "G059",
+          "G060",
+          "G061",
+          "G062",
+          "G063",
+          "G064"
+        ]
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_ModuleTrait",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Module–trait associations · coefficient, q and effective n",
+      "form": "module_trait",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_ModuleTrait/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "mode",
+        "module_order",
+        "probability_kind",
+        "title"
+      ],
+      "meaning": {
+        "mode": "module_trait",
+        "title": "Module–trait associations · coefficient, q and effective n",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "module_order": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6"
+        ],
+        "probability_kind": "adjusted"
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_MM_GS",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Module membership and gene–trait association",
+      "form": "membership_significance",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_MM_GS/input/example.spec.json",
+      "input_channels": [
+        "coefficient_semantics",
+        "context",
+        "mode",
+        "module_order",
+        "title"
+      ],
+      "meaning": {
+        "mode": "membership_significance",
+        "title": "Module membership and gene–trait association",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "module_order": [
+          "M1",
+          "M2",
+          "M3"
+        ],
+        "coefficient_semantics": "signed"
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_MM_GS_Absolute",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Upstream absolute MM and GS · separate declared convention",
+      "form": "membership_significance",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_MM_GS_Absolute/input/example.spec.json",
+      "input_channels": [
+        "coefficient_semantics",
+        "context",
+        "mode",
+        "module_order",
+        "title"
+      ],
+      "meaning": {
+        "mode": "membership_significance",
+        "title": "Upstream absolute MM and GS · separate declared convention",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "module_order": [
+          "M1",
+          "M2",
+          "M3"
+        ],
+        "coefficient_semantics": "absolute"
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_TOM",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Topological overlap · complete selected frozen matrix",
+      "form": "tom",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_TOM/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "leaf_order",
+        "matrix_definition",
+        "mode",
+        "title"
+      ],
+      "meaning": {
+        "mode": "tom",
+        "title": "Topological overlap · complete selected frozen matrix",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "leaf_order": [
+          "G001",
+          "G002",
+          "G003",
+          "G004",
+          "G005",
+          "G006",
+          "G007",
+          "G008",
+          "G009",
+          "G010",
+          "G011",
+          "G012",
+          "G013",
+          "G014",
+          "G015",
+          "G016",
+          "G017",
+          "G018",
+          "G019",
+          "G020",
+          "G021",
+          "G022",
+          "G023",
+          "G024"
+        ],
+        "matrix_definition": "TOM"
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_TOM_Dissimilarity",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Topological dissimilarity · explicitly 1 − TOM",
+      "form": "tom",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_TOM_Dissimilarity/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "leaf_order",
+        "matrix_definition",
+        "mode",
+        "title"
+      ],
+      "meaning": {
+        "mode": "tom",
+        "title": "Topological dissimilarity · explicitly 1 − TOM",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "leaf_order": [
+          "G001",
+          "G002",
+          "G003",
+          "G004",
+          "G005",
+          "G006",
+          "G007",
+          "G008",
+          "G009",
+          "G010",
+          "G011",
+          "G012",
+          "G013",
+          "G014",
+          "G015",
+          "G016",
+          "G017",
+          "G018",
+          "G019",
+          "G020",
+          "G021",
+          "G022",
+          "G023",
+          "G024"
+        ],
+        "matrix_definition": "1 - TOM"
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_EigengeneNetwork",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Relationships among oriented module eigengenes",
+      "form": "eigengene_network",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_EigengeneNetwork/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "leaf_order",
+        "mode",
+        "title"
+      ],
+      "meaning": {
+        "mode": "eigengene_network",
+        "title": "Relationships among oriented module eigengenes",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "leaf_order": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6"
+        ]
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_EigengeneProfiles",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Donor-level module eigengenes · all units retained",
+      "form": "eigengene_profiles",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_EigengeneProfiles/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "context",
+        "mode",
+        "module_order",
+        "title"
+      ],
+      "meaning": {
+        "mode": "eigengene_profiles",
+        "title": "Donor-level module eigengenes · all units retained",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "module_order": [
+          "M1",
+          "M2",
+          "M3",
+          "M4"
+        ],
+        "columns": 2
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_HubConnectivity",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "Prespecified hub candidates · connectivity and membership",
+      "form": "hub_connectivity",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_HubConnectivity/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "mode",
+        "title"
+      ],
+      "meaning": {
+        "mode": "hub_connectivity",
+        "title": "Prespecified hub candidates · connectivity and membership",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        }
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "WGCNA_Preservation",
+      "chapters": [
+        "bulk.wgcna",
+        "single_cell.hdwgcna"
+      ],
+      "title": "External module preservation · size, Zsummary and medianRank",
+      "form": "preservation",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/WGCNA_Preservation/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "mode",
+        "preservation_guides",
+        "title"
+      ],
+      "meaning": {
+        "mode": "preservation",
+        "title": "External module preservation · size, Zsummary and medianRank",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "preservation_guides": [
+          2,
+          10
+        ]
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "hdWGCNA_MetacellQC",
+      "chapters": [
+        "single_cell.hdwgcna"
+      ],
+      "title": "Metacell support · donors, celltypes and overlap",
+      "form": "metacell_qc",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/hdWGCNA_MetacellQC/input/example.spec.json",
+      "input_channels": [
+        "context",
+        "mode",
+        "title"
+      ],
+      "meaning": {
+        "mode": "metacell_qc",
+        "title": "Metacell support · donors, celltypes and overlap",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        }
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "hdWGCNA_ModuleActivity",
+      "chapters": [
+        "single_cell.hdwgcna"
+      ],
+      "title": "Module activity · identical cells, coordinates and scale",
+      "form": "module_activity",
+      "renderer": "figure_wgcna_views.plot_wgcna_view",
+      "panel_id": null,
+      "spec": "assets/wgcna-gallery/hdWGCNA_ModuleActivity/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "context",
+        "mode",
+        "module_order",
+        "title"
+      ],
+      "meaning": {
+        "mode": "module_activity",
+        "title": "Module activity · identical cells, coordinates and scale",
+        "context": {
+          "network_type": "signed",
+          "correlation_method": "Pearson",
+          "independent_unit": "fictional donors",
+          "independent_n": 24,
+          "module_version": "Illustrative modules v0.9.1",
+          "source_version": "Fictional frozen summaries; no WGCNA backend",
+          "selection": "Complete explicitly selected fixture scope; no hub selection or inference during drawing"
+        },
+        "module_order": [
+          "M1",
+          "M2",
+          "M3",
+          "M4"
+        ],
+        "columns": 2
+      },
+      "example": "assets/wgcna-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "ClusterFlow_2Column",
+      "chapters": [
+        "single_cell.resolution"
+      ],
+      "title": "Resolution changes · cell flows and cluster sizes",
+      "form": "cluster_tree",
+      "renderer": "figure_lineage_views.plot_lineage_view",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/ClusterFlow_2Column/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "definition",
+        "level_order",
+        "mode",
+        "title"
+      ],
+      "meaning": {
+        "mode": "cluster_tree",
+        "title": "Resolution changes · cell flows and cluster sizes",
+        "definition": "Fictional complete cell counts, adjacent-resolution flows and frozen layout; no cluster stability inference",
+        "level_order": [
+          "Resolution 0.2",
+          "Resolution 0.5",
+          "Resolution 0.8"
+        ],
+        "columns": 2
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "ClusterFlow_1Column",
+      "chapters": [
+        "single_cell.resolution"
+      ],
+      "title": "Resolution changes · cell flows and cluster sizes",
+      "form": "cluster_tree",
+      "renderer": "figure_lineage_views.plot_lineage_view",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/ClusterFlow_1Column/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "definition",
+        "level_order",
+        "mode",
+        "title"
+      ],
+      "meaning": {
+        "mode": "cluster_tree",
+        "title": "Resolution changes · cell flows and cluster sizes",
+        "definition": "Fictional complete cell counts, adjacent-resolution flows and frozen layout; no cluster stability inference",
+        "level_order": [
+          "Resolution 0.2",
+          "Resolution 0.5",
+          "Resolution 0.8"
+        ],
+        "columns": 1
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Trajectory_2Column",
+      "chapters": [
+        "single_cell.trajectory"
+      ],
+      "title": "Branch identity and progression · shared frozen graph",
+      "form": "trajectory",
+      "renderer": "figure_lineage_views.plot_lineage_view",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Trajectory_2Column/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "definition",
+        "mode",
+        "root_id",
+        "title",
+        "value_limits"
+      ],
+      "meaning": {
+        "mode": "trajectory",
+        "title": "Branch identity and progression · shared frozen graph",
+        "definition": "Fictional rooted graph and pseudotime; no trajectory or lineage inference",
+        "root_id": "Root",
+        "value_limits": [
+          0,
+          1
+        ],
+        "columns": 2
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Trajectory_1Column",
+      "chapters": [
+        "single_cell.trajectory"
+      ],
+      "title": "Branch identity and progression · shared frozen graph",
+      "form": "trajectory",
+      "renderer": "figure_lineage_views.plot_lineage_view",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Trajectory_1Column/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "definition",
+        "mode",
+        "root_id",
+        "title",
+        "value_limits"
+      ],
+      "meaning": {
+        "mode": "trajectory",
+        "title": "Branch identity and progression · shared frozen graph",
+        "definition": "Fictional rooted graph and pseudotime; no trajectory or lineage inference",
+        "root_id": "Root",
+        "value_limits": [
+          0,
+          1
+        ],
+        "columns": 1
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Trajectory_GeneDynamics",
+      "chapters": [
+        "single_cell.trajectory"
+      ],
+      "title": "Gene progression on supplied branches",
+      "form": "dedicated",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Trajectory_GeneDynamics/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "panels",
+        "scope_note",
+        "title"
+      ],
+      "meaning": {
+        "panels": [
+          {
+            "kind": "curve",
+            "title": "Supplied branch dynamics",
+            "x_label": "Supplied pseudotime",
+            "y_label": "Supplied gene program",
+            "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
+            "interval_label": "Shading: supplied illustrative range",
+            "id": "p2"
+          },
+          {
+            "kind": "matrix",
+            "title": "Ordered gene progression",
+            "x_label": "",
+            "y_label": "",
+            "value_label": "Supplied scaled expression",
+            "limits": [
+              -2,
+              2
+            ],
+            "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+            "size_label": "Coverage",
+            "show_values": true,
+            "id": "p3"
+          }
+        ],
+        "title": "Gene progression on supplied branches",
+        "scope_note": "Fictional frozen inputs · single_cell · no analysis performed",
+        "columns": "auto"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Resolution_DonorSupport",
+      "chapters": [
+        "single_cell.resolution"
+      ],
+      "title": "Cluster support by donor",
+      "form": "dedicated",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Resolution_DonorSupport/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "panels",
+        "scope_note",
+        "title"
+      ],
+      "meaning": {
+        "panels": [
+          {
+            "kind": "matrix",
+            "title": "Donor support across clusters",
+            "x_label": "",
+            "y_label": "",
+            "value_label": "Supplied cell count per donor",
+            "limits": [
+              0,
+              80
+            ],
+            "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
+            "size_label": "Coverage",
+            "show_values": true,
+            "id": "p2"
+          }
+        ],
+        "title": "Cluster support by donor",
+        "scope_note": "Fictional frozen inputs · single_cell · no analysis performed",
+        "columns": "auto"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "HVG_MeanDispersion",
+      "chapters": [
+        "single_cell.hvg_pca"
+      ],
+      "title": "Variable features · supplied mean and normalized dispersion",
+      "form": "dedicated",
+      "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/HVG_MeanDispersion/input/example.spec.json",
+      "input_channels": [
+        "columns",
+        "panels",
+        "scope_note",
+        "title"
+      ],
+      "meaning": {
+        "title": "Variable features · supplied mean and normalized dispersion",
+        "scope_note": "Fictional frozen feature selection · no HVG estimation",
+        "panels": [
+          {
+            "id": "P1",
+            "kind": "points",
+            "title": "Full supplied feature scope",
+            "x_label": "Supplied mean expression",
+            "y_label": "Supplied normalized dispersion",
+            "point_unit": "Gene"
+          }
+        ],
+        "columns": 1
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_E08",
+      "chapters": [
+        "bulk.gene_support",
+        "single_cell.gene_support"
+      ],
+      "title": "Method_E08",
+      "form": "dedicated",
+      "renderer": "figure_method_extensions.plot_gene_term_chord",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_E08/input/example.spec.json",
+      "input_channels": [
+        "effect_label",
+        "effect_limits",
+        "gene_order",
+        "term_order"
+      ],
+      "meaning": {
+        "gene_order": [
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "F05",
+          "F06",
+          "F07",
+          "F08",
+          "F09",
+          "F10",
+          "F11",
+          "F12",
+          "F13",
+          "F14",
+          "F15",
+          "F16",
+          "F17",
+          "F18",
+          "F19",
+          "F20",
+          "F21",
+          "F22"
+        ],
+        "term_order": [
+          "BP01",
+          "BP02",
+          "BP03",
+          "BP04",
+          "BP05",
+          "BP06"
+        ],
+        "effect_limits": [
+          -2,
+          2
+        ],
+        "effect_label": "Supplied log2 fold change"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_N05",
+      "chapters": [
+        "single_cell.annotation",
+        "single_cell.vdj"
+      ],
+      "title": "Method_N05",
+      "form": "dedicated",
+      "renderer": "figure_network_extensions.plot_alluvial",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_N05/input/example.spec.json",
+      "input_channels": [
+        "stage_columns",
+        "weight_label"
+      ],
+      "meaning": {
+        "stage_columns": [
+          "Stage1",
+          "Stage2",
+          "Stage3"
+        ],
+        "weight_label": "Supplied path quantity"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_N06",
+      "chapters": [
+        "bulk.differential",
+        "bulk.ora",
+        "single_cell.multi_contrast"
+      ],
+      "title": "Method_N06",
+      "form": "dedicated",
+      "renderer": "figure_network_extensions.plot_upset",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_N06/input/example.spec.json",
+      "input_channels": [
+        "set_columns",
+        "unit_label"
+      ],
+      "meaning": {
+        "set_columns": [
+          "G1",
+          "G2",
+          "G3",
+          "G4"
+        ],
+        "unit_label": "45 supplied objects"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_M11b",
+      "chapters": [
+        "bulk.model_qc"
+      ],
+      "title": "Frozen model check · qq",
+      "form": "qq",
+      "renderer": "figure_multiomics_views.plot_diagnostic_panel",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_M11b/input/example.spec.json",
+      "input_channels": [
+        "cook_area_scale",
+        "mode",
+        "model_definition",
+        "reference_definition",
+        "title"
+      ],
+      "meaning": {
+        "mode": "qq",
+        "model_definition": "One frozen synthetic diagnostic output; no research regression fitted",
+        "reference_definition": "Supplied standard-normal (i+0.5)/48 quantiles",
+        "cook_area_scale": 180,
+        "title": "Frozen model check · qq"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_M11a",
+      "chapters": [
+        "bulk.model_qc"
+      ],
+      "title": "Frozen model check · residual",
+      "form": "residual",
+      "renderer": "figure_multiomics_views.plot_diagnostic_panel",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_M11a/input/example.spec.json",
+      "input_channels": [
+        "cook_area_scale",
+        "mode",
+        "model_definition",
+        "reference_definition",
+        "title"
+      ],
+      "meaning": {
+        "mode": "residual",
+        "model_definition": "One frozen synthetic diagnostic output; no research regression fitted",
+        "reference_definition": "Supplied standard-normal (i+0.5)/48 quantiles",
+        "cook_area_scale": 180,
+        "title": "Frozen model check · residual"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_M11c",
+      "chapters": [
+        "bulk.model_qc"
+      ],
+      "title": "Frozen model check · scale location",
+      "form": "scale_location",
+      "renderer": "figure_multiomics_views.plot_diagnostic_panel",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_M11c/input/example.spec.json",
+      "input_channels": [
+        "cook_area_scale",
+        "mode",
+        "model_definition",
+        "reference_definition",
+        "title"
+      ],
+      "meaning": {
+        "mode": "scale_location",
+        "model_definition": "One frozen synthetic diagnostic output; no research regression fitted",
+        "reference_definition": "Supplied standard-normal (i+0.5)/48 quantiles",
+        "cook_area_scale": 180,
+        "title": "Frozen model check · scale location"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_M11d",
+      "chapters": [
+        "bulk.model_qc"
+      ],
+      "title": "Frozen model check · influence",
+      "form": "influence",
+      "renderer": "figure_multiomics_views.plot_diagnostic_panel",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_M11d/input/example.spec.json",
+      "input_channels": [
+        "cook_area_scale",
+        "mode",
+        "model_definition",
+        "reference_definition",
+        "title"
+      ],
+      "meaning": {
+        "mode": "influence",
+        "model_definition": "One frozen synthetic diagnostic output; no research regression fitted",
+        "reference_definition": "Supplied standard-normal (i+0.5)/48 quantiles",
+        "cook_area_scale": 180,
+        "title": "Frozen model check · influence"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_E18",
+      "chapters": [
+        "single_cell.velocity"
+      ],
+      "title": "Method_E18",
+      "form": "dedicated",
+      "renderer": "figure_method_extensions.plot_vector_field",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_E18/input/example.spec.json",
+      "input_channels": [
+        "arrow_scale",
+        "coordinate_definition",
+        "vector_definition"
+      ],
+      "meaning": {
+        "arrow_scale": 1,
+        "vector_definition": "Already projected synthetic dx/dy per supplied time unit",
+        "coordinate_definition": "Frozen synthetic 2D coordinates, not a newly calculated UMAP"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Method_E43",
+      "chapters": [
+        "bulk.splicing",
+        "single_cell.splicing",
+        "bulk.dtu"
+      ],
+      "title": "Coverage, splice junctions and isoforms",
+      "form": "dedicated",
+      "renderer": "figure_analysis_results.plot_splice_tracks",
+      "panel_id": null,
+      "spec": "assets/method-depth-gallery/Method_E43/input/example.spec.json",
+      "input_channels": [
+        "coordinate_definition",
+        "coverage_definition",
+        "junction_definition",
+        "region",
+        "sample_order",
+        "title",
+        "transcript_order",
+        "width_per_count"
+      ],
+      "meaning": {
+        "sample_order": [
+          "G1",
+          "G7"
+        ],
+        "transcript_order": [
+          "Isoform A",
+          "Isoform B"
+        ],
+        "region": [
+          100,
+          900
+        ],
+        "coordinate_definition": "Synthetic segment; 0-based half-open intervals; increasing position, strand not inferred",
+        "coverage_definition": "Supplied coverage in a common scale for both samples",
+        "junction_definition": "Supplied junction read count; zero counts retained; arc height is layout only",
+        "width_per_count": 0.045,
+        "title": "Coverage, splice junctions and isoforms"
+      },
+      "example": "assets/method-depth-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Subgroup_01",
+      "chapters": [
+        "single_cell.annotation",
+        "single_cell.subcluster"
+      ],
+      "title": "B cells · marker evidence",
+      "form": "subgroup",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/subgroup-gallery/Subgroup_01/input/example.spec.json",
+      "input_channels": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "meaning": {
+        "mode": "subgroup",
+        "title": "B cells · marker evidence",
+        "expression_label": "log1p normalized expression",
+        "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+        "expression_limits": [
+          0,
+          5
+        ],
+        "group_order": [
+          "B cells",
+          "T cells",
+          "Stromal",
+          "Endothelial",
+          "Myeloid"
+        ],
+        "marker_order": [
+          "MS4A1",
+          "CD79A",
+          "CD74",
+          "CD37"
+        ],
+        "focus_group": "B cells",
+        "ncols": "auto"
+      },
+      "example": "assets/subgroup-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Subgroup_02",
+      "chapters": [
+        "single_cell.annotation",
+        "single_cell.subcluster"
+      ],
+      "title": "T cells · marker evidence",
+      "form": "subgroup",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/subgroup-gallery/Subgroup_02/input/example.spec.json",
+      "input_channels": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "meaning": {
+        "mode": "subgroup",
+        "title": "T cells · marker evidence",
+        "expression_label": "log1p normalized expression",
+        "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+        "expression_limits": [
+          0,
+          5
+        ],
+        "group_order": [
+          "B cells",
+          "T cells",
+          "Stromal",
+          "Endothelial",
+          "Myeloid"
+        ],
+        "marker_order": [
+          "CD3D",
+          "TRAC",
+          "IL7R",
+          "CD2"
+        ],
+        "focus_group": "T cells",
+        "ncols": "auto"
+      },
+      "example": "assets/subgroup-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Subgroup_03",
+      "chapters": [
+        "single_cell.annotation",
+        "single_cell.subcluster"
+      ],
+      "title": "Stromal · marker evidence",
+      "form": "subgroup",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/subgroup-gallery/Subgroup_03/input/example.spec.json",
+      "input_channels": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "meaning": {
+        "mode": "subgroup",
+        "title": "Stromal · marker evidence",
+        "expression_label": "log1p normalized expression",
+        "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+        "expression_limits": [
+          0,
+          5
+        ],
+        "group_order": [
+          "B cells",
+          "T cells",
+          "Stromal",
+          "Endothelial",
+          "Myeloid"
+        ],
+        "marker_order": [
+          "COL1A1",
+          "DCN",
+          "LUM",
+          "COL3A1"
+        ],
+        "focus_group": "Stromal",
+        "ncols": "auto"
+      },
+      "example": "assets/subgroup-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Subgroup_04",
+      "chapters": [
+        "single_cell.annotation",
+        "single_cell.subcluster"
+      ],
+      "title": "Endothelial · marker evidence",
+      "form": "subgroup",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/subgroup-gallery/Subgroup_04/input/example.spec.json",
+      "input_channels": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "meaning": {
+        "mode": "subgroup",
+        "title": "Endothelial · marker evidence",
+        "expression_label": "log1p normalized expression",
+        "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+        "expression_limits": [
+          0,
+          5
+        ],
+        "group_order": [
+          "B cells",
+          "T cells",
+          "Stromal",
+          "Endothelial",
+          "Myeloid"
+        ],
+        "marker_order": [
+          "PECAM1",
+          "VWF",
+          "KDR",
+          "EMCN"
+        ],
+        "focus_group": "Endothelial",
+        "ncols": "auto"
+      },
+      "example": "assets/subgroup-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Subgroup_05",
+      "chapters": [
+        "single_cell.annotation",
+        "single_cell.subcluster"
+      ],
+      "title": "Myeloid · marker evidence",
+      "form": "subgroup",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/subgroup-gallery/Subgroup_05/input/example.spec.json",
+      "input_channels": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "meaning": {
+        "mode": "subgroup",
+        "title": "Myeloid · marker evidence",
+        "expression_label": "log1p normalized expression",
+        "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+        "expression_limits": [
+          0,
+          5
+        ],
+        "group_order": [
+          "B cells",
+          "T cells",
+          "Stromal",
+          "Endothelial",
+          "Myeloid"
+        ],
+        "marker_order": [
+          "LYZ",
+          "LST1",
+          "FCER1G",
+          "CTSS"
+        ],
+        "focus_group": "Myeloid",
+        "ncols": "auto"
+      },
+      "example": "assets/subgroup-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Layout_02Markers_1Columns",
+      "chapters": [
+        "single_cell.annotation"
+      ],
+      "title": "B cells · marker evidence",
+      "form": "subgroup",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/subgroup-gallery/Layout_02Markers_1Columns/input/example.spec.json",
+      "input_channels": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "meaning": {
+        "mode": "subgroup",
+        "title": "B cells · marker evidence",
+        "expression_label": "log1p normalized expression",
+        "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+        "expression_limits": [
+          0,
+          5
+        ],
+        "group_order": [
+          "B cells",
+          "T cells",
+          "Stromal",
+          "Endothelial",
+          "Myeloid"
+        ],
+        "marker_order": [
+          "MS4A1",
+          "CD79A"
+        ],
+        "focus_group": "B cells",
+        "ncols": 1
+      },
+      "example": "assets/subgroup-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Layout_04Markers_2Columns",
+      "chapters": [
+        "single_cell.annotation"
+      ],
+      "title": "B cells · marker evidence",
+      "form": "subgroup",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/subgroup-gallery/Layout_04Markers_2Columns/input/example.spec.json",
+      "input_channels": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "meaning": {
+        "mode": "subgroup",
+        "title": "B cells · marker evidence",
+        "expression_label": "log1p normalized expression",
+        "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+        "expression_limits": [
+          0,
+          5
+        ],
+        "group_order": [
+          "B cells",
+          "T cells",
+          "Stromal",
+          "Endothelial",
+          "Myeloid"
+        ],
+        "marker_order": [
+          "MS4A1",
+          "CD79A",
+          "CD74",
+          "CD37"
+        ],
+        "focus_group": "B cells",
+        "ncols": 2
+      },
+      "example": "assets/subgroup-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    },
+    {
+      "id": "Layout_08Markers_3Columns",
+      "chapters": [
+        "single_cell.annotation"
+      ],
+      "title": "B cells · marker evidence",
+      "form": "subgroup",
+      "renderer": "figure_annotation_views.plot_annotation_evidence",
+      "panel_id": null,
+      "spec": "assets/subgroup-gallery/Layout_08Markers_3Columns/input/example.spec.json",
+      "input_channels": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "meaning": {
+        "mode": "subgroup",
+        "title": "B cells · marker evidence",
+        "expression_label": "log1p normalized expression",
+        "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+        "expression_limits": [
+          0,
+          5
+        ],
+        "group_order": [
+          "B cells",
+          "T cells",
+          "Stromal",
+          "Endothelial",
+          "Myeloid"
+        ],
+        "marker_order": [
+          "MS4A1",
+          "CD79A",
+          "CD74",
+          "CD37",
+          "MS4A1_demoB",
+          "CD79A_demoB",
+          "CD74_demoB",
+          "CD37_demoB"
+        ],
+        "focus_group": "B cells",
+        "ncols": 3
+      },
+      "example": "assets/subgroup-gallery/index.html",
+      "review_scope": "Dedicated actual export; review bound to exact gallery image"
+    }
+  ],
+  "analysis_performed": false
+}

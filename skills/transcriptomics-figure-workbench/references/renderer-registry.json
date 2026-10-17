@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "version": "0.9.0",
+  "version": "0.9.1",
   "counts": {
-    "python_functions": 125,
+    "python_functions": 131,
     "fixed_aliases": 82,
-    "table_entries": 125
+    "table_entries": 131
   },
   "renderers": [
     {
@@ -172,6 +172,92 @@
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "contribution"
+      ]
+    },
+    {
+      "id": "figure_annotation_views.plot_annotation_evidence",
+      "module": "figure_annotation_views",
+      "function": "plot_annotation_evidence",
+      "display_name": "Annotation atlas and per-subgroup marker evidence",
+      "summary": "Separate annotation atlas and per-subgroup multi-marker reading pages.",
+      "parameters": [
+        {
+          "name": "mode",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "expression_label",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "detection_definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "expression_limits",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "marker_order",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "focus_group",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "group_order",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "ncols",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "nrows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "panel_width",
+          "required": false,
+          "annotation": null,
+          "default": 3.25
+        },
+        {
+          "name": "panel_height",
+          "required": false,
+          "annotation": null,
+          "default": 3.15
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "546b1ac353c64a69ee4a02c952538b5f8bf5f0a2fa108359f625dc3102f1cddb",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "fraction",
+        "value",
+        "x",
+        "y"
       ]
     },
     {
@@ -459,6 +545,48 @@
         "u",
         "v"
       ]
+    },
+    {
+      "id": "figure_chapter_views.plot_transcriptomic_chapter",
+      "module": "figure_chapter_views",
+      "function": "plot_transcriptomic_chapter",
+      "display_name": "Transcriptomic analysis chapter",
+      "summary": "Draw a complete, explicitly selected analysis chapter with adaptive packing.",
+      "parameters": [
+        {
+          "name": "panels",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "scope_note",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "04342c9fa68bcc8b9624dcba959ccb4d6831c1335808cb978bb79a1edbc7c834",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": []
     },
     {
       "id": "figure_clarity_views.plot_clarity_views",
@@ -1124,6 +1252,93 @@
       ]
     },
     {
+      "id": "figure_enrichment_story.plot_enrichment_story",
+      "module": "figure_enrichment_story",
+      "function": "plot_enrichment_story",
+      "display_name": "Linked enrichment and gene evidence",
+      "summary": "Prefer linked effect/ratio, probability, count and exact gene-support channels.",
+      "parameters": [
+        {
+          "name": "mode",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "background_definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "gene_set_version",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "selection_definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "support_contrast",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "tested_size",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "query_size",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "nes_limits",
+          "required": false,
+          "annotation": null,
+          "default": [
+            -3,
+            3
+          ]
+        },
+        {
+          "name": "gene_effect_limits",
+          "required": false,
+          "annotation": null,
+          "default": [
+            -3,
+            3
+          ]
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "3d7700f0980b622bde850746d86212852492198705d4236e0d1d20e5f1e3fe8c",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "NES",
+        "count",
+        "effect",
+        "member",
+        "padj",
+        "ratio"
+      ]
+    },
+    {
       "id": "figure_expanded_grammar.plot_mosaic_counts",
       "module": "figure_expanded_grammar",
       "function": "plot_mosaic_counts",
@@ -1444,7 +1659,7 @@
       "aliases": [
         "paired"
       ],
-      "source_sha256": "cc907a706a5038656dae82936beb77604d50dbd9f9d70c2a5406676192a26028",
+      "source_sha256": "f4b60ee35b730f600ef8214888664baf1738296f6d927b0c72ff74399cca8785",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -1527,7 +1742,7 @@
       "aliases": [
         "effect_matrix"
       ],
-      "source_sha256": "cc907a706a5038656dae82936beb77604d50dbd9f9d70c2a5406676192a26028",
+      "source_sha256": "f4b60ee35b730f600ef8214888664baf1738296f6d927b0c72ff74399cca8785",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -1652,12 +1867,18 @@
           "required": false,
           "annotation": null,
           "default": null
+        },
+        {
+          "name": "merge_annotation_legends",
+          "required": false,
+          "annotation": null,
+          "default": false
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "cc907a706a5038656dae82936beb77604d50dbd9f9d70c2a5406676192a26028",
+      "source_sha256": "f4b60ee35b730f600ef8214888664baf1738296f6d927b0c72ff74399cca8785",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -1682,7 +1903,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "cc907a706a5038656dae82936beb77604d50dbd9f9d70c2a5406676192a26028",
+      "source_sha256": "f4b60ee35b730f600ef8214888664baf1738296f6d927b0c72ff74399cca8785",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -2175,6 +2396,139 @@
       ]
     },
     {
+      "id": "figure_integrated_views.plot_integrated_view",
+      "module": "figure_integrated_views",
+      "function": "plot_integrated_view",
+      "display_name": "Integrated scientific presentation",
+      "summary": "Prefer a compatible information-rich view; all extra scientific channels are supplied.",
+      "parameters": [
+        {
+          "name": "mode",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "axis_labels",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "ellipse_definition",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "labels",
+          "required": false,
+          "annotation": null,
+          "default": []
+        },
+        {
+          "name": "alpha",
+          "required": false,
+          "annotation": null,
+          "default": 0.05
+        },
+        {
+          "name": "fc",
+          "required": false,
+          "annotation": null,
+          "default": 1
+        },
+        {
+          "name": "feature_columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "53e362bf5664fd5109ec3fa805c3cfaf48699bdca7c58bbbe1fc8b3394765888",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "average",
+        "effect",
+        "estimate",
+        "lower",
+        "percent",
+        "upper",
+        "value",
+        "x",
+        "y"
+      ]
+    },
+    {
+      "id": "figure_lineage_views.plot_lineage_view",
+      "module": "figure_lineage_views",
+      "function": "plot_lineage_view",
+      "display_name": "Frozen cluster flows and rooted trajectories",
+      "summary": "Show actual lineage/flow identities, quantities and coordinate meanings.",
+      "parameters": [
+        {
+          "name": "mode",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "level_order",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "root_id",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "value_limits",
+          "required": false,
+          "annotation": null,
+          "default": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "72af2c6186d6b47c615d019fed4d6d5061dff3bf3ffac19afcd11373306f83b3",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "n",
+        "pseudotime",
+        "x",
+        "y"
+      ]
+    },
+    {
       "id": "figure_linked_evidence.plot_membership_ribbons",
       "module": "figure_linked_evidence",
       "function": "plot_membership_ribbons",
@@ -2486,7 +2840,7 @@
       "aliases": [
         "enrichment_grid"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "gene_ratio",
@@ -2542,7 +2896,7 @@
       "aliases": [
         "term_effect_circle"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "effect",
@@ -2569,7 +2923,7 @@
       "aliases": [
         "term_key"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -2602,7 +2956,7 @@
       "aliases": [
         "two_set_overlap"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -2645,7 +2999,7 @@
       "aliases": [
         "gene_term_chord"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "effect"
@@ -2691,7 +3045,7 @@
       "aliases": [
         "distribution"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -2732,7 +3086,7 @@
       "aliases": [
         "balance"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "smd"
@@ -2777,7 +3131,7 @@
       "aliases": [
         "agreement"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "difference",
@@ -2818,7 +3172,7 @@
       "aliases": [
         "survival"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "at_risk",
@@ -2862,7 +3216,7 @@
       "aliases": [
         "swimmer"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -2909,7 +3263,7 @@
       "aliases": [
         "specification_curve"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -2952,7 +3306,7 @@
       "aliases": [
         "vector_field"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "vx",
@@ -3000,7 +3354,7 @@
       "aliases": [
         "bivariate_tiles"
       ],
-      "source_sha256": "0436a071db0c3e7d68ff24f30cbf59cb0cd681b9837e4839d81b756991914221",
+      "source_sha256": "1c90083f8414447217460b2429d277a8f389156e3ffb78bb6299d90747d425c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "metric_x",
@@ -6611,6 +6965,18 @@
           "default": null
         },
         {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "basic"
+        },
+        {
+          "name": "ellipse_definition",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
           "name": "ncols",
           "required": false,
           "annotation": null,
@@ -6638,7 +7004,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "496243021d89da1c99fc95f9a92290d3d1ed0d4e74b875033aeb00b70e34ca18",
+      "source_sha256": "6ec22df2d342cfbcde942ac8214976bdae0f35974042684a1f0fb6d6ef27544d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count",
@@ -6853,6 +7219,132 @@
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
+      ]
+    },
+    {
+      "id": "figure_wgcna_views.plot_wgcna_view",
+      "module": "figure_wgcna_views",
+      "function": "plot_wgcna_view",
+      "display_name": "WGCNA and hdWGCNA frozen diagnostics",
+      "summary": "Dedicated network diagnostics, identities and result meanings; adaptive facets.",
+      "parameters": [
+        {
+          "name": "mode",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "context",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "leaf_order",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "module_order",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "selected_power",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "fit_reference",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "probability_kind",
+          "required": false,
+          "annotation": null,
+          "default": "adjusted"
+        },
+        {
+          "name": "coefficient_semantics",
+          "required": false,
+          "annotation": null,
+          "default": "signed"
+        },
+        {
+          "name": "matrix_definition",
+          "required": false,
+          "annotation": null,
+          "default": "TOM"
+        },
+        {
+          "name": "track_labels",
+          "required": false,
+          "annotation": null,
+          "default": [
+            "Dynamic modules",
+            "Merged modules"
+          ]
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "preservation_guides",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "label_genes",
+          "required": false,
+          "annotation": null,
+          "default": []
+        },
+        {
+          "name": "value_limits",
+          "required": false,
+          "annotation": null,
+          "default": [
+            -3,
+            3
+          ]
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "b05fea4f00a933228af273037f9733ea5fc87eef4e599c41dd8e46dc4ff19793",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "GS",
+        "Zsummary",
+        "kME",
+        "kWithin",
+        "mean_connectivity",
+        "medianRank",
+        "n",
+        "n_cells",
+        "n_shared",
+        "power",
+        "probability",
+        "r",
+        "signed_fit",
+        "size",
+        "value",
+        "x",
+        "y"
       ]
     }
   ],

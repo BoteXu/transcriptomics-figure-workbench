@@ -62,6 +62,10 @@ def optimize_guide_layout(fig):
             ab=a.bbox;at=a.get_tightbbox(renderer,bbox_extra_artists=[])
             if at is None:continue
             for b in axes[i+1:]:
+                # A renderer with measured, owned guide regions already
+                # separates nested panels. Generic pairwise expansion would
+                # mistake marginal/annotation axes for unrelated neighbours.
+                if getattr(a,'_explicit_guide_layout',False) and getattr(b,'_explicit_guide_layout',False):continue
                 bb=b.bbox;bt=b.get_tightbbox(renderer,bbox_extra_artists=[])
                 if bt is None:continue
                 if min(ab.y1,bb.y1)-max(ab.y0,bb.y0)>.5*min(ab.height,bb.height):

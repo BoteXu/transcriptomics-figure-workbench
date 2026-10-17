@@ -1,0 +1,65 @@
+{
+  "id": "bulk.normalization",
+  "title": "Normalization and mean-variance diagnostics",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.normalization/example.png",
+    "svg": "bulk.normalization/example.svg",
+    "pdf": "bulk.normalization/example.pdf",
+    "tsv": "bulk.normalization/example.tsv",
+    "spec": "bulk.normalization/input/example.spec.json",
+    "preview": "bulk.normalization/preview.jpg"
+  },
+  "sha256": {
+    "png": "c136e410a545ef09e8df0854e89e0b1932907b4af423a84a621817ca60516bce",
+    "svg": "9c5571994121fd53b2a4f3761fe7419cb3bdd8b2a41a98caf18e2c5d7acdf48e",
+    "pdf": "8c41937fde4cb3a0e844364d954168c85f150f02684712abc4067d4a4c890939",
+    "tsv": "d2b001ee6f753b81b9deeba8d483b8bb78dd968e48d40a93dd6cce73f8e82138",
+    "spec": "2a28e47333f8b525665eb7d80cf77ecfd99e2f845eb5c741cc0899552909802d"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.normalization",
+    "png_sha256": "c136e410a545ef09e8df0854e89e0b1932907b4af423a84a621817ca60516bce",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

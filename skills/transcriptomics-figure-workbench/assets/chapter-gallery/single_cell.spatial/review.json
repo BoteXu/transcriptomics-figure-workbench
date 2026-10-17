@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.spatial",
+  "assay": "single_cell",
+  "title": "Spatial localization and donor/section context",
+  "family": "spatial",
+  "required_results": [
+    "registered_coordinates",
+    "region_scores",
+    "section_effects"
+  ],
+  "specific_qc_and_limit": "Requires measured spatial assay and registration; dissociated UMAP is not tissue geography.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.spatial/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.spatial/example.png",
+    "svg": "single_cell.spatial/example.svg",
+    "pdf": "single_cell.spatial/example.pdf",
+    "tsv": "single_cell.spatial/example.tsv",
+    "spec": "single_cell.spatial/input/example.spec.json",
+    "preview": "single_cell.spatial/preview.jpg"
+  },
+  "sha256": {
+    "png": "b1c0b26aa6da75740347f1dc0a9a780507d76ddcee91935a364ff2d919aab7df",
+    "svg": "fda7618e59800d02ba18aebbdc743ea4f3939d134816fb120f3b89b3f18af0b9",
+    "pdf": "967a2975d18efafdce1438755ebb52a389254d6753024aaba544a2f473dd8162",
+    "tsv": "880316e82e576f10285a808d8be29e6fbded935896bb274b37a8cff35477e841",
+    "spec": "8759c05f5246ae02b1d36b4bf1e334370bc000e1971e3e3b926b6d8a9b12751e"
+  },
+  "visual_review": {
+    "id": "single_cell.spatial",
+    "png_sha256": "b1c0b26aa6da75740347f1dc0a9a780507d76ddcee91935a364ff2d919aab7df",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 60,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

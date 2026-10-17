@@ -1,47 +1,95 @@
 {
-  "form": "sample_correlation",
+  "id": "BulkCorrelation",
+  "assay": "bulk",
+  "role": "sample_correlation",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_extensions.plot_annotated_heatmap",
+  "parameters": {
+    "value_label": "Stored sample correlation r",
+    "scale_type": "sequential",
+    "group_palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "block_palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "row_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "column_annotation_label": "Condition",
+    "row_annotation_label": "Condition",
+    "merge_annotation_legends": true
+  },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 226.695,
-    "minimum_required_pt": 7,
+    "native_width_mm": 205.10500000000002,
+    "minimum_required_pt": 7.5,
     "essential_text_count": 33,
-    "smallest_pt": 8.337193144974526,
-    "p10_pt": 8.337193144974526,
+    "smallest_pt": 9.214792423392895,
+    "p10_pt": 9.214792423392895,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "assay": "bulk",
-  "role": "sample_correlation",
-  "id": "BulkCorrelation",
-  "section": "study",
-  "level": null,
   "assets": {
     "png": "study/BulkCorrelation/BulkCorrelation.png",
     "svg": "study/BulkCorrelation/BulkCorrelation.svg",
     "pdf": "study/BulkCorrelation/BulkCorrelation.pdf",
     "tsv": "study/BulkCorrelation/BulkCorrelation.tsv",
-    "spec": "study/BulkCorrelation/input/BulkCorrelation.spec.json"
+    "spec": "study/BulkCorrelation/input/BulkCorrelation.spec.json",
+    "previous": "study/BulkCorrelation/previous.png"
   },
   "sha256": {
-    "png": "cfe2b80f21e6c5ee2d9ba463fe0a37878eb2a71b171885565ba048d8a05a19b5",
-    "svg": "946557e4f66e11aa9233646172ba48ce2e7d1607b2ea146f4d1ff514ff5c56fb",
-    "pdf": "ec3bafe0bcce06ef6f27da0acd3387e82786f4543e81e9892fb16b19adac62ef",
-    "tsv": "a9a0aa8aa295419a5524a69a858c8611354249d1073f3f6a450708a33fc87d10"
+    "png": "3b046d279701024cb296364c8b22aa03cdc5d2da9022eca4f0442a9b3d8f35f4",
+    "svg": "59f4733a135a74efa12fb0894b76cb4906677c4d235aacb5c1c7132426beec26",
+    "pdf": "2eba3e0a05237c7c3f0eac8dc8fe2ef4c2f6a52ca4b8d38aede63a424ee2b090",
+    "tsv": "91e675dfc4052262148c9d472f0ae26e575767756bef6dca028f8aea584fd17c",
+    "previous": "cfe2b80f21e6c5ee2d9ba463fe0a37878eb2a71b171885565ba048d8a05a19b5"
   },
   "visual_review": {
-    "key": "study/BulkCorrelation",
-    "png_sha256": "cfe2b80f21e6c5ee2d9ba463fe0a37878eb2a71b171885565ba048d8a05a19b5",
-    "status": "SCREEN_REVIEWED",
-    "reviewer": "Codex visual self-review",
+    "id": "BulkCorrelation",
+    "png_sha256": "3b046d279701024cb296364c8b22aa03cdc5d2da9022eca4f0442a9b3d8f35f4",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-    "target_width_mm": 210,
-    "font_measurement": "MEASUREMENT_PASS",
-    "pdf_readback": false
+    "scientific_acceptance": false
   },
   "scientific_acceptance": false
 }

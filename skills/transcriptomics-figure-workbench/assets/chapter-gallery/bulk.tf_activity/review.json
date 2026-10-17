@@ -1,0 +1,66 @@
+{
+  "id": "bulk.tf_activity",
+  "assay": "bulk",
+  "title": "Transcription-factor footprints",
+  "family": "regulation",
+  "required_results": [
+    "TF_activity",
+    "TF_effects",
+    "targets"
+  ],
+  "specific_qc_and_limit": "Record regulon/sign and coverage; inferred activity is not direct binding evidence.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.tf_activity/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.tf_activity/example.png",
+    "svg": "bulk.tf_activity/example.svg",
+    "pdf": "bulk.tf_activity/example.pdf",
+    "tsv": "bulk.tf_activity/example.tsv",
+    "spec": "bulk.tf_activity/input/example.spec.json",
+    "preview": "bulk.tf_activity/preview.jpg"
+  },
+  "sha256": {
+    "png": "e1bb319387fc26397c21470564af74c27f3781ca5b18ce216e3c59270e4c8911",
+    "svg": "85ce165d2c9593ad28d0c7a581fcc4feb6f99374cb97ba3b61ec89e7532996c2",
+    "pdf": "7accc8386957f9a71ed239a790f4090b66dc42c4bbcb43e91d8a7e9203ee80ae",
+    "tsv": "34b01deba35b24a51269ce72d38f0b0b7db5e34129f4572132547e5169eb0d79",
+    "spec": "1c5ffa782725cea3be60f313a316c57a038a115b1d5842a105314253c1461a40"
+  },
+  "visual_review": {
+    "id": "bulk.tf_activity",
+    "png_sha256": "e1bb319387fc26397c21470564af74c27f3781ca5b18ce216e3c59270e4c8911",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 79,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

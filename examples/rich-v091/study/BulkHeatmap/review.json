@@ -1,0 +1,106 @@
+{
+  "id": "BulkHeatmap",
+  "assay": "bulk",
+  "role": "differential_heatmap",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_extensions.plot_annotated_heatmap",
+  "parameters": {
+    "value_label": "Stored row z-score",
+    "scale_type": "signed",
+    "group_palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "block_palette": {
+      "Positive program": "#D8795B",
+      "Negative program": "#4477AA"
+    },
+    "row_order": [
+      "G0001",
+      "G0002",
+      "G0003",
+      "G0004",
+      "G0005",
+      "G0006",
+      "G0007",
+      "G0008",
+      "G0009",
+      "G0010",
+      "G0011",
+      "G0012",
+      "G0081",
+      "G0082",
+      "G0083",
+      "G0084",
+      "G0085",
+      "G0086",
+      "G0087",
+      "G0088",
+      "G0089",
+      "G0090",
+      "G0091",
+      "G0092"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "column_annotation_label": "Condition",
+    "row_annotation_label": "Prespecified program"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 206.375,
+    "minimum_required_pt": 7,
+    "essential_text_count": 48,
+    "smallest_pt": 9.15808600847971,
+    "p10_pt": 9.15808600847971,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/BulkHeatmap/BulkHeatmap.png",
+    "svg": "study/BulkHeatmap/BulkHeatmap.svg",
+    "pdf": "study/BulkHeatmap/BulkHeatmap.pdf",
+    "tsv": "study/BulkHeatmap/BulkHeatmap.tsv",
+    "spec": "study/BulkHeatmap/input/BulkHeatmap.spec.json",
+    "previous": "study/BulkHeatmap/previous.png"
+  },
+  "sha256": {
+    "png": "e56550100b7d0ea963a5ee752a991338d1cb1258c4867f2f5457d2cb363ab946",
+    "svg": "c9e4ea947d4df7f8b9ccc9b7ec701b2df6d69fca3e4d1e178108241a6f93676b",
+    "pdf": "c897f83cc490003ee0be5478291d7aad21c5a3f8d67a5a9547c0d63e5733a538",
+    "tsv": "5f63da23a3d269e7e3d1f568e7f43aaee173f0c9fc11d8d4241f630a8bf02e0a",
+    "previous": "e56550100b7d0ea963a5ee752a991338d1cb1258c4867f2f5457d2cb363ab946"
+  },
+  "visual_review": {
+    "id": "BulkHeatmap",
+    "png_sha256": "e56550100b7d0ea963a5ee752a991338d1cb1258c4867f2f5457d2cb363ab946",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

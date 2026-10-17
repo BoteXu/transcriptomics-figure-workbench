@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.barcode",
+  "title": "Barcode rank and retained droplets",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.barcode/example.png",
+    "svg": "single_cell.barcode/example.svg",
+    "pdf": "single_cell.barcode/example.pdf",
+    "tsv": "single_cell.barcode/example.tsv",
+    "spec": "single_cell.barcode/input/example.spec.json",
+    "preview": "single_cell.barcode/preview.jpg"
+  },
+  "sha256": {
+    "png": "e1d144dbb3e507666db2f12dcd579bbe75dab65f9cd4a4e8bd442b8964b5bfe4",
+    "svg": "1623bc092e06d888ca23e051ee613d530d28ed39aee2d8ea9cef041dbe17f3a6",
+    "pdf": "ff49e3bdbc3c6300e9d92dbc05cba5e179ce8627e69f201effc63e22d515ef4e",
+    "tsv": "2f61a52198909eb923c7bdf43d078bbf37e0eb5415b858753c99f29cca14fffb",
+    "spec": "2ed45945784592643b530b673ad3887f9a4534c90c978dafdd6a4860798a1aea"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.barcode",
+    "png_sha256": "e1d144dbb3e507666db2f12dcd579bbe75dab65f9cd4a4e8bd442b8964b5bfe4",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

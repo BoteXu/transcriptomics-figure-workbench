@@ -1,0 +1,66 @@
+{
+  "id": "Method_M11d",
+  "title": "Frozen model check · influence",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "Method_M11d/example.png",
+    "svg": "Method_M11d/example.svg",
+    "pdf": "Method_M11d/example.pdf",
+    "tsv": "Method_M11d/example.tsv",
+    "spec": "Method_M11d/input/example.spec.json",
+    "preview": "Method_M11d/preview.jpg"
+  },
+  "sha256": {
+    "png": "38c9e6239fe4c5035da4373f72531506b861a97631309bf87b8234c0f81950a7",
+    "svg": "4da62a6379291d6144dd2508ea3b52e5e1959fbf47cb8ef0bd8cbfeed2195581",
+    "pdf": "15e48538d663317200b3ef1abfdbe3bfef7bb088d5dc12266e9b1ab94e7a055b",
+    "tsv": "87590e8c6d9a7c8b13077e3d10c1e9bd7d73a34793860eca01b6b9016128fd4b",
+    "spec": "957cfe1ed2a899b25ee7cf1e5acfbd1309f2a9469839d8fa1642f13976ab8e03"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 198.11999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 16.490006056935194,
+    "p10_pt": 16.490006056935194,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "Method_M11d",
+    "png_sha256": "38c9e6239fe4c5035da4373f72531506b861a97631309bf87b8234c0f81950a7",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "cook_area_scale",
+    "mode",
+    "model_definition",
+    "reference_definition",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

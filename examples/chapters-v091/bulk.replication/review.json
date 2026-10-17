@@ -1,0 +1,65 @@
+{
+  "id": "bulk.replication",
+  "assay": "bulk",
+  "title": "Independent-cohort replication",
+  "family": "replication",
+  "required_results": [
+    "cohort_effects",
+    "matched_features"
+  ],
+  "specific_qc_and_limit": "Harmonize effect scale and biological context; prevent overlap and discovery-validation leakage.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.replication/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.replication/example.png",
+    "svg": "bulk.replication/example.svg",
+    "pdf": "bulk.replication/example.pdf",
+    "tsv": "bulk.replication/example.tsv",
+    "spec": "bulk.replication/input/example.spec.json",
+    "preview": "bulk.replication/preview.jpg"
+  },
+  "sha256": {
+    "png": "3d3ea95957b56a4b6fd0573472c5e2363f4213054c58ea1a6567e2319f3c2cca",
+    "svg": "b5d45c16cbd8ca80f28bf01e6bfd44175972384749551c1b2f6032b025763804",
+    "pdf": "d2968e5770622b03cf74a2332dee4be4019c6fbc39273e01e4598188e89cf60e",
+    "tsv": "98c575c55bc79a6baee00b4fc468ae83829d5664dc0d0c39c5a677371e6859f3",
+    "spec": "73fca6a97941416ac219d8c7275b7327b43662369295411316f150da1efb39ff"
+  },
+  "visual_review": {
+    "id": "bulk.replication",
+    "png_sha256": "3d3ea95957b56a4b6fd0573472c5e2363f4213054c58ea1a6567e2319f3c2cca",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

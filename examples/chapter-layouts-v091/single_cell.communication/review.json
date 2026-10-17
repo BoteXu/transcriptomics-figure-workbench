@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.communication",
+  "title": "Communication themes and ligand-receptor support",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.communication/example.png",
+    "svg": "single_cell.communication/example.svg",
+    "pdf": "single_cell.communication/example.pdf",
+    "tsv": "single_cell.communication/example.tsv",
+    "spec": "single_cell.communication/input/example.spec.json",
+    "preview": "single_cell.communication/preview.jpg"
+  },
+  "sha256": {
+    "png": "4651c0e8eb3b7b30791161a56fc737d9d55f6d155f2265e3c94904d248e3c6e8",
+    "svg": "fa080e103b85ab9ac9bd7a61bcc09a94bdce73e580c27a1e04a7186a30dbe394",
+    "pdf": "d176ca723cb340d31fc2da54272a2c2ebd37c484cea484f579a3048023607d5a",
+    "tsv": "1ab07c267d990df876b916b7fd76038c1dd58f7dc3ee4160d9b3dad752f26368",
+    "spec": "b50cfe3fc1049b68d1b8167f49918ce8faff0225af6a0bc62d6e0353415c1a0a"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 189.33971191135706,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 98,
+    "smallest_pt": 17.25470038493302,
+    "p10_pt": 17.25470038493302,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.communication",
+    "png_sha256": "4651c0e8eb3b7b30791161a56fc737d9d55f6d155f2265e3c94904d248e3c6e8",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

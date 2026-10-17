@@ -55,7 +55,13 @@ def render(adapter,data,params,theme,*,layout=None):
     accepted=set(inspect.signature(fn).parameters)-{'data','theme'}
     from figure_workbench.responsive import validate_layout,apply_native_layout
     layout=validate_layout(layout);native=dict(layout)
-    if 'axis_groups' not in native and 'ncols' in accepted:
+    if 'axis_groups' not in native and row['module'] in {'figure_chapter_views','figure_enrichment_story','figure_wgcna_views','figure_lineage_views'}:
+        for key in ['columns','rows']:
+            if key in native:
+                if key not in accepted:raise ValueError('This chapter supports columns; rows follow the complete content')
+                if key in params and params[key] not in ['auto',None,native[key]]:raise ValueError('Conflicting chapter layout settings')
+                params[key]=native.pop(key)
+    elif 'axis_groups' not in native and 'ncols' in accepted:
         if row['module']=='figure_gsea' and params.get('mode','classic')!='facets' and any(k in native for k in ['columns','rows']):raise ValueError('Use GSEA facets for requested rows/columns')
         for key,arg in [('columns','ncols'),('rows','nrows'),('panel_width_inches','panel_width'),('panel_height_inches','panel_height')]:
             if key in native:

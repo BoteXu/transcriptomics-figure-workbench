@@ -1,0 +1,59 @@
+{
+  "id": "DonorCounts",
+  "assay": "single_cell",
+  "role": "donor_summary",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "unit_profile",
+    "title": "Retained cells by donor",
+    "axis_labels": [
+      "Stored retained cells per donor"
+    ]
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 190.5,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 8.818897637795276,
+    "p10_pt": 8.818897637795276,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/DonorCounts/DonorCounts.png",
+    "svg": "study/DonorCounts/DonorCounts.svg",
+    "pdf": "study/DonorCounts/DonorCounts.pdf",
+    "tsv": "study/DonorCounts/DonorCounts.tsv",
+    "spec": "study/DonorCounts/input/DonorCounts.spec.json",
+    "previous": "study/DonorCounts/previous.png"
+  },
+  "sha256": {
+    "png": "3e19dc9cd765e8ba384167b50fc80cd40327e6fc9e9c677ecc19853564d3d5c2",
+    "svg": "3aa33a6b4dc5091a9ad839281bf517e020f41d2ccb44d01d94038c2c70ca8d97",
+    "pdf": "a533c09c6711cab5b366cb99beac28ad282bec7f6bffc16a6a86d34b885478a6",
+    "tsv": "917667b2ee1793b81b8a98bd425849b61e703d13c7572c62ea028efe9d4df2ff",
+    "previous": "9f3e7fbf7c96cd84ab6b90cf9f9600bf19addd5bf32e6df16c6a9f01fadd202e"
+  },
+  "visual_review": {
+    "id": "DonorCounts",
+    "png_sha256": "3e19dc9cd765e8ba384167b50fc80cd40327e6fc9e9c677ecc19853564d3d5c2",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

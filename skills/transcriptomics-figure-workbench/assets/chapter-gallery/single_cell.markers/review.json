@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.markers",
+  "assay": "single_cell",
+  "title": "Marker specificity and detection",
+  "family": "rich:MarkerDot",
+  "required_results": [
+    "marker_means",
+    "detection_fractions",
+    "annotation_blocks"
+  ],
+  "specific_qc_and_limit": "Denominator must be all declared cells in a group; marker ranking is not donor-level DE.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.markers/input/example.spec.json",
+  "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.markers/example.png",
+    "svg": "single_cell.markers/example.svg",
+    "pdf": "single_cell.markers/example.pdf",
+    "tsv": "single_cell.markers/example.tsv",
+    "spec": "single_cell.markers/input/example.spec.json",
+    "preview": "single_cell.markers/preview.jpg"
+  },
+  "sha256": {
+    "png": "e839b4433b955830275fb00d200e9d66d2b5a4a2c2d19ad2c9a66bfc17e38a19",
+    "svg": "6d951a96c16652e169d24e66402c0a0676fa2ae5dd6ca1deb77e69ccc26c5513",
+    "pdf": "c63d99b1e2053e233e4cb2b8e6505866640e3d6aa2d04698ddc02cc26888d847",
+    "tsv": "084691ca6c6afa2d8deb7bf77264490d31c052f721a3a4e7e32bf815e7216745",
+    "spec": "a3d7026fc255b8b2f6ed77c52f2fe53f6eed55ffe13492751f6e4470b170479b"
+  },
+  "visual_review": {
+    "id": "single_cell.markers",
+    "png_sha256": "e839b4433b955830275fb00d200e9d66d2b5a4a2c2d19ad2c9a66bfc17e38a19",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 228.6,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 38,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

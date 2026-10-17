@@ -1,0 +1,67 @@
+{
+  "id": "bulk.batch",
+  "assay": "bulk",
+  "title": "Sample architecture and batch coverage",
+  "family": "rich:BulkPCA",
+  "required_results": [
+    "embedding",
+    "ellipse_geometry",
+    "marginal_counts",
+    "variance_profile"
+  ],
+  "specific_qc_and_limit": "Ellipse meaning and all samples required; separation does not establish successful batch correction.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.batch/input/example.spec.json",
+  "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.batch/example.png",
+    "svg": "bulk.batch/example.svg",
+    "pdf": "bulk.batch/example.pdf",
+    "tsv": "bulk.batch/example.tsv",
+    "spec": "bulk.batch/input/example.spec.json",
+    "preview": "bulk.batch/preview.jpg"
+  },
+  "sha256": {
+    "png": "001cef4eacf16baef9c6d8b3d8591f83d67b58b731d2b0e59ba8c625f4afa624",
+    "svg": "045edf0fa71ed0fa9b079c410c0d142f215558e209d22d6fe415128340c42211",
+    "pdf": "b67f3672b373e8433bfd236e68a2b20332d56c088c113fe4d968f75adb0e3fc4",
+    "tsv": "e6f183c4ccd627829ea44c67dc23a977c0989a5345cea6e4064b98ae936e9c65",
+    "spec": "3c8a19caff46259e026e1639744f82abc3c76fb22c6c5db562bf1fe2f35f46f7"
+  },
+  "visual_review": {
+    "id": "bulk.batch",
+    "png_sha256": "001cef4eacf16baef9c6d8b3d8591f83d67b58b731d2b0e59ba8c625f4afa624",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 45,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 9.301181102362206,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

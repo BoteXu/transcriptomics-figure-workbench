@@ -1,0 +1,72 @@
+{
+  "id": "bulk.pathway_contrasts",
+  "title": "Pathway enrichment across contrasts",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.pathway_contrasts/example.png",
+    "svg": "bulk.pathway_contrasts/example.svg",
+    "pdf": "bulk.pathway_contrasts/example.pdf",
+    "tsv": "bulk.pathway_contrasts/example.tsv",
+    "spec": "bulk.pathway_contrasts/input/example.spec.json",
+    "preview": "bulk.pathway_contrasts/preview.jpg"
+  },
+  "sha256": {
+    "png": "bac43317a5aae35b9a1df7e8ee403774b742d0ab6a44bce53081e5dea4b7357f",
+    "svg": "da5cb0670b095df97fb8e0722a418d2cdee688346557fe69923c8dfc1f952ce6",
+    "pdf": "ee07d6af820aa590db6218e087f3c60b16781522ca4543aa7ba67d5f014d2b1b",
+    "tsv": "6cd3bde11d7c44d5ab8a39a6798071fed75d6431bfbedbd96d2686af75e6522b",
+    "spec": "e0fb9e7a3a5399c158a49b1bcde1783200e81a0d9fa0a9bc2e03ca4d776a8a84"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 58,
+    "smallest_pt": 16.07775590551181,
+    "p10_pt": 16.07775590551181,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.pathway_contrasts",
+    "png_sha256": "bac43317a5aae35b9a1df7e8ee403774b742d0ab6a44bce53081e5dea4b7357f",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "columns",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "nes_limits",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

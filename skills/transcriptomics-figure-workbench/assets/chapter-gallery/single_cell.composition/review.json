@@ -1,0 +1,66 @@
+{
+  "id": "single_cell.composition",
+  "assay": "single_cell",
+  "title": "Donor-level composition",
+  "family": "rich:DonorComposition",
+  "required_results": [
+    "donor_type_counts",
+    "donor_totals"
+  ],
+  "specific_qc_and_limit": "Use complete donor denominators; pooled cell fractions do not provide independent replication.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.composition/input/example.spec.json",
+  "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.composition/example.png",
+    "svg": "single_cell.composition/example.svg",
+    "pdf": "single_cell.composition/example.pdf",
+    "tsv": "single_cell.composition/example.tsv",
+    "spec": "single_cell.composition/input/example.spec.json",
+    "preview": "single_cell.composition/preview.jpg"
+  },
+  "sha256": {
+    "png": "a237bd182fdc0fb9a03bb7e765e001f570b52d35b84abd5d7e8d302053771cb0",
+    "svg": "2a3b38daef819f8895867072af10848af60605fea96048829061799c32c86d9e",
+    "pdf": "ad74d27fdad04ac847930d25cf648d03829176a78652e702968bc4adc25100cf",
+    "tsv": "580351bb8a1332b9af951769e9d26e83e50b51540b2853c7ed853bf13ffc63b3",
+    "spec": "7ae8403c93c9443291a9765a1afe3506a435f9728cead67b7d80ea1f0c19efb1"
+  },
+  "visual_review": {
+    "id": "single_cell.composition",
+    "png_sha256": "a237bd182fdc0fb9a03bb7e765e001f570b52d35b84abd5d7e8d302053771cb0",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 217.33916399999993,
+    "minimum_required_pt": 7,
+    "essential_text_count": 37,
+    "smallest_pt": 7.729853971463701,
+    "p10_pt": 8.696085717896663,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

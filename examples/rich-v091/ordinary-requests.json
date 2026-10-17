@@ -1,0 +1,222 @@
+[
+  {
+    "assay": "bulk",
+    "request": "画质控图",
+    "sections": [
+      {
+        "stage": "qc",
+        "panels": [
+          "qc_distribution",
+          "sample_embedding",
+          "sample_correlation",
+          "library_summary"
+        ]
+      }
+    ],
+    "figures": 4,
+    "missing_results": [
+      {
+        "stage": "qc",
+        "role": "design_map",
+        "required": false,
+        "state": "NOT_SUPPLIED"
+      }
+    ]
+  },
+  {
+    "assay": "bulk",
+    "request": "展示差异和通路",
+    "sections": [
+      {
+        "stage": "differential",
+        "panels": [
+          "differential_expression",
+          "differential_heatmap",
+          "effect_intervals",
+          "ma"
+        ]
+      },
+      {
+        "stage": "pathways",
+        "panels": [
+          "enrichment_summary",
+          "gsea_curves"
+        ]
+      }
+    ],
+    "figures": 6,
+    "missing_results": [
+      {
+        "stage": "pathways",
+        "role": "enrichment_contrasts",
+        "required": false,
+        "state": "NOT_SUPPLIED"
+      }
+    ]
+  },
+  {
+    "assay": "bulk",
+    "request": "做一套文章组图",
+    "sections": [
+      {
+        "stage": "overview",
+        "panels": [
+          "study_overview"
+        ]
+      },
+      {
+        "stage": "qc",
+        "panels": [
+          "qc_distribution",
+          "sample_embedding",
+          "sample_correlation",
+          "library_summary"
+        ]
+      },
+      {
+        "stage": "differential",
+        "panels": [
+          "differential_expression",
+          "differential_heatmap",
+          "effect_intervals",
+          "ma"
+        ]
+      },
+      {
+        "stage": "pathways",
+        "panels": [
+          "enrichment_summary",
+          "gsea_curves"
+        ]
+      }
+    ],
+    "figures": 11,
+    "missing_results": [
+      {
+        "stage": "qc",
+        "role": "design_map",
+        "required": false,
+        "state": "NOT_SUPPLIED"
+      },
+      {
+        "stage": "pathways",
+        "role": "enrichment_contrasts",
+        "required": false,
+        "state": "NOT_SUPPLIED"
+      }
+    ]
+  },
+  {
+    "assay": "single_cell",
+    "request": "画质控图",
+    "sections": [
+      {
+        "stage": "qc",
+        "panels": [
+          "qc_distribution",
+          "donor_summary",
+          "batch_embedding"
+        ]
+      }
+    ],
+    "figures": 3,
+    "missing_results": []
+  },
+  {
+    "assay": "single_cell",
+    "request": "展示差异和通路",
+    "sections": [
+      {
+        "stage": "differential",
+        "panels": [
+          "donor_differential",
+          "effect_intervals",
+          "differential_heatmap",
+          "ma"
+        ]
+      },
+      {
+        "stage": "pathways",
+        "panels": [
+          "enrichment_summary",
+          "gsea_curves"
+        ]
+      }
+    ],
+    "figures": 6,
+    "missing_results": [
+      {
+        "stage": "pathways",
+        "role": "enrichment_contrasts",
+        "required": false,
+        "state": "NOT_SUPPLIED"
+      }
+    ]
+  },
+  {
+    "assay": "single_cell",
+    "request": "做一套文章组图",
+    "sections": [
+      {
+        "stage": "overview",
+        "panels": [
+          "study_overview"
+        ]
+      },
+      {
+        "stage": "qc",
+        "panels": [
+          "qc_distribution",
+          "donor_summary",
+          "batch_embedding"
+        ]
+      },
+      {
+        "stage": "markers",
+        "panels": [
+          "celltype_embedding",
+          "marker_dot",
+          "marker_features"
+        ]
+      },
+      {
+        "stage": "composition",
+        "panels": [
+          "donor_composition",
+          "donor_summary"
+        ]
+      },
+      {
+        "stage": "differential",
+        "panels": [
+          "donor_differential",
+          "effect_intervals",
+          "differential_heatmap",
+          "ma"
+        ]
+      },
+      {
+        "stage": "pathways",
+        "panels": [
+          "enrichment_summary",
+          "gsea_curves"
+        ]
+      }
+    ],
+    "figures": 14,
+    "missing_results": [
+      {
+        "stage": "markers",
+        "role": "marker_heatmap",
+        "required": false,
+        "state": "NOT_SUPPLIED"
+      },
+      {
+        "stage": "pathways",
+        "role": "enrichment_contrasts",
+        "required": false,
+        "state": "NOT_SUPPLIED"
+      }
+    ]
+  }
+]

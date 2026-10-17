@@ -1,47 +1,64 @@
 {
-  "form": "donor_differential",
+  "id": "DonorDE",
+  "assay": "single_cell",
+  "role": "donor_differential",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "volcano",
+    "title": "Myeloid donor response · stacked distributions",
+    "labels": [
+      "G0009",
+      "G0038",
+      "G0091",
+      "G0123"
+    ],
+    "alpha": 0.05,
+    "fc": 1
+  },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 198.11999999999998,
-    "minimum_required_pt": 7,
-    "essential_text_count": 25,
-    "smallest_pt": 8.479709267110843,
-    "p10_pt": 8.479709267110843,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "assay": "single_cell",
-  "role": "donor_differential",
-  "id": "DonorDE",
-  "section": "study",
-  "level": null,
   "assets": {
     "png": "study/DonorDE/DonorDE.png",
     "svg": "study/DonorDE/DonorDE.svg",
     "pdf": "study/DonorDE/DonorDE.pdf",
     "tsv": "study/DonorDE/DonorDE.tsv",
-    "spec": "study/DonorDE/input/DonorDE.spec.json"
+    "spec": "study/DonorDE/input/DonorDE.spec.json",
+    "previous": "study/DonorDE/previous.png"
   },
   "sha256": {
-    "png": "4ba3bb3a0fc03b9055b7cc0d9ebe461fd8c8a2da699e435c0bc7ef0ab80b90f1",
-    "svg": "8ce6d0ca6d7469bae74626c128487e9615c47836b3676d8e892e1b0ea178a0ff",
-    "pdf": "db4a8871e06883758a5b6266d7b6bcb3631db40c124596e19d7c4e0716113f55",
-    "tsv": "df439ee21186f3fe7e78ca1c8ce9e9999cad2d944312011b4c2a4838011037a9"
+    "png": "7926091573d5cd8e8113e0f508a4bbe6d0853233b199cd424e1ab5165c6d5a1c",
+    "svg": "dc23ce220151328313e6d3d9ca2307ce47cc5e514c364cd0a86c06e840162150",
+    "pdf": "92aef54fe503d0bdbe4e3356f5ce01d761c7770b516be62251d1c3353063a9c0",
+    "tsv": "2043bd0715408de925227544cb406505c251bef93ce3f5b0b01ad3f45d1c5d6a",
+    "previous": "4ba3bb3a0fc03b9055b7cc0d9ebe461fd8c8a2da699e435c0bc7ef0ab80b90f1"
   },
   "visual_review": {
-    "key": "study/DonorDE",
-    "png_sha256": "4ba3bb3a0fc03b9055b7cc0d9ebe461fd8c8a2da699e435c0bc7ef0ab80b90f1",
-    "status": "SCREEN_REVIEWED",
-    "reviewer": "Codex visual self-review",
+    "id": "DonorDE",
+    "png_sha256": "7926091573d5cd8e8113e0f508a4bbe6d0853233b199cd424e1ab5165c6d5a1c",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-    "target_width_mm": 210,
-    "font_measurement": "MEASUREMENT_PASS",
-    "pdf_readback": false
+    "scientific_acceptance": false
   },
   "scientific_acceptance": false
 }

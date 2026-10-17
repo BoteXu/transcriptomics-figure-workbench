@@ -1,0 +1,65 @@
+{
+  "id": "bulk.survival",
+  "title": "Conditional clinical outcome association",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.survival/example.png",
+    "svg": "bulk.survival/example.svg",
+    "pdf": "bulk.survival/example.pdf",
+    "tsv": "bulk.survival/example.tsv",
+    "spec": "bulk.survival/input/example.spec.json",
+    "preview": "bulk.survival/preview.jpg"
+  },
+  "sha256": {
+    "png": "c03e197d12954787da08bd40bb889be3ead3fe4678e26ac628f138405ac5186e",
+    "svg": "cc9a15d863dccec94d4b8012ee03d685ec337574d9bf64bd93378ca8accd679f",
+    "pdf": "d9ad5e04dd4e4d6cc6e92448c39cdaec66551fd2fff7cbe603b136a1e8a6853c",
+    "tsv": "6b873a6065fea659653748875841db72ff26defb00696a4a887c295b57591fc0",
+    "spec": "372d51e4bcc05fec5548c437b7fa7134603a6155ae1ae6e4fd3c1fa0712de5b6"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 69,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.survival",
+    "png_sha256": "c03e197d12954787da08bd40bb889be3ead3fe4678e26ac628f138405ac5186e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

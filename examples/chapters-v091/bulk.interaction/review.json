@@ -1,0 +1,65 @@
+{
+  "id": "bulk.interaction",
+  "assay": "bulk",
+  "title": "Interactions across conditions and time",
+  "family": "interaction",
+  "required_results": [
+    "interaction_effects",
+    "model_predictions"
+  ],
+  "specific_qc_and_limit": "Require a same-study factorial design and estimable interaction; separate cohorts cannot identify interaction.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.interaction/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.interaction/example.png",
+    "svg": "bulk.interaction/example.svg",
+    "pdf": "bulk.interaction/example.pdf",
+    "tsv": "bulk.interaction/example.tsv",
+    "spec": "bulk.interaction/input/example.spec.json",
+    "preview": "bulk.interaction/preview.jpg"
+  },
+  "sha256": {
+    "png": "122a37897740a5a43a81e1e99683fec4217952383774be9cf294e4a84c823c7e",
+    "svg": "3e2ccd9e1db27a54676f9920e5b773cbf91beefcaa9b969378eafbde632ce4b9",
+    "pdf": "960bb17f75ac96c0d757d6d94f0925d4b4c744815ed9b8c431529edbcebeafe0",
+    "tsv": "ee956deebb347ccd648c6802f46b2d1dbe9a3dde1b8c0fdbde682e49946884ea",
+    "spec": "31c925a081cd13ee748edeced48129bc99436734336524d49654e8e4660a4725"
+  },
+  "visual_review": {
+    "id": "bulk.interaction",
+    "png_sha256": "122a37897740a5a43a81e1e99683fec4217952383774be9cf294e4a84c823c7e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

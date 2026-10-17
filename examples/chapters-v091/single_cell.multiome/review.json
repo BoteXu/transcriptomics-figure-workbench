@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.multiome",
+  "assay": "single_cell",
+  "title": "Paired RNA-ATAC regulatory support",
+  "family": "multiome",
+  "required_results": [
+    "paired_embeddings",
+    "peak_gene_links",
+    "motif_scores"
+  ],
+  "specific_qc_and_limit": "Paired assay, build and peak/link evidence required; peak-gene association is not causal regulation.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.multiome/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.multiome/example.png",
+    "svg": "single_cell.multiome/example.svg",
+    "pdf": "single_cell.multiome/example.pdf",
+    "tsv": "single_cell.multiome/example.tsv",
+    "spec": "single_cell.multiome/input/example.spec.json",
+    "preview": "single_cell.multiome/preview.jpg"
+  },
+  "sha256": {
+    "png": "51a9278b82a929bbc6e152e564fd6abffdd520df94958449b27b014152e76234",
+    "svg": "6eae5d96f6a95662f5231fe385902d938de0dee4653352f6836ab21df0a5eed3",
+    "pdf": "44dfbc6b9db73d4d3a855403bbcabf4f5bfb6c7aea402233a1d42e2228d74f84",
+    "tsv": "c4a4d757929db08189a0655f4130c8d2bc5ecbbf7885587f63d5e0948d5298b5",
+    "spec": "e892fa1dacc3dc84ef365cdc725eedfd071f08e3b7b9b4c0cdb8c5e81f410736"
+  },
+  "visual_review": {
+    "id": "single_cell.multiome",
+    "png_sha256": "51a9278b82a929bbc6e152e564fd6abffdd520df94958449b27b014152e76234",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 57,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

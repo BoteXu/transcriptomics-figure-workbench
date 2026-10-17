@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.vdj",
+  "title": "Clonotypes, expansion and sharing",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.vdj/example.png",
+    "svg": "single_cell.vdj/example.svg",
+    "pdf": "single_cell.vdj/example.pdf",
+    "tsv": "single_cell.vdj/example.tsv",
+    "spec": "single_cell.vdj/input/example.spec.json",
+    "preview": "single_cell.vdj/preview.jpg"
+  },
+  "sha256": {
+    "png": "5385940da5312fc5a675d9894f2fa7aecea5ad0df91947a534e05753c368b645",
+    "svg": "f0f7803c06ff8a382edb3cc3ec007b53a74c225e4c9a8803b6af85270d86d343",
+    "pdf": "f3fc69ad10cab8ed0021e6c0304087ba05a7cf7905e282a90a8edde1e07fdb9f",
+    "tsv": "e310d85e53049c3fa155feb78963a0dc4d9ba5003fa4192c593a2d82666ea808",
+    "spec": "9a5bca4929873bd68f8c32a85757681e70d6bab694ecc9e9dc1451aa28c1d1dd"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 89,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.vdj",
+    "png_sha256": "5385940da5312fc5a675d9894f2fa7aecea5ad0df91947a534e05753c368b645",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

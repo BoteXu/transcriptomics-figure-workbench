@@ -1,47 +1,56 @@
 {
-  "form": "qc_distribution",
+  "id": "CellQC",
+  "assay": "single_cell",
+  "role": "qc_distribution",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "qc",
+    "title": "Sample distributions"
+  },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 255.43916399999986,
-    "minimum_required_pt": 7,
-    "essential_text_count": 68,
-    "smallest_pt": 7.399022023106844,
-    "p10_pt": 7.399022023106844,
+    "native_width_mm": 228.6,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 70,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "assay": "single_cell",
-  "role": "qc_distribution",
-  "id": "CellQC",
-  "section": "study",
-  "level": null,
   "assets": {
     "png": "study/CellQC/CellQC.png",
     "svg": "study/CellQC/CellQC.svg",
     "pdf": "study/CellQC/CellQC.pdf",
     "tsv": "study/CellQC/CellQC.tsv",
-    "spec": "study/CellQC/input/CellQC.spec.json"
+    "spec": "study/CellQC/input/CellQC.spec.json",
+    "previous": "study/CellQC/previous.png"
   },
   "sha256": {
-    "png": "33b183b77eaa0d1cedbc502d52db479a0926007753d1faba2be70256307ab434",
-    "svg": "d0f6b443ce84dd9e29fbc7604a88b0baa991bc7726acc5d7cccafcf3edb5b89f",
-    "pdf": "02611b7c913a3ef2a6dc5d47b23a0193366698047bf596e5331130ddf9e682de",
-    "tsv": "79d01ea1ce6117525340c9dde0511205e12a6c677e3bdb99af3e6162b0e3be14"
+    "png": "3b187f0b98e05321499e49160aaaea0dd5a4f260d660d00bec7a184e593574b5",
+    "svg": "6e7bd24d21659842f09d2c2588f8e96dfa0a76e7760a02df1dce62a67c91e529",
+    "pdf": "6348dfbf021fef96e5831807f7586b91338854286297218d21d3ab6a4c96eb52",
+    "tsv": "6bd4de4bd92a969e9a16351c3864fa79a27c44ff5626299810ae5e3cf696092c",
+    "previous": "33b183b77eaa0d1cedbc502d52db479a0926007753d1faba2be70256307ab434"
   },
   "visual_review": {
-    "key": "study/CellQC",
-    "png_sha256": "33b183b77eaa0d1cedbc502d52db479a0926007753d1faba2be70256307ab434",
-    "status": "SCREEN_REVIEWED",
-    "reviewer": "Codex visual self-review",
+    "id": "CellQC",
+    "png_sha256": "3b187f0b98e05321499e49160aaaea0dd5a4f260d660d00bec7a184e593574b5",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-    "target_width_mm": 210,
-    "font_measurement": "MEASUREMENT_PASS",
-    "pdf_readback": false
+    "scientific_acceptance": false
   },
   "scientific_acceptance": false
 }

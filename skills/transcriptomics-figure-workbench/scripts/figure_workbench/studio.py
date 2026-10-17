@@ -56,6 +56,11 @@ def build_studio(output,gallery=None,demo_svg=None):
     assets=SKILL/'assets/studio'
     template=(assets/'index.html').read_text(encoding='utf8')
     content=template.replace('/*__STUDIO_CSS__*/',(assets/'studio.css').read_text(encoding='utf8'))
+    content=content.replace('科研绘图工作台 · 0.8.1','科研绘图工作台 · '+(SKILL/'VERSION').read_text().strip())
+    chapters=SKILL/'assets/chapter-gallery'
+    if chapters.is_dir():
+        prefix=Path(os.path.relpath(chapters,output.resolve().parent)).as_posix()
+        content=content.replace('</header>','<a class="button secondary" href="'+prefix+'/index.html">58个分析章节</a></header>',1)
     content=content.replace('/*__STUDIO_JS__*/',(assets/'publication-svg.js').read_text(encoding='utf8')+'\n'+(assets/'form-polish.js').read_text(encoding='utf8')+'\n'+(assets/'studio.js').read_text(encoding='utf8'))
     encoded=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
     content=content.replace('/*__STUDIO_DATA__*/',encoded)

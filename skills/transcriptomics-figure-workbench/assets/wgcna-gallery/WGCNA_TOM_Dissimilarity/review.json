@@ -1,0 +1,66 @@
+{
+  "id": "WGCNA_TOM_Dissimilarity",
+  "title": "Topological dissimilarity · explicitly 1 − TOM",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_TOM_Dissimilarity/example.png",
+    "svg": "WGCNA_TOM_Dissimilarity/example.svg",
+    "pdf": "WGCNA_TOM_Dissimilarity/example.pdf",
+    "tsv": "WGCNA_TOM_Dissimilarity/example.tsv",
+    "spec": "WGCNA_TOM_Dissimilarity/input/example.spec.json",
+    "preview": "WGCNA_TOM_Dissimilarity/preview.jpg"
+  },
+  "sha256": {
+    "png": "72977208b1d94a828f9d0157a16591a999bf48f0b2b14068e710a99763977054",
+    "svg": "87606eb99a5b3d7708d1319e9bca701ab41ac67a1aabcaffecfe000d61ee8359",
+    "pdf": "3312899745e88c6c529e05a373142f8ed267e547c1b2558ebdc23f096ab84ab3",
+    "tsv": "19f6349538ed4b56f01e1dae5fc7fe86cd2bfb80ac47159b24738888098dee1f",
+    "spec": "ba836a1753490eb03ccc7b033bb4d683b3bfe84171f2a5aa15ecbe568972518f"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 199.136,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 16.405873372971236,
+    "p10_pt": 16.405873372971236,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_TOM_Dissimilarity",
+    "png_sha256": "72977208b1d94a828f9d0157a16591a999bf48f0b2b14068e710a99763977054",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "context",
+    "leaf_order",
+    "matrix_definition",
+    "mode",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

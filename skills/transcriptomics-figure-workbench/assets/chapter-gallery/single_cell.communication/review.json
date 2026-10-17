@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.communication",
+  "assay": "single_cell",
+  "title": "Communication themes and ligand-receptor support",
+  "family": "communication",
+  "required_results": [
+    "sender_receiver",
+    "LR_scores",
+    "coverage"
+  ],
+  "specific_qc_and_limit": "CellChat/LIANA/CellPhoneDB scores are method-specific; donor-aware contrast and permutations required.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.communication/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.communication/example.png",
+    "svg": "single_cell.communication/example.svg",
+    "pdf": "single_cell.communication/example.pdf",
+    "tsv": "single_cell.communication/example.tsv",
+    "spec": "single_cell.communication/input/example.spec.json",
+    "preview": "single_cell.communication/preview.jpg"
+  },
+  "sha256": {
+    "png": "e21ccad1928ec1bb1722925328623c4077ee30e9225da0c283b750395c2dbe3d",
+    "svg": "cb9f810ec6b12735f1964bd4c6ea4e80720a0d8dabe0e3647f6e5e326936b1eb",
+    "pdf": "4042572dd016247097750679136b007378d76062deb64b4092a22ee02b7743da",
+    "tsv": "e53c2189cdc7cd903700a7983c4d9ae77ca0afed6bad731233a032e0defcb3bb",
+    "spec": "3f087184322f34d359f63e09d255477f18e2dacc68741cf84f38ab4325f4c7f5"
+  },
+  "visual_review": {
+    "id": "single_cell.communication",
+    "png_sha256": "e21ccad1928ec1bb1722925328623c4077ee30e9225da0c283b750395c2dbe3d",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 332.7910661148534,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 63,
+    "smallest_pt": 9.816970263476026,
+    "p10_pt": 9.816970263476026,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

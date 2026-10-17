@@ -1,0 +1,66 @@
+{
+  "id": "bulk.pathway_contrasts",
+  "assay": "bulk",
+  "title": "Pathway enrichment across contrasts",
+  "family": "story:gsea_comparison",
+  "required_results": [
+    "NES_grid",
+    "FDR_grid",
+    "set_coverage"
+  ],
+  "specific_qc_and_limit": "Keep not-tested distinct from nonsignificant; cross-contrast effect and FDR families must be explicit.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.pathway_contrasts/input/example.spec.json",
+  "code": "scripts/figure_enrichment_story.py",
+  "sources": [
+    "https://junjunlab.github.io/gseavis-manual/basic-usage.html",
+    "https://yulab-smu.top/clusterProfiler-book/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.pathway_contrasts/example.png",
+    "svg": "bulk.pathway_contrasts/example.svg",
+    "pdf": "bulk.pathway_contrasts/example.pdf",
+    "tsv": "bulk.pathway_contrasts/example.tsv",
+    "spec": "bulk.pathway_contrasts/input/example.spec.json",
+    "preview": "bulk.pathway_contrasts/preview.jpg"
+  },
+  "sha256": {
+    "png": "4bdffffd475019b34fdf2ca9059c62103aecf6a6cddfd5e96496d9bce8ca53a9",
+    "svg": "db3e054808eaf0e196971c1ebaa09962290e7402205cfeb453a4bc0276196ff5",
+    "pdf": "3676220d5c6c4bbfcfc277ec639e0e0ea38660b3e21327355e19b89e51e73092",
+    "tsv": "727f92097cf6e98e1ef6f95e42f7d06e1be3dce83a87689065c5b539696ba544",
+    "spec": "8020845f05a3188375855598ca356c3cda95a6abfb05e93b3625ab3fea72b277"
+  },
+  "visual_review": {
+    "id": "bulk.pathway_contrasts",
+    "png_sha256": "4bdffffd475019b34fdf2ca9059c62103aecf6a6cddfd5e96496d9bce8ca53a9",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 405.92790619542114,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 8.048227160877198,
+    "p10_pt": 8.048227160877198,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

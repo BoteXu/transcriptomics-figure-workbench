@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.ambient_doublet",
+  "title": "Ambient RNA and doublet diagnostics",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.ambient_doublet/example.png",
+    "svg": "single_cell.ambient_doublet/example.svg",
+    "pdf": "single_cell.ambient_doublet/example.pdf",
+    "tsv": "single_cell.ambient_doublet/example.tsv",
+    "spec": "single_cell.ambient_doublet/input/example.spec.json",
+    "preview": "single_cell.ambient_doublet/preview.jpg"
+  },
+  "sha256": {
+    "png": "6a08195aef028ac51ac24bc96950e047c2ec914f0af8037ae48dc96093fd0419",
+    "svg": "163c5ae9b33629e75e47b52f42fda59b5f2bb1eb3287bb434df753673ba59931",
+    "pdf": "89b4be1f5938c0a43e183b06352568c887a44c8e88db1bd03cd477c8cc578ef4",
+    "tsv": "128c65e2b0049962a235eae6974a27bd928ccd85795874cee2515eef52fd93e1",
+    "spec": "a587880a8a418a23061a8490307a9127682cb6b799595ceaeb17247457ca2258"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.ambient_doublet",
+    "png_sha256": "6a08195aef028ac51ac24bc96950e047c2ec914f0af8037ae48dc96093fd0419",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "figure_id": "DonorCounts",
-  "renderer": "figure_core.plot_samples",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "DonorCounts.tsv",
     "sha256": "917667b2ee1793b81b8a98bd425849b61e703d13c7572c62ea028efe9d4df2ff",
@@ -10,11 +10,11 @@
     ]
   },
   "parameters": {
-    "palette": {
-      "Control": "#218C8D",
-      "Treated": "#D8795B"
-    },
-    "y_label": "Stored retained cells per donor"
+    "mode": "unit_profile",
+    "title": "Retained cells by donor",
+    "axis_labels": [
+      "Stored retained cells per donor"
+    ]
   },
   "theme": {
     "schema_version": 1,
@@ -86,7 +86,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic donor",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -104,7 +104,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

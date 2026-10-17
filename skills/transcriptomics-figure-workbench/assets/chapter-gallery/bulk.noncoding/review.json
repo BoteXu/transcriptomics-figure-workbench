@@ -1,0 +1,65 @@
+{
+  "id": "bulk.noncoding",
+  "assay": "bulk",
+  "title": "Noncoding RNA and target hypotheses",
+  "family": "noncoding",
+  "required_results": [
+    "RNA_effects",
+    "RNA_target_edges"
+  ],
+  "specific_qc_and_limit": "Require RNA biotype and target-evidence provenance; coexpression is not a validated ceRNA mechanism.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.noncoding/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.noncoding/example.png",
+    "svg": "bulk.noncoding/example.svg",
+    "pdf": "bulk.noncoding/example.pdf",
+    "tsv": "bulk.noncoding/example.tsv",
+    "spec": "bulk.noncoding/input/example.spec.json",
+    "preview": "bulk.noncoding/preview.jpg"
+  },
+  "sha256": {
+    "png": "b6ec3579df85588b7cced8559abb5f8076c3bd9942a173054fc074198d04d51c",
+    "svg": "bd3c55f4c1e830fd1452d7869e31c1debe5d15bedcd3597f84e002cea6fba937",
+    "pdf": "b9c7fcfcf57c94a0d3db2bd7bcb6b1cf903f2ca2f9880c82e04885b0735d0115",
+    "tsv": "c2a3c5be2cdd0bd3bd0352c626f058826dbf9bf0bbbcd166c082bd4a3e36c43c",
+    "spec": "4172cfe358582dee9d2b3a3a4ea2fd13e16701355d707d793ef11ea4c0d03fd3"
+  },
+  "visual_review": {
+    "id": "bulk.noncoding",
+    "png_sha256": "b6ec3579df85588b7cced8559abb5f8076c3bd9942a173054fc074198d04d51c",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 77,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

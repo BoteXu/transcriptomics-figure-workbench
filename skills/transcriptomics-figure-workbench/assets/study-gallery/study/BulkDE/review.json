@@ -1,47 +1,64 @@
 {
-  "form": "differential_expression",
+  "id": "BulkDE",
+  "assay": "bulk",
+  "role": "differential_expression",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "volcano",
+    "title": "Differential response · stacked distributions",
+    "labels": [
+      "G0009",
+      "G0038",
+      "G0091",
+      "G0123"
+    ],
+    "alpha": 0.05,
+    "fc": 1
+  },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 198.11999999999998,
-    "minimum_required_pt": 7,
-    "essential_text_count": 25,
-    "smallest_pt": 8.479709267110843,
-    "p10_pt": 8.479709267110843,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "assay": "bulk",
-  "role": "differential_expression",
-  "id": "BulkDE",
-  "section": "study",
-  "level": null,
   "assets": {
     "png": "study/BulkDE/BulkDE.png",
     "svg": "study/BulkDE/BulkDE.svg",
     "pdf": "study/BulkDE/BulkDE.pdf",
     "tsv": "study/BulkDE/BulkDE.tsv",
-    "spec": "study/BulkDE/input/BulkDE.spec.json"
+    "spec": "study/BulkDE/input/BulkDE.spec.json",
+    "previous": "study/BulkDE/previous.png"
   },
   "sha256": {
-    "png": "d9a304bff1f2051db2efc9a3a7bd42481087056955a18496bcbcc206ae617e1d",
-    "svg": "aca4b383f8018dbdc2934ca77f416b39098528028718fad88a14383766ddc956",
-    "pdf": "ec4a923b679de55b4b7dd9c26e116e30c8cb625f8337a725035646ed60078208",
-    "tsv": "df439ee21186f3fe7e78ca1c8ce9e9999cad2d944312011b4c2a4838011037a9"
+    "png": "013b24463cb04a847015258b5aee8b932cfd22928fdf55255f2fedc04a72a3f9",
+    "svg": "f5e3fb2556cc9f8f3dc184ced3fd8ee48693c8d7af5a3a3c3136e91dbd9958f7",
+    "pdf": "441c8740bceadec49c250fffecc112545699b5b70c8e6967a949e04f9a97e842",
+    "tsv": "2043bd0715408de925227544cb406505c251bef93ce3f5b0b01ad3f45d1c5d6a",
+    "previous": "d9a304bff1f2051db2efc9a3a7bd42481087056955a18496bcbcc206ae617e1d"
   },
   "visual_review": {
-    "key": "study/BulkDE",
-    "png_sha256": "d9a304bff1f2051db2efc9a3a7bd42481087056955a18496bcbcc206ae617e1d",
-    "status": "SCREEN_REVIEWED",
-    "reviewer": "Codex visual self-review",
+    "id": "BulkDE",
+    "png_sha256": "013b24463cb04a847015258b5aee8b932cfd22928fdf55255f2fedc04a72a3f9",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-    "target_width_mm": 210,
-    "font_measurement": "MEASUREMENT_PASS",
-    "pdf_readback": false
+    "scientific_acceptance": false
   },
   "scientific_acceptance": false
 }

@@ -1,0 +1,68 @@
+{
+  "id": "single_cell.pseudobulk",
+  "assay": "single_cell",
+  "title": "Donor-level differential response",
+  "family": "rich:DonorDE",
+  "required_results": [
+    "complete_donor_de",
+    "contrast",
+    "FDR",
+    "marginal_counts"
+  ],
+  "specific_qc_and_limit": "Donor/celltype counts and design must be reviewed; no cell-level pseudoreplication.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.pseudobulk/input/example.spec.json",
+  "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.pseudobulk/example.png",
+    "svg": "single_cell.pseudobulk/example.svg",
+    "pdf": "single_cell.pseudobulk/example.pdf",
+    "tsv": "single_cell.pseudobulk/example.tsv",
+    "spec": "single_cell.pseudobulk/input/example.spec.json",
+    "preview": "single_cell.pseudobulk/preview.jpg"
+  },
+  "sha256": {
+    "png": "85420245ec176d6e460a4850604e8967cf94f95b90032eb562e5b20d6cabbf48",
+    "svg": "24c473b52d49ab2a0af09cecb64f86b2e4dcd9e785912e6fa58a146309d8e710",
+    "pdf": "b762b430d28a09963b8e1850ad0ba96f4ec973699f0414468d1b4b4d31faba35",
+    "tsv": "fdb5b6d0025d6b078961b1242809284abf90d7487a5a2da8d01709790edd8bd1",
+    "spec": "a02d261adfaefb5b9f5f63b0532d2536acd6f2b66567471df09e8610a3b3ef43"
+  },
+  "visual_review": {
+    "id": "single_cell.pseudobulk",
+    "png_sha256": "85420245ec176d6e460a4850604e8967cf94f95b90032eb562e5b20d6cabbf48",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

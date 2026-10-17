@@ -1,0 +1,91 @@
+{
+  "id": "SingleCellMain",
+  "assay": "single_cell",
+  "role": "study_overview",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_annotation_views.plot_annotation_evidence",
+  "parameters": {
+    "mode": "atlas",
+    "title": "Single-cell atlas · annotation evidence",
+    "expression_label": "log1p normalized expression",
+    "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+    "expression_limits": [
+      0,
+      5
+    ],
+    "group_order": [
+      "T cells",
+      "B cells",
+      "Myeloid",
+      "Stromal",
+      "Endothelial"
+    ],
+    "marker_order": [
+      "CD3D",
+      "TRAC",
+      "IL7R",
+      "CD2",
+      "MS4A1",
+      "CD79A",
+      "CD74",
+      "CD37",
+      "LYZ",
+      "LST1",
+      "FCER1G",
+      "CTSS",
+      "COL1A1",
+      "DCN",
+      "LUM",
+      "COL3A1",
+      "PECAM1",
+      "VWF",
+      "KDR",
+      "EMCN"
+    ]
+  },
+  "readability": {
+    "target_width_mm": 240,
+    "native_width_mm": 255.27,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 45,
+    "smallest_pt": 8.461628863556234,
+    "p10_pt": 8.461628863556234,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/SingleCellMain/SingleCellMain.png",
+    "svg": "study/SingleCellMain/SingleCellMain.svg",
+    "pdf": "study/SingleCellMain/SingleCellMain.pdf",
+    "tsv": "study/SingleCellMain/SingleCellMain.tsv",
+    "spec": "study/SingleCellMain/input/SingleCellMain.spec.json",
+    "previous": "study/SingleCellMain/previous.png"
+  },
+  "sha256": {
+    "png": "354f8fbb95ac1731f9adbc2dc610830db6877b12b99cab6df77d3e5a7c97ad96",
+    "svg": "04a3ad847c038b5e90491d69d862c1e1705f7cc68e81d17dd2cd812e66dc3406",
+    "pdf": "5600abe9f0400dae35a67e7c11c65f907034ea19fcc1472c5ba465526f54775b",
+    "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
+    "previous": "e37bb5db12bbab9d85dbbc79463ba5b8e97839457db8b8d14956273be9ec2abe"
+  },
+  "visual_review": {
+    "id": "SingleCellMain",
+    "png_sha256": "354f8fbb95ac1731f9adbc2dc610830db6877b12b99cab6df77d3e5a7c97ad96",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

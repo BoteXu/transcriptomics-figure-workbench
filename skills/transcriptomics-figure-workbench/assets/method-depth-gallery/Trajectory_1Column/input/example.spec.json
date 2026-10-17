@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "figure_id": "Trajectory_1Column",
+  "renderer": "figure_lineage_views.plot_lineage_view",
+  "input": {
+    "path": "example.tsv",
+    "sha256": "94e90cc18dd4131fd13a9658a682d9af054caad1b5c1f0c8efe2007784a9ef80",
+    "numeric_columns": [
+      "x",
+      "y",
+      "pseudotime"
+    ]
+  },
+  "parameters": {
+    "mode": "trajectory",
+    "title": "Branch identity and progression · shared frozen graph",
+    "definition": "Fictional rooted graph and pseudotime; no trajectory or lineage inference",
+    "root_id": "Root",
+    "value_limits": [
+      0,
+      1
+    ],
+    "columns": 1
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-transcriptomic-study",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Control": 0,
+      "Treated": 1,
+      "T cells": 0,
+      "B cells": 1,
+      "Myeloid": 2,
+      "Stromal": 3,
+      "Endothelial": 4,
+      "Batch 1": 0,
+      "Batch 2": 1,
+      "Batch 3": 2,
+      "Interferon response": 0,
+      "Extracellular matrix": 1,
+      "Mitochondrial function": 2,
+      "RNA processing": 3,
+      "Cell cycle": 4,
+      "Inflammatory response": 5,
+      "Resolution 0.2": 0,
+      "Resolution 0.5": 1,
+      "Resolution 0.8": 2,
+      "Root state": 0,
+      "Branch A": 1,
+      "Branch B": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Fictional frozen method-depth display inputs v0.9.1",
+    "input_unit": "Synthetic gene-sample measurement",
+    "experimental_unit": "Synthetic donor; cells nested within donors",
+    "contrast": "Treated versus Control; purely illustrative",
+    "denominator": "All 180 illustrative genes in each of 12 samples",
+    "model": "No analysis, graph inference, model fit or significance calculation",
+    "limits": "Declared complete display scope; data have no biomedical validity",
+    "filtering": "Declared fixture selection only; no research filtering",
+    "uncertainty": "Only explicitly supplied illustrative intervals; no new uncertainty estimation",
+    "interpretation_limit": "Software and visual acceptance only; no biological or clinical conclusions",
+    "synthetic": true
+  },
+  "appearance": {
+    "preset": "paper",
+    "label_pt": 12,
+    "tick_pt": 11,
+    "note_pt": 11
+  },
+  "export": {
+    "raster_dpi": 300,
+    "target_width_mm": 297,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "block"
+  }
+}

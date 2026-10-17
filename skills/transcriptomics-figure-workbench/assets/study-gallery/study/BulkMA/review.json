@@ -1,47 +1,56 @@
 {
-  "form": "ma",
+  "id": "BulkMA",
+  "assay": "bulk",
+  "role": "ma",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "ma",
+    "title": "Mean–effect · complete marginal counts"
+  },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 228.6,
-    "minimum_required_pt": 7,
-    "essential_text_count": 25,
-    "smallest_pt": 7.349081364829397,
-    "p10_pt": 8.267716535433072,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 31,
+    "smallest_pt": 9.301181102362206,
+    "p10_pt": 9.301181102362206,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "assay": "bulk",
-  "role": "ma",
-  "id": "BulkMA",
-  "section": "study",
-  "level": null,
   "assets": {
     "png": "study/BulkMA/BulkMA.png",
     "svg": "study/BulkMA/BulkMA.svg",
     "pdf": "study/BulkMA/BulkMA.pdf",
     "tsv": "study/BulkMA/BulkMA.tsv",
-    "spec": "study/BulkMA/input/BulkMA.spec.json"
+    "spec": "study/BulkMA/input/BulkMA.spec.json",
+    "previous": "study/BulkMA/previous.png"
   },
   "sha256": {
-    "png": "b302a101f26b8b992ab8ede90ce9ba508c2abbe40d99f43a2fa63131dcba60fe",
-    "svg": "1ddc80b718b663e9460e4cb31ee440f27a387af413b2ea92a9a41423787ab5d9",
-    "pdf": "d40552c488e086b74c1df559c8eb032b433cc9e5ac0f6f519975cd71ca9c3498",
-    "tsv": "a4d4798fd085b7005093a13020fda2bc745e9b2b7e8112f22d22e2e0a5cc8639"
+    "png": "e16e150b8fbc9cbe8f645db95d77bd49cc49595aca7a9bb7be89414bb607f668",
+    "svg": "e07b17b390512ff0bd4e43eb0347c528620c8d2174667e21b7ad537b77d07eb8",
+    "pdf": "f5295b1e925f04766b67c110c8588cd4631479b3e44629eaeb0cc970f67d6b36",
+    "tsv": "18c29236ed05e93c2fb9c93b2c5640a43e2b3e630e53591700566d02c75fb6f6",
+    "previous": "b302a101f26b8b992ab8ede90ce9ba508c2abbe40d99f43a2fa63131dcba60fe"
   },
   "visual_review": {
-    "key": "study/BulkMA",
-    "png_sha256": "b302a101f26b8b992ab8ede90ce9ba508c2abbe40d99f43a2fa63131dcba60fe",
-    "status": "SCREEN_REVIEWED",
-    "reviewer": "Codex visual self-review",
+    "id": "BulkMA",
+    "png_sha256": "e16e150b8fbc9cbe8f645db95d77bd49cc49595aca7a9bb7be89414bb607f668",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-    "target_width_mm": 210,
-    "font_measurement": "MEASUREMENT_PASS",
-    "pdf_readback": false
+    "scientific_acceptance": false
   },
   "scientific_acceptance": false
 }

@@ -1,0 +1,66 @@
+{
+  "id": "bulk.model_qc",
+  "assay": "bulk",
+  "title": "Model fit and influence diagnostics",
+  "family": "diagnostics",
+  "required_results": [
+    "residuals",
+    "dispersion_curve",
+    "influence"
+  ],
+  "specific_qc_and_limit": "Use actual fitted-model residuals and influential observations; a model is not accepted by a pretty plot.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.model_qc/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.model_qc/example.png",
+    "svg": "bulk.model_qc/example.svg",
+    "pdf": "bulk.model_qc/example.pdf",
+    "tsv": "bulk.model_qc/example.tsv",
+    "spec": "bulk.model_qc/input/example.spec.json",
+    "preview": "bulk.model_qc/preview.jpg"
+  },
+  "sha256": {
+    "png": "5d4f84a16bf4f48054c77a3792aeb216d0ba2bdf8a8a9c98b918e640e66b5594",
+    "svg": "d9ee0b22af36f0ea8611c369f7f9ee74bd783566792a7555b80e16182d12ac02",
+    "pdf": "206fce879492421f5ac57512b4d0561b41c70eb5122e2bc03409629160db6bb4",
+    "tsv": "c52096705ffa12f414a979b5640014787eaea0c49982708adf05a3a838a3cc74",
+    "spec": "0e34ede3a4262f5fbe8d2eb54200d18254212249bf5fd2904f488b0c4651a68c"
+  },
+  "visual_review": {
+    "id": "bulk.model_qc",
+    "png_sha256": "5d4f84a16bf4f48054c77a3792aeb216d0ba2bdf8a8a9c98b918e640e66b5594",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

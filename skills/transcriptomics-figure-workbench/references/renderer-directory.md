@@ -9,11 +9,13 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_analysis_results.plot_splice_tracks | splice_tracks | yes | sample_order, transcript_order, region, coordinate_definition, coverage_definition, junction_definition |
 | figure_analysis_results.plot_variant_posteriors | variant_posteriors | yes | signal_order, region, coordinate_definition, posterior_definition |
 | figure_analysis_results.plot_contribution_waterfall | contribution_waterfall | yes | component_order, baseline, total, quantity_definition, contribution_definition |
+| figure_annotation_views.plot_annotation_evidence | canonical ID | yes | mode, title, expression_label, detection_definition, expression_limits, marker_order |
 | figure_biomni_views.plot_sequence_logo | sequence_logo | yes | position_order, alphabet, symbol_slots, height_definition, height_unit |
 | figure_biomni_views.plot_contact_tracks | contact_tracks | yes | bin_order, track_order, region_definition, coordinate_unit, value_definition, value_limits, track_unit |
 | figure_biomni_views.plot_branch_tree | branch_tree | yes | root_id, leaf_order, branch_unit, tree_definition |
 | figure_biomni_views.plot_slice_overlay | slice_overlay | yes | view_order, axis_labels, label_slots, intensity_limits, registration_definition, orientation_definition |
 | figure_biomni_views.plot_registration_check | registration_check | yes | intensity_limits, difference_limits, tile_pixels, coordinate_labels, registration_definition |
+| figure_chapter_views.plot_transcriptomic_chapter | canonical ID | yes | panels, title, scope_note |
 | figure_clarity_views.plot_clarity_views | clarity | yes | view, contract, options |
 | figure_core.plot_embedding | embedding | yes | palette |
 | figure_core.plot_samples | canonical ID | yes | palette, y_label |
@@ -25,6 +27,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_core.plot_composition | composition | yes | palette |
 | figure_core.plot_curve | canonical ID | yes | none |
 | figure_editorial.plot_editorial | editorial | yes | kind, contract |
+| figure_enrichment_story.plot_enrichment_story | canonical ID | yes | mode, title, background_definition, gene_set_version, selection_definition, support_contrast, tested_size |
 | figure_expanded_grammar.plot_mosaic_counts | mosaic_counts | yes | contract |
 | figure_expanded_grammar.plot_waffle_counts | waffle_counts | yes | contract, unit_label |
 | figure_expanded_grammar.plot_horizon_series | horizon_series | yes | contract, band_width, x_label, y_label |
@@ -44,6 +47,8 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_gsea.plot_gsea_nes | gsea_nes | yes | contract, pathway_order, contrast_order, nes_limits |
 | figure_gsea.plot_gsea_leading_edge | gsea_leading_edge | yes | contract, pathway_order, gene_order, value_label, value_limits |
 | figure_gsea.plot_ora_terms | ora_terms | yes | contract, term_order, background_definition |
+| figure_integrated_views.plot_integrated_view | canonical ID | yes | mode, title |
+| figure_lineage_views.plot_lineage_view | canonical ID | yes | mode, title, definition |
 | figure_linked_evidence.plot_membership_ribbons | membership_ribbons | yes | member_order, term_order, block_slots, effect_limits, significance_limits, ratio_max, ratio_definition |
 | figure_linked_evidence.plot_split_metric_matrix | split_metric_matrix | yes | row_order, column_order, row_slots, association_limits, significance_limits, association_definition, probability_definition |
 | figure_linked_evidence.plot_hierarchy_tracks | hierarchy_tracks | yes | leaf_order, height_definition |
@@ -131,6 +136,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_styles.plot_enrichment_lollipop | canonical ID | yes | score_type, denominator_label, count_label |
 | figure_styles.plot_composition_panels | canonical ID | yes | palette, unit_label |
 | figure_styles.plot_sample_distribution | canonical ID | yes | palette, y_label |
+| figure_wgcna_views.plot_wgcna_view | canonical ID | yes | mode, title, context |
 
 ## figure_analysis_results.plot_splice_tracks
 
@@ -172,6 +178,25 @@ See the fixed implementation and its input contract.
 | quantity_definition | true | — |
 | contribution_definition | true | — |
 | title | false | "" |
+
+## figure_annotation_views.plot_annotation_evidence
+
+Separate annotation atlas and per-subgroup multi-marker reading pages.
+
+| Parameter | Required | Default |
+|---|---|---|
+| mode | true | — |
+| title | true | — |
+| expression_label | true | — |
+| detection_definition | true | — |
+| expression_limits | true | — |
+| marker_order | true | — |
+| focus_group | false | null |
+| group_order | false | null |
+| ncols | false | "auto" |
+| nrows | false | null |
+| panel_width | false | 3.25 |
+| panel_height | false | 3.15 |
 
 ## figure_biomni_views.plot_sequence_logo
 
@@ -242,6 +267,18 @@ See the fixed implementation and its input contract.
 | registration_definition | true | — |
 | arrangement | false | "horizontal" |
 | title | false | "" |
+
+## figure_chapter_views.plot_transcriptomic_chapter
+
+Draw a complete, explicitly selected analysis chapter with adaptive packing.
+
+| Parameter | Required | Default |
+|---|---|---|
+| panels | true | — |
+| title | true | — |
+| scope_note | true | — |
+| columns | false | "auto" |
+| rows | false | null |
 
 ## figure_clarity_views.plot_clarity_views
 
@@ -394,6 +431,24 @@ Six rebuilt frozen-result modes. Candidate aesthetics require actual review.
 | contract | true | — |
 | options | false | null |
 
+## figure_enrichment_story.plot_enrichment_story
+
+Prefer linked effect/ratio, probability, count and exact gene-support channels.
+
+| Parameter | Required | Default |
+|---|---|---|
+| mode | true | — |
+| title | true | — |
+| background_definition | true | — |
+| gene_set_version | true | — |
+| selection_definition | true | — |
+| support_contrast | true | — |
+| tested_size | true | — |
+| query_size | false | null |
+| nes_limits | false | [-3, 3] |
+| gene_effect_limits | false | [-3, 3] |
+| columns | false | "auto" |
+
 ## figure_expanded_grammar.plot_mosaic_counts
 
 Area mosaic: group width is total count; within-group height is count fraction.
@@ -521,6 +576,7 @@ See the fixed implementation and its input contract.
 | cell_height | false | 0.3 |
 | row_label_wrap | false | null |
 | column_label_wrap | false | null |
+| merge_annotation_legends | false | false |
 
 ## figure_extensions.plot_score_comparison
 
@@ -649,6 +705,35 @@ ORA bubble/lollipop with exact numerator/denominator, no GSEA/ORA conflation.
 | ratio_max | false | 1 |
 | significance_max | false | 8 |
 | title | false | "Selected over-representation results" |
+
+## figure_integrated_views.plot_integrated_view
+
+Prefer a compatible information-rich view; all extra scientific channels are supplied.
+
+| Parameter | Required | Default |
+|---|---|---|
+| mode | true | — |
+| title | true | — |
+| axis_labels | false | null |
+| ellipse_definition | false | null |
+| labels | false | [] |
+| alpha | false | 0.05 |
+| fc | false | 1 |
+| feature_columns | false | "auto" |
+
+## figure_lineage_views.plot_lineage_view
+
+Show actual lineage/flow identities, quantities and coordinate meanings.
+
+| Parameter | Required | Default |
+|---|---|---|
+| mode | true | — |
+| title | true | — |
+| definition | true | — |
+| level_order | false | null |
+| root_id | false | null |
+| value_limits | false | [0, 1] |
+| columns | false | "auto" |
 
 ## figure_linked_evidence.plot_membership_ribbons
 
@@ -1733,6 +1818,8 @@ A coherent main figure; complete companion results remain independently exported
 | fc | false | 1 |
 | embedding_axes | false | null |
 | panel_titles | false | null |
+| presentation | false | "basic" |
+| ellipse_definition | false | null |
 | ncols | false | "auto" |
 | nrows | false | null |
 | panel_width | false | 3.9 |
@@ -1792,3 +1879,25 @@ See the fixed implementation and its input contract.
 |---|---|---|
 | palette | true | — |
 | y_label | true | — |
+
+## figure_wgcna_views.plot_wgcna_view
+
+Dedicated network diagnostics, identities and result meanings; adaptive facets.
+
+| Parameter | Required | Default |
+|---|---|---|
+| mode | true | — |
+| title | true | — |
+| context | true | — |
+| leaf_order | false | null |
+| module_order | false | null |
+| selected_power | false | null |
+| fit_reference | false | null |
+| probability_kind | false | "adjusted" |
+| coefficient_semantics | false | "signed" |
+| matrix_definition | false | "TOM" |
+| track_labels | false | ["Dynamic modules", "Merged modules"] |
+| columns | false | "auto" |
+| preservation_guides | false | null |
+| label_genes | false | [] |
+| value_limits | false | [-3, 3] |

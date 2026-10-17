@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.multi_contrast",
+  "title": "Celltype-by-contrast differential atlas",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.multi_contrast/example.png",
+    "svg": "single_cell.multi_contrast/example.svg",
+    "pdf": "single_cell.multi_contrast/example.pdf",
+    "tsv": "single_cell.multi_contrast/example.tsv",
+    "spec": "single_cell.multi_contrast/input/example.spec.json",
+    "preview": "single_cell.multi_contrast/preview.jpg"
+  },
+  "sha256": {
+    "png": "bc7f1951bb76aa2a2c3de00d34d7b0865dfc910219ce666645c6c79e7d357f58",
+    "svg": "55fd0ed9948d75ed961d33b1330205926de0762113f9a5a0a11883107c2aae7b",
+    "pdf": "489920ad7fd426bd2860ee22cbe4f4a54aa494717fe96deda459a7f955fa89d2",
+    "tsv": "3376ef730673fe2670daf956cafcf9301fb8db92f91c433828cd830e34f7cc04",
+    "spec": "4e5b5c8dfa5e1032c0c7fa2b6048efa29c2122d1c037fc00d5fe60b783d8a93f"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 77,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.multi_contrast",
+    "png_sha256": "bc7f1951bb76aa2a2c3de00d34d7b0865dfc910219ce666645c6c79e7d357f58",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

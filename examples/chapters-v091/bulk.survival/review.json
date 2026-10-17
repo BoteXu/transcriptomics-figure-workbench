@@ -1,0 +1,66 @@
+{
+  "id": "bulk.survival",
+  "assay": "bulk",
+  "title": "Conditional clinical outcome association",
+  "family": "survival",
+  "required_results": [
+    "survival_curves",
+    "risk_table",
+    "hazard_intervals"
+  ],
+  "specific_qc_and_limit": "Clinical use requires endpoint/censoring/design review; association is not clinical prediction validation.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.survival/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.survival/example.png",
+    "svg": "bulk.survival/example.svg",
+    "pdf": "bulk.survival/example.pdf",
+    "tsv": "bulk.survival/example.tsv",
+    "spec": "bulk.survival/input/example.spec.json",
+    "preview": "bulk.survival/preview.jpg"
+  },
+  "sha256": {
+    "png": "6f38c6370da2f109c00209529e3730283ad00593fc101e342b63ec5d0f81aa4d",
+    "svg": "470adeb8ded7ed4b595610ba21f3f6f08794f627c1b7ede1f72d31ed5046c73e",
+    "pdf": "bc38ca48e086224dba8ccfaeaf54547dc0cdea9f4509c7f8ffa6e1012ae9e4f5",
+    "tsv": "4aa4ed731505641ce105a4054bdf28f6ab3cbd714c2b327db4eb489c6b55770f",
+    "spec": "b5fe2ee125e032701ca67b40866b45abaab18e89460cb68000a0a86bbb1b4ae3"
+  },
+  "visual_review": {
+    "id": "bulk.survival",
+    "png_sha256": "6f38c6370da2f109c00209529e3730283ad00593fc101e342b63ec5d0f81aa4d",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 60,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

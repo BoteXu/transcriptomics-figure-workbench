@@ -1,27 +1,21 @@
 {
   "schema_version": 1,
   "figure_id": "BulkMA",
-  "renderer": "figure_qc_de.plot_frozen_qc_de",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "BulkMA.tsv",
-    "sha256": "259dd7350026c9111a491e2cb41eccdde7d6efd0946bd7786bbb7823a8684292",
+    "sha256": "63a2edb9e254065a9a31d611b7e9252068ac434e02d37b07aac283129e136380",
     "numeric_columns": [
       "effect",
-      "average"
+      "average",
+      "left",
+      "right",
+      "count"
     ]
   },
   "parameters": {
     "mode": "ma",
-    "contract": {
-      "source_definition": "Fictional frozen mean-effect results",
-      "independent_unit": "12 synthetic donors",
-      "denominator": "1200 fictional genes",
-      "effect_definition": "Stored log2 fold change",
-      "status_definition": "Illustrative frozen FDR and fold-change classes",
-      "feature_selection": "Complete fictional gene universe",
-      "average_definition": "Stored mean log2 expression"
-    },
-    "title": "Mean-effect relationship"
+    "title": "Mean–effect · complete marginal counts"
   },
   "theme": {
     "schema_version": 1,
@@ -93,7 +87,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic gene result",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -111,7 +105,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

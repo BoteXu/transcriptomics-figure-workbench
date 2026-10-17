@@ -1,0 +1,66 @@
+{
+  "id": "bulk.fusions",
+  "assay": "bulk",
+  "title": "Fusion and transcript-structure evidence",
+  "family": "fusion",
+  "required_results": [
+    "breakpoint_support",
+    "coverage",
+    "validation_summary"
+  ],
+  "specific_qc_and_limit": "Needs sequence-level evidence and artifact checks; a breakpoint call is not validated oncogenicity.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.fusions/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.fusions/example.png",
+    "svg": "bulk.fusions/example.svg",
+    "pdf": "bulk.fusions/example.pdf",
+    "tsv": "bulk.fusions/example.tsv",
+    "spec": "bulk.fusions/input/example.spec.json",
+    "preview": "bulk.fusions/preview.jpg"
+  },
+  "sha256": {
+    "png": "5e4d6a2ec9b5eb87de2c853740c9a3f3177162c10c658edb5c3384a976979289",
+    "svg": "62a1c899bc3c62a22b4eaf7c3d61c123b15be3a3e627da5ee388bd060d5fe7d6",
+    "pdf": "b08aff7db5eb0156e6a8b272ac827a6b3672ff86e4156da44b61b0197b3b2ecc",
+    "tsv": "f179edd148c3dae34e38eb597759e442822c15d89230aecdee8833f597641f55",
+    "spec": "4c32126b2710bdbac7feba5e3d8e38ecec763566c73a1b21ec505d8acb3f2d06"
+  },
+  "visual_review": {
+    "id": "bulk.fusions",
+    "png_sha256": "5e4d6a2ec9b5eb87de2c853740c9a3f3177162c10c658edb5c3384a976979289",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

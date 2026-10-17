@@ -1,0 +1,56 @@
+{
+  "id": "CellTypes",
+  "assay": "single_cell",
+  "role": "celltype_embedding",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "annotation_atlas",
+    "title": "Cell annotation atlas · identities and supporting marker views"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 246.86766015624997,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 76,
+    "smallest_pt": 7.655923820899677,
+    "p10_pt": 8.08125292206077,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/CellTypes/CellTypes.png",
+    "svg": "study/CellTypes/CellTypes.svg",
+    "pdf": "study/CellTypes/CellTypes.pdf",
+    "tsv": "study/CellTypes/CellTypes.tsv",
+    "spec": "study/CellTypes/input/CellTypes.spec.json",
+    "previous": "study/CellTypes/previous.png"
+  },
+  "sha256": {
+    "png": "3335963492525d15289cbba5bdc707145c75ec7b068c612ddd6fa2f5f402ff42",
+    "svg": "4d21fbee2535eddbad06014f0bc43b5af18bbb7fb6ba6e1f34eb4817cc9d44b8",
+    "pdf": "3a27e596eca375066155f39e5b5cec0167e006ddb0a3f7dff763d6e4edf7622e",
+    "tsv": "019d26cc400fbc32b1da8e428c9d33820471e4f57c7407a8bf9643d3afdda4aa",
+    "previous": "b3c574525dd678752e066940582ee985468cc337e3de8763fe861e3c1dd9fc71"
+  },
+  "visual_review": {
+    "id": "CellTypes",
+    "png_sha256": "3335963492525d15289cbba5bdc707145c75ec7b068c612ddd6fa2f5f402ff42",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

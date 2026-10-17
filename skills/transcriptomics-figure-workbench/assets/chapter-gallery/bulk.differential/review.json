@@ -1,0 +1,67 @@
+{
+  "id": "bulk.differential",
+  "assay": "bulk",
+  "title": "Differential expression with full distributions",
+  "family": "rich:BulkDE",
+  "required_results": [
+    "complete_de",
+    "effect",
+    "p_adj",
+    "marginal_counts"
+  ],
+  "specific_qc_and_limit": "Freeze contrast, independent units and FDR family; no selected-gene-only volcano.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.differential/input/example.spec.json",
+  "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.differential/example.png",
+    "svg": "bulk.differential/example.svg",
+    "pdf": "bulk.differential/example.pdf",
+    "tsv": "bulk.differential/example.tsv",
+    "spec": "bulk.differential/input/example.spec.json",
+    "preview": "bulk.differential/preview.jpg"
+  },
+  "sha256": {
+    "png": "5a10cb9ee8165d0e6540943c53516a83a99f4adee3a6163b9888fae04f6064be",
+    "svg": "268110830297a539dc013838a7d9158dd3e3417cb05611c71fbadb526c0c2990",
+    "pdf": "01f785ad15539c57d0a35a3ae078682186b7eed44368eaa32e79a5c2fbae2d8f",
+    "tsv": "fdb5b6d0025d6b078961b1242809284abf90d7487a5a2da8d01709790edd8bd1",
+    "spec": "ad1b457c7392d3656d1692cd5e43ab6ffa117d7448c6e7edb8b45a5d54d5f420"
+  },
+  "visual_review": {
+    "id": "bulk.differential",
+    "png_sha256": "5a10cb9ee8165d0e6540943c53516a83a99f4adee3a6163b9888fae04f6064be",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

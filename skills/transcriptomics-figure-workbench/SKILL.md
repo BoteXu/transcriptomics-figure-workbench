@@ -5,6 +5,36 @@ description: Design, render and improve publication figures from frozen scientif
 
 # Scientific Figure Workbench
 
+## Publication design takes precedence over a catalogue of panels
+
+User review rejected the crowded integrated study pages. Historical screen
+inspection means only that those bytes were seen; it is not blanket aesthetic
+approval. A render, numeric font gate or all-green script cannot approve beauty.
+For a new default, compare at the actual intended size, explicitly record what
+was rejected and why, and iterate the actual export. A page needs one question,
+a clear first visual destination, aligned panel/guide lanes and a deliberate
+reading order. Avoid long technical titles, distant colour keys and tiny maps
+used to fill a leftover strip. Keep complete, readable companions for material
+that does not belong on the main page. Do not mistake more panels for better
+information. See [the revised design acceptance](references/editorial-acceptance-v091.md).
+
+For “每个亚群分别显示对应 marker”, use
+`figure_annotation_views.plot_annotation_evidence` in `subgroup` mode and the
+[actual subgroup examples](assets/subgroup-gallery/index.html). Prepare one
+page per explicitly selected identity, with its own several declared markers,
+a location highlight, unchanged full-cell feature maps, and all-identity
+specificity means/fractions. The focus must match every marker assignment.
+Marker order, count, common expression limits, physical width and rows/columns
+are explicit. The example contains 2/4/8-marker layout variants; these are
+extensions of the same template. Never substitute one representative marker
+for each subgroup's multi-marker evidence. Main annotation atlas and donor
+response have separate pages; preserve their source tables and context.
+The [five-scope book manifest](assets/subgroup-gallery/book.manifest.json)
+actually binds one page to each identity. Use `book-plan` for an explicitly
+selected set of identities, followed by `book-render` on the exact saved plan.
+A generic global `marker_features` panel does not fulfill an each-subgroup
+request. Keep explicit scope and marker lists for every additional reading page.
+
 ## Start with the comparison and a polished example
 
 Identify the comparison the reader should see, the supplied data shape and the intended use (paper, slide or screen). **Prioritize attractive, restrained examples with readable labels and clear visual hierarchy.** Start with [the consolidated base forms and extensions](assets/forms-gallery/index.html) and [the v0.8 form-selection rules](references/forms-v080.md). Choose one base form, then a meaningful extension. Repeated datasets, colours or slight layout changes belong under that extension. Existing source IDs remain aliases. Offer one preferred design and at most two useful alternatives; do not add independent types when the user asks to improve existing forms.
@@ -29,15 +59,45 @@ Consider excellent community implementations, author blogs, GitHub repositories 
 
 Respect a user-selected design. These defaults guide choices when no design was specified; scientific compatibility is mandatory. Do not manufacture missing channels or change selection thresholds for appearance.
 
+### Prefer the polished extension in ordinary requests
+
+The user's default preference is a richer, attractive scientific presentation.
+Do not equate restrained typography with the simplest available geometry.
+Compare compatible existing extensions before choosing. For bulk PCA prefer
+supplied group-dispersion ellipses, complete marginal proportions and an
+explained-variance companion. For volcano/MA prefer exact stacked marginal
+counts and a clear direction/count/proportion key. For single-cell annotation,
+prefer an integrated subpopulation/marker atlas: explicit subgroup labels,
+annotation-block dot matrix, representative-gene maps with the same coordinates
+and common expression scale, plus donor composition when relevant.
+
+Use these richer defaults when their channels exist. A simple fallback must
+state the missing channels or the user's explicit simplicity request. Unknown
+ellipse definitions, unreviewed annotations or absent densities cannot be
+created for decoration. A group-dispersion ellipse is not a mean confidence
+interval or a test of separation. Keep complete clear individual companions.
+Inspect the richer actual exports and their main-figure composition; do not
+grant beauty acceptance merely for adding panels or passing font checks.
+
 ## Workflow
 
 ### Transcriptomic figure sets and ordinary requests
+
+Start with scientific semantics using `choose --request FigureChoiceRequest.json --output choice.json`. Define assay, method, question, biological independent unit, supplied semantic channels, actual display counts and purpose. This selects a design only. It never manufactures missing evidence or converts a generic UMAP request into PCA uncertainty. Summary-only GSEA gets an NES summary; ORA requires an actual query and tested universe. Large gene point counts do not imply hundreds of reading pages.
+
+Then inspect [actual within-analysis views](references/analysis-depth-v091.md), using `chapter-views --chapter <id>` and `view-template --entry <id> --output <fresh-directory>`. A chapter summary is not complete method coverage. Compare basic, diagnostic and explanatory companions and use the actual implemented input contracts. WGCNA has dedicated power, hierarchy, traits, MM–GS, TOM, eigengene, hub and preservation views; hdWGCNA additionally retains donor/metacell support and shared-coordinate activity. The exact chosen views depend on the actual assay and returned results. Multiple views or reading pages in the same contrast use an explicit `view` in the book manifest.
+
+For cluster resolution use complete adjacent-resolution cell flows and fixed node positions, with explicit node/edge quantities. For trajectories retain the supplied graph, root, branch labels and pseudotime on identical cells; disconnected category clouds are not a trajectory. For splicing use physical coverage, junction counts and exon tracks plus donor-level event effects. Circles, chord diagrams and network layouts remain alternatives when their identities are legible; prefer aligned matrices or linear comparisons when they communicate more clearly.
+
+For a complete bulk or single-cell workbench, start with [58 analysis chapters](references/transcriptomic-chapters-v091.md) and `chapters`, `chapter-template`, `book-plan` / `book-render`. Every chapter has actual drawing code, a runnable synthetic FigureSpec/TSV and exported examples, including conditional extensions. Search author/community visualization sources when an improved form is needed, then implement and inspect it. Never label an unimplemented drawing capability as a missing project result. Use explicit multiple-contrast, celltype and cohort scopes; the small 11/14-figure study demonstration is not comprehensive coverage.
+
+Prefer the compatible richer presentation: PCA dispersion/reference ellipses and marginals; DE/MA stacked distributions; linked annotation/subcluster-marker atlases; ORA themes, ratios/counts/FDR and gene support; complete multi-GSEA and leading-edge/NES comparisons. [Current preferred examples](assets/study-gallery/index.html) and [chapter examples](assets/chapter-gallery/index.html) replace the older minimal ordinary defaults. Package/community designs are ideas to adapt, with attribution and exact input semantics; do not copy licenses away or execute unreviewed third-party code.
 
 For “画质控图”, “展示差异和通路” or “做一套文章组图”, plan a coherent figure set from explicit frozen results. Use [the study workflow](references/transcriptomic-study-v090.md) and `study-plan` to bind the request to selected FigureSpecs. The bounded phrase router assists the host; it does not infer a study design or locate arbitrary private files.
 
 Treat the set as unfinished until the intended scientific comparisons are both readable and visually convincing. A normal request must not merely return a bare default scatter or an indiscriminate catalogue dump. Choose complementary panels, stable identity colours, clear hierarchy and suitable density; make a restrained main figure and complete companion figures. Avoid repeating near-identical heatmaps. Reflow the same form before proposing a new form.
 
-Bulk defaults cover sample distributions, library totals, stored PCA, correlation, DE, annotated expression, supplied effect intervals, MA, ORA and full GSEA tracks when those inputs exist. Single-cell defaults cover multi-metric cell QC, donor totals, batch and cell-type embeddings, marker means/fractions and feature maps, donor compositions, donor-level DE/intervals/MA/expression and pathways. Missing results remain explicitly missing; optional trajectory, communication or regulatory views require their own frozen results. Cells and donors have distinct roles.
+The coherent study demonstration covers distributions, library/donor totals, stored embeddings, complete DE, annotated expression, supplied intervals, MA, ORA and full GSEA. The chapter catalogue additionally implements design/raw-read/alignment/model checks, multiple contrasts, coexpression, regulation, mixture, splicing/usage, longitudinal/replication/outcome and signature views, plus subclusters, differential abundance, trajectories, velocity, communications, CNV, VDJ, perturbations, spatial and multiome views. Export a working synthetic template for each chosen chapter even before project results arrive. For actual project figures, retain true source/assay and independent-unit requirements; missing analysis results cannot be invented by styling.
 
 Review the actual exported main figure at its declared width, every companion figure and every composition page. Inspect dense labels individually. Check information complementarity, balance, empty space, contrast, label collisions, complete guides and units as well as data preservation. Iterate failed views, bind the new review to final hashes, and mark the set complete only after all requested views pass. Numerical font-size checks alone never approve beauty. A synthetic demonstration tests software and drawing, not the scientific backend.
 

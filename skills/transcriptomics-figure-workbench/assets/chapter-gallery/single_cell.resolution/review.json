@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.resolution",
+  "assay": "single_cell",
+  "title": "Cluster resolution and donor support",
+  "family": "resolution",
+  "required_results": [
+    "resolution_edges",
+    "stability",
+    "donor_support"
+  ],
+  "specific_qc_and_limit": "Freeze cluster lineage and selected resolution; stability does not establish biological identity.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.resolution/input/example.spec.json",
+  "code": "scripts/figure_lineage_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.resolution/example.png",
+    "svg": "single_cell.resolution/example.svg",
+    "pdf": "single_cell.resolution/example.pdf",
+    "tsv": "single_cell.resolution/example.tsv",
+    "spec": "single_cell.resolution/input/example.spec.json",
+    "preview": "single_cell.resolution/preview.jpg"
+  },
+  "sha256": {
+    "png": "ece8d019cd4bfa626f602d75c914fa7ad0f1283085d9bf7bd8ae71ecb727dc48",
+    "svg": "58bb87ef288dc19c9991d86470c52965bb11c27927256e839c9cbd6e9a2efe66",
+    "pdf": "10c8e2a3fddfc743dc965c6fe140aba7b9fc92cbe7a62eb0e4101222a6125fab",
+    "tsv": "73d0456f5ccb26d9d252df50deb6753582f0fe3d4bc921a33f11e88512851ea8",
+    "spec": "b20d59ca2eef13249b64e053bbb7a855001dfbb9d424ca14d9a7e000b8834d78"
+  },
+  "visual_review": {
+    "id": "single_cell.resolution",
+    "png_sha256": "ece8d019cd4bfa626f602d75c914fa7ad0f1283085d9bf7bd8ae71ecb727dc48",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 38,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

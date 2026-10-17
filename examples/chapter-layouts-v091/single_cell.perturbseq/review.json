@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.perturbseq",
+  "title": "Perturbation assignment and response",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.perturbseq/example.png",
+    "svg": "single_cell.perturbseq/example.svg",
+    "pdf": "single_cell.perturbseq/example.pdf",
+    "tsv": "single_cell.perturbseq/example.tsv",
+    "spec": "single_cell.perturbseq/input/example.spec.json",
+    "preview": "single_cell.perturbseq/preview.jpg"
+  },
+  "sha256": {
+    "png": "962757af017459ca0b456b4472bf77081f0c7c30beb1df71ea8f8f14482a0377",
+    "svg": "9067f08c43f9da76c293494126fe41b3d472636e80769d3f46beba94c292a47e",
+    "pdf": "a1ecfa7a28d705800a59bd2492bc02ff1a55258edea745f3bf53ac3b88ee04d7",
+    "tsv": "273e4090aaf5eca8a007cb9d2ee29d69f1de17fa28d2dbf368c692ebdf3f051e",
+    "spec": "40270897767d31417bf4f7edca0b0104f2911204586284c9241b286cfb395c1f"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 159.47166648436652,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 94,
+    "smallest_pt": 20.48639781613039,
+    "p10_pt": 20.48639781613039,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.perturbseq",
+    "png_sha256": "962757af017459ca0b456b4472bf77081f0c7c30beb1df71ea8f8f14482a0377",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

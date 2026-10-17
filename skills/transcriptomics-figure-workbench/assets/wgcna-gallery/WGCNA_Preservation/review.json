@@ -1,0 +1,65 @@
+{
+  "id": "WGCNA_Preservation",
+  "title": "External module preservation · size, Zsummary and medianRank",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "WGCNA_Preservation/example.png",
+    "svg": "WGCNA_Preservation/example.svg",
+    "pdf": "WGCNA_Preservation/example.pdf",
+    "tsv": "WGCNA_Preservation/example.tsv",
+    "spec": "WGCNA_Preservation/input/example.spec.json",
+    "preview": "WGCNA_Preservation/preview.jpg"
+  },
+  "sha256": {
+    "png": "68f5871ff06238194a794f8804c49cb7ea79f590e69b8e5b73be6ea154b85462",
+    "svg": "e22b618a2a554a2a262946363bea83d81f1325de6a857db2569a33297275207b",
+    "pdf": "8dc440987c891f7413052d7aca0676516db3ca0bd8296608e02d416276f66d7e",
+    "tsv": "961bb2f0a6b8985960da98d8f72a96b3c0fabb3cb38fa2f6d826f65e073e0001",
+    "spec": "a4f80d8d9dc806a3a75780a6f47e5976f5f79dfcfb1dfd1720e93e95c7fde6c0"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 254.0,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 12.862204724409448,
+    "p10_pt": 12.862204724409448,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "WGCNA_Preservation",
+    "png_sha256": "68f5871ff06238194a794f8804c49cb7ea79f590e69b8e5b73be6ea154b85462",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "context",
+    "mode",
+    "preservation_guides",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

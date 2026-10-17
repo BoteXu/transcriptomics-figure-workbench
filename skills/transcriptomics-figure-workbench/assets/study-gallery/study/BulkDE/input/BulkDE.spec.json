@@ -1,24 +1,30 @@
 {
   "schema_version": 1,
   "figure_id": "BulkDE",
-  "renderer": "figure_styles.plot_volcano_editorial",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "BulkDE.tsv",
-    "sha256": "45d3ef8800fbcd7311722bbd01fd82927a1dbe43ce2dc987d4c83785157e1cb3",
+    "sha256": "cbc5ab4d4b5631455c5fc93c6e35ba8aae728bb1cf0395d76e2bde5ddeb0ed5a",
     "numeric_columns": [
       "log2FC",
-      "padj"
+      "padj",
+      "strength",
+      "left",
+      "right",
+      "count"
     ]
   },
   "parameters": {
-    "alpha": 0.05,
-    "fc": 1,
+    "mode": "volcano",
+    "title": "Differential response · stacked distributions",
     "labels": [
       "G0009",
       "G0038",
       "G0091",
       "G0123"
-    ]
+    ],
+    "alpha": 0.05,
+    "fc": 1
   },
   "theme": {
     "schema_version": 1,
@@ -90,7 +96,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic gene result",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -108,7 +114,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

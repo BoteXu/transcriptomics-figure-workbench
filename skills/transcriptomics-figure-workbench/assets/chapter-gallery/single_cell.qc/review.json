@@ -1,0 +1,66 @@
+{
+  "id": "single_cell.qc",
+  "assay": "single_cell",
+  "title": "Cell quality across donors",
+  "family": "rich:CellQC",
+  "required_results": [
+    "cell_metrics",
+    "donor_labels"
+  ],
+  "specific_qc_and_limit": "Retain metric units and actual thresholds; cells remain nested within donors.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.qc/input/example.spec.json",
+  "code": "scripts/figure_integrated_views.py and existing attributed drawing modules",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.qc/example.png",
+    "svg": "single_cell.qc/example.svg",
+    "pdf": "single_cell.qc/example.pdf",
+    "tsv": "single_cell.qc/example.tsv",
+    "spec": "single_cell.qc/input/example.spec.json",
+    "preview": "single_cell.qc/preview.jpg"
+  },
+  "sha256": {
+    "png": "7e4d303ca2a7d6495d8eacdde70ff3812506405d1d86ca50bc9baff1cb04efcb",
+    "svg": "26b0b3b37074283a1c7e04b4948b89c9da1792fb4558126b56b13cf7ff888928",
+    "pdf": "7c47b620610ee4bbbae4d678ba0d10829cd81b2dfd933f57179ea5a330486f73",
+    "tsv": "6bd4de4bd92a969e9a16351c3864fa79a27c44ff5626299810ae5e3cf696092c",
+    "spec": "1cfe2b439d0391c103092e5f032c55eb50012fcaf8efc0fc316fed51a65ce577"
+  },
+  "visual_review": {
+    "id": "single_cell.qc",
+    "png_sha256": "7e4d303ca2a7d6495d8eacdde70ff3812506405d1d86ca50bc9baff1cb04efcb",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 228.6,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 70,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,0 +1,70 @@
+{
+  "id": "Method_E43",
+  "title": "Coverage, splice junctions and isoforms",
+  "assay": "bulk",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "Method_E43/example.png",
+    "svg": "Method_E43/example.svg",
+    "pdf": "Method_E43/example.pdf",
+    "tsv": "Method_E43/example.tsv",
+    "spec": "Method_E43/input/example.spec.json",
+    "preview": "Method_E43/preview.jpg"
+  },
+  "sha256": {
+    "png": "61027bd191235a07be818ea73f3883124da8715fac6c476b5e7eb97eb1a0d97e",
+    "svg": "5f6598fd64d428d8ebcdef6eecf17eb8f617fa7a639bbb4cea5384f05516ee09",
+    "pdf": "64c4e3ee9b6b6f2394c1ece291b2edfec3bcae712e31965094fa8ef96ff0171b",
+    "tsv": "b1840fe8e0f7e6b009e841a0c2b5a36f69c1f653287ab2239a91d29375e68dee",
+    "spec": "a161df7e37f67c4a053aac742d2b23013aacdb9ed8b32693f3f0c6a12a63b3b4"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 272.4229375,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 11.99238224938383,
+    "p10_pt": 11.99238224938383,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "Method_E43",
+    "png_sha256": "61027bd191235a07be818ea73f3883124da8715fac6c476b5e7eb97eb1a0d97e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "coordinate_definition",
+    "coverage_definition",
+    "junction_definition",
+    "region",
+    "sample_order",
+    "title",
+    "transcript_order",
+    "width_per_count"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

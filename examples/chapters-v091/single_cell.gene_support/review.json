@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.gene_support",
+  "assay": "single_cell",
+  "title": "Celltype pathway membership and gene evidence",
+  "family": "story:gene_support",
+  "required_results": [
+    "term_overlap",
+    "gene_term_membership",
+    "gene_effects"
+  ],
+  "specific_qc_and_limit": "Preserve celltype-specific tested universe and exact annotation membership.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.gene_support/input/example.spec.json",
+  "code": "scripts/figure_enrichment_story.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.gene_support/example.png",
+    "svg": "single_cell.gene_support/example.svg",
+    "pdf": "single_cell.gene_support/example.pdf",
+    "tsv": "single_cell.gene_support/example.tsv",
+    "spec": "single_cell.gene_support/input/example.spec.json",
+    "preview": "single_cell.gene_support/preview.jpg"
+  },
+  "sha256": {
+    "png": "74322938040f57752737c1a30b442979581b85acb250f5b24b777b0583b83eb6",
+    "svg": "f65d7783f823b4879d22ded81c54960d681bcba34a05d13f822016b46447fc66",
+    "pdf": "970f054a1dc741b0e618d7f4b101ded6cb9ae9d7ff86024e8a11dd76fee654a5",
+    "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
+    "spec": "caec4faae68e74d03f429fbdd5024c546d7cf81ddfacc8299af9180b69deef42"
+  },
+  "visual_review": {
+    "id": "single_cell.gene_support",
+    "png_sha256": "74322938040f57752737c1a30b442979581b85acb250f5b24b777b0583b83eb6",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 325.2340771724834,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 39,
+    "smallest_pt": 10.0450728546117,
+    "p10_pt": 10.0450728546117,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,47 +1,56 @@
 {
-  "form": "effect_intervals",
+  "id": "GeneEffects",
+  "assay": "bulk",
+  "role": "effect_intervals",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "effect_table",
+    "title": "Prespecified effects · estimates and supplied intervals"
+  },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 184.31916400000003,
-    "minimum_required_pt": 7,
-    "essential_text_count": 15,
-    "smallest_pt": 10.253952757728435,
-    "p10_pt": 10.253952757728435,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 20,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "assay": "bulk",
-  "role": "effect_intervals",
-  "id": "GeneEffects",
-  "section": "study",
-  "level": null,
   "assets": {
     "png": "study/GeneEffects/GeneEffects.png",
     "svg": "study/GeneEffects/GeneEffects.svg",
     "pdf": "study/GeneEffects/GeneEffects.pdf",
     "tsv": "study/GeneEffects/GeneEffects.tsv",
-    "spec": "study/GeneEffects/input/GeneEffects.spec.json"
+    "spec": "study/GeneEffects/input/GeneEffects.spec.json",
+    "previous": "study/GeneEffects/previous.png"
   },
   "sha256": {
-    "png": "c0aa78f83bdb0bedd3f07de6c8f373876f00d7d6aa40466bd46fd93e21cdc407",
-    "svg": "35332a0ff1ea667239017ab3fdfe181eba5e660b62e6efc681a70e25746e1bef",
-    "pdf": "0cdb626012d1f42a0bdf134497f4df107d86e466e6e531abcdd45bccf9d9676f",
-    "tsv": "1ab0e1545d710eb9478dfe6e37aa182faa5d9ccf4af9a9b68e980aa898da322b"
+    "png": "3b8ef79a6ac7a05c8c9e9742ab1f8ddfed9c2cf39618db451c237d4cf26291a5",
+    "svg": "5835e20f59d8aba6eb478dd426ac4938a5e21698063bb4cd25252ce4a3bec7e8",
+    "pdf": "77546d1f26afd1e6f6b845bd34348204478caeb53668fe8c62c0b562ff56f3e0",
+    "tsv": "1ab0e1545d710eb9478dfe6e37aa182faa5d9ccf4af9a9b68e980aa898da322b",
+    "previous": "c0aa78f83bdb0bedd3f07de6c8f373876f00d7d6aa40466bd46fd93e21cdc407"
   },
   "visual_review": {
-    "key": "study/GeneEffects",
-    "png_sha256": "c0aa78f83bdb0bedd3f07de6c8f373876f00d7d6aa40466bd46fd93e21cdc407",
-    "status": "SCREEN_REVIEWED",
-    "reviewer": "Codex visual self-review",
+    "id": "GeneEffects",
+    "png_sha256": "3b8ef79a6ac7a05c8c9e9742ab1f8ddfed9c2cf39618db451c237d4cf26291a5",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "scope": "Complete figure and guides visually inspected; actual main-figure PDFs also raster-read at nominal 178 mm / 180 DPI. Screen display is not calibrated print",
-    "target_width_mm": 210,
-    "font_measurement": "MEASUREMENT_PASS",
-    "pdf_readback": false
+    "scientific_acceptance": false
   },
   "scientific_acceptance": false
 }

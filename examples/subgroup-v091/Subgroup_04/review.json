@@ -1,0 +1,70 @@
+{
+  "id": "Subgroup_04",
+  "title": "Endothelial · marker evidence",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "Subgroup_04/example.png",
+    "svg": "Subgroup_04/example.svg",
+    "pdf": "Subgroup_04/example.pdf",
+    "tsv": "Subgroup_04/example.tsv",
+    "spec": "Subgroup_04/input/example.spec.json",
+    "preview": "Subgroup_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "a6d09f1a6f927e7c70795709b7b9abf04ba594ef55413d866aaf24afdf3a02e4",
+    "svg": "9249b002e19f50dbe107752e015639b7975ae5bff74c5d4d4fee07d8b1f6180b",
+    "pdf": "3ad02373d6f92335e6f7dabeb15ff85f6ee444fdd6209774969c2c26df1772de",
+    "tsv": "4c71aa68b01613626c486e0400b656dfb47e396e6bc09bcf440d67dab535301a",
+    "spec": "5a9501dec1daefd56838ec360ffbb2380cbf184bae0c9468b68743c9e2e42aa8"
+  },
+  "readability": {
+    "target_width_mm": 240,
+    "native_width_mm": 260.34999999999997,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 8.757441905127713,
+    "p10_pt": 8.757441905127713,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "Subgroup_04",
+    "png_sha256": "a6d09f1a6f927e7c70795709b7b9abf04ba594ef55413d866aaf24afdf3a02e4",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "detection_definition",
+    "expression_label",
+    "expression_limits",
+    "focus_group",
+    "group_order",
+    "marker_order",
+    "mode",
+    "ncols",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

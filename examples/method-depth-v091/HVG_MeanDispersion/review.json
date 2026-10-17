@@ -1,0 +1,65 @@
+{
+  "id": "HVG_MeanDispersion",
+  "title": "Variable features · supplied mean and normalized dispersion",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "HVG_MeanDispersion/example.png",
+    "svg": "HVG_MeanDispersion/example.svg",
+    "pdf": "HVG_MeanDispersion/example.pdf",
+    "tsv": "HVG_MeanDispersion/example.tsv",
+    "spec": "HVG_MeanDispersion/input/example.spec.json",
+    "preview": "HVG_MeanDispersion/preview.jpg"
+  },
+  "sha256": {
+    "png": "3039583bf3549ef30dbe2d38b120e1df369d3d2f711868c85c949bf9bbac4847",
+    "svg": "1f68f1b11449911b08d59606952f0f72d824552b0073064ac375e3a5f80c99a1",
+    "pdf": "edef2c38a86116fbfa725608b946df164e923e75f9e359862bb554c17db3d5f2",
+    "tsv": "305b8f970b7d18995692f6dff7d5b0cc96f4fe75e0524e8ec4a8a39fa5ac24af",
+    "spec": "7d7b87697dd9522408515d63cf1fdc664e568a8d238c7e97fae43c661566da1d"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 30,
+    "smallest_pt": 21.43700787401575,
+    "p10_pt": 21.43700787401575,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "HVG_MeanDispersion",
+    "png_sha256": "3039583bf3549ef30dbe2d38b120e1df369d3d2f711868c85c949bf9bbac4847",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

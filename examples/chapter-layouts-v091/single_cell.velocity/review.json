@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.velocity",
+  "title": "RNA velocity and phase diagnostics",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.velocity/example.png",
+    "svg": "single_cell.velocity/example.svg",
+    "pdf": "single_cell.velocity/example.pdf",
+    "tsv": "single_cell.velocity/example.tsv",
+    "spec": "single_cell.velocity/input/example.spec.json",
+    "preview": "single_cell.velocity/preview.jpg"
+  },
+  "sha256": {
+    "png": "d8677f6ab62b81cbb3cbfe3dfd7558ad2589652cded44979f2a0dd2a1230c59c",
+    "svg": "3710faf27dedb53b0080fe1d2894b137d9e63c0ce9143dc673784ebc46633eb6",
+    "pdf": "e01a05e67c10608489f5f857d9b404c834f4c7d3cc284c753a51bfe28a7d93a9",
+    "tsv": "c78ec569d0f298de69c80c07f32cb7d3e5cdc2cf6176fc87c5d114e8e083d8b9",
+    "spec": "361fcb35acaab4ada24e25d4374ad825e73e94c58bc22463f8aa5748620ca40b"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.velocity",
+    "png_sha256": "d8677f6ab62b81cbb3cbfe3dfd7558ad2589652cded44979f2a0dd2a1230c59c",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

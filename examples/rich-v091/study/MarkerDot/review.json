@@ -1,0 +1,56 @@
+{
+  "id": "MarkerDot",
+  "assay": "single_cell",
+  "role": "marker_dot",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "marker_dot",
+    "title": "Marker specificity · annotation blocks and detection fractions"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 228.6,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 38,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/MarkerDot/MarkerDot.png",
+    "svg": "study/MarkerDot/MarkerDot.svg",
+    "pdf": "study/MarkerDot/MarkerDot.pdf",
+    "tsv": "study/MarkerDot/MarkerDot.tsv",
+    "spec": "study/MarkerDot/input/MarkerDot.spec.json",
+    "previous": "study/MarkerDot/previous.png"
+  },
+  "sha256": {
+    "png": "c4c8a4a1cab5228046200263b644ee629e7e0f329fb2fcba6233f15b41b40837",
+    "svg": "2f4af3dc9d778df59791156c33f974619f9433c72f25097375f307cf9b163ac4",
+    "pdf": "08efafca282e62addf2175471ba00580528b7360e3555563dfdd1b2c62d63471",
+    "tsv": "084691ca6c6afa2d8deb7bf77264490d31c052f721a3a4e7e32bf815e7216745",
+    "previous": "b44703d5ee7e43732b024f4618f133b7d937e435fcd9d410f1a0c33ecf712c21"
+  },
+  "visual_review": {
+    "id": "MarkerDot",
+    "png_sha256": "c4c8a4a1cab5228046200263b644ee629e7e0f329fb2fcba6233f15b41b40837",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

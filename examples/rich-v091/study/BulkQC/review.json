@@ -1,0 +1,56 @@
+{
+  "id": "BulkQC",
+  "assay": "bulk",
+  "role": "qc_distribution",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "qc",
+    "title": "Sample distributions"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 228.6,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 26,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 8.267716535433072,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/BulkQC/BulkQC.png",
+    "svg": "study/BulkQC/BulkQC.svg",
+    "pdf": "study/BulkQC/BulkQC.pdf",
+    "tsv": "study/BulkQC/BulkQC.tsv",
+    "spec": "study/BulkQC/input/BulkQC.spec.json",
+    "previous": "study/BulkQC/previous.png"
+  },
+  "sha256": {
+    "png": "70da560a946678f608dcf923faa3fc963e5d22e888ec66178be5c5406cab5d37",
+    "svg": "871b0dbe927d72fc2adff088ad40c5d61cf0d1d3a0c72b2192281d1ef5d4a60a",
+    "pdf": "32edd7cc5d0949057339baa0cfb273d1a2e4065804184f70bc885aaff6229912",
+    "tsv": "77ad885abc809af0b238aa11b95f89271b7621c0fddfa90256ec439e566a69ff",
+    "previous": "497c51476464c8ea8f375b46b4d5ea5f0baf52e360a679eae15603ca52f5a1dc"
+  },
+  "visual_review": {
+    "id": "BulkQC",
+    "png_sha256": "70da560a946678f608dcf923faa3fc963e5d22e888ec66178be5c5406cab5d37",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

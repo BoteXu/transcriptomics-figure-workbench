@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.replication",
+  "assay": "single_cell",
+  "title": "Cross-cohort annotation and effect transfer",
+  "family": "replication",
+  "required_results": [
+    "cohort_effects",
+    "transfer_confidence",
+    "coverage"
+  ],
+  "specific_qc_and_limit": "Independent cohorts and matching cell ontology required; transfer confidence is not validation truth.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.replication/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.replication/example.png",
+    "svg": "single_cell.replication/example.svg",
+    "pdf": "single_cell.replication/example.pdf",
+    "tsv": "single_cell.replication/example.tsv",
+    "spec": "single_cell.replication/input/example.spec.json",
+    "preview": "single_cell.replication/preview.jpg"
+  },
+  "sha256": {
+    "png": "01287d9c885f7d2d7c12ff130fb6f74b7c7b4b011dcf4c22b01f3d2f79fe9222",
+    "svg": "355bae65943457ce7e8e13f0f1d192143f09f50ba02eee7c100d8115005dbca1",
+    "pdf": "f9d8a8d0076575a9846bfbb34523ee1b76e7add750c9ee93524f7cc70972928d",
+    "tsv": "3a9959d8f2d5bca1acc665a288a58df2cabb15a06f81448f9e657d90a83d10d2",
+    "spec": "36e97a5da87f136223eeba5feb7f62deaf1c3c22f680fd363151d2aa342f70c3"
+  },
+  "visual_review": {
+    "id": "single_cell.replication",
+    "png_sha256": "01287d9c885f7d2d7c12ff130fb6f74b7c7b4b011dcf4c22b01f3d2f79fe9222",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

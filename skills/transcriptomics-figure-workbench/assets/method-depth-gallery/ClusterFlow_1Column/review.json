@@ -1,0 +1,66 @@
+{
+  "id": "ClusterFlow_1Column",
+  "title": "Resolution changes · cell flows and cluster sizes",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "ClusterFlow_1Column/example.png",
+    "svg": "ClusterFlow_1Column/example.svg",
+    "pdf": "ClusterFlow_1Column/example.pdf",
+    "tsv": "ClusterFlow_1Column/example.tsv",
+    "spec": "ClusterFlow_1Column/input/example.spec.json",
+    "preview": "ClusterFlow_1Column/preview.jpg"
+  },
+  "sha256": {
+    "png": "106bbf36416d650cbb5eecaa9fa05f9667cdf47b323fc5c1baec7eb1a42b57a1",
+    "svg": "b4975dfc4cc0804ea31b1afa8204149ffea3fce74399af7da2edc9014310ca66",
+    "pdf": "a9853dd5de25d432c4474d5dabc74eaee116d09ffe0c175f74f3dbbc894b5ad2",
+    "tsv": "73d0456f5ccb26d9d252df50deb6753582f0fe3d4bc921a33f11e88512851ea8",
+    "spec": "b6fe0ec4e32697372f36b4b0808c61acb9f5bdb9b6a84e618a59b0aba3de8d64"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 216.04287499999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 37,
+    "smallest_pt": 15.121998353336116,
+    "p10_pt": 15.121998353336116,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "ClusterFlow_1Column",
+    "png_sha256": "106bbf36416d650cbb5eecaa9fa05f9667cdf47b323fc5c1baec7eb1a42b57a1",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "definition",
+    "level_order",
+    "mode",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

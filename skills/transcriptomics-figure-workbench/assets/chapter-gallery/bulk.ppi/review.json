@@ -1,0 +1,66 @@
+{
+  "id": "bulk.ppi",
+  "assay": "bulk",
+  "title": "Protein-interaction evidence",
+  "family": "network",
+  "required_results": [
+    "fixed_nodes",
+    "fixed_edges",
+    "edge_weights"
+  ],
+  "specific_qc_and_limit": "Record evidence class, full selected edges and species; graph proximity is not mechanism.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.ppi/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.ppi/example.png",
+    "svg": "bulk.ppi/example.svg",
+    "pdf": "bulk.ppi/example.pdf",
+    "tsv": "bulk.ppi/example.tsv",
+    "spec": "bulk.ppi/input/example.spec.json",
+    "preview": "bulk.ppi/preview.jpg"
+  },
+  "sha256": {
+    "png": "136dbe0a878dd515a64a870b98b16f4386821e99868d13cb85a2a915c259f2a6",
+    "svg": "5fe554d01d71c252c007aada276e454c9d98370838f9aa3cf3cc304e6bf9f917",
+    "pdf": "3dbabcaf1f0f657754c5958c1fc4f18c51095517867ceb4a19fceaaa5300e487",
+    "tsv": "d3b262669620bf9aaa68650982f4ce02790e5308da9b1857c44f6b3f640cebfb",
+    "spec": "3984fe23cbe65330938406890608e5d8789c40e0f3bd2fda1170e153aa416c9b"
+  },
+  "visual_review": {
+    "id": "bulk.ppi",
+    "png_sha256": "136dbe0a878dd515a64a870b98b16f4386821e99868d13cb85a2a915c259f2a6",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 39,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

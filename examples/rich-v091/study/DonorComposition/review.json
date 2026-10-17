@@ -1,0 +1,60 @@
+{
+  "id": "DonorComposition",
+  "assay": "single_cell",
+  "role": "donor_composition",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_styles.plot_composition_panels",
+  "parameters": {
+    "palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "unit_label": "synthetic donor",
+    "ncols": 3
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 217.33916399999993,
+    "minimum_required_pt": 7,
+    "essential_text_count": 37,
+    "smallest_pt": 7.729853971463701,
+    "p10_pt": 8.696085717896663,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/DonorComposition/DonorComposition.png",
+    "svg": "study/DonorComposition/DonorComposition.svg",
+    "pdf": "study/DonorComposition/DonorComposition.pdf",
+    "tsv": "study/DonorComposition/DonorComposition.tsv",
+    "spec": "study/DonorComposition/input/DonorComposition.spec.json",
+    "previous": "study/DonorComposition/previous.png"
+  },
+  "sha256": {
+    "png": "5ced9b8b4c87c21f788f78133a86389c8b9e59377583f856f12633f2602d833e",
+    "svg": "bc46a7b1146b9a46cd97dd0add03f787cce99d728d597534ddd5c3ab1cc2839f",
+    "pdf": "f585f3e54d75928b07596c8ebf3af52e4cd335b97c826363fefbe50578fe88e8",
+    "tsv": "580351bb8a1332b9af951769e9d26e83e50b51540b2853c7ed853bf13ffc63b3",
+    "previous": "5ced9b8b4c87c21f788f78133a86389c8b9e59377583f856f12633f2602d833e"
+  },
+  "visual_review": {
+    "id": "DonorComposition",
+    "png_sha256": "5ced9b8b4c87c21f788f78133a86389c8b9e59377583f856f12633f2602d833e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,0 +1,66 @@
+{
+  "id": "hdWGCNA_ModuleActivity",
+  "title": "Module activity · identical cells, coordinates and scale",
+  "assay": "single_cell",
+  "assays": [
+    "bulk",
+    "single_cell"
+  ],
+  "assets": {
+    "png": "hdWGCNA_ModuleActivity/example.png",
+    "svg": "hdWGCNA_ModuleActivity/example.svg",
+    "pdf": "hdWGCNA_ModuleActivity/example.pdf",
+    "tsv": "hdWGCNA_ModuleActivity/example.tsv",
+    "spec": "hdWGCNA_ModuleActivity/input/example.spec.json",
+    "preview": "hdWGCNA_ModuleActivity/preview.jpg"
+  },
+  "sha256": {
+    "png": "36c042a8d3d7511fb83fe149a8c59a20b1b85458c811dd2b61f05fd0b4890457",
+    "svg": "b925f9db934dd719c20bfd7467759d96e0cdd02917488c19785b160340117894",
+    "pdf": "727d6d40b50fb809249eaa413e755bd591be1b569b68b9ea76bd3db352765bd5",
+    "tsv": "38824737eb1fb7c6d3cf5a017dbb1835fc8c47352a3a5b90abd4275ec9a8636e",
+    "spec": "37d76bc1eaaaf9bc35a9c790721238012a5fae45bc89de4db6560b552351267e"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 177.79999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 13,
+    "smallest_pt": 18.374578177727784,
+    "p10_pt": 18.374578177727784,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "hdWGCNA_ModuleActivity",
+    "png_sha256": "36c042a8d3d7511fb83fe149a8c59a20b1b85458c811dd2b61f05fd0b4890457",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "context",
+    "mode",
+    "module_order",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://edo98811.github.io/WGCNA_official_documentation/",
+    "https://smorabit.github.io/hdWGCNA/articles/network_visualizations.html"
+  ]
+}

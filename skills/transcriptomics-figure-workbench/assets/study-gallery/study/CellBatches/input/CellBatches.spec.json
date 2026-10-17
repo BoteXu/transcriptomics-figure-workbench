@@ -1,22 +1,18 @@
 {
   "schema_version": 1,
   "figure_id": "CellBatches",
-  "renderer": "figure_core.plot_embedding",
+  "renderer": "figure_integrated_views.plot_integrated_view",
   "input": {
     "path": "CellBatches.tsv",
-    "sha256": "94178c76ba3c65cc2cc0b77b964abc7f60e2b57cab48e3afbcc1b297eb046a9d",
+    "sha256": "122f44e8f3fb4444d7bf255879002cb71958bda31e78ecb9627a62d06440a63a",
     "numeric_columns": [
       "x",
       "y"
     ]
   },
   "parameters": {
-    "palette": {
-      "Batch 1": "#218C8D",
-      "Batch 2": "#D8795B",
-      "Batch 3": "#5676A5"
-    },
-    "axis_prefix": "Stored mock UMAP"
+    "mode": "batch_facets",
+    "title": "Batch coverage · identical embedding coordinates"
   },
   "theme": {
     "schema_version": 1,
@@ -88,7 +84,7 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen study fixture v0.9; illustrative numbers, not an analysis result",
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis",
     "input_unit": "Synthetic cell",
     "experimental_unit": "Synthetic donor; cells nested within donors",
     "contrast": "Treated versus Control; purely illustrative",
@@ -106,7 +102,7 @@
   "export": {
     "raster_dpi": 300,
     "target_width_mm": 210,
-    "minimum_text_pt": 7,
+    "minimum_text_pt": 7.5,
     "readability_policy": "block"
   }
 }

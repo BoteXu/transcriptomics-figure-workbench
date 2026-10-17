@@ -22,6 +22,8 @@ def source_identity():
               if '__pycache__' not in p.parts}
     for name in ['renderer-registry.json','renderer-adapters.json','reference-palettes.json','method-entries.json']:
         result['references/'+name] = digest(REFERENCES/name)
+    if (REFERENCES/'transcriptomic-chapters.json').is_file():result['references/transcriptomic-chapters.json']=digest(REFERENCES/'transcriptomic-chapters.json')
+    if (REFERENCES/'analysis-views.json').is_file():result['references/analysis-views.json']=digest(REFERENCES/'analysis-views.json')
     return result
 
 

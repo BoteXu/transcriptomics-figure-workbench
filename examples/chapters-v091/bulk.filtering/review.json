@@ -1,0 +1,65 @@
+{
+  "id": "bulk.filtering",
+  "assay": "bulk",
+  "title": "Detection and filtering sensitivity",
+  "family": "filtering",
+  "required_results": [
+    "threshold_profile",
+    "retained_feature_counts"
+  ],
+  "specific_qc_and_limit": "Freeze tested universe and rule; do not choose thresholds for more discoveries.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.filtering/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.filtering/example.png",
+    "svg": "bulk.filtering/example.svg",
+    "pdf": "bulk.filtering/example.pdf",
+    "tsv": "bulk.filtering/example.tsv",
+    "spec": "bulk.filtering/input/example.spec.json",
+    "preview": "bulk.filtering/preview.jpg"
+  },
+  "sha256": {
+    "png": "7e9e5953e98d55b6b9b485456c391dd5450d0987d3520a9f10eb585bd14b5d38",
+    "svg": "3ed23c7b403c8ee2029e24fd8b4594d536a28f085bc88b24c2390799105e0da6",
+    "pdf": "733488cd0fb34af2a444745d453d159a20f69a43cd686167132d940476deda33",
+    "tsv": "2f804a1bfb14affc23fa5f64318bc9f067a322e6c4ae1444cf02f841abc5462b",
+    "spec": "a577723b637b0319180ad76a88a491cd1d3c503557314bc7e954feee5c1dc17e"
+  },
+  "visual_review": {
+    "id": "bulk.filtering",
+    "png_sha256": "7e9e5953e98d55b6b9b485456c391dd5450d0987d3520a9f10eb585bd14b5d38",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 44,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

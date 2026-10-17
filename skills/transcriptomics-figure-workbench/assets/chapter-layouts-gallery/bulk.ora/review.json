@@ -1,0 +1,72 @@
+{
+  "id": "bulk.ora",
+  "title": "ORA themes, ratios and supporting genes",
+  "assay": "bulk",
+  "assays": [
+    "bulk"
+  ],
+  "assets": {
+    "png": "bulk.ora/example.png",
+    "svg": "bulk.ora/example.svg",
+    "pdf": "bulk.ora/example.pdf",
+    "tsv": "bulk.ora/example.tsv",
+    "spec": "bulk.ora/input/example.spec.json",
+    "preview": "bulk.ora/preview.jpg"
+  },
+  "sha256": {
+    "png": "cea3988365e5ff7502302b36e3ade994d62df3acc6a25d6fd2173b103be5bc07",
+    "svg": "19d561b7441f902bbcad1d1857125fd49b97071d974a535c5b033e05c12d7928",
+    "pdf": "516122dfdad2a5bc8fdff2e5de61789b50690a46de117d9b40f6df930418696d",
+    "tsv": "8a0ebb72c4aa5128cdf182fd2104760ceff8edab756a5b106cc80d15bd489f76",
+    "spec": "fdbbaf08ac6f9c90e11836a8c315548188fcc5095f81670b7bdf8b004a16d609"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 76,
+    "smallest_pt": 16.07775590551181,
+    "p10_pt": 16.07775590551181,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "bulk.ora",
+    "png_sha256": "cea3988365e5ff7502302b36e3ade994d62df3acc6a25d6fd2173b103be5bc07",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "columns",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "nes_limits",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "BulkPCA",
+  "assay": "bulk",
+  "role": "sample_embedding",
+  "source": "Fictional frozen study; no scientific analysis",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "parameters": {
+    "mode": "pca",
+    "title": "Sample structure · dispersion and marginal proportions",
+    "axis_labels": [
+      "PC1 (38.4%)",
+      "PC2 (17.6%)"
+    ],
+    "ellipse_definition": "Supplied 95% reference ellipses; illustrative dispersion, not mean confidence or a group test"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 203.2,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 45,
+    "smallest_pt": 8.267716535433072,
+    "p10_pt": 9.301181102362206,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "assets": {
+    "png": "study/BulkPCA/BulkPCA.png",
+    "svg": "study/BulkPCA/BulkPCA.svg",
+    "pdf": "study/BulkPCA/BulkPCA.pdf",
+    "tsv": "study/BulkPCA/BulkPCA.tsv",
+    "spec": "study/BulkPCA/input/BulkPCA.spec.json",
+    "previous": "study/BulkPCA/previous.png"
+  },
+  "sha256": {
+    "png": "4b273b875234d4d5cb2b5bfdd0eb3859bddf38594dfe0c6355dbb9e35e84cf06",
+    "svg": "3277971a6ba8b3c5549809b2e2f37085173faa69015f63b6119ae159c6ca7cd2",
+    "pdf": "8d3eaad957fe4e3559561772b923ebcbb46347698e708cbc3b1dbe8e8cb0d1d7",
+    "tsv": "e6f183c4ccd627829ea44c67dc23a977c0989a5345cea6e4064b98ae936e9c65",
+    "previous": "11e9d44997beebf33d402ec2db6bb3fb9cde5f6fba7c00235bf277f8e2a49e95"
+  },
+  "visual_review": {
+    "id": "BulkPCA",
+    "png_sha256": "4b273b875234d4d5cb2b5bfdd0eb3859bddf38594dfe0c6355dbb9e35e84cf06",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false
+}

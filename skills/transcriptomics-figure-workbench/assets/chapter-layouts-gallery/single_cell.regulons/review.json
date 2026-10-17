@@ -1,0 +1,65 @@
+{
+  "id": "single_cell.regulons",
+  "title": "Regulon activity and target specificity",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "single_cell.regulons/example.png",
+    "svg": "single_cell.regulons/example.svg",
+    "pdf": "single_cell.regulons/example.pdf",
+    "tsv": "single_cell.regulons/example.tsv",
+    "spec": "single_cell.regulons/input/example.spec.json",
+    "preview": "single_cell.regulons/preview.jpg"
+  },
+  "sha256": {
+    "png": "79bf9adc3c45da086bcc531bf01340d4138675a51c20f1c95c6c291bdbabb52e",
+    "svg": "7d3e0a8ddd959c3ef7b11fd0fa02a3ecd2038e1083d45b827d1b3f2a0f8dc70e",
+    "pdf": "6e5a169ec8b8e21f78dfa4fbe93314411ea9791f14d4831a8e14ce7858ee8497",
+    "tsv": "3201e6fb956fa30efae2e15b63f71f73f435e5f786c843419d7ca9ddef2739c2",
+    "spec": "7da172966ac8786a7267aca861092a2783d90cb4bc22336ead38ade04696e6de"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 158.003875,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 48,
+    "smallest_pt": 20.67670808706432,
+    "p10_pt": 20.67670808706432,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "single_cell.regulons",
+    "png_sha256": "79bf9adc3c45da086bcc531bf01340d4138675a51c20f1c95c6c291bdbabb52e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

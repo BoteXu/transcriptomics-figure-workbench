@@ -1,0 +1,65 @@
+{
+  "id": "Resolution_DonorSupport",
+  "title": "Cluster support by donor",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "Resolution_DonorSupport/example.png",
+    "svg": "Resolution_DonorSupport/example.svg",
+    "pdf": "Resolution_DonorSupport/example.pdf",
+    "tsv": "Resolution_DonorSupport/example.tsv",
+    "spec": "Resolution_DonorSupport/input/example.spec.json",
+    "preview": "Resolution_DonorSupport/preview.jpg"
+  },
+  "sha256": {
+    "png": "427c5fdb061723c8a8910fc9a50db5ae6da5ae262b4b35ff05887a5e74f506b2",
+    "svg": "11d47c2d86516b59d2b42f08d6c31495da7219bf291fc5b587af9dcae47a43c5",
+    "pdf": "081894dd297783ccbf67ae368f00c9de810a8307f95465d074d8475590f3df02",
+    "tsv": "984f7920dffba158dd2ca6a39958f07ba258aea73b721b27a7da0ca4c07308f4",
+    "spec": "050d9a2444c21b94fdc6f2b8daed54ec7158ee512f86e84a18f7e2d5fa57f044"
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 37,
+    "smallest_pt": 21.43700787401575,
+    "p10_pt": 21.43700787401575,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "Resolution_DonorSupport",
+    "png_sha256": "427c5fdb061723c8a8910fc9a50db5ae6da5ae262b4b35ff05887a5e74f506b2",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "columns",
+    "panels",
+    "scope_note",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

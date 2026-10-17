@@ -1,0 +1,66 @@
+{
+  "id": "bulk.splicing",
+  "assay": "bulk",
+  "title": "Alternative splicing and junction support",
+  "family": "splicing",
+  "required_results": [
+    "junction_coverage",
+    "delta_PSI",
+    "isoform_usage"
+  ],
+  "specific_qc_and_limit": "Freeze event coordinates/build and donor support; gene DE and splicing are distinct tests.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.splicing/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.splicing/example.png",
+    "svg": "bulk.splicing/example.svg",
+    "pdf": "bulk.splicing/example.pdf",
+    "tsv": "bulk.splicing/example.tsv",
+    "spec": "bulk.splicing/input/example.spec.json",
+    "preview": "bulk.splicing/preview.jpg"
+  },
+  "sha256": {
+    "png": "9c7e6a6e6ddcabcc89537741f883d537d2c218fb8739cc3103521671aa9774db",
+    "svg": "3b9854ef1e759cedabd99ce3631f7f68f2022904dcc55b551837acfc8cecc862",
+    "pdf": "06aa7a51d5c0e236c12e0f6a84fa9204a340cebd69fa74741bfaabbc8c64c748",
+    "tsv": "4b1fe86bbdd22c37b9023e2a946bfa06096cd631a4c2742c227e172ac120927d",
+    "spec": "7d8b5234d45aa1538b2ac9845f526f12c6bb99681430601566714b7a64ec84c8"
+  },
+  "visual_review": {
+    "id": "bulk.splicing",
+    "png_sha256": "9c7e6a6e6ddcabcc89537741f883d537d2c218fb8739cc3103521671aa9774db",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 55,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

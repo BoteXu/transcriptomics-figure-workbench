@@ -1,0 +1,65 @@
+{
+  "id": "bulk.design",
+  "assay": "bulk",
+  "title": "Design and independent units",
+  "family": "design",
+  "required_results": [
+    "sample_covariates",
+    "library_counts"
+  ],
+  "specific_qc_and_limit": "Review design rank, pairing and confounding; technical libraries do not increase biological n.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.design/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.design/example.png",
+    "svg": "bulk.design/example.svg",
+    "pdf": "bulk.design/example.pdf",
+    "tsv": "bulk.design/example.tsv",
+    "spec": "bulk.design/input/example.spec.json",
+    "preview": "bulk.design/preview.jpg"
+  },
+  "sha256": {
+    "png": "7434773f31bf1541ea6e961eb894a0dec0b9dabcf43668c7a85678d6eb3c2bd0",
+    "svg": "34e770c66f8795491f6642a9367843ee36115bac3a734020755a3545661ab265",
+    "pdf": "304dc39beeb1a0109e7d114517b00a52849185363d2d0e184b228c328edbeabf",
+    "tsv": "6046c140188a8fec068a54992fbbf4c570add0b74b0b0b996de8ca83cdfb6c2e",
+    "spec": "bb4cb8bdf9821c378ac187b8375928ce10be181bf594b16ec93ac192b688a769"
+  },
+  "visual_review": {
+    "id": "bulk.design",
+    "png_sha256": "7434773f31bf1541ea6e961eb894a0dec0b9dabcf43668c7a85678d6eb3c2bd0",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 58,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

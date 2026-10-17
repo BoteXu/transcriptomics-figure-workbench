@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "figure_id": "Subgroup_04",
+  "renderer": "figure_annotation_views.plot_annotation_evidence",
+  "input": {
+    "path": "example.tsv",
+    "sha256": "064f978c0c1fc5f290bb2413a591eb64e50fffdbd5c1ae9b8bbf7af6d3f06c8b",
+    "numeric_columns": [
+      "x",
+      "y",
+      "value",
+      "fraction"
+    ]
+  },
+  "parameters": {
+    "mode": "subgroup",
+    "title": "Endothelial · marker evidence",
+    "expression_label": "log1p normalized expression",
+    "detection_definition": "Fraction of all displayed cells in each identity with supplied expression > 0",
+    "expression_limits": [
+      0,
+      5
+    ],
+    "group_order": [
+      "B cells",
+      "T cells",
+      "Stromal",
+      "Endothelial",
+      "Myeloid"
+    ],
+    "marker_order": [
+      "PECAM1",
+      "VWF",
+      "KDR",
+      "EMCN"
+    ],
+    "focus_group": "Endothelial",
+    "ncols": "auto"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-transcriptomic-study",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Control": 0,
+      "Treated": 1,
+      "T cells": 0,
+      "B cells": 1,
+      "Myeloid": 2,
+      "Stromal": 3,
+      "Endothelial": 4,
+      "Batch 1": 0,
+      "Batch 2": 1,
+      "Batch 3": 2,
+      "Interferon response": 0,
+      "Extracellular matrix": 1,
+      "Mitochondrial function": 2,
+      "RNA processing": 3,
+      "Cell cycle": 4,
+      "Inflammatory response": 5
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Fictional per-subgroup marker display fixture v0.9.1",
+    "input_unit": "Synthetic cell",
+    "experimental_unit": "Synthetic donor; cells nested within donors",
+    "contrast": "Treated versus Control; purely illustrative",
+    "denominator": "All 900 supplied cell coordinates; five fictional annotations",
+    "model": "No statistical model fitted; every estimate and uncertainty channel is an illustrative frozen input",
+    "limits": "Declared complete display scope; data have no biomedical validity",
+    "filtering": "Declared fixture selection only; no research filtering",
+    "uncertainty": "Only explicitly supplied illustrative intervals; no new uncertainty estimation",
+    "interpretation_limit": "Illustrative cell-level expression and separately supplied summary means/fractions; not validated markers, inference or donor-level evidence",
+    "synthetic": true
+  },
+  "appearance": {
+    "preset": "paper",
+    "label_pt": 10,
+    "tick_pt": 9.5,
+    "title_pt": 11,
+    "note_pt": 10
+  },
+  "export": {
+    "raster_dpi": 300,
+    "target_width_mm": 240,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "block"
+  }
+}

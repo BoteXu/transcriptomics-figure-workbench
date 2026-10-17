@@ -1,0 +1,70 @@
+{
+  "id": "Subgroup_05",
+  "title": "Myeloid · marker evidence",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "Subgroup_05/example.png",
+    "svg": "Subgroup_05/example.svg",
+    "pdf": "Subgroup_05/example.pdf",
+    "tsv": "Subgroup_05/example.tsv",
+    "spec": "Subgroup_05/input/example.spec.json",
+    "preview": "Subgroup_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "50a7aa6ee838ce8f9d6b91c0b15cc58bad7ea2f893292023f40bdef612591391",
+    "svg": "e7f8266d4ecb920c93542baf24f18d5d660951a96ace8699cdc5090c09f66fb9",
+    "pdf": "ba77f07aa9af5eab02e4040ffa569d26e6a331447de7ab8ad6e5d91a567b4109",
+    "tsv": "0243b546b1670c3ed9b7ee0e16b705955c6bce81f1ec93db2633d1b3d96e886c",
+    "spec": "3f7c92893225380a78b363564e2992fbac6f28f8ca62b1f41431e6890f1948ae"
+  },
+  "readability": {
+    "target_width_mm": 240,
+    "native_width_mm": 260.34999999999997,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 8.757441905127713,
+    "p10_pt": 8.757441905127713,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "Subgroup_05",
+    "png_sha256": "50a7aa6ee838ce8f9d6b91c0b15cc58bad7ea2f893292023f40bdef612591391",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "detection_definition",
+    "expression_label",
+    "expression_limits",
+    "focus_group",
+    "group_order",
+    "marker_order",
+    "mode",
+    "ncols",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

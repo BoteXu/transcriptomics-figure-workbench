@@ -1,0 +1,65 @@
+{
+  "id": "bulk.dtu",
+  "assay": "bulk",
+  "title": "Differential transcript usage",
+  "family": "usage",
+  "required_results": [
+    "transcript_fractions",
+    "usage_intervals"
+  ],
+  "specific_qc_and_limit": "Require transcript-version mapping and parent-gene denominator; transcript fractions are compositional.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/bulk.dtu/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html",
+    "https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "bulk.dtu/example.png",
+    "svg": "bulk.dtu/example.svg",
+    "pdf": "bulk.dtu/example.pdf",
+    "tsv": "bulk.dtu/example.tsv",
+    "spec": "bulk.dtu/input/example.spec.json",
+    "preview": "bulk.dtu/preview.jpg"
+  },
+  "sha256": {
+    "png": "b4a326bd5fb7012cd4c6f2c16250cbf5b7e171691571041e291f2538b81292d4",
+    "svg": "9ba7f0adec4e565e994e41a299accdced587c185c54e6b6d2eb946f8bc246c4f",
+    "pdf": "b7ad4ad35f2eb5100743a05ced2002f776ffb3ae9d8eadd670c8f378742cf426",
+    "tsv": "ebf82c2231573511515050193c620cfa9f8e54a115e13e10a037ba7c056c3ce7",
+    "spec": "b290071dbeae8903698978555b7b0ab2f513fcd35a07d279542a7a5cc6ad89d9"
+  },
+  "visual_review": {
+    "id": "bulk.dtu",
+    "png_sha256": "b4a326bd5fb7012cd4c6f2c16250cbf5b7e171691571041e291f2538b81292d4",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}

@@ -1,0 +1,70 @@
+{
+  "id": "Layout_08Markers_3Columns",
+  "title": "B cells · marker evidence",
+  "assay": "single_cell",
+  "assays": [
+    "single_cell"
+  ],
+  "assets": {
+    "png": "Layout_08Markers_3Columns/example.png",
+    "svg": "Layout_08Markers_3Columns/example.svg",
+    "pdf": "Layout_08Markers_3Columns/example.pdf",
+    "tsv": "Layout_08Markers_3Columns/example.tsv",
+    "spec": "Layout_08Markers_3Columns/input/example.spec.json",
+    "preview": "Layout_08Markers_3Columns/preview.jpg"
+  },
+  "sha256": {
+    "png": "fad6cf3aec02a8a0145082c985f22a1f641f7c24e21847077f9cdbe300c7f8c4",
+    "svg": "b462777fbbdd4335fc9c6cbf31c9e142b0ff9f6c953980e45741d6ebeb2e0b86",
+    "pdf": "2157474fdc04f6782434e7710096987f07fedc0d5daed82990bd06714701d262",
+    "tsv": "3a55ce14b97ec130a491687e2f4fe2c47108107f064aa984dd9037652981f5fd",
+    "spec": "d0622730f4d927b01453d78429ad0daeaf91f6e22e94d52e722d3a40d361cf4e"
+  },
+  "readability": {
+    "target_width_mm": 260,
+    "native_width_mm": 260.34999999999997,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 9.487228730555023,
+    "p10_pt": 9.487228730555023,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "visual_review": {
+    "id": "Layout_08Markers_3Columns",
+    "png_sha256": "fad6cf3aec02a8a0145082c985f22a1f641f7c24e21847077f9cdbe300c7f8c4",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "detection_definition",
+    "expression_label",
+    "expression_limits",
+    "focus_group",
+    "group_order",
+    "marker_order",
+    "mode",
+    "ncols",
+    "title"
+  ],
+  "specific_qc_and_limit": "Fictional supplied display inputs; actual source, assay, method and independent-unit QC required. No backend executed.",
+  "sources": [
+    "https://lazappi.github.io/clustree/articles/clustree.html",
+    "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
+    "https://github.com/guigolab/ggsashimi"
+  ]
+}

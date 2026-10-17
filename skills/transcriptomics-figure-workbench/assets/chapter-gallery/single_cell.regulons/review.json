@@ -1,0 +1,67 @@
+{
+  "id": "single_cell.regulons",
+  "assay": "single_cell",
+  "title": "Regulon activity and target specificity",
+  "family": "regulation",
+  "required_results": [
+    "regulon_scores",
+    "specificity",
+    "target_edges"
+  ],
+  "specific_qc_and_limit": "SCENIC/AUCell motif/score evidence is not direct binding or causal regulation.",
+  "plot_capability": "IMPLEMENTED_WITH_EXECUTABLE_EXAMPLE",
+  "example": "assets/chapter-gallery/single_cell.regulons/input/example.spec.json",
+  "code": "scripts/figure_chapter_views.py",
+  "sources": [
+    "https://junjunlab.github.io/scRNAtoolVis-manual/jjdotplot.html",
+    "https://pwwang.github.io/scplotter/",
+    "https://www.sc-best-practices.org/"
+  ],
+  "analysis_execution": "Existing server workflow; separately validated actual backend",
+  "selection": "Explicit scientific question and assay prerequisites; conditional chapters are never automatically imposed",
+  "assets": {
+    "png": "single_cell.regulons/example.png",
+    "svg": "single_cell.regulons/example.svg",
+    "pdf": "single_cell.regulons/example.pdf",
+    "tsv": "single_cell.regulons/example.tsv",
+    "spec": "single_cell.regulons/input/example.spec.json",
+    "preview": "single_cell.regulons/preview.jpg"
+  },
+  "sha256": {
+    "png": "5f0b8742b134d2a11ef9e2c5c4f2fb27723cd6df04dc59803d5b7a06c7cdd48e",
+    "svg": "d69f817fc140f458613de382bd75738258ba815284da74f959166da4c7a1a46c",
+    "pdf": "b65524f4e6b1b57038cea959912baf4ae72d5dff3fbdaf7f5fb754a59132a0e8",
+    "tsv": "34487f0a734f3befb8f05a81ecaafa0d919e39154f56236f8d45466bc12be9d8",
+    "spec": "c46116c54f54c97735b95fca91355cca7e355180d56cc8062d3a05ea0bb12fdd"
+  },
+  "visual_review": {
+    "id": "single_cell.regulons",
+    "png_sha256": "5f0b8742b134d2a11ef9e2c5c4f2fb27723cd6df04dc59803d5b7a06c7cdd48e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 76,
+    "smallest_pt": 10.718503937007876,
+    "p10_pt": 10.718503937007876,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false
+}
