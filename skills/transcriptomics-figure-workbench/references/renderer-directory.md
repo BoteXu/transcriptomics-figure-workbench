@@ -6,6 +6,7 @@ Discovery does not import plotting dependencies. Source availability is not runt
 
 | Callable | Fixed aliases | Table entry | Required parameters |
 |---|---|---|---|
+| figure_analysis_evidence.plot_analysis_evidence | canonical ID | yes | panels, title, context, definition |
 | figure_analysis_results.plot_splice_tracks | splice_tracks | yes | sample_order, transcript_order, region, coordinate_definition, coverage_definition, junction_definition |
 | figure_analysis_results.plot_variant_posteriors | variant_posteriors | yes | signal_order, region, coordinate_definition, posterior_definition |
 | figure_analysis_results.plot_contribution_waterfall | contribution_waterfall | yes | component_order, baseline, total, quantity_definition, contribution_definition |
@@ -138,6 +139,19 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_styles.plot_composition_panels | canonical ID | yes | palette, unit_label |
 | figure_styles.plot_sample_distribution | canonical ID | yes | palette, y_label |
 | figure_wgcna_views.plot_wgcna_view | canonical ID | yes | mode, title, context |
+
+## figure_analysis_evidence.plot_analysis_evidence
+
+Render complementary typed result views with explicit method context and layout.
+
+| Parameter | Required | Default |
+|---|---|---|
+| panels | true | — |
+| title | true | — |
+| context | true | — |
+| definition | true | — |
+| columns | false | "auto" |
+| rows | false | null |
 
 ## figure_analysis_results.plot_splice_tracks
 

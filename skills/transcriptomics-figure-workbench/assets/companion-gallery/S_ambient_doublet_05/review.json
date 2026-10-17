@@ -1,0 +1,94 @@
+{
+  "id": "S_ambient_doublet_05",
+  "title": "Biological-response sensitivity to correction",
+  "chapters": [
+    "single_cell.ambient_doublet"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 230,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Biological-response sensitivity to correction",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Biological-response sensitivity to correction; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Biological-response sensitivity to correction",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.ambient_doublet supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Biological-response sensitivity to correction; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Biological-response sensitivity to correction; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_ambient_doublet_05/example.png",
+    "svg": "S_ambient_doublet_05/example.svg",
+    "pdf": "S_ambient_doublet_05/example.pdf",
+    "tsv": "S_ambient_doublet_05/example.tsv",
+    "spec": "S_ambient_doublet_05/input/example.spec.json",
+    "preview": "S_ambient_doublet_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "8ac7b69cb3681586fe7c50494d4bf62a2dea45b1a3b750e921dadc4bd30361f0",
+    "svg": "42780703c7f1b83b269d24228db168f3e6e8db25cbee6521040068aced1f3ae9",
+    "pdf": "d830c8a28a22e2967040148ef0bffbbbf9ef9b67eb4917802e16b996fff6802c",
+    "tsv": "f9b017310d83a2e9de21ed7e4919813fc661b464364e681217ae7078681c7bcd",
+    "spec": "eea6dd408b8df1e7971c55cd4ad7f758a621f9d46fa58ee97a41a355d8b25bd6"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_ambient_doublet_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "8ac7b69cb3681586fe7c50494d4bf62a2dea45b1a3b750e921dadc4bd30361f0",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected donor QC clouds, paired integration trajectories, complete counts and composition, correction evidence matrix, effect intervals and custom longer pages. Supplied summaries stay distinct from nested cells; text and complete rows readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

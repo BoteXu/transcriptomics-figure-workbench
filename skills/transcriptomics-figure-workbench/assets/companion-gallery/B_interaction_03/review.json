@@ -1,0 +1,90 @@
+{
+  "id": "B_interaction_03",
+  "title": "Gene-wise interaction contrasts",
+  "chapters": [
+    "bulk.interaction"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 58,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Gene-wise interaction contrasts",
+        "x_label": "Supplied log2 interaction contrast · interval",
+        "y_label": "",
+        "definition": "For each gene, the treatment-versus-control contrast at day 14 minus the contrast at day 0; supplied from the upstream time model.",
+        "factorial_gene_effect": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Gene-wise interaction contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.interaction supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "For each gene, the treatment-versus-control contrast at day 14 minus the contrast at day 0; supplied from the upstream time model.",
+    "columns": "auto"
+  },
+  "definition": "For each gene, the treatment-versus-control contrast at day 14 minus the contrast at day 0; supplied from the upstream time model.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_interaction_03/example.png",
+    "svg": "B_interaction_03/example.svg",
+    "pdf": "B_interaction_03/example.pdf",
+    "tsv": "B_interaction_03/example.tsv",
+    "spec": "B_interaction_03/input/example.spec.json",
+    "preview": "B_interaction_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "321a45b1fa86046f0c77dde9229e79f3c36d0adba21f2025fe7746b56ca08778",
+    "svg": "a433acf0c2c06e836bc133ee985c99e510a04df9e2a191c4afb31235b232f103",
+    "pdf": "c63cb4d7cdda4aca9ede4b185e815ecbe41f66bbe002583375e91e94dc12edd3",
+    "tsv": "ea54bc35c0c71d28cf9c057cae828ac54ce3102a88be82c03f8666c9759148e2",
+    "spec": "74c30b8f05b70f7e5c96e0683cacc481467cfe895ceb94d8631c98020c3b75ab"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 27,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_interaction_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "321a45b1fa86046f0c77dde9229e79f3c36d0adba21f2025fe7746b56ca08778",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual revised PNGs individually inspected: reduced subset n is visible in each numeric lane, factorial donor cells and condition-time profiles are explicit, and the STAT1 interaction agrees with the frozen prediction endpoints. Single, one-column and three-column layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

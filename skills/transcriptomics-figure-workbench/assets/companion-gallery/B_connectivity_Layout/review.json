@@ -1,0 +1,118 @@
+{
+  "id": "B_connectivity_Layout",
+  "title": "Bulk · connectivity — complementary evidence",
+  "chapters": [
+    "bulk.connectivity"
+  ],
+  "stage": "layout",
+  "family": "fraction,effects,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 189,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Query-signature coverage",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Query-signature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Connection scores with supplied uncertainty",
+        "x_label": "Supplied connection score · interval",
+        "y_label": "",
+        "definition": "Connection scores with supplied uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Signature reversal in independent contexts",
+        "x_label": "Connection-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Signature reversal in independent contexts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · connectivity — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.connectivity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Query-signature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Connection scores with supplied uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope. | Signature reversal in independent contexts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Query-signature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Connection scores with supplied uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope. | Signature reversal in independent contexts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_connectivity_Layout/example.png",
+    "svg": "B_connectivity_Layout/example.svg",
+    "pdf": "B_connectivity_Layout/example.pdf",
+    "tsv": "B_connectivity_Layout/example.tsv",
+    "spec": "B_connectivity_Layout/input/example.spec.json",
+    "preview": "B_connectivity_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "c9ebddddc3f00a79c17b74cfb5831817d176058c74fe9e2bebbf315f3dc34081",
+    "svg": "31772f13e2973d41639fc90eccfaf4aced82c2e16a75929082981ba46fe93fac",
+    "pdf": "f076d4ca4059d17f27c5ce32b6825f16e06b6d53d03c678a54877c75e81da415",
+    "tsv": "2d6416fd10f8aa6cd2e3bb1a7055d7054f5e84898a47393a24019832f5163d1c",
+    "spec": "0ecef94dfc31003757223461245f84de6243325a23c894fded6d6734c795b11b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 118,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_connectivity_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "c9ebddddc3f00a79c17b74cfb5831817d176058c74fe9e2bebbf315f3dc34081",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected final PNGs: complete selected PPI rectangle and effect rows remain readable; connectivity support, dose profiles and replication rows have visible channels; noncoding mapping, effect, donor distributions, evidence classes and cohort rows have clear labels. No clipping or collisions in single or expanded layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

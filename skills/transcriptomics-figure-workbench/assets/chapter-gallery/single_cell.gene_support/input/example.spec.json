@@ -4,7 +4,7 @@
   "renderer": "figure_enrichment_story.plot_enrichment_story",
   "input": {
     "path": "example.tsv",
-    "sha256": "455e3a98cfc247b1639582bddf6e70a00fdb39410aeed0e9cd5faddacf1a94ca",
+    "sha256": "c6d709d938f2291cf3cf319e17477c62a1d7bd33d988b0e37d7c5c5f05e857a6",
     "numeric_columns": [
       "padj",
       "count",
@@ -16,7 +16,7 @@
   },
   "parameters": {
     "mode": "gene_support",
-    "title": "Celltype pathway membership and gene evidence",
+    "title": "T-cell pathway-supporting gene responses",
     "background_definition": "Fictional 200-gene query / 1200 tested genes",
     "tested_size": 1200,
     "query_size": 200,
@@ -160,10 +160,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional story:gene_support display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

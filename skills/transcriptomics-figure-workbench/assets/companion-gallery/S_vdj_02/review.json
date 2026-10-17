@@ -1,0 +1,83 @@
+{
+  "id": "S_vdj_02",
+  "title": "Frozen clone-size distributions",
+  "chapters": [
+    "single_cell.vdj"
+  ],
+  "stage": "interpretation",
+  "family": "bins",
+  "variant": false,
+  "large_data": false,
+  "order": 377,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "bins",
+        "title": "Frozen clone-size distributions",
+        "x_label": "Clonotype size",
+        "y_label": "Supplied count",
+        "definition": "Frozen clone-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p1"
+      }
+    ],
+    "title": "Frozen clone-size distributions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.vdj supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Frozen clone-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Frozen clone-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_vdj_02/example.png",
+    "svg": "S_vdj_02/example.svg",
+    "pdf": "S_vdj_02/example.pdf",
+    "tsv": "S_vdj_02/example.tsv",
+    "spec": "S_vdj_02/input/example.spec.json",
+    "preview": "S_vdj_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "edc4262913853a85378fd96b6e14848666fc5a5aa3ef70fa049f0e9d966e8c5b",
+    "svg": "cc9bd7a0a0a67a8c6a307a1d2089de757e183c4f9bb3226716f8536fa728139a",
+    "pdf": "33b788b0e4de92bab0a3254c496dd04ae7e3e36ff761e90e591be8274926bc44",
+    "tsv": "71fe3c630255478794bd5fa30a3068610f7a0f8fee640e7f3f6c6dbac2867faf",
+    "spec": "b160a4c50426cc1dbd823c0bff0437886647004223c8e8cc9ae4a59dea9ebb38"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 20,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_vdj_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "edc4262913853a85378fd96b6e14848666fc5a5aa3ef70fa049f0e9d966e8c5b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: explicit CNV units and supplied contrasts, complete clone/VDJ categories, frozen size bins and compartment sharing are legible; complete denominators and effect bounds are retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

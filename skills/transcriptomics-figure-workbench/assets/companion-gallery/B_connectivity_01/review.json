@@ -1,0 +1,84 @@
+{
+  "id": "B_connectivity_01",
+  "title": "Query-signature coverage",
+  "chapters": [
+    "bulk.connectivity"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 183,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Query-signature coverage",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Query-signature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Query-signature coverage",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.connectivity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Query-signature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Query-signature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_connectivity_01/example.png",
+    "svg": "B_connectivity_01/example.svg",
+    "pdf": "B_connectivity_01/example.pdf",
+    "tsv": "B_connectivity_01/example.tsv",
+    "spec": "B_connectivity_01/input/example.spec.json",
+    "preview": "B_connectivity_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "b2090c071174e2e684447485f30d4a7d4ec0ddaee678700cc11f4ae4946afae7",
+    "svg": "87bfe5a4ba0a49e90cc77a3dfda6999bf37bcfd81f671dd98060340f4f491708",
+    "pdf": "73e8d631adc0b0626ceda76b9a12ed942fd90d30c882ae8e9114b6ef268aee47",
+    "tsv": "15f36eac1b1ce76d859ca102619c24af6c48e35b6426426a0cb3b3be9e5015da",
+    "spec": "000a2a9ef2e8b33571f7c6943f71385304bd7c637d0720935dc7edcfc563bd84"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_connectivity_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b2090c071174e2e684447485f30d4a7d4ec0ddaee678700cc11f4ae4946afae7",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected final PNGs: complete selected PPI rectangle and effect rows remain readable; connectivity support, dose profiles and replication rows have visible channels; noncoding mapping, effect, donor distributions, evidence classes and cohort rows have clear labels. No clipping or collisions in single or expanded layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

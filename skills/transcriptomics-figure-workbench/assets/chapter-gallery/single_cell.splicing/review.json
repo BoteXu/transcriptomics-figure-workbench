@@ -28,27 +28,19 @@
     "preview": "single_cell.splicing/preview.jpg"
   },
   "sha256": {
-    "png": "f745a94fabebe462efdb7ddf55e1a8b81de331765daeba3bc2b4091918098fcf",
-    "svg": "cf3971e478fcda527cce728ba2ef79c7346b29c3ebf20b31808527f724f52030",
-    "pdf": "2791b6c139eff28cd984a29ae9a7203d6f2641c49959146767b966ff592ebb04",
+    "png": "0ab72ce39d415826c8a2d85bdef85d00a6b62a9ffd5aad95b98464d2f95b4b0d",
+    "svg": "e5c477aa67a443cea9d49b6381a929c2eb131b404980fb8b631e64179fa2ed1a",
+    "pdf": "7024f814c1a929fc4a2570d5f46a988a7ca8206cdf09cf034fb839f8ff6a75cc",
     "tsv": "4b1fe86bbdd22c37b9023e2a946bfa06096cd631a4c2742c227e172ac120927d",
-    "spec": "8c28034a8a10a4c1cc627fb6b82b28484adef84edd7cd9bcee850b72d528a730"
+    "spec": "6327d73ac18bccc91d92821f86441ec3dfc1bef49ec16aa5980c26ae69ded2a1"
   },
   "visual_review": {
-    "id": "single_cell.splicing",
-    "png_sha256": "f745a94fabebe462efdb7ddf55e1a8b81de331765daeba3bc2b4091918098fcf",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.splicing.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0ab72ce39d415826c8a2d85bdef85d00a6b62a9ffd5aad95b98464d2f95b4b0d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
@@ -63,5 +55,6 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

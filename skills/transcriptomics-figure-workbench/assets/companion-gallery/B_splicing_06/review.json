@@ -1,0 +1,94 @@
+{
+  "id": "B_splicing_06",
+  "title": "Splicing-event replication",
+  "chapters": [
+    "bulk.splicing"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 143,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Splicing-event replication",
+        "x_label": "Supplied delta PSI · interval",
+        "y_label": "",
+        "definition": "Splicing-event replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Splicing-event replication",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.splicing supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Splicing-event replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Splicing-event replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_splicing_06/example.png",
+    "svg": "B_splicing_06/example.svg",
+    "pdf": "B_splicing_06/example.pdf",
+    "tsv": "B_splicing_06/example.tsv",
+    "spec": "B_splicing_06/input/example.spec.json",
+    "preview": "B_splicing_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "ecb85d37f0942fde8533bab1c0f0a235189f3778767290d780a8c1cca2beff6f",
+    "svg": "d5129baa00296218b4af2b2803beefe2e3679a3a98c72aa3919c3ff01fd719ac",
+    "pdf": "5864dda48a915eed522e2da33cefd9818af22d3a5947e9d0426b960b91ea69fa",
+    "tsv": "cb5657dc8eb88a235629be6433a727804c9337d9c2ec1af07763d060b5908888",
+    "spec": "45aec8a1671799002c6171c59fa07e89cf2c96e5ae982b3501d5611dd3dca0ca"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_splicing_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ecb85d37f0942fde8533bab1c0f0a235189f3778767290d780a8c1cca2beff6f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Nine actual PNGs viewed individually: reconstruction diagnostics and reference-choice estimates; physical exon/junction lane, donor PSI and delta-PSI results, event classes, independent replication and adaptive reading/combined pages. Supplied arc counts and all donor points remain readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

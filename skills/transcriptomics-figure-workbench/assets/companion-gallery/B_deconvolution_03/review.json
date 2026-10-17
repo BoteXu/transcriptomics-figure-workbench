@@ -1,0 +1,89 @@
+{
+  "id": "B_deconvolution_03",
+  "title": "Donor-level compositional contrasts",
+  "chapters": [
+    "bulk.deconvolution"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 133,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-level compositional contrasts",
+        "x_label": "ln(Treated fraction / Control fraction) · 95% interval",
+        "y_label": "",
+        "definition": "Each identity compares its donor-level fraction in Treated versus Control on the natural-log ratio scale; no within-composition reference category.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-level compositional contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.deconvolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Each identity compares its donor-level fraction in Treated versus Control on the natural-log ratio scale; no within-composition reference category.",
+    "columns": "auto"
+  },
+  "definition": "Each identity compares its donor-level fraction in Treated versus Control on the natural-log ratio scale; no within-composition reference category.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_deconvolution_03/example.png",
+    "svg": "B_deconvolution_03/example.svg",
+    "pdf": "B_deconvolution_03/example.pdf",
+    "tsv": "B_deconvolution_03/example.tsv",
+    "spec": "B_deconvolution_03/input/example.spec.json",
+    "preview": "B_deconvolution_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "25f41adc287a5d03e77437007af900c810817de579ac71aef86f89d7bba6d805",
+    "svg": "ae714858a8991e2088facbd4c226d569faf0150182a5056f0caec295a66f2f00",
+    "pdf": "74ef91d75b4036f06a3d8033f23ff891b3e74939210c4f98394b35bdfacd9433",
+    "tsv": "6a4523331ebd4869e946f76d27777dcef1edc344bf6dab4bec851ee0d35add44",
+    "spec": "a62979bbc50fb0a0603dc87773b1785221ddcb39099763879614a342db6b4d4e"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_deconvolution_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "25f41adc287a5d03e77437007af900c810817de579ac71aef86f89d7bba6d805",
+    "review_method": "Actual individual PNG inspection",
+    "notes": "Individually viewed complete image: titles and aligned estimate tables do not collide; named scientific scales, complete supplied channels and n labels remain readable. Tall one-column page is a reading layout, not a journal-column claim. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

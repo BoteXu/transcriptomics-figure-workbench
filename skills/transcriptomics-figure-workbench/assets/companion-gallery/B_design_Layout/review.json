@@ -1,0 +1,116 @@
+{
+  "id": "B_design_Layout",
+  "title": "Bulk · design — complementary evidence",
+  "chapters": [
+    "bulk.design"
+  ],
+  "stage": "layout",
+  "family": "fraction,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 6,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Biological units and library contributions",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Biological units and library contributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Covariates across independent donors",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Covariates across independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Declared design code",
+        "categorical_design": true,
+        "limits": [
+          0,
+          3
+        ],
+        "integer": true,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Prespecified design sensitivity",
+        "x_label": "STAT1 log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified design sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · design — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.design supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Biological units and library contributions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Covariates across independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified design sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Biological units and library contributions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Covariates across independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified design sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_design_Layout/example.png",
+    "svg": "B_design_Layout/example.svg",
+    "pdf": "B_design_Layout/example.pdf",
+    "tsv": "B_design_Layout/example.tsv",
+    "spec": "B_design_Layout/input/example.spec.json",
+    "preview": "B_design_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "b65dd7cf016b3a90bfba5e592967f8ca7ee6099cbb4419203491d3f21c6ee044",
+    "svg": "9ffba35717a10fa65ddcbb98400297318fb1c395bff8cbe895f463435ed4ff3f",
+    "pdf": "740a9fd0220f059d54d6c117aff2877a44e0e2e0f16c630478bd1d297b4b4050",
+    "tsv": "e14f1457e26d8f04f819b68ef60a6aaf02bd6fe6f9f7ef71c4526a3772881c2a",
+    "spec": "969b7cb6861adcfc593bdf97e876095aed50960cfbc2105f6aea883a4695af94"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 91,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_design_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b65dd7cf016b3a90bfba5e592967f8ca7ee6099cbb4419203491d3f21c6ee044",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual revised PNGs individually inspected: reduced subset n is visible in each numeric lane, factorial donor cells and condition-time profiles are explicit, and the STAT1 interaction agrees with the frozen prediction endpoints. Single, one-column and three-column layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

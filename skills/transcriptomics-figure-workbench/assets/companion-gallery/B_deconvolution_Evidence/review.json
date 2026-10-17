@@ -1,0 +1,115 @@
+{
+  "id": "B_deconvolution_Evidence",
+  "title": "Bulk · deconvolution — complementary evidence",
+  "chapters": [
+    "bulk.deconvolution"
+  ],
+  "stage": "interpretation",
+  "family": "fraction,fraction,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 136,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Reference coverage within cell identities",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Reference coverage within cell identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "fraction",
+        "title": "Complete donor mixture estimates",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete donor mixture estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Reference-choice sensitivity of mixture effects",
+        "x_label": "ln(Treated fraction / Control fraction) · supplied 95% interval",
+        "y_label": "",
+        "definition": "Reference-choice sensitivity of mixture effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · deconvolution — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.deconvolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reference coverage within cell identities; all quantities are supplied frozen channels, with explicitly declared units and scope. | Complete donor mixture estimates; all quantities are supplied frozen channels, with explicitly declared units and scope. | Reference-choice sensitivity of mixture effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Reference coverage within cell identities; all quantities are supplied frozen channels, with explicitly declared units and scope. | Complete donor mixture estimates; all quantities are supplied frozen channels, with explicitly declared units and scope. | Reference-choice sensitivity of mixture effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_deconvolution_Evidence/example.png",
+    "svg": "B_deconvolution_Evidence/example.svg",
+    "pdf": "B_deconvolution_Evidence/example.pdf",
+    "tsv": "B_deconvolution_Evidence/example.tsv",
+    "spec": "B_deconvolution_Evidence/input/example.spec.json",
+    "preview": "B_deconvolution_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "839fd22e6077e9293ef3a0cd21cf32c14c8c44697dbfec9afe68a87361050131",
+    "svg": "940cb4d55e0df61bc91409010f14cae4e50cdc9bd865124e396b08ae5f1966b2",
+    "pdf": "41c9dd53f817c2ddecc79c403b414592031ba32519b7365837482780b9b0ff64",
+    "tsv": "13b9013040b584e113d4bb92ef042cd9a50a0c47eaf2067a0ed4cea0c4fcc786",
+    "spec": "eae18b780454e9b58c6eeac1a7b3a2ed6ceaf3e587b6896e97266eefa018e1cc"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 104,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_deconvolution_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "839fd22e6077e9293ef3a0cd21cf32c14c8c44697dbfec9afe68a87361050131",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs inspected: full six-term overlap labels and counts readable; all 12 mixture categories uniquely coloured with complete legend; reading layout complete; droplet axes explicitly log10 UMI and gene counts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

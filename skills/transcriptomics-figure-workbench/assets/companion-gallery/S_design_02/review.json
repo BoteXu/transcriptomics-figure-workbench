@@ -1,0 +1,89 @@
+{
+  "id": "S_design_02",
+  "title": "Donor, condition and capture design",
+  "chapters": [
+    "single_cell.design"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 205,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Donor, condition and capture design",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Donor, condition and capture design; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Declared design code",
+        "categorical_design": true,
+        "limits": [
+          0,
+          3
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Donor, condition and capture design",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.design supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor, condition and capture design; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor, condition and capture design; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_design_02/example.png",
+    "svg": "S_design_02/example.svg",
+    "pdf": "S_design_02/example.pdf",
+    "tsv": "S_design_02/example.tsv",
+    "spec": "S_design_02/input/example.spec.json",
+    "preview": "S_design_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "f012303357eca12b1945ed948b90eff07c7ddf84ba17239110f07237c99f9e4a",
+    "svg": "f197d9be5cd6ac0dd136dd41e7e23e91183961cfc5f794e150386b10683eceb1",
+    "pdf": "b4d313ddc7aaf3c8742706dbca047d9cce48b2603c270fa7be3bf0bc526325ac",
+    "tsv": "92e843c1ebdf1ad134eb516fc3fe798204954f1b5b5793486ed96bd0642144d1",
+    "spec": "a7bbbd222890f98a66773478aa0bf15fb7d82ef5eaf6680f9a494dfae3cc5eba"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_design_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f012303357eca12b1945ed948b90eff07c7ddf84ba17239110f07237c99f9e4a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually inspected: aligned full-support matrices, evidence indicators, junction tracks and independent-library intervals; one-column enlarged reading example retains complete labels and rows. Donor capture design and cell-support matrices are legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

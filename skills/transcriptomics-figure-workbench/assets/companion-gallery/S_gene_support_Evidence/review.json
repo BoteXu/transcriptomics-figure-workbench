@@ -1,0 +1,124 @@
+{
+  "id": "S_gene_support_Evidence",
+  "title": "Single cell · gene_support — complementary evidence",
+  "chapters": [
+    "single_cell.gene_support"
+  ],
+  "stage": "interpretation",
+  "family": "matrix,effects,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 319,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Pathway membership of selected supporting genes",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Pathway membership of selected supporting genes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit membership",
+        "binary": true,
+        "gene_membership": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Supporting-gene donor-level effects",
+        "x_label": "Donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Supporting-gene donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Supporting-gene external replication",
+        "x_label": "Donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Supporting-gene external replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · gene_support — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Pathway membership of selected supporting genes; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supporting-gene donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supporting-gene external replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Pathway membership of selected supporting genes; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supporting-gene donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supporting-gene external replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_gene_support_Evidence/example.png",
+    "svg": "S_gene_support_Evidence/example.svg",
+    "pdf": "S_gene_support_Evidence/example.pdf",
+    "tsv": "S_gene_support_Evidence/example.tsv",
+    "spec": "S_gene_support_Evidence/input/example.spec.json",
+    "preview": "S_gene_support_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "f59f8fee4f20024f6fcbfc39d25e88cc7df19cc81f63a73f06d825c974a23c73",
+    "svg": "895e8659fdc219f0f8ede3a79ab79b2126651dc0a819441066b378e8ed9b2005",
+    "pdf": "dbb664f38a558cc3c156173fb3b04c838b184b226d7db69b2d2bd5279c16f70f",
+    "tsv": "2a1156526c52b1bafd38a04a97f0fbcfed6a2500b78125c73e2a36b446e2adc5",
+    "spec": "06d09686c2e25f9bc954fbdc4c56702d95d9ee8396ad2c2a1e4cb0f3af860763"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 120,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_gene_support_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f59f8fee4f20024f6fcbfc39d25e88cc7df19cc81f63a73f06d825c974a23c73",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually viewed: pathway NES, complete membership and gene support retain long labels; independent replication rows have separate aligned numeric columns. Tall one-column page is a reading export with declared physical width, not a journal-column claim.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

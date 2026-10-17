@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "334b641024e1659c66a00a0086de88eb06cf2a9c1e8cb244fd7c1e29f3b1280e",
+    "sha256": "e6b2483ccb2b550ad725384665c1d25cf5dc34c66b0850ff48caa2bb3644c0c9",
     "numeric_columns": [
       "value",
       "x",
@@ -16,16 +16,16 @@
     "panels": [
       {
         "kind": "stack",
-        "title": "Within-donor composition",
-        "x_label": "Supplied fraction",
+        "title": "STAT1 within-gene transcript usage",
+        "x_label": "Fraction of quantified STAT1 transcripts",
         "y_label": "",
         "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
         "id": "p1"
       },
       {
         "kind": "interval",
-        "title": "Prespecified compositional comparisons",
-        "x_label": "Supplied log-ratio effect and 95% interval",
+        "title": "STAT1 transcript-usage contrasts",
+        "x_label": "ln(Treated fraction / Control fraction)\nSupplied 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -162,10 +162,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional usage display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

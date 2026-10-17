@@ -27,40 +27,33 @@
     "preview": "bulk.gsva/preview.jpg"
   },
   "sha256": {
-    "png": "8021a07a766f481532abe962e531e84c83d6ce3921f53174aa8ddc43af65ab2b",
-    "svg": "b439c91b407c5d9bce60aada49f5ce23c8b7caec15f3ebea9adc19c02cf68428",
-    "pdf": "57a1b222ac8ecc66ddcee128936263c973b1b51f8198d374b7fc7b1bd19594c4",
-    "tsv": "3415564324f0a66174226e8562cfdcbaf2188a2e6c15f257a09908997dab7fb2",
-    "spec": "c340271c0df53693d0ac0898a0990fc78eb2a965a2c26e4f95108e6460ad39da"
+    "png": "fb835ba7bb955038d27e00ef026208817979dfa6cc0f16c779cad029a3c900fd",
+    "svg": "5fbd56410848ad5ad90f282716fe9b8c42d76b43cba5029a4ec3664889796647",
+    "pdf": "358bca72cfd6b593938b8c6d369b7770bf9c1ce27323dd6b0aec9d027d179ba9",
+    "tsv": "af824fd50c08d6ee0643e35def9794813b96581928734ef9de649b4c4d8e2ded",
+    "spec": "64b3bfc8408d93b5c9b46d915cec160541d73d6e68d5b674eb9798dcedd59994"
   },
   "visual_review": {
-    "id": "bulk.gsva",
-    "png_sha256": "8021a07a766f481532abe962e531e84c83d6ce3921f53174aa8ddc43af65ab2b",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "bulk.gsva.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "fb835ba7bb955038d27e00ef026208817979dfa6cc0f16c779cad029a3c900fd",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 297,
-    "native_width_mm": 304.79999999999995,
+    "native_width_mm": 309.0920038766047,
     "minimum_required_pt": 7.5,
     "essential_text_count": 77,
-    "smallest_pt": 10.718503937007876,
-    "p10_pt": 10.718503937007876,
+    "smallest_pt": 10.569668445076461,
+    "p10_pt": 10.569668445076461,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

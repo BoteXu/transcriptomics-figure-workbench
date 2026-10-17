@@ -1,0 +1,88 @@
+{
+  "id": "S_annotation_04",
+  "title": "Prediction uncertainty and review decisions",
+  "chapters": [
+    "single_cell.annotation"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 257,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Prediction uncertainty and review decisions",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Prediction uncertainty and review decisions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied confidence",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Prediction uncertainty and review decisions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.annotation supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prediction uncertainty and review decisions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prediction uncertainty and review decisions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_annotation_04/example.png",
+    "svg": "S_annotation_04/example.svg",
+    "pdf": "S_annotation_04/example.pdf",
+    "tsv": "S_annotation_04/example.tsv",
+    "spec": "S_annotation_04/input/example.spec.json",
+    "preview": "S_annotation_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "abac3eaf59fdf54614ed8e1a67e94863a353b713d318f134b22d20f34a4b053c",
+    "svg": "16011d6d506757a7958f8a806285273177afc2372b0e915e0eec371dd0ff824f",
+    "pdf": "261374de4a35b9c1d013be3694fa54240e659918a458f09f3c614f67801bb106",
+    "tsv": "6a715120da981ae7e29ea80d957bd37bfa374b721cc532860c6063b879220da3",
+    "spec": "ec76a198b63cb729d1f0caf6240116443153f50143cbf50fc3871e76607e757f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.87272222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 15.110609443077012,
+    "p10_pt": 15.110609443077012,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_annotation_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "abac3eaf59fdf54614ed8e1a67e94863a353b713d318f134b22d20f34a4b053c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed custom resolution page with expanded rows and cohort effects; annotation coverage, donor confidence raincloud and prediction-review matrix retain all channels. Clear hierarchy, no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,120 @@
+{
+  "id": "S_pathways_Layout",
+  "title": "Single cell · pathways — complementary evidence",
+  "chapters": [
+    "single_cell.pathways"
+  ],
+  "stage": "layout",
+  "family": "fraction,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 313,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Measured gene-set support in T-cell aggregates",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Measured gene-set support in T-cell aggregates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Celltype-specific normalized enrichment",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Celltype-specific normalized enrichment; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied NES",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Pathway replication in independent donors",
+        "x_label": "Donor pathway-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Pathway replication in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · pathways — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.pathways supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Measured gene-set support in T-cell aggregates; all quantities are supplied frozen channels, with explicitly declared units and scope. | Celltype-specific normalized enrichment; all quantities are supplied frozen channels, with explicitly declared units and scope. | Pathway replication in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Measured gene-set support in T-cell aggregates; all quantities are supplied frozen channels, with explicitly declared units and scope. | Celltype-specific normalized enrichment; all quantities are supplied frozen channels, with explicitly declared units and scope. | Pathway replication in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_pathways_Layout/example.png",
+    "svg": "S_pathways_Layout/example.svg",
+    "pdf": "S_pathways_Layout/example.pdf",
+    "tsv": "S_pathways_Layout/example.tsv",
+    "spec": "S_pathways_Layout/input/example.spec.json",
+    "preview": "S_pathways_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "66aba79b4f5aabcf173e0c99bff180ab91054edd90106e07eb1bd40a81c7ffb9",
+    "svg": "e47bd26cebcf86d44a59f005537e399b55df02f1a19abd7f0023458a310ee345",
+    "pdf": "786afbcf46919f65a981786b72fd8d4789a359cc345ddc80736fb10d792dc22f",
+    "tsv": "09be0ae26f458f4e8a371e2a94b6700c5cabd9bacd6006b69bd36d66a5a721b3",
+    "spec": "1794d724e02179e0af67066e878024d47bbe47465698659de5265b0995ad3d09"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 164,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_pathways_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "66aba79b4f5aabcf173e0c99bff180ab91054edd90106e07eb1bd40a81c7ffb9",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually viewed: pathway NES, complete membership and gene support retain long labels; independent replication rows have separate aligned numeric columns. Tall one-column page is a reading export with declared physical width, not a journal-column claim.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

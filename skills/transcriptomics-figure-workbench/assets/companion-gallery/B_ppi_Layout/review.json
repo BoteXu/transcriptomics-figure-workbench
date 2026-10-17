@@ -1,0 +1,124 @@
+{
+  "id": "B_ppi_Layout",
+  "title": "Bulk · ppi — complementary evidence",
+  "chapters": [
+    "bulk.ppi"
+  ],
+  "stage": "layout",
+  "family": "matrix,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 182,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Interaction evidence by source",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Interaction evidence by source; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied evidence score",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Complete selected interaction weights",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Complete selected interaction weights; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied PPI weight",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Network evidence across independent sources",
+        "x_label": "Node-expression log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Network evidence across independent sources; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · ppi — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.ppi supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Interaction evidence by source; all quantities are supplied frozen channels, with explicitly declared units and scope. | Complete selected interaction weights; all quantities are supplied frozen channels, with explicitly declared units and scope. | Network evidence across independent sources; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Interaction evidence by source; all quantities are supplied frozen channels, with explicitly declared units and scope. | Complete selected interaction weights; all quantities are supplied frozen channels, with explicitly declared units and scope. | Network evidence across independent sources; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ppi_Layout/example.png",
+    "svg": "B_ppi_Layout/example.svg",
+    "pdf": "B_ppi_Layout/example.pdf",
+    "tsv": "B_ppi_Layout/example.tsv",
+    "spec": "B_ppi_Layout/input/example.spec.json",
+    "preview": "B_ppi_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "3b321ec665f4f1cb9eaf3e3e1f8bcf487c86e1bbdb413b9a5dbcb69930ca0788",
+    "svg": "205e11b1ab662bb7aea5576dbe6261a7bdd6c771bfc03aa935a6b8a48ecc00ec",
+    "pdf": "e463fac840c7a1dd559cad829f22f7a0cf2b9ff20aa81f727321f97edd00032d",
+    "tsv": "76d6f2e2abd22332960c8f84b1850648975d5a5027d804d96531885e1610d7e9",
+    "spec": "4e94599fd8818264e79efd4b899e384a630efa34bfbbbb4b1621dcb62ef97aeb"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 192,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ppi_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3b321ec665f4f1cb9eaf3e3e1f8bcf487c86e1bbdb413b9a5dbcb69930ca0788",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected final PNGs: complete selected PPI rectangle and effect rows remain readable; connectivity support, dose profiles and replication rows have visible channels; noncoding mapping, effect, donor distributions, evidence classes and cohort rows have clear labels. No clipping or collisions in single or expanded layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

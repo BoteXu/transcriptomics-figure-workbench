@@ -1,0 +1,89 @@
+{
+  "id": "S_trajectory_04",
+  "title": "Branch-specific donor-level effects",
+  "chapters": [
+    "single_cell.trajectory"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 331,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Branch-specific donor-level effects",
+        "x_label": "Branch-associated log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Branch-specific donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Branch-specific donor-level effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.trajectory supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Branch-specific donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Branch-specific donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_trajectory_04/example.png",
+    "svg": "S_trajectory_04/example.svg",
+    "pdf": "S_trajectory_04/example.pdf",
+    "tsv": "S_trajectory_04/example.tsv",
+    "spec": "S_trajectory_04/input/example.spec.json",
+    "preview": "S_trajectory_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "cea7ea687b4c36a80e3c5a954eceaedf7af3a1d29f8f727ad302397c89561233",
+    "svg": "be8c97ff05e6fba37b6514d6993fe931b0d0d7c3ff966641751d4d174176d809",
+    "pdf": "6356b6d71c7b5eedcc8f711fdda75fbd95a0dad4d1ee9030b7e44a07c877a58d",
+    "tsv": "6a37116d2eef71614625d72c09bd51554c121144e8ee4816c7a8e6d4026e2ca6",
+    "spec": "00e9faf1e8ccee044052931c4c65adcaf632c8d7839a52cbf44c661e5b31ad5d"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_trajectory_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "cea7ea687b4c36a80e3c5a954eceaedf7af3a1d29f8f727ad302397c89561233",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs inspected individually: branch occupancy preserves independent donor points, explicit branch profiles and ordered bins are legible, and sensitivity estimates and supplied bounds align in individual and combined pages.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

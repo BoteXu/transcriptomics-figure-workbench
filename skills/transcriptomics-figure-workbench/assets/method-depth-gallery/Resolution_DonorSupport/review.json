@@ -14,17 +14,17 @@
     "preview": "Resolution_DonorSupport/preview.jpg"
   },
   "sha256": {
-    "png": "427c5fdb061723c8a8910fc9a50db5ae6da5ae262b4b35ff05887a5e74f506b2",
-    "svg": "11d47c2d86516b59d2b42f08d6c31495da7219bf291fc5b587af9dcae47a43c5",
-    "pdf": "081894dd297783ccbf67ae368f00c9de810a8307f95465d074d8475590f3df02",
-    "tsv": "984f7920dffba158dd2ca6a39958f07ba258aea73b721b27a7da0ca4c07308f4",
-    "spec": "050d9a2444c21b94fdc6f2b8daed54ec7158ee512f86e84a18f7e2d5fa57f044"
+    "png": "e96051bbbc6c2d51ff20a43d4c35dd99677f3e47cdb159a55b9c4bf454422958",
+    "svg": "4c480bca06d99696fe12aac0928cb2faaf9f7a4c940a98d88c9f2cb961a5ee73",
+    "pdf": "82548fffe69471fb90d6f9125cbbe1b647a83a3f58bd56ed806229e44c319973",
+    "tsv": "f8bdcc1979fa8f68f997771c1ea76f4a800fc96d7c4b14d57b9ad05732b16f4b",
+    "spec": "d8014910b51371fb6eaeb6303ce46147848645770d4a223f1a12cf3ab92114cf"
   },
   "readability": {
     "target_width_mm": 297,
     "native_width_mm": 152.39999999999998,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 37,
+    "essential_text_count": 35,
     "smallest_pt": 21.43700787401575,
     "p10_pt": 21.43700787401575,
     "below_threshold": [],
@@ -34,19 +34,11 @@
   },
   "visual_review": {
     "id": "Resolution_DonorSupport",
-    "png_sha256": "427c5fdb061723c8a8910fc9a50db5ae6da5ae262b4b35ff05887a5e74f506b2",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e96051bbbc6c2d51ff20a43d4c35dd99677f3e47cdb159a55b9c4bf454422958",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "scientific_acceptance": false,
@@ -61,5 +53,6 @@
     "https://lazappi.github.io/clustree/articles/clustree.html",
     "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
     "https://github.com/guigolab/ggsashimi"
-  ]
+  ],
+  "display_revision": "0.10.0"
 }

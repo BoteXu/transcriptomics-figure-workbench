@@ -1,12 +1,59 @@
 {
   "schema_version": 1,
-  "version": "0.9.7",
+  "version": "0.10.0",
   "counts": {
-    "python_functions": 132,
+    "python_functions": 133,
     "fixed_aliases": 82,
-    "table_entries": 132
+    "table_entries": 133
   },
   "renderers": [
+    {
+      "id": "figure_analysis_evidence.plot_analysis_evidence",
+      "module": "figure_analysis_evidence",
+      "function": "plot_analysis_evidence",
+      "display_name": "Method-specific diagnostic and validation companions",
+      "summary": "Render complementary typed result views with explicit method context and layout.",
+      "parameters": [
+        {
+          "name": "panels",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "context",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "ae8f338f2c3524518fdb209ea695a7c82f97df7134dc50b7b7c1c85fd57d31f5",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": []
+    },
     {
       "id": "figure_analysis_results.plot_splice_tracks",
       "module": "figure_analysis_results",
@@ -596,7 +643,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "4f5d7022b887d3dd6a2dcf012286746987d8d21d15e4e8d02753f9aa52585a33",
+      "source_sha256": "bba71e7875163d82bd9b447fe47bc6d0633307317d08697ada5158fb87566b3c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -734,7 +781,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "e1f21114a5a102bc0a7a8fc5c78e42d1ba051f0ded4a5ef382df23b68cb65a08",
+      "source_sha256": "b8f8cfbfa9e90f8907f566212abd3984dabe1b81bf620408ff2cf0a0e6ca2548",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "assigned",
@@ -2772,7 +2819,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "72af2c6186d6b47c615d019fed4d6d5061dff3bf3ffac19afcd11373306f83b3",
+      "source_sha256": "d0e8167cf3f78500de32e4ba531f9465f9db21ba5b260636ae27b72e77fd49c2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "n",
@@ -3984,7 +4031,7 @@
       "aliases": [
         "cross_effects"
       ],
-      "source_sha256": "1f38cd783ae06819fbb2b1a5cce17422a77a2a0c4e3bbef6a41bc9004eb54ece",
+      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "effect_x",
@@ -4028,7 +4075,7 @@
       "aliases": [
         "aligned_views"
       ],
-      "source_sha256": "1f38cd783ae06819fbb2b1a5cce17422a77a2a0c4e3bbef6a41bc9004eb54ece",
+      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -4069,7 +4116,7 @@
       "aliases": [
         "loading_projection"
       ],
-      "source_sha256": "1f38cd783ae06819fbb2b1a5cce17422a77a2a0c4e3bbef6a41bc9004eb54ece",
+      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -4127,7 +4174,7 @@
       "aliases": [
         "mass_spectrum"
       ],
-      "source_sha256": "1f38cd783ae06819fbb2b1a5cce17422a77a2a0c4e3bbef6a41bc9004eb54ece",
+      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "intensity",
@@ -4188,7 +4235,7 @@
       "aliases": [
         "genomic_links"
       ],
-      "source_sha256": "1f38cd783ae06819fbb2b1a5cce17422a77a2a0c4e3bbef6a41bc9004eb54ece",
+      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -4231,7 +4278,7 @@
       "aliases": [
         "pathway_overlay"
       ],
-      "source_sha256": "1f38cd783ae06819fbb2b1a5cce17422a77a2a0c4e3bbef6a41bc9004eb54ece",
+      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -4279,7 +4326,7 @@
       "aliases": [
         "model_diagnostic"
       ],
-      "source_sha256": "1f38cd783ae06819fbb2b1a5cce17422a77a2a0c4e3bbef6a41bc9004eb54ece",
+      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "cook",

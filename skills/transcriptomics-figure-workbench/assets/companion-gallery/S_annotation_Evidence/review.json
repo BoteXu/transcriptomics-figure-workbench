@@ -1,0 +1,107 @@
+{
+  "id": "S_annotation_Evidence",
+  "title": "Single cell · annotation — complementary evidence",
+  "chapters": [
+    "single_cell.annotation"
+  ],
+  "stage": "interpretation",
+  "family": "fraction,matrix,fraction",
+  "variant": true,
+  "large_data": false,
+  "order": 260,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Reference-label coverage within donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Reference-label coverage within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Positive and exclusion marker evidence",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Positive and exclusion marker evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied marker score",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "fraction",
+        "title": "Discordant calls retained for review",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Discordant calls retained for review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · annotation — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.annotation supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reference-label coverage within donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Positive and exclusion marker evidence; all quantities are supplied frozen channels, with explicitly declared units and scope. | Discordant calls retained for review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Reference-label coverage within donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Positive and exclusion marker evidence; all quantities are supplied frozen channels, with explicitly declared units and scope. | Discordant calls retained for review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_annotation_Evidence/example.png",
+    "svg": "S_annotation_Evidence/example.svg",
+    "pdf": "S_annotation_Evidence/example.pdf",
+    "tsv": "S_annotation_Evidence/example.tsv",
+    "spec": "S_annotation_Evidence/input/example.spec.json",
+    "preview": "S_annotation_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "bf3cc64a4d58f9764b4d2e10986336208f37715cbcf899ee578cf87089af8d91",
+    "svg": "ea541c7e87869fb0a562542db2166470135e3023e3afc44432aeba39ee9929c5",
+    "pdf": "48a8b10b3d8ab8569e83c0116e0720f77d8ad0c2ab4776940150a62d9ec68ffe",
+    "tsv": "f92d387ab765f28d26de27b457b0daf1e22a0f2e30058ad27f9e0555a464f759",
+    "spec": "b702e5e5df906bfa506a7ba20899fd23c5e0051034361fab673f5dfbdcccafe0"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 324.9268514767883,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 98,
+    "smallest_pt": 14.218584826099045,
+    "p10_pt": 14.218584826099045,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_annotation_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "bf3cc64a4d58f9764b4d2e10986336208f37715cbcf899ee578cf87089af8d91",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: annotation-marker matrix, mapped/ambiguous/unmapped coverage and discordance categories are legible and complete, with no overlap in compound page.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

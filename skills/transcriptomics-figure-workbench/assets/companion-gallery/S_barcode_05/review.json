@@ -1,0 +1,84 @@
+{
+  "id": "S_barcode_05",
+  "title": "Cell-call threshold sensitivity",
+  "chapters": [
+    "single_cell.barcode"
+  ],
+  "stage": "validation",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 215,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Cell-call threshold sensitivity",
+        "x_label": "Declared calling threshold",
+        "y_label": "Retained fraction",
+        "definition": "Cell-call threshold sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Cell-call threshold sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.barcode supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Cell-call threshold sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Cell-call threshold sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_barcode_05/example.png",
+    "svg": "S_barcode_05/example.svg",
+    "pdf": "S_barcode_05/example.pdf",
+    "tsv": "S_barcode_05/example.tsv",
+    "spec": "S_barcode_05/input/example.spec.json",
+    "preview": "S_barcode_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "abd844569e57ed899a826e8ef1b1bc4c3b1292a511a6e759d0939eb751d9cd68",
+    "svg": "6f6c3300998ab5178aeb134fc05cbbf9f3bce61735e2a53858bb035aaa20ca0a",
+    "pdf": "73e81d7c5c80dfde6f2e0f493bc6d92a8c3069bde34e37d6a6cc8f364845fe6b",
+    "tsv": "e1944c0486406e22577f52ed1ecc4b5298328b5e48e5abff50fdb2ca9a6a3964",
+    "spec": "ce28cbeee6dc524a409b459a42c6ae6d8f289d3c99509e94f74b084b3522bca8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_barcode_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "abd844569e57ed899a826e8ef1b1bc4c3b1292a511a6e759d0939eb751d9cd68",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed complete single and composed exports: supplier intervals and q aligned, capture proportions and design code separated, six independent donors per cloud visible, retained cell categories fully represented. No label collision or clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

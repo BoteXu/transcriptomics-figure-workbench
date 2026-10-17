@@ -1,0 +1,84 @@
+{
+  "id": "S_annotation_01",
+  "title": "Reference-label coverage within donors",
+  "chapters": [
+    "single_cell.annotation"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 254,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Reference-label coverage within donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Reference-label coverage within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Reference-label coverage within donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.annotation supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reference-label coverage within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Reference-label coverage within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_annotation_01/example.png",
+    "svg": "S_annotation_01/example.svg",
+    "pdf": "S_annotation_01/example.pdf",
+    "tsv": "S_annotation_01/example.tsv",
+    "spec": "S_annotation_01/input/example.spec.json",
+    "preview": "S_annotation_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "0edd694c41c4cfe9a444bdaeb2398ff6c8208d13c994c47e7b011fd59a5d4666",
+    "svg": "0bb32f00feddd603068eaaa88924a3d604c72f8bd7a26d3fb6327f88986c6906",
+    "pdf": "c4a0941049db0040c8780f3725bbd7aa494177b6e1de739f85ddf5343668ee41",
+    "tsv": "caaec9824e85f722c50415688221403c62d09adc48b4303be4b15d3ff8f3e598",
+    "spec": "8cd3d246550242041687326e560b68926bdebb77a577fd2f9479a99f535489ff"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_annotation_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0edd694c41c4cfe9a444bdaeb2398ff6c8208d13c994c47e7b011fd59a5d4666",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed custom resolution page with expanded rows and cohort effects; annotation coverage, donor confidence raincloud and prediction-review matrix retain all channels. Clear hierarchy, no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

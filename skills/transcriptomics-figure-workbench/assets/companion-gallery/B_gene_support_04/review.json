@@ -1,0 +1,88 @@
+{
+  "id": "B_gene_support_04",
+  "title": "Gene effects across support contrasts",
+  "chapters": [
+    "bulk.gene_support"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 104,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Gene effects across support contrasts",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Gene effects across support contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied log2 fold change",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Gene effects across support contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Gene effects across support contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Gene effects across support contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gene_support_04/example.png",
+    "svg": "B_gene_support_04/example.svg",
+    "pdf": "B_gene_support_04/example.pdf",
+    "tsv": "B_gene_support_04/example.tsv",
+    "spec": "B_gene_support_04/input/example.spec.json",
+    "preview": "B_gene_support_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "e2761738383ed4e2ca7c7ecf3b401cbfa9c9d15276c882ed39c210a3425e0ec1",
+    "svg": "15fbcd1750f800ed345d882b37757f1bdc1cca40fdd82c97f5404fbee545ed39",
+    "pdf": "444332ff7d04b1c23e6a9219090a153796c754e0a2d6271f39dafc73c09d6f1c",
+    "tsv": "0857397ca8c78157a638cb8eefa4233da2010b260aada487397a05506d70ea8d",
+    "spec": "021d499da1c44c061cdf8b08b0ea85324abe7fdfde242daeb17812b3d90dd47a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gene_support_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e2761738383ed4e2ca7c7ecf3b401cbfa9c9d15276c882ed39c210a3425e0ec1",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual gene-support exports inspected: complete pathway membership, named STAT1 donor cloud with individual points/n, signed cross-contrast matrix with centered scale and full readable labels. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

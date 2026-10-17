@@ -1,0 +1,88 @@
+{
+  "id": "S_multiome_03",
+  "title": "Motif and RNA response evidence",
+  "chapters": [
+    "single_cell.multiome"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 418,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Motif and RNA response evidence",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Motif and RNA response evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied standardized effect",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Motif and RNA response evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.multiome supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Motif and RNA response evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Motif and RNA response evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multiome_03/example.png",
+    "svg": "S_multiome_03/example.svg",
+    "pdf": "S_multiome_03/example.pdf",
+    "tsv": "S_multiome_03/example.tsv",
+    "spec": "S_multiome_03/input/example.spec.json",
+    "preview": "S_multiome_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "a485272ac52261780452401bbf52c5483fcfc0c237fc8f0dab229a9ac2161471",
+    "svg": "9cba6a748288b77aa580685020c8acc46fd3da92a1012d8d39cef1eabf4f6288",
+    "pdf": "704a27cbfbd9176b9a9eada580415d175cc59976338129c6a4772ca7b1244d1c",
+    "tsv": "c82864491ad0445529f7e60633596b43f9b5c30720ae8ba457f9736556708a5c",
+    "spec": "ddc93c6fb8d59ba3594d5aa159fed149e2abe8000b26ab1873295ea7d127895c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multiome_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a485272ac52261780452401bbf52c5483fcfc0c237fc8f0dab229a9ac2161471",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: complete paired-modality denominators, standardized separate QC channels, signed RNA/motif/accessibility evidence and physical locus tracks are readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

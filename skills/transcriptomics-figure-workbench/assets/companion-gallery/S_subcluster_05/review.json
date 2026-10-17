@@ -1,0 +1,94 @@
+{
+  "id": "S_subcluster_05",
+  "title": "Child-state reproducibility across choices",
+  "chapters": [
+    "single_cell.subcluster"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 267,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Child-state reproducibility across choices",
+        "x_label": "Child-state log abundance ratio · supplied 95% interval",
+        "y_label": "",
+        "definition": "Child-state reproducibility across choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Child-state reproducibility across choices",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.subcluster supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Child-state reproducibility across choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Child-state reproducibility across choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_subcluster_05/example.png",
+    "svg": "S_subcluster_05/example.svg",
+    "pdf": "S_subcluster_05/example.pdf",
+    "tsv": "S_subcluster_05/example.tsv",
+    "spec": "S_subcluster_05/input/example.spec.json",
+    "preview": "S_subcluster_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "5350113e6eee40b5c84ea72d2f1eb348c1b7f6816dc245ffd1ee82d0c3508d66",
+    "svg": "3e1a38d71a928b3011e8de2e72b8834bd4b930b39d7d2af195d8af26d90ee522",
+    "pdf": "7c3365997464b19da346aa66c6087a42e1d235d30ea15ea7571bc70c1f9b03a8",
+    "tsv": "f0b73fa3e8489c0316eddf17f50562e7bd7e69553f18add051a62c2e50f2028c",
+    "spec": "2c03a38d5a1e9a89ab4650d6ac949516577386b7eddd8603f8d6ea18ea42fd36"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_subcluster_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5350113e6eee40b5c84ea72d2f1eb348c1b7f6816dc245ffd1ee82d0c3508d66",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected annotation cohort intervals and discordance classes; child-lineage support, positive/exclusion marker matrix, complete child composition, donor effects and alternative choices. Complete readable labels and interval table; composed page has distinct information channels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

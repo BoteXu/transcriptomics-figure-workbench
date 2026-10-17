@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "0e6327307e4386c8e39c7e7dd02b3112f97103563c5ed63c173ad9818ed15888",
+    "sha256": "472c2b2790b865f6efaf5ae667a460397f0a91c9e4658376173ece8906e842c4",
     "numeric_columns": [
       "x",
       "lower",
@@ -17,18 +17,18 @@
     "panels": [
       {
         "kind": "interval",
-        "title": "Independent-cohort effect estimates",
-        "x_label": "Supplied effect and 95% interval",
+        "title": "STAT1 effects across cohorts",
+        "x_label": "STAT1 log2 fold change · 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p1"
       },
       {
         "kind": "matrix",
-        "title": "Feature-level direction and magnitude",
+        "title": "Gene effects in the same cohorts",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied log2 effect",
+        "value_label": "Log2 fold change",
         "limits": [
           -2,
           2
@@ -40,7 +40,7 @@
       }
     ],
     "title": "Independent-cohort replication",
-    "scope_note": "Fictional frozen inputs · bulk · no analysis performed",
+    "scope_note": "Fictional donor-level effects · three independent cohorts · STAT1 shown in both panels",
     "columns": "auto"
   },
   "theme": {
@@ -170,10 +170,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional replication display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

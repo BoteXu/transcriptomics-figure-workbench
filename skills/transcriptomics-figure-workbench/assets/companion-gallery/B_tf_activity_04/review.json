@@ -1,0 +1,88 @@
+{
+  "id": "B_tf_activity_04",
+  "title": "Signed TF–target evidence",
+  "chapters": [
+    "bulk.tf_activity"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 126,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Signed TF–target evidence",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Signed TF–target evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied signed regulatory prior",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Signed TF–target evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.tf_activity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Signed TF–target evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Signed TF–target evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_tf_activity_04/example.png",
+    "svg": "B_tf_activity_04/example.svg",
+    "pdf": "B_tf_activity_04/example.pdf",
+    "tsv": "B_tf_activity_04/example.tsv",
+    "spec": "B_tf_activity_04/input/example.spec.json",
+    "preview": "B_tf_activity_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "2f2972ec001e31b58e1ccf8fca9bd4f40d94cbba8a10f5aa14e480e94b5e2c11",
+    "svg": "38a8c8a01318d04d8084e81daefafa75c2959b335c71bac5594f87bdb047fa9a",
+    "pdf": "b449f73d8252783c90eb09388b23a0de79b1c12775dd61c3cf75d1613750dc0e",
+    "tsv": "8bb27b23fcc769dbcfd05f0d0444ae2db57981f0e0dbe50d535fcadd7b00fb77",
+    "spec": "7c220ce7461d7d0022ebf65b6357c93bda0b473c1800482d828e169a7bfb4753"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_tf_activity_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "2f2972ec001e31b58e1ccf8fca9bd4f40d94cbba8a10f5aa14e480e94b5e2c11",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual PNGs inspected: named TF and target labels, all supplied donor points/cloud shapes, complete coverage denominators and signed matrix scale readable without overlap. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

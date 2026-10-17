@@ -14,19 +14,19 @@
     "preview": "ClusterFlow_1Column/preview.jpg"
   },
   "sha256": {
-    "png": "106bbf36416d650cbb5eecaa9fa05f9667cdf47b323fc5c1baec7eb1a42b57a1",
-    "svg": "b4975dfc4cc0804ea31b1afa8204149ffea3fce74399af7da2edc9014310ca66",
-    "pdf": "a9853dd5de25d432c4474d5dabc74eaee116d09ffe0c175f74f3dbbc894b5ad2",
+    "png": "afaaaf7441f6ddd56d6a40ebc3e5a2194f0e9117ee52fe6900f1c9147cad2186",
+    "svg": "f036c0ae5607096c5513181d4392c06f785112a0fe1cb73102f5d43646611dbc",
+    "pdf": "e9c2f49efe1ff8264d78548e58cfd259e928e5d965f1c4133273a37db42ec1f7",
     "tsv": "73d0456f5ccb26d9d252df50deb6753582f0fe3d4bc921a33f11e88512851ea8",
-    "spec": "b6fe0ec4e32697372f36b4b0808c61acb9f5bdb9b6a84e618a59b0aba3de8d64"
+    "spec": "4c3ee74cf1062b74f35418898ab18d732affb88388bdb3c409ca3befa905b272"
   },
   "readability": {
     "target_width_mm": 297,
-    "native_width_mm": 216.04287499999998,
+    "native_width_mm": 177.79999999999998,
     "minimum_required_pt": 7.5,
     "essential_text_count": 37,
-    "smallest_pt": 15.121998353336116,
-    "p10_pt": 15.121998353336116,
+    "smallest_pt": 18.374578177727784,
+    "p10_pt": 18.374578177727784,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
@@ -34,19 +34,11 @@
   },
   "visual_review": {
     "id": "ClusterFlow_1Column",
-    "png_sha256": "106bbf36416d650cbb5eecaa9fa05f9667cdf47b323fc5c1baec7eb1a42b57a1",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "afaaaf7441f6ddd56d6a40ebc3e5a2194f0e9117ee52fe6900f1c9147cad2186",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "scientific_acceptance": false,
@@ -62,5 +54,6 @@
     "https://lazappi.github.io/clustree/articles/clustree.html",
     "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
     "https://github.com/guigolab/ggsashimi"
-  ]
+  ],
+  "display_revision": "0.10.0"
 }

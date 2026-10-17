@@ -1,0 +1,82 @@
+{
+  "id": "B_timecourse_02",
+  "title": "Paired STAT1 donor response at two time points",
+  "chapters": [
+    "bulk.timecourse"
+  ],
+  "stage": "interpretation",
+  "family": "paired",
+  "variant": false,
+  "large_data": false,
+  "order": 155,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "paired",
+        "title": "Paired STAT1 donor response at two time points",
+        "x_label": "Repeated condition",
+        "y_label": "Supplied log2 STAT1 expression",
+        "definition": "Paired STAT1 donor response at two time points; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p1"
+      }
+    ],
+    "title": "Paired STAT1 donor response at two time points",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.timecourse supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Paired STAT1 donor response at two time points; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Paired STAT1 donor response at two time points; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "unit",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_timecourse_02/example.png",
+    "svg": "B_timecourse_02/example.svg",
+    "pdf": "B_timecourse_02/example.pdf",
+    "tsv": "B_timecourse_02/example.tsv",
+    "spec": "B_timecourse_02/input/example.spec.json",
+    "preview": "B_timecourse_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "b2d124fca53f24b33aed6848f2ed013126539aedc088747879d40b7c1c7288d8",
+    "svg": "31cf64026a960d7d1d5c1d585b08c8c15bc8ca75a984a40f073aa6f60f91b4d3",
+    "pdf": "0eaf9bf32bd1c3bfd9f03e20515929d02b5ee3769fb2a71513745d7d1da518ee",
+    "tsv": "733c1c216912867ea0199d4f34e760ca897eebcd7ca478f52fd9764398201733",
+    "spec": "16e7c47cf4ac5d1a1299d7b4dcfc94f52b85a0058be485f12fc25ba43df429c5"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 159.52225260416668,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 11,
+    "smallest_pt": 14.480738343959814,
+    "p10_pt": 14.480738343959814,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_timecourse_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b2d124fca53f24b33aed6848f2ed013126539aedc088747879d40b7c1c7288d8",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each final PNG inspected: twelve donor pairs retained, named longitudinal curves with visible supplied-range key, and explicit log2 effects/interval/q lanes; no overlap or cut labels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

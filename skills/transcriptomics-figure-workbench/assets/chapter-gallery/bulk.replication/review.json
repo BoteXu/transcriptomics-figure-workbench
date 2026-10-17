@@ -26,34 +26,26 @@
     "preview": "bulk.replication/preview.jpg"
   },
   "sha256": {
-    "png": "3d3ea95957b56a4b6fd0573472c5e2363f4213054c58ea1a6567e2319f3c2cca",
-    "svg": "b5d45c16cbd8ca80f28bf01e6bfd44175972384749551c1b2f6032b025763804",
-    "pdf": "d2968e5770622b03cf74a2332dee4be4019c6fbc39273e01e4598188e89cf60e",
-    "tsv": "98c575c55bc79a6baee00b4fc468ae83829d5664dc0d0c39c5a677371e6859f3",
-    "spec": "73fca6a97941416ac219d8c7275b7327b43662369295411316f150da1efb39ff"
+    "png": "90ca30143bc664a960131186d7385f186ccdff960b8fdd816f852b8e2ba1e46a",
+    "svg": "22eb1133abba7bb561034b1b71fe468d6f77d8fc5c24613373ccc6964f6fb721",
+    "pdf": "b6dcaa7d70a695f18886164a76dcc2a73944828ce7591555f3668d27f358490a",
+    "tsv": "91f9740ce3dfeca1f39d193584c8b3951e8caabe0966ab43688063396d131d85",
+    "spec": "5753ca055cc8b2ed8d2dacaee6f8d516b40767a62ed7c2c54147d65699414c86"
   },
   "visual_review": {
-    "id": "bulk.replication",
-    "png_sha256": "3d3ea95957b56a4b6fd0573472c5e2363f4213054c58ea1a6567e2319f3c2cca",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "bulk.replication.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "90ca30143bc664a960131186d7385f186ccdff960b8fdd816f852b8e2ba1e46a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 297,
     "native_width_mm": 304.79999999999995,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 56,
+    "essential_text_count": 54,
     "smallest_pt": 10.718503937007876,
     "p10_pt": 10.718503937007876,
     "below_threshold": [],
@@ -61,5 +53,6 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

@@ -1,0 +1,88 @@
+{
+  "id": "S_hvg_pca_03",
+  "title": "Selected genes and principal-component loadings",
+  "chapters": [
+    "single_cell.hvg_pca"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 242,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Selected genes and principal-component loadings",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Selected genes and principal-component loadings; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied loading",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Selected genes and principal-component loadings",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.hvg_pca supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Selected genes and principal-component loadings; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Selected genes and principal-component loadings; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_hvg_pca_03/example.png",
+    "svg": "S_hvg_pca_03/example.svg",
+    "pdf": "S_hvg_pca_03/example.pdf",
+    "tsv": "S_hvg_pca_03/example.tsv",
+    "spec": "S_hvg_pca_03/input/example.spec.json",
+    "preview": "S_hvg_pca_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "535ee8854e250517b7481dab1076ff43950def0cf0b0f97f8d122631177fb965",
+    "svg": "32f8afeffe30317bf1b616ce3d7b08f39175d848fc1534afae9af3388140de48",
+    "pdf": "2958b43a661f1bf52c8a23ae18eb6c819b0b3ea92510069da76ee134ddeb5983",
+    "tsv": "a4b2bc7d1182de1e54b84e326c1b01ec7720d5de93e274073e548de0b0b379cf",
+    "spec": "b3598b3114fc503f82a7ab7b459a52bed4f03555f22c37660b7503bd0280f4ae"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 164.45353472222223,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 14.04652082365886,
+    "p10_pt": 14.04652082365886,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_hvg_pca_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "535ee8854e250517b7481dab1076ff43950def0cf0b0f97f8d122631177fb965",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNG review: principal-component loadings use clean zero labels with supplied values preserved; all composition identities and legend entries retained. Evidence and one-column reading variants remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

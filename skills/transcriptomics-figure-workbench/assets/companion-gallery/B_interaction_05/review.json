@@ -1,0 +1,95 @@
+{
+  "id": "B_interaction_05",
+  "title": "Interaction-model sensitivity",
+  "chapters": [
+    "bulk.interaction"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 60,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Interaction-model sensitivity",
+        "x_label": "STAT1 log2 response contrast · supplied 95% interval",
+        "y_label": "",
+        "definition": "Interaction-model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "explicit_effects": [
+          0.53,
+          0.5,
+          0.57,
+          0.51
+        ],
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Interaction-model sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.interaction supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Interaction-model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Interaction-model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_interaction_05/example.png",
+    "svg": "B_interaction_05/example.svg",
+    "pdf": "B_interaction_05/example.pdf",
+    "tsv": "B_interaction_05/example.tsv",
+    "spec": "B_interaction_05/input/example.spec.json",
+    "preview": "B_interaction_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "59f879b8a11e9ca99568054c7db6289f612170b50969f68f3c1712e4310ef14c",
+    "svg": "ba3708739b913fc300e8eaf6c131406cfa35510598b8ac5ea2c8f47de9f07443",
+    "pdf": "0d3d8fa046c7e63da53c714fa91445e2343bb6d18ec4d690fe271f4f7c8c4dbf",
+    "tsv": "85220125d7086dd1088b6fa900f353660ac5122cffb4eedd2cf337cc537cb8a1",
+    "spec": "e102407a4b7ff27bd75df56aa46d9ea4a97228192bf8728e00ac08788f8b58a3"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_interaction_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "59f879b8a11e9ca99568054c7db6289f612170b50969f68f3c1712e4310ef14c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected revised PNGs: all supplied interaction effects, donor n, residual signs and monotone QQ positions are legible; expanded reading layouts retain complete panels and aligned uncertainty tables.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

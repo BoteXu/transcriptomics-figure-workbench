@@ -1,0 +1,85 @@
+{
+  "id": "B_gsea_05",
+  "title": "Enrichment concordance across rankings",
+  "chapters": [
+    "bulk.gsea"
+  ],
+  "stage": "validation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 89,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Enrichment concordance across rankings",
+        "x_label": "NES · primary ranking",
+        "y_label": "NES · alternative ranking",
+        "definition": "Enrichment concordance across rankings; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Enrichment concordance across rankings",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Enrichment concordance across rankings; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Enrichment concordance across rankings; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_05/example.png",
+    "svg": "B_gsea_05/example.svg",
+    "pdf": "B_gsea_05/example.pdf",
+    "tsv": "B_gsea_05/example.tsv",
+    "spec": "B_gsea_05/input/example.spec.json",
+    "preview": "B_gsea_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "22261a65b99b46357b6547334a9f04ce5c390642fa946f13c9c12fa7786dc410",
+    "svg": "5ef2ca256eb8d38f7bd31e6394fc75b1556112dd82d7ea98c6b59cf705350231",
+    "pdf": "7e2329571a2d525918b8a5cc1d5f90cbbbafef3b5d854cd945e55e0b87d68f20",
+    "tsv": "23906e9cbadc6e3e4094373864bc40fcd99b6088784c559e25442e4663a1df3b",
+    "spec": "de1bb5778ec133f87b7a0f056a1db823e9261816da2bad233f671ce7cc018db8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "22261a65b99b46357b6547334a9f04ce5c390642fa946f13c9c12fa7786dc410",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: ranked-universe diagnostic, supplied NES comparisons and leading-edge overlap; contrast estimates plus concordance. Dense reading layout expands to every row and three-column alternative remains non-overlapping; these accompany the native running-score core.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

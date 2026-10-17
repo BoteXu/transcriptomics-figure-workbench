@@ -14,11 +14,11 @@
     "preview": "Method_M11c/preview.jpg"
   },
   "sha256": {
-    "png": "4172f1f83e5e391b0c20f987bd7a2be149e13778d6b55e736f92fe1ebfda93bf",
-    "svg": "a3300e0a10c608fd54b8d926f8763fccca851b6a64b83777d712981e645bf91b",
-    "pdf": "0204e02aa905a8822d5ce1fe13af7b270d93f2c9e6bcb0dab814bcdf082697e9",
+    "png": "68012097e7c42e7585b4a244c98d29ca5e575b4211346021a3718f6504ce15e8",
+    "svg": "1638cffd543c8e7e1fbbfa02f5871fb4e48fad2b5f3f84e9994d6f009be1e1b5",
+    "pdf": "009b7875d5b05863ff3d1a9d40dc31613a46abd3fdb19116f1f1b97fcd00ca43",
     "tsv": "87590e8c6d9a7c8b13077e3d10c1e9bd7d73a34793860eca01b6b9016128fd4b",
-    "spec": "ab4f28bf53b039bd1dcff6506430f6e75c4010ee89571b08d1b304100710f59d"
+    "spec": "910ba4eb199cf04a42795beadd2c290e4c690cbf049df2c99e503877dd60f55f"
   },
   "readability": {
     "target_width_mm": 297,
@@ -34,19 +34,11 @@
   },
   "visual_review": {
     "id": "Method_M11c",
-    "png_sha256": "4172f1f83e5e391b0c20f987bd7a2be149e13778d6b55e736f92fe1ebfda93bf",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "68012097e7c42e7585b4a244c98d29ca5e575b4211346021a3718f6504ce15e8",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "scientific_acceptance": false,
@@ -62,5 +54,6 @@
     "https://lazappi.github.io/clustree/articles/clustree.html",
     "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
     "https://github.com/guigolab/ggsashimi"
-  ]
+  ],
+  "display_revision": "0.10.0"
 }

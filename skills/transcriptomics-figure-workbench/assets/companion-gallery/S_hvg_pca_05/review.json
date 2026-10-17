@@ -1,0 +1,94 @@
+{
+  "id": "S_hvg_pca_05",
+  "title": "Biological summaries across PC choices",
+  "chapters": [
+    "single_cell.hvg_pca"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 244,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Biological summaries across PC choices",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Biological summaries across PC choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Biological summaries across PC choices",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.hvg_pca supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Biological summaries across PC choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Biological summaries across PC choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_hvg_pca_05/example.png",
+    "svg": "S_hvg_pca_05/example.svg",
+    "pdf": "S_hvg_pca_05/example.pdf",
+    "tsv": "S_hvg_pca_05/example.tsv",
+    "spec": "S_hvg_pca_05/input/example.spec.json",
+    "preview": "S_hvg_pca_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "91ab11bae99e903b1c57327528dcbf576798d9aeda37a9d8684c5965285adcfc",
+    "svg": "ce99ce8d71b8723ec05faf07e2082ef4b9b8f8b8d1497c24ffa6b9fcd2617804",
+    "pdf": "ab7ee59e979b29d910928dc429730308119e7d93e13c0b11a55c8fd5c86388b0",
+    "tsv": "29285f263e8ff04021eff13df1b71bdbbe9cfbd327da24ce2ee80f7a7e89f69a",
+    "spec": "2087f5f0a45a507d9b209d8c8af88ba184a27429e0aad31b04ded2f8afc4a0aa"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_hvg_pca_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "91ab11bae99e903b1c57327528dcbf576798d9aeda37a9d8684c5965285adcfc",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually inspected. Integration before/after donor connections and per-identity effects clear in two-column and expanded one-column pages. HVG mean-dispersion, scree and PC-choice sensitivity legible, no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,84 @@
+{
+  "id": "S_replication_01",
+  "title": "Cross-cohort ontology and feature coverage",
+  "chapters": [
+    "single_cell.replication"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 401,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Cross-cohort ontology and feature coverage",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Cross-cohort ontology and feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Cross-cohort ontology and feature coverage",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Cross-cohort ontology and feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Cross-cohort ontology and feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_replication_01/example.png",
+    "svg": "S_replication_01/example.svg",
+    "pdf": "S_replication_01/example.pdf",
+    "tsv": "S_replication_01/example.tsv",
+    "spec": "S_replication_01/input/example.spec.json",
+    "preview": "S_replication_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "6945d0fb0faffcab89de6f4cbeda62fdae90a8e03e1c65a92761b7fe456dee5c",
+    "svg": "e847957b2688dd42626781481c49533d46a4420f5d870bbfe163a4feb6262a5d",
+    "pdf": "400d35e042292e70c16dd1d6d0ecaad3f9686713c0ec199c83f753a0bf3587be",
+    "tsv": "5cd7ebbbb4d026dfafaa3ba2339945f51122a6c2ac9551f513ff2c0aba86a704",
+    "spec": "f5e3f44865c9d5c6b5656ca04a430c989ddeb17bc8c3e2a5fd549d979e8fd533"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_replication_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6945d0fb0faffcab89de6f4cbeda62fdae90a8e03e1c65a92761b7fe456dee5c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: complete guide assignment and support, program response channels, donor-level replication effects and cohort mapping remain readable with full selected scope and explicit independent n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

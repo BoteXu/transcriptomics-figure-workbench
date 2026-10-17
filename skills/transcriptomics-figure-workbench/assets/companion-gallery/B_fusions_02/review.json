@@ -1,0 +1,88 @@
+{
+  "id": "B_fusions_02",
+  "title": "Breakpoint-flanking transcript support",
+  "chapters": [
+    "bulk.fusions"
+  ],
+  "stage": "qc",
+  "family": "locus",
+  "variant": false,
+  "large_data": false,
+  "order": 198,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "locus",
+        "title": "Breakpoint-flanking transcript support",
+        "x_label": "Genomic position · declared reference build",
+        "y_label": "",
+        "definition": "Breakpoint-flanking transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "coordinate_system": "0-based half-open",
+        "genome_build": "Explicit fictional reference v1; not a human locus",
+        "contig": "synthetic_contig_1",
+        "strand": "+",
+        "id": "p1"
+      }
+    ],
+    "title": "Breakpoint-flanking transcript support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.fusions supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Breakpoint-flanking transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Breakpoint-flanking transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "record_type",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_fusions_02/example.png",
+    "svg": "B_fusions_02/example.svg",
+    "pdf": "B_fusions_02/example.pdf",
+    "tsv": "B_fusions_02/example.tsv",
+    "spec": "B_fusions_02/input/example.spec.json",
+    "preview": "B_fusions_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "e3d4b6ebde37baa179cc640653500515cb0366988c5eb73d17a10d4f09f86a99",
+    "svg": "86636e14974ee1f51863f8bd6276010fb35e1809c4be748597fd254a4ff2ba3d",
+    "pdf": "e1cad87bb9d2efd72d3b0246d96050be257763a985ff3d2e139ff350a111622e",
+    "tsv": "c71bd0ad73dbecc1dd399f48910407a8dc2026d57f6049210d72434c94369062",
+    "spec": "2d80d7b7a34d6f43c6119692b2086c6bbe37dbd9a76c7cfa080fd80da096d6f7"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_fusions_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e3d4b6ebde37baa179cc640653500515cb0366988c5eb73d17a10d4f09f86a99",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually inspected: aligned full-support matrices, evidence indicators, junction tracks and independent-library intervals; one-column enlarged reading example retains complete labels and rows. Donor capture design and cell-support matrices are legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

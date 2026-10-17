@@ -1,0 +1,85 @@
+{
+  "id": "S_multi_contrast_04",
+  "title": "Effect concordance between contrasts",
+  "chapters": [
+    "single_cell.multi_contrast"
+  ],
+  "stage": "interpretation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 302,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Effect concordance between contrasts",
+        "x_label": "Effect · contrast A",
+        "y_label": "Effect · contrast B",
+        "definition": "Effect concordance between contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Effect concordance between contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.multi_contrast supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Effect concordance between contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Effect concordance between contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multi_contrast_04/example.png",
+    "svg": "S_multi_contrast_04/example.svg",
+    "pdf": "S_multi_contrast_04/example.pdf",
+    "tsv": "S_multi_contrast_04/example.tsv",
+    "spec": "S_multi_contrast_04/input/example.spec.json",
+    "preview": "S_multi_contrast_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "821b4c30eec46b0dd67196786b8c6a0f3185f4279b5010888c479954251e3245",
+    "svg": "908ec6066b65fffede05d5a605417f335d3eb1f883294b7cecd61ea40b3c984a",
+    "pdf": "48c34f4d3431cd0d71bbb84b57ef5f5e770ed8ad29c9d22a3b067c0ff70f6f21",
+    "tsv": "23906e9cbadc6e3e4094373864bc40fcd99b6088784c559e25442e4663a1df3b",
+    "spec": "8499ddb4cb25f6a97f5aa2046d6407866b4137f0885ad16cb519e9d32227ba3f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multi_contrast_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "821b4c30eec46b0dd67196786b8c6a0f3185f4279b5010888c479954251e3245",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final images viewed: identity-condition STAT1 effects, same-unit contrast concordance with identity reference, cohort-separated replication. All supplied intervals, q and donor n clear; no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

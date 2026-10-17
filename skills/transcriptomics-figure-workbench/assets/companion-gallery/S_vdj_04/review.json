@@ -1,0 +1,88 @@
+{
+  "id": "S_vdj_04",
+  "title": "Clonotype sharing across sampled compartments",
+  "chapters": [
+    "single_cell.vdj"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 379,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Clonotype sharing across sampled compartments",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Clonotype sharing across sampled compartments; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied overlap fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Clonotype sharing across sampled compartments",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.vdj supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Clonotype sharing across sampled compartments; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Clonotype sharing across sampled compartments; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_vdj_04/example.png",
+    "svg": "S_vdj_04/example.svg",
+    "pdf": "S_vdj_04/example.pdf",
+    "tsv": "S_vdj_04/example.tsv",
+    "spec": "S_vdj_04/input/example.spec.json",
+    "preview": "S_vdj_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "bf88ccae5a03211f54a69c643910aca00991dbced17b1392afcfd92c54110198",
+    "svg": "62d761ea6efab5d78d68307a9090f76d2121f7e9bebb210a4a106f97f8e4e95b",
+    "pdf": "5282bf4479944f9c2870978657a26b6d9919210aafa373fc040c0c49f95ffb59",
+    "tsv": "829bcc0a4061998313f732f22cd963ad16aba820c0f56986930cf7304b408003",
+    "spec": "d423dbe5e2364ca1c446726409fced795f161f683e2f7a9e5ff36f7a75ce1b58"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 169.3827222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 27,
+    "smallest_pt": 13.637754605038097,
+    "p10_pt": 13.637754605038097,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_vdj_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "bf88ccae5a03211f54a69c643910aca00991dbced17b1392afcfd92c54110198",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: explicit CNV units and supplied contrasts, complete clone/VDJ categories, frozen size bins and compartment sharing are legible; complete denominators and effect bounds are retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

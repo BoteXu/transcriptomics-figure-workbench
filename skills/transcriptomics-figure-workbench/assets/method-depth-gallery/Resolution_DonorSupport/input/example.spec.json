@@ -4,8 +4,9 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "984f7920dffba158dd2ca6a39958f07ba258aea73b721b27a7da0ca4c07308f4",
+    "sha256": "a3d393f56a394e3d3ba076a953d38a2d66479cd4df07384d39cd1e9d7cb62fcf",
     "numeric_columns": [
+      "target",
       "x",
       "y",
       "target_x",
@@ -21,10 +22,10 @@
         "title": "Donor support across clusters",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied cell count per donor",
+        "value_label": "Cells per donor and cluster",
         "limits": [
           0,
-          80
+          12
         ],
         "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
         "size_label": "Coverage",
@@ -163,10 +164,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen method-depth display inputs v0.9.1",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Synthetic gene-sample measurement",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "All 180 illustrative genes in each of 12 samples",
     "model": "No analysis, graph inference, model fit or significance calculation",
     "limits": "Declared complete display scope; data have no biomedical validity",

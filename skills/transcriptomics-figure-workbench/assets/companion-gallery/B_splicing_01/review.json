@@ -1,0 +1,88 @@
+{
+  "id": "B_splicing_01",
+  "title": "Physical exon and junction support",
+  "chapters": [
+    "bulk.splicing"
+  ],
+  "stage": "qc",
+  "family": "locus",
+  "variant": false,
+  "large_data": false,
+  "order": 138,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "locus",
+        "title": "Physical exon and junction support",
+        "x_label": "Genomic position · declared reference build",
+        "y_label": "",
+        "definition": "Physical exon and junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "coordinate_system": "0-based half-open",
+        "genome_build": "Explicit fictional reference v1; not a human locus",
+        "contig": "synthetic_contig_1",
+        "strand": "+",
+        "id": "p1"
+      }
+    ],
+    "title": "Physical exon and junction support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.splicing supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Physical exon and junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Physical exon and junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "record_type",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_splicing_01/example.png",
+    "svg": "B_splicing_01/example.svg",
+    "pdf": "B_splicing_01/example.pdf",
+    "tsv": "B_splicing_01/example.tsv",
+    "spec": "B_splicing_01/input/example.spec.json",
+    "preview": "B_splicing_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "37bf6160c6881d9b669e5ef59e52a3c2b4b9b33330e68da3cef7279c993e4461",
+    "svg": "303c7f6a7df08544b22c911f9ecb016cc729a10bae7221e0066009208bd7288c",
+    "pdf": "e1c2f1bc9d273cfeebec0c6d224ff9d6989f68c1f583a541a9848f2d2cee1ddb",
+    "tsv": "c71bd0ad73dbecc1dd399f48910407a8dc2026d57f6049210d72434c94369062",
+    "spec": "56d8b471e9bff44f548fd6b9f304dce4ec6199036f9afeda636085d356d1c550"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_splicing_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "37bf6160c6881d9b669e5ef59e52a3c2b4b9b33330e68da3cef7279c993e4461",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Nine actual PNGs viewed individually: reconstruction diagnostics and reference-choice estimates; physical exon/junction lane, donor PSI and delta-PSI results, event classes, independent replication and adaptive reading/combined pages. Supplied arc counts and all donor points remain readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

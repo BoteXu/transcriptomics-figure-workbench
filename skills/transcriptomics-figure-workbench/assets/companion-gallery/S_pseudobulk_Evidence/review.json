@@ -1,0 +1,122 @@
+{
+  "id": "S_pseudobulk_Evidence",
+  "title": "Single cell · pseudobulk — complementary evidence",
+  "chapters": [
+    "single_cell.pseudobulk"
+  ],
+  "stage": "interpretation",
+  "family": "matrix,effects,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 297,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Cell support for each donor–identity aggregate",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Cell support for each donor–identity aggregate; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied aggregate cells",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Donor-level differential-expression effects",
+        "x_label": "Donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-level differential-expression effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Donor-omission sensitivity of effects",
+        "x_label": "Donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-omission sensitivity of effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "All donors",
+          "Omit D01"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · pseudobulk — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.pseudobulk supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Cell support for each donor–identity aggregate; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-level differential-expression effects; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-omission sensitivity of effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Cell support for each donor–identity aggregate; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-level differential-expression effects; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-omission sensitivity of effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_pseudobulk_Evidence/example.png",
+    "svg": "S_pseudobulk_Evidence/example.svg",
+    "pdf": "S_pseudobulk_Evidence/example.pdf",
+    "tsv": "S_pseudobulk_Evidence/example.tsv",
+    "spec": "S_pseudobulk_Evidence/input/example.spec.json",
+    "preview": "S_pseudobulk_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "617b545fc5f5fced408e0ca79080fbe8acad8e12e81ccae6fc17ba8c97364c00",
+    "svg": "18d7c7d0acd94592ae2a2dfe2461b84a4329c4ce806518ca0f0d5575ef1445af",
+    "pdf": "265586b61b5c6ec86cf4236df740c4c24bd1f01145f35a0ec1268fb21aa6be31",
+    "tsv": "34eba487271e44ca3d18070ff383d163fbecea4440f42c9e4debcf00779011fc",
+    "spec": "b67c049c890c2942644c9547ad59743ead1e7e2b238eaf5a51d331f3e258619f"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 134,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_pseudobulk_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "617b545fc5f5fced408e0ca79080fbe8acad8e12e81ccae6fc17ba8c97364c00",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected PNGs: complete one-column neighborhood support/effects and pseudobulk donor rainclouds/tables; explicit units, omitted-donor n and readable row spacing retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

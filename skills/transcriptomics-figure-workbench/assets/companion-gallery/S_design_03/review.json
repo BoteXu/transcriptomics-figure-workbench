@@ -1,0 +1,85 @@
+{
+  "id": "S_design_03",
+  "title": "Donor balance within annotated identities",
+  "chapters": [
+    "single_cell.design"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 206,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Donor balance within annotated identities",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Donor balance within annotated identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "donor_denominator": true,
+        "denominator_definition": "Independent donors with observed support for this identity; each condition is bounded by its available n/2 donors",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor balance within annotated identities",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.design supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor balance within annotated identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor balance within annotated identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_design_03/example.png",
+    "svg": "S_design_03/example.svg",
+    "pdf": "S_design_03/example.pdf",
+    "tsv": "S_design_03/example.tsv",
+    "spec": "S_design_03/input/example.spec.json",
+    "preview": "S_design_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "36299e9be67d4038b282e11d72ae53bb838117e33936dd344b976864c3567c01",
+    "svg": "7b67c54130f185407a81f4afd6190275ebc8c6204105dbe941b240431aeea090",
+    "pdf": "e24eda244df42c925f29ec70ef0d2e8c8fc8b3797dabe7ee9c890a7371b1e491",
+    "tsv": "293d9cb37a6abe3ab2679c8586d926f7e1417f7c3b5db301d6e461860e765c69",
+    "spec": "7972fc66d2f7f65a0e19bc2bfc12f448ab1c492f354ff6c94b00bbda3afbda96"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_design_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "36299e9be67d4038b282e11d72ae53bb838117e33936dd344b976864c3567c01",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual PNG inspected: full effect and cohort tables, log-scale ratio reference, monotone supplied survival steps, calibration identity line and barcode knee/bins remain readable and unclipped in custom layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

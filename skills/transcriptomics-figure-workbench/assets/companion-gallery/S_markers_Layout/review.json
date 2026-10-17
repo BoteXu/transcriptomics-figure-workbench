@@ -1,0 +1,124 @@
+{
+  "id": "S_markers_Layout",
+  "title": "Single cell · markers — complementary evidence",
+  "chapters": [
+    "single_cell.markers"
+  ],
+  "stage": "layout",
+  "family": "matrix,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 276,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Marker detection coverage",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Marker detection coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Fraction of cells detected",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Marker mean-expression specificity",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Supplied gene-centered mean expression by identity; negative centered values are not negative molecular counts.",
+        "value_label": "Centered mean expression",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Marker evidence in independent donors",
+        "x_label": "Donor marker log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Marker evidence in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · markers — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.markers supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Marker detection coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supplied gene-centered mean expression by identity; negative centered values are not negative molecular counts. | Marker evidence in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Marker detection coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supplied gene-centered mean expression by identity; negative centered values are not negative molecular counts. | Marker evidence in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_markers_Layout/example.png",
+    "svg": "S_markers_Layout/example.svg",
+    "pdf": "S_markers_Layout/example.pdf",
+    "tsv": "S_markers_Layout/example.tsv",
+    "spec": "S_markers_Layout/input/example.spec.json",
+    "preview": "S_markers_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "1c5db53b18bda862db1ef1d08ba50ca8516d648d03c83c99ef3df9017e7d26c9",
+    "svg": "3ff02c87ada60dd12bead3ea39f1989f861370d1dee21f50ef15f702f4aaa407",
+    "pdf": "61d38c60bc387626527b3bebb829175343be568080f305826f4f615e024d67ab",
+    "tsv": "2e65ba20a74bf8570d08ec1d13051f77685869695629caceca8b423f95b4313c",
+    "spec": "cc9c685b284817b77c71a20d0635c8877e7d469e2e3975bdf687d1c8008785f3"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 203,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_markers_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1c5db53b18bda862db1ef1d08ba50ca8516d648d03c83c99ef3df9017e7d26c9",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: marker matrices use distinct detection/centered-expression scales; neighborhood identities, donor support counts and effect/sensitivity tables remain complete and readable in single and combined exports.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

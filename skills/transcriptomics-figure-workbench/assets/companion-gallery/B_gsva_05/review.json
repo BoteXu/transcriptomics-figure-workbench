@@ -1,0 +1,87 @@
+{
+  "id": "B_gsva_05",
+  "title": "Interferon-pathway response across measured time",
+  "chapters": [
+    "bulk.gsva"
+  ],
+  "stage": "extension",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 119,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Interferon-pathway response across measured time",
+        "x_label": "Time (days)",
+        "y_label": "Supplied interferon GSVA score",
+        "definition": "Interferon-pathway response across measured time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "Interferon-pathway response across measured time",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsva supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Interferon-pathway response across measured time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Interferon-pathway response across measured time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsva_05/example.png",
+    "svg": "B_gsva_05/example.svg",
+    "pdf": "B_gsva_05/example.pdf",
+    "tsv": "B_gsva_05/example.tsv",
+    "spec": "B_gsva_05/input/example.spec.json",
+    "preview": "B_gsva_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "3d5c67ac69a14eed43fb5e98566242e5622978e89e029a73ea7c3f81c39680bf",
+    "svg": "f4d838ee1456650be2a7855ae8f285979f8edab6b93342cdefbc15d2ac52193d",
+    "pdf": "f9c49be69cf1c4637a32b5ce7813b85b5f441aa2e96ff46810b62bd18c938917",
+    "tsv": "7064236b63cd01532e513a4cbc21348ddc2910a297353b3d5995297772b72882",
+    "spec": "2b7fc45a98895404b30adef7f424b59007cdedcdbe5e06b3ca6a01c1eff82440"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 165.35234635416668,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 13.970167650673865,
+    "p10_pt": 13.970167650673865,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsva_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3d5c67ac69a14eed43fb5e98566242e5622978e89e029a73ea7c3f81c39680bf",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "All nine final exports separately inspected: bounded donor GSVA distributions, complete donor score matrix, declared GSVA/TF contrast units, independent-cohort n, readable evidence and expanded reading layouts. Legends and numerical tables do not overlap.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -28,27 +28,19 @@
     "preview": "single_cell.hvg_pca/preview.jpg"
   },
   "sha256": {
-    "png": "b24e50aed2e7feecfa146e0cec8556e149f460f734426942e7709767b36d071b",
-    "svg": "d59de4afcd332d7c408d4d486b47616d7d8188125bfc65ca3b764dc52eb6a15e",
-    "pdf": "9e6341c3e6c9f7cdcefcac263f7bed435ae1cdd88dbf4c19636ceef0aedae448",
-    "tsv": "6dfc11208300a9d28b03d9b0f39072c325132c35c68aeda76ff0686110aa9ab3",
-    "spec": "b256f8cc4d1e64ce2a64e34ba9a048ce174aa95af99c39e7e95df5d4f4808530"
+    "png": "426951be740f58d620a09827b05eef7e3d33e59a30dc2f754d23f8a170bfb9ed",
+    "svg": "f420ee2ab1879a729d3c57073273207a8f326c36a34c07c2749b8e6767ef9d03",
+    "pdf": "4fe0d7027513221b5e9346d43d1f623bb3eb95465cf4a909f7cfcf0651163f88",
+    "tsv": "20a6f921235e5f9bdbb4de98cc82c07510df220904d99f30e1473f8c49ea79c9",
+    "spec": "d3f9b41d6af260633c69ccd28b2027e3cd52d8351c60412ccd58265aa8631082"
   },
   "visual_review": {
-    "id": "single_cell.hvg_pca",
-    "png_sha256": "b24e50aed2e7feecfa146e0cec8556e149f460f734426942e7709767b36d071b",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.hvg_pca.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "426951be740f58d620a09827b05eef7e3d33e59a30dc2f754d23f8a170bfb9ed",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
@@ -63,5 +55,6 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

@@ -1,0 +1,89 @@
+{
+  "id": "S_cnv_05",
+  "title": "Clone-associated donor effects",
+  "chapters": [
+    "single_cell.cnv"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 372,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Clone-associated donor effects",
+        "x_label": "Clone log abundance ratio · supplied 95% interval",
+        "y_label": "",
+        "definition": "Clone-associated donor effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Clone-associated donor effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.cnv supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Clone-associated donor effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Clone-associated donor effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_cnv_05/example.png",
+    "svg": "S_cnv_05/example.svg",
+    "pdf": "S_cnv_05/example.pdf",
+    "tsv": "S_cnv_05/example.tsv",
+    "spec": "S_cnv_05/input/example.spec.json",
+    "preview": "S_cnv_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "9595d5e2a3cac31639d573619749b279a6d67e79a4807a0755249223aa7c6d1d",
+    "svg": "825e849cc2c77e18fc4b7338f724f6cbd1b7d148e9f0ebca5b86c0e616f9d170",
+    "pdf": "7f46e838422ed030b69ed38af1407ac091c102a23c6341d972d0fcc12baaee22",
+    "tsv": "2e8ce067613931dccbd1e529cda537ae53237ee8a05059f5690eea147edcfd83",
+    "spec": "39ed20ebef7d6006f512531acd61092a9ba200d6b39b525715376dbcc2f16c7c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_cnv_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9595d5e2a3cac31639d573619749b279a6d67e79a4807a0755249223aa7c6d1d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: explicit CNV units and supplied contrasts, complete clone/VDJ categories, frozen size bins and compartment sharing are legible; complete denominators and effect bounds are retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

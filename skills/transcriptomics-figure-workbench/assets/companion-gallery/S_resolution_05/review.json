@@ -1,0 +1,94 @@
+{
+  "id": "S_resolution_05",
+  "title": "Independent annotation consistency",
+  "chapters": [
+    "single_cell.resolution"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 251,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Independent annotation consistency",
+        "x_label": "Label-agreement fraction difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Independent annotation consistency; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Independent annotation consistency",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.resolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Independent annotation consistency; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Independent annotation consistency; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_resolution_05/example.png",
+    "svg": "S_resolution_05/example.svg",
+    "pdf": "S_resolution_05/example.pdf",
+    "tsv": "S_resolution_05/example.tsv",
+    "spec": "S_resolution_05/input/example.spec.json",
+    "preview": "S_resolution_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "f5a072acaea119b523d3369dfa1d18958919ed074544f42f94acd1f0862034b6",
+    "svg": "d0af0cc2efa66cf4f820abf9938905760bd52a79d63f6a6203cd331773b51687",
+    "pdf": "8d54deb1a0eaa98941c32c10981e3891b722bf3c642b184bb43df66b6860e63d",
+    "tsv": "5275841fe738e5dad686d4731b1df1672e9f65d78caedfed291d081d4e6f9e55",
+    "spec": "6bf94890d268c8ed1c9a10eea2b869943a4231ee7e1aa6335235d0e609aabcd3"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_resolution_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f5a072acaea119b523d3369dfa1d18958919ed074544f42f94acd1f0862034b6",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually viewed: donor/cluster support, selected donor mixture, signed marker matrix, probability-bounded stability and independent-cohort label agreement. Complete categories, uncertainty, q and n visible; balanced composed page without collisions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,90 @@
+{
+  "id": "B_replication_03",
+  "title": "STAT1 independent-cohort effects and uncertainty",
+  "chapters": [
+    "bulk.replication"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 163,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "STAT1 independent-cohort effects and uncertainty",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "STAT1 independent-cohort effects and uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "cohort_synthesis": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "STAT1 independent-cohort effects and uncertainty",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "STAT1 independent-cohort effects and uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "STAT1 independent-cohort effects and uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_replication_03/example.png",
+    "svg": "B_replication_03/example.svg",
+    "pdf": "B_replication_03/example.pdf",
+    "tsv": "B_replication_03/example.tsv",
+    "spec": "B_replication_03/input/example.spec.json",
+    "preview": "B_replication_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "2b8acc69d9342dbf5e8d25da7d7451595f80dd8599dd041ea6afe8699bcb79ae",
+    "svg": "ae58853666fb3be3d8ca5ce18e320f790eac75a55a87960d46a306fc65d578b8",
+    "pdf": "e1a433548a1dfbeb52612991d87bbf3f32ca7d75f1afea2dfe138ce7d410ad28",
+    "tsv": "b276dca40f43ca289fa49bfd0a6d09eaa87d74e5617ad0ddf189aa0abb69334a",
+    "spec": "8a3e34221c31aa190ad17776cb65cf1d91235c885ba53c1637129d9bc7a2dcb8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_replication_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "2b8acc69d9342dbf5e8d25da7d7451595f80dd8599dd041ea6afe8699bcb79ae",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed seven actual PNGs: complete feature scope, cohort concordance, named STAT1 synthesis with per-cohort n, signed effect matrix, time-model sensitivity and correctly bounded stepwise survival curves/endpoint denominator. Readable labels, tables and interval key.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

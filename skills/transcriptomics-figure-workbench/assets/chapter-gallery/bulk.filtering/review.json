@@ -26,27 +26,19 @@
     "preview": "bulk.filtering/preview.jpg"
   },
   "sha256": {
-    "png": "7e9e5953e98d55b6b9b485456c391dd5450d0987d3520a9f10eb585bd14b5d38",
-    "svg": "3ed23c7b403c8ee2029e24fd8b4594d536a28f085bc88b24c2390799105e0da6",
-    "pdf": "733488cd0fb34af2a444745d453d159a20f69a43cd686167132d940476deda33",
+    "png": "a9ee61097e0d3b72a30c23a0f447a7c5f15e16e366b96fc7deb8a31388e534e9",
+    "svg": "4e11321dbc763e1d6efec4d296901cebe94ba5a5760a11cdee23fd87c08626c7",
+    "pdf": "0299fe46e5fd99e6e136691c6dff15dd7189af4d2b5a6727b6e7028f5bf3dcea",
     "tsv": "2f804a1bfb14affc23fa5f64318bc9f067a322e6c4ae1444cf02f841abc5462b",
-    "spec": "a577723b637b0319180ad76a88a491cd1d3c503557314bc7e954feee5c1dc17e"
+    "spec": "d902361d8b9951220db28119cb6d6e35b9d3e2d5690e5d77f08c0f0bce3710bc"
   },
   "visual_review": {
-    "id": "bulk.filtering",
-    "png_sha256": "7e9e5953e98d55b6b9b485456c391dd5450d0987d3520a9f10eb585bd14b5d38",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "bulk.filtering.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a9ee61097e0d3b72a30c23a0f447a7c5f15e16e366b96fc7deb8a31388e534e9",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
@@ -61,5 +53,6 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

@@ -1,0 +1,89 @@
+{
+  "id": "B_model_qc_05",
+  "title": "Prespecified diagnostic sensitivity",
+  "chapters": [
+    "bulk.model_qc"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 67,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified diagnostic sensitivity",
+        "x_label": "STAT1 log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified diagnostic sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified diagnostic sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.model_qc supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified diagnostic sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified diagnostic sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_model_qc_05/example.png",
+    "svg": "B_model_qc_05/example.svg",
+    "pdf": "B_model_qc_05/example.pdf",
+    "tsv": "B_model_qc_05/example.tsv",
+    "spec": "B_model_qc_05/input/example.spec.json",
+    "preview": "B_model_qc_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "5256c16c24a1202da98da4aeb29c9a8ffd3e1e8f30534a6fb68725beb6eb0fe9",
+    "svg": "4698102a3cbc9a5f42309925d84d7d565f4e4d83c1c5058af88fa340f82c125d",
+    "pdf": "ff53af997b5aa79d65fbe1c80a373b89e27bfc01422f255c5804214489604249",
+    "tsv": "2854e76f50713e39378607cb6b3ce7147f154eade18e76cbe9209f9956dfada9",
+    "spec": "6f24a3bb6d05f82e38ab20944aa7760a8cc3f6adcec2cd8295b79105f9de7d93"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_model_qc_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5256c16c24a1202da98da4aeb29c9a8ffd3e1e8f30534a6fb68725beb6eb0fe9",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual individual PNG inspected: supplied donor residual distributions, bounded leverage units and separate aligned estimate table are readable without clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,87 @@
+{
+  "id": "B_programs_04",
+  "title": "Interferon-program progression across measured time",
+  "chapters": [
+    "bulk.programs"
+  ],
+  "stage": "extension",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 73,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Interferon-program progression across measured time",
+        "x_label": "Time (days)",
+        "y_label": "Supplied interferon-program score",
+        "definition": "Interferon-program progression across measured time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "Interferon-program progression across measured time",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.programs supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Interferon-program progression across measured time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Interferon-program progression across measured time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_programs_04/example.png",
+    "svg": "B_programs_04/example.svg",
+    "pdf": "B_programs_04/example.pdf",
+    "tsv": "B_programs_04/example.tsv",
+    "spec": "B_programs_04/input/example.spec.json",
+    "preview": "B_programs_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "d31360b780906d09a97c87ea7e37dede82d8f090bca6b91c6b794567e7da5552",
+    "svg": "d18de07c3150608989d00123a6c354df7a49fbc5193652ec61c2f0953ca17216",
+    "pdf": "93217d7595c07326ff3910eecd01ac33f4eee22feac20838a9da18d33d5050af",
+    "tsv": "7064236b63cd01532e513a4cbc21348ddc2910a297353b3d5995297772b72882",
+    "spec": "ac22e90085b68113844f7b844956df2ab55764d0d63026c52f588b653b1bd053"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 158.64515885416665,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 14.56079729557616,
+    "p10_pt": 14.56079729557616,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_programs_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d31360b780906d09a97c87ea7e37dede82d8f090bca6b91c6b794567e7da5552",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each final PNG viewed separately: program membership, donor raincloud and named trajectory/cohort synthesis; ORA universe coverage, aligned uncertainty and background alternatives, complete term overlap. Custom reading layout retains all rows, units and distinct upstream donor n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

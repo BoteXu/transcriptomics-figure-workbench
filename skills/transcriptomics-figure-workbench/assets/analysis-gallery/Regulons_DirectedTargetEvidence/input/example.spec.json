@@ -4,7 +4,7 @@
   "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
   "input": {
     "path": "example.tsv",
-    "sha256": "cff3902d0c71cebf81be9f8c5ef13d70bac94375b01ace7c8b219b9dead80381",
+    "sha256": "a0e47ea816335dba5b792d831c3d8b85d652da217931740604a79bbdc4d25707",
     "numeric_columns": [
       "x",
       "y",
@@ -14,7 +14,7 @@
   },
   "parameters": {
     "mode": "hub_network",
-    "title": "Regulon target support with explicit edge direction",
+    "title": "Selected TF-to-target candidate support",
     "context": {
       "independent_unit": "fictional donors",
       "independent_n": 24,
@@ -25,10 +25,34 @@
     "definition": "Prespecified directed fictional TF-target evidence graph with supplied support weights; fixed display coordinates. Candidate regulatory edges do not establish causality.",
     "label_genes": [
       "IRF1",
+      "M1_G2",
+      "M1_G3",
+      "M1_G4",
+      "M1_G5",
+      "M1_G6",
+      "M1_G7",
+      "M1_G8",
+      "M1_G9",
       "STAT1",
-      "RELA"
+      "M2_G2",
+      "M2_G3",
+      "M2_G4",
+      "M2_G5",
+      "M2_G6",
+      "M2_G7",
+      "M2_G8",
+      "M2_G9",
+      "RELA",
+      "M3_G2",
+      "M3_G3",
+      "M3_G4",
+      "M3_G5",
+      "M3_G6",
+      "M3_G7",
+      "M3_G8",
+      "M3_G9"
     ],
-    "edge_semantics": "Directed TF-target candidate evidence; no causal inference",
+    "edge_semantics": "Explicit fictional directed TF-to-target candidate evidence; supplied scores do not prove direct binding or causal regulation",
     "directed": true
   },
   "theme": {
@@ -120,10 +144,10 @@
     }
   },
   "provenance": {
-    "source": "Fictional method display fixtures v0.9.7",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Synthetic gene-sample measurement",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "All 180 illustrative genes in each of 12 samples",
     "model": "No network, statistical test, interval, density, layout or analysis fit",
     "limits": "Declared complete display scope; data have no biomedical validity",

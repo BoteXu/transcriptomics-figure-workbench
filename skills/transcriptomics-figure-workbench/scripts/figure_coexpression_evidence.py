@@ -158,7 +158,13 @@ def plot_coexpression_evidence(data, theme, *, mode, title, context, definition,
             q = n[n.module == module]
             ax.scatter(q.x, q.y, s=35 + 170 * q.kME.abs(), color=palette[module], alpha=.9, edgecolors='white', lw=.8, label=module, zorder=3)
         for row in n[n.gene.isin(label_genes)].itertuples():
-            ax.annotate(row.gene, (row.x, row.y), xytext=(7, 7), textcoords='offset points', fontsize=10, color='#355365', zorder=5)
+            q=n[n.module==row.module]
+            dx=float(row.x-q.x.mean());dy=float(row.y-q.y.mean());length=math.hypot(dx,dy)
+            if length<.03:ox,oy=0,14
+            else:ox,oy=13*dx/length,13*dy/length
+            ax.annotate(row.gene, (row.x, row.y), xytext=(ox,oy), textcoords='offset points',
+                        ha='left' if ox>2 else 'right' if ox<-2 else 'center',va='bottom' if oy>0 else 'top',
+                        fontsize=10,color='#355365',bbox=dict(facecolor='white',edgecolor='none',alpha=.85,pad=.6),zorder=5)
         ax.margins(.18); ax.set_aspect('equal', adjustable='box'); ax.axis('off')
         ax.legend(loc='upper left', bbox_to_anchor=(1.01, 1), frameon=False, title='Supplied identities', markerscale=.7, fontsize=10)
         fig.text(.5, .02, f'{len(n)} selected nodes · {len(e)} supplied edges · point area scaled by |kME|', ha='center', fontsize=10, color='#647885')
@@ -318,10 +324,10 @@ def plot_coexpression_evidence(data, theme, *, mode, title, context, definition,
         a, b = axes; _clean(a, 'x'); _clean(b, 'x')
         for i, row in enumerate(d.itertuples()):
             a.barh(i, row.retained_genes / row.tested_genes, height=.58, color=palette[row.module], alpha=.8); a.text(row.retained_genes / row.tested_genes, i, f'  {int(row.retained_genes)}/{int(row.tested_genes)}', va='center', fontsize=10)
-            b.plot([row.lower, row.upper], [i, i], c=palette[row.module], lw=2.3); b.scatter(row.estimate, i, s=48, c=palette[row.module], ec='white', lw=.6); b.text(1.05, i, f'n={int(row.n)}', va='center', fontsize=10)
+            b.plot([row.lower, row.upper], [i, i], c=palette[row.module], lw=2.3); b.scatter(row.estimate, i, s=48, c=palette[row.module], ec='white', lw=.6); b.text(1.035, i, f'n={int(row.n)}', transform=b.get_yaxis_transform(), va='center', fontsize=10)
         labels=[r.module + ' · ' + r.cohort for r in d.itertuples()]
         for ax in axes: ax.set_yticks(range(len(d)), labels); ax.set_ylim(len(d)-.5,-.5); ax.spines['left'].set_visible(False); ax.tick_params(axis='y', length=0)
-        a.set(xlabel='Retained / tested reference genes', xlim=(0, 1.36)); b.set(xlabel=value_label, xlim=(-1.05, 1.38)); b.axvline(0, c='#9EAFB9', lw=1, ls='--')
+        a.set(xlabel='Retained / tested reference genes', xlim=(0, 1.36)); b.set(xlabel=value_label, xlim=(-1, 1)); b.axvline(0, c='#9EAFB9', lw=1, ls='--')
     elif mode == 'program_profile':
         d = checked(data, ['module', 'unit', 'group', 'value'], ['value']); _unique(d, ['module', 'unit'])
         if d.unit.nunique() > context['independent_n'] or d.groupby('unit').group.nunique().max() != 1: raise ValueError('Each independent unit must have one stable group identity')

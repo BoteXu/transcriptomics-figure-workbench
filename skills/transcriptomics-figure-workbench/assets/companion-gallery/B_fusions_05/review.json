@@ -1,0 +1,94 @@
+{
+  "id": "B_fusions_05",
+  "title": "Event support in independent libraries",
+  "chapters": [
+    "bulk.fusions"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 201,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Event support in independent libraries",
+        "x_label": "Supplied log support ratio · interval",
+        "y_label": "",
+        "definition": "Event support in independent libraries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Event support in independent libraries",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.fusions supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Event support in independent libraries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Event support in independent libraries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_fusions_05/example.png",
+    "svg": "B_fusions_05/example.svg",
+    "pdf": "B_fusions_05/example.pdf",
+    "tsv": "B_fusions_05/example.tsv",
+    "spec": "B_fusions_05/input/example.spec.json",
+    "preview": "B_fusions_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "cd8c20a2726c15dcd17df92d219ff5cbd909b3835ad95875891a718389da2a23",
+    "svg": "4a6d987a3baeaf395aa2823231656a837825994aaaf98aca1264e6438326ecb1",
+    "pdf": "12e75dcfc06f62c1ffa13db56177eb4ff6edd8edceeae391030e9317b54492d3",
+    "tsv": "41ddbf4508967da1c909f507bc69ffd775b5bd68120b035bda83c2bddc80bf5b",
+    "spec": "81a965b33130a59dc8daf95cd1ef262ef4dc14553b833bf0873c7b680f7655f1"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_fusions_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "cd8c20a2726c15dcd17df92d219ff5cbd909b3835ad95875891a718389da2a23",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually inspected: aligned full-support matrices, evidence indicators, junction tracks and independent-library intervals; one-column enlarged reading example retains complete labels and rows. Donor capture design and cell-support matrices are legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,94 @@
+{
+  "id": "B_timecourse_05",
+  "title": "Within-donor model sensitivity",
+  "chapters": [
+    "bulk.timecourse"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 158,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Within-donor model sensitivity",
+        "x_label": "Log2 expression change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Within-donor model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Within-donor model sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.timecourse supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Within-donor model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Within-donor model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_timecourse_05/example.png",
+    "svg": "B_timecourse_05/example.svg",
+    "pdf": "B_timecourse_05/example.pdf",
+    "tsv": "B_timecourse_05/example.tsv",
+    "spec": "B_timecourse_05/input/example.spec.json",
+    "preview": "B_timecourse_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "0215a81427ad4cf3aa2fb2dbe030e0293b7a53d66a8929aefe95b21d74619cdc",
+    "svg": "4fe64c185c05cb7ae5423b6d3ad2df75068045191ffb1d6fca83ae8d2a91c08e",
+    "pdf": "63a25b178d82be2b6660864cf70ff4f413ad9905e99503e66e60aea4fed004f3",
+    "tsv": "f9b017310d83a2e9de21ed7e4919813fc661b464364e681217ae7078681c7bcd",
+    "spec": "d1e1a5fb828c2466c1d4cc1b6b6282ef66ab45357d9691e44d202ebb1558e01f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_timecourse_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0215a81427ad4cf3aa2fb2dbe030e0293b7a53d66a8929aefe95b21d74619cdc",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed seven actual PNGs: complete feature scope, cohort concordance, named STAT1 synthesis with per-cohort n, signed effect matrix, time-model sensitivity and correctly bounded stepwise survival curves/endpoint denominator. Readable labels, tables and interval key.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

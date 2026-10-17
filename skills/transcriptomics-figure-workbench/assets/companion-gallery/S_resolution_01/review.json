@@ -1,0 +1,88 @@
+{
+  "id": "S_resolution_01",
+  "title": "Donor support at declared resolutions",
+  "chapters": [
+    "single_cell.resolution"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 247,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Donor support at declared resolutions",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Donor support at declared resolutions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied cell count",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Donor support at declared resolutions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.resolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor support at declared resolutions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor support at declared resolutions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_resolution_01/example.png",
+    "svg": "S_resolution_01/example.svg",
+    "pdf": "S_resolution_01/example.pdf",
+    "tsv": "S_resolution_01/example.tsv",
+    "spec": "S_resolution_01/input/example.spec.json",
+    "preview": "S_resolution_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "bf13a1c03a54f00dbb8c701c97587c3123a53dccd3126bd68a0f24e04ce88506",
+    "svg": "82c10db48c3f7cb7c93e7ff3599b305478916609706cdf78b83048f26b8cb026",
+    "pdf": "e2e771f76a7a1ecc43c9a681074a2f35d226d675598569a91ab9ebce930e4ce2",
+    "tsv": "b0cc7214884ed4d2b5ae4bb342d273d99782fd5337843c4c78ac906e08a95e84",
+    "spec": "2a0b0ab42b7989158fb7450bdecb9b2cf094460d9775c07990fdf45f92e975cb"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_resolution_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "bf13a1c03a54f00dbb8c701c97587c3123a53dccd3126bd68a0f24e04ce88506",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually viewed: donor/cluster support, selected donor mixture, signed marker matrix, probability-bounded stability and independent-cohort label agreement. Complete categories, uncertainty, q and n visible; balanced composed page without collisions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

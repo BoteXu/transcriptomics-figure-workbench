@@ -13,16 +13,26 @@ def write(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encod
 
 def build():
     completion=read(SKILL/'assets/analysis-gallery/manifest.json')['records']
+    full=(SKILL/'assets/companion-gallery/manifest.json').is_file()
+    version='0.10.0' if full else '0.9.7'
     old=read(SKILL/'references/analysis-views.json')
     # Rerunning is idempotent. Stable legacy IDs are retained for the re-rendered core.
-    views={r['id']:r for r in old['views'] if r.get('catalog_origin')!='analysis_completion_v097'}
-    for row in completion:
+    views={r['id']:r for r in old['views'] if r.get('catalog_origin') not in ['analysis_completion_v097','analysis_companions_v100']}
+    # Existing stable IDs follow the actual revised spec rather than old prose.
+    for view in views.values():
+        path=SKILL/view['spec'];spec=read(path);params=spec['parameters']
+        panel=next((p for p in params.get('panels',[]) if p.get('id')==view.get('panel_id')),None)
+        view['title']=(panel or params).get('title',view['title'])
+        with (path.parent/spec['input']['path']).open(encoding='utf8') as handle:view['input_channels']=handle.readline().rstrip('\r\n').split('\t')
+    sources=[(row,'analysis-gallery','analysis_completion_v097') for row in completion]
+    if full:sources += [(row,'companion-gallery','analysis_companions_v100') for row in read(SKILL/'assets/companion-gallery/manifest.json')['records']]
+    for row,folder,origin in sources:
         key=row['id'].removeprefix('Core_')
         views[key]=dict(id=key,chapters=row['chapters'],title=row['title'],form=row['family'],renderer=row['renderer'],panel_id=None,
-                        spec='assets/analysis-gallery/'+row['assets']['spec'],input_channels=row['requirements'],meaning=row['parameters'],
-                        example='assets/analysis-gallery/index.html#'+row['id'],review_scope='Exact exported PNG individually screen-reviewed; changed inputs/layout need new review',
-                        stage=row['stage'],variant=row['variant'],catalog_origin='analysis_completion_v097')
-    write(SKILL/'references/analysis-views.json',dict(schema_version=1,version='0.9.7',views=list(views.values()),analysis_performed=False))
+                        spec='assets/'+folder+'/'+row['assets']['spec'],input_channels=row['requirements'],meaning=row['parameters'],
+                        example='assets/'+folder+'/index.html#'+row['id'],review_scope='Exact exported PNG individually screen-reviewed; changed inputs/layout need new review',
+                        stage=row['stage'],variant=row['variant'],catalog_origin=origin)
+    write(SKILL/'references/analysis-views.json',dict(schema_version=1,version=version,views=list(views.values()),analysis_performed=False))
     chapters=read(SKILL/'references/transcriptomic-chapters.json')['chapters'];suites=[];display={}
     for chapter in chapters:
         candidates=[v for v in views.values() if chapter['id'] in v['chapters']]
@@ -55,18 +65,20 @@ def build():
         stages=['qc','network','interpretation','function','validation','extension','layout','chapter']
         primary.sort(key=lambda key:stages.index(views[key].get('stage','chapter')))
         variants.sort(key=lambda key:stages.index(views[key].get('stage','chapter')))
+        coverage={stage:[k for k in primary+variants if views[k].get('stage','chapter')==stage] for stage in stages}
         suites.append(dict(id=chapter['id'],label=LABELS[chapter['id']],title=chapter['title'],assay=chapter['assay'],
             primary_views=primary,alternative_views=variants,required_results=chapter['required_results'],
+            coverage=coverage,required_context=chapter['specific_qc_and_limit'],
             scope='Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.',
             backend_analysis_performed=False))
-    write(SKILL/'references/analysis-suites.json',dict(schema_version=1,version='0.9.7',suites=suites,analysis_performed=False))
+    write(SKILL/'references/analysis-suites.json',dict(schema_version=1,version=version,suites=suites,analysis_performed=False))
     out=SKILL/'assets/analysis-library';out.mkdir(parents=True,exist_ok=True)
-    write(out/'manifest.json',dict(version='0.9.7',chapters=len(suites),callable_views=len(views),actual_pages=len(display),records=list(display.values())))
+    write(out/'manifest.json',dict(version=version,chapters=len(suites),callable_views=len(views),actual_pages=len(display),records=list(display.values())))
     (out/'index.html').write_text(page(list(display.values()),suites,f'{len(suites)} 个分析章节 · {len(views)} 个实际调用视图 · {len(display)} 个去重图页。常规图、专用配套图和替代布局在同一目录中查找。'),encoding='utf8')
     lines=['# 按分析导出整套绘图模板','','从实际 FigureSpec 生成；章节、图页、调用视图与科学算法数量分别统计。所有示例均为冻结合成绘图材料，没有运行分析后端。','','|分析|默认配套视图|替代／布局|','|---|---:|---:|']
     for s in suites:lines.append('|'+s['label']+' (`'+s['id']+'`)|'+str(len(s['primary_views']))+'|'+str(len(s['alternative_views']))+'|')
     lines+=['','## 使用','','`analysis-library --search WGCNA` 列出对应整套路线。`analysis-suite --chapter bulk.wgcna --output <fresh-directory>` 导出该分析的全部默认合成模板、准确 TSV 和批量绘图 manifest；加 `--include-variants` 才导出相近替代与布局。`analysis-render --manifest <fresh-directory>/manifest.json --output <fresh-render-directory>` 串行绘制这些合成模板。实际项目应使用 `book-plan`，逐项绑定已经完成且 QC 审核的真实结果。','','默认与替代由实际数据语义决定；没有云形时不估算密度，没有完整命中时不冒充完整 GSEA，没有模块结果时不生成 WGCNA 结论。模板完整性与真实结果可用性是不同状态。各章节的主图和诊断／验证视图不是所有分析方法已穷尽的声明。']
-    (SKILL/'references/analysis-library-v097.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
+    (SKILL/('references/analysis-library-v100.md' if full else 'references/analysis-library-v097.md')).write_text('\n'.join(lines)+'\n',encoding='utf8')
     print(json.dumps(dict(analysis_chapters=len(suites),callable_views=len(views),actual_pages=len(display),wgcna_primary=len(next(s for s in suites if s['id']=='bulk.wgcna')['primary_views']))))
 
 if __name__=='__main__':build()

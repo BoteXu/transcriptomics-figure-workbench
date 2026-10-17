@@ -1,8 +1,21 @@
 # 科研数据绘图工作台 · Transcriptomics Figure Workbench
 
+## v0.10.0 逐分析的完整配套画法
+
+[58章统一分析目录](skills/transcriptomics-figure-workbench/assets/analysis-library/index.html) · [逐项问题与画法清单](skills/transcriptomics-figure-workbench/references/analysis-companion-coverage-v100.md) · [实际配套示例](skills/transcriptomics-figure-workbench/assets/companion-gallery/index.html) · [完整配套图册 PDF](skills/transcriptomics-figure-workbench/assets/companion-gallery/All_Analysis_Companions.pdf)
+
+- **按分析交付整套图：** 保留 WGCNA／hdWGCNA 的建网、模块、性状、功能和验证路线，其余56章分别补充输入/QC、主结果支持、效应与不确定性、功能解释和敏感性／独立复现。剪接、VDJ、空间、velocity、Perturb-seq等按实际数据前提选择。
+- **统一目录可逐项查找：** 58个分析章节连接597个调用视图与550个去重实际图页；单面板入口、替代画法、组图和布局分别统计。
+- **有代码、有表、有实际导出：** 配套库包含307份单项图、56份互补组图、56份扩展数据单列阅读版及6份三列版，共425份明确虚构的冻结示例。每份提供 PNG／SVG／PDF、可运行配置和准确 TSV；布局数量不计作新分析算法。
+- **默认丰富且有依据：** 专用 PCA、火山/MA、GSEA、逐亚群多marker主图继续使用；供体分布优先保留全部点与给定云形，效应图带独立对齐数值区，比例图保留完整类别和分母，物理基因座保留参考版本、链与真实区间尺度。
+- **布局随内容调整：** 森林图行高随条目数增长，组图按各行内容分配高度，支持显式行列和物理尺寸。单列长页用于完整阅读；投稿尺寸须另行测量并复看，不能把宽版缩小后的小字当作合格。
+- **逐图审阅再发布：** 新导出必须有与最终 PNG 哈希一致的单张审阅记录，同时检查信息完整性、数值范围、独立样本数及布局。打包程序拒绝遗漏、失败或过期的图片审阅。
+
+这些是绘图实现与可复用示例，没有在本机运行真实组学推断。没有上游区间时不补造区间，没有冻结云形时不拟合密度；独立队列复现、相同供体的替代模型和真实后端验收分别记录。[输入与选择协议](skills/transcriptomics-figure-workbench/references/analysis-companion-protocol-v100.md) · [来源与采用范围](skills/transcriptomics-figure-workbench/references/analysis-companion-sources-v100.md) · [本轮逐图审阅和验收范围](skills/transcriptomics-figure-workbench/references/validation-v100.md)
+
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.9.7**。优先选择信息更完整且易读的美化扩展，并按 **58个分析章节**组织 bulk 与单细胞绘图：每章提供实际代码、可运行模板、准确模拟表和导出实例。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
+本版为 **v0.10.0**。优先选择信息更完整且易读的美化扩展，并按 **58个分析章节**组织 bulk 与单细胞绘图：每章提供实际代码、可运行模板、准确模拟表和导出实例。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
 
 ## v0.9.7 按分析取整套图，补齐 WGCNA 配套展示
 

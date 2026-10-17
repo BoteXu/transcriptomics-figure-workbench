@@ -1,0 +1,84 @@
+{
+  "id": "B_deconvolution_02",
+  "title": "Complete donor mixture estimates",
+  "chapters": [
+    "bulk.deconvolution"
+  ],
+  "stage": "interpretation",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 132,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Complete donor mixture estimates",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete donor mixture estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Complete donor mixture estimates",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.deconvolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete donor mixture estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete donor mixture estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_deconvolution_02/example.png",
+    "svg": "B_deconvolution_02/example.svg",
+    "pdf": "B_deconvolution_02/example.pdf",
+    "tsv": "B_deconvolution_02/example.tsv",
+    "spec": "B_deconvolution_02/input/example.spec.json",
+    "preview": "B_deconvolution_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "7c8f70130af493b4801207baa8ae758e79e5bac1d8b64324d308dd0dcdf9374b",
+    "svg": "0580099d4062d224b5e734a4ce81ca792b0f10474f1a3bb79fd4d20d6b7051eb",
+    "pdf": "08c7afdd480c89c080e89269522867ff8056048c5ffcdae4443dc3b882a3e30a",
+    "tsv": "cffcdf9f50606120dc7ccbd85f7128c10085809ec20695753b6d794870b68955",
+    "spec": "d1cdd1c6a122ef62638db060e1cf937fa933ddf33a873f76ec408ace3a37c1af"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 32,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_deconvolution_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7c8f70130af493b4801207baa8ae758e79e5bac1d8b64324d308dd0dcdf9374b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs inspected: full six-term overlap labels and counts readable; all 12 mixture categories uniquely coloured with complete legend; reading layout complete; droplet axes explicitly log10 UMI and gene counts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

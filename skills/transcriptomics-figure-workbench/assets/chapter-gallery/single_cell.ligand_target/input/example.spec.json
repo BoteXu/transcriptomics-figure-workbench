@@ -4,35 +4,35 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "35512595f0c102e13df46906c7ea32a96c58d8dfae317f72620987dfc8f7eae4",
+    "sha256": "0cdc591cda1c01697d34173a0873fbe0467ff3f5d2b871b20a52f35a11345dc3",
     "numeric_columns": [
       "x",
       "y",
       "target_x",
       "target_y",
-      "value",
-      "fraction"
+      "value"
     ]
   },
   "parameters": {
     "panels": [
       {
         "kind": "network",
-        "title": "Explicit evidence relationships",
+        "title": "Selected ligand-to-target candidate chain",
         "x_label": "",
         "y_label": "",
-        "edge_definition": "Complete explicitly selected illustrative edge list; weights and coordinates supplied; no layout fit or pruning",
-        "id": "p1"
+        "edge_definition": "Explicit directed candidate evidence; fixed supplied positions, not demonstrated causal signaling",
+        "id": "p1",
+        "directed": true
       },
       {
         "kind": "matrix",
-        "title": "Selected relationship support",
+        "title": "Evidence mapped to each displayed edge",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied evidence score",
+        "value_label": "Explicit evidence indicator",
         "limits": [
           0,
-          2
+          1
         ],
         "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
         "size_label": "Coverage",
@@ -133,7 +133,8 @@
       "Declared relationship": 0,
       "Read 1": 0,
       "Read 2": 1,
-      "Complete supplied PCs": 0
+      "Complete supplied PCs": 0,
+      "Candidate direction": 0
     },
     "roles": {
       "primary": "#218C8D",
@@ -171,10 +172,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional ligand_target display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

@@ -1,0 +1,84 @@
+{
+  "id": "B_reads_05",
+  "title": "Duplication and unique-fragment classes",
+  "chapters": [
+    "bulk.reads"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 12,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Duplication and unique-fragment classes",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Duplication and unique-fragment classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Duplication and unique-fragment classes",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.reads supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Duplication and unique-fragment classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Duplication and unique-fragment classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_reads_05/example.png",
+    "svg": "B_reads_05/example.svg",
+    "pdf": "B_reads_05/example.pdf",
+    "tsv": "B_reads_05/example.tsv",
+    "spec": "B_reads_05/input/example.spec.json",
+    "preview": "B_reads_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "cfb6e4261f5d545f5db0d1f5e3b88d82622818d939b3b7c5ba469c4a2bd6fa64",
+    "svg": "510335d971b3d5d59ebe4df77c3ba4e8f929daf0b0b84f58db4e481596fa7489",
+    "pdf": "17718c180cf6fe21efb5299e2d3b6e14b7c57018d21ae5f9273a6faa1aa2f5b6",
+    "tsv": "be70ef1082205dceb9b7aec31a55b5920c1248bde2a1ffc8de9fcfa388171df3",
+    "spec": "0d7e115100e181018e0989c19cd2007db64eb88d6ae5bb0c9045bdcf43bf6102"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_reads_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "cfb6e4261f5d545f5db0d1f5e3b88d82622818d939b3b7c5ba469c4a2bd6fa64",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Inspected all duplication segments, explicit denominators and the complete three-step read-retention example. Each next input equals the preceding retained count; category guide and actual stage totals are readable. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

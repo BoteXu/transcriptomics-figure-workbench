@@ -1,0 +1,84 @@
+{
+  "id": "B_fusions_03",
+  "title": "Breakpoint read classes",
+  "chapters": [
+    "bulk.fusions"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 199,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Breakpoint read classes",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Breakpoint read classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Breakpoint read classes",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.fusions supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Breakpoint read classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Breakpoint read classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_fusions_03/example.png",
+    "svg": "B_fusions_03/example.svg",
+    "pdf": "B_fusions_03/example.pdf",
+    "tsv": "B_fusions_03/example.tsv",
+    "spec": "B_fusions_03/input/example.spec.json",
+    "preview": "B_fusions_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "5b69bccf1eb28e3d8b1bf61f9916abe6161b60142ac7b5f64abe915e03d16f4e",
+    "svg": "f1165e46eb1ef4afd3efdf7e3ef27876a94a18a829f32d1c476f876731f73dff",
+    "pdf": "26d1365def3142a6a25c3fde3ef200588cfe42661e0c0b66e86e9f85943de4f4",
+    "tsv": "3c858450bb4fc063ec66be66ac5592238fef24b9e5d0682932a9d18e1f8e7f20",
+    "spec": "d365c089c1d3c5b743f41f678c315c065d707eb6256853d0fd074d4b59c60a66"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 19,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_fusions_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5b69bccf1eb28e3d8b1bf61f9916abe6161b60142ac7b5f64abe915e03d16f4e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually inspected: aligned full-support matrices, evidence indicators, junction tracks and independent-library intervals; one-column enlarged reading example retains complete labels and rows. Donor capture design and cell-support matrices are legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

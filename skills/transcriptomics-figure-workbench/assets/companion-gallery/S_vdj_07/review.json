@@ -1,0 +1,94 @@
+{
+  "id": "S_vdj_07",
+  "title": "Repertoire findings in independent donors",
+  "chapters": [
+    "single_cell.vdj"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 382,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Repertoire findings in independent donors",
+        "x_label": "Shannon-diversity difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Repertoire findings in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Repertoire findings in independent donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.vdj supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Repertoire findings in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Repertoire findings in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_vdj_07/example.png",
+    "svg": "S_vdj_07/example.svg",
+    "pdf": "S_vdj_07/example.pdf",
+    "tsv": "S_vdj_07/example.tsv",
+    "spec": "S_vdj_07/input/example.spec.json",
+    "preview": "S_vdj_07/preview.jpg"
+  },
+  "sha256": {
+    "png": "3112af893f9df7fd35229ae4a108299c690e3cdf216521cb06f3aa1d0efaccdc",
+    "svg": "5b5de7de5b3fe4fc08c839cc21b4851d62db60fc4636dd3a2165a00a58bda093",
+    "pdf": "0b7e1dc09768a2e8ef38c1e6b03a61df717be174f880d8b421af7691a838bcc0",
+    "tsv": "ad001bc1bf0c493eeb0ec694d204ba96f57b263da072cf4ec8113f02cc8fdc21",
+    "spec": "efd7c22cc6d497b00a6346bd6eebdf829b92221ce73d27a8aa65d4d622b24139"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_vdj_07",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3112af893f9df7fd35229ae4a108299c690e3cdf216521cb06f3aa1d0efaccdc",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual exports individually inspected: VDJ compositions preserve categories and frozen bins at both data sizes, cohort effects remain readable, and donor PSI raincloud preserves all points and n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

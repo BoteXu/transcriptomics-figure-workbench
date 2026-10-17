@@ -1,0 +1,84 @@
+{
+  "id": "S_vdj_03",
+  "title": "Clone expansion classes within donors",
+  "chapters": [
+    "single_cell.vdj"
+  ],
+  "stage": "interpretation",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 378,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Clone expansion classes within donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Clone expansion classes within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Clone expansion classes within donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.vdj supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Clone expansion classes within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Clone expansion classes within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_vdj_03/example.png",
+    "svg": "S_vdj_03/example.svg",
+    "pdf": "S_vdj_03/example.pdf",
+    "tsv": "S_vdj_03/example.tsv",
+    "spec": "S_vdj_03/input/example.spec.json",
+    "preview": "S_vdj_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "ab7be8acb300b836c73aca401fa13f58bd2b9ac21b41352c072bafecab289424",
+    "svg": "7b2ec55dd1ca1ae9e716088ea93c947659d85b6fe1b71f8571b4fb70cfe57498",
+    "pdf": "2aeb9e8db94f237bab17a26b62d71372bed6c1e4bdfe2c9e993b92f3a01fe8bd",
+    "tsv": "6e80c577ee0c77b40963292c338d032c03fd3b687f90bc6edd979f78c9849843",
+    "spec": "e609d5efded23307dd291a536b95924ce155f4bc70eded5db3ff1163837adbc8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_vdj_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ab7be8acb300b836c73aca401fa13f58bd2b9ac21b41352c072bafecab289424",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: explicit CNV units and supplied contrasts, complete clone/VDJ categories, frozen size bins and compartment sharing are legible; complete denominators and effect bounds are retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

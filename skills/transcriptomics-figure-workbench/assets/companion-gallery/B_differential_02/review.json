@@ -1,0 +1,84 @@
+{
+  "id": "B_differential_02",
+  "title": "Cook influence across fitted expression",
+  "chapters": [
+    "bulk.differential"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 47,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Cook influence across fitted expression",
+        "x_label": "Supplied fitted log count",
+        "y_label": "Supplied Cook distance",
+        "definition": "Cook influence across fitted expression; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Cook influence across fitted expression",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.differential supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Cook influence across fitted expression; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Cook influence across fitted expression; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_differential_02/example.png",
+    "svg": "B_differential_02/example.svg",
+    "pdf": "B_differential_02/example.pdf",
+    "tsv": "B_differential_02/example.tsv",
+    "spec": "B_differential_02/input/example.spec.json",
+    "preview": "B_differential_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "eb84b24dae973c81dc59e0eddada99d139fcddce673fab4ed8d1149cfb0ccb6c",
+    "svg": "6f4cf03d56fc8d23d5a99374406bbb4a748731780025773bc366434f5945b535",
+    "pdf": "c7b4f79854d80806de8368d1bd4dc430803795282a6c5573dc40a23b3ea75307",
+    "tsv": "9a47be82ed804d0c1fb9409293825e93fa0af209b18d36f7c9442ad81f3d5860",
+    "spec": "9026c68510623b5c3ab0cae132ff3d57981e79f674b4292f59f2ed87c0e4af55"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_differential_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "eb84b24dae973c81dc59e0eddada99d139fcddce673fab4ed8d1149cfb0ccb6c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs inspected: larger batch view has 8+8+8 donors with complete cloud points, dispersion trend and Cook axes/legends clear, named STAT1 expression includes every donor, and raw-P histograms have explicit contrast labels and sharp outlines. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

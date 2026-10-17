@@ -1,0 +1,84 @@
+{
+  "id": "S_trajectory_02",
+  "title": "Interferon program along fixed branches",
+  "chapters": [
+    "single_cell.trajectory"
+  ],
+  "stage": "interpretation",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 329,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Interferon program along fixed branches",
+        "x_label": "Supplied pseudotime",
+        "y_label": "Supplied interferon-program score",
+        "definition": "Interferon program along fixed branches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Interferon program along fixed branches",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.trajectory supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Interferon program along fixed branches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Interferon program along fixed branches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_trajectory_02/example.png",
+    "svg": "S_trajectory_02/example.svg",
+    "pdf": "S_trajectory_02/example.pdf",
+    "tsv": "S_trajectory_02/example.tsv",
+    "spec": "S_trajectory_02/input/example.spec.json",
+    "preview": "S_trajectory_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "d9c5e43a2ca07764884ca1dfb0b0018663c4caa394d02831b3e2209fb3e29398",
+    "svg": "8abcd04757452ae8ba608b40e61fb199b1da94a7224f9dc0a21cd6f0522db353",
+    "pdf": "fd59441cb5e45965a12cdc97fa8b3fe7e0b237107d08669bbac8345b83691bfc",
+    "tsv": "f85e3e3e32cf4d652979b2e4c3f4897579ba8a36ad1c5675df0c737309220063",
+    "spec": "54a7279834431787ff0f2aebcd4245a3a1a67b189675af1e80f0bdae5e7fc11d"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_trajectory_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d9c5e43a2ca07764884ca1dfb0b0018663c4caa394d02831b3e2209fb3e29398",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: clear donor rainclouds, aligned effect tables, full denominators and readable branch profiles; single and custom layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "a58f6aa64f79d205ef59f5240cd4c563a9ce781a96ba855ead80b43d6e320965",
+    "sha256": "14cf372060cfdc5744e5a23e21e7fcf72c4b3f1082e27ae145e0ba013a491f17",
     "numeric_columns": [
       "value",
       "fraction"
@@ -17,7 +17,7 @@
         "title": "Genomically ordered copy-number scores",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied relative CNV",
+        "value_label": "Log2 relative CNV · reference = 0",
         "limits": [
           -2,
           2
@@ -37,7 +37,7 @@
       }
     ],
     "title": "Inferred copy-number patterns",
-    "scope_note": "Fictional frozen inputs · single_cell · no analysis performed",
+    "scope_note": "Fictional ordered bins · log2 reference baseline = 0 · RNA-inferred patterns require genomic validation",
     "columns": "auto"
   },
   "theme": {
@@ -129,7 +129,8 @@
       "Declared relationship": 0,
       "Read 1": 0,
       "Read 2": 1,
-      "Complete supplied PCs": 0
+      "Complete supplied PCs": 0,
+      "Clone C": 3
     },
     "roles": {
       "primary": "#218C8D",
@@ -167,10 +168,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional cnv display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

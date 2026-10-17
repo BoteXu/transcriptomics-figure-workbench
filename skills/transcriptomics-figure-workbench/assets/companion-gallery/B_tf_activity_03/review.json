@@ -1,0 +1,89 @@
+{
+  "id": "B_tf_activity_03",
+  "title": "Adjusted TF activity effects",
+  "chapters": [
+    "bulk.tf_activity"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 125,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Adjusted TF activity effects",
+        "x_label": "Donor TF-activity score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Adjusted TF activity effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Adjusted TF activity effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.tf_activity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Adjusted TF activity effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Adjusted TF activity effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_tf_activity_03/example.png",
+    "svg": "B_tf_activity_03/example.svg",
+    "pdf": "B_tf_activity_03/example.pdf",
+    "tsv": "B_tf_activity_03/example.tsv",
+    "spec": "B_tf_activity_03/input/example.spec.json",
+    "preview": "B_tf_activity_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "acee5aa5ed289b53488c5d1f9269082eb843ffa31167712b3d9c1fca7c0bf20d",
+    "svg": "fa72452b7c75fc1be8a2a5d5d7544119bf6ac3fb516125a3bb7daa28149a53aa",
+    "pdf": "b0643fa4750f54c8091bbe38f6bfc8d5035e23c1e1c6b755b06a2a8102d81b0f",
+    "tsv": "8e6ffbb7a3e6cb48134b17921f4c171b3bcc39baee2b7014bc6fb7fc27d6c1e4",
+    "spec": "9c4c993381d21ca267b17d4b8e3d066b45a2a1aeee3d1def2fcbf4e2a87fa8a0"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_tf_activity_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "acee5aa5ed289b53488c5d1f9269082eb843ffa31167712b3d9c1fca7c0bf20d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "All nine final exports separately inspected: bounded donor GSVA distributions, complete donor score matrix, declared GSVA/TF contrast units, independent-cohort n, readable evidence and expanded reading layouts. Legends and numerical tables do not overlap.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

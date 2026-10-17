@@ -1,0 +1,126 @@
+{
+  "id": "S_perturbseq_Layout",
+  "title": "Single cell · perturbseq — complementary evidence",
+  "chapters": [
+    "single_cell.perturbseq"
+  ],
+  "stage": "layout",
+  "family": "fraction,effects,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 400,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Complete guide assignment by replicate",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete guide assignment by replicate; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "STAT1 response by guide and control",
+        "x_label": "Perturbation-response log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "STAT1 response by guide and control; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "explicit_effects": [
+          -0.01,
+          0.02,
+          -0.5,
+          -0.45,
+          0.36,
+          0.41
+        ],
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Perturbation response in independent donors",
+        "x_label": "Perturbation-response log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Perturbation response in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · perturbseq — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.perturbseq supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete guide assignment by replicate; all quantities are supplied frozen channels, with explicitly declared units and scope. | STAT1 response by guide and control; all quantities are supplied frozen channels, with explicitly declared units and scope. | Perturbation response in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Complete guide assignment by replicate; all quantities are supplied frozen channels, with explicitly declared units and scope. | STAT1 response by guide and control; all quantities are supplied frozen channels, with explicitly declared units and scope. | Perturbation response in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_perturbseq_Layout/example.png",
+    "svg": "S_perturbseq_Layout/example.svg",
+    "pdf": "S_perturbseq_Layout/example.pdf",
+    "tsv": "S_perturbseq_Layout/example.tsv",
+    "spec": "S_perturbseq_Layout/input/example.spec.json",
+    "preview": "S_perturbseq_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "43a441c30384c66ab469caf0313f15ae12982b763fffdedac3332cc19007f765",
+    "svg": "462ffb3ca673f28c456e53b9fda3de520bf97e5691838c246fe43e136bb71938",
+    "pdf": "e287e32eba4bf0a12df4fab6d1caea4e771592f69c68a80dbf5ef9e8064cb13e",
+    "tsv": "b67fce27314cb265904814083827d38a11f5e938097381d4e7eecce377995e19",
+    "spec": "57c67fd6967968a1ba4f5c855fe3903896b925399446f564ac76a15295260599"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 127,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_perturbseq_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "43a441c30384c66ab469caf0313f15ae12982b763fffdedac3332cc19007f765",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: gene-event labels and delta PSI bounds retained, complete guide controls and guide-level estimates visible, and two-column versus larger one-column pages have aligned tables and clear reading order.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

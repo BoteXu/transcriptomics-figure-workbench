@@ -1,0 +1,83 @@
+{
+  "id": "B_alignment_06",
+  "title": "Mapping-quality distributions",
+  "chapters": [
+    "bulk.alignment"
+  ],
+  "stage": "validation",
+  "family": "bins",
+  "variant": false,
+  "large_data": false,
+  "order": 22,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "bins",
+        "title": "Mapping-quality distributions",
+        "x_label": "Mapping quality",
+        "y_label": "Supplied count",
+        "definition": "Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p1"
+      }
+    ],
+    "title": "Mapping-quality distributions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.alignment supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_alignment_06/example.png",
+    "svg": "B_alignment_06/example.svg",
+    "pdf": "B_alignment_06/example.pdf",
+    "tsv": "B_alignment_06/example.tsv",
+    "spec": "B_alignment_06/input/example.spec.json",
+    "preview": "B_alignment_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "aaf5410b2e45a78957398466cf2ee884a9554eb4f7988d010b97e31618768211",
+    "svg": "7109694d364e527329ee340997395d605d87ec89d79091b92fdae4c4daa2a361",
+    "pdf": "61dcd65ab4085795744443b308f6628eb6d3767b5e0c7a385c61d9875e57f811",
+    "tsv": "71fe3c630255478794bd5fa30a3068610f7a0f8fee640e7f3f6c6dbac2867faf",
+    "spec": "f1274aba9dafd602a940c0bdfe71daca9035dd2f4ce5cdf266928d9ab6e29ec0"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 20,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_alignment_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "aaf5410b2e45a78957398466cf2ee884a9554eb4f7988d010b97e31618768211",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG inspected: one-column complete quality/adapter/retention lanes, clear histogram outlines and labels, decreasing filter retention, complete detection matrix and attached legend; no clipping or collapsed guides. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

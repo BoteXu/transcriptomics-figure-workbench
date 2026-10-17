@@ -1,0 +1,113 @@
+{
+  "id": "B_survival_Layout",
+  "title": "Bulk · survival — complementary evidence",
+  "chapters": [
+    "bulk.survival"
+  ],
+  "stage": "layout",
+  "family": "fraction,profile,profile",
+  "variant": true,
+  "large_data": true,
+  "order": 175,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Endpoint and censoring audit",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Endpoint and censoring audit; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "participant_denominator": true,
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "Frozen survival curves and confidence intervals",
+        "x_label": "Follow-up time (months)",
+        "y_label": "Survival probability",
+        "definition": "Frozen survival curves and confidence intervals; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "steps": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "probability": true,
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p2"
+      },
+      {
+        "kind": "profile",
+        "title": "Calibration from a held-out cohort",
+        "x_label": "Supplied predicted risk",
+        "y_label": "Supplied observed risk",
+        "definition": "Calibration from a held-out cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "probability": true,
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · survival — complementary evidence",
+    "context": {
+      "independent_unit": "fictional participants",
+      "independent_n": 80,
+      "method_version": "bulk.survival supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Endpoint and censoring audit; all quantities are supplied frozen channels, with explicitly declared units and scope. | Frozen survival curves and confidence intervals; all quantities are supplied frozen channels, with explicitly declared units and scope. | Calibration from a held-out cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Endpoint and censoring audit; all quantities are supplied frozen channels, with explicitly declared units and scope. | Frozen survival curves and confidence intervals; all quantities are supplied frozen channels, with explicitly declared units and scope. | Calibration from a held-out cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_survival_Layout/example.png",
+    "svg": "B_survival_Layout/example.svg",
+    "pdf": "B_survival_Layout/example.pdf",
+    "tsv": "B_survival_Layout/example.tsv",
+    "spec": "B_survival_Layout/input/example.spec.json",
+    "preview": "B_survival_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "d8ab317bd512e400a6d4fefe11a5771877b9030dbd97adb1f37b64d851d697c5",
+    "svg": "ebb03601a47976e7f604b9898257bd4f5007164adfde49c0bce50cd19635cb5f",
+    "pdf": "d56fcfdc7ae774a2592a8d4f65f2256281ca2850e41677c323900acbf8312da2",
+    "tsv": "55fd003be973f7dd46464d9e7173c152d09ff92744a61e0f67d060a9f405ce27",
+    "spec": "85b8d61b83623068cbef9c96cc13516c4279244a341f0a3b468e2a444d281bf4"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 164.9178784722222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 59,
+    "smallest_pt": 14.006971356893139,
+    "p10_pt": 14.006971356893139,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_survival_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d8ab317bd512e400a6d4fefe11a5771877b9030dbd97adb1f37b64d851d697c5",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual PNG inspected: full effect and cohort tables, log-scale ratio reference, monotone supplied survival steps, calibration identity line and barcode knee/bins remain readable and unclipped in custom layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

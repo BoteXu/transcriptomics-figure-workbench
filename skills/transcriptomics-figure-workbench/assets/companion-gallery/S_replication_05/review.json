@@ -1,0 +1,94 @@
+{
+  "id": "S_replication_05",
+  "title": "Leave-one-cohort stability",
+  "chapters": [
+    "single_cell.replication"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 405,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Leave-one-cohort stability",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Leave-one-cohort stability; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Full cohorts",
+          "Omit cohort A"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Leave-one-cohort stability",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Leave-one-cohort stability; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Leave-one-cohort stability; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_replication_05/example.png",
+    "svg": "S_replication_05/example.svg",
+    "pdf": "S_replication_05/example.pdf",
+    "tsv": "S_replication_05/example.tsv",
+    "spec": "S_replication_05/input/example.spec.json",
+    "preview": "S_replication_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "b1424d4333273472c3f536c640ca83e756d2356dddb3078b446d0157a7527a69",
+    "svg": "5ad3b0f958828c63e0db18941e26c451480eedc9778e8e31c9eec7efa33a2775",
+    "pdf": "cfc7f576bc85053a447c77efef3bc6ead8b6258c45c5ed4309650df81f3ae45e",
+    "tsv": "87061499037a26c57bfe437e3a1000aaf830ac384b05fa300eb1bf8ffb980d93",
+    "spec": "eaaf883e9858da1fb3be555fd466d567f3d4b360059e7b82fb294302c736fda5"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_replication_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b1424d4333273472c3f536c640ca83e756d2356dddb3078b446d0157a7527a69",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Reviewed actual PNGs: common-gene identity and cohort denominators preserved; regional identities, micrometre units, evidence panels and reading layouts legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

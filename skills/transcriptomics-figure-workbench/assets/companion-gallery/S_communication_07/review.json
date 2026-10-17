@@ -1,0 +1,94 @@
+{
+  "id": "S_communication_07",
+  "title": "Signaling effects in an independent cohort",
+  "chapters": [
+    "single_cell.communication"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 349,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Signaling effects in an independent cohort",
+        "x_label": "Donor signaling-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Signaling effects in an independent cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Signaling effects in an independent cohort",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.communication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Signaling effects in an independent cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Signaling effects in an independent cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_communication_07/example.png",
+    "svg": "S_communication_07/example.svg",
+    "pdf": "S_communication_07/example.pdf",
+    "tsv": "S_communication_07/example.tsv",
+    "spec": "S_communication_07/input/example.spec.json",
+    "preview": "S_communication_07/preview.jpg"
+  },
+  "sha256": {
+    "png": "cb2c32be951ed3f5f4c768d31a2c31aefc04c239eaed03a7b45a6550032720ad",
+    "svg": "88c0f6fa0e5f2451966f079ed34f7272f6b31dcf12824140705e9e7409cc698d",
+    "pdf": "761cbac766c8267f923d20994f0cb850f6cf04057d946d2fbaaef2676fab5d93",
+    "tsv": "e2ef6ae357c3afc0b132b5b500740adc3ef13b5e69e655a1a228f138fbcd47ce",
+    "spec": "43986b8731a575d1dfaf448d956b3311d40b489f7d8ec4a2d185b1dd19069a30"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_communication_07",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "cb2c32be951ed3f5f4c768d31a2c31aefc04c239eaed03a7b45a6550032720ad",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed actual exports: ligand-receptor donor denominators, signaling estimates, supplied intervals and independent-cohort n are explicit and legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

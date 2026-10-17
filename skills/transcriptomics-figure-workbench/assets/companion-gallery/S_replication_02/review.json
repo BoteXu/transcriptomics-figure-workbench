@@ -1,0 +1,91 @@
+{
+  "id": "S_replication_02",
+  "title": "T-cell gene-effect concordance",
+  "chapters": [
+    "single_cell.replication"
+  ],
+  "stage": "interpretation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 402,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "T-cell gene-effect concordance",
+        "x_label": "Discovery effect",
+        "y_label": "Replication effect",
+        "definition": "T-cell gene-effect concordance; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "gene",
+        "named_points": true,
+        "annotate": [
+          "STAT1",
+          "IRF7",
+          "COL1A1"
+        ],
+        "id": "p1"
+      }
+    ],
+    "title": "T-cell gene-effect concordance",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "T-cell gene-effect concordance; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "T-cell gene-effect concordance; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_replication_02/example.png",
+    "svg": "S_replication_02/example.svg",
+    "pdf": "S_replication_02/example.pdf",
+    "tsv": "S_replication_02/example.tsv",
+    "spec": "S_replication_02/input/example.spec.json",
+    "preview": "S_replication_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "a9855b68e88fbec0cfdb668e6da75826e3a6c29229fc41ab047053b3124048cc",
+    "svg": "b16dd0a8de50aa63da2bdc29fd99e4fb2f919ba0f1070a8c0e4c683ef5b06f33",
+    "pdf": "f3c7e58d829f4711a05abdd6932dceb3c3f47f039a6592ac20764d77ec1dd8f6",
+    "tsv": "d3de12835dd3e6e0f6976020819ad7c0c123aa7b8647f9c4fe2c29adfefbe7fa",
+    "spec": "3d7ac435812d78528163a86281fadfcde75be538589cd4d92e928aa8f3d17901"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_replication_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a9855b68e88fbec0cfdb668e6da75826e3a6c29229fc41ab047053b3124048cc",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Reviewed actual PNGs: common-gene identity and cohort denominators preserved; regional identities, micrometre units, evidence panels and reading layouts legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

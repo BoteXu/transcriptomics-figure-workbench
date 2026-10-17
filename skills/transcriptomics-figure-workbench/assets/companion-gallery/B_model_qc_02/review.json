@@ -1,0 +1,85 @@
+{
+  "id": "B_model_qc_02",
+  "title": "Quantile diagnostics with frozen reference",
+  "chapters": [
+    "bulk.model_qc"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 64,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Quantile diagnostics with frozen reference",
+        "x_label": "Theoretical quantile",
+        "y_label": "Observed residual quantile",
+        "definition": "Quantile diagnostics with frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Quantile diagnostics with frozen reference",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.model_qc supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Quantile diagnostics with frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Quantile diagnostics with frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_model_qc_02/example.png",
+    "svg": "B_model_qc_02/example.svg",
+    "pdf": "B_model_qc_02/example.pdf",
+    "tsv": "B_model_qc_02/example.tsv",
+    "spec": "B_model_qc_02/input/example.spec.json",
+    "preview": "B_model_qc_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "b788c2cf16c86ce9683a9d3394d1f20cb3d6934e3f28f11c443d2e57c71c1991",
+    "svg": "6a8a3ed9cc588d7b6df2773fbda48dd0b3cd9ae654dae1b5784f618db479e104",
+    "pdf": "7fe5feb5975823134f030177c0c967ceb221d8ff1de80da4d4683d948692c657",
+    "tsv": "9b0bd371992bcef066856930b5305ea16f5fc8e7c238ab377e67c361d61d494d",
+    "spec": "51b85342fdeec8ec7420cd42aa546ac836b9942f5e9d7091f00c169e3f500e7b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_model_qc_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b788c2cf16c86ce9683a9d3394d1f20cb3d6934e3f28f11c443d2e57c71c1991",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected revised PNGs: all supplied interaction effects, donor n, residual signs and monotone QQ positions are legible; expanded reading layouts retain complete panels and aligned uncertainty tables.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

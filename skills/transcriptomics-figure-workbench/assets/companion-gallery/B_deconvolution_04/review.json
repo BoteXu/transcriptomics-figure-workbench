@@ -1,0 +1,85 @@
+{
+  "id": "B_deconvolution_04",
+  "title": "Frozen observed and reconstructed expression",
+  "chapters": [
+    "bulk.deconvolution"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 134,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Frozen observed and reconstructed expression",
+        "x_label": "Observed log expression",
+        "y_label": "Reconstructed log expression",
+        "definition": "Frozen observed and reconstructed expression; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Frozen observed and reconstructed expression",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.deconvolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Frozen observed and reconstructed expression; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Frozen observed and reconstructed expression; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_deconvolution_04/example.png",
+    "svg": "B_deconvolution_04/example.svg",
+    "pdf": "B_deconvolution_04/example.pdf",
+    "tsv": "B_deconvolution_04/example.tsv",
+    "spec": "B_deconvolution_04/input/example.spec.json",
+    "preview": "B_deconvolution_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "ec1e0204833dd8ff14e0cb492c0d8f22877a7491e815a380d0b0bc3ac05e0326",
+    "svg": "9ebde75d471d0d730fb84ce77ae74f118108338615d18df60ed625da159575a1",
+    "pdf": "29da9c0c4f238a280ecfcd108ddba6bf7dcac4ee7c410952d43861230bc00a44",
+    "tsv": "23906e9cbadc6e3e4094373864bc40fcd99b6088784c559e25442e4663a1df3b",
+    "spec": "698349d9a13594f57e52f16be331ea7575c2c1aea58f65da4078110d7870284b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 155.27965885416668,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 14.876385078675838,
+    "p10_pt": 14.876385078675838,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_deconvolution_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ec1e0204833dd8ff14e0cb492c0d8f22877a7491e815a380d0b0bc3ac05e0326",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Nine actual PNGs viewed individually: reconstruction diagnostics and reference-choice estimates; physical exon/junction lane, donor PSI and delta-PSI results, event classes, independent replication and adaptive reading/combined pages. Supplied arc counts and all donor points remain readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

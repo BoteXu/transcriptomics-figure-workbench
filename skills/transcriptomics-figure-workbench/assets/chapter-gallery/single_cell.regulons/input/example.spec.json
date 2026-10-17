@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "710ce2447ee04f8669aa8babc706ca7baf0620dbf6909617765bd3e1139eb302",
+    "sha256": "0ae8862ab4ea0a68492c705a213fa988a54ac0ac306c0306f336949e17687315",
     "numeric_columns": [
       "value",
       "fraction",
@@ -20,7 +20,7 @@
         "title": "Coordinated sample-level patterns",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied score",
+        "value_label": "Standardized regulon activity",
         "limits": [
           -2,
           2
@@ -33,7 +33,7 @@
       {
         "kind": "interval",
         "title": "Donor-level effects and uncertainty",
-        "x_label": "Supplied effect and 95% interval",
+        "x_label": "Standardized activity difference · supplied 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -170,10 +170,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional regulation display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

@@ -1,0 +1,84 @@
+{
+  "id": "B_gsea_multitrack_02",
+  "title": "Complete common ranking statistic",
+  "chapters": [
+    "bulk.gsea_multitrack"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 109,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Complete common ranking statistic",
+        "x_label": "Supplied gene rank",
+        "y_label": "Supplied ranking statistic",
+        "definition": "Complete common ranking statistic; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Complete common ranking statistic",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea_multitrack supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete common ranking statistic; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete common ranking statistic; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_multitrack_02/example.png",
+    "svg": "B_gsea_multitrack_02/example.svg",
+    "pdf": "B_gsea_multitrack_02/example.pdf",
+    "tsv": "B_gsea_multitrack_02/example.tsv",
+    "spec": "B_gsea_multitrack_02/input/example.spec.json",
+    "preview": "B_gsea_multitrack_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "8984fb68985476bfb1090675117644ff62e4b02977ed2acbd9aeb92e7b2d83e8",
+    "svg": "9efa6fd5a7e0be9e0639472c97c608cd81b2174024a628d09ad268bf359b419f",
+    "pdf": "3f03cd9954b01c0a04d2ef1a53cd9d3a8974663cec1d4ccc195e83efddcd98aa",
+    "tsv": "9bbf5a1816cf1424b9a929593117dd807671db431324bcfa686e894ed24398a6",
+    "spec": "288955e474e81f462fe85a5a34877de5a3edcdab2464d92bc7dc81d69221cca8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_multitrack_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "8984fb68985476bfb1090675117644ff62e4b02977ed2acbd9aeb92e7b2d83e8",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG viewed: complete donor/numerical support, explicit uncertainty lanes and separate scale definitions; native GSEA curve remains primary and these provide coverage, ranking and gene-support companions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

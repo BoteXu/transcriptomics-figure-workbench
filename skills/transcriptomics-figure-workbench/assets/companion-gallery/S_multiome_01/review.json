@@ -1,0 +1,84 @@
+{
+  "id": "S_multiome_01",
+  "title": "Paired-modality support within donors",
+  "chapters": [
+    "single_cell.multiome"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 416,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Paired-modality support within donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Paired-modality support within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Paired-modality support within donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.multiome supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Paired-modality support within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Paired-modality support within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multiome_01/example.png",
+    "svg": "S_multiome_01/example.svg",
+    "pdf": "S_multiome_01/example.pdf",
+    "tsv": "S_multiome_01/example.tsv",
+    "spec": "S_multiome_01/input/example.spec.json",
+    "preview": "S_multiome_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "7e967e6d245b8515ffe0e61eddf64849aacc89d283e8114816b9e573012330da",
+    "svg": "3976001bffc5b2c49754ed98d9dd46497136f39d8750321cbcf86de24b8afcc2",
+    "pdf": "68533edba6fe16b29f592464f9df80e8091b67fe353ccc5dfa85cb9f87d24835",
+    "tsv": "ad73f786e74c71c7d2f94b3d9b6a196ca65863abc94f0bb2f1d24685e0f9463e",
+    "spec": "d5d26a0259edc5afae5d80ad9b0af2d4cb61b856ec53cacbfedd9faf99f20b46"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multiome_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7e967e6d245b8515ffe0e61eddf64849aacc89d283e8114816b9e573012330da",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: complete paired-modality denominators, standardized separate QC channels, signed RNA/motif/accessibility evidence and physical locus tracks are readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

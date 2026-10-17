@@ -1,0 +1,87 @@
+{
+  "id": "B_connectivity_04",
+  "title": "Prespecified dose-response summaries",
+  "chapters": [
+    "bulk.connectivity"
+  ],
+  "stage": "extension",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 186,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Prespecified dose-response summaries",
+        "x_label": "Dose (declared unit)",
+        "y_label": "Supplied connection score",
+        "definition": "Prespecified dose-response summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified dose-response summaries",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.connectivity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified dose-response summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified dose-response summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_connectivity_04/example.png",
+    "svg": "B_connectivity_04/example.svg",
+    "pdf": "B_connectivity_04/example.pdf",
+    "tsv": "B_connectivity_04/example.tsv",
+    "spec": "B_connectivity_04/input/example.spec.json",
+    "preview": "B_connectivity_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "e183d1ac805290f659ad044e92b1b175716682e29df513ff9019b772066aecbc",
+    "svg": "508f50fa80ec78b24161e301db7adf48ec46ea5516c652a1604d160a789555a9",
+    "pdf": "869a4da0d04fa701caeb0da140e310455b07b0d8a9fd9c4fd2df60d901f47833",
+    "tsv": "17797669bd6a506ef8feac7be8a94e0388a899c20a1365ddd5762352231b4be3",
+    "spec": "8eb251b5acbf3deaf64f385b9b971c3e4043730fbd5f286c200f3c0aae4cdec2"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_connectivity_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e183d1ac805290f659ad044e92b1b175716682e29df513ff9019b772066aecbc",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected final PNGs: complete selected PPI rectangle and effect rows remain readable; connectivity support, dose profiles and replication rows have visible channels; noncoding mapping, effect, donor distributions, evidence classes and cohort rows have clear labels. No clipping or collisions in single or expanded layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,85 @@
+{
+  "id": "B_splicing_04",
+  "title": "Event coverage and missing donor support",
+  "chapters": [
+    "bulk.splicing"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 141,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Event coverage and missing donor support",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Event coverage and missing donor support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "donor_denominator": true,
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Event coverage and missing donor support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.splicing supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Event coverage and missing donor support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Event coverage and missing donor support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_splicing_04/example.png",
+    "svg": "B_splicing_04/example.svg",
+    "pdf": "B_splicing_04/example.pdf",
+    "tsv": "B_splicing_04/example.tsv",
+    "spec": "B_splicing_04/input/example.spec.json",
+    "preview": "B_splicing_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "84730fc0064ffaf2968fea833352d975477988c3dc2f152f3bf8acbc663caab2",
+    "svg": "d453f6b55b15b9a8b1bf2d413dd7ccfa6a99a3b20cf8f16ad07814571c0b2dbe",
+    "pdf": "a280cb2b3f70adac6e685b01f3406ca0ab03ce95f23067fda06747a7930fdfd6",
+    "tsv": "9a28c02710d505b394ddb25289e8bcf2b66676999be4b1959dd6e47268cfdc5d",
+    "spec": "27e72f61fc0e102baa1f6b9139e8a47f91772e2bcf7c0036bf1f78925c3dfcff"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_splicing_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "84730fc0064ffaf2968fea833352d975477988c3dc2f152f3bf8acbc663caab2",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: aligned effect intervals and q/n tables, full donor-denominator bars, distinct STAT1 transcript structures and readable multirow layouts; fictional drawing channels, no biological validation claimed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

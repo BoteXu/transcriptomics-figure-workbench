@@ -1,0 +1,95 @@
+{
+  "id": "S_communication_05",
+  "title": "Changes in outgoing and incoming roles",
+  "chapters": [
+    "single_cell.communication"
+  ],
+  "stage": "interpretation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 347,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Changes in outgoing and incoming roles",
+        "x_label": "Supplied outgoing change",
+        "y_label": "Supplied incoming change",
+        "definition": "Changes in outgoing and incoming roles; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "declared sender or receiver identity",
+        "identity_points": true,
+        "show_labels": true,
+        "zero_reference": true,
+        "annotate": [
+          "T cells",
+          "B cells",
+          "Myeloid",
+          "Stromal",
+          "Endothelial",
+          "NK cells"
+        ],
+        "id": "p1"
+      }
+    ],
+    "title": "Changes in outgoing and incoming roles",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.communication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Changes in outgoing and incoming roles; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Changes in outgoing and incoming roles; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_communication_05/example.png",
+    "svg": "S_communication_05/example.svg",
+    "pdf": "S_communication_05/example.pdf",
+    "tsv": "S_communication_05/example.tsv",
+    "spec": "S_communication_05/input/example.spec.json",
+    "preview": "S_communication_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "cca8def614beae25a234a257062ef3702b1cf5cbdb5e6e0bd8d59187a6a26b1b",
+    "svg": "319913268ebb0790dde68c2396b37f5fdf6cce799a446c339a7dbb774a0856f5",
+    "pdf": "916fc099243505d07ea244adccc0a57bfae950239dc0f367d4c6c79e2a4c6286",
+    "tsv": "381ae989689e1135ed7ae0c827562435d3e29cbb52d217d51ccf645a20980d72",
+    "spec": "97eaeba59ec13914fbce8386c4bc084955ee0fa5904f3de2006c6d0dd129c839"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 29,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_communication_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "cca8def614beae25a234a257062ef3702b1cf5cbdb5e6e0bd8d59187a6a26b1b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: velocity phase/profile/sensitivity and communication expression/contribution/role views retain declared scales and comparison labels; direct role labels, zero references and aligned numeric companions are readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

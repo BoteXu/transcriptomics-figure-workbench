@@ -1,0 +1,89 @@
+{
+  "id": "B_design_04",
+  "title": "Missing covariate audit",
+  "chapters": [
+    "bulk.design"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 3,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Missing covariate audit",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Missing covariate audit; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit missing indicator",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Missing covariate audit",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.design supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Missing covariate audit; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Missing covariate audit; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_design_04/example.png",
+    "svg": "B_design_04/example.svg",
+    "pdf": "B_design_04/example.pdf",
+    "tsv": "B_design_04/example.tsv",
+    "spec": "B_design_04/input/example.spec.json",
+    "preview": "B_design_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "6435888fc18ae5cb8903438bc0cec5915027cf7e1ef39af10b490f6be23a6765",
+    "svg": "211d295b262a5db1ac0d93f4d1d0485fdc0dfc714e370b44928281c8c98f3ffd",
+    "pdf": "3e6c944b0a564d3853b59e707b1ba290c59c5860854979b489426626508e2ce2",
+    "tsv": "b6cebab9b08325ef87d5028497edde0f999564d8ce3d3c73fa8d289302cee124",
+    "spec": "62df48bb093d3623d58bb1090bc005c218f29f5b600c48dc789cf4a729791f7c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_design_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6435888fc18ae5cb8903438bc0cec5915027cf7e1ef39af10b490f6be23a6765",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual single/composite PNG inspected: complete coded covariates and explicit missingness, attached scale, aligned library fractions with totals, readable sensitivity table, and clear ribbon semantics. Both expanded one-column and wide three-column versions retain all labels and guides. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

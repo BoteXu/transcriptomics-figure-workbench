@@ -1,0 +1,85 @@
+{
+  "id": "S_communication_06",
+  "title": "Ligand–receptor support across donors",
+  "chapters": [
+    "single_cell.communication"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 348,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Ligand–receptor support across donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Ligand–receptor support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "donor_denominator": true,
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Ligand–receptor support across donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.communication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Ligand–receptor support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Ligand–receptor support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_communication_06/example.png",
+    "svg": "S_communication_06/example.svg",
+    "pdf": "S_communication_06/example.pdf",
+    "tsv": "S_communication_06/example.tsv",
+    "spec": "S_communication_06/input/example.spec.json",
+    "preview": "S_communication_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "dbebbe9348c51b4306db141d7d1cbf7b02898b9bbd46866b418669cedbabadd3",
+    "svg": "1ecb7439f649e7537e689ba6963522c985a762a1ec4a0bac9e27ee525323d38a",
+    "pdf": "6af7da3f7345b64944a571fb253b55ee5bd254b16a193ac858e564cd5709ce85",
+    "tsv": "51688d3c13297e05c595ea3d5e13a849b7077ae11b391e6cda455716271e2d1e",
+    "spec": "97b42837ab00201c8d7825e970ecb7d3f24a2042e64f207b1feaf589ae15714a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_communication_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "dbebbe9348c51b4306db141d7d1cbf7b02898b9bbd46866b418669cedbabadd3",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed actual exports: ligand-receptor donor denominators, signaling estimates, supplied intervals and independent-cohort n are explicit and legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

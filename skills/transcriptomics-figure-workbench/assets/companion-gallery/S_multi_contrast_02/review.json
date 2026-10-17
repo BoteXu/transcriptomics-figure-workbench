@@ -1,0 +1,88 @@
+{
+  "id": "S_multi_contrast_02",
+  "title": "Complete signed effect atlas",
+  "chapters": [
+    "single_cell.multi_contrast"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 300,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Complete signed effect atlas",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Complete signed effect atlas; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied log2 fold change",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Complete signed effect atlas",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.multi_contrast supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete signed effect atlas; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete signed effect atlas; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multi_contrast_02/example.png",
+    "svg": "S_multi_contrast_02/example.svg",
+    "pdf": "S_multi_contrast_02/example.pdf",
+    "tsv": "S_multi_contrast_02/example.tsv",
+    "spec": "S_multi_contrast_02/input/example.spec.json",
+    "preview": "S_multi_contrast_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "fefacc24f0dfe99b40ae465108587c002e51b9e46941522ab8fd04aa583f336d",
+    "svg": "9504abc6f89cce3b399060759fc1b57d274301dcf12e984061547dff48b8fc8d",
+    "pdf": "19b1d3970fac9fdbb49263305eeef956bec7ffb81e4e8b67170947be8ac9d060",
+    "tsv": "c1e04adee516c004676df0aa2cb7c043b35cc15b881748b0c688c4569eb9d2c7",
+    "spec": "8c016aa27737267437ceb561c4702fe6e7a02e731811df4129d381f1d1976f19"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.7727893724176,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 13.526745147685103,
+    "p10_pt": 13.526745147685103,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multi_contrast_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "fefacc24f0dfe99b40ae465108587c002e51b9e46941522ab8fd04aa583f336d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: pseudobulk omission support, multi-contrast independent counts and signed effects, pathway coverage/NES/membership have visible units and readable legends in full-data custom pages.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

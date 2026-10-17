@@ -1,0 +1,105 @@
+{
+  "id": "B_alignment_Evidence",
+  "title": "Bulk · alignment — complementary evidence",
+  "chapters": [
+    "bulk.alignment"
+  ],
+  "stage": "interpretation",
+  "family": "fraction,profile,bins",
+  "variant": true,
+  "large_data": false,
+  "order": 23,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Complete mapping categories",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "Gene-body coverage by library",
+        "x_label": "Relative gene position",
+        "y_label": "Normalized coverage",
+        "definition": "Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "gene",
+        "id": "p2"
+      },
+      {
+        "kind": "bins",
+        "title": "Mapping-quality distributions",
+        "x_label": "Mapping quality",
+        "y_label": "Supplied count",
+        "definition": "Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · alignment — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.alignment supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope. | Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope. | Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope. | Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope. | Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "x",
+    "y",
+    "start",
+    "end",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_alignment_Evidence/example.png",
+    "svg": "B_alignment_Evidence/example.svg",
+    "pdf": "B_alignment_Evidence/example.pdf",
+    "tsv": "B_alignment_Evidence/example.tsv",
+    "spec": "B_alignment_Evidence/input/example.spec.json",
+    "preview": "B_alignment_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "0951f1856deb6ccc2ec9b530fa2638a55b2f600c35db568558e34d992c7e3027",
+    "svg": "762a1623a9e67fad90798d06dd8055fa214cfdefbee41591381f4a0aa32ffd6a",
+    "pdf": "ca4aeaa842140887f444c547e8a99f2c6da4f00b982a3caed61f8b6971a893be",
+    "tsv": "6119a5623c0d85fc57767635283b8dbda7d14274ef8dc276f11514f3a97d9c26",
+    "spec": "4741a7a0beb42dd7747eef921ab7d435b9d1b00b6eec57940682a89fe8f2dfd0"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 66,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_alignment_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0951f1856deb6ccc2ec9b530fa2638a55b2f600c35db568558e34d992c7e3027",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Every updated PNG individually viewed: named STAT1 log2 estimand, dedicated aligned effect table, complete donor/covariate support and readable one/three-column layouts. Library coverage now has matching library labels; full histogram outlines and all class fractions retained. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

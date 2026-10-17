@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.9.7",
+  "version": "0.10.0",
   "suites": [
     {
       "id": "bulk.design",
@@ -8,14 +8,49 @@
       "title": "Design and independent units",
       "assay": "bulk",
       "primary_views": [
+        "B_design_01",
+        "B_design_02",
+        "B_design_03",
+        "B_design_04",
+        "B_design_05",
         "bulk.design.p1",
         "bulk.design.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_design_Evidence",
+        "B_design_Layout",
+        "B_design_ThreeColumns"
+      ],
       "required_results": [
         "sample_covariates",
         "library_counts"
       ],
+      "coverage": {
+        "qc": [
+          "B_design_01",
+          "B_design_02",
+          "B_design_03",
+          "B_design_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_design_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_design_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_design_Layout",
+          "B_design_ThreeColumns"
+        ],
+        "chapter": [
+          "bulk.design.p1",
+          "bulk.design.p2"
+        ]
+      },
+      "required_context": "Review design rank, pairing and confounding; technical libraries do not increase biological n.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -25,14 +60,51 @@
       "title": "Read quality and sequence composition",
       "assay": "bulk",
       "primary_views": [
+        "B_reads_01",
+        "B_reads_02",
+        "B_reads_03",
+        "B_reads_04",
+        "B_reads_05",
+        "B_reads_06",
+        "B_reads_07",
         "bulk.reads.p1",
         "bulk.reads.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_reads_Evidence",
+        "B_reads_Layout"
+      ],
       "required_results": [
         "base_quality",
         "read_classes"
       ],
+      "coverage": {
+        "qc": [
+          "B_reads_01",
+          "B_reads_02",
+          "B_reads_03",
+          "B_reads_04",
+          "B_reads_05",
+          "B_reads_06"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_reads_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_reads_07"
+        ],
+        "extension": [],
+        "layout": [
+          "B_reads_Layout"
+        ],
+        "chapter": [
+          "bulk.reads.p1",
+          "bulk.reads.p2"
+        ]
+      },
+      "required_context": "Complete base positions and all read classes; no silent removal of failed libraries.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -42,14 +114,49 @@
       "title": "Alignment and gene-body coverage",
       "assay": "bulk",
       "primary_views": [
+        "B_alignment_01",
+        "B_alignment_02",
+        "B_alignment_03",
+        "B_alignment_04",
+        "B_alignment_05",
+        "B_alignment_06",
         "bulk.alignment.p1",
         "bulk.alignment.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_alignment_Evidence",
+        "B_alignment_Layout"
+      ],
       "required_results": [
         "alignment_classes",
         "gene_body_coverage"
       ],
+      "coverage": {
+        "qc": [
+          "B_alignment_01",
+          "B_alignment_02",
+          "B_alignment_03",
+          "B_alignment_04",
+          "B_alignment_05"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_alignment_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_alignment_06"
+        ],
+        "extension": [],
+        "layout": [
+          "B_alignment_Layout"
+        ],
+        "chapter": [
+          "bulk.alignment.p1",
+          "bulk.alignment.p2"
+        ]
+      },
+      "required_context": "Reference build, strandedness and assay must match; coverage is not expression.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -59,14 +166,47 @@
       "title": "Detection and filtering sensitivity",
       "assay": "bulk",
       "primary_views": [
+        "B_filtering_01",
+        "B_filtering_02",
+        "B_filtering_03",
+        "B_filtering_05",
+        "B_filtering_04",
         "bulk.filtering.p1",
         "bulk.filtering.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_filtering_Evidence",
+        "B_filtering_Layout"
+      ],
       "required_results": [
         "threshold_profile",
         "retained_feature_counts"
       ],
+      "coverage": {
+        "qc": [
+          "B_filtering_01",
+          "B_filtering_02",
+          "B_filtering_03",
+          "B_filtering_05"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_filtering_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_filtering_04"
+        ],
+        "extension": [],
+        "layout": [
+          "B_filtering_Layout"
+        ],
+        "chapter": [
+          "bulk.filtering.p1",
+          "bulk.filtering.p2"
+        ]
+      },
+      "required_context": "Freeze tested universe and rule; do not choose thresholds for more discoveries.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -76,14 +216,47 @@
       "title": "Normalization and mean-variance diagnostics",
       "assay": "bulk",
       "primary_views": [
+        "B_normalization_01",
+        "B_normalization_02",
+        "B_normalization_03",
+        "B_normalization_04",
+        "B_normalization_05",
         "bulk.normalization.p1",
         "bulk.normalization.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_normalization_Evidence",
+        "B_normalization_Layout"
+      ],
       "required_results": [
         "rle_density",
         "mean_variance"
       ],
+      "coverage": {
+        "qc": [
+          "B_normalization_01",
+          "B_normalization_02",
+          "B_normalization_03",
+          "B_normalization_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_normalization_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_normalization_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_normalization_Layout"
+        ],
+        "chapter": [
+          "bulk.normalization.p1",
+          "bulk.normalization.p2"
+        ]
+      },
+      "required_context": "Declare RLE/reference and transformed scale; drawing never estimates density or normalization.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -93,15 +266,47 @@
       "title": "Sample architecture and batch coverage",
       "assay": "bulk",
       "primary_views": [
+        "B_batch_01",
+        "B_batch_02",
+        "B_batch_03",
+        "B_batch_04",
+        "B_batch_05",
         "bulk.batch.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_batch_Evidence",
+        "B_batch_Layout"
+      ],
       "required_results": [
         "embedding",
         "ellipse_geometry",
         "marginal_counts",
         "variance_profile"
       ],
+      "coverage": {
+        "qc": [
+          "B_batch_01",
+          "B_batch_02",
+          "B_batch_03"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_batch_04",
+          "B_batch_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_batch_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_batch_Layout"
+        ],
+        "chapter": [
+          "bulk.batch.complete"
+        ]
+      },
+      "required_context": "Ellipse meaning and all samples required; separation does not establish successful batch correction.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -111,16 +316,55 @@
       "title": "Differential expression with full distributions",
       "assay": "bulk",
       "primary_views": [
+        "B_differential_01",
+        "B_differential_02",
+        "B_differential_03",
+        "B_differential_04",
+        "B_differential_05",
+        "B_differential_06",
+        "B_differential_07",
         "bulk.differential.complete",
         "Method_N06"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_differential_Evidence",
+        "B_differential_Layout",
+        "B_differential_ThreeColumns"
+      ],
       "required_results": [
         "complete_de",
         "effect",
         "p_adj",
         "marginal_counts"
       ],
+      "coverage": {
+        "qc": [
+          "B_differential_01",
+          "B_differential_02"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_differential_03",
+          "B_differential_04",
+          "B_differential_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_differential_05",
+          "B_differential_06",
+          "B_differential_07"
+        ],
+        "extension": [],
+        "layout": [
+          "B_differential_Layout",
+          "B_differential_ThreeColumns"
+        ],
+        "chapter": [
+          "bulk.differential.complete",
+          "Method_N06"
+        ]
+      },
+      "required_context": "Freeze contrast, independent units and FDR family; no selected-gene-only volcano.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -130,14 +374,47 @@
       "title": "Interactions across conditions and time",
       "assay": "bulk",
       "primary_views": [
+        "B_interaction_01",
+        "B_interaction_02",
+        "B_interaction_03",
+        "B_interaction_04",
+        "B_interaction_05",
         "bulk.interaction.p1",
         "bulk.interaction.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_interaction_Evidence",
+        "B_interaction_Layout"
+      ],
       "required_results": [
         "interaction_effects",
         "model_predictions"
       ],
+      "coverage": {
+        "qc": [
+          "B_interaction_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_interaction_02",
+          "B_interaction_03",
+          "B_interaction_04",
+          "B_interaction_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_interaction_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_interaction_Layout"
+        ],
+        "chapter": [
+          "bulk.interaction.p1",
+          "bulk.interaction.p2"
+        ]
+      },
+      "required_context": "Require a same-study factorial design and estimable interaction; separate cohorts cannot identify interaction.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -147,6 +424,11 @@
       "title": "Model fit and influence diagnostics",
       "assay": "bulk",
       "primary_views": [
+        "B_model_qc_01",
+        "B_model_qc_02",
+        "B_model_qc_03",
+        "B_model_qc_04",
+        "B_model_qc_05",
         "bulk.model_qc.p1",
         "bulk.model_qc.p2",
         "Method_M11b",
@@ -154,12 +436,44 @@
         "Method_M11c",
         "Method_M11d"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_model_qc_Evidence",
+        "B_model_qc_Layout"
+      ],
       "required_results": [
         "residuals",
         "dispersion_curve",
         "influence"
       ],
+      "coverage": {
+        "qc": [
+          "B_model_qc_01",
+          "B_model_qc_02",
+          "B_model_qc_03",
+          "B_model_qc_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_model_qc_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_model_qc_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_model_qc_Layout"
+        ],
+        "chapter": [
+          "bulk.model_qc.p1",
+          "bulk.model_qc.p2",
+          "Method_M11b",
+          "Method_M11a",
+          "Method_M11c",
+          "Method_M11d"
+        ]
+      },
+      "required_context": "Use actual fitted-model residuals and influential observations; a model is not accepted by a pretty plot.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -169,14 +483,48 @@
       "title": "Gene programs and selected effects",
       "assay": "bulk",
       "primary_views": [
+        "B_programs_01",
+        "B_programs_02",
+        "B_programs_03",
+        "B_programs_05",
+        "B_programs_04",
         "bulk.programs.p1",
         "bulk.programs.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_programs_Evidence",
+        "B_programs_Layout"
+      ],
       "required_results": [
         "selected_expression",
         "effect_intervals"
       ],
+      "coverage": {
+        "qc": [
+          "B_programs_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_programs_02",
+          "B_programs_03",
+          "B_programs_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_programs_05"
+        ],
+        "extension": [
+          "B_programs_04"
+        ],
+        "layout": [
+          "B_programs_Layout"
+        ],
+        "chapter": [
+          "bulk.programs.p1",
+          "bulk.programs.p2"
+        ]
+      },
+      "required_context": "Freeze selection and scale; interval level and denominator must be declared.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -186,15 +534,51 @@
       "title": "ORA themes, ratios and supporting genes",
       "assay": "bulk",
       "primary_views": [
+        "B_ora_01",
+        "B_ora_04",
+        "B_ora_02",
+        "B_ora_03",
+        "B_ora_06",
+        "B_ora_05",
         "bulk.ora.complete",
         "Method_N06"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_ora_Evidence",
+        "B_ora_Layout"
+      ],
       "required_results": [
         "term_ratio",
         "term_fdr",
         "gene_term_membership"
       ],
+      "coverage": {
+        "qc": [
+          "B_ora_01",
+          "B_ora_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_ora_02",
+          "B_ora_Evidence"
+        ],
+        "function": [
+          "B_ora_03",
+          "B_ora_06"
+        ],
+        "validation": [
+          "B_ora_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_ora_Layout"
+        ],
+        "chapter": [
+          "bulk.ora.complete",
+          "Method_N06"
+        ]
+      },
+      "required_context": "Actual tested background and mapping versions required; ORA does not establish activity direction.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -204,9 +588,19 @@
       "title": "Full GSEA tracks and leading edge",
       "assay": "bulk",
       "primary_views": [
+        "B_gsea_01",
+        "B_gsea_02",
+        "B_gsea_03",
+        "B_gsea_04",
+        "B_gsea_05",
+        "B_gsea_06",
         "bulk.gsea.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_gsea_Evidence",
+        "B_gsea_Layout",
+        "B_gsea_ThreeColumns"
+      ],
       "required_results": [
         "complete_rank_curve",
         "rank_metric",
@@ -215,6 +609,33 @@
         "NES",
         "FDR"
       ],
+      "coverage": {
+        "qc": [
+          "B_gsea_01",
+          "B_gsea_02"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_gsea_03",
+          "B_gsea_Evidence"
+        ],
+        "function": [
+          "B_gsea_04"
+        ],
+        "validation": [
+          "B_gsea_05",
+          "B_gsea_06"
+        ],
+        "extension": [],
+        "layout": [
+          "B_gsea_Layout",
+          "B_gsea_ThreeColumns"
+        ],
+        "chapter": [
+          "bulk.gsea.complete"
+        ]
+      },
+      "required_context": "Full signed ranked universe, ties and gene-set version required; never reconstruct a curve from NES.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -224,15 +645,49 @@
       "title": "Pathway enrichment across contrasts",
       "assay": "bulk",
       "primary_views": [
+        "B_pathway_contrasts_01",
         "GSVA_AdjustedPathwayContrasts",
+        "B_pathway_contrasts_02",
+        "B_pathway_contrasts_04",
+        "B_pathway_contrasts_03",
+        "B_pathway_contrasts_05",
         "bulk.pathway_contrasts.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_pathway_contrasts_Evidence",
+        "B_pathway_contrasts_Layout"
+      ],
       "required_results": [
         "NES_grid",
         "FDR_grid",
         "set_coverage"
       ],
+      "coverage": {
+        "qc": [
+          "B_pathway_contrasts_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "GSVA_AdjustedPathwayContrasts",
+          "B_pathway_contrasts_02",
+          "B_pathway_contrasts_04",
+          "B_pathway_contrasts_Evidence"
+        ],
+        "function": [
+          "B_pathway_contrasts_03"
+        ],
+        "validation": [
+          "B_pathway_contrasts_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_pathway_contrasts_Layout"
+        ],
+        "chapter": [
+          "bulk.pathway_contrasts.complete"
+        ]
+      },
+      "required_context": "Keep not-tested distinct from nonsignificant; cross-contrast effect and FDR families must be explicit.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -242,15 +697,49 @@
       "title": "Pathway membership and signed gene evidence",
       "assay": "bulk",
       "primary_views": [
+        "B_gene_support_01",
+        "B_gene_support_02",
+        "B_gene_support_03",
+        "B_gene_support_04",
+        "B_gene_support_05",
         "bulk.gene_support.complete",
         "Method_E08"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_gene_support_Evidence",
+        "B_gene_support_Layout"
+      ],
       "required_results": [
         "term_overlap",
         "gene_term_membership",
         "gene_effects"
       ],
+      "coverage": {
+        "qc": [
+          "B_gene_support_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_gene_support_02",
+          "B_gene_support_03",
+          "B_gene_support_Evidence"
+        ],
+        "function": [
+          "B_gene_support_04"
+        ],
+        "validation": [
+          "B_gene_support_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_gene_support_Layout"
+        ],
+        "chapter": [
+          "bulk.gene_support.complete",
+          "Method_E08"
+        ]
+      },
+      "required_context": "Absence of membership differs from missing annotation; selection and background must be frozen.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -260,9 +749,17 @@
       "title": "Multiple GSEA curves with complete rank tracks",
       "assay": "bulk",
       "primary_views": [
+        "B_gsea_multitrack_01",
+        "B_gsea_multitrack_02",
+        "B_gsea_multitrack_03",
+        "B_gsea_multitrack_04",
+        "B_gsea_multitrack_05",
         "bulk.gsea_multitrack.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_gsea_multitrack_Evidence",
+        "B_gsea_multitrack_Layout"
+      ],
       "required_results": [
         "complete_curves",
         "rank_metric",
@@ -271,6 +768,31 @@
         "NES",
         "FDR"
       ],
+      "coverage": {
+        "qc": [
+          "B_gsea_multitrack_01",
+          "B_gsea_multitrack_02"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_gsea_multitrack_03",
+          "B_gsea_multitrack_Evidence"
+        ],
+        "function": [
+          "B_gsea_multitrack_04"
+        ],
+        "validation": [
+          "B_gsea_multitrack_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_gsea_multitrack_Layout"
+        ],
+        "chapter": [
+          "bulk.gsea_multitrack.complete"
+        ]
+      },
+      "required_context": "Every curve and rank is supplied; no invented ES curve, recomputed FDR or selected-rank truncation.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -280,17 +802,55 @@
       "title": "Sample-level gene-set scoring",
       "assay": "bulk",
       "primary_views": [
+        "B_gsva_01",
         "GSVA_DonorScoreDistributions",
         "GSVA_AdjustedPathwayContrasts",
+        "B_gsva_02",
+        "B_gsva_03",
+        "B_gsva_04",
+        "B_gsva_06",
+        "B_gsva_05",
         "bulk.gsva.p1",
         "bulk.gsva.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_gsva_Evidence",
+        "B_gsva_Layout"
+      ],
       "required_results": [
         "sample_scores",
         "coverage",
         "score_effects"
       ],
+      "coverage": {
+        "qc": [
+          "B_gsva_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "GSVA_DonorScoreDistributions",
+          "GSVA_AdjustedPathwayContrasts",
+          "B_gsva_02",
+          "B_gsva_03",
+          "B_gsva_04",
+          "B_gsva_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_gsva_06"
+        ],
+        "extension": [
+          "B_gsva_05"
+        ],
+        "layout": [
+          "B_gsva_Layout"
+        ],
+        "chapter": [
+          "bulk.gsva.p1",
+          "bulk.gsva.p2"
+        ]
+      },
+      "required_context": "GSVA/ssGSEA scale and subsequent donor-level model differ; do not interpret scores as absolute activity.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -343,6 +903,60 @@
         "preservation",
         "fixed_network"
       ],
+      "coverage": {
+        "qc": [
+          "WGCNA_SampleTree",
+          "SoftPower_CompleteDiagnostics",
+          "WGCNA_SoftPower"
+        ],
+        "network": [
+          "Modules_GenePartition",
+          "TOM_AlignedHierarchy",
+          "WGCNA_ModuleTree",
+          "WGCNA_EigengeneNetwork",
+          "Eigengenes_MergeHierarchy",
+          "WGCNA_TOM",
+          "WGCNA_TOM_Dissimilarity"
+        ],
+        "interpretation": [
+          "Hubs_CoexpressionNeighborhoods",
+          "Eigengenes_DonorContrasts",
+          "Modules_ExpressionAndEigengenes",
+          "Eigengenes_ContinuousTrait",
+          "Eigengenes_DonorRainclouds",
+          "WGCNA_ModuleTrait",
+          "WGCNA_MM_GS",
+          "WGCNA_HubConnectivity",
+          "WGCNA_MM_GS_Absolute",
+          "WGCNA_EigengeneProfiles"
+        ],
+        "function": [
+          "Modules_FunctionAndGeneSupport"
+        ],
+        "validation": [
+          "Modules_CrossCohortOverlap",
+          "Connectivity_ReferenceAndChange",
+          "Modules_SensitivityAndStability",
+          "Modules_ProjectionSupport",
+          "Preservation_Attributes",
+          "WGCNA_Preservation"
+        ],
+        "extension": [
+          "Modules_BranchDynamics"
+        ],
+        "layout": [
+          "Layout_OneModule_8Donors",
+          "Layout_ThreeModules_OneColumn",
+          "Layout_ThreeModules_ThreeColumns",
+          "Layout_Expression_OneColumn",
+          "Layout_Contrasts_OneColumn",
+          "Layout_Enrichment_12Modules"
+        ],
+        "chapter": [
+          "bulk.wgcna.complete"
+        ]
+      },
+      "required_context": "Freeze module assignment and test/train cohorts; coexpression does not prove regulation.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -352,17 +966,56 @@
       "title": "Transcription-factor footprints",
       "assay": "bulk",
       "primary_views": [
+        "B_tf_activity_01",
         "TF_ActivityContrasts",
+        "B_tf_activity_02",
+        "B_tf_activity_03",
+        "B_tf_activity_05",
+        "B_tf_activity_04",
+        "B_tf_activity_06",
         "Regulons_DirectedTargetEvidence",
         "bulk.tf_activity.p1",
         "bulk.tf_activity.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_tf_activity_Evidence",
+        "B_tf_activity_Layout"
+      ],
       "required_results": [
         "TF_activity",
         "TF_effects",
         "targets"
       ],
+      "coverage": {
+        "qc": [
+          "B_tf_activity_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "TF_ActivityContrasts",
+          "B_tf_activity_02",
+          "B_tf_activity_03",
+          "B_tf_activity_05",
+          "B_tf_activity_Evidence"
+        ],
+        "function": [
+          "B_tf_activity_04"
+        ],
+        "validation": [
+          "B_tf_activity_06"
+        ],
+        "extension": [
+          "Regulons_DirectedTargetEvidence"
+        ],
+        "layout": [
+          "B_tf_activity_Layout"
+        ],
+        "chapter": [
+          "bulk.tf_activity.p1",
+          "bulk.tf_activity.p2"
+        ]
+      },
+      "required_context": "Record regulon/sign and coverage; inferred activity is not direct binding evidence.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -372,14 +1025,47 @@
       "title": "Cell-mixture estimates and uncertainty",
       "assay": "bulk",
       "primary_views": [
+        "B_deconvolution_01",
+        "B_deconvolution_04",
+        "B_deconvolution_02",
+        "B_deconvolution_03",
+        "B_deconvolution_05",
         "bulk.deconvolution.p1",
         "bulk.deconvolution.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_deconvolution_Evidence",
+        "B_deconvolution_Layout"
+      ],
       "required_results": [
         "sample_fractions",
         "fraction_effects"
       ],
+      "coverage": {
+        "qc": [
+          "B_deconvolution_01",
+          "B_deconvolution_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_deconvolution_02",
+          "B_deconvolution_03",
+          "B_deconvolution_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_deconvolution_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_deconvolution_Layout"
+        ],
+        "chapter": [
+          "bulk.deconvolution.p1",
+          "bulk.deconvolution.p2"
+        ]
+      },
+      "required_context": "Declare reference and compositional denominator; model fractions are not measured cell counts.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -389,18 +1075,56 @@
       "title": "Alternative splicing and junction support",
       "assay": "bulk",
       "primary_views": [
+        "B_splicing_01",
+        "B_splicing_04",
         "Splicing_DonorPSIDistributions",
+        "B_splicing_02",
+        "B_splicing_03",
+        "B_splicing_05",
+        "B_splicing_06",
         "bulk.splicing.p1",
         "bulk.splicing.p2",
         "bulk.splicing.p3",
         "Method_E43"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_splicing_Evidence",
+        "B_splicing_Layout"
+      ],
       "required_results": [
         "junction_coverage",
         "delta_PSI",
         "isoform_usage"
       ],
+      "coverage": {
+        "qc": [
+          "B_splicing_01",
+          "B_splicing_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "Splicing_DonorPSIDistributions",
+          "B_splicing_02",
+          "B_splicing_03",
+          "B_splicing_05",
+          "B_splicing_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_splicing_06"
+        ],
+        "extension": [],
+        "layout": [
+          "B_splicing_Layout"
+        ],
+        "chapter": [
+          "bulk.splicing.p1",
+          "bulk.splicing.p2",
+          "bulk.splicing.p3",
+          "Method_E43"
+        ]
+      },
+      "required_context": "Freeze event coordinates/build and donor support; gene DE and splicing are distinct tests.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -410,15 +1134,52 @@
       "title": "Differential transcript usage",
       "assay": "bulk",
       "primary_views": [
+        "B_dtu_01",
+        "B_dtu_02",
+        "B_dtu_03",
+        "B_dtu_05",
+        "B_dtu_04",
+        "B_dtu_06",
         "bulk.dtu.p1",
         "bulk.dtu.p2",
         "Method_E43"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_dtu_Evidence",
+        "B_dtu_Layout"
+      ],
       "required_results": [
         "transcript_fractions",
         "usage_intervals"
       ],
+      "coverage": {
+        "qc": [
+          "B_dtu_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_dtu_02",
+          "B_dtu_03",
+          "B_dtu_05",
+          "B_dtu_Evidence"
+        ],
+        "function": [
+          "B_dtu_04"
+        ],
+        "validation": [
+          "B_dtu_06"
+        ],
+        "extension": [],
+        "layout": [
+          "B_dtu_Layout"
+        ],
+        "chapter": [
+          "bulk.dtu.p1",
+          "bulk.dtu.p2",
+          "Method_E43"
+        ]
+      },
+      "required_context": "Require transcript-version mapping and parent-gene denominator; transcript fractions are compositional.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -428,15 +1189,50 @@
       "title": "Longitudinal response and uncertainty",
       "assay": "bulk",
       "primary_views": [
+        "B_timecourse_01",
+        "B_timecourse_02",
+        "B_timecourse_03",
+        "B_timecourse_04",
+        "B_timecourse_05",
         "Trajectory_ProgramProgression",
         "bulk.timecourse.p1",
         "bulk.timecourse.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_timecourse_Evidence",
+        "B_timecourse_Layout"
+      ],
       "required_results": [
         "time_predictions",
         "effect_intervals"
       ],
+      "coverage": {
+        "qc": [
+          "B_timecourse_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_timecourse_02",
+          "B_timecourse_03",
+          "B_timecourse_04",
+          "B_timecourse_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_timecourse_05"
+        ],
+        "extension": [
+          "Trajectory_ProgramProgression"
+        ],
+        "layout": [
+          "B_timecourse_Layout"
+        ],
+        "chapter": [
+          "bulk.timecourse.p1",
+          "bulk.timecourse.p2"
+        ]
+      },
+      "required_context": "Repeated donors and time units required; supplied model curves only, no smoothing for appearance.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -446,15 +1242,49 @@
       "title": "Independent-cohort replication",
       "assay": "bulk",
       "primary_views": [
+        "B_replication_01",
+        "B_replication_02",
+        "B_replication_03",
+        "B_replication_04",
         "Modules_ProjectionSupport",
+        "B_replication_05",
         "bulk.replication.p1",
         "bulk.replication.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_replication_Evidence",
+        "B_replication_Layout"
+      ],
       "required_results": [
         "cohort_effects",
         "matched_features"
       ],
+      "coverage": {
+        "qc": [
+          "B_replication_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_replication_02",
+          "B_replication_03",
+          "B_replication_04",
+          "B_replication_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "Modules_ProjectionSupport",
+          "B_replication_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_replication_Layout"
+        ],
+        "chapter": [
+          "bulk.replication.p1",
+          "bulk.replication.p2"
+        ]
+      },
+      "required_context": "Harmonize effect scale and biological context; prevent overlap and discovery-validation leakage.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -464,16 +1294,52 @@
       "title": "Conditional clinical outcome association",
       "assay": "bulk",
       "primary_views": [
+        "B_survival_01",
+        "B_survival_03",
+        "B_survival_05",
+        "B_survival_02",
+        "B_survival_04",
+        "B_survival_06",
         "bulk.survival.p1",
         "bulk.survival.p2",
         "bulk.survival.p3"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_survival_Evidence",
+        "B_survival_Layout"
+      ],
       "required_results": [
         "survival_curves",
         "risk_table",
         "hazard_intervals"
       ],
+      "coverage": {
+        "qc": [
+          "B_survival_01",
+          "B_survival_03",
+          "B_survival_05"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_survival_02",
+          "B_survival_04",
+          "B_survival_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_survival_06"
+        ],
+        "extension": [],
+        "layout": [
+          "B_survival_Layout"
+        ],
+        "chapter": [
+          "bulk.survival.p1",
+          "bulk.survival.p2",
+          "bulk.survival.p3"
+        ]
+      },
+      "required_context": "Clinical use requires endpoint/censoring/design review; association is not clinical prediction validation.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -483,16 +1349,51 @@
       "title": "Protein-interaction evidence",
       "assay": "bulk",
       "primary_views": [
+        "B_ppi_01",
+        "B_ppi_02",
+        "B_ppi_03",
+        "B_ppi_04",
+        "B_ppi_05",
         "PPI_SelectedEvidenceNetwork",
         "bulk.ppi.p1",
         "bulk.ppi.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_ppi_Evidence",
+        "B_ppi_Layout"
+      ],
       "required_results": [
         "fixed_nodes",
         "fixed_edges",
         "edge_weights"
       ],
+      "coverage": {
+        "qc": [
+          "B_ppi_01",
+          "B_ppi_02"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_ppi_03",
+          "B_ppi_04",
+          "B_ppi_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_ppi_05"
+        ],
+        "extension": [
+          "PPI_SelectedEvidenceNetwork"
+        ],
+        "layout": [
+          "B_ppi_Layout"
+        ],
+        "chapter": [
+          "bulk.ppi.p1",
+          "bulk.ppi.p2"
+        ]
+      },
+      "required_context": "Record evidence class, full selected edges and species; graph proximity is not mechanism.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -502,14 +1403,48 @@
       "title": "Perturbation-signature matching",
       "assay": "bulk",
       "primary_views": [
+        "B_connectivity_01",
+        "B_connectivity_02",
+        "B_connectivity_03",
+        "B_connectivity_05",
+        "B_connectivity_04",
         "bulk.connectivity.p1",
         "bulk.connectivity.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_connectivity_Evidence",
+        "B_connectivity_Layout"
+      ],
       "required_results": [
         "connection_scores",
         "signature_coverage"
       ],
+      "coverage": {
+        "qc": [
+          "B_connectivity_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_connectivity_02",
+          "B_connectivity_03",
+          "B_connectivity_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_connectivity_05"
+        ],
+        "extension": [
+          "B_connectivity_04"
+        ],
+        "layout": [
+          "B_connectivity_Layout"
+        ],
+        "chapter": [
+          "bulk.connectivity.p1",
+          "bulk.connectivity.p2"
+        ]
+      },
+      "required_context": "Preserve perturbation/dose/cell context; reversed signatures do not establish efficacy.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -519,14 +1454,48 @@
       "title": "Noncoding RNA and target hypotheses",
       "assay": "bulk",
       "primary_views": [
+        "B_noncoding_01",
+        "B_noncoding_02",
+        "B_noncoding_03",
+        "B_noncoding_04",
+        "B_noncoding_05",
         "bulk.noncoding.p1",
         "bulk.noncoding.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_noncoding_Evidence",
+        "B_noncoding_Layout"
+      ],
       "required_results": [
         "RNA_effects",
         "RNA_target_edges"
       ],
+      "coverage": {
+        "qc": [
+          "B_noncoding_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_noncoding_02",
+          "B_noncoding_03",
+          "B_noncoding_Evidence"
+        ],
+        "function": [
+          "B_noncoding_04"
+        ],
+        "validation": [
+          "B_noncoding_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_noncoding_Layout"
+        ],
+        "chapter": [
+          "bulk.noncoding.p1",
+          "bulk.noncoding.p2"
+        ]
+      },
+      "required_context": "Require RNA biotype and target-evidence provenance; coexpression is not a validated ceRNA mechanism.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -536,15 +1505,48 @@
       "title": "Fusion and transcript-structure evidence",
       "assay": "bulk",
       "primary_views": [
+        "B_fusions_01",
+        "B_fusions_02",
+        "B_fusions_03",
+        "B_fusions_04",
+        "B_fusions_05",
         "bulk.fusions.p1",
         "bulk.fusions.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "B_fusions_Evidence",
+        "B_fusions_Layout"
+      ],
       "required_results": [
         "breakpoint_support",
         "coverage",
         "validation_summary"
       ],
+      "coverage": {
+        "qc": [
+          "B_fusions_01",
+          "B_fusions_02",
+          "B_fusions_03"
+        ],
+        "network": [],
+        "interpretation": [
+          "B_fusions_04",
+          "B_fusions_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "B_fusions_05"
+        ],
+        "extension": [],
+        "layout": [
+          "B_fusions_Layout"
+        ],
+        "chapter": [
+          "bulk.fusions.p1",
+          "bulk.fusions.p2"
+        ]
+      },
+      "required_context": "Needs sequence-level evidence and artifact checks; a breakpoint call is not validated oncogenicity.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -554,14 +1556,47 @@
       "title": "Donor, capture and condition design",
       "assay": "single_cell",
       "primary_views": [
+        "S_design_01",
+        "S_design_02",
+        "S_design_03",
+        "S_design_04",
+        "S_design_05",
         "single_cell.design.p1",
         "single_cell.design.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_design_Evidence",
+        "S_design_Layout"
+      ],
       "required_results": [
         "donor_covariates",
         "capture_counts"
       ],
+      "coverage": {
+        "qc": [
+          "S_design_01",
+          "S_design_02",
+          "S_design_03",
+          "S_design_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_design_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_design_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_design_Layout"
+        ],
+        "chapter": [
+          "single_cell.design.p1",
+          "single_cell.design.p2"
+        ]
+      },
+      "required_context": "Cells, captures and donors differ; record nested design and donor replication.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -571,14 +1606,47 @@
       "title": "Barcode rank and retained droplets",
       "assay": "single_cell",
       "primary_views": [
+        "S_barcode_01",
+        "S_barcode_02",
+        "S_barcode_03",
+        "S_barcode_04",
+        "S_barcode_05",
         "single_cell.barcode.p1",
         "single_cell.barcode.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_barcode_Evidence",
+        "S_barcode_Layout"
+      ],
       "required_results": [
         "barcode_rank",
         "droplet_classes"
       ],
+      "coverage": {
+        "qc": [
+          "S_barcode_01",
+          "S_barcode_02",
+          "S_barcode_03",
+          "S_barcode_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_barcode_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_barcode_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_barcode_Layout"
+        ],
+        "chapter": [
+          "single_cell.barcode.p1",
+          "single_cell.barcode.p2"
+        ]
+      },
+      "required_context": "Need raw droplet totals and selected threshold; cell calling does not validate cell identity.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -588,13 +1656,47 @@
       "title": "Cell quality across donors",
       "assay": "single_cell",
       "primary_views": [
+        "S_qc_01",
+        "S_qc_02",
+        "S_qc_03",
+        "S_qc_04",
+        "S_qc_05",
+        "S_qc_06",
         "single_cell.qc.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_qc_Evidence",
+        "S_qc_Layout"
+      ],
       "required_results": [
         "cell_metrics",
         "donor_labels"
       ],
+      "coverage": {
+        "qc": [
+          "S_qc_01",
+          "S_qc_02",
+          "S_qc_03",
+          "S_qc_04",
+          "S_qc_05"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_qc_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_qc_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_qc_Layout"
+        ],
+        "chapter": [
+          "single_cell.qc.complete"
+        ]
+      },
+      "required_context": "Retain metric units and actual thresholds; cells remain nested within donors.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -604,15 +1706,48 @@
       "title": "Ambient RNA and doublet diagnostics",
       "assay": "single_cell",
       "primary_views": [
+        "S_ambient_doublet_01",
+        "S_ambient_doublet_02",
+        "S_ambient_doublet_03",
+        "S_ambient_doublet_04",
+        "S_ambient_doublet_05",
         "single_cell.ambient_doublet.p1",
         "single_cell.ambient_doublet.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_ambient_doublet_Evidence",
+        "S_ambient_doublet_Layout"
+      ],
       "required_results": [
         "doublet_scores",
         "ambient_profile",
         "donor_rates"
       ],
+      "coverage": {
+        "qc": [
+          "S_ambient_doublet_01",
+          "S_ambient_doublet_02",
+          "S_ambient_doublet_03",
+          "S_ambient_doublet_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_ambient_doublet_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_ambient_doublet_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_ambient_doublet_Layout"
+        ],
+        "chapter": [
+          "single_cell.ambient_doublet.p1",
+          "single_cell.ambient_doublet.p2"
+        ]
+      },
+      "required_context": "Method scores and reviewed calls are separate; preserve flagged cells and removal rules.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -622,15 +1757,48 @@
       "title": "Batch integration and signal preservation",
       "assay": "single_cell",
       "primary_views": [
+        "S_integration_01",
+        "S_integration_02",
+        "S_integration_03",
+        "S_integration_04",
+        "S_integration_05",
         "single_cell.integration.p1",
         "single_cell.integration.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_integration_Evidence",
+        "S_integration_Layout"
+      ],
       "required_results": [
         "stored_embeddings",
         "mixing_scores",
         "biology_scores"
       ],
+      "coverage": {
+        "qc": [
+          "S_integration_01",
+          "S_integration_02",
+          "S_integration_03"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_integration_04",
+          "S_integration_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_integration_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_integration_Layout"
+        ],
+        "chapter": [
+          "single_cell.integration.p1",
+          "single_cell.integration.p2"
+        ]
+      },
+      "required_context": "Use frozen pre/post diagnostics and batch-donor mapping; good mixing can erase biology.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -640,16 +1808,50 @@
       "title": "Feature selection and PC support",
       "assay": "single_cell",
       "primary_views": [
+        "S_hvg_pca_01",
+        "S_hvg_pca_02",
+        "S_hvg_pca_04",
+        "S_hvg_pca_03",
+        "S_hvg_pca_05",
         "single_cell.hvg_pca.p1",
         "single_cell.hvg_pca.p2",
         "HVG_MeanDispersion"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_hvg_pca_Evidence",
+        "S_hvg_pca_Layout"
+      ],
       "required_results": [
         "variance_profile",
         "loadings",
         "feature_dispersion"
       ],
+      "coverage": {
+        "qc": [
+          "S_hvg_pca_01",
+          "S_hvg_pca_02",
+          "S_hvg_pca_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_hvg_pca_03",
+          "S_hvg_pca_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_hvg_pca_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_hvg_pca_Layout"
+        ],
+        "chapter": [
+          "single_cell.hvg_pca.p1",
+          "single_cell.hvg_pca.p2",
+          "HVG_MeanDispersion"
+        ]
+      },
+      "required_context": "Selection source and PC loading signs required; no PCA fit during plotting.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -659,11 +1861,18 @@
       "title": "Cluster resolution and donor support",
       "assay": "single_cell",
       "primary_views": [
+        "S_resolution_01",
+        "S_resolution_02",
+        "S_resolution_03",
+        "S_resolution_04",
+        "S_resolution_05",
         "single_cell.resolution.complete",
         "ClusterFlow_2Column",
         "Resolution_DonorSupport"
       ],
       "alternative_views": [
+        "S_resolution_Evidence",
+        "S_resolution_Layout",
         "ClusterFlow_1Column"
       ],
       "required_results": [
@@ -671,6 +1880,33 @@
         "stability",
         "donor_support"
       ],
+      "coverage": {
+        "qc": [
+          "S_resolution_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_resolution_02",
+          "S_resolution_03",
+          "S_resolution_04",
+          "S_resolution_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_resolution_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_resolution_Layout"
+        ],
+        "chapter": [
+          "single_cell.resolution.complete",
+          "ClusterFlow_2Column",
+          "Resolution_DonorSupport",
+          "ClusterFlow_1Column"
+        ]
+      },
+      "required_context": "Freeze cluster lineage and selected resolution; stability does not establish biological identity.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -680,6 +1916,12 @@
       "title": "Subpopulations with marker support",
       "assay": "single_cell",
       "primary_views": [
+        "S_annotation_01",
+        "S_annotation_02",
+        "S_annotation_03",
+        "S_annotation_04",
+        "S_annotation_05",
+        "S_annotation_06",
         "single_cell.annotation.complete",
         "Method_N05",
         "Subgroup_01",
@@ -691,13 +1933,52 @@
         "Layout_04Markers_2Columns",
         "Layout_08Markers_3Columns"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_annotation_Evidence",
+        "S_annotation_Layout",
+        "S_annotation_ThreeColumns"
+      ],
       "required_results": [
         "embedding",
         "label_anchors",
         "marker_means",
         "detection_fractions"
       ],
+      "coverage": {
+        "qc": [
+          "S_annotation_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_annotation_02",
+          "S_annotation_03",
+          "S_annotation_04",
+          "S_annotation_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_annotation_05",
+          "S_annotation_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_annotation_Layout",
+          "S_annotation_ThreeColumns"
+        ],
+        "chapter": [
+          "single_cell.annotation.complete",
+          "Method_N05",
+          "Subgroup_01",
+          "Subgroup_02",
+          "Subgroup_03",
+          "Subgroup_04",
+          "Subgroup_05",
+          "Layout_02Markers_1Columns",
+          "Layout_04Markers_2Columns",
+          "Layout_08Markers_3Columns"
+        ]
+      },
+      "required_context": "Atlas identity and specificity; per-subgroup multi-marker pages are complete separate companions. Annotation specificity and uncertainty require review.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -707,6 +1988,11 @@
       "title": "Lineage-focused subcluster atlas",
       "assay": "single_cell",
       "primary_views": [
+        "S_subcluster_01",
+        "S_subcluster_02",
+        "S_subcluster_03",
+        "S_subcluster_04",
+        "S_subcluster_05",
         "single_cell.subcluster.p1",
         "single_cell.subcluster.p2",
         "Subgroup_01",
@@ -715,12 +2001,45 @@
         "Subgroup_04",
         "Subgroup_05"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_subcluster_Evidence",
+        "S_subcluster_Layout"
+      ],
       "required_results": [
         "lineage_embedding",
         "markers",
         "parent_child_labels"
       ],
+      "coverage": {
+        "qc": [
+          "S_subcluster_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_subcluster_02",
+          "S_subcluster_03",
+          "S_subcluster_04",
+          "S_subcluster_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_subcluster_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_subcluster_Layout"
+        ],
+        "chapter": [
+          "single_cell.subcluster.p1",
+          "single_cell.subcluster.p2",
+          "Subgroup_01",
+          "Subgroup_02",
+          "Subgroup_03",
+          "Subgroup_04",
+          "Subgroup_05"
+        ]
+      },
+      "required_context": "Explicit parent selection and child annotation; subclustering requires actual reanalysis upstream.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -730,14 +2049,46 @@
       "title": "Marker specificity and detection",
       "assay": "single_cell",
       "primary_views": [
+        "S_markers_01",
+        "S_markers_02",
+        "S_markers_03",
+        "S_markers_04",
+        "S_markers_05",
         "single_cell.markers.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_markers_Evidence",
+        "S_markers_Layout"
+      ],
       "required_results": [
         "marker_means",
         "detection_fractions",
         "annotation_blocks"
       ],
+      "coverage": {
+        "qc": [
+          "S_markers_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_markers_02",
+          "S_markers_03",
+          "S_markers_04",
+          "S_markers_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_markers_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_markers_Layout"
+        ],
+        "chapter": [
+          "single_cell.markers.complete"
+        ]
+      },
+      "required_context": "Denominator must be all declared cells in a group; marker ranking is not donor-level DE.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -747,13 +2098,45 @@
       "title": "Donor-level composition",
       "assay": "single_cell",
       "primary_views": [
+        "S_composition_01",
+        "S_composition_04",
+        "S_composition_02",
+        "S_composition_03",
+        "S_composition_05",
         "single_cell.composition.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_composition_Evidence",
+        "S_composition_Layout"
+      ],
       "required_results": [
         "donor_type_counts",
         "donor_totals"
       ],
+      "coverage": {
+        "qc": [
+          "S_composition_01",
+          "S_composition_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_composition_02",
+          "S_composition_03",
+          "S_composition_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_composition_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_composition_Layout"
+        ],
+        "chapter": [
+          "single_cell.composition.complete"
+        ]
+      },
+      "required_context": "Use complete donor denominators; pooled cell fractions do not provide independent replication.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -763,15 +2146,48 @@
       "title": "Differential abundance with donor effects",
       "assay": "single_cell",
       "primary_views": [
+        "S_abundance_01",
+        "S_abundance_02",
+        "S_abundance_03",
+        "S_abundance_04",
+        "S_abundance_05",
         "single_cell.abundance.p1",
         "single_cell.abundance.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_abundance_Evidence",
+        "S_abundance_Layout"
+      ],
       "required_results": [
         "neighborhood_effects",
         "donor_fractions",
         "coordinates"
       ],
+      "coverage": {
+        "qc": [
+          "S_abundance_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_abundance_02",
+          "S_abundance_03",
+          "S_abundance_04",
+          "S_abundance_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_abundance_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_abundance_Layout"
+        ],
+        "chapter": [
+          "single_cell.abundance.p1",
+          "single_cell.abundance.p2"
+        ]
+      },
+      "required_context": "Milo/scCODA need distinct model/null/denominator; abundance and expression are different estimands.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -781,15 +2197,49 @@
       "title": "Donor-level differential response",
       "assay": "single_cell",
       "primary_views": [
+        "S_pseudobulk_01",
+        "S_pseudobulk_02",
+        "S_pseudobulk_03",
+        "S_pseudobulk_04",
+        "S_pseudobulk_05",
+        "S_pseudobulk_06",
         "single_cell.pseudobulk.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_pseudobulk_Evidence",
+        "S_pseudobulk_Layout"
+      ],
       "required_results": [
         "complete_donor_de",
         "contrast",
         "FDR",
         "marginal_counts"
       ],
+      "coverage": {
+        "qc": [
+          "S_pseudobulk_01",
+          "S_pseudobulk_02"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_pseudobulk_03",
+          "S_pseudobulk_04",
+          "S_pseudobulk_05",
+          "S_pseudobulk_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_pseudobulk_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_pseudobulk_Layout"
+        ],
+        "chapter": [
+          "single_cell.pseudobulk.complete"
+        ]
+      },
+      "required_context": "Donor/celltype counts and design must be reviewed; no cell-level pseudoreplication.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -799,16 +2249,50 @@
       "title": "Celltype-by-contrast differential atlas",
       "assay": "single_cell",
       "primary_views": [
+        "S_multi_contrast_01",
+        "S_multi_contrast_02",
+        "S_multi_contrast_03",
+        "S_multi_contrast_04",
+        "S_multi_contrast_05",
         "single_cell.multi_contrast.p1",
         "single_cell.multi_contrast.p2",
         "Method_N06"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_multi_contrast_Evidence",
+        "S_multi_contrast_Layout"
+      ],
       "required_results": [
         "effect_grid",
         "FDR_grid",
         "tested_feature_counts"
       ],
+      "coverage": {
+        "qc": [
+          "S_multi_contrast_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_multi_contrast_02",
+          "S_multi_contrast_03",
+          "S_multi_contrast_04",
+          "S_multi_contrast_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_multi_contrast_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_multi_contrast_Layout"
+        ],
+        "chapter": [
+          "single_cell.multi_contrast.p1",
+          "single_cell.multi_contrast.p2",
+          "Method_N06"
+        ]
+      },
+      "required_context": "Keep separate comparison families and not-tested entries; do not pool donor and cell p-values.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -818,16 +2302,53 @@
       "title": "Celltype pathway responses",
       "assay": "single_cell",
       "primary_views": [
+        "S_pathways_01",
         "GSVA_DonorScoreDistributions",
         "GSVA_AdjustedPathwayContrasts",
+        "S_pathways_02",
+        "S_pathways_03",
+        "S_pathways_04",
+        "S_pathways_05",
+        "S_pathways_06",
         "single_cell.pathways.complete"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_pathways_Evidence",
+        "S_pathways_Layout"
+      ],
       "required_results": [
         "NES_grid",
         "FDR_grid",
         "leading_edge"
       ],
+      "coverage": {
+        "qc": [
+          "S_pathways_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "GSVA_DonorScoreDistributions",
+          "GSVA_AdjustedPathwayContrasts",
+          "S_pathways_02",
+          "S_pathways_03",
+          "S_pathways_04",
+          "S_pathways_Evidence"
+        ],
+        "function": [
+          "S_pathways_05"
+        ],
+        "validation": [
+          "S_pathways_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_pathways_Layout"
+        ],
+        "chapter": [
+          "single_cell.pathways.complete"
+        ]
+      },
+      "required_context": "Preserve celltype contrast and set coverage; activity direction cannot be inferred from ORA.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -837,15 +2358,49 @@
       "title": "Celltype pathway membership and gene evidence",
       "assay": "single_cell",
       "primary_views": [
+        "S_gene_support_01",
+        "S_gene_support_02",
+        "S_gene_support_03",
+        "S_gene_support_04",
+        "S_gene_support_05",
         "single_cell.gene_support.complete",
         "Method_E08"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_gene_support_Evidence",
+        "S_gene_support_Layout"
+      ],
       "required_results": [
         "term_overlap",
         "gene_term_membership",
         "gene_effects"
       ],
+      "coverage": {
+        "qc": [
+          "S_gene_support_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_gene_support_02",
+          "S_gene_support_03",
+          "S_gene_support_Evidence"
+        ],
+        "function": [
+          "S_gene_support_04"
+        ],
+        "validation": [
+          "S_gene_support_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_gene_support_Layout"
+        ],
+        "chapter": [
+          "single_cell.gene_support.complete",
+          "Method_E08"
+        ]
+      },
+      "required_context": "Preserve celltype-specific tested universe and exact annotation membership.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -855,16 +2410,51 @@
       "title": "Cell-state, stress and cycle scores",
       "assay": "single_cell",
       "primary_views": [
+        "S_states_01",
+        "S_states_02",
+        "S_states_03",
+        "S_states_04",
+        "S_states_05",
         "Trajectory_ProgramProgression",
         "single_cell.states.p1",
         "single_cell.states.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_states_Evidence",
+        "S_states_Layout"
+      ],
       "required_results": [
         "state_scores",
         "coverage",
         "donor_effects"
       ],
+      "coverage": {
+        "qc": [
+          "S_states_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_states_02",
+          "S_states_03",
+          "S_states_04",
+          "S_states_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_states_05"
+        ],
+        "extension": [
+          "Trajectory_ProgramProgression"
+        ],
+        "layout": [
+          "S_states_Layout"
+        ],
+        "chapter": [
+          "single_cell.states.p1",
+          "single_cell.states.p2"
+        ]
+      },
+      "required_context": "Score coverage/cell cycle and donor model need review; cell scores do not increase independent n.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -920,6 +2510,63 @@
         "preservation",
         "fixed_network"
       ],
+      "coverage": {
+        "qc": [
+          "WGCNA_SampleTree",
+          "hdWGCNA_MetacellQC",
+          "SoftPower_CompleteDiagnostics",
+          "WGCNA_SoftPower"
+        ],
+        "network": [
+          "Modules_GenePartition",
+          "TOM_AlignedHierarchy",
+          "WGCNA_ModuleTree",
+          "WGCNA_EigengeneNetwork",
+          "Eigengenes_MergeHierarchy",
+          "WGCNA_TOM",
+          "WGCNA_TOM_Dissimilarity"
+        ],
+        "interpretation": [
+          "Hubs_CoexpressionNeighborhoods",
+          "Eigengenes_DonorContrasts",
+          "Modules_ExpressionAndEigengenes",
+          "Eigengenes_ContinuousTrait",
+          "Eigengenes_DonorRainclouds",
+          "WGCNA_ModuleTrait",
+          "WGCNA_MM_GS",
+          "WGCNA_HubConnectivity",
+          "hdWGCNA_ModuleActivity",
+          "WGCNA_MM_GS_Absolute",
+          "WGCNA_EigengeneProfiles"
+        ],
+        "function": [
+          "Modules_FunctionAndGeneSupport"
+        ],
+        "validation": [
+          "Modules_CrossCohortOverlap",
+          "Connectivity_ReferenceAndChange",
+          "Modules_SensitivityAndStability",
+          "Modules_ProjectionSupport",
+          "Preservation_Attributes",
+          "WGCNA_Preservation"
+        ],
+        "extension": [
+          "Modules_BranchDynamics",
+          "PPI_SelectedEvidenceNetwork"
+        ],
+        "layout": [
+          "Layout_OneModule_8Donors",
+          "Layout_ThreeModules_OneColumn",
+          "Layout_ThreeModules_ThreeColumns",
+          "Layout_Expression_OneColumn",
+          "Layout_Contrasts_OneColumn",
+          "Layout_Enrichment_12Modules"
+        ],
+        "chapter": [
+          "single_cell.hdwgcna.complete"
+        ]
+      },
+      "required_context": "Declare metacell/donor independence and module preservation; metacells are not new donors.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -929,6 +2576,12 @@
       "title": "Branches, progression and gene dynamics",
       "assay": "single_cell",
       "primary_views": [
+        "S_trajectory_01",
+        "S_trajectory_02",
+        "S_trajectory_03",
+        "S_trajectory_04",
+        "S_trajectory_05",
+        "S_trajectory_06",
         "Modules_BranchDynamics",
         "Trajectory_ProgramProgression",
         "single_cell.trajectory.complete",
@@ -936,7 +2589,9 @@
         "Trajectory_GeneDynamics"
       ],
       "alternative_views": [
+        "S_trajectory_Evidence",
         "Layout_ThreeModules_ThreeColumns",
+        "S_trajectory_Layout",
         "Trajectory_1Column"
       ],
       "required_results": [
@@ -945,6 +2600,39 @@
         "branch_curves",
         "gene_trends"
       ],
+      "coverage": {
+        "qc": [
+          "S_trajectory_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_trajectory_02",
+          "S_trajectory_03",
+          "S_trajectory_04",
+          "S_trajectory_Evidence"
+        ],
+        "function": [
+          "S_trajectory_05"
+        ],
+        "validation": [
+          "S_trajectory_06"
+        ],
+        "extension": [
+          "Modules_BranchDynamics",
+          "Trajectory_ProgramProgression"
+        ],
+        "layout": [
+          "Layout_ThreeModules_ThreeColumns",
+          "S_trajectory_Layout"
+        ],
+        "chapter": [
+          "single_cell.trajectory.complete",
+          "Trajectory_2Column",
+          "Trajectory_GeneDynamics",
+          "Trajectory_1Column"
+        ]
+      },
+      "required_context": "Freeze root/branch and uncertainty; pseudotime is not chronological time or lineage proof.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -954,16 +2642,50 @@
       "title": "RNA velocity and phase diagnostics",
       "assay": "single_cell",
       "primary_views": [
+        "S_velocity_01",
+        "S_velocity_02",
+        "S_velocity_03",
+        "S_velocity_04",
+        "S_velocity_05",
         "single_cell.velocity.p1",
         "single_cell.velocity.p2",
         "Method_E18"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_velocity_Evidence",
+        "S_velocity_Layout"
+      ],
       "required_results": [
         "vectors",
         "spliced_unspliced",
         "fit_diagnostics"
       ],
+      "coverage": {
+        "qc": [
+          "S_velocity_01",
+          "S_velocity_02",
+          "S_velocity_03"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_velocity_04",
+          "S_velocity_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_velocity_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_velocity_Layout"
+        ],
+        "chapter": [
+          "single_cell.velocity.p1",
+          "single_cell.velocity.p2",
+          "Method_E18"
+        ]
+      },
+      "required_context": "Require assay-compatible splicing layers, fitted vectors and scale; arrows do not prove fate.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -973,15 +2695,54 @@
       "title": "Communication themes and ligand-receptor support",
       "assay": "single_cell",
       "primary_views": [
+        "S_communication_01",
+        "S_communication_06",
+        "S_communication_02",
+        "S_communication_03",
+        "S_communication_04",
+        "S_communication_05",
+        "S_communication_07",
         "single_cell.communication.p1",
         "single_cell.communication.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_communication_Evidence",
+        "S_communication_Layout",
+        "S_communication_ThreeColumns"
+      ],
       "required_results": [
         "sender_receiver",
         "LR_scores",
         "coverage"
       ],
+      "coverage": {
+        "qc": [
+          "S_communication_01",
+          "S_communication_06"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_communication_02",
+          "S_communication_03",
+          "S_communication_04",
+          "S_communication_05",
+          "S_communication_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_communication_07"
+        ],
+        "extension": [],
+        "layout": [
+          "S_communication_Layout",
+          "S_communication_ThreeColumns"
+        ],
+        "chapter": [
+          "single_cell.communication.p1",
+          "single_cell.communication.p2"
+        ]
+      },
+      "required_context": "CellChat/LIANA/CellPhoneDB scores are method-specific; donor-aware contrast and permutations required.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -991,16 +2752,52 @@
       "title": "Ligand-to-target evidence chains",
       "assay": "single_cell",
       "primary_views": [
+        "S_ligand_target_01",
+        "S_ligand_target_02",
+        "S_ligand_target_04",
+        "S_ligand_target_03",
+        "S_ligand_target_05",
         "Regulons_DirectedTargetEvidence",
         "single_cell.ligand_target.p1",
         "single_cell.ligand_target.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_ligand_target_Evidence",
+        "S_ligand_target_Layout"
+      ],
       "required_results": [
         "ligand_activity",
         "target_potential",
         "network"
       ],
+      "coverage": {
+        "qc": [
+          "S_ligand_target_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_ligand_target_02",
+          "S_ligand_target_04",
+          "S_ligand_target_Evidence"
+        ],
+        "function": [
+          "S_ligand_target_03"
+        ],
+        "validation": [
+          "S_ligand_target_05"
+        ],
+        "extension": [
+          "Regulons_DirectedTargetEvidence"
+        ],
+        "layout": [
+          "S_ligand_target_Layout"
+        ],
+        "chapter": [
+          "single_cell.ligand_target.p1",
+          "single_cell.ligand_target.p2"
+        ]
+      },
+      "required_context": "NicheNet prior and receiver context required; target potential does not prove signaling causality.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -1010,17 +2807,56 @@
       "title": "Regulon activity and target specificity",
       "assay": "single_cell",
       "primary_views": [
+        "S_regulons_01",
         "TF_ActivityContrasts",
+        "S_regulons_02",
+        "S_regulons_03",
+        "S_regulons_04",
+        "S_regulons_05",
+        "S_regulons_06",
         "Regulons_DirectedTargetEvidence",
         "single_cell.regulons.p1",
         "single_cell.regulons.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_regulons_Evidence",
+        "S_regulons_Layout"
+      ],
       "required_results": [
         "regulon_scores",
         "specificity",
         "target_edges"
       ],
+      "coverage": {
+        "qc": [
+          "S_regulons_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "TF_ActivityContrasts",
+          "S_regulons_02",
+          "S_regulons_03",
+          "S_regulons_04",
+          "S_regulons_Evidence"
+        ],
+        "function": [
+          "S_regulons_05"
+        ],
+        "validation": [
+          "S_regulons_06"
+        ],
+        "extension": [
+          "Regulons_DirectedTargetEvidence"
+        ],
+        "layout": [
+          "S_regulons_Layout"
+        ],
+        "chapter": [
+          "single_cell.regulons.p1",
+          "single_cell.regulons.p2"
+        ]
+      },
+      "required_context": "SCENIC/AUCell motif/score evidence is not direct binding or causal regulation.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -1030,15 +2866,50 @@
       "title": "Inferred copy-number patterns",
       "assay": "single_cell",
       "primary_views": [
+        "S_cnv_01",
+        "S_cnv_02",
+        "S_cnv_03",
+        "S_cnv_04",
+        "S_cnv_05",
+        "S_cnv_06",
         "single_cell.cnv.p1",
         "single_cell.cnv.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_cnv_Evidence",
+        "S_cnv_Layout"
+      ],
       "required_results": [
         "ordered_CNV",
         "reference_cells",
         "clone_support"
       ],
+      "coverage": {
+        "qc": [
+          "S_cnv_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_cnv_02",
+          "S_cnv_03",
+          "S_cnv_04",
+          "S_cnv_05",
+          "S_cnv_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_cnv_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_cnv_Layout"
+        ],
+        "chapter": [
+          "single_cell.cnv.p1",
+          "single_cell.cnv.p2"
+        ]
+      },
+      "required_context": "Genomic coordinates and normal reference required; RNA-inferred CNV needs independent genomic validation.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -1048,17 +2919,56 @@
       "title": "Clonotypes, expansion and sharing",
       "assay": "single_cell",
       "primary_views": [
+        "S_vdj_01",
+        "S_vdj_02",
+        "S_vdj_03",
+        "S_vdj_04",
+        "S_vdj_05",
+        "S_vdj_06",
+        "S_vdj_07",
         "single_cell.vdj.p1",
         "single_cell.vdj.p2",
         "single_cell.vdj.p3",
         "Method_N05"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_vdj_Evidence",
+        "S_vdj_Layout"
+      ],
       "required_results": [
         "clonotype_counts",
         "VDJ_QC",
         "sharing"
       ],
+      "coverage": {
+        "qc": [
+          "S_vdj_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_vdj_02",
+          "S_vdj_03",
+          "S_vdj_04",
+          "S_vdj_05",
+          "S_vdj_06",
+          "S_vdj_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_vdj_07"
+        ],
+        "extension": [],
+        "layout": [
+          "S_vdj_Layout"
+        ],
+        "chapter": [
+          "single_cell.vdj.p1",
+          "single_cell.vdj.p2",
+          "single_cell.vdj.p3",
+          "Method_N05"
+        ]
+      },
+      "required_context": "Require real VDJ calls and donor denominators; transcriptome-only data do not identify clonotypes.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -1068,18 +2978,56 @@
       "title": "Celltype-specific RNA processing",
       "assay": "single_cell",
       "primary_views": [
+        "S_splicing_01",
+        "S_splicing_02",
         "Splicing_DonorPSIDistributions",
+        "S_splicing_03",
+        "S_splicing_04",
+        "S_splicing_05",
+        "S_splicing_06",
         "single_cell.splicing.p1",
         "single_cell.splicing.p2",
         "single_cell.splicing.p3",
         "Method_E43"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_splicing_Evidence",
+        "S_splicing_Layout"
+      ],
       "required_results": [
         "junction_coverage",
         "delta_PSI",
         "isoform_usage"
       ],
+      "coverage": {
+        "qc": [
+          "S_splicing_01",
+          "S_splicing_02"
+        ],
+        "network": [],
+        "interpretation": [
+          "Splicing_DonorPSIDistributions",
+          "S_splicing_03",
+          "S_splicing_04",
+          "S_splicing_05",
+          "S_splicing_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_splicing_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_splicing_Layout"
+        ],
+        "chapter": [
+          "single_cell.splicing.p1",
+          "single_cell.splicing.p2",
+          "single_cell.splicing.p3",
+          "Method_E43"
+        ]
+      },
+      "required_context": "Donor support and event mapping required; cell-level detection sparsity must be reviewed.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -1089,16 +3037,52 @@
       "title": "Perturbation assignment and response",
       "assay": "single_cell",
       "primary_views": [
+        "S_perturbseq_01",
+        "S_perturbseq_02",
+        "S_perturbseq_03",
+        "S_perturbseq_04",
+        "S_perturbseq_05",
+        "S_perturbseq_06",
         "single_cell.perturbseq.p1",
         "single_cell.perturbseq.p2",
         "single_cell.perturbseq.p3"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_perturbseq_Evidence",
+        "S_perturbseq_Layout"
+      ],
       "required_results": [
         "guide_assignment",
         "perturbation_effects",
         "replicate_QC"
       ],
+      "coverage": {
+        "qc": [
+          "S_perturbseq_01",
+          "S_perturbseq_02"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_perturbseq_03",
+          "S_perturbseq_04",
+          "S_perturbseq_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "S_perturbseq_05",
+          "S_perturbseq_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_perturbseq_Layout"
+        ],
+        "chapter": [
+          "single_cell.perturbseq.p1",
+          "single_cell.perturbseq.p2",
+          "single_cell.perturbseq.p3"
+        ]
+      },
+      "required_context": "Actual guide calls, controls and independent replicates required; guide abundance is not perturbation efficacy.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -1108,16 +3092,50 @@
       "title": "Cross-cohort annotation and effect transfer",
       "assay": "single_cell",
       "primary_views": [
+        "S_replication_01",
+        "S_replication_04",
+        "S_replication_02",
+        "S_replication_03",
         "Modules_ProjectionSupport",
+        "S_replication_05",
         "single_cell.replication.p1",
         "single_cell.replication.p2"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_replication_Evidence",
+        "S_replication_Layout"
+      ],
       "required_results": [
         "cohort_effects",
         "transfer_confidence",
         "coverage"
       ],
+      "coverage": {
+        "qc": [
+          "S_replication_01",
+          "S_replication_04"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_replication_02",
+          "S_replication_03",
+          "S_replication_Evidence"
+        ],
+        "function": [],
+        "validation": [
+          "Modules_ProjectionSupport",
+          "S_replication_05"
+        ],
+        "extension": [],
+        "layout": [
+          "S_replication_Layout"
+        ],
+        "chapter": [
+          "single_cell.replication.p1",
+          "single_cell.replication.p2"
+        ]
+      },
+      "required_context": "Independent cohorts and matching cell ontology required; transfer confidence is not validation truth.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -1127,16 +3145,53 @@
       "title": "Spatial localization and donor/section context",
       "assay": "single_cell",
       "primary_views": [
+        "S_spatial_01",
+        "S_spatial_02",
+        "S_spatial_03",
+        "S_spatial_05",
+        "S_spatial_04",
+        "S_spatial_06",
         "single_cell.spatial.p1",
         "single_cell.spatial.p2",
         "single_cell.spatial.p3"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_spatial_Evidence",
+        "S_spatial_Layout"
+      ],
       "required_results": [
         "registered_coordinates",
         "region_scores",
         "section_effects"
       ],
+      "coverage": {
+        "qc": [
+          "S_spatial_01"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_spatial_02",
+          "S_spatial_03",
+          "S_spatial_05",
+          "S_spatial_Evidence"
+        ],
+        "function": [
+          "S_spatial_04"
+        ],
+        "validation": [
+          "S_spatial_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_spatial_Layout"
+        ],
+        "chapter": [
+          "single_cell.spatial.p1",
+          "single_cell.spatial.p2",
+          "single_cell.spatial.p3"
+        ]
+      },
+      "required_context": "Requires measured spatial assay and registration; dissociated UMAP is not tissue geography.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     },
@@ -1146,16 +3201,55 @@
       "title": "Paired RNA-ATAC regulatory support",
       "assay": "single_cell",
       "primary_views": [
+        "S_multiome_01",
+        "S_multiome_02",
+        "S_multiome_03",
+        "S_multiome_04",
+        "S_multiome_05",
+        "S_multiome_06",
         "single_cell.multiome.p1",
         "single_cell.multiome.p2",
         "single_cell.multiome.p3"
       ],
-      "alternative_views": [],
+      "alternative_views": [
+        "S_multiome_Evidence",
+        "S_multiome_Layout",
+        "S_multiome_ThreeColumns"
+      ],
       "required_results": [
         "paired_embeddings",
         "peak_gene_links",
         "motif_scores"
       ],
+      "coverage": {
+        "qc": [
+          "S_multiome_01",
+          "S_multiome_02"
+        ],
+        "network": [],
+        "interpretation": [
+          "S_multiome_03",
+          "S_multiome_04",
+          "S_multiome_Evidence"
+        ],
+        "function": [
+          "S_multiome_05"
+        ],
+        "validation": [
+          "S_multiome_06"
+        ],
+        "extension": [],
+        "layout": [
+          "S_multiome_Layout",
+          "S_multiome_ThreeColumns"
+        ],
+        "chapter": [
+          "single_cell.multiome.p1",
+          "single_cell.multiome.p2",
+          "single_cell.multiome.p3"
+        ]
+      },
+      "required_context": "Paired assay, build and peak/link evidence required; peak-gene association is not causal regulation.",
       "scope": "Drawing templates only. Select views using actual returned results, assay, independent units and the stated question.",
       "backend_analysis_performed": false
     }

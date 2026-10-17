@@ -1,0 +1,84 @@
+{
+  "id": "B_dtu_01",
+  "title": "Quantifiable transcript support",
+  "chapters": [
+    "bulk.dtu"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 146,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Quantifiable transcript support",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Quantifiable transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Quantifiable transcript support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.dtu supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Quantifiable transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Quantifiable transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_dtu_01/example.png",
+    "svg": "B_dtu_01/example.svg",
+    "pdf": "B_dtu_01/example.pdf",
+    "tsv": "B_dtu_01/example.tsv",
+    "spec": "B_dtu_01/input/example.spec.json",
+    "preview": "B_dtu_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "06bcbe5d6945bb842038b25a4c9836c915b7d981bbe0778206f403cc64c1c09b",
+    "svg": "8ca943ba09abac7a6102d6039ce2c5893346f6c7d3a72848e35c99439ace2ef8",
+    "pdf": "19298857456dbfce8d16aed2f1e585e6363447fa05f6e5a3f02fd57058d3d8f1",
+    "tsv": "7b04e8ed51af76caa549e40f3ed8aef8ae4d69f2fe1b1d92ea80be6bd9d07d42",
+    "spec": "f13988807bb947ae89f50e593451ca71dcd4b947409d5b1c49ea22a6d108fdb4"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_dtu_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "06bcbe5d6945bb842038b25a4c9836c915b7d981bbe0778206f403cc64c1c09b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: aligned effect intervals and q/n tables, full donor-denominator bars, distinct STAT1 transcript structures and readable multirow layouts; fictional drawing channels, no biological validation claimed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

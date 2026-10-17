@@ -1,0 +1,84 @@
+{
+  "id": "S_ambient_doublet_03",
+  "title": "Reviewed doublet calls by donor",
+  "chapters": [
+    "single_cell.ambient_doublet"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 228,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Reviewed doublet calls by donor",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Reviewed doublet calls by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Reviewed doublet calls by donor",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.ambient_doublet supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reviewed doublet calls by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Reviewed doublet calls by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_ambient_doublet_03/example.png",
+    "svg": "S_ambient_doublet_03/example.svg",
+    "pdf": "S_ambient_doublet_03/example.pdf",
+    "tsv": "S_ambient_doublet_03/example.tsv",
+    "spec": "S_ambient_doublet_03/input/example.spec.json",
+    "preview": "S_ambient_doublet_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "4b021834cf8244b79c95b5e35f1f4add74b549a0cbced6b38e3a97901e31606e",
+    "svg": "fc01ff95f218e8403deae7fe7d13e8d3d1042d2b981aa88537c58d432115bcaf",
+    "pdf": "69963f420508926042405b1c7d26fabdf32cb21f64f7aa24f719ff4be18c4289",
+    "tsv": "318c6c037a3382e2f4750541158d1e168243f87f87bdbfa339aedde862249814",
+    "spec": "915007a2ae7955408e14b19748e3926eb3d2384f09e8a06e59d7fd63b37f874c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_ambient_doublet_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "4b021834cf8244b79c95b5e35f1f4add74b549a0cbced6b38e3a97901e31606e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected donor QC clouds, paired integration trajectories, complete counts and composition, correction evidence matrix, effect intervals and custom longer pages. Supplied summaries stay distinct from nested cells; text and complete rows readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

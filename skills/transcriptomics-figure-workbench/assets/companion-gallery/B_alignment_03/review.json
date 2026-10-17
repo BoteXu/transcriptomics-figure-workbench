@@ -1,0 +1,83 @@
+{
+  "id": "B_alignment_03",
+  "title": "Insert-size distributions",
+  "chapters": [
+    "bulk.alignment"
+  ],
+  "stage": "qc",
+  "family": "bins",
+  "variant": false,
+  "large_data": false,
+  "order": 19,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "bins",
+        "title": "Insert-size distributions",
+        "x_label": "Insert length (bp)",
+        "y_label": "Supplied count",
+        "definition": "Insert-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p1"
+      }
+    ],
+    "title": "Insert-size distributions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.alignment supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Insert-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Insert-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_alignment_03/example.png",
+    "svg": "B_alignment_03/example.svg",
+    "pdf": "B_alignment_03/example.pdf",
+    "tsv": "B_alignment_03/example.tsv",
+    "spec": "B_alignment_03/input/example.spec.json",
+    "preview": "B_alignment_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "b5a27d635cd753d9813e176cbbccee0ec482eb0cc35b058d5a2a16a17d6419ed",
+    "svg": "5ab8677ae8fdf05b157472e67fd9b9c46f4ee3bcea4237226699461014d8b671",
+    "pdf": "2be05e91290e41bc567389998001140afba37f0a02d876c28afc85c72f1e048a",
+    "tsv": "02d2f5f91ed1a39ff850c63d264bcb04d36cfb59a5f168d1b5a2490642db4c2f",
+    "spec": "324608d681595210b75d56916447dfc4ce30d4b44348c8eb16808cd79871275b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_alignment_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b5a27d635cd753d9813e176cbbccee0ec482eb0cc35b058d5a2a16a17d6419ed",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG inspected: one-column complete quality/adapter/retention lanes, clear histogram outlines and labels, decreasing filter retention, complete detection matrix and attached legend; no clipping or collapsed guides. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

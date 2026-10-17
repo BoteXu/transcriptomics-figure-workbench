@@ -1,0 +1,89 @@
+{
+  "id": "S_ligand_target_02",
+  "title": "Prespecified ligand-activity contrasts",
+  "chapters": [
+    "single_cell.ligand_target"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 354,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified ligand-activity contrasts",
+        "x_label": "Donor ligand-activity difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified ligand-activity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified ligand-activity contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.ligand_target supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified ligand-activity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified ligand-activity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_ligand_target_02/example.png",
+    "svg": "S_ligand_target_02/example.svg",
+    "pdf": "S_ligand_target_02/example.pdf",
+    "tsv": "S_ligand_target_02/example.tsv",
+    "spec": "S_ligand_target_02/input/example.spec.json",
+    "preview": "S_ligand_target_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "626ee35efe0bf73273fd70777fac7d4263aac487bcb07c9fe11ce44089fd4f16",
+    "svg": "be16230a15e1b66fde79c9ab1f4675883d293fcac39d4b3f2a1a5e07b86c4d88",
+    "pdf": "4926f539aa0eb2e0b9156f9306002ac2cab0aadc9477c7e76503233cffef0dbc",
+    "tsv": "36679ec5dcbe01bb4ede5e9266e127c56a80b2b668de61f8d1f0504d960c27fc",
+    "spec": "9998a465a98a6c3b88cc04664f062a1c3434bf59a2346886bdad1ae6084bc921"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_ligand_target_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "626ee35efe0bf73273fd70777fac7d4263aac487bcb07c9fe11ce44089fd4f16",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual single exports individually inspected: prior coverage retains full denominators, ligand activity estimates and bounds align with the numeric lane, and ligand-target weights remain explicit with a bounded color scale.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

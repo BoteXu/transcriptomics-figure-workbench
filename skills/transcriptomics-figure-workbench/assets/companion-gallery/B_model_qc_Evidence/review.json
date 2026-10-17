@@ -1,0 +1,111 @@
+{
+  "id": "B_model_qc_Evidence",
+  "title": "Bulk · model_qc — complementary evidence",
+  "chapters": [
+    "bulk.model_qc"
+  ],
+  "stage": "interpretation",
+  "family": "scatter,scatter,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 68,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Fitted values and residual structure",
+        "x_label": "Supplied fitted value",
+        "y_label": "Supplied residual",
+        "definition": "Fitted values and residual structure; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      },
+      {
+        "kind": "scatter",
+        "title": "Quantile diagnostics with frozen reference",
+        "x_label": "Theoretical quantile",
+        "y_label": "Observed residual quantile",
+        "definition": "Quantile diagnostics with frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Prespecified diagnostic sensitivity",
+        "x_label": "STAT1 log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified diagnostic sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · model_qc — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.model_qc supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Fitted values and residual structure; all quantities are supplied frozen channels, with explicitly declared units and scope. | Quantile diagnostics with frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified diagnostic sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Fitted values and residual structure; all quantities are supplied frozen channels, with explicitly declared units and scope. | Quantile diagnostics with frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified diagnostic sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_model_qc_Evidence/example.png",
+    "svg": "B_model_qc_Evidence/example.svg",
+    "pdf": "B_model_qc_Evidence/example.pdf",
+    "tsv": "B_model_qc_Evidence/example.tsv",
+    "spec": "B_model_qc_Evidence/input/example.spec.json",
+    "preview": "B_model_qc_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "7aaf0066dd8a11722a289b79e3794294efb0668439efce35d9803c4713de0d9a",
+    "svg": "02c2528153e03fc6acd04c5a33a18b9139d8a174ce1dfdcf50ca38c7c3d83d73",
+    "pdf": "1dd3afd89c5f1c1e2672a24e266b1e26b1040cde8fa17911a3ec360e1d4a13b6",
+    "tsv": "42217090c7fe1bfd05fef4b09eea0352402674b079d3b91fe34f13f755b6a9b1",
+    "spec": "7a96c611d63f7f4206074728da86de9698f7c83c5757ab773e64e1415a6eb07a"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 74,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_model_qc_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7aaf0066dd8a11722a289b79e3794294efb0668439efce35d9803c4713de0d9a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected revised PNGs: all supplied interaction effects, donor n, residual signs and monotone QQ positions are legible; expanded reading layouts retain complete panels and aligned uncertainty tables.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

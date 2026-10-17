@@ -1,19 +1,21 @@
-label	target	series	x	y	target_x	target_y	value	panel_id	fraction
-Ligand A	Receptor B	Declared relationship	1.0	0.0	0.5000000000000001	0.8660254037844386	0.475	p1	
-Ligand A	Target D	Declared relationship	1.0	0.0	-1.0	1.2246467991473532e-16	0.825	p1	
-Ligand A	Target F	Declared relationship	1.0	0.0	0.5000000000000001	-0.8660254037844386	0.3	p1	
-Receptor B	TF C	Declared relationship	0.5000000000000001	0.8660254037844386	-0.4999999999999998	0.8660254037844387	0.825	p1	
-Receptor B	Target E	Declared relationship	0.5000000000000001	0.8660254037844386	-0.5000000000000004	-0.8660254037844385	0.3	p1	
-TF C	Target D	Declared relationship	-0.4999999999999998	0.8660254037844387	-1.0	1.2246467991473532e-16	0.3	p1	
-TF C	Target F	Declared relationship	-0.4999999999999998	0.8660254037844387	0.5000000000000001	-0.8660254037844386	0.6499999999999999	p1	
-Target D	Target E	Declared relationship	-1.0	1.2246467991473532e-16	-0.5000000000000004	-0.8660254037844385	0.6499999999999999	p1	
-Target E	Target F	Declared relationship	-0.5000000000000004	-0.8660254037844385	0.5000000000000001	-0.8660254037844386	1.0	p1	
-Evidence 1		Edge A					0.7351035876389806	p2	0.18
-Evidence 1		Edge B					0.05	p2	0.43
-Evidence 1		Edge C					0.5666859793277044	p2	0.6799999999999999
-Evidence 2		Edge A					0.8487083704709135	p2	0.43
-Evidence 2		Edge B					0.05	p2	0.6799999999999999
-Evidence 2		Edge C					0.05	p2	0.9299999999999999
-Evidence 3		Edge A					0.05	p2	0.6799999999999999
-Evidence 3		Edge B					0.05	p2	0.9299999999999999
-Evidence 3		Edge C					0.4280055121890592	p2	0.18
+panel_id	label	target	series	x	y	target_x	target_y	value
+p1	TGFB1	TGFBR1	Candidate direction	0	0	1	0	0.40000000000000002
+p1	TGFBR1	SMAD3	Candidate direction	1	0	2	0	0.5
+p1	SMAD3	COL1A1	Candidate direction	2	0	3	0.69999999999999996	0.60000000000000009
+p1	SMAD3	SERPINE1	Candidate direction	2	0	3	0	0.70000000000000007
+p1	SMAD3	CTGF	Candidate direction	2	0	3	-0.69999999999999996	0.80000000000000004
+p2	TGFB1→TGFBR1		Prior					1
+p2	TGFB1→TGFBR1		Expression					0
+p2	TGFB1→TGFBR1		Perturbation					0
+p2	TGFBR1→SMAD3		Prior					0
+p2	TGFBR1→SMAD3		Expression					0
+p2	TGFBR1→SMAD3		Perturbation					1
+p2	SMAD3→COL1A1		Prior					0
+p2	SMAD3→COL1A1		Expression					1
+p2	SMAD3→COL1A1		Perturbation					0
+p2	SMAD3→SERPINE1		Prior					1
+p2	SMAD3→SERPINE1		Expression					0
+p2	SMAD3→SERPINE1		Perturbation					0
+p2	SMAD3→CTGF		Prior					0
+p2	SMAD3→CTGF		Expression					0
+p2	SMAD3→CTGF		Perturbation					1

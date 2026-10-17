@@ -1,0 +1,83 @@
+{
+  "id": "B_reads_03",
+  "title": "Frozen read-length distribution",
+  "chapters": [
+    "bulk.reads"
+  ],
+  "stage": "qc",
+  "family": "bins",
+  "variant": false,
+  "large_data": false,
+  "order": 10,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "bins",
+        "title": "Frozen read-length distribution",
+        "x_label": "Read length (nt)",
+        "y_label": "Supplied count",
+        "definition": "Frozen read-length distribution; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p1"
+      }
+    ],
+    "title": "Frozen read-length distribution",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.reads supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Frozen read-length distribution; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Frozen read-length distribution; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_reads_03/example.png",
+    "svg": "B_reads_03/example.svg",
+    "pdf": "B_reads_03/example.pdf",
+    "tsv": "B_reads_03/example.tsv",
+    "spec": "B_reads_03/input/example.spec.json",
+    "preview": "B_reads_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "12854fc6693ecb8d39b042c098ccf7d6f9a88f0834a9706584bcfab065880ea5",
+    "svg": "c2fe1ef09c7423a8d60919ead7c714e6d2095f393f9326b8810428ef532d5de0",
+    "pdf": "47fafcc9d457fac00c72517db814e2e08a0358c4a5bab91f2a4be16c09fae703",
+    "tsv": "02d2f5f91ed1a39ff850c63d264bcb04d36cfb59a5f168d1b5a2490642db4c2f",
+    "spec": "9f48a0b39824d9041df2f3ef69893140046c8b89046abb2ec70491016ea681f6"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_reads_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "12854fc6693ecb8d39b042c098ccf7d6f9a88f0834a9706584bcfab065880ea5",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual exported PNG viewed individually after repair: opaque histogram outlines, visible ribbon definition, explicit reference and repeated-model labels, correct decreasing filter retention, decreasing feature counts, paired RLE medians, twelve-donor batch totals, complete variance components, fully readable wrapped term names and wide three-column guide lanes. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

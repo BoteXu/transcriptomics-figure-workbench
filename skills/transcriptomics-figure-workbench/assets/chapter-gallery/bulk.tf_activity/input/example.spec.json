@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "9f8c991982890014e076bb1e25baa6c15cbcb3791c14c79e4934391fa2a4b729",
+    "sha256": "26c628057adac6caac30060aa6637ca559176812d21ef45acee28676a2e4da94",
     "numeric_columns": [
       "value",
       "fraction",
@@ -20,7 +20,7 @@
         "title": "Coordinated sample-level patterns",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied score",
+        "value_label": "Footprint activity score",
         "limits": [
           -2,
           2
@@ -33,7 +33,7 @@
       {
         "kind": "interval",
         "title": "Donor-level effects and uncertainty",
-        "x_label": "Supplied effect and 95% interval",
+        "x_label": "Footprint-score difference · supplied 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -170,10 +170,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional regulation display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

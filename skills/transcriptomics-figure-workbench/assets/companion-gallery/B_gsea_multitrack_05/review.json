@@ -1,0 +1,85 @@
+{
+  "id": "B_gsea_multitrack_05",
+  "title": "Prespecified ranking sensitivity",
+  "chapters": [
+    "bulk.gsea_multitrack"
+  ],
+  "stage": "validation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 112,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Prespecified ranking sensitivity",
+        "x_label": "NES · ranking A",
+        "y_label": "NES · ranking B",
+        "definition": "Prespecified ranking sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified ranking sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea_multitrack supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified ranking sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified ranking sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_multitrack_05/example.png",
+    "svg": "B_gsea_multitrack_05/example.svg",
+    "pdf": "B_gsea_multitrack_05/example.pdf",
+    "tsv": "B_gsea_multitrack_05/example.tsv",
+    "spec": "B_gsea_multitrack_05/input/example.spec.json",
+    "preview": "B_gsea_multitrack_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "f03be73e17b68fae07e1df7b11ed1019218ed4dbc8fe3b3daf707c65fafbc605",
+    "svg": "38214b763d248772dd455f64a4751bf261f717a1a7c8c886b0eb117bd43b9cbd",
+    "pdf": "63939cec8a9c3f49c0a65c4efc51833dbd3f82a42a835b007a0bef63b4cd1690",
+    "tsv": "23906e9cbadc6e3e4094373864bc40fcd99b6088784c559e25442e4663a1df3b",
+    "spec": "e9e1ef93c5e04d7284c42570751e0d2c98297dbff6022c2f3e753a90f94a577f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_multitrack_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f03be73e17b68fae07e1df7b11ed1019218ed4dbc8fe3b3daf707c65fafbc605",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG viewed: complete donor/numerical support, explicit uncertainty lanes and separate scale definitions; native GSEA curve remains primary and these provide coverage, ranking and gene-support companions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

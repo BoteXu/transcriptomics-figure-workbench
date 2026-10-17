@@ -1,0 +1,84 @@
+{
+  "id": "S_vdj_01",
+  "title": "VDJ quality and productive-chain support",
+  "chapters": [
+    "single_cell.vdj"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 376,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "VDJ quality and productive-chain support",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "VDJ quality and productive-chain support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "VDJ quality and productive-chain support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.vdj supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "VDJ quality and productive-chain support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "VDJ quality and productive-chain support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_vdj_01/example.png",
+    "svg": "S_vdj_01/example.svg",
+    "pdf": "S_vdj_01/example.pdf",
+    "tsv": "S_vdj_01/example.tsv",
+    "spec": "S_vdj_01/input/example.spec.json",
+    "preview": "S_vdj_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "5f28195a3a3afd5aea3b93f560a6134de92daca4f93e1c39270d5c2bb256384b",
+    "svg": "d0f7824603fcd184f6595b00b621fa42d0e1f4cd54a0dfab4d1d11396e123424",
+    "pdf": "6588e76685f5323a90560557f0dce328b24c8bf48b8757470ccc16b4e656dec7",
+    "tsv": "c790ab9edacbae93a90dccb049949ff77befe59da7fb87b210de4d86a65c9e34",
+    "spec": "202fcc846ae2619ee7539bc09de69c77145d2be71225b26fc5eda462f35e4807"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_vdj_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5f28195a3a3afd5aea3b93f560a6134de92daca4f93e1c39270d5c2bb256384b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: explicit CNV units and supplied contrasts, complete clone/VDJ categories, frozen size bins and compartment sharing are legible; complete denominators and effect bounds are retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

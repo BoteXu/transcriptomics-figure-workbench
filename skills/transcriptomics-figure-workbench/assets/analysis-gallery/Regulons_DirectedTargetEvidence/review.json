@@ -1,6 +1,6 @@
 {
   "id": "Regulons_DirectedTargetEvidence",
-  "title": "Regulon target support with explicit edge direction",
+  "title": "Selected TF-to-target candidate support",
   "chapters": [
     "bulk.tf_activity",
     "single_cell.regulons",
@@ -13,7 +13,7 @@
   "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
   "parameters": {
     "mode": "hub_network",
-    "title": "Regulon target support with explicit edge direction",
+    "title": "Selected TF-to-target candidate support",
     "context": {
       "independent_unit": "fictional donors",
       "independent_n": 24,
@@ -24,10 +24,34 @@
     "definition": "Prespecified directed fictional TF-target evidence graph with supplied support weights; fixed display coordinates. Candidate regulatory edges do not establish causality.",
     "label_genes": [
       "IRF1",
+      "M1_G2",
+      "M1_G3",
+      "M1_G4",
+      "M1_G5",
+      "M1_G6",
+      "M1_G7",
+      "M1_G8",
+      "M1_G9",
       "STAT1",
-      "RELA"
+      "M2_G2",
+      "M2_G3",
+      "M2_G4",
+      "M2_G5",
+      "M2_G6",
+      "M2_G7",
+      "M2_G8",
+      "M2_G9",
+      "RELA",
+      "M3_G2",
+      "M3_G3",
+      "M3_G4",
+      "M3_G5",
+      "M3_G6",
+      "M3_G7",
+      "M3_G8",
+      "M3_G9"
     ],
-    "edge_semantics": "Directed TF-target candidate evidence; no causal inference",
+    "edge_semantics": "Explicit fictional directed TF-to-target candidate evidence; supplied scores do not prove direct binding or causal regulation",
     "directed": true
   },
   "definition": "Prespecified directed fictional TF-target evidence graph with supplied support weights; fixed display coordinates. Candidate regulatory edges do not establish causality.",
@@ -49,17 +73,17 @@
     "preview": "Regulons_DirectedTargetEvidence/preview.jpg"
   },
   "sha256": {
-    "png": "b26bbfcd435df1243dbfe2f2112854aa1d682ff04e93cb7f789fcf0462db8b2b",
-    "svg": "27a0fda67967383e98e27a3dfc33e902aa0aa61aee1db1a6b6bc3d436300bf08",
-    "pdf": "058a8b958da7c8a552b68b22a61553477ce4599d323c7ccb4df05579cc42664e",
-    "tsv": "cff3902d0c71cebf81be9f8c5ef13d70bac94375b01ace7c8b219b9dead80381",
-    "spec": "4cdacb8574f353300e4331cc90d9a60dafbcfd3e22033fcca36ab3be7fd79964"
+    "png": "8caa3379f89c317b1a72b758839b821589dd07a6241e68ba065964d414bf40bd",
+    "svg": "4c9931d299b1285f4df6374883096eaae38589b16044b78eab0e79247830272b",
+    "pdf": "89f7ae7123e6fdc0b063d957da14d9057cc41ff9df70118d440b04a4272a69d6",
+    "tsv": "6e571bf4b61c84fa2e79682c6435b5d2cc219b8a45642561493dc2f55d53e575",
+    "spec": "4a52aeb766982279c594e0598f0249931f3b0983e2e6a5f66b5026803f250c51"
   },
   "readability": {
     "target_width_mm": 297,
     "native_width_mm": 233.67999999999998,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 8,
+    "essential_text_count": 32,
     "smallest_pt": 13.980657309140707,
     "p10_pt": 13.980657309140707,
     "below_threshold": [],
@@ -70,12 +94,13 @@
   "review": {
     "id": "Regulons_DirectedTargetEvidence",
     "state": "SCREEN_REVIEWED",
-    "png_sha256": "b26bbfcd435df1243dbfe2f2112854aa1d682ff04e93cb7f789fcf0462db8b2b",
-    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
-    "notes": "Arrow direction, TF labels, fixed graph and declared candidate-edge support inspected.",
+    "png_sha256": "8caa3379f89c317b1a72b758839b821589dd07a6241e68ba065964d414bf40bd",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
     "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "analysis_performed": false,
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

@@ -1,0 +1,84 @@
+{
+  "id": "B_alignment_05",
+  "title": "Feature-assignment classes",
+  "chapters": [
+    "bulk.alignment"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 21,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Feature-assignment classes",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Feature-assignment classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Feature-assignment classes",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.alignment supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Feature-assignment classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Feature-assignment classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_alignment_05/example.png",
+    "svg": "B_alignment_05/example.svg",
+    "pdf": "B_alignment_05/example.pdf",
+    "tsv": "B_alignment_05/example.tsv",
+    "spec": "B_alignment_05/input/example.spec.json",
+    "preview": "B_alignment_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "f0409b8769ec3bf1f698bb572943038be5bb85098e4f3b403a619a7f309cdee7",
+    "svg": "37ddb8590e0752e9127d5def459455be01dba4ca7c5c30ff348ce0af2fa9cab0",
+    "pdf": "eed3eae7e10ce88a5bc80ecd62b25b52a052d36340f8d1549e49e062da825e2e",
+    "tsv": "1f2f36492f19695e0bed00ccf1118a4939560ce12d86f95e7f65dbbb4c792c86",
+    "spec": "40de33a249b5a8f5d810d0d1c36ce9b670637e5f8e7ce1226d084c45203a3e1a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_alignment_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f0409b8769ec3bf1f698bb572943038be5bb85098e4f3b403a619a7f309cdee7",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual strand/feature assignment plots retain every supplied category and donor, clear fraction scales and totals, and no legend or axis collision. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

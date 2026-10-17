@@ -224,27 +224,19 @@
         "preview": "bulk.filtering/preview.jpg"
       },
       "sha256": {
-        "png": "7e9e5953e98d55b6b9b485456c391dd5450d0987d3520a9f10eb585bd14b5d38",
-        "svg": "3ed23c7b403c8ee2029e24fd8b4594d536a28f085bc88b24c2390799105e0da6",
-        "pdf": "733488cd0fb34af2a444745d453d159a20f69a43cd686167132d940476deda33",
+        "png": "a9ee61097e0d3b72a30c23a0f447a7c5f15e16e366b96fc7deb8a31388e534e9",
+        "svg": "4e11321dbc763e1d6efec4d296901cebe94ba5a5760a11cdee23fd87c08626c7",
+        "pdf": "0299fe46e5fd99e6e136691c6dff15dd7189af4d2b5a6727b6e7028f5bf3dcea",
         "tsv": "2f804a1bfb14affc23fa5f64318bc9f067a322e6c4ae1444cf02f841abc5462b",
-        "spec": "a577723b637b0319180ad76a88a491cd1d3c503557314bc7e954feee5c1dc17e"
+        "spec": "d902361d8b9951220db28119cb6d6e35b9d3e2d5690e5d77f08c0f0bce3710bc"
       },
       "visual_review": {
-        "id": "bulk.filtering",
-        "png_sha256": "7e9e5953e98d55b6b9b485456c391dd5450d0987d3520a9f10eb585bd14b5d38",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "bulk.filtering.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "a9ee61097e0d3b72a30c23a0f447a7c5f15e16e366b96fc7deb8a31388e534e9",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -259,7 +251,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "bulk.normalization",
@@ -1030,42 +1023,35 @@
         "preview": "bulk.gsva/preview.jpg"
       },
       "sha256": {
-        "png": "8021a07a766f481532abe962e531e84c83d6ce3921f53174aa8ddc43af65ab2b",
-        "svg": "b439c91b407c5d9bce60aada49f5ce23c8b7caec15f3ebea9adc19c02cf68428",
-        "pdf": "57a1b222ac8ecc66ddcee128936263c973b1b51f8198d374b7fc7b1bd19594c4",
-        "tsv": "3415564324f0a66174226e8562cfdcbaf2188a2e6c15f257a09908997dab7fb2",
-        "spec": "c340271c0df53693d0ac0898a0990fc78eb2a965a2c26e4f95108e6460ad39da"
+        "png": "fb835ba7bb955038d27e00ef026208817979dfa6cc0f16c779cad029a3c900fd",
+        "svg": "5fbd56410848ad5ad90f282716fe9b8c42d76b43cba5029a4ec3664889796647",
+        "pdf": "358bca72cfd6b593938b8c6d369b7770bf9c1ce27323dd6b0aec9d027d179ba9",
+        "tsv": "af824fd50c08d6ee0643e35def9794813b96581928734ef9de649b4c4d8e2ded",
+        "spec": "64b3bfc8408d93b5c9b46d915cec160541d73d6e68d5b674eb9798dcedd59994"
       },
       "visual_review": {
-        "id": "bulk.gsva",
-        "png_sha256": "8021a07a766f481532abe962e531e84c83d6ce3921f53174aa8ddc43af65ab2b",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "bulk.gsva.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "fb835ba7bb955038d27e00ef026208817979dfa6cc0f16c779cad029a3c900fd",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 304.79999999999995,
+        "native_width_mm": 309.0920038766047,
         "minimum_required_pt": 7.5,
         "essential_text_count": 77,
-        "smallest_pt": 10.718503937007876,
-        "p10_pt": 10.718503937007876,
+        "smallest_pt": 10.569668445076461,
+        "p10_pt": 10.569668445076461,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "bulk.wgcna",
@@ -1161,42 +1147,35 @@
         "preview": "bulk.tf_activity/preview.jpg"
       },
       "sha256": {
-        "png": "e1bb319387fc26397c21470564af74c27f3781ca5b18ce216e3c59270e4c8911",
-        "svg": "85ce165d2c9593ad28d0c7a581fcc4feb6f99374cb97ba3b61ec89e7532996c2",
-        "pdf": "7accc8386957f9a71ed239a790f4090b66dc42c4bbcb43e91d8a7e9203ee80ae",
+        "png": "8e87ae5fa2b27aa23ddb281259730435e38ec85f78e5c1d726810f5b84147511",
+        "svg": "0f7c647c6bd9519e69b7ddca524a3968bef370b4b73afced10aab2a490727f08",
+        "pdf": "43305d169064d8accfa59229f4e96e990df8b4e25948ca71036b548e5f456c3d",
         "tsv": "34b01deba35b24a51269ce72d38f0b0b7db5e34129f4572132547e5169eb0d79",
-        "spec": "1c5ffa782725cea3be60f313a316c57a038a115b1d5842a105314253c1461a40"
+        "spec": "84b05e5f971b29d5fca52bd722c98c413240d60d1b1203fb16c9231d81a6cda2"
       },
       "visual_review": {
-        "id": "bulk.tf_activity",
-        "png_sha256": "e1bb319387fc26397c21470564af74c27f3781ca5b18ce216e3c59270e4c8911",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "bulk.tf_activity.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "8e87ae5fa2b27aa23ddb281259730435e38ec85f78e5c1d726810f5b84147511",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 304.79999999999995,
+        "native_width_mm": 305.8191158912481,
         "minimum_required_pt": 7.5,
         "essential_text_count": 79,
-        "smallest_pt": 10.718503937007876,
-        "p10_pt": 10.718503937007876,
+        "smallest_pt": 10.68278544485026,
+        "p10_pt": 10.68278544485026,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "bulk.deconvolution",
@@ -1357,27 +1336,19 @@
         "preview": "bulk.dtu/preview.jpg"
       },
       "sha256": {
-        "png": "b4a326bd5fb7012cd4c6f2c16250cbf5b7e171691571041e291f2538b81292d4",
-        "svg": "9ba7f0adec4e565e994e41a299accdced587c185c54e6b6d2eb946f8bc246c4f",
-        "pdf": "b7ad4ad35f2eb5100743a05ced2002f776ffb3ae9d8eadd670c8f378742cf426",
-        "tsv": "ebf82c2231573511515050193c620cfa9f8e54a115e13e10a037ba7c056c3ce7",
-        "spec": "b290071dbeae8903698978555b7b0ab2f513fcd35a07d279542a7a5cc6ad89d9"
+        "png": "b7e30d4989727e4c5dfaaee4f705ba7c2fec76307b04947d7f7d8757ebaab23c",
+        "svg": "ca4dede9279a0b0852928b1c0a05b4a9d2307b7ebc44c7ac4e0ce378a95c19bf",
+        "pdf": "1cb47c736ddb9746f8e8c4f2f0fce39174d6495acbb60d582e083fa492de302a",
+        "tsv": "8b148eade5ac77a48e51501da1022caec7a0c22b939bf93e280ab4ac35c3ac25",
+        "spec": "5b8288acb3d3bb0bddb837815635936dff74cf2fd522821f28f5a88ad50b55c3"
       },
       "visual_review": {
-        "id": "bulk.dtu",
-        "png_sha256": "b4a326bd5fb7012cd4c6f2c16250cbf5b7e171691571041e291f2538b81292d4",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "bulk.dtu.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b7e30d4989727e4c5dfaaee4f705ba7c2fec76307b04947d7f7d8757ebaab23c",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -1392,7 +1363,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "bulk.timecourse",
@@ -1422,27 +1394,19 @@
         "preview": "bulk.timecourse/preview.jpg"
       },
       "sha256": {
-        "png": "62da94d999f257dc81a3622d6d1dc41dfe90e3d5fc0304449fdb340c240474c0",
-        "svg": "90d646bb3648722aa4db65b8f77143381c52013636ae1c3e166b58d5649e2840",
-        "pdf": "978b1071ffa16bc80ca5b6c9f754d93d8b18bcbfff9a7d1facf6548062f10f2b",
-        "tsv": "64d656784a7597364782f09a89442f34a1b0ff5960d897c282e6c9e178dba3c1",
-        "spec": "d03aeb7f691e6f07a4b69aec0a885e6a8993995ba3921bc99235c678f7ab8791"
+        "png": "a282e537f7971726888a4de59a60dc45b31f17c043f54e48624eb4c801a94b57",
+        "svg": "5a55ba38965b55485fd2d933b6d4d8ede4e8287d4602dfd42febdb0a5d680236",
+        "pdf": "962f173ddbe8f566dc5bbfcbb34b6e446b7fbdfa7b372554f75980a825c636b6",
+        "tsv": "448d9b31e89f3a0060f066aaea676bb5f0affc00f632e1f49ae9b109f051764a",
+        "spec": "3b6f20e3d9bd4c5c69867bccbd9659a17bc94d147bfe78d5e4055691a153b893"
       },
       "visual_review": {
-        "id": "bulk.timecourse",
-        "png_sha256": "62da94d999f257dc81a3622d6d1dc41dfe90e3d5fc0304449fdb340c240474c0",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "bulk.timecourse.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "a282e537f7971726888a4de59a60dc45b31f17c043f54e48624eb4c801a94b57",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -1457,7 +1421,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "bulk.replication",
@@ -1487,34 +1452,26 @@
         "preview": "bulk.replication/preview.jpg"
       },
       "sha256": {
-        "png": "3d3ea95957b56a4b6fd0573472c5e2363f4213054c58ea1a6567e2319f3c2cca",
-        "svg": "b5d45c16cbd8ca80f28bf01e6bfd44175972384749551c1b2f6032b025763804",
-        "pdf": "d2968e5770622b03cf74a2332dee4be4019c6fbc39273e01e4598188e89cf60e",
-        "tsv": "98c575c55bc79a6baee00b4fc468ae83829d5664dc0d0c39c5a677371e6859f3",
-        "spec": "73fca6a97941416ac219d8c7275b7327b43662369295411316f150da1efb39ff"
+        "png": "90ca30143bc664a960131186d7385f186ccdff960b8fdd816f852b8e2ba1e46a",
+        "svg": "22eb1133abba7bb561034b1b71fe468d6f77d8fc5c24613373ccc6964f6fb721",
+        "pdf": "b6dcaa7d70a695f18886164a76dcc2a73944828ce7591555f3668d27f358490a",
+        "tsv": "91f9740ce3dfeca1f39d193584c8b3951e8caabe0966ab43688063396d131d85",
+        "spec": "5753ca055cc8b2ed8d2dacaee6f8d516b40767a62ed7c2c54147d65699414c86"
       },
       "visual_review": {
-        "id": "bulk.replication",
-        "png_sha256": "3d3ea95957b56a4b6fd0573472c5e2363f4213054c58ea1a6567e2319f3c2cca",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "bulk.replication.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "90ca30143bc664a960131186d7385f186ccdff960b8fdd816f852b8e2ba1e46a",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
         "native_width_mm": 304.79999999999995,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 56,
+        "essential_text_count": 54,
         "smallest_pt": 10.718503937007876,
         "p10_pt": 10.718503937007876,
         "below_threshold": [],
@@ -1522,7 +1479,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "bulk.survival",
@@ -1684,27 +1642,19 @@
         "preview": "bulk.connectivity/preview.jpg"
       },
       "sha256": {
-        "png": "6fc0a06c7f46ea0ee47961802af6305270e95d34e12556c4763c999403e763ea",
-        "svg": "23a2f350ed611040874fe234cc1e47f7b6f119f4b8c2c787e1bdb38579b2b73b",
-        "pdf": "bdf8c835df5b6d3618dc82c1f11e662b9b39c3a4dbab8111407e0df755344962",
+        "png": "615b5f78ebb85c82fcba8d671eea427555cf748f78ce57d39e1274a7ac4484f1",
+        "svg": "773717eddf835cb646b3fc6b8218ab86cdec39373552769722236bdde4b39acd",
+        "pdf": "56dda0907c2ba8c0e85ee318d50154510802bbc282c6f721bf59c0bc2c5c0a28",
         "tsv": "8f4c70fce7f4c823e6200198f235c47e3d61d74ba3218cfe227917d1a511c414",
-        "spec": "077efcc562084b79b29e28f576474ada373ec828e902651298a8455261d737e4"
+        "spec": "e594724ff798bf0878fb140184c284ebab721d76dbbad73ee49e37e46e1b37e3"
       },
       "visual_review": {
-        "id": "bulk.connectivity",
-        "png_sha256": "6fc0a06c7f46ea0ee47961802af6305270e95d34e12556c4763c999403e763ea",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "bulk.connectivity.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "615b5f78ebb85c82fcba8d671eea427555cf748f78ce57d39e1274a7ac4484f1",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -1719,7 +1669,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "bulk.noncoding",
@@ -1749,27 +1700,19 @@
         "preview": "bulk.noncoding/preview.jpg"
       },
       "sha256": {
-        "png": "b6ec3579df85588b7cced8559abb5f8076c3bd9942a173054fc074198d04d51c",
-        "svg": "bd3c55f4c1e830fd1452d7869e31c1debe5d15bedcd3597f84e002cea6fba937",
-        "pdf": "b9c7fcfcf57c94a0d3db2bd7bcb6b1cf903f2ca2f9880c82e04885b0735d0115",
+        "png": "33f97a8f5828e4458beaae8f0903281645ae7743a3e2fe63ae27b3e9fa75cab9",
+        "svg": "24ec950d177acfc44a8ce031bb2dfc4f897fd672429a946ec789f362ef7954a3",
+        "pdf": "3491d989f881404f52e9b4c8c455705ff3ac2755f7189edde17450b44b55e614",
         "tsv": "c2a3c5be2cdd0bd3bd0352c626f058826dbf9bf0bbbcd166c082bd4a3e36c43c",
-        "spec": "4172cfe358582dee9d2b3a3a4ea2fd13e16701355d707d793ef11ea4c0d03fd3"
+        "spec": "fdce5cd64539df0773228b478733d914f391f1a1612b5154753379243adbbc88"
       },
       "visual_review": {
-        "id": "bulk.noncoding",
-        "png_sha256": "b6ec3579df85588b7cced8559abb5f8076c3bd9942a173054fc074198d04d51c",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "bulk.noncoding.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "33f97a8f5828e4458beaae8f0903281645ae7743a3e2fe63ae27b3e9fa75cab9",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -1784,7 +1727,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "bulk.fusions",
@@ -1987,7 +1931,7 @@
     {
       "id": "single_cell.qc",
       "assay": "single_cell",
-      "title": "Cell quality across donors",
+      "title": "Cell QC · donor-stratified supplied distributions",
       "family": "rich:CellQC",
       "required_results": [
         "cell_metrics",
@@ -2013,42 +1957,35 @@
         "preview": "single_cell.qc/preview.jpg"
       },
       "sha256": {
-        "png": "7e4d303ca2a7d6495d8eacdde70ff3812506405d1d86ca50bc9baff1cb04efcb",
-        "svg": "26b0b3b37074283a1c7e04b4948b89c9da1792fb4558126b56b13cf7ff888928",
-        "pdf": "7c47b620610ee4bbbae4d678ba0d10829cd81b2dfd933f57179ea5a330486f73",
+        "png": "41d587516d3480b7b69bcebd51cee0ba4f34cb9034ec9dcd34d1c054e46e9ef3",
+        "svg": "f70af6455b394c3de9f290e9b5e4ccf2aec022a56947dfe2489b8ca13710d7f0",
+        "pdf": "8769b6345329cf60ea35941c4c01476b6285ce187330f21212e3eda256ea4794",
         "tsv": "6bd4de4bd92a969e9a16351c3864fa79a27c44ff5626299810ae5e3cf696092c",
-        "spec": "1cfe2b439d0391c103092e5f032c55eb50012fcaf8efc0fc316fed51a65ce577"
+        "spec": "0cc8296b6e88bb2eac6715884ea70e663ce17d797b1625ae1fece40889d84cdd"
       },
       "visual_review": {
-        "id": "single_cell.qc",
-        "png_sha256": "7e4d303ca2a7d6495d8eacdde70ff3812506405d1d86ca50bc9baff1cb04efcb",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.qc.complete",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "41d587516d3480b7b69bcebd51cee0ba4f34cb9034ec9dcd34d1c054e46e9ef3",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 210,
-        "native_width_mm": 228.6,
+        "native_width_mm": 212.39986015624999,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 70,
-        "smallest_pt": 8.267716535433072,
-        "p10_pt": 8.267716535433072,
+        "essential_text_count": 69,
+        "smallest_pt": 7.909609727445789,
+        "p10_pt": 8.898310943376512,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.ambient_doublet",
@@ -2147,34 +2084,26 @@
         "preview": "single_cell.integration/preview.jpg"
       },
       "sha256": {
-        "png": "cbae2b1dd9cb8f17fb69170569916ddf48ebf257dc1f721fbd136453f1c0c2bb",
-        "svg": "1298510b012dea4cfeb58384665533234dabdc6337ee53d61c41a3892f922e3c",
-        "pdf": "4a69da0779eeb48993aa720a7bfdf37f8580a06378fe16e055d005268466a74b",
-        "tsv": "f5c8a8fdf8875695801b414dee0e0f49de0e1ab9163ffb2702f43799dda6d40a",
-        "spec": "0acbe444d6fba6b9f969abc68f25f85b62be6073ae735a6be875eec4c2c1caf3"
+        "png": "11fe6fcb7ba171828803d43e8a967dde02b6064b2a3071e38a10528f82990529",
+        "svg": "8efaa6f9ba590672d12e25cf4e764fcf2d128bd493068675504224ee223a1225",
+        "pdf": "0123ecb36e988e8be54fb8b8ca824ca4bf1593ae2723b13864e1b7b416e150d4",
+        "tsv": "0b0e6d278c9cbb42903950e9ad07d2d705d02fc0343a529e5896999f9be62671",
+        "spec": "95409ef1e22ca1093567b89441fa778309f852e528b348717baeecae27ea26ff"
       },
       "visual_review": {
-        "id": "single_cell.integration",
-        "png_sha256": "cbae2b1dd9cb8f17fb69170569916ddf48ebf257dc1f721fbd136453f1c0c2bb",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.integration.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "11fe6fcb7ba171828803d43e8a967dde02b6064b2a3071e38a10528f82990529",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
         "native_width_mm": 304.79999999999995,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 38,
+        "essential_text_count": 35,
         "smallest_pt": 10.718503937007876,
         "p10_pt": 10.718503937007876,
         "below_threshold": [],
@@ -2182,7 +2111,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.hvg_pca",
@@ -2214,27 +2144,19 @@
         "preview": "single_cell.hvg_pca/preview.jpg"
       },
       "sha256": {
-        "png": "b24e50aed2e7feecfa146e0cec8556e149f460f734426942e7709767b36d071b",
-        "svg": "d59de4afcd332d7c408d4d486b47616d7d8188125bfc65ca3b764dc52eb6a15e",
-        "pdf": "9e6341c3e6c9f7cdcefcac263f7bed435ae1cdd88dbf4c19636ceef0aedae448",
-        "tsv": "6dfc11208300a9d28b03d9b0f39072c325132c35c68aeda76ff0686110aa9ab3",
-        "spec": "b256f8cc4d1e64ce2a64e34ba9a048ce174aa95af99c39e7e95df5d4f4808530"
+        "png": "426951be740f58d620a09827b05eef7e3d33e59a30dc2f754d23f8a170bfb9ed",
+        "svg": "f420ee2ab1879a729d3c57073273207a8f326c36a34c07c2749b8e6767ef9d03",
+        "pdf": "4fe0d7027513221b5e9346d43d1f623bb3eb95465cf4a909f7cfcf0651163f88",
+        "tsv": "20a6f921235e5f9bdbb4de98cc82c07510df220904d99f30e1473f8c49ea79c9",
+        "spec": "d3f9b41d6af260633c69ccd28b2027e3cd52d8351c60412ccd58265aa8631082"
       },
       "visual_review": {
-        "id": "single_cell.hvg_pca",
-        "png_sha256": "b24e50aed2e7feecfa146e0cec8556e149f460f734426942e7709767b36d071b",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.hvg_pca.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "426951be740f58d620a09827b05eef7e3d33e59a30dc2f754d23f8a170bfb9ed",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -2249,12 +2171,13 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.resolution",
       "assay": "single_cell",
-      "title": "Cluster resolution and donor support",
+      "title": "Resolution changes · cell flows and cluster sizes",
       "family": "resolution",
       "required_results": [
         "resolution_edges",
@@ -2281,27 +2204,19 @@
         "preview": "single_cell.resolution/preview.jpg"
       },
       "sha256": {
-        "png": "ece8d019cd4bfa626f602d75c914fa7ad0f1283085d9bf7bd8ae71ecb727dc48",
-        "svg": "58bb87ef288dc19c9991d86470c52965bb11c27927256e839c9cbd6e9a2efe66",
-        "pdf": "10c8e2a3fddfc743dc965c6fe140aba7b9fc92cbe7a62eb0e4101222a6125fab",
+        "png": "c7b35a99045ae649d542de9b56794c5c6205f03d8ace777937630eb56e6c0f6c",
+        "svg": "b4e642de11bbb5885df36aa6d94c01152894000de7344613800d52f5256066f1",
+        "pdf": "3d5ccea1fda1859ba83f664e04ac471f2f793b689ed39ea90d4795386115eeda",
         "tsv": "73d0456f5ccb26d9d252df50deb6753582f0fe3d4bc921a33f11e88512851ea8",
-        "spec": "b20d59ca2eef13249b64e053bbb7a855001dfbb9d424ca14d9a7e000b8834d78"
+        "spec": "a2b8ceffbba67b1b63e2713aca91fafb717aa5e35925f3cfea925e0bd97f9af5"
       },
       "visual_review": {
-        "id": "single_cell.resolution",
-        "png_sha256": "ece8d019cd4bfa626f602d75c914fa7ad0f1283085d9bf7bd8ae71ecb727dc48",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.resolution.complete",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c7b35a99045ae649d542de9b56794c5c6205f03d8ace777937630eb56e6c0f6c",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -2316,7 +2231,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.annotation",
@@ -2552,42 +2468,35 @@
         "preview": "single_cell.composition/preview.jpg"
       },
       "sha256": {
-        "png": "a237bd182fdc0fb9a03bb7e765e001f570b52d35b84abd5d7e8d302053771cb0",
-        "svg": "2a3b38daef819f8895867072af10848af60605fea96048829061799c32c86d9e",
-        "pdf": "ad74d27fdad04ac847930d25cf648d03829176a78652e702968bc4adc25100cf",
+        "png": "520feecf08d9f9c6961579575f1035e661f2d516c52c30493ee0d61ec9539e29",
+        "svg": "a9bedacb57dbb80701800f7b2c08e534cf527d86be4f1a5950ecfeaf6e7e8efc",
+        "pdf": "7b6a6ed8b2bbefdec7e4ac94fde580336823c1624aaaf0b1809a542adbd649f3",
         "tsv": "580351bb8a1332b9af951769e9d26e83e50b51540b2853c7ed853bf13ffc63b3",
-        "spec": "7ae8403c93c9443291a9765a1afe3506a435f9728cead67b7d80ea1f0c19efb1"
+        "spec": "953a083f9f1118d54774c9770959b2b4a603c94ef9a9aca124a9f8f56bc36352"
       },
       "visual_review": {
-        "id": "single_cell.composition",
-        "png_sha256": "a237bd182fdc0fb9a03bb7e765e001f570b52d35b84abd5d7e8d302053771cb0",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.composition.complete",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "520feecf08d9f9c6961579575f1035e661f2d516c52c30493ee0d61ec9539e29",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 210,
-        "native_width_mm": 217.33916399999993,
+        "native_width_mm": 227.99484279513888,
         "minimum_required_pt": 7,
-        "essential_text_count": 37,
-        "smallest_pt": 7.729853971463701,
-        "p10_pt": 8.696085717896663,
+        "essential_text_count": 57,
+        "smallest_pt": 7.368587725072085,
+        "p10_pt": 8.289661190706095,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.abundance",
@@ -2754,34 +2663,26 @@
         "preview": "single_cell.multi_contrast/preview.jpg"
       },
       "sha256": {
-        "png": "55c4b75cd4db3bac39e22928522b97a3671658e4c1b51ba0d8d659ec7e52a2a5",
-        "svg": "2a1ba929af3280fcf5015fb31ba4e142e7ef8b338c3070dcdcea5566c07b0366",
-        "pdf": "8dceb9ea9cd3416ac5e6340b9b071016bb9566e012665f06eab0dab7d3d49d99",
-        "tsv": "04f0899c8f17618478b92226a6fa12c8fe3299fdc0b05bedbe2f18c68d69b6c2",
-        "spec": "97bff986012ae5b8dd4838300119564deb0a8cd40f85724b191e7dc0804ca5e7"
+        "png": "a31b23835b51292c547ea471c3880300e3c4921b3baefe8c2874005402317a56",
+        "svg": "3f9113d93b61c9a954058155063c332ddd30c883168ec94e78c5bab90f4e8b9d",
+        "pdf": "9bc8dbd773b17d43aa17829d8abd546d7d95d7b3660257580cf23b1f138dba95",
+        "tsv": "0f6755451fc1d1ec39638653c5fb9c04c1a397e96782ded062fc78fa8fa0cc67",
+        "spec": "3c6342cb4de524bb4f828da946a4548a564d5593eacb4321bfbb64c585e55238"
       },
       "visual_review": {
-        "id": "single_cell.multi_contrast",
-        "png_sha256": "55c4b75cd4db3bac39e22928522b97a3671658e4c1b51ba0d8d659ec7e52a2a5",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.multi_contrast.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "a31b23835b51292c547ea471c3880300e3c4921b3baefe8c2874005402317a56",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
         "native_width_mm": 304.79999999999995,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 52,
+        "essential_text_count": 50,
         "smallest_pt": 10.718503937007876,
         "p10_pt": 10.718503937007876,
         "below_threshold": [],
@@ -2789,12 +2690,13 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.pathways",
       "assay": "single_cell",
-      "title": "Celltype pathway responses",
+      "title": "T-cell donor pathways across specified contrasts",
       "family": "story:gsea_comparison",
       "required_results": [
         "NES_grid",
@@ -2820,29 +2722,20 @@
         "preview": "single_cell.pathways/preview.jpg"
       },
       "sha256": {
-        "png": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
-        "svg": "9307ef1bcecb5da53c36aa26397949d500fb22c55ee0ca4cfdc92a069cb16fd2",
-        "pdf": "5ec5855f3ae9002883afcc498311318b164f68b21175181c874166281d7a5310",
+        "png": "1e551b1c4396095d4d905868b56f3f672f27b9eeb7326f92a80de8695e2839bd",
+        "svg": "ad1cbacac3ff3fec8c2a36b8c3aa773d2a148c99b8840b199022fea844352ded",
+        "pdf": "c40eab063e3f94d149b5b96226229d82b517f316ccd1ced35ad3688cea46b51d",
         "tsv": "727f92097cf6e98e1ef6f95e42f7d06e1be3dce83a87689065c5b539696ba544",
-        "spec": "eae2d37e2df6f6afc109f1a0f24cca667862021843cd979fe53e54397458ecb5"
+        "spec": "2cc88c348319f0462cdd6a1b7f9d4bd4c5e5c65e8b62727707134f818fb3e52c"
       },
       "visual_review": {
-        "id": "single_cell.pathways",
-        "png_sha256": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "source_figure_id": "single_cell_pathways"
+        "id": "single_cell.pathways.complete",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1e551b1c4396095d4d905868b56f3f672f27b9eeb7326f92a80de8695e2839bd",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+        "independent_reviewer": false,
+        "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
@@ -2857,13 +2750,13 @@
         "visual_acceptance": false
       },
       "scientific_acceptance": false,
-      "display_revision": "0.9.2",
+      "display_revision": "0.10.0",
       "previous_png_sha256": "fe9dae63bffd0a1a830d35278c300c86bb1730004e65bc3138c4cf56a0019d6e"
     },
     {
       "id": "single_cell.gene_support",
       "assay": "single_cell",
-      "title": "Celltype pathway membership and gene evidence",
+      "title": "T-cell pathway-supporting gene responses",
       "family": "story:gene_support",
       "required_results": [
         "term_overlap",
@@ -2890,29 +2783,20 @@
         "preview": "single_cell.gene_support/preview.jpg"
       },
       "sha256": {
-        "png": "04716260f96739f2c14a22e2986546d9b8600ac48eadc56e44d52544bab6ad74",
-        "svg": "dfe4a88bd4e4e4d31be8315dc897c288f9882a3c3d9bd9a645fbec9abc7ee263",
-        "pdf": "96c1d4e92c8210e7aa3d6ef74b4bd05b485329da9e308d885f6f850b56e05656",
+        "png": "e7bc17e07a3e6771e01dd98622df48015cc5df071b0da7d7ff578a0b39e9c9d6",
+        "svg": "8634b8fdb3d8050f87daa392fe902fd37eeced481ab2f09b8acf49b5acfa2d00",
+        "pdf": "a013cd9be00fd53a646a81a7e42dc9e0fad46cddf3b319b567a918f06a5a9f03",
         "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
-        "spec": "caec4faae68e74d03f429fbdd5024c546d7cf81ddfacc8299af9180b69deef42"
+        "spec": "012544069fb610be61acc493df2b98dcde59fe2f929ed429ceadcd4af27e7486"
       },
       "visual_review": {
-        "id": "single_cell.gene_support",
-        "png_sha256": "04716260f96739f2c14a22e2986546d9b8600ac48eadc56e44d52544bab6ad74",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
-        "scientific_acceptance": false,
-        "source_figure_id": "single_cell_gene_support"
+        "id": "single_cell.gene_support.complete",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "e7bc17e07a3e6771e01dd98622df48015cc5df071b0da7d7ff578a0b39e9c9d6",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+        "independent_reviewer": false,
+        "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
@@ -2927,7 +2811,7 @@
         "visual_acceptance": false
       },
       "scientific_acceptance": false,
-      "display_revision": "0.9.2",
+      "display_revision": "0.10.0",
       "previous_png_sha256": "74322938040f57752737c1a30b442979581b85acb250f5b24b777b0583b83eb6"
     },
     {
@@ -2960,42 +2844,35 @@
         "preview": "single_cell.states/preview.jpg"
       },
       "sha256": {
-        "png": "1fe184c970b201c228c9b749ba85726b240ac4fe920348fe57bec5146b694b23",
-        "svg": "46ed81b5d3c2b3819bf6edf3ea55b27c1479a5b26db806849686320d78ca61c9",
-        "pdf": "97d89761571068017649d4c9e44b7333a44a1ad1797cbc5c62eeba94c8561fba",
+        "png": "1c66525b8ad77f7e979f084e0dc2427fce19b646745e1e616de933ee8d0e2d50",
+        "svg": "2dac7b6a1748b689d2c128bc3ba6655784f28dfd64ad7c2a6f275f911d8c6e86",
+        "pdf": "69e86badf91af52da12211b405d93eac6c55e20a9c3b33ccddc2bd1fc6889ef4",
         "tsv": "377df0f5f9a0ab7387488f6bbe113775449cdc596bd5ce6bdfaa4a1f95bc2d32",
-        "spec": "884ada5d06fd182ac75f2e237d05a51fa3b8bbd3e4b2eb4a396d194ff413c350"
+        "spec": "24ad4e0f3d528a789042dc6beffc8524f5594c5a4a03dd3201c5014eea6bd582"
       },
       "visual_review": {
-        "id": "single_cell.states",
-        "png_sha256": "1fe184c970b201c228c9b749ba85726b240ac4fe920348fe57bec5146b694b23",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.states.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1c66525b8ad77f7e979f084e0dc2427fce19b646745e1e616de933ee8d0e2d50",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 321.8246502862882,
+        "native_width_mm": 321.66276285859726,
         "minimum_required_pt": 7.5,
         "essential_text_count": 79,
-        "smallest_pt": 10.15149087272758,
-        "p10_pt": 10.15149087272758,
+        "smallest_pt": 10.15659994637356,
+        "p10_pt": 10.15659994637356,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.hdwgcna",
@@ -3160,27 +3037,19 @@
         "preview": "single_cell.velocity/preview.jpg"
       },
       "sha256": {
-        "png": "4f205c5b9943d79d3cbb41456d78070615e3cbd99a595203e5947e087acbab2a",
-        "svg": "8443d36334c86c43cb01e09aa2e2598a44a784065c171711ab665796f13a59f9",
-        "pdf": "8dfac764d58ab2af2165371ea59f70c358649ab484c89b3019a734d60dd8243e",
-        "tsv": "c6187c234dc007b7c0fffcbc373165be33ed79b994f85fa42d95425695e8a424",
-        "spec": "1be0636e7b3fe795f1f0dff98e76f982c609d5c696946259f7e26dfa146b11d8"
+        "png": "56239b554d5dffe48b2279a0d5582eae423713ad3db946c03c5231495c9a05ae",
+        "svg": "8e4ea40f99e78b822e193119c30a1c4ba7f3ee5c724039f9524465783f284f22",
+        "pdf": "73ebc371d7d79b7839e59439fe67cae7dffccf1cc3f8196db4a8bfdafaefe37f",
+        "tsv": "41baef3281c82f5da45da2002a6fe854c83093049286d813e7d8f4ded8c049df",
+        "spec": "fc3ef719a7459513c7264ed77229cbf14590f2fea1037a1a533b47835ec20cec"
       },
       "visual_review": {
-        "id": "single_cell.velocity",
-        "png_sha256": "4f205c5b9943d79d3cbb41456d78070615e3cbd99a595203e5947e087acbab2a",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.velocity.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "56239b554d5dffe48b2279a0d5582eae423713ad3db946c03c5231495c9a05ae",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -3195,7 +3064,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.communication",
@@ -3227,42 +3097,35 @@
         "preview": "single_cell.communication/preview.jpg"
       },
       "sha256": {
-        "png": "e21ccad1928ec1bb1722925328623c4077ee30e9225da0c283b750395c2dbe3d",
-        "svg": "cb9f810ec6b12735f1964bd4c6ea4e80720a0d8dabe0e3647f6e5e326936b1eb",
-        "pdf": "4042572dd016247097750679136b007378d76062deb64b4092a22ee02b7743da",
-        "tsv": "e53c2189cdc7cd903700a7983c4d9ae77ca0afed6bad731233a032e0defcb3bb",
-        "spec": "3f087184322f34d359f63e09d255477f18e2dacc68741cf84f38ab4325f4c7f5"
+        "png": "a9a56329fad26dd6572dc0739a3cb81b6cb80ee7a33a7b190410a43b6904a536",
+        "svg": "38a6f044ec4ef0fbdc975e55ec8e47750617d0df732b93ca7cdbe93a852ed8f0",
+        "pdf": "08c6add9493101cec90564e351992415367f5143adc693d253989ea289ccd631",
+        "tsv": "8eee11e251c490ad49010f946f0400293d259a4ab30dc3ed9f6f9ec77c7ceec1",
+        "spec": "8851e9eb6f91f0106a4829339e236e436adfe3e64a1d6d53812f18cb82892452"
       },
       "visual_review": {
-        "id": "single_cell.communication",
-        "png_sha256": "e21ccad1928ec1bb1722925328623c4077ee30e9225da0c283b750395c2dbe3d",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.communication.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "a9a56329fad26dd6572dc0739a3cb81b6cb80ee7a33a7b190410a43b6904a536",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 332.7910661148534,
+        "native_width_mm": 384.9543984479158,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 63,
-        "smallest_pt": 9.816970263476026,
-        "p10_pt": 9.816970263476026,
+        "essential_text_count": 67,
+        "smallest_pt": 8.486719500211201,
+        "p10_pt": 8.486719500211201,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.ligand_target",
@@ -3294,34 +3157,26 @@
         "preview": "single_cell.ligand_target/preview.jpg"
       },
       "sha256": {
-        "png": "e7910675ad7af5baf529bc153a548b471b5a73d6ef15b4bbaa3880aa31972c2a",
-        "svg": "b6bf1e936426b4b151fc4156191ee008a71043b255310dad3f22597d1b950187",
-        "pdf": "6b825109cbb491fe9478bbc32fffb41d1b76b57d9751b4283d9781ad0627108e",
-        "tsv": "3a19c73ce9e5ee590fd74c8dd48f6d6ad98b15c4aaeb511bc4df2c1f9c54f1f9",
-        "spec": "ce292dace6389f7f10a4e706e86f4a8bb36e8fd1dbde9c17645461819ef402d1"
+        "png": "4a4d817001917c8f43e58fb766b23c29457774c7e528c930d0e9804f87b0e056",
+        "svg": "39142f4babfcb73613fab57859c1e11e32ab6c297b68b227408c1ca7f41a3f54",
+        "pdf": "081bd28d524b5f4ac229f2c97224190ea62b58f5146e612d22ce3c31c815ad86",
+        "tsv": "38c974bc9f1740d6d14944c60c4ca420770969a0f74a2c72a31d1be26c26bb97",
+        "spec": "f605b4eca7e1014157051788858864e480dac2937e84d2eb20e19b0eb35a8f3b"
       },
       "visual_review": {
-        "id": "single_cell.ligand_target",
-        "png_sha256": "e7910675ad7af5baf529bc153a548b471b5a73d6ef15b4bbaa3880aa31972c2a",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.ligand_target.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4a4d817001917c8f43e58fb766b23c29457774c7e528c930d0e9804f87b0e056",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
         "native_width_mm": 304.79999999999995,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 39,
+        "essential_text_count": 44,
         "smallest_pt": 10.718503937007876,
         "p10_pt": 10.718503937007876,
         "below_threshold": [],
@@ -3329,7 +3184,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.regulons",
@@ -3361,42 +3217,35 @@
         "preview": "single_cell.regulons/preview.jpg"
       },
       "sha256": {
-        "png": "5f0b8742b134d2a11ef9e2c5c4f2fb27723cd6df04dc59803d5b7a06c7cdd48e",
-        "svg": "d69f817fc140f458613de382bd75738258ba815284da74f959166da4c7a1a46c",
-        "pdf": "b65524f4e6b1b57038cea959912baf4ae72d5dff3fbdaf7f5fb754a59132a0e8",
+        "png": "28f153b5af1b86f19102a1157c12b0a496b709de7dfa11d9c608b91d87fd183b",
+        "svg": "33137257527163c2d6305c08160a0ddb6edef45d452956c91a80f20ed75c4fcd",
+        "pdf": "899b7e3c4004eff0bc89a9542369f07a42087a217140be5ece851770cd3b211c",
         "tsv": "34487f0a734f3befb8f05a81ecaafa0d919e39154f56236f8d45466bc12be9d8",
-        "spec": "c46116c54f54c97735b95fca91355cca7e355180d56cc8062d3a05ea0bb12fdd"
+        "spec": "8cd4dd5a580841641f19242a812a98ecf23b52d8045834e05cef2069cd4e92e5"
       },
       "visual_review": {
-        "id": "single_cell.regulons",
-        "png_sha256": "5f0b8742b134d2a11ef9e2c5c4f2fb27723cd6df04dc59803d5b7a06c7cdd48e",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.regulons.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "28f153b5af1b86f19102a1157c12b0a496b709de7dfa11d9c608b91d87fd183b",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 304.79999999999995,
+        "native_width_mm": 312.5056928348254,
         "minimum_required_pt": 7.5,
         "essential_text_count": 76,
-        "smallest_pt": 10.718503937007876,
-        "p10_pt": 10.718503937007876,
+        "smallest_pt": 10.454209554917675,
+        "p10_pt": 10.454209554917675,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.cnv",
@@ -3428,34 +3277,26 @@
         "preview": "single_cell.cnv/preview.jpg"
       },
       "sha256": {
-        "png": "37052d953d3e091f545c088efb08c6938d9550f02136490557cc8da03cd9352e",
-        "svg": "a635c62d88a66874aaee09e1a06549b5bcdf25705b526372b54da0887f8a767f",
-        "pdf": "4085a66eceb84a223eb7a4e73cc0ddff964d214b18a7010990c49dce4348afed",
-        "tsv": "53563e1436db69ce2d6780b4244a1a7b3f41dcdad61e06cd2656667d8c20e5b3",
-        "spec": "e8932835b01de9d8b5192394419706fef621c0925c5ae1dabdbc3941ab1a7fe0"
+        "png": "05c0473cc44f324abf58428d1d080f75c8070b8b92a3eaad9f957aaeedc5a613",
+        "svg": "e48a14edc03ae8d0956c6486839bfcc4d7c091aa3e78282e8ecabc47fc0624b9",
+        "pdf": "30eec31792874001881e62b261945d6f5895619e8200117485874a60106bcd45",
+        "tsv": "b37cadac0a9f6861181430eba26205cc7f67bb5b049aa1d51acbf11e093ff458",
+        "spec": "e8906989c6a594e50912438bb3284a2a7ee438b09df3780c904394dbe3150863"
       },
       "visual_review": {
-        "id": "single_cell.cnv",
-        "png_sha256": "37052d953d3e091f545c088efb08c6938d9550f02136490557cc8da03cd9352e",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.cnv.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "05c0473cc44f324abf58428d1d080f75c8070b8b92a3eaad9f957aaeedc5a613",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
         "native_width_mm": 304.79999999999995,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 64,
+        "essential_text_count": 61,
         "smallest_pt": 10.718503937007876,
         "p10_pt": 10.718503937007876,
         "below_threshold": [],
@@ -3463,7 +3304,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.vdj",
@@ -3495,34 +3337,26 @@
         "preview": "single_cell.vdj/preview.jpg"
       },
       "sha256": {
-        "png": "f3855c534c987b060e022c401d8baac650899ca07fb32e43b4f0afd36db3e4f2",
-        "svg": "cc0f278400d0c074bd17d4e1b401a169c6cfb7431a0f86838fd3544c6365c709",
-        "pdf": "e38a735713b2af4c566f19ac1824c2c2e989c0cb3af05a44800d8c1e2291a68c",
-        "tsv": "66b0ae0f21cf1f5c6ace187cf975be71aa04a85769c3af225a61873053299a2b",
-        "spec": "dfacc111621e36e7df9bfdf47738c5278ccbf41e703db415616bcc7e61f0adf2"
+        "png": "1e74f270a399726286e97ab9dbacec4a94c21f19d2b632623afdd68658e21380",
+        "svg": "5b4e89113284052411bbc72d6d64a1c2edb88f31a525a6dd7c78454c2a8ccaaa",
+        "pdf": "cca4fbf7940914e01a7bb6c3476afce2ab15e0186336bf4df08caf23c31653a4",
+        "tsv": "71a3cc09750d602234f6e09b688ba29d2dc70118ccf8bfd69afd4bfcb95c5765",
+        "spec": "51570133ab52a597f2d918d6cb153d0a241f7e6c63cc8137c2933f0226692847"
       },
       "visual_review": {
-        "id": "single_cell.vdj",
-        "png_sha256": "f3855c534c987b060e022c401d8baac650899ca07fb32e43b4f0afd36db3e4f2",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.vdj.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1e74f270a399726286e97ab9dbacec4a94c21f19d2b632623afdd68658e21380",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
         "native_width_mm": 304.79999999999995,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 66,
+        "essential_text_count": 67,
         "smallest_pt": 10.718503937007876,
         "p10_pt": 10.718503937007876,
         "below_threshold": [],
@@ -3530,7 +3364,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.splicing",
@@ -3562,27 +3397,19 @@
         "preview": "single_cell.splicing/preview.jpg"
       },
       "sha256": {
-        "png": "f745a94fabebe462efdb7ddf55e1a8b81de331765daeba3bc2b4091918098fcf",
-        "svg": "cf3971e478fcda527cce728ba2ef79c7346b29c3ebf20b31808527f724f52030",
-        "pdf": "2791b6c139eff28cd984a29ae9a7203d6f2641c49959146767b966ff592ebb04",
+        "png": "0ab72ce39d415826c8a2d85bdef85d00a6b62a9ffd5aad95b98464d2f95b4b0d",
+        "svg": "e5c477aa67a443cea9d49b6381a929c2eb131b404980fb8b631e64179fa2ed1a",
+        "pdf": "7024f814c1a929fc4a2570d5f46a988a7ca8206cdf09cf034fb839f8ff6a75cc",
         "tsv": "4b1fe86bbdd22c37b9023e2a946bfa06096cd631a4c2742c227e172ac120927d",
-        "spec": "8c28034a8a10a4c1cc627fb6b82b28484adef84edd7cd9bcee850b72d528a730"
+        "spec": "6327d73ac18bccc91d92821f86441ec3dfc1bef49ec16aa5980c26ae69ded2a1"
       },
       "visual_review": {
-        "id": "single_cell.splicing",
-        "png_sha256": "f745a94fabebe462efdb7ddf55e1a8b81de331765daeba3bc2b4091918098fcf",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.splicing.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "0ab72ce39d415826c8a2d85bdef85d00a6b62a9ffd5aad95b98464d2f95b4b0d",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -3597,7 +3424,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.perturbseq",
@@ -3629,27 +3457,19 @@
         "preview": "single_cell.perturbseq/preview.jpg"
       },
       "sha256": {
-        "png": "efb529595c13d4c66b4fe1696bfd6b0eadffba79cff038c18cad33bfa23e2853",
-        "svg": "6d4870da0d540031bdb39eaa6dea16206e7965b32223de5ea68f1dcfd0b5b599",
-        "pdf": "dd7c6f78fc76e793f6d24b3180cdd547322c3cf60633eb0659016bd2c06f6341",
+        "png": "a2d715ad842117464bc0f3e97b7ec397954eecace5a185817debdc07a3d9a98e",
+        "svg": "da1b24db70ab7abc31e5c39b283e09e591698787a77169a323797ca0b0d70179",
+        "pdf": "63c318ca7d5c5024ddbffad438c7c739692a3874bde40af20a5ab61792030577",
         "tsv": "46af3eeb59b00e0be0bc51e9001d1f6084f9eec8495090d520bdfef7ceaa3e2f",
-        "spec": "2b2970bc76f8a60cd0de9e54bd5676564f72d492c636735b5cb44289f4134010"
+        "spec": "8cd09e0daf5bb6e4330c05033079e58974fa70dcbee48b924b60f4461adba1c6"
       },
       "visual_review": {
-        "id": "single_cell.perturbseq",
-        "png_sha256": "efb529595c13d4c66b4fe1696bfd6b0eadffba79cff038c18cad33bfa23e2853",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.perturbseq.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "a2d715ad842117464bc0f3e97b7ec397954eecace5a185817debdc07a3d9a98e",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -3664,7 +3484,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.replication",
@@ -3696,34 +3517,26 @@
         "preview": "single_cell.replication/preview.jpg"
       },
       "sha256": {
-        "png": "01287d9c885f7d2d7c12ff130fb6f74b7c7b4b011dcf4c22b01f3d2f79fe9222",
-        "svg": "355bae65943457ce7e8e13f0f1d192143f09f50ba02eee7c100d8115005dbca1",
-        "pdf": "f9d8a8d0076575a9846bfbb34523ee1b76e7add750c9ee93524f7cc70972928d",
-        "tsv": "3a9959d8f2d5bca1acc665a288a58df2cabb15a06f81448f9e657d90a83d10d2",
-        "spec": "36e97a5da87f136223eeba5feb7f62deaf1c3c22f680fd363151d2aa342f70c3"
+        "png": "4f034631211528d7e4af24cc6a472902be76b48894a0ed9b61ae94d0608b8c3b",
+        "svg": "0c1033165c936deb86628f086fb9c8f3c6a185e25e189ac2e27e799d5ec3712d",
+        "pdf": "95bfe3d3081955ebd19d3ae88140ae61761a57f5db8e02e4879abaa9c79d358d",
+        "tsv": "44efc3fe53dca14ae8e38fbdf38a3028ff3e255e22ab7916906601b06ff4ab16",
+        "spec": "4856f4cedd912620e0adb56ecbb1b51db62aee1a95b1d6cf9ba95de7fb3b5a67"
       },
       "visual_review": {
-        "id": "single_cell.replication",
-        "png_sha256": "01287d9c885f7d2d7c12ff130fb6f74b7c7b4b011dcf4c22b01f3d2f79fe9222",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.replication.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4f034631211528d7e4af24cc6a472902be76b48894a0ed9b61ae94d0608b8c3b",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
         "target_width_mm": 297,
         "native_width_mm": 304.79999999999995,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 56,
+        "essential_text_count": 54,
         "smallest_pt": 10.718503937007876,
         "p10_pt": 10.718503937007876,
         "below_threshold": [],
@@ -3731,7 +3544,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.spatial",
@@ -3763,27 +3577,19 @@
         "preview": "single_cell.spatial/preview.jpg"
       },
       "sha256": {
-        "png": "b1c0b26aa6da75740347f1dc0a9a780507d76ddcee91935a364ff2d919aab7df",
-        "svg": "fda7618e59800d02ba18aebbdc743ea4f3939d134816fb120f3b89b3f18af0b9",
-        "pdf": "967a2975d18efafdce1438755ebb52a389254d6753024aaba544a2f473dd8162",
+        "png": "f064c951fec23185f9ceff66d6d8d729cfcb229f82c605d62872eba17772db35",
+        "svg": "184fc61cc5e7645ec0b6c4ac727043cb3be4256e535d3b0062752d18e0ea89f9",
+        "pdf": "683f543600d1750633c6f94d36fe6cbf210a1bab3232fb5aa125f2b270048f2b",
         "tsv": "880316e82e576f10285a808d8be29e6fbded935896bb274b37a8cff35477e841",
-        "spec": "8759c05f5246ae02b1d36b4bf1e334370bc000e1971e3e3b926b6d8a9b12751e"
+        "spec": "5d4e19b6064a5d82428a8ab45909297311299fad5ab1ba349ed3ed178f685448"
       },
       "visual_review": {
-        "id": "single_cell.spatial",
-        "png_sha256": "b1c0b26aa6da75740347f1dc0a9a780507d76ddcee91935a364ff2d919aab7df",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.spatial.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "f064c951fec23185f9ceff66d6d8d729cfcb229f82c605d62872eba17772db35",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -3798,7 +3604,8 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     },
     {
       "id": "single_cell.multiome",
@@ -3830,27 +3637,19 @@
         "preview": "single_cell.multiome/preview.jpg"
       },
       "sha256": {
-        "png": "51a9278b82a929bbc6e152e564fd6abffdd520df94958449b27b014152e76234",
-        "svg": "6eae5d96f6a95662f5231fe385902d938de0dee4653352f6836ab21df0a5eed3",
-        "pdf": "44dfbc6b9db73d4d3a855403bbcabf4f5bfb6c7aea402233a1d42e2228d74f84",
+        "png": "7642c34a5d774ab51f94845223ecd405e9320ecd72dfe05f7851e44cb032379d",
+        "svg": "0a1d431a12bee4b13e27ab8b91233e676539acd731877be30f09542a0fb1f200",
+        "pdf": "197eeb5ee5ae40b15e38113def3635f1f8b8a714b2f3401b7d1715b851fbc17d",
         "tsv": "c4a4d757929db08189a0655f4130c8d2bc5ecbbf7885587f63d5e0948d5298b5",
-        "spec": "e892fa1dacc3dc84ef365cdc725eedfd071f08e3b7b9b4c0cdb8c5e81f410736"
+        "spec": "549e23d0c04fa3b27744568c2b20739656f8dd7739d0f8d1feb8b7c98e17cb34"
       },
       "visual_review": {
-        "id": "single_cell.multiome",
-        "png_sha256": "51a9278b82a929bbc6e152e564fd6abffdd520df94958449b27b014152e76234",
-        "decision": "screen_reviewed",
-        "checks": [
-          "scientific display meaning and scope",
-          "complete intended input channels",
-          "readable labels and guides",
-          "stable identity and declared continuous units",
-          "panel balance and hierarchy",
-          "no observed clipping or label collision"
-        ],
-        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-        "independent_second_review": false,
-        "calibrated_paper_proof": false,
+        "id": "single_cell.multiome.p1",
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "7642c34a5d774ab51f94845223ecd405e9320ecd72dfe05f7851e44cb032379d",
+        "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+        "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+        "independent_reviewer": false,
         "scientific_acceptance": false
       },
       "readability": {
@@ -3865,11 +3664,12 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.10.0"
     }
   ],
   "chapters": 58,
   "analysis_performed": false,
   "scientific_acceptance": false,
-  "display_revision": "0.9.2"
+  "display_revision": "0.10.0"
 }

@@ -1,0 +1,122 @@
+{
+  "id": "B_gsea_Evidence",
+  "title": "Bulk · gsea — complementary evidence",
+  "chapters": [
+    "bulk.gsea"
+  ],
+  "stage": "interpretation",
+  "family": "profile,effects,matrix",
+  "variant": true,
+  "large_data": false,
+  "order": 91,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Complete ranked-universe statistic",
+        "x_label": "Supplied gene rank",
+        "y_label": "Supplied ranking statistic",
+        "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Normalized enrichment across contrasts",
+        "x_label": "Supplied NES · upstream interval",
+        "y_label": "",
+        "definition": "Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "matrix",
+        "title": "Leading-edge overlap across pathways",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied overlap fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · gsea — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope. | Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope. | Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope. | Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope. | Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "value",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_Evidence/example.png",
+    "svg": "B_gsea_Evidence/example.svg",
+    "pdf": "B_gsea_Evidence/example.pdf",
+    "tsv": "B_gsea_Evidence/example.tsv",
+    "spec": "B_gsea_Evidence/input/example.spec.json",
+    "preview": "B_gsea_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "00c0580c522c2d702131b435b89f65f577bfcaa68e523df6982546547312963a",
+    "svg": "e0c4779863ce046fcef64b3f22a972b5647a64cf28dc9fa343eb4786bdb5e2b6",
+    "pdf": "9aae8f427514eeb881fc679842bc51648a1a856d1e1376b45b24f77348a426fb",
+    "tsv": "246f2a8137025b5e2469006e5dfbf8c3abe679a5c7ae51da719ab3af37051d30",
+    "spec": "a6dc0061aa7f8585581797bb29c82dc0d1e343aa210128a7d4584ab8e20bd69e"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 128,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "00c0580c522c2d702131b435b89f65f577bfcaa68e523df6982546547312963a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: full term labels and typed upstream support counts remain readable in single, two-column, three-column and larger one-column compositions; no clipping or legend collision.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

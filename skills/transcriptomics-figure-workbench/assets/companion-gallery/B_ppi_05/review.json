@@ -1,0 +1,94 @@
+{
+  "id": "B_ppi_05",
+  "title": "Network evidence across independent sources",
+  "chapters": [
+    "bulk.ppi"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 180,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Network evidence across independent sources",
+        "x_label": "Node-expression log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Network evidence across independent sources; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Network evidence across independent sources",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ppi supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Network evidence across independent sources; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Network evidence across independent sources; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ppi_05/example.png",
+    "svg": "B_ppi_05/example.svg",
+    "pdf": "B_ppi_05/example.pdf",
+    "tsv": "B_ppi_05/example.tsv",
+    "spec": "B_ppi_05/input/example.spec.json",
+    "preview": "B_ppi_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "04b9622dc9d7dc2c7334d906ca158fb3eb58a6646a59c9046fdada2029b0bdda",
+    "svg": "f119a11ead09fb6956978333dc76bd7abfefae3767a3be6a3a1285894b74fd42",
+    "pdf": "3268ca7ea4ba964fcc6af0e78c19674d282ecf51631a6725dc8345bab01eda05",
+    "tsv": "96569abcf1a604cf392d75f70b009f56e63bf1246728c52f4680e6a1c3481965",
+    "spec": "cd85d023061fc6eb2cbb8f28150301e75cbe845abbec17533b6c36333cc6a6ef"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ppi_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "04b9622dc9d7dc2c7334d906ca158fb3eb58a6646a59c9046fdada2029b0bdda",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Eleven individual final PNGs inspected: supplied risk counts and step curves with intervals/calibration, source-specific PPI support and full symmetric interaction scope with explicit zeros, node response and cohort validation. Single and adaptive combined layouts remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

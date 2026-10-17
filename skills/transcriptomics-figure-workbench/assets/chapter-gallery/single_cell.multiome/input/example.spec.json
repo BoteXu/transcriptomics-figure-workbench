@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "c265555678a2d5056883dd10e4cca2550b4b7af03ef7056b880ca3db2a7d9afa",
+    "sha256": "195528029aa958b8c42d2d86da59219c5ca05239f8e6c6d2ba214941be1df286",
     "numeric_columns": [
       "x",
       "y",
@@ -27,10 +27,10 @@
       },
       {
         "kind": "matrix",
-        "title": "Motif and RNA support",
+        "title": "RNA, accessibility and link evidence",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied standardized evidence",
+        "value_label": "Supplied standardized channel",
         "limits": [
           -2,
           2
@@ -42,10 +42,10 @@
       },
       {
         "kind": "network",
-        "title": "Frozen peak-gene links",
+        "title": "Selected peak–gene associations",
         "x_label": "",
         "y_label": "",
-        "edge_definition": "Complete explicitly selected illustrative edge list; weights and coordinates supplied; no layout fit or pruning",
+        "edge_definition": "Explicit supplied peak-to-gene association support, not causal regulation",
         "id": "p3"
       }
     ],
@@ -180,10 +180,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional multiome display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

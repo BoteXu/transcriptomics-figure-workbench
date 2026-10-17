@@ -27,40 +27,33 @@
     "preview": "single_cell.composition/preview.jpg"
   },
   "sha256": {
-    "png": "a237bd182fdc0fb9a03bb7e765e001f570b52d35b84abd5d7e8d302053771cb0",
-    "svg": "2a3b38daef819f8895867072af10848af60605fea96048829061799c32c86d9e",
-    "pdf": "ad74d27fdad04ac847930d25cf648d03829176a78652e702968bc4adc25100cf",
+    "png": "520feecf08d9f9c6961579575f1035e661f2d516c52c30493ee0d61ec9539e29",
+    "svg": "a9bedacb57dbb80701800f7b2c08e534cf527d86be4f1a5950ecfeaf6e7e8efc",
+    "pdf": "7b6a6ed8b2bbefdec7e4ac94fde580336823c1624aaaf0b1809a542adbd649f3",
     "tsv": "580351bb8a1332b9af951769e9d26e83e50b51540b2853c7ed853bf13ffc63b3",
-    "spec": "7ae8403c93c9443291a9765a1afe3506a435f9728cead67b7d80ea1f0c19efb1"
+    "spec": "953a083f9f1118d54774c9770959b2b4a603c94ef9a9aca124a9f8f56bc36352"
   },
   "visual_review": {
-    "id": "single_cell.composition",
-    "png_sha256": "a237bd182fdc0fb9a03bb7e765e001f570b52d35b84abd5d7e8d302053771cb0",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.composition.complete",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "520feecf08d9f9c6961579575f1035e661f2d516c52c30493ee0d61ec9539e29",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 217.33916399999993,
+    "native_width_mm": 227.99484279513888,
     "minimum_required_pt": 7,
-    "essential_text_count": 37,
-    "smallest_pt": 7.729853971463701,
-    "p10_pt": 8.696085717896663,
+    "essential_text_count": 57,
+    "smallest_pt": 7.368587725072085,
+    "p10_pt": 8.289661190706095,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

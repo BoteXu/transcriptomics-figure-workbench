@@ -1,0 +1,94 @@
+{
+  "id": "S_pseudobulk_06",
+  "title": "Donor-omission sensitivity of effects",
+  "chapters": [
+    "single_cell.pseudobulk"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 296,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-omission sensitivity of effects",
+        "x_label": "Donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-omission sensitivity of effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "All donors",
+          "Omit D01"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-omission sensitivity of effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.pseudobulk supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor-omission sensitivity of effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor-omission sensitivity of effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_pseudobulk_06/example.png",
+    "svg": "S_pseudobulk_06/example.svg",
+    "pdf": "S_pseudobulk_06/example.pdf",
+    "tsv": "S_pseudobulk_06/example.tsv",
+    "spec": "S_pseudobulk_06/input/example.spec.json",
+    "preview": "S_pseudobulk_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "3289772eb59ebe83e5be9fcfc10ad0dbcb3dc239ab044a4a332327ce0a25a3da",
+    "svg": "4a36e75f65745fc4b40ac6e2ffdc89b1929a423d9645a80e5f7ead2b3be0614f",
+    "pdf": "531561186e201634e7511ba32fafe8a2173f668f144da03769f9741acde47f2d",
+    "tsv": "2b41422993c5415ac633b61e743f397c8f7ae1ac2899e95395739d475608cd95",
+    "spec": "84e3a5366f9b5abbce0697519a46f64bd148304350fdb1a06127a0e54a4307d8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_pseudobulk_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3289772eb59ebe83e5be9fcfc10ad0dbcb3dc239ab044a4a332327ce0a25a3da",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected PNGs: complete one-column neighborhood support/effects and pseudobulk donor rainclouds/tables; explicit units, omitted-donor n and readable row spacing retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

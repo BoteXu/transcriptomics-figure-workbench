@@ -1,0 +1,88 @@
+{
+  "id": "S_gene_support_04",
+  "title": "Support direction across identities",
+  "chapters": [
+    "single_cell.gene_support"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 317,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Support direction across identities",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Support direction across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied log2 fold change",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Support direction across identities",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Support direction across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Support direction across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_gene_support_04/example.png",
+    "svg": "S_gene_support_04/example.svg",
+    "pdf": "S_gene_support_04/example.pdf",
+    "tsv": "S_gene_support_04/example.tsv",
+    "spec": "S_gene_support_04/input/example.spec.json",
+    "preview": "S_gene_support_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "1b938c05719de3c4fb48b839331a7f9793fbf4a5e16a3cc24ba328a2cae3aeb0",
+    "svg": "4da0dfcca7b400092708f94fdf8d55d0a25502e5d4181dca8d2f548f0b6215eb",
+    "pdf": "27a422529f020b53de1a63372a4c5344c6eb79f9a368d86b549dbbaa55bf5388",
+    "tsv": "c1e04adee516c004676df0aa2cb7c043b35cc15b881748b0c688c4569eb9d2c7",
+    "spec": "a0191cd1cb92ad43013f702e375cf9cd54cfe556e3c3c053d90a3ca8ef43f5a2"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.7727893724176,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 13.526745147685103,
+    "p10_pt": 13.526745147685103,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_gene_support_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1b938c05719de3c4fb48b839331a7f9793fbf4a5e16a3cc24ba328a2cae3aeb0",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually viewed: pathway NES, complete membership and gene support retain long labels; independent replication rows have separate aligned numeric columns. Tall one-column page is a reading export with declared physical width, not a journal-column claim.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,89 @@
+{
+  "id": "S_ligand_target_04",
+  "title": "Receiver target-gene differential response",
+  "chapters": [
+    "single_cell.ligand_target"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 356,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Receiver target-gene differential response",
+        "x_label": "Receiver gene log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Receiver target-gene differential response; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Receiver target-gene differential response",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.ligand_target supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Receiver target-gene differential response; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Receiver target-gene differential response; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_ligand_target_04/example.png",
+    "svg": "S_ligand_target_04/example.svg",
+    "pdf": "S_ligand_target_04/example.pdf",
+    "tsv": "S_ligand_target_04/example.tsv",
+    "spec": "S_ligand_target_04/input/example.spec.json",
+    "preview": "S_ligand_target_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "1d4754c12cf21f17616c0f83280a8950c23c7d6140d267728b426918ea9f5819",
+    "svg": "f3715b83af267b75d8fbc9c2f837714f4c4c64a713b701599590ce7ee0cae1b9",
+    "pdf": "a4c827719b8673bdf14ffeb7977b118e18e28171b9a6426c8b82240d3a584e71",
+    "tsv": "6a37116d2eef71614625d72c09bd51554c121144e8ee4816c7a8e6d4026e2ca6",
+    "spec": "90d5f58f32d5976e656e8ef8a64c05fa96827530a052fbc6e3c177786fd0c95d"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_ligand_target_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1d4754c12cf21f17616c0f83280a8950c23c7d6140d267728b426918ea9f5819",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: signaling and ligand-target comparisons use distinct declared receiver/ligand units, full prior-sensitivity rows and separate interval tables; one/three-column compositions remain unclipped, regulon AUCell differences bounded.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

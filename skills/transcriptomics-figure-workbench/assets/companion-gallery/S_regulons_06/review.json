@@ -1,0 +1,94 @@
+{
+  "id": "S_regulons_06",
+  "title": "Regulon effects in independent donors",
+  "chapters": [
+    "single_cell.regulons"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 365,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Regulon effects in independent donors",
+        "x_label": "Donor AUCell-activity difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Regulon effects in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Regulon effects in independent donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.regulons supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Regulon effects in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Regulon effects in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_regulons_06/example.png",
+    "svg": "S_regulons_06/example.svg",
+    "pdf": "S_regulons_06/example.pdf",
+    "tsv": "S_regulons_06/example.tsv",
+    "spec": "S_regulons_06/input/example.spec.json",
+    "preview": "S_regulons_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "ae12c5cb5c1201c8c5750f2598f378772840001ffe235aaeac5d8f7d26081abb",
+    "svg": "313315dc4f421428f3f66f862cd9dadb33af41a9d197d97561dd002944759383",
+    "pdf": "82a7583b187804c97016c917888d82042772f9bf5211757e704769991b93a697",
+    "tsv": "bc496cb9af0301a21839d1bef750f1f4be5b21af30db1a889baded93ff9283ab",
+    "spec": "9bbfb324fc7b9af1b01f157c60a2da74d2e9626945af78caffdcf1766e703579"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_regulons_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ae12c5cb5c1201c8c5750f2598f378772840001ffe235aaeac5d8f7d26081abb",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: regulon activity versus support, CNV reference/clone identity consistency and orthogonal channels, paired Shannon summaries and physical splicing intervals are readable; legends and row heights checked at final export.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

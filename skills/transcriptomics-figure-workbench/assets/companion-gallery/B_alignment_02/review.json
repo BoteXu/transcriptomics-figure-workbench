@@ -1,0 +1,84 @@
+{
+  "id": "B_alignment_02",
+  "title": "Gene-body coverage by library",
+  "chapters": [
+    "bulk.alignment"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 18,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Gene-body coverage by library",
+        "x_label": "Relative gene position",
+        "y_label": "Normalized coverage",
+        "definition": "Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "gene",
+        "id": "p1"
+      }
+    ],
+    "title": "Gene-body coverage by library",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.alignment supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_alignment_02/example.png",
+    "svg": "B_alignment_02/example.svg",
+    "pdf": "B_alignment_02/example.pdf",
+    "tsv": "B_alignment_02/example.tsv",
+    "spec": "B_alignment_02/input/example.spec.json",
+    "preview": "B_alignment_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "2bdae299c74130270fc8d8bd4549b6ad1b15534fc8982338083d3b8b09993363",
+    "svg": "c9e6476d97dd64e621e4f6b11e4413c483c6f6dcde0796047ca5e629f8b93893",
+    "pdf": "775876f2e932c742b07572df761528601581ec1f6e60658ba71151976e63864d",
+    "tsv": "36469d7d957304443eaeefb1366cf35d0ae4695ee5e6327dedc5613088e2f507",
+    "spec": "218e9576ca9a53c9e3ddc07498a1b1e90ae009c8fc68a8a9ddf0934397c12582"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_alignment_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "2bdae299c74130270fc8d8bd4549b6ad1b15534fc8982338083d3b8b09993363",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Every updated PNG individually viewed: named STAT1 log2 estimand, dedicated aligned effect table, complete donor/covariate support and readable one/three-column layouts. Library coverage now has matching library labels; full histogram outlines and all class fractions retained. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

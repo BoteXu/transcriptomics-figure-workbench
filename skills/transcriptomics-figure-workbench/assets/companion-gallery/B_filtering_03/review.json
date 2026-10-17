@@ -1,0 +1,85 @@
+{
+  "id": "B_filtering_03",
+  "title": "Feature classes before and after filtering",
+  "chapters": [
+    "bulk.filtering"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 27,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Feature classes before and after filtering",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Feature classes before and after filtering; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "feature_retention": true,
+        "denominator_definition": "Complete feature counts in the same universe; each post-filter category is a subset of its pre-filter category",
+        "id": "p1"
+      }
+    ],
+    "title": "Feature classes before and after filtering",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.filtering supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Feature classes before and after filtering; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Feature classes before and after filtering; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_filtering_03/example.png",
+    "svg": "B_filtering_03/example.svg",
+    "pdf": "B_filtering_03/example.pdf",
+    "tsv": "B_filtering_03/example.tsv",
+    "spec": "B_filtering_03/input/example.spec.json",
+    "preview": "B_filtering_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "4146c009894f8544e7b3b9e2fb69675e9ec1325e675017d4af3a709a726ff141",
+    "svg": "0642c9fe370dc89e53c9b14e46e37a39bc654c4ada961a2af4eccbcc5df333cb",
+    "pdf": "546fd79ca3def4c36c193c2e2f4c5f117df962d4ef438f423569a55903cd494c",
+    "tsv": "911a8d0aa705585ed5bd7338808dec1dda75473a9168fdbe478c0d71c35a75d2",
+    "spec": "836e378739a3fc55fb490ad50d711d29fadca9ebb9a7bccdd98adb754a3efc7a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 15,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_filtering_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "4146c009894f8544e7b3b9e2fb69675e9ec1325e675017d4af3a709a726ff141",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual exported PNG viewed individually after repair: opaque histogram outlines, visible ribbon definition, explicit reference and repeated-model labels, correct decreasing filter retention, decreasing feature counts, paired RLE medians, twelve-donor batch totals, complete variance components, fully readable wrapped term names and wide three-column guide lanes. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,88 @@
+{
+  "id": "S_markers_01",
+  "title": "Marker detection coverage",
+  "chapters": [
+    "single_cell.markers"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 270,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Marker detection coverage",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Marker detection coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Fraction of cells detected",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Marker detection coverage",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.markers supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Marker detection coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Marker detection coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_markers_01/example.png",
+    "svg": "S_markers_01/example.svg",
+    "pdf": "S_markers_01/example.pdf",
+    "tsv": "S_markers_01/example.tsv",
+    "spec": "S_markers_01/input/example.spec.json",
+    "preview": "S_markers_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "4da2c46b316b0ef43856e38cc8631c35516ee27f0e0db7baf2efcd02cffbd7e6",
+    "svg": "885b4cb8ced329a54b8e4e770120626110822cab524bc3ce087a7b5437850fcb",
+    "pdf": "f923ab1a1edc9128d7c8b4409cb70fbaef44601b7c4c4e1729e6fcecdf7d72ae",
+    "tsv": "4dd26b78847e34b72941fc7f0f1d716762a62f3b102f3f04e08d93960dc3b79d",
+    "spec": "fcc4a1f0d50b01ac1b3f47e4414e012edfa71eb737a9445a1b3a7ce84ed85f57"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 164.53097039890065,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 14.039909899026735,
+    "p10_pt": 14.039909899026735,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_markers_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "4da2c46b316b0ef43856e38cc8631c35516ee27f0e0db7baf2efcd02cffbd7e6",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: full annotation categories and marker detection/expression use separate scale labels; row/column adaptation and numeric support tables remain legible and unclipped.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

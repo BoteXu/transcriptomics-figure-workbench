@@ -1,0 +1,84 @@
+{
+  "id": "B_replication_01",
+  "title": "Shared versus unavailable feature coverage",
+  "chapters": [
+    "bulk.replication"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 161,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Shared versus unavailable feature coverage",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Shared versus unavailable feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Shared versus unavailable feature coverage",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Shared versus unavailable feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Shared versus unavailable feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_replication_01/example.png",
+    "svg": "B_replication_01/example.svg",
+    "pdf": "B_replication_01/example.pdf",
+    "tsv": "B_replication_01/example.tsv",
+    "spec": "B_replication_01/input/example.spec.json",
+    "preview": "B_replication_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "9ef333d2f39c2b835705cef55d5fbddac5d6b57ec14a312210237c4a6a6a115c",
+    "svg": "cafab28723901726bffc17ab61941d1c6a89d4b039be2e5b32a6642d518da325",
+    "pdf": "106fab2c1c8f9f11ecf1e9bb0adbdde1fb8e15bff1a7cf705ebd623c71694b75",
+    "tsv": "242447e514dd22467bdeeb0437c7eb70e0ffbc37e6fabc687e4e925ced66a69e",
+    "spec": "3298d7b0a484b335a237a584973dc0ce8437113ec4f74ba9efff7cde1a02d742"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_replication_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9ef333d2f39c2b835705cef55d5fbddac5d6b57ec14a312210237c4a6a6a115c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed seven actual PNGs: complete feature scope, cohort concordance, named STAT1 synthesis with per-cohort n, signed effect matrix, time-model sensitivity and correctly bounded stepwise survival curves/endpoint denominator. Readable labels, tables and interval key.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

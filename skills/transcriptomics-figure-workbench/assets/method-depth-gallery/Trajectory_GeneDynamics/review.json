@@ -1,6 +1,6 @@
 {
   "id": "Trajectory_GeneDynamics",
-  "title": "Gene progression on supplied branches",
+  "title": "Branch program and gene progression",
   "assay": "single_cell",
   "assays": [
     "single_cell"
@@ -14,11 +14,11 @@
     "preview": "Trajectory_GeneDynamics/preview.jpg"
   },
   "sha256": {
-    "png": "605a11c457006812da4e4d18bb62e78af7815535c85255090451443b24237e9a",
-    "svg": "bdd4134abedafa30281788d59a8351c605545302ef1761b300cffd87c48afbe3",
-    "pdf": "4e366e12bf7a132b4a4c26c7f2475b0e19b8455cabc42f47780d8ab8c82ee2c1",
+    "png": "5e19a0307afde135cbfa77d79448d4d816f56a4faa79947112a4408e0297c661",
+    "svg": "73d5d565500b7ae51369d3c7626364120f220abda9565a152d6f50fc18c9a7f4",
+    "pdf": "3d3d259111097752a4dd58d0831b66e2ce4d92a4a7a1c17db2fc9c0efa691a09",
     "tsv": "55d247bcb7da2b2caa18543a1712e3bc9ec5228f14b4fbfd118a78af440afe2d",
-    "spec": "f71348da75cde4d3dd4aa4c8e0da9c0d7378a33ed394c1ff824e34800cb9436d"
+    "spec": "b39c881fdb5f36bc583b63fa3622d815b9205a1ed844e0797733af12bb4f36b2"
   },
   "readability": {
     "target_width_mm": 297,
@@ -34,19 +34,11 @@
   },
   "visual_review": {
     "id": "Trajectory_GeneDynamics",
-    "png_sha256": "605a11c457006812da4e4d18bb62e78af7815535c85255090451443b24237e9a",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5e19a0307afde135cbfa77d79448d4d816f56a4faa79947112a4408e0297c661",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "scientific_acceptance": false,
@@ -61,5 +53,6 @@
     "https://lazappi.github.io/clustree/articles/clustree.html",
     "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
     "https://github.com/guigolab/ggsashimi"
-  ]
+  ],
+  "display_revision": "0.10.0"
 }

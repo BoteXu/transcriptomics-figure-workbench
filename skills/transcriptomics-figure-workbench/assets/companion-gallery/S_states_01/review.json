@@ -1,0 +1,84 @@
+{
+  "id": "S_states_01",
+  "title": "State-program gene coverage",
+  "chapters": [
+    "single_cell.states"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 321,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "State-program gene coverage",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "State-program gene coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "State-program gene coverage",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.states supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "State-program gene coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "State-program gene coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_states_01/example.png",
+    "svg": "S_states_01/example.svg",
+    "pdf": "S_states_01/example.pdf",
+    "tsv": "S_states_01/example.tsv",
+    "spec": "S_states_01/input/example.spec.json",
+    "preview": "S_states_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "817feea602643aa88ba2c20b229dadcfec75291cc4e06b48c9a07b2030c7ad9e",
+    "svg": "a1b07908a3fdcc240b7fc758dfe100f4d261a004549a8c11efb876062b4624cf",
+    "pdf": "d4b899a58182df06af413e4ac6cc02b273312d80cd08f7aa7aab110bd2b53326",
+    "tsv": "2ab1059a34f0a52cc56a0e2b1acc4c282c3bc9e677953396b13e1a03a696ef29",
+    "spec": "966836f3d4e1802cf9011d3c36397e55fc093788f9d3ea5ff3d470b3d4005b6a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_states_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "817feea602643aa88ba2c20b229dadcfec75291cc4e06b48c9a07b2030c7ad9e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: clear donor rainclouds, aligned effect tables, full denominators and readable branch profiles; single and custom layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

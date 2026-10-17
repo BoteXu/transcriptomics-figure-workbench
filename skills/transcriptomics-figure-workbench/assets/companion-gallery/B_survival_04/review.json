@@ -1,0 +1,89 @@
+{
+  "id": "B_survival_04",
+  "title": "Adjusted outcome associations",
+  "chapters": [
+    "bulk.survival"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 171,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Adjusted outcome associations",
+        "x_label": "Supplied hazard ratio · interval",
+        "y_label": "",
+        "definition": "Adjusted outcome associations; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 1,
+        "effect_scale": "ratio",
+        "id": "p1"
+      }
+    ],
+    "title": "Adjusted outcome associations",
+    "context": {
+      "independent_unit": "fictional participants",
+      "independent_n": 80,
+      "method_version": "bulk.survival supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Adjusted outcome associations; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Adjusted outcome associations; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_survival_04/example.png",
+    "svg": "B_survival_04/example.svg",
+    "pdf": "B_survival_04/example.pdf",
+    "tsv": "B_survival_04/example.tsv",
+    "spec": "B_survival_04/input/example.spec.json",
+    "preview": "B_survival_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "e631ce2e4df38193eb5b7cae2673b506409e540c2f64a830c8b4137c944ed352",
+    "svg": "87dd213146057503dbb6b18a2fc4a82eecf36204262ba7416a709eabe80d7243",
+    "pdf": "6a599c9a6a0b312c1520fa5b8e6616d0ee8394fdc625ab0eb56c9dfdb17c2de5",
+    "tsv": "2eb3939432976cd86bcdbc4a5689f8970b5a6721f0f98064066d002340743a15",
+    "spec": "011e576a12a4fccc6ae150b47d6f08fcf2fc86cbad6cba6d9b5c962d76b5c03f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 32,
+    "smallest_pt": 8.986648408079427,
+    "p10_pt": 8.986648408079427,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_survival_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e631ce2e4df38193eb5b7cae2673b506409e540c2f64a830c8b4137c944ed352",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual PNG inspected: full effect and cohort tables, log-scale ratio reference, monotone supplied survival steps, calibration identity line and barcode knee/bins remain readable and unclipped in custom layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

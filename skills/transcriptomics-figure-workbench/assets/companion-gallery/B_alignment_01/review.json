@@ -1,0 +1,84 @@
+{
+  "id": "B_alignment_01",
+  "title": "Complete mapping categories",
+  "chapters": [
+    "bulk.alignment"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 17,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Complete mapping categories",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Complete mapping categories",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.alignment supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_alignment_01/example.png",
+    "svg": "B_alignment_01/example.svg",
+    "pdf": "B_alignment_01/example.pdf",
+    "tsv": "B_alignment_01/example.tsv",
+    "spec": "B_alignment_01/input/example.spec.json",
+    "preview": "B_alignment_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "1fc5e3f135e5f75887cc456a7fbedbafe3708ccc524ca615d318dd2a5df4fd35",
+    "svg": "56056d7b0211c89a23e65593a69508072e664a012d1a893aac411cb01adc6988",
+    "pdf": "8547e8de1f6d063f07528db36773e6d5d0030b72c470b6caff24f3e0149c8902",
+    "tsv": "c03ddadc12cad2eac6d0c420158502c2aa115e3f1870c495c02e0f220ccfd82c",
+    "spec": "7d37b29d0d2a7b61d4f13cf50aaf887079842a2f9135c5c50e6c1850ef92986b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_alignment_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1fc5e3f135e5f75887cc456a7fbedbafe3708ccc524ca615d318dd2a5df4fd35",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Complete mapping categories and gene-body coverage individually inspected: full sample scope, attached condition guide, units and uncropped range are legible. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

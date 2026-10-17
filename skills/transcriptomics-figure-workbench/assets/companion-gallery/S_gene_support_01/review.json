@@ -1,0 +1,90 @@
+{
+  "id": "S_gene_support_01",
+  "title": "Pathway membership of selected supporting genes",
+  "chapters": [
+    "single_cell.gene_support"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 314,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Pathway membership of selected supporting genes",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Pathway membership of selected supporting genes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit membership",
+        "binary": true,
+        "gene_membership": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Pathway membership of selected supporting genes",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Pathway membership of selected supporting genes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Pathway membership of selected supporting genes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_gene_support_01/example.png",
+    "svg": "S_gene_support_01/example.svg",
+    "pdf": "S_gene_support_01/example.pdf",
+    "tsv": "S_gene_support_01/example.tsv",
+    "spec": "S_gene_support_01/input/example.spec.json",
+    "preview": "S_gene_support_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "ad1d23e4d03462ddfb71591269fdfb2dfce613b394bd391ee65b4f6e279beedf",
+    "svg": "ee0e6c433c2bb758f96d37135a14140b5d3f34d9f3987e4dabed7d1f098e8119",
+    "pdf": "c7f8ac4a40ce76b4623d55009ceba5ba62035230a77839b4be902f45e6500ef7",
+    "tsv": "a128342ffa7f378f00112fe418e86f5df0c462a95f2692b9c33e45106fea46e0",
+    "spec": "dcf83810b14e92d4ada7b3c897c71e12ed839b32e6362444f4e25730144539e5"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 167.4737534722222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 13.793206112043967,
+    "p10_pt": 13.793206112043967,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_gene_support_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ad1d23e4d03462ddfb71591269fdfb2dfce613b394bd391ee65b4f6e279beedf",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually viewed: pathway NES, complete membership and gene support retain long labels; independent replication rows have separate aligned numeric columns. Tall one-column page is a reading export with declared physical width, not a journal-column claim.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

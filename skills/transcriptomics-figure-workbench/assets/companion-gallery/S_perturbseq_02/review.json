@@ -1,0 +1,88 @@
+{
+  "id": "S_perturbseq_02",
+  "title": "Guide support across donors",
+  "chapters": [
+    "single_cell.perturbseq"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 394,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Guide support across donors",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Guide support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied guide-assigned cells",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Guide support across donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.perturbseq supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Guide support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Guide support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_perturbseq_02/example.png",
+    "svg": "S_perturbseq_02/example.svg",
+    "pdf": "S_perturbseq_02/example.pdf",
+    "tsv": "S_perturbseq_02/example.tsv",
+    "spec": "S_perturbseq_02/input/example.spec.json",
+    "preview": "S_perturbseq_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "3ee71a400f4678a2ad86ca7fe624a3d7ef479421a0ac75ee0561305406fee591",
+    "svg": "9edda1abe95ad2be4f4ca2cd4912960cf49426598d1e50b32547d5467f9b263c",
+    "pdf": "9a91928d3bb583e03f56d874e6c6a32d3d805b85c68bd5f7a76a46ce0a69538f",
+    "tsv": "0986152563b6541790314d560ef1524337167751d1f118f9b47d73c8fdcfbe56",
+    "spec": "a4e0d06a408d00db97c2365d447d6492cf1a20c32663a345bff99c11e3d9c6f1"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_perturbseq_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3ee71a400f4678a2ad86ca7fe624a3d7ef479421a0ac75ee0561305406fee591",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: complete guide assignment and support, program response channels, donor-level replication effects and cohort mapping remain readable with full selected scope and explicit independent n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

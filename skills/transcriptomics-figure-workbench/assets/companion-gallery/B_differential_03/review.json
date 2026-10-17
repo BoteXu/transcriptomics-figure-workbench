@@ -1,0 +1,89 @@
+{
+  "id": "B_differential_03",
+  "title": "Prespecified gene effects with uncertainty",
+  "chapters": [
+    "bulk.differential"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 48,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified gene effects with uncertainty",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified gene effects with uncertainty",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.differential supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_differential_03/example.png",
+    "svg": "B_differential_03/example.svg",
+    "pdf": "B_differential_03/example.pdf",
+    "tsv": "B_differential_03/example.tsv",
+    "spec": "B_differential_03/input/example.spec.json",
+    "preview": "B_differential_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "2988b0b3877ca6ff551f8b753cfe0745c4536ae70bd1afc91563f728e4c20e85",
+    "svg": "efd3a84076593c2dd64403fbde9642a5f4357a5fcd00f13e7502104d9f86d7fa",
+    "pdf": "7c3467da17b05da19352cd50aeb4e12ff8f29c312ce5ce69b7351606172b72ff",
+    "tsv": "6a37116d2eef71614625d72c09bd51554c121144e8ee4816c7a8e6d4026e2ca6",
+    "spec": "d475afaee878deb7b425052117dbfd607de54f57b7776ef31715ed9e624058c7"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_differential_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "2988b0b3877ca6ff551f8b753cfe0745c4536ae70bd1afc91563f728e4c20e85",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual PNGs inspected: common-scoped filtering and detection channels, paired RLE donor connections, before/after point retention, batch donor denominators, and effect/uncertainty tables are complete and readable. Row-specific layout heights avoid stretching short panels; no text/guide collision.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

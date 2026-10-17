@@ -1,0 +1,85 @@
+{
+  "id": "B_batch_01",
+  "title": "Condition balance within each batch",
+  "chapters": [
+    "bulk.batch"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 39,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Condition balance within each batch",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Condition balance within each batch; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "batch_donors": true,
+        "denominator_definition": "Independent donors within each batch; the three complete batch totals sum to the declared independent n",
+        "id": "p1"
+      }
+    ],
+    "title": "Condition balance within each batch",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.batch supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Condition balance within each batch; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Condition balance within each batch; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_batch_01/example.png",
+    "svg": "B_batch_01/example.svg",
+    "pdf": "B_batch_01/example.pdf",
+    "tsv": "B_batch_01/example.tsv",
+    "spec": "B_batch_01/input/example.spec.json",
+    "preview": "B_batch_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "f79614599147c537a426afe4c2a059d6df2373cf970459d2b8a1ec41b35c4add",
+    "svg": "6beb0a294228630dd0c426dda69cc97e670173daacfc0649766d8ef273b71fac",
+    "pdf": "a43ed8de80868b2ef3747e391d29e1e76bc0b5347abd18661115b033948ef89a",
+    "tsv": "6bddfbacead02daa7b8e46f29bd87229cc01af9c011b5e7be14742b8c7c2c963",
+    "spec": "783148e0bc2e42ad13b9cb8afdb02a15725508ba03208715369e793aa74f4658"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 16,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_batch_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f79614599147c537a426afe4c2a059d6df2373cf970459d2b8a1ec41b35c4add",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual exported PNG viewed individually after repair: opaque histogram outlines, visible ribbon definition, explicit reference and repeated-model labels, correct decreasing filter retention, decreasing feature counts, paired RLE medians, twelve-donor batch totals, complete variance components, fully readable wrapped term names and wide three-column guide lanes. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

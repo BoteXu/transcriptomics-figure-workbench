@@ -36,6 +36,7 @@ jobs:
           python tests/check_chapter_release.py
           python tests/check_chapter_contracts.py
           python tests/check_selection_depth.py
+          python tests/check_companion_catalog.py
           python tests/check_private_profile_sync.py
           python tools/build_journal_review.py --check
           python tests/check_editorial_release.py
@@ -64,6 +65,8 @@ jobs:
           python tests/check_rich_defaults.py
           python tests/check_method_depth.py
           python tests/check_analysis_completion.py
+          python tests/check_companion_runtime.py
+          python tests/check_companion_fixture_semantics.py
           python tests/check_subgroup_markers.py
           python tests/check_editorial_runtime.py examples/editorial-v092
           python tests/check_source_runtime.py
@@ -92,7 +95,7 @@ jobs:
             study-ci-fixtures
   browser:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
@@ -116,6 +119,7 @@ jobs:
           node tests/check_source_browser.mjs source-browser-ci
           node tests/check_routine_browser.mjs routine-browser-ci
           node tests/check_analysis_browser.mjs analysis-browser-ci
+          node tests/check_companion_browser.mjs companion-browser-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
@@ -125,3 +129,4 @@ jobs:
             routine-browser-ci
             forms-browser-ci
             v090-browser-ci
+            companion-browser-ci

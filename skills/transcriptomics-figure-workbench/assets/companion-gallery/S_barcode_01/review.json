@@ -1,0 +1,84 @@
+{
+  "id": "S_barcode_01",
+  "title": "Barcode rank across captures",
+  "chapters": [
+    "single_cell.barcode"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 211,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Barcode rank across captures",
+        "x_label": "Barcode rank",
+        "y_label": "Supplied log UMI count",
+        "definition": "Barcode rank across captures; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Barcode rank across captures",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.barcode supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Barcode rank across captures; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Barcode rank across captures; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_barcode_01/example.png",
+    "svg": "S_barcode_01/example.svg",
+    "pdf": "S_barcode_01/example.pdf",
+    "tsv": "S_barcode_01/example.tsv",
+    "spec": "S_barcode_01/input/example.spec.json",
+    "preview": "S_barcode_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "52d341e842f17675fade920c7e6d622541d549c525e989a6e13a2474da4de949",
+    "svg": "7a78d67b055a26c5f36d012c46fe3094a0c1bf1d0377cf41acf7bf1db9f4be85",
+    "pdf": "6a1f4ee401f6bfe4d400bc3197cee97f12c731ed2682c562b87f4595bf0674ea",
+    "tsv": "dd4d9830365df4f955315b902f34267a02b98fff1f7ebe7887aa59fe584c0ffc",
+    "spec": "92af1e76c92db77e80b96638892f297efacce1a2c57a48fa55851fd603dbe9c5"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_barcode_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "52d341e842f17675fade920c7e6d622541d549c525e989a6e13a2474da4de949",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual PNG inspected: full effect and cohort tables, log-scale ratio reference, monotone supplied survival steps, calibration identity line and barcode knee/bins remain readable and unclipped in custom layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,83 @@
+{
+  "id": "B_differential_05",
+  "title": "Complete raw probability distribution",
+  "chapters": [
+    "bulk.differential"
+  ],
+  "stage": "validation",
+  "family": "bins",
+  "variant": false,
+  "large_data": false,
+  "order": 50,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "bins",
+        "title": "Complete raw probability distribution",
+        "x_label": "Raw P value",
+        "y_label": "Genes per supplied bin",
+        "definition": "Complete raw probability distribution; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p1"
+      }
+    ],
+    "title": "Complete raw probability distribution",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.differential supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete raw probability distribution; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete raw probability distribution; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_differential_05/example.png",
+    "svg": "B_differential_05/example.svg",
+    "pdf": "B_differential_05/example.pdf",
+    "tsv": "B_differential_05/example.tsv",
+    "spec": "B_differential_05/input/example.spec.json",
+    "preview": "B_differential_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "e2c8ad7dcb4ef9a844919e6debf1c0f60df2b52eec4577c63134d9e997501362",
+    "svg": "b06c113f9c7d922248901473b59ec90d9d94c11022d44cb281f838e1ea70877f",
+    "pdf": "e2059434fd998ce2cb9ddc50dbad41dbb7d79daaf2290d52b11f14a1e049eb17",
+    "tsv": "1d134e93a45278f91d07db14f7af0f74d1119f88987a239893b9f8154469a6b5",
+    "spec": "4e049de97648479393623f15ad9d1f6f084f3e1dfbf16b7d75303adaed1359ef"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 19,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_differential_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e2c8ad7dcb4ef9a844919e6debf1c0f60df2b52eec4577c63134d9e997501362",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs inspected: larger batch view has 8+8+8 donors with complete cloud points, dispersion trend and Cook axes/legends clear, named STAT1 expression includes every donor, and raw-P histograms have explicit contrast labels and sharp outlines. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

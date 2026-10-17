@@ -1,0 +1,85 @@
+{
+  "id": "B_design_03",
+  "title": "Group balance within batches",
+  "chapters": [
+    "bulk.design"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 2,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Group balance within batches",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Group balance within batches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "batch_donors": true,
+        "denominator_definition": "Independent donors within each batch; the three complete batch totals sum to the declared independent n",
+        "id": "p1"
+      }
+    ],
+    "title": "Group balance within batches",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.design supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Group balance within batches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Group balance within batches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_design_03/example.png",
+    "svg": "B_design_03/example.svg",
+    "pdf": "B_design_03/example.pdf",
+    "tsv": "B_design_03/example.tsv",
+    "spec": "B_design_03/input/example.spec.json",
+    "preview": "B_design_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "bc37e3b7efeae610e3f5fa1e154af99a5b3f86392ad58031b4ddea51aa8f55f6",
+    "svg": "eb44ae864f1754c21567eb070b9045f2d9aeb4519af42b70f59129231bd7494d",
+    "pdf": "30e7585b46eb709f85b7e853566c94bb0b43fa276dd082f9b7293f5aeaf6eb3d",
+    "tsv": "6bddfbacead02daa7b8e46f29bd87229cc01af9c011b5e7be14742b8c7c2c963",
+    "spec": "a837b9b2b9e326bf7658576cec4f490577c77472523f6ba0cca4df5075c5b1af"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 16,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_design_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "bc37e3b7efeae610e3f5fa1e154af99a5b3f86392ad58031b4ddea51aa8f55f6",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final individual PNGs inspected: complete donor/library rows, clear independent-donor batch totals summing to twelve, readable categorical design/missingness labels and attached full scales; no clipping. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

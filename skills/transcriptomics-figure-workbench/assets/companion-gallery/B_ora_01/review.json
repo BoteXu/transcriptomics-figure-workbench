@@ -1,0 +1,88 @@
+{
+  "id": "B_ora_01",
+  "title": "Selected queries and tested-universe coverage",
+  "chapters": [
+    "bulk.ora"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 77,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Selected queries and tested-universe coverage",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Selected queries and tested-universe coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied coverage fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Selected queries and tested-universe coverage",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ora supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Selected queries and tested-universe coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Selected queries and tested-universe coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ora_01/example.png",
+    "svg": "B_ora_01/example.svg",
+    "pdf": "B_ora_01/example.pdf",
+    "tsv": "B_ora_01/example.tsv",
+    "spec": "B_ora_01/input/example.spec.json",
+    "preview": "B_ora_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "3697b73a106737cb0714e408eaa058bf5f231b2bcc649dee958d0ae3f71d6759",
+    "svg": "608145aef374b7104ebbc10de8d5f037fff36060cffcddd98965e88307a4fab7",
+    "pdf": "25577c917db95dc626a3f5cf5c3109d69c8739ef58fbdf74163c6c993e7c6a38",
+    "tsv": "1edefc418f18b958b674577c4361613fe9a946a53559bf1e0d5e2eb8f7824e97",
+    "spec": "e83ed8fbc096c2de5ce2a1fa6bf15ebf49119bbc9cf2a8fc8aa5be87ed4e8adc"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 182.33672222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 12.66886873827147,
+    "p10_pt": 12.66886873827147,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ora_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3697b73a106737cb0714e408eaa058bf5f231b2bcc649dee958d0ae3f71d6759",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual individual exports inspected: pathway-score difference unit and aligned intervals/q values are readable; query coverage and complete binary membership keep full declared scales, explicit labels and no clipping. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

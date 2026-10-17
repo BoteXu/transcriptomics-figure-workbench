@@ -1,7 +1,7 @@
 {
   "id": "single_cell.qc",
   "assay": "single_cell",
-  "title": "Cell quality across donors",
+  "title": "Cell QC · donor-stratified supplied distributions",
   "family": "rich:CellQC",
   "required_results": [
     "cell_metrics",
@@ -27,40 +27,33 @@
     "preview": "single_cell.qc/preview.jpg"
   },
   "sha256": {
-    "png": "7e4d303ca2a7d6495d8eacdde70ff3812506405d1d86ca50bc9baff1cb04efcb",
-    "svg": "26b0b3b37074283a1c7e04b4948b89c9da1792fb4558126b56b13cf7ff888928",
-    "pdf": "7c47b620610ee4bbbae4d678ba0d10829cd81b2dfd933f57179ea5a330486f73",
+    "png": "41d587516d3480b7b69bcebd51cee0ba4f34cb9034ec9dcd34d1c054e46e9ef3",
+    "svg": "f70af6455b394c3de9f290e9b5e4ccf2aec022a56947dfe2489b8ca13710d7f0",
+    "pdf": "8769b6345329cf60ea35941c4c01476b6285ce187330f21212e3eda256ea4794",
     "tsv": "6bd4de4bd92a969e9a16351c3864fa79a27c44ff5626299810ae5e3cf696092c",
-    "spec": "1cfe2b439d0391c103092e5f032c55eb50012fcaf8efc0fc316fed51a65ce577"
+    "spec": "0cc8296b6e88bb2eac6715884ea70e663ce17d797b1625ae1fece40889d84cdd"
   },
   "visual_review": {
-    "id": "single_cell.qc",
-    "png_sha256": "7e4d303ca2a7d6495d8eacdde70ff3812506405d1d86ca50bc9baff1cb04efcb",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.qc.complete",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "41d587516d3480b7b69bcebd51cee0ba4f34cb9034ec9dcd34d1c054e46e9ef3",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 210,
-    "native_width_mm": 228.6,
+    "native_width_mm": 212.39986015624999,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 70,
-    "smallest_pt": 8.267716535433072,
-    "p10_pt": 8.267716535433072,
+    "essential_text_count": 69,
+    "smallest_pt": 7.909609727445789,
+    "p10_pt": 8.898310943376512,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

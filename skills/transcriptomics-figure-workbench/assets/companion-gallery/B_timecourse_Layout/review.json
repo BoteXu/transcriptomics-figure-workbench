@@ -1,0 +1,120 @@
+{
+  "id": "B_timecourse_Layout",
+  "title": "Bulk · timecourse — complementary evidence",
+  "chapters": [
+    "bulk.timecourse"
+  ],
+  "stage": "layout",
+  "family": "matrix,paired,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 160,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Donor support across measured times",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Donor support across measured times; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit observation present",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      },
+      {
+        "kind": "paired",
+        "title": "Paired STAT1 donor response at two time points",
+        "x_label": "Repeated condition",
+        "y_label": "Supplied log2 STAT1 expression",
+        "definition": "Paired STAT1 donor response at two time points; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Within-donor model sensitivity",
+        "x_label": "Log2 expression change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Within-donor model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · timecourse — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.timecourse supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor support across measured times; all quantities are supplied frozen channels, with explicitly declared units and scope. | Paired STAT1 donor response at two time points; all quantities are supplied frozen channels, with explicitly declared units and scope. | Within-donor model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Donor support across measured times; all quantities are supplied frozen channels, with explicitly declared units and scope. | Paired STAT1 donor response at two time points; all quantities are supplied frozen channels, with explicitly declared units and scope. | Within-donor model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "unit",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_timecourse_Layout/example.png",
+    "svg": "B_timecourse_Layout/example.svg",
+    "pdf": "B_timecourse_Layout/example.pdf",
+    "tsv": "B_timecourse_Layout/example.tsv",
+    "spec": "B_timecourse_Layout/input/example.spec.json",
+    "preview": "B_timecourse_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "82331cea4a2fb6d0033e5a313978c7ae9fbe4b5b751004e38e23ed1917839a98",
+    "svg": "b11a016fae4be3ade493a6f4b8e82e073e36cac18ba3f76897aef34cb83e8b2a",
+    "pdf": "6b71ae51355f790c457a0cbc8649d6c0355bddfeb00530c041823d3944266ded",
+    "tsv": "dee942c6e9e9f97ccd78cc73273946c75956268601f73737ecda2e1229889ab9",
+    "spec": "8849734ab27c26119d60dfd7a31ad6b83651b0ef8b18888ba4baae900b856a1e"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 114,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_timecourse_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "82331cea4a2fb6d0033e5a313978c7ae9fbe4b5b751004e38e23ed1917839a98",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: transcript usage, paired donor response, cohort effect summaries and larger layouts have aligned labels, explicit intervals and complete numeric tables; signed scales and denominators remain visible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

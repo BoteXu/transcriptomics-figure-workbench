@@ -1,0 +1,116 @@
+{
+  "id": "S_velocity_Evidence",
+  "title": "Single cell · velocity — complementary evidence",
+  "chapters": [
+    "single_cell.velocity"
+  ],
+  "stage": "interpretation",
+  "family": "scatter,profile,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 341,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "STAT1 spliced–unspliced phase support",
+        "x_label": "Supplied normalized spliced counts",
+        "y_label": "Supplied normalized unspliced counts",
+        "definition": "STAT1 spliced–unspliced phase support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "cell nested within donor",
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "STAT1 response along supplied latent time",
+        "x_label": "Supplied latent time",
+        "y_label": "Supplied normalized STAT1 response",
+        "definition": "STAT1 response along supplied latent time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Direction stability across model choices",
+        "x_label": "Velocity-direction agreement difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Direction stability across model choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · velocity — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.velocity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "STAT1 spliced–unspliced phase support; all quantities are supplied frozen channels, with explicitly declared units and scope. | STAT1 response along supplied latent time; all quantities are supplied frozen channels, with explicitly declared units and scope. | Direction stability across model choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "STAT1 spliced–unspliced phase support; all quantities are supplied frozen channels, with explicitly declared units and scope. | STAT1 response along supplied latent time; all quantities are supplied frozen channels, with explicitly declared units and scope. | Direction stability across model choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "lower",
+    "upper",
+    "estimate",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_velocity_Evidence/example.png",
+    "svg": "S_velocity_Evidence/example.svg",
+    "pdf": "S_velocity_Evidence/example.pdf",
+    "tsv": "S_velocity_Evidence/example.tsv",
+    "spec": "S_velocity_Evidence/input/example.spec.json",
+    "preview": "S_velocity_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "7c9abdee5346fba39972643b3b97d02c23ccf2d4f3ade25ea2ee2f328aad3cb1",
+    "svg": "5118b17b2b9d57d87a6797893071416a5c08973baff7662c05aaa00383c3247a",
+    "pdf": "dcae76ff1d0623350ab712e9d5de43a58eda4c1f9035b0c02297d64b1c16b2a0",
+    "tsv": "80ee620ebc9d2acc1e00ec155a3be14136fb71a2a5902785d8bab2b87450809a",
+    "spec": "8f6f9320de8e5dfe30f8e10c4b26b15289a5a18095908d3529e4d674eda40880"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 94,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_velocity_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7c9abdee5346fba39972643b3b97d02c23ccf2d4f3ade25ea2ee2f328aad3cb1",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: velocity phase/profile/sensitivity and communication expression/contribution/role views retain declared scales and comparison labels; direct role labels, zero references and aligned numeric companions are readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

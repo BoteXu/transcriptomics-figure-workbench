@@ -1,0 +1,116 @@
+{
+  "id": "S_vdj_Layout",
+  "title": "Single cell · vdj — complementary evidence",
+  "chapters": [
+    "single_cell.vdj"
+  ],
+  "stage": "layout",
+  "family": "fraction,bins,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 384,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "VDJ quality and productive-chain support",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "VDJ quality and productive-chain support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "bins",
+        "title": "Frozen clone-size distributions",
+        "x_label": "Clonotype size",
+        "y_label": "Supplied count",
+        "definition": "Frozen clone-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Repertoire findings in independent donors",
+        "x_label": "Shannon-diversity difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Repertoire findings in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · vdj — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.vdj supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "VDJ quality and productive-chain support; all quantities are supplied frozen channels, with explicitly declared units and scope. | Frozen clone-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Repertoire findings in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "VDJ quality and productive-chain support; all quantities are supplied frozen channels, with explicitly declared units and scope. | Frozen clone-size distributions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Repertoire findings in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "start",
+    "end",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_vdj_Layout/example.png",
+    "svg": "S_vdj_Layout/example.svg",
+    "pdf": "S_vdj_Layout/example.pdf",
+    "tsv": "S_vdj_Layout/example.tsv",
+    "spec": "S_vdj_Layout/input/example.spec.json",
+    "preview": "S_vdj_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "b23bd9482a43af6c197a1d4eafbd92c47b173ce06a6b1d77fd0aeaa9620a78b8",
+    "svg": "f39940d6a85856dde873d2411b84eda9d1709644d8eaed4996e486ca0a2b2552",
+    "pdf": "bbb7ac141ca5070f7f91426d9883f63b5d0380d5527c6f96640d51a1a62ee980",
+    "tsv": "1564cb46eedccead905382e612e7f64c61e8f03d9022c80489b8cc42ee0326c3",
+    "spec": "522e66422479448f79436cff33465a5e9e274c02d2c697744e24311b849a9727"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 87,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_vdj_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b23bd9482a43af6c197a1d4eafbd92c47b173ce06a6b1d77fd0aeaa9620a78b8",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual exports individually inspected: VDJ compositions preserve categories and frozen bins at both data sizes, cohort effects remain readable, and donor PSI raincloud preserves all points and n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

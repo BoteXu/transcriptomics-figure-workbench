@@ -1,0 +1,85 @@
+{
+  "id": "S_cnv_02",
+  "title": "Genomically ordered CNV summaries",
+  "chapters": [
+    "single_cell.cnv"
+  ],
+  "stage": "interpretation",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 369,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Genomically ordered CNV summaries",
+        "x_label": "Ordered bin index · fictional reference",
+        "y_label": "Supplied log2 relative CNV",
+        "definition": "Genomically ordered CNV summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "reference_zero": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Genomically ordered CNV summaries",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.cnv supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Genomically ordered CNV summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Genomically ordered CNV summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_cnv_02/example.png",
+    "svg": "S_cnv_02/example.svg",
+    "pdf": "S_cnv_02/example.pdf",
+    "tsv": "S_cnv_02/example.tsv",
+    "spec": "S_cnv_02/input/example.spec.json",
+    "preview": "S_cnv_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "8085bb33dc088b279acc10a238932adddcfb9cbb0317cc0f466e8711d3fb0aec",
+    "svg": "ab60b0291b5f9f9e42c64f9586171742309c466e1ada76ca69e33c2cb03f441a",
+    "pdf": "90ed2ecd65eb68c20ab253e8010efaaa01237f0fe4fb37931b6d641dae72b5c7",
+    "tsv": "2a83d82e820d0eccfc7a09e1175c1747ab511c4a633eba8f027fa06e346c04da",
+    "spec": "132602a38377b6fee5088ab051511600197c446ea5fe474cd6bfc203ba41c479"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_cnv_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "8085bb33dc088b279acc10a238932adddcfb9cbb0317cc0f466e8711d3fb0aec",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: regulon activity versus support, CNV reference/clone identity consistency and orthogonal channels, paired Shannon summaries and physical splicing intervals are readable; legends and row heights checked at final export.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,84 @@
+{
+  "id": "S_perturbseq_01",
+  "title": "Complete guide assignment by replicate",
+  "chapters": [
+    "single_cell.perturbseq"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 393,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Complete guide assignment by replicate",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete guide assignment by replicate; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Complete guide assignment by replicate",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.perturbseq supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete guide assignment by replicate; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete guide assignment by replicate; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_perturbseq_01/example.png",
+    "svg": "S_perturbseq_01/example.svg",
+    "pdf": "S_perturbseq_01/example.pdf",
+    "tsv": "S_perturbseq_01/example.tsv",
+    "spec": "S_perturbseq_01/input/example.spec.json",
+    "preview": "S_perturbseq_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "14b0d39205f226a64a04e87a3b3a75b3a4d187d7566f4e8b45cb65cde5cf5f57",
+    "svg": "850a734b07440c8eb57fd43a6a487a90f70c7fa59a063ad76b1ab0ecf238439e",
+    "pdf": "193304a696c34e0f3a6f74ea28311f7a0c4feed47421dbf833ef9d5f913526c0",
+    "tsv": "211b0495c431a5b027e0f455e43493e06d3340d993e394f10318332926c458f2",
+    "spec": "ac224f66114c669f0f8519ec941a506f1ba7c6885802a5e359e7bc2f65600eff"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_perturbseq_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "14b0d39205f226a64a04e87a3b3a75b3a4d187d7566f4e8b45cb65cde5cf5f57",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: complete guide assignment and support, program response channels, donor-level replication effects and cohort mapping remain readable with full selected scope and explicit independent n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

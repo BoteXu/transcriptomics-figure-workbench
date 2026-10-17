@@ -1,0 +1,94 @@
+{
+  "id": "B_gene_support_05",
+  "title": "Supporting-gene replication effects",
+  "chapters": [
+    "bulk.gene_support"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 105,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Supporting-gene replication effects",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Supporting-gene replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Supporting-gene replication effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Supporting-gene replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Supporting-gene replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gene_support_05/example.png",
+    "svg": "B_gene_support_05/example.svg",
+    "pdf": "B_gene_support_05/example.pdf",
+    "tsv": "B_gene_support_05/example.tsv",
+    "spec": "B_gene_support_05/input/example.spec.json",
+    "preview": "B_gene_support_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "eccb455ae5babd09360f94f29e6040e85399211785e744e6be350e450761f0a8",
+    "svg": "d6c62dd5842ebfec3cdf189521c7e2cb448ec3c0090c177aa6abba1a4fb611fb",
+    "pdf": "4b87a5236df4284e14a526ec09d1c481926741ab7d674ea724d5432fbeb1033b",
+    "tsv": "96569abcf1a604cf392d75f70b009f56e63bf1246728c52f4680e6a1c3481965",
+    "spec": "fd77fe06ebf8a616de840d9da6fcb5949ae79311e4373c6e58f7463b2035992c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gene_support_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "eccb455ae5babd09360f94f29e6040e85399211785e744e6be350e450761f0a8",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG viewed: complete donor/numerical support, explicit uncertainty lanes and separate scale definitions; native GSEA curve remains primary and these provide coverage, ranking and gene-support companions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

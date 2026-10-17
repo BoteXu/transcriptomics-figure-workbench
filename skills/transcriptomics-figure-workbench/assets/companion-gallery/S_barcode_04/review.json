@@ -1,0 +1,84 @@
+{
+  "id": "S_barcode_04",
+  "title": "Genes and UMIs in declared droplets",
+  "chapters": [
+    "single_cell.barcode"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 214,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Genes and UMIs in declared droplets",
+        "x_label": "Supplied log UMI count (log10)",
+        "y_label": "Supplied log gene count (log10)",
+        "definition": "Genes and UMIs in declared droplets; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "gene",
+        "id": "p1"
+      }
+    ],
+    "title": "Genes and UMIs in declared droplets",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.barcode supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Genes and UMIs in declared droplets; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Genes and UMIs in declared droplets; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_barcode_04/example.png",
+    "svg": "S_barcode_04/example.svg",
+    "pdf": "S_barcode_04/example.pdf",
+    "tsv": "S_barcode_04/example.tsv",
+    "spec": "S_barcode_04/input/example.spec.json",
+    "preview": "S_barcode_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "b7780adfc6bea12dc8a373f5e0dd0cd357baf0bdf916ed1201bdb802cb3ae164",
+    "svg": "572db969812f0830dfd0e095acca79171ae89fd7b6bf4f0861ab94791fa4038e",
+    "pdf": "01ab6aa72b7bce847e7989213ba696f67a48f6b089b4dbd55984f74433d100c7",
+    "tsv": "e8b7dd7b4bcbfe32964bf242c25edcd639b76eb1825246675684dcd186519898",
+    "spec": "e01b20ac5247c358eb2a3a4b28ceb210a51f0792ebeb00e8d925afb27eabf4ca"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_barcode_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b7780adfc6bea12dc8a373f5e0dd0cd357baf0bdf916ed1201bdb802cb3ae164",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs inspected: full six-term overlap labels and counts readable; all 12 mixture categories uniquely coloured with complete legend; reading layout complete; droplet axes explicitly log10 UMI and gene counts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

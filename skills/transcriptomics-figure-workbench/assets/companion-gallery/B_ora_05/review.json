@@ -1,0 +1,95 @@
+{
+  "id": "B_ora_05",
+  "title": "Enrichment stability across backgrounds",
+  "chapters": [
+    "bulk.ora"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 81,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Enrichment stability across backgrounds",
+        "x_label": "Log enrichment odds ratio · supplied 95% interval",
+        "y_label": "",
+        "definition": "Enrichment stability across backgrounds; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Enrichment stability across backgrounds",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ora supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Enrichment stability across backgrounds; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Enrichment stability across backgrounds; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ora_05/example.png",
+    "svg": "B_ora_05/example.svg",
+    "pdf": "B_ora_05/example.pdf",
+    "tsv": "B_ora_05/example.tsv",
+    "spec": "B_ora_05/input/example.spec.json",
+    "preview": "B_ora_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "9c9445b6eb03130189e2c81417aca2312e410d18edaf52af68e4d0c834747992",
+    "svg": "58ff6386c6f882f46e049fa7be8dd19c84fce73dd1d7a87a48810e500da25381",
+    "pdf": "477cdad09d92346d6469cb02b380aad1e597eb16281f806cda28d88cc1f41527",
+    "tsv": "c27c0fc634571855a03f1fff0b2860a647266a0e7242d5501abbaa757d9f8528",
+    "spec": "e4bca69795063d52817cdf785234dbeb1c54c53335f70aa5890652caeaafc8e0"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ora_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9c9445b6eb03130189e2c81417aca2312e410d18edaf52af68e4d0c834747992",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each final PNG viewed separately: program membership, donor raincloud and named trajectory/cohort synthesis; ORA universe coverage, aligned uncertainty and background alternatives, complete term overlap. Custom reading layout retains all rows, units and distinct upstream donor n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

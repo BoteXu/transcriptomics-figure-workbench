@@ -1,0 +1,88 @@
+{
+  "id": "S_velocity_03",
+  "title": "Velocity model support by gene",
+  "chapters": [
+    "single_cell.velocity"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 338,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Velocity model support by gene",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Velocity model support by gene; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied diagnostic",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Velocity model support by gene",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.velocity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Velocity model support by gene; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Velocity model support by gene; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_velocity_03/example.png",
+    "svg": "S_velocity_03/example.svg",
+    "pdf": "S_velocity_03/example.pdf",
+    "tsv": "S_velocity_03/example.tsv",
+    "spec": "S_velocity_03/input/example.spec.json",
+    "preview": "S_velocity_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "c9ce044314436f714f69e89d89221c32e58ad52e77d9e2c2b032401424d88a05",
+    "svg": "1d341f8634e9ac54eac3590ac078d8b38aef3f990b067835fb5df82c122a51e7",
+    "pdf": "af655889aff3bfc423f7b1191575917b2647adcf347c62957763c897bbc5b238",
+    "tsv": "6a679a5d3c0c3f1cd2290b5edcecd15be00efdd5abc80a34fd5e4901e74a94b4",
+    "spec": "b91d86f648dab3ef208c7e143a06242f1feb36a4110c26c04518c1a368fcc06e"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_velocity_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "c9ce044314436f714f69e89d89221c32e58ad52e77d9e2c2b032401424d88a05",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual exports: complete ordered trajectory, phase diagnostic columns, donor confidence raincloud, latent-time ranges and model sensitivity tables have readable axes, complete values and clear legends.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

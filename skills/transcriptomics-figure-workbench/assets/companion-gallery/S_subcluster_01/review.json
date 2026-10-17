@@ -1,0 +1,88 @@
+{
+  "id": "S_subcluster_01",
+  "title": "Parent-lineage donor support",
+  "chapters": [
+    "single_cell.subcluster"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 263,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Parent-lineage donor support",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Parent-lineage donor support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied cell count",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Parent-lineage donor support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.subcluster supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Parent-lineage donor support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Parent-lineage donor support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_subcluster_01/example.png",
+    "svg": "S_subcluster_01/example.svg",
+    "pdf": "S_subcluster_01/example.pdf",
+    "tsv": "S_subcluster_01/example.tsv",
+    "spec": "S_subcluster_01/input/example.spec.json",
+    "preview": "S_subcluster_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "d2dd5d936c4f44899ebb2b29cabe39097e3f57e1b3c55fcbb4042e3fc7f5a1af",
+    "svg": "205aadfd735db07db81217e099ba8ef87dbfaddbd51b4ab3cf5d4cc910466ca2",
+    "pdf": "c98ccba35eca655643c443abfa5a7f0f24917f24ed3166a685e7d1a2077346e2",
+    "tsv": "5c1ff71deacd561d79bc5e802455edbb185b7afb070a61cc9f83fc8e88edac55",
+    "spec": "9cb7169444b188dccf8a94719fca887bedb3672743decafb62a6441d8c7b24b1"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_subcluster_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d2dd5d936c4f44899ebb2b29cabe39097e3f57e1b3c55fcbb4042e3fc7f5a1af",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected annotation cohort intervals and discordance classes; child-lineage support, positive/exclusion marker matrix, complete child composition, donor effects and alternative choices. Complete readable labels and interval table; composed page has distinct information channels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

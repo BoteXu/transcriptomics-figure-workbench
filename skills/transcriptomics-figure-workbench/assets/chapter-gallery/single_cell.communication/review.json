@@ -28,40 +28,33 @@
     "preview": "single_cell.communication/preview.jpg"
   },
   "sha256": {
-    "png": "e21ccad1928ec1bb1722925328623c4077ee30e9225da0c283b750395c2dbe3d",
-    "svg": "cb9f810ec6b12735f1964bd4c6ea4e80720a0d8dabe0e3647f6e5e326936b1eb",
-    "pdf": "4042572dd016247097750679136b007378d76062deb64b4092a22ee02b7743da",
-    "tsv": "e53c2189cdc7cd903700a7983c4d9ae77ca0afed6bad731233a032e0defcb3bb",
-    "spec": "3f087184322f34d359f63e09d255477f18e2dacc68741cf84f38ab4325f4c7f5"
+    "png": "a9a56329fad26dd6572dc0739a3cb81b6cb80ee7a33a7b190410a43b6904a536",
+    "svg": "38a6f044ec4ef0fbdc975e55ec8e47750617d0df732b93ca7cdbe93a852ed8f0",
+    "pdf": "08c6add9493101cec90564e351992415367f5143adc693d253989ea289ccd631",
+    "tsv": "8eee11e251c490ad49010f946f0400293d259a4ab30dc3ed9f6f9ec77c7ceec1",
+    "spec": "8851e9eb6f91f0106a4829339e236e436adfe3e64a1d6d53812f18cb82892452"
   },
   "visual_review": {
-    "id": "single_cell.communication",
-    "png_sha256": "e21ccad1928ec1bb1722925328623c4077ee30e9225da0c283b750395c2dbe3d",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.communication.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a9a56329fad26dd6572dc0739a3cb81b6cb80ee7a33a7b190410a43b6904a536",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 297,
-    "native_width_mm": 332.7910661148534,
+    "native_width_mm": 384.9543984479158,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 63,
-    "smallest_pt": 9.816970263476026,
-    "p10_pt": 9.816970263476026,
+    "essential_text_count": 67,
+    "smallest_pt": 8.486719500211201,
+    "p10_pt": 8.486719500211201,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

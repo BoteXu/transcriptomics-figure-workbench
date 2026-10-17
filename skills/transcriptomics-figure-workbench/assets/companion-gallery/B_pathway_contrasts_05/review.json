@@ -1,0 +1,95 @@
+{
+  "id": "B_pathway_contrasts_05",
+  "title": "Pathway effects in an independent cohort",
+  "chapters": [
+    "bulk.pathway_contrasts"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 98,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Pathway effects in an independent cohort",
+        "x_label": "Signed pathway-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Pathway effects in an independent cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Pathway effects in an independent cohort",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.pathway_contrasts supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Pathway effects in an independent cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Pathway effects in an independent cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_pathway_contrasts_05/example.png",
+    "svg": "B_pathway_contrasts_05/example.svg",
+    "pdf": "B_pathway_contrasts_05/example.pdf",
+    "tsv": "B_pathway_contrasts_05/example.tsv",
+    "spec": "B_pathway_contrasts_05/input/example.spec.json",
+    "preview": "B_pathway_contrasts_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "ac03722ac33ef1cf864925b592f34d1b7c0f4914aba5f0147b6b7cd7504eba09",
+    "svg": "e19440dc9e0fab3e7e29fa0089910d16ea7f9c0564661cb55b8249e9daf1485a",
+    "pdf": "599dd4b9c333e821807700afeb6d688ab1b247af34fbd7b2dbfc1a4a159f865c",
+    "tsv": "f841f4310e40ef9e5dd9173d98040bed0edf4e8860d59e9c0654323b952beaa9",
+    "spec": "8c246e99abc987aac73106a517c4ca7f58a043f7638de63dd7cf4a085ea25d8b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_pathway_contrasts_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ac03722ac33ef1cf864925b592f34d1b7c0f4914aba5f0147b6b7cd7504eba09",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG viewed: complete donor/numerical support, explicit uncertainty lanes and separate scale definitions; native GSEA curve remains primary and these provide coverage, ranking and gene-support companions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

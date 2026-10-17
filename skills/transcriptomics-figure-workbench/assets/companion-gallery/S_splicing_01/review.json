@@ -1,0 +1,88 @@
+{
+  "id": "S_splicing_01",
+  "title": "T-cell STAT1 E01 physical junction support",
+  "chapters": [
+    "single_cell.splicing"
+  ],
+  "stage": "qc",
+  "family": "locus",
+  "variant": false,
+  "large_data": false,
+  "order": 385,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "locus",
+        "title": "T-cell STAT1 E01 physical junction support",
+        "x_label": "Genomic position · declared reference build",
+        "y_label": "",
+        "definition": "T-cell STAT1 E01 physical junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "coordinate_system": "0-based half-open",
+        "genome_build": "Explicit fictional reference v1; not a human locus",
+        "contig": "synthetic_contig_1",
+        "strand": "+",
+        "id": "p1"
+      }
+    ],
+    "title": "T-cell STAT1 E01 physical junction support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.splicing supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "T-cell STAT1 E01 physical junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "T-cell STAT1 E01 physical junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "record_type",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_splicing_01/example.png",
+    "svg": "S_splicing_01/example.svg",
+    "pdf": "S_splicing_01/example.pdf",
+    "tsv": "S_splicing_01/example.tsv",
+    "spec": "S_splicing_01/input/example.spec.json",
+    "preview": "S_splicing_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "9937ee276f6c0378bde67462fbbed920856bbac960dfcf83b71295e3616cf3d3",
+    "svg": "31451a0f1959ad35f043a0a43f7382bc64c6fea588709386b16ac07219bb116f",
+    "pdf": "638a66df9e994e2d23ab002f5dbfbfce2c86acc5caccf30e193fcd948491e1c1",
+    "tsv": "c71bd0ad73dbecc1dd399f48910407a8dc2026d57f6049210d72434c94369062",
+    "spec": "3d1c2a6e07e1db4a8a2c04ed61293f3de3924214014be2091b68e3d340094cc6"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_splicing_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9937ee276f6c0378bde67462fbbed920856bbac960dfcf83b71295e3616cf3d3",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: regulon activity versus support, CNV reference/clone identity consistency and orthogonal channels, paired Shannon summaries and physical splicing intervals are readable; legends and row heights checked at final export.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "cf1043fc1c324b244959516cfe1bc93ad713b6d706fe6f0150deacb68085fead",
+    "sha256": "7d18f83666a04e99ae18c12dc5cc57033a243447b2f38e2bea9c76b1112e27d2",
     "numeric_columns": [
       "x",
       "y",
@@ -25,13 +25,13 @@
       },
       {
         "kind": "matrix",
-        "title": "Biology and batch diagnostics",
+        "title": "Normalized integration diagnostics",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied diagnostic score",
+        "value_label": "Supplied normalized score [0,1]",
         "limits": [
           0,
-          2
+          1
         ],
         "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
         "size_label": "Coverage",
@@ -40,7 +40,7 @@
       }
     ],
     "title": "Batch integration and signal preservation",
-    "scope_note": "Fictional frozen inputs · single_cell · no analysis performed",
+    "scope_note": "Fictional frozen coordinates · normalized diagnostics; larger is better within each declared metric",
     "columns": "auto"
   },
   "theme": {
@@ -170,10 +170,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional integration display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

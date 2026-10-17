@@ -28,34 +28,26 @@
     "preview": "single_cell.cnv/preview.jpg"
   },
   "sha256": {
-    "png": "37052d953d3e091f545c088efb08c6938d9550f02136490557cc8da03cd9352e",
-    "svg": "a635c62d88a66874aaee09e1a06549b5bcdf25705b526372b54da0887f8a767f",
-    "pdf": "4085a66eceb84a223eb7a4e73cc0ddff964d214b18a7010990c49dce4348afed",
-    "tsv": "53563e1436db69ce2d6780b4244a1a7b3f41dcdad61e06cd2656667d8c20e5b3",
-    "spec": "e8932835b01de9d8b5192394419706fef621c0925c5ae1dabdbc3941ab1a7fe0"
+    "png": "05c0473cc44f324abf58428d1d080f75c8070b8b92a3eaad9f957aaeedc5a613",
+    "svg": "e48a14edc03ae8d0956c6486839bfcc4d7c091aa3e78282e8ecabc47fc0624b9",
+    "pdf": "30eec31792874001881e62b261945d6f5895619e8200117485874a60106bcd45",
+    "tsv": "b37cadac0a9f6861181430eba26205cc7f67bb5b049aa1d51acbf11e093ff458",
+    "spec": "e8906989c6a594e50912438bb3284a2a7ee438b09df3780c904394dbe3150863"
   },
   "visual_review": {
-    "id": "single_cell.cnv",
-    "png_sha256": "37052d953d3e091f545c088efb08c6938d9550f02136490557cc8da03cd9352e",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.cnv.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "05c0473cc44f324abf58428d1d080f75c8070b8b92a3eaad9f957aaeedc5a613",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 297,
     "native_width_mm": 304.79999999999995,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 64,
+    "essential_text_count": 61,
     "smallest_pt": 10.718503937007876,
     "p10_pt": 10.718503937007876,
     "below_threshold": [],
@@ -63,5 +55,6 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

@@ -1,0 +1,89 @@
+{
+  "id": "B_ora_03",
+  "title": "Complete term–gene support",
+  "chapters": [
+    "bulk.ora"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 79,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Complete term–gene support",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Complete term–gene support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit annotation membership",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Complete term–gene support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ora supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete term–gene support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete term–gene support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ora_03/example.png",
+    "svg": "B_ora_03/example.svg",
+    "pdf": "B_ora_03/example.pdf",
+    "tsv": "B_ora_03/example.tsv",
+    "spec": "B_ora_03/input/example.spec.json",
+    "preview": "B_ora_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "da2bf52f79747dc6041d44fe8961e56a9692a4133683802a1a5ec15052a6a448",
+    "svg": "e889f33adeeb14076f9de770f402d17494619986e8b5ba19c76f1c4ab7bf6ffb",
+    "pdf": "4ac20d8f9e811fce782c2262d922916c85e7fdf26ec6ed9ce76a9615bc3b4640",
+    "tsv": "a0ba58be8d735bdc134a78e6d841206829dc7b50bf0ca35b2c95b2b12ae5eb2b",
+    "spec": "3b519ac07e18ee67512973572c6d0b31b1c94c9693294abba826be913d40ad62"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 177.34449793000243,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 13.025495727032665,
+    "p10_pt": 13.025495727032665,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ora_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "da2bf52f79747dc6041d44fe8961e56a9692a4133683802a1a5ec15052a6a448",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual individual exports inspected: pathway-score difference unit and aligned intervals/q values are readable; query coverage and complete binary membership keep full declared scales, explicit labels and no clipping. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

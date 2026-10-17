@@ -1,0 +1,84 @@
+{
+  "id": "B_survival_05",
+  "title": "Proportional-hazards diagnostic residuals",
+  "chapters": [
+    "bulk.survival"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 172,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Proportional-hazards diagnostic residuals",
+        "x_label": "Follow-up time (months)",
+        "y_label": "Supplied scaled residual",
+        "definition": "Proportional-hazards diagnostic residuals; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Proportional-hazards diagnostic residuals",
+    "context": {
+      "independent_unit": "fictional participants",
+      "independent_n": 80,
+      "method_version": "bulk.survival supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Proportional-hazards diagnostic residuals; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Proportional-hazards diagnostic residuals; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_survival_05/example.png",
+    "svg": "B_survival_05/example.svg",
+    "pdf": "B_survival_05/example.pdf",
+    "tsv": "B_survival_05/example.tsv",
+    "spec": "B_survival_05/input/example.spec.json",
+    "preview": "B_survival_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "7a349981c22f691bd085022bc3f67cd36e2ada0560d7eaac224bc6d19177d61f",
+    "svg": "524f7f844c4915e63178db496e899dfcabdff52b47ff1784c7ebd83f8f0b7618",
+    "pdf": "8bbf4e60ec2112f9545fc80ce4ef999bce10888a784dd769d86b90ad57e75886",
+    "tsv": "9ab2cb98039283e464593739c89a6d0591e420a88e0e1f2fc59aef0b053db9f4",
+    "spec": "254c7e0bda9632b018a579e33cfec6cd4ea7f9610162f50ad2a3d4169f0e3173"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_survival_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7a349981c22f691bd085022bc3f67cd36e2ada0560d7eaac224bc6d19177d61f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Eleven individual final PNGs inspected: supplied risk counts and step curves with intervals/calibration, source-specific PPI support and full symmetric interaction scope with explicit zeros, node response and cohort validation. Single and adaptive combined layouts remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

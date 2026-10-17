@@ -4,7 +4,7 @@
   "renderer": "figure_coexpression_evidence.plot_coexpression_evidence",
   "input": {
     "path": "example.tsv",
-    "sha256": "a55683de7b65bdd2dddeb8da0420ae55e29076c1974dcf9d5643b738e5707aa9",
+    "sha256": "36373f727f52dab50bf051c6301002b341dd97f54130a00902aff2e0fbdd4a5d",
     "numeric_columns": [
       "x",
       "y",
@@ -27,8 +27,32 @@
     "definition": "Fictional prespecified undirected PPI evidence edges, upstream confidence scores and module membership; node area encodes separately supplied |kME|, not PPI degree. No database retrieval or inferred binding.",
     "label_genes": [
       "M1_G1",
+      "M1_G2",
+      "M1_G3",
+      "M1_G4",
+      "M1_G5",
+      "M1_G6",
+      "M1_G7",
+      "M1_G8",
+      "M1_G9",
       "M2_G1",
-      "M3_G1"
+      "M2_G2",
+      "M2_G3",
+      "M2_G4",
+      "M2_G5",
+      "M2_G6",
+      "M2_G7",
+      "M2_G8",
+      "M2_G9",
+      "M3_G1",
+      "M3_G2",
+      "M3_G3",
+      "M3_G4",
+      "M3_G5",
+      "M3_G6",
+      "M3_G7",
+      "M3_G8",
+      "M3_G9"
     ],
     "edge_semantics": "Undirected fictional PPI support; differs from coexpression",
     "directed": false
@@ -122,10 +146,10 @@
     }
   },
   "provenance": {
-    "source": "Fictional method display fixtures v0.9.7",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Synthetic gene-sample measurement",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "All 180 illustrative genes in each of 12 samples",
     "model": "No network, statistical test, interval, density, layout or analysis fit",
     "limits": "Declared complete display scope; data have no biomedical validity",

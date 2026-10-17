@@ -1,0 +1,84 @@
+{
+  "id": "B_reads_02",
+  "title": "Adapter content across read positions",
+  "chapters": [
+    "bulk.reads"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 9,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Adapter content across read positions",
+        "x_label": "Read position (nt)",
+        "y_label": "Adapter fraction",
+        "definition": "Adapter content across read positions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Adapter content across read positions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.reads supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Adapter content across read positions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Adapter content across read positions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_reads_02/example.png",
+    "svg": "B_reads_02/example.svg",
+    "pdf": "B_reads_02/example.pdf",
+    "tsv": "B_reads_02/example.tsv",
+    "spec": "B_reads_02/input/example.spec.json",
+    "preview": "B_reads_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "6a49af6b2ac5d39ed8426e179a0ceca5d4f05cdedc30306dafe714e3ed426e4e",
+    "svg": "856beff11a9ce16a249e0b4339362e899b8b759b3d4f9f3329ba60c3ca75b341",
+    "pdf": "d1cb7a8a7d216df25ddbd93b3c30de6d402f7f9c685816f0c2fe6b42275d7e4d",
+    "tsv": "e6a7beb7d5993ef5c54fe39aa4d105cd235d54b7be7072e978e91fbba1fe731f",
+    "spec": "25d392dcd50e17a0d8c47492526c353b0305059383722b9bf8789ed3409af444"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_reads_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6a49af6b2ac5d39ed8426e179a0ceca5d4f05cdedc30306dafe714e3ed426e4e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected adapter and complete four-base profiles: units, category colours, complete legend and vertical scales are readable; base fractions sum to one and are shown without fabricated uncertainty. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

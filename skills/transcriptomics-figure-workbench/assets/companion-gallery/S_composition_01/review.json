@@ -1,0 +1,84 @@
+{
+  "id": "S_composition_01",
+  "title": "Complete donor cell-identity composition",
+  "chapters": [
+    "single_cell.composition"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 277,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Complete donor cell-identity composition",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete donor cell-identity composition; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Complete donor cell-identity composition",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.composition supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete donor cell-identity composition; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete donor cell-identity composition; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_composition_01/example.png",
+    "svg": "S_composition_01/example.svg",
+    "pdf": "S_composition_01/example.pdf",
+    "tsv": "S_composition_01/example.tsv",
+    "spec": "S_composition_01/input/example.spec.json",
+    "preview": "S_composition_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "277288719a51cd3ce6ff43cc3e916ca41278d6b017262ec7f42d61720465be35",
+    "svg": "a66bf6b954f8381af13827d8221dd70b79a9f2a90809f4aee4a7d6958c480d62",
+    "pdf": "517abec0bfe5dc6d5dc006664926cd4c08455cee817b10c3c24f20aa09612624",
+    "tsv": "cffcdf9f50606120dc7ccbd85f7128c10085809ec20695753b6d794870b68955",
+    "spec": "ef385209ec636cec2b545ec548467047604a4090d4e52f8c87a142a7847aa431"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 32,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_composition_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "277288719a51cd3ce6ff43cc3e916ca41278d6b017262ec7f42d61720465be35",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNG review: principal-component loadings use clean zero labels with supplied values preserved; all composition identities and legend entries retained. Evidence and one-column reading variants remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

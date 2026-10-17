@@ -14,11 +14,11 @@
     "preview": "ClusterFlow_2Column/preview.jpg"
   },
   "sha256": {
-    "png": "13c5644ee3366623cf296e089cd3a7b4497d59dae7eb7975b2354c717f5e4b15",
-    "svg": "b0fdef2c7c080b19ae3cf3f985749c95f522ef554ff22de149652189a182bc4e",
-    "pdf": "b10123dfe20ac52bcf51799558d11470fb9e8615b5088e943a2de8344bb368b9",
+    "png": "3b69cf33b7c9004cf144f45d2cb4e257c9cadaf1627b73b027d53bbb3920ff0b",
+    "svg": "4faab493dc69493a1cb415c8b62bbba29db5adac0d4ae771d8eab72b615d6807",
+    "pdf": "901ebf4b6d3476e3ca87ba12410d32db06e51ed0402fc58b6e24387206fa1b89",
     "tsv": "73d0456f5ccb26d9d252df50deb6753582f0fe3d4bc921a33f11e88512851ea8",
-    "spec": "d6b80cc4967f8e9e7eb15f441a3e7fc57b298faeb48b231789de91ddb4309231"
+    "spec": "1de2704bb695d73c2fbce0d52646e2b343860dd51b17e2470532a49ff3a3228d"
   },
   "readability": {
     "target_width_mm": 297,
@@ -34,19 +34,11 @@
   },
   "visual_review": {
     "id": "ClusterFlow_2Column",
-    "png_sha256": "13c5644ee3366623cf296e089cd3a7b4497d59dae7eb7975b2354c717f5e4b15",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3b69cf33b7c9004cf144f45d2cb4e257c9cadaf1627b73b027d53bbb3920ff0b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "scientific_acceptance": false,
@@ -62,5 +54,6 @@
     "https://lazappi.github.io/clustree/articles/clustree.html",
     "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
     "https://github.com/guigolab/ggsashimi"
-  ]
+  ],
+  "display_revision": "0.10.0"
 }

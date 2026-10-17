@@ -1,0 +1,84 @@
+{
+  "id": "B_deconvolution_01",
+  "title": "Reference coverage within cell identities",
+  "chapters": [
+    "bulk.deconvolution"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 131,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Reference coverage within cell identities",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Reference coverage within cell identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Reference coverage within cell identities",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.deconvolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reference coverage within cell identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Reference coverage within cell identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_deconvolution_01/example.png",
+    "svg": "B_deconvolution_01/example.svg",
+    "pdf": "B_deconvolution_01/example.pdf",
+    "tsv": "B_deconvolution_01/example.tsv",
+    "spec": "B_deconvolution_01/input/example.spec.json",
+    "preview": "B_deconvolution_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "a2d382304bb34f3b08838581ee4e08d4cd856baa06f42c1b641b41429f2a8c7c",
+    "svg": "48cfdebf643174b584ea951085c40a0e2770421a4fc720283a79381a2fbaaef3",
+    "pdf": "5dcdafe7c9754990d1b5d85aa8e42454afb1f8318c7dd25f3b58d1eae61097d6",
+    "tsv": "5de81d87ea0c101c1b10e955352db3e612c6012f3fb284a3a3b524d8eb62d6ea",
+    "spec": "309b9c6f9aed5a1d804c87fad4428984542e635b83b095dc237b89820d309658"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_deconvolution_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a2d382304bb34f3b08838581ee4e08d4cd856baa06f42c1b641b41429f2a8c7c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Viewed individual PNGs: complete category keys, all denominators and observed-versus-reconstructed points retained, identity line clear and no label collisions. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

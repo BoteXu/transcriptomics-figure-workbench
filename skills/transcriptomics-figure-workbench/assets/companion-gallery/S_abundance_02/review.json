@@ -1,0 +1,89 @@
+{
+  "id": "S_abundance_02",
+  "title": "Donor-aware neighborhood abundance effects",
+  "chapters": [
+    "single_cell.abundance"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 285,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-aware neighborhood abundance effects",
+        "x_label": "Supplied log abundance ratio · interval",
+        "y_label": "",
+        "definition": "Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-aware neighborhood abundance effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.abundance supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_abundance_02/example.png",
+    "svg": "S_abundance_02/example.svg",
+    "pdf": "S_abundance_02/example.pdf",
+    "tsv": "S_abundance_02/example.tsv",
+    "spec": "S_abundance_02/input/example.spec.json",
+    "preview": "S_abundance_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "29d9bfc19f9d6745a962c3f0075b3016d28b8541179a9d8906c230d1395159af",
+    "svg": "ba0711f2c5fda88ea45ff8981bc3fcd4792f19c725c36f3c06844dc7dfcbdf94",
+    "pdf": "055aad388f72c501ca380290601032b436aa204d2bf22afbc055c29838c6c1d2",
+    "tsv": "1ef1180bd35df4182898b3126627410de942d5a0c048a02ec3fb1e60933fa17b",
+    "spec": "cafb18375c6dfb2cd0a49f72c44ffd92e80961ca867259341c966f471e744e0d"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_abundance_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "29d9bfc19f9d6745a962c3f0075b3016d28b8541179a9d8906c230d1395159af",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: marker matrices use distinct detection/centered-expression scales; neighborhood identities, donor support counts and effect/sensitivity tables remain complete and readable in single and combined exports.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

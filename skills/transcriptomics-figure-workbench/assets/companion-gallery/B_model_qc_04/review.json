@@ -1,0 +1,84 @@
+{
+  "id": "B_model_qc_04",
+  "title": "Leverage and observation influence",
+  "chapters": [
+    "bulk.model_qc"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 66,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Leverage and observation influence",
+        "x_label": "Supplied leverage",
+        "y_label": "Supplied Cook distance",
+        "definition": "Leverage and observation influence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Leverage and observation influence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.model_qc supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Leverage and observation influence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Leverage and observation influence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_model_qc_04/example.png",
+    "svg": "B_model_qc_04/example.svg",
+    "pdf": "B_model_qc_04/example.pdf",
+    "tsv": "B_model_qc_04/example.tsv",
+    "spec": "B_model_qc_04/input/example.spec.json",
+    "preview": "B_model_qc_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "eaca60379a1250626bdbd657a21ed3558ebf6b2f70b20e1c3bfef986cd1af65b",
+    "svg": "3894b48355ef61544444d4cec3a3c41aed597994b607ed0ecf13d97bc3eb898a",
+    "pdf": "5e85ec063f394d5c443a1e3a8ea846b2e4bda9bb8478956b7c05c41c7cd113d0",
+    "tsv": "36487e0cc662d339205114fe32c4fc6260d2231927290d55746787bac06fb0c7",
+    "spec": "56f0651d206b5f77c4f37bea9dce6b03ff4a09425ae3711176e2cb5a59a1c753"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_model_qc_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "eaca60379a1250626bdbd657a21ed3558ebf6b2f70b20e1c3bfef986cd1af65b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual individual PNG inspected: supplied donor residual distributions, bounded leverage units and separate aligned estimate table are readable without clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

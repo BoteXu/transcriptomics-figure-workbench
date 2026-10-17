@@ -1,0 +1,118 @@
+{
+  "id": "B_differential_ThreeColumns",
+  "title": "Bulk · differential — complementary evidence",
+  "chapters": [
+    "bulk.differential"
+  ],
+  "stage": "layout",
+  "family": "profile,effects,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 55,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Binned dispersion summaries and fitted trend",
+        "x_label": "Supplied mean",
+        "y_label": "Supplied dispersion",
+        "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Prespecified gene effects with uncertainty",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Effect stability across prespecified models",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · differential — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.differential supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope. | Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 3
+  },
+  "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope. | Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_differential_ThreeColumns/example.png",
+    "svg": "B_differential_ThreeColumns/example.svg",
+    "pdf": "B_differential_ThreeColumns/example.pdf",
+    "tsv": "B_differential_ThreeColumns/example.tsv",
+    "spec": "B_differential_ThreeColumns/input/example.spec.json",
+    "preview": "B_differential_ThreeColumns/preview.jpg"
+  },
+  "sha256": {
+    "png": "577f05bc397a2c792c4d683b78f97b1712c73752e58ca6b42ae211ddb2b7e996",
+    "svg": "f449a0c05e11b91018792989c75ada469697a0701a00fc353972af9fc4be17c5",
+    "pdf": "1e9449402eb2c278617a6af24fd13ab76b133c3ee5db541f3b7089cf09b5ea40",
+    "tsv": "a3e32147f7e7415fc9db86f6d0942a5b713e4306ca316c4740bdf067414e9748",
+    "spec": "a6201d9de6eb532405006e3496ceb6ad6c10a3a1b54649815abf1d0b44db71c5"
+  },
+  "readability": {
+    "target_width_mm": 594,
+    "native_width_mm": 701.0399999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 127,
+    "smallest_pt": 9.320438206093806,
+    "p10_pt": 9.320438206093806,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_differential_ThreeColumns",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "577f05bc397a2c792c4d683b78f97b1712c73752e58ca6b42ae211ddb2b7e996",
+    "review_method": "Actual individual PNG inspection",
+    "notes": "Individually viewed complete image: titles and aligned estimate tables do not collide; named scientific scales, complete supplied channels and n labels remain readable. Tall one-column page is a reading layout, not a journal-column claim. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

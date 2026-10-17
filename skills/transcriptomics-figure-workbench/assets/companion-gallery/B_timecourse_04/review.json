@@ -1,0 +1,89 @@
+{
+  "id": "B_timecourse_04",
+  "title": "Prespecified time-by-condition effects",
+  "chapters": [
+    "bulk.timecourse"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 157,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified time-by-condition effects",
+        "x_label": "Log2 expression change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified time-by-condition effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified time-by-condition effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.timecourse supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified time-by-condition effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified time-by-condition effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_timecourse_04/example.png",
+    "svg": "B_timecourse_04/example.svg",
+    "pdf": "B_timecourse_04/example.pdf",
+    "tsv": "B_timecourse_04/example.tsv",
+    "spec": "B_timecourse_04/input/example.spec.json",
+    "preview": "B_timecourse_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "8b434b627c2853ec177551bea635196ade84576fbfb9606e8846c6394f3dc0d2",
+    "svg": "1aba0eafc52257a940aafc1d76aac4f32634e498b6220d4931506d3e476f8b56",
+    "pdf": "fcff4d76b72d698ec6a852313dd7ae7e2ef7edae8a9185cfa753dc7cf4c77620",
+    "tsv": "6a37116d2eef71614625d72c09bd51554c121144e8ee4816c7a8e6d4026e2ca6",
+    "spec": "c868000531b1e462c6f187db5f6cfa2c457318718b27300eeb935ca1930362e7"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_timecourse_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "8b434b627c2853ec177551bea635196ade84576fbfb9606e8846c6394f3dc0d2",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each final PNG inspected: twelve donor pairs retained, named longitudinal curves with visible supplied-range key, and explicit log2 effects/interval/q lanes; no overlap or cut labels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

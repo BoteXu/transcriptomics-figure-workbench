@@ -1,0 +1,122 @@
+{
+  "id": "S_abundance_Evidence",
+  "title": "Single cell · abundance — complementary evidence",
+  "chapters": [
+    "single_cell.abundance"
+  ],
+  "stage": "interpretation",
+  "family": "matrix,effects,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 289,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Neighborhood support across donors",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied neighborhood cells",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Donor-aware neighborhood abundance effects",
+        "x_label": "Supplied log abundance ratio · interval",
+        "y_label": "",
+        "definition": "Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Neighborhood and model-choice sensitivity",
+        "x_label": "Log neighborhood abundance ratio · supplied 95% interval",
+        "y_label": "",
+        "definition": "Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · abundance — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.abundance supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope. | Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope. | Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_abundance_Evidence/example.png",
+    "svg": "S_abundance_Evidence/example.svg",
+    "pdf": "S_abundance_Evidence/example.pdf",
+    "tsv": "S_abundance_Evidence/example.tsv",
+    "spec": "S_abundance_Evidence/input/example.spec.json",
+    "preview": "S_abundance_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "c2f55e5fb0a1d62dc2b92c0f3a348dba5c95302c45de7394617f3e1998b65dec",
+    "svg": "652ef056d19d693517fbefb9ac021d8fef912fb237d4c70a6595ede020f252e5",
+    "pdf": "19608df77bbb15c5866285e7ac091d0b328f682b89534b71bd2617ce7fe4cb03",
+    "tsv": "85d02eb14136393a879c52d36294c28dc8fc57e8923595ed82c5e4ed8ab19dd2",
+    "spec": "90b1e99292dc1ae887c8c4462d1ae14fbed379d8905791b29cb859ddd690aced"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 134,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_abundance_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "c2f55e5fb0a1d62dc2b92c0f3a348dba5c95302c45de7394617f3e1998b65dec",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: marker matrices use distinct detection/centered-expression scales; neighborhood identities, donor support counts and effect/sensitivity tables remain complete and readable in single and combined exports.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

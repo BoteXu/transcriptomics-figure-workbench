@@ -1,0 +1,121 @@
+{
+  "id": "S_trajectory_Evidence",
+  "title": "Single cell · trajectory — complementary evidence",
+  "chapters": [
+    "single_cell.trajectory"
+  ],
+  "stage": "interpretation",
+  "family": "matrix,profile,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 334,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Donor support across branches",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Donor support across branches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied cell count",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "Interferon program along fixed branches",
+        "x_label": "Supplied pseudotime",
+        "y_label": "Supplied interferon-program score",
+        "definition": "Interferon program along fixed branches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Root and branch-choice sensitivity",
+        "x_label": "Branch-associated log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Root and branch-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · trajectory — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.trajectory supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor support across branches; all quantities are supplied frozen channels, with explicitly declared units and scope. | Interferon program along fixed branches; all quantities are supplied frozen channels, with explicitly declared units and scope. | Root and branch-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Donor support across branches; all quantities are supplied frozen channels, with explicitly declared units and scope. | Interferon program along fixed branches; all quantities are supplied frozen channels, with explicitly declared units and scope. | Root and branch-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "x",
+    "y",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_trajectory_Evidence/example.png",
+    "svg": "S_trajectory_Evidence/example.svg",
+    "pdf": "S_trajectory_Evidence/example.pdf",
+    "tsv": "S_trajectory_Evidence/example.tsv",
+    "spec": "S_trajectory_Evidence/input/example.spec.json",
+    "preview": "S_trajectory_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "7548b9819a3ecb8ab4cfcfcc7cb534409c5d7bdeb8141da77716f35bfe4e4096",
+    "svg": "692766d63a0537a58515ed3432d4563795781ac95cd108e2d6c123369bd7a3f6",
+    "pdf": "a8e1dc9f03aa669b34729dff43d63187a85f3d064be384962a0764a4adff020b",
+    "tsv": "e098053517d436284cf2074a56b8ca3efe6debd54c86ae28fa3eee145c6d8df5",
+    "spec": "6abfbb6843f400651b396084dcdc4c52d52716127928fe8528836cbe3ea83e70"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 109,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_trajectory_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7548b9819a3ecb8ab4cfcfcc7cb534409c5d7bdeb8141da77716f35bfe4e4096",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs inspected individually: branch occupancy preserves independent donor points, explicit branch profiles and ordered bins are legible, and sensitivity estimates and supplied bounds align in individual and combined pages.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

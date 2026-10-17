@@ -1,6 +1,5 @@
 {
   "state": "SCREEN_REVIEWED",
-  "version": "0.9.7",
   "records": [
     {
       "id": "Modules_GenePartition",
@@ -104,9 +103,9 @@
     {
       "id": "Modules_ProjectionSupport",
       "state": "SCREEN_REVIEWED",
-      "png_sha256": "417e8a9174e0904b8f29afe77733d0cafd2ca792ae3b459df1e87ad974d09f12",
-      "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
-      "notes": "Repaired excess whitespace and row padding; coverage counts, intervals and n remain explicit.",
+      "png_sha256": "097d63a5bf67c41cdfc5ed9b30b4941a22fe774948793897868e4a6e9ede0b78",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
       "independent_reviewer": false,
       "scientific_acceptance": false
     },
@@ -140,36 +139,36 @@
     {
       "id": "GSVA_AdjustedPathwayContrasts",
       "state": "SCREEN_REVIEWED",
-      "png_sha256": "f2f9836b415661de4e11cf510de1aba0ec7a736c8a66e47281beae3196efaf3a",
-      "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
-      "notes": "Repaired long program labels and measurement labels; both contrasts remain readable.",
+      "png_sha256": "ee138e0f92fb3940a1b95fd84e20ad6b36154c9d568e9944ef8ed77e9baddf0e",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
       "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
       "id": "TF_ActivityContrasts",
       "state": "SCREEN_REVIEWED",
-      "png_sha256": "dd6e2fe60452cbe6371a0f0327c79874f66ac4c0a563cf369184f098d91c64aa",
-      "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
-      "notes": "Footprint activity effects, supplied intervals, q and n inspected across two contrasts.",
+      "png_sha256": "c6756cc97f89db6a1232e08306a3d155a1fe762188756d39080e6bbc44479400",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
       "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
       "id": "Regulons_DirectedTargetEvidence",
       "state": "SCREEN_REVIEWED",
-      "png_sha256": "b26bbfcd435df1243dbfe2f2112854aa1d682ff04e93cb7f789fcf0462db8b2b",
-      "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
-      "notes": "Arrow direction, TF labels, fixed graph and declared candidate-edge support inspected.",
+      "png_sha256": "8caa3379f89c317b1a72b758839b821589dd07a6241e68ba065964d414bf40bd",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
       "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
       "id": "PPI_SelectedEvidenceNetwork",
       "state": "SCREEN_REVIEWED",
-      "png_sha256": "06a85331dbbfd63854ea189785a1ec7cc46e59f3c37775c304a5c4579e5bb560",
-      "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
-      "notes": "Explicit PPI meaning reviewed separately from coexpression; labels and guide readable.",
+      "png_sha256": "abd64b4bfeda0303c8a253e20191dc4b6625de2bc44aa3295d49e409f8cd8788",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
       "independent_reviewer": false,
       "scientific_acceptance": false
     },
@@ -390,5 +389,5 @@
       "scientific_acceptance": false
     }
   ],
-  "scope": "43 exact final PNGs; subjective author screen review, not independent review or scientific acceptance"
+  "scientific_acceptance": false
 }

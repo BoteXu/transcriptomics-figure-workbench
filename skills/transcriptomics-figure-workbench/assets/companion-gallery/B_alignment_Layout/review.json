@@ -1,0 +1,105 @@
+{
+  "id": "B_alignment_Layout",
+  "title": "Bulk · alignment — complementary evidence",
+  "chapters": [
+    "bulk.alignment"
+  ],
+  "stage": "layout",
+  "family": "fraction,profile,bins",
+  "variant": true,
+  "large_data": true,
+  "order": 24,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Complete mapping categories",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "Gene-body coverage by library",
+        "x_label": "Relative gene position",
+        "y_label": "Normalized coverage",
+        "definition": "Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "gene",
+        "id": "p2"
+      },
+      {
+        "kind": "bins",
+        "title": "Mapping-quality distributions",
+        "x_label": "Mapping quality",
+        "y_label": "Supplied count",
+        "definition": "Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · alignment — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.alignment supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope. | Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope. | Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Complete mapping categories; all quantities are supplied frozen channels, with explicitly declared units and scope. | Gene-body coverage by library; all quantities are supplied frozen channels, with explicitly declared units and scope. | Mapping-quality distributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "x",
+    "y",
+    "start",
+    "end",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_alignment_Layout/example.png",
+    "svg": "B_alignment_Layout/example.svg",
+    "pdf": "B_alignment_Layout/example.pdf",
+    "tsv": "B_alignment_Layout/example.tsv",
+    "spec": "B_alignment_Layout/input/example.spec.json",
+    "preview": "B_alignment_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "e020288c6d832fe16e0bd980bb6b09129887e0e3a35407044d7248daf9696d5f",
+    "svg": "fc582eef9925fb15d324eae0abacd1a2d4501b355ae50f9901a8f1b10c24e283",
+    "pdf": "74c6873b2dda8f6c8f22e30c3dd325f8b664267f7e5b72f0e1675de3bd43db1f",
+    "tsv": "6776e9b91b3e83a07fab4f38879c3167d51881b2599995dacd0f48bd8d3ecd94",
+    "spec": "2e843e090cf53802ccbd6f7f4f9c14f36d25774f1bd934e4c307e01de2564751"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 72,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_alignment_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e020288c6d832fe16e0bd980bb6b09129887e0e3a35407044d7248daf9696d5f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual PNGs viewed: matching read units, explicit profile ranges, complete retention denominators, clear overlapping bin outlines, and aligned primary/alternative effects with coherent supplied intervals; one-column reading layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

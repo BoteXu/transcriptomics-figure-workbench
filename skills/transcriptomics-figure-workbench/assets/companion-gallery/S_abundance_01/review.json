@@ -1,0 +1,88 @@
+{
+  "id": "S_abundance_01",
+  "title": "Neighborhood support across donors",
+  "chapters": [
+    "single_cell.abundance"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 284,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Neighborhood support across donors",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied neighborhood cells",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Neighborhood support across donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.abundance supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_abundance_01/example.png",
+    "svg": "S_abundance_01/example.svg",
+    "pdf": "S_abundance_01/example.pdf",
+    "tsv": "S_abundance_01/example.tsv",
+    "spec": "S_abundance_01/input/example.spec.json",
+    "preview": "S_abundance_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "800bab781532b23c2055da1713ecf4ba2660e796b53501c5a8fcb35326d83ce7",
+    "svg": "001b607e67f8cc599d07533b7d26273fddd681e43a5ff0bc7ea0cf7baf58ab02",
+    "pdf": "4d1b3b91c1a8ff0aed0c480877c2663094f81f2357e81bc905cf4a2952512aa7",
+    "tsv": "be7d214d36a7b28d6f5e52a73878e9555b932f5188711b52eb2247893df52f57",
+    "spec": "5c2f36fb0017957f2737c605ae75c58f7ca018568cc914181ce65f1752fbb44c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_abundance_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "800bab781532b23c2055da1713ecf4ba2660e796b53501c5a8fcb35326d83ce7",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: marker matrices use distinct detection/centered-expression scales; neighborhood identities, donor support counts and effect/sensitivity tables remain complete and readable in single and combined exports.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

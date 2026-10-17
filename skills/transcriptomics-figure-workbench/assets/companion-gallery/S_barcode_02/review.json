@@ -1,0 +1,84 @@
+{
+  "id": "S_barcode_02",
+  "title": "Complete droplet-call categories",
+  "chapters": [
+    "single_cell.barcode"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 212,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Complete droplet-call categories",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Complete droplet-call categories; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Complete droplet-call categories",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.barcode supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete droplet-call categories; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete droplet-call categories; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_barcode_02/example.png",
+    "svg": "S_barcode_02/example.svg",
+    "pdf": "S_barcode_02/example.pdf",
+    "tsv": "S_barcode_02/example.tsv",
+    "spec": "S_barcode_02/input/example.spec.json",
+    "preview": "S_barcode_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "ca72d0aa19881cfc197f395bdabf5e4727fe1330e9b7b6f55b28fa9ce89b8751",
+    "svg": "00f39bdd14300f99f01e91ff6aea88864a17f87c27449be5c8968e16a09340e9",
+    "pdf": "0e1001b887ab028d006b83d29adcb001d6dab3dcfd9905299a33a5ff9ea9ce5c",
+    "tsv": "2f3a16ef88b7c22b4512d44e93f7f54b42e6ea0d759c706cc3d5488dc7301fbb",
+    "spec": "f74f376347962ab55482c1b22745b2d74bdd3148d78aede1a8b82e8dbf157104"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 17,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_barcode_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ca72d0aa19881cfc197f395bdabf5e4727fe1330e9b7b6f55b28fa9ce89b8751",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed complete single and composed exports: supplier intervals and q aligned, capture proportions and design code separated, six independent donors per cloud visible, retained cell categories fully represented. No label collision or clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,88 @@
+{
+  "id": "B_interaction_02",
+  "title": "STAT1 condition-by-time predictions",
+  "chapters": [
+    "bulk.interaction"
+  ],
+  "stage": "interpretation",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 57,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "STAT1 condition-by-time predictions",
+        "x_label": "Time (days)",
+        "y_label": "Supplied log2 STAT1 expression",
+        "definition": "STAT1 condition-by-time predictions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "factorial_profile": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "STAT1 condition-by-time predictions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.interaction supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "STAT1 condition-by-time predictions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "STAT1 condition-by-time predictions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_interaction_02/example.png",
+    "svg": "B_interaction_02/example.svg",
+    "pdf": "B_interaction_02/example.pdf",
+    "tsv": "B_interaction_02/example.tsv",
+    "spec": "B_interaction_02/input/example.spec.json",
+    "preview": "B_interaction_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "5c68b7ce4bf87b4fcfe357a1c5120db4807c3db3d164467a5b4e3e0d7a2609b8",
+    "svg": "f7d1a0a5ffc1550d4a2407e9cbbf7067ee26b9c57bcd6e841213c11c60402222",
+    "pdf": "a0dc48147ae6450c8eb9d2b6d0a05431bd9c2995ad0169dc4ecc596b9ca37e66",
+    "tsv": "3fd1e6385eacdadca3fe3f62a4f99ae9ec1074b2d2654c92430daa9fc432632b",
+    "spec": "3d56f9423964496a2a310d4e2f47f73775b30a70edb29645fd36cc3ca76563d3"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_interaction_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5c68b7ce4bf87b4fcfe357a1c5120db4807c3db3d164467a5b4e3e0d7a2609b8",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual revised PNGs individually inspected: reduced subset n is visible in each numeric lane, factorial donor cells and condition-time profiles are explicit, and the STAT1 interaction agrees with the frozen prediction endpoints. Single, one-column and three-column layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

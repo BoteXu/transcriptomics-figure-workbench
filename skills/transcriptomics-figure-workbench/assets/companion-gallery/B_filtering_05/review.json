@@ -1,0 +1,88 @@
+{
+  "id": "B_filtering_05",
+  "title": "Detection support across groups",
+  "chapters": [
+    "bulk.filtering"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 29,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Detection support across groups",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Detection support across groups; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Detected donor fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Detection support across groups",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.filtering supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Detection support across groups; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Detection support across groups; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_filtering_05/example.png",
+    "svg": "B_filtering_05/example.svg",
+    "pdf": "B_filtering_05/example.pdf",
+    "tsv": "B_filtering_05/example.tsv",
+    "spec": "B_filtering_05/input/example.spec.json",
+    "preview": "B_filtering_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "a0117f2c18ff888d914064c4507cb5d48664f0c487bae432efbc7292c70f7e25",
+    "svg": "216cf2cdd22c95373bf9279ab699474d95c477fb83112a71b98532b2bfc411a8",
+    "pdf": "2efd470d92ca808a71f9a7f997a143aa8411bd1f1d7215ef60b97929efec69b4",
+    "tsv": "35eb862fe273070bc94522a5dbc6fbc0f5587aeb3cd88cbe3a5f13c2f4bd2ee6",
+    "spec": "1a6ef9c6fd121a2e08a3c348f3e91fdcc43c7a893f0b2b41321917681eab1f44"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_filtering_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a0117f2c18ff888d914064c4507cb5d48664f0c487bae432efbc7292c70f7e25",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Complete feature-by-condition cells and numbers visible, full fraction scale attached and labels unclipped. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

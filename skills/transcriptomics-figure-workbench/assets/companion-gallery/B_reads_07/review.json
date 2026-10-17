@@ -1,0 +1,85 @@
+{
+  "id": "B_reads_07",
+  "title": "Read retention through declared processing",
+  "chapters": [
+    "bulk.reads"
+  ],
+  "stage": "validation",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 14,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Read retention through declared processing",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Read retention through declared processing; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "retention": true,
+        "denominator_definition": "Supplied input count at each processing step; each next input equals the preceding retained count",
+        "id": "p1"
+      }
+    ],
+    "title": "Read retention through declared processing",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.reads supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Read retention through declared processing; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Read retention through declared processing; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_reads_07/example.png",
+    "svg": "B_reads_07/example.svg",
+    "pdf": "B_reads_07/example.pdf",
+    "tsv": "B_reads_07/example.tsv",
+    "spec": "B_reads_07/input/example.spec.json",
+    "preview": "B_reads_07/preview.jpg"
+  },
+  "sha256": {
+    "png": "9ff240573ff8f38fa01b9f219ef0a70538b6c7aec76b4be97c3430e7565be541",
+    "svg": "841b88970c5c09bf779cfc7b0dc32a8b144bd3245c817558c861adf4a0b17e7e",
+    "pdf": "cfb069e68e0e332da6d47bb4697d03cc8bd7d7d9c740df6a936a2582e4b29937",
+    "tsv": "c62149f08dbbd8ec619e9bcf5a2b767031481ed8c82ff172a99878fec04506a4",
+    "spec": "a83572d57b330d7e39f54a4676dcec8e45d43704f5bb549ee6041f2f9b3fc859"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 16,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_reads_07",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9ff240573ff8f38fa01b9f219ef0a70538b6c7aec76b4be97c3430e7565be541",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Inspected all duplication segments, explicit denominators and the complete three-step read-retention example. Each next input equals the preceding retained count; category guide and actual stage totals are readable. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

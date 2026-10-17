@@ -1,0 +1,84 @@
+{
+  "id": "B_gsea_01",
+  "title": "Complete ranked-universe statistic",
+  "chapters": [
+    "bulk.gsea"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 85,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Complete ranked-universe statistic",
+        "x_label": "Supplied gene rank",
+        "y_label": "Supplied ranking statistic",
+        "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Complete ranked-universe statistic",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_01/example.png",
+    "svg": "B_gsea_01/example.svg",
+    "pdf": "B_gsea_01/example.pdf",
+    "tsv": "B_gsea_01/example.tsv",
+    "spec": "B_gsea_01/input/example.spec.json",
+    "preview": "B_gsea_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "ceddd15d458d4cfacfbfb825a9dfb0d8ccdd5c8d434c23bc32d7490de2e50e02",
+    "svg": "ab5766bbb55c3676e937870c3458e599772afb1e3db8c141a4da5da871c2142f",
+    "pdf": "277d1ea0e38d826358c647c1529e5b0d645d1908f3e3fba54a926913c4bdd69d",
+    "tsv": "9bbf5a1816cf1424b9a929593117dd807671db431324bcfa686e894ed24398a6",
+    "spec": "f0e1b66fec86143e9fa003403da02449b95e72761833f55efe97941d9d3a85ed"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ceddd15d458d4cfacfbfb825a9dfb0d8ccdd5c8d434c23bc32d7490de2e50e02",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: ranked-universe diagnostic, supplied NES comparisons and leading-edge overlap; contrast estimates plus concordance. Dense reading layout expands to every row and three-column alternative remains non-overlapping; these accompany the native running-score core.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

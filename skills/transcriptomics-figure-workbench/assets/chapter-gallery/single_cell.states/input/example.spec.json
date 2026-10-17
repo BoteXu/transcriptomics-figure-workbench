@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "3a31259c5174d6c72f8df57a58994ccc6a8618c53968c374435f8a63fdd3321f",
+    "sha256": "85f34ff539311be357e0ae31e858189973507b809f795e57d8bde7a9fc11023b",
     "numeric_columns": [
       "value",
       "fraction",
@@ -20,7 +20,7 @@
         "title": "Coordinated sample-level patterns",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied score",
+        "value_label": "State-program score",
         "limits": [
           -2,
           2
@@ -33,7 +33,7 @@
       {
         "kind": "interval",
         "title": "Donor-level effects and uncertainty",
-        "x_label": "Supplied effect and 95% interval",
+        "x_label": "State-score difference · supplied 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -170,10 +170,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional scores display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

@@ -1,0 +1,85 @@
+{
+  "id": "B_survival_01",
+  "title": "Endpoint and censoring audit",
+  "chapters": [
+    "bulk.survival"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 168,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Endpoint and censoring audit",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Endpoint and censoring audit; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "participant_denominator": true,
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Endpoint and censoring audit",
+    "context": {
+      "independent_unit": "fictional participants",
+      "independent_n": 80,
+      "method_version": "bulk.survival supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Endpoint and censoring audit; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Endpoint and censoring audit; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_survival_01/example.png",
+    "svg": "B_survival_01/example.svg",
+    "pdf": "B_survival_01/example.pdf",
+    "tsv": "B_survival_01/example.tsv",
+    "spec": "B_survival_01/input/example.spec.json",
+    "preview": "B_survival_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "6a91ac88c73c9109b5fea69dd77118e909e8685a37bf3486a9f58bc5c3b96894",
+    "svg": "780cf8293b5c1d2c63f5c00a4f9e7e91bad29bbaada44ba4adf8cb4d08ed5581",
+    "pdf": "72a9aca630c22c5450bd054f892f67281c23eddc91791e03f0beee44a2b9d513",
+    "tsv": "d3e305ec15aa7e94764e38162184ba05c134c465aec2928c828d9cb52c787765",
+    "spec": "eea22ecef18e4c9bf99f8981632956927dcf82ad7978e0e3c002199843f00c9a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 14,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_survival_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6a91ac88c73c9109b5fea69dd77118e909e8685a37bf3486a9f58bc5c3b96894",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed seven actual PNGs: complete feature scope, cohort concordance, named STAT1 synthesis with per-cohort n, signed effect matrix, time-model sensitivity and correctly bounded stepwise survival curves/endpoint denominator. Readable labels, tables and interval key.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

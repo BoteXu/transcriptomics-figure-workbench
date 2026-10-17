@@ -1,0 +1,94 @@
+{
+  "id": "S_velocity_05",
+  "title": "Direction stability across model choices",
+  "chapters": [
+    "single_cell.velocity"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 340,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Direction stability across model choices",
+        "x_label": "Velocity-direction agreement difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Direction stability across model choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Direction stability across model choices",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.velocity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Direction stability across model choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Direction stability across model choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_velocity_05/example.png",
+    "svg": "S_velocity_05/example.svg",
+    "pdf": "S_velocity_05/example.pdf",
+    "tsv": "S_velocity_05/example.tsv",
+    "spec": "S_velocity_05/input/example.spec.json",
+    "preview": "S_velocity_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "6393e3a0d68b9c8744fb5081fb00520ba9ed39a34532f790811b7d57f40eeb08",
+    "svg": "f2c875fd1a168c157a76a778e2467e331db0e93f44e3704917a52900df2fd8f5",
+    "pdf": "8d61d4503736d3b2abb5f764c67ae0bdf085960ab9303dc10a3a222e4e89d437",
+    "tsv": "c08e516f8b18eee1231b1f85ed4cdf4c45dc2db45e6a85a9aa1c90185832b660",
+    "spec": "8372d25f1bd752c84df41381c7b7a5b7ae4a4710b3df786d37f50db58d500284"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_velocity_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6393e3a0d68b9c8744fb5081fb00520ba9ed39a34532f790811b7d57f40eeb08",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual exports: complete ordered trajectory, phase diagnostic columns, donor confidence raincloud, latent-time ranges and model sensitivity tables have readable axes, complete values and clear legends.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

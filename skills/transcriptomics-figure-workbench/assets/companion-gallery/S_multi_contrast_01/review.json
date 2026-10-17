@@ -1,0 +1,88 @@
+{
+  "id": "S_multi_contrast_01",
+  "title": "Independent support across contrast families",
+  "chapters": [
+    "single_cell.multi_contrast"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 299,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Independent support across contrast families",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Independent support across contrast families; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Independent donor count",
+        "limits": [
+          0,
+          12
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Independent support across contrast families",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.multi_contrast supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Independent support across contrast families; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Independent support across contrast families; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multi_contrast_01/example.png",
+    "svg": "S_multi_contrast_01/example.svg",
+    "pdf": "S_multi_contrast_01/example.pdf",
+    "tsv": "S_multi_contrast_01/example.tsv",
+    "spec": "S_multi_contrast_01/input/example.spec.json",
+    "preview": "S_multi_contrast_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "0c9ec6aa431dba1917327b15d716798154db1f1a8c3d3f82a7d836e76c095404",
+    "svg": "a79eeafe01440281ff1e29b4e64e401cc47cf24d6a3edae8e55e8d2d3ef1e008",
+    "pdf": "997445cfa81ff76af0bbafbb8a5b0e0521e4797ff09b75f94c4a1577417d7c5a",
+    "tsv": "793621b9d0a8cb1d140b97fac99052ef9eb5e3eca3f57a0167ebcfab7a4b4fb3",
+    "spec": "580673806b728c618f2eb42b24a6d934b6df1a94eec605e3cbad58d282579b22"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 156.93672222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 14.719308312869199,
+    "p10_pt": 14.719308312869199,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multi_contrast_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0c9ec6aa431dba1917327b15d716798154db1f1a8c3d3f82a7d836e76c095404",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: pseudobulk omission support, multi-contrast independent counts and signed effects, pathway coverage/NES/membership have visible units and readable legends in full-data custom pages.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

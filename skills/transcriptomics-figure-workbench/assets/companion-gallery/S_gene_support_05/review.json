@@ -1,0 +1,94 @@
+{
+  "id": "S_gene_support_05",
+  "title": "Supporting-gene external replication",
+  "chapters": [
+    "single_cell.gene_support"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 318,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Supporting-gene external replication",
+        "x_label": "Donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Supporting-gene external replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Supporting-gene external replication",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Supporting-gene external replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Supporting-gene external replication; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_gene_support_05/example.png",
+    "svg": "S_gene_support_05/example.svg",
+    "pdf": "S_gene_support_05/example.pdf",
+    "tsv": "S_gene_support_05/example.tsv",
+    "spec": "S_gene_support_05/input/example.spec.json",
+    "preview": "S_gene_support_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "596cf36773654d73256cea45e7064fbaed8b453b4bf1a6cebc5e4b474547aff7",
+    "svg": "e70d52038cb283c06ba2d277dea8e93a1d221628c1e44151e75a450ad0c8af91",
+    "pdf": "d16fd3e27c118cf3eddc9459bee0e5a714e3688ee9a37dcafa722810bdd9425b",
+    "tsv": "96569abcf1a604cf392d75f70b009f56e63bf1246728c52f4680e6a1c3481965",
+    "spec": "978b52f94f31140e4dceca0c37cd1ba9bc6b31850051f0986bfb239de0159b3b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_gene_support_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "596cf36773654d73256cea45e7064fbaed8b453b4bf1a6cebc5e4b474547aff7",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: clear donor rainclouds, aligned effect tables, full denominators and readable branch profiles; single and custom layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

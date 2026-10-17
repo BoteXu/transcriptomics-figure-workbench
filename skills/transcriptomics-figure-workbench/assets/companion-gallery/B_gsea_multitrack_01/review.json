@@ -1,0 +1,84 @@
+{
+  "id": "B_gsea_multitrack_01",
+  "title": "Ranked-universe coverage per selected set",
+  "chapters": [
+    "bulk.gsea_multitrack"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 108,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Ranked-universe coverage per selected set",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Ranked-universe coverage per selected set; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Ranked-universe coverage per selected set",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea_multitrack supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Ranked-universe coverage per selected set; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Ranked-universe coverage per selected set; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_multitrack_01/example.png",
+    "svg": "B_gsea_multitrack_01/example.svg",
+    "pdf": "B_gsea_multitrack_01/example.pdf",
+    "tsv": "B_gsea_multitrack_01/example.tsv",
+    "spec": "B_gsea_multitrack_01/input/example.spec.json",
+    "preview": "B_gsea_multitrack_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "bab53510b9c1b6f543f7598a2061cc9c8a71ff50c11bb1949d0ce814a6ef2bfa",
+    "svg": "7dd464cf75235697e71714a0d704d14bc303b151bb869a93f41528f65fc3a125",
+    "pdf": "e9a3d098a4650d74e61745c5ecb8c84f3584e8fbdee988689ee6b751866afa8c",
+    "tsv": "81fc9e91df03bd83b5a85ea9f75795e634a3be5042f362d6e55c4513e7f47af0",
+    "spec": "9e76c936cd339255c6828e579c28366a45dda647ba0026dfd7e2ce677b6d8922"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 171.2837534722222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 13.486392919189631,
+    "p10_pt": 13.486392919189631,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_multitrack_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "bab53510b9c1b6f543f7598a2061cc9c8a71ff50c11bb1949d0ce814a6ef2bfa",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual complete fraction and binary leading-edge views inspected: clear denominators, full zero-to-one scales and readable labels without overlap. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

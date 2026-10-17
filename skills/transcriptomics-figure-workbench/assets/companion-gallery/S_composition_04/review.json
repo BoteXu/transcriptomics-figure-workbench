@@ -1,0 +1,88 @@
+{
+  "id": "S_composition_04",
+  "title": "Identity support across donors",
+  "chapters": [
+    "single_cell.composition"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 280,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Identity support across donors",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Identity support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied cell count",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Identity support across donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.composition supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Identity support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Identity support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_composition_04/example.png",
+    "svg": "S_composition_04/example.svg",
+    "pdf": "S_composition_04/example.pdf",
+    "tsv": "S_composition_04/example.tsv",
+    "spec": "S_composition_04/input/example.spec.json",
+    "preview": "S_composition_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "7dd609d277c3e20c0516c50ea0d323d2332561d622d04f5157d1e7feb7c38b4e",
+    "svg": "f1b1ecac40dc6fdb071ac52a8f8b963264f3d6096f03012eb9936ff91a4fca5d",
+    "pdf": "280ac7fbe34aa75e9b42afe2904ac6474bb15428711b47e3e682fcbedf5a479e",
+    "tsv": "b0cc7214884ed4d2b5ae4bb342d273d99782fd5337843c4c78ac906e08a95e84",
+    "spec": "ce6e99bad1185cff64274a2ca5f287e85f037fc88fe34d7a8bb0186357858044"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_composition_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7dd609d277c3e20c0516c50ea0d323d2332561d622d04f5157d1e7feb7c38b4e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: expanded child-state evidence, aligned donor marker effects, all points in donor expression cloud, complete interval tables, composition effects and cell-support matrix. Long labels and rows readable without clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

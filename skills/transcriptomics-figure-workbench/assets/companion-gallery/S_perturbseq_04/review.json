@@ -1,0 +1,88 @@
+{
+  "id": "S_perturbseq_04",
+  "title": "Perturbation program responses",
+  "chapters": [
+    "single_cell.perturbseq"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 396,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Perturbation program responses",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Perturbation program responses; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied response",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Perturbation program responses",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.perturbseq supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Perturbation program responses; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Perturbation program responses; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_perturbseq_04/example.png",
+    "svg": "S_perturbseq_04/example.svg",
+    "pdf": "S_perturbseq_04/example.pdf",
+    "tsv": "S_perturbseq_04/example.tsv",
+    "spec": "S_perturbseq_04/input/example.spec.json",
+    "preview": "S_perturbseq_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "fff69e46b63291026dc32c71d1bbbece159a3943c4c34e123b1536a250bcec1a",
+    "svg": "680ab1d3229f54502c096430e63288af63fbffaff527dc1da34daa4928920036",
+    "pdf": "8de882e887509c28ea43501b95c7b6aa6219cf981ce4bdef98097976eedcfd4d",
+    "tsv": "1924cfd80d3146ede53c362c6221e1f6339f4956d4543d7205a94583bb0e7539",
+    "spec": "c381a8aa6fdff28da26448d2a0911a5c84821dd91d2ebbbd57394bdc068efc63"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_perturbseq_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "fff69e46b63291026dc32c71d1bbbece159a3943c4c34e123b1536a250bcec1a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: complete guide assignment and support, program response channels, donor-level replication effects and cohort mapping remain readable with full selected scope and explicit independent n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

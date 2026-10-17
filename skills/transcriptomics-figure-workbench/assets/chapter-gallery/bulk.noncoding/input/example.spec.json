@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "8d49a5a6ad5ae61025c33b511b63cf492a473a0432b7d70a90c05f1ea09b7cc6",
+    "sha256": "f07c68a0b22105f72100d3c7c6fe6d51f47e7acce9fc3b7b65f9d03aae4b6966",
     "numeric_columns": [
       "value",
       "fraction",
@@ -20,7 +20,7 @@
         "title": "Coordinated sample-level patterns",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied score",
+        "value_label": "Centered log2 RNA expression",
         "limits": [
           -2,
           2
@@ -33,7 +33,7 @@
       {
         "kind": "interval",
         "title": "Donor-level effects and uncertainty",
-        "x_label": "Supplied effect and 95% interval",
+        "x_label": "Log2 RNA fold change · supplied 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -170,10 +170,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional noncoding display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

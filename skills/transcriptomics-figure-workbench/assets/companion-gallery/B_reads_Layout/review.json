@@ -1,0 +1,108 @@
+{
+  "id": "B_reads_Layout",
+  "title": "Bulk · reads — complementary evidence",
+  "chapters": [
+    "bulk.reads"
+  ],
+  "stage": "layout",
+  "family": "profile,profile,fraction",
+  "variant": true,
+  "large_data": true,
+  "order": 16,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Base-quality profiles by read",
+        "x_label": "Read position (nt)",
+        "y_label": "Phred quality",
+        "definition": "Base-quality profiles by read; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "Adapter content across read positions",
+        "x_label": "Read position (nt)",
+        "y_label": "Adapter fraction",
+        "definition": "Adapter content across read positions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p2"
+      },
+      {
+        "kind": "fraction",
+        "title": "Read retention through declared processing",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Read retention through declared processing; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "retention": true,
+        "denominator_definition": "Supplied input count at each processing step; each next input equals the preceding retained count",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · reads — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.reads supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Base-quality profiles by read; all quantities are supplied frozen channels, with explicitly declared units and scope. | Adapter content across read positions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Read retention through declared processing; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Base-quality profiles by read; all quantities are supplied frozen channels, with explicitly declared units and scope. | Adapter content across read positions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Read retention through declared processing; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "value",
+    "denominator",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_reads_Layout/example.png",
+    "svg": "B_reads_Layout/example.svg",
+    "pdf": "B_reads_Layout/example.pdf",
+    "tsv": "B_reads_Layout/example.tsv",
+    "spec": "B_reads_Layout/input/example.spec.json",
+    "preview": "B_reads_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "276e35d4a0f15f699cc8e6111201a8e731668cb7f1d2882f4b5a36c618d28c06",
+    "svg": "9267e779105038231caa3d215ed8e0553ab9a6f87ce2e254b05147d95e72ed21",
+    "pdf": "1e07418ae2d4a4dc21476aa4595b8cdec117ae28e03448326667ace8695131c6",
+    "tsv": "76ddf1a49c46366937a24872029396f125860cd001ad5d8f219f3b824a7cb622",
+    "spec": "d6435b5b8ffb48d1b6523c3da2d969868bef53a9335817787de79f2a3ba2af89"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 64,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_reads_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "276e35d4a0f15f699cc8e6111201a8e731668cb7f1d2882f4b5a36c618d28c06",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual PNGs viewed: matching read units, explicit profile ranges, complete retention denominators, clear overlapping bin outlines, and aligned primary/alternative effects with coherent supplied intervals; one-column reading layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

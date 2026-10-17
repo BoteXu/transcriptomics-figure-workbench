@@ -1,0 +1,83 @@
+{
+  "id": "S_integration_01",
+  "title": "Donor batch-mixing scores before/after integration",
+  "chapters": [
+    "single_cell.integration"
+  ],
+  "stage": "qc",
+  "family": "paired",
+  "variant": false,
+  "large_data": false,
+  "order": 233,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "paired",
+        "title": "Donor batch-mixing scores before/after integration",
+        "x_label": "Repeated condition",
+        "y_label": "Supplied donor median batch-mixing score",
+        "definition": "Donor batch-mixing scores before/after integration; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "probability": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Donor batch-mixing scores before/after integration",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.integration supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor batch-mixing scores before/after integration; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor batch-mixing scores before/after integration; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "unit",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_integration_01/example.png",
+    "svg": "S_integration_01/example.svg",
+    "pdf": "S_integration_01/example.pdf",
+    "tsv": "S_integration_01/example.tsv",
+    "spec": "S_integration_01/input/example.spec.json",
+    "preview": "S_integration_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "3176e0c2b801c2b5991f87493b754edff90ed3d911e370b0066704159b5c81b7",
+    "svg": "4382775eae669d97a455e584298db2aa41403786a9397c0bbd5ccfdf18d54286",
+    "pdf": "c09256ba072c46179ac7a170908200cbe5d14d13420ae86add91c0b1b39bdebd",
+    "tsv": "9b81ee0813852dedf5297df282c714fdf5f29c46d0ae2bc3c7d728672ce88cd4",
+    "spec": "bcec73a25fb8ea17fa36af3116ec3a29198b55b923c9126dbfd2143f06cbaa8c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 16,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_integration_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3176e0c2b801c2b5991f87493b754edff90ed3d911e370b0066704159b5c81b7",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected donor QC clouds, paired integration trajectories, complete counts and composition, correction evidence matrix, effect intervals and custom longer pages. Supplied summaries stay distinct from nested cells; text and complete rows readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

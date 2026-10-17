@@ -1,0 +1,89 @@
+{
+  "id": "B_pathway_contrasts_01",
+  "title": "Tested pathway scope across contrasts",
+  "chapters": [
+    "bulk.pathway_contrasts"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 94,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Tested pathway scope across contrasts",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Tested pathway scope across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit tested indicator",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Tested pathway scope across contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.pathway_contrasts supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Tested pathway scope across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Tested pathway scope across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_pathway_contrasts_01/example.png",
+    "svg": "B_pathway_contrasts_01/example.svg",
+    "pdf": "B_pathway_contrasts_01/example.pdf",
+    "tsv": "B_pathway_contrasts_01/example.tsv",
+    "spec": "B_pathway_contrasts_01/input/example.spec.json",
+    "preview": "B_pathway_contrasts_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "59722e38d2a7a846984fe450047ce895bc7241992952c53b2f189a61f8c2d9fa",
+    "svg": "00c25c20df3f2cedce0d6434fda151665fd430e661626f7adba86ef906194a5f",
+    "pdf": "11c23db2b15b56576bfd09f3f97b8917bbcf93005d5d49049a250c006fa9124e",
+    "tsv": "acf5bbcf04b27b94f0438f05031c01d401de6800bd8eb415805048743b45c752",
+    "spec": "6fd4ededca57cad5a2e42208411a43b43fce36ce607603a03b72c258772a18aa"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 159.17906597222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 14.511958503407163,
+    "p10_pt": 14.511958503407163,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_pathway_contrasts_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "59722e38d2a7a846984fe450047ce895bc7241992952c53b2f189a61f8c2d9fa",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: full term labels and typed upstream support counts remain readable in single, two-column, three-column and larger one-column compositions; no clipping or legend collision.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,89 @@
+{
+  "id": "B_dtu_04",
+  "title": "STAT1 transcript structure and junction support",
+  "chapters": [
+    "bulk.dtu"
+  ],
+  "stage": "function",
+  "family": "locus",
+  "variant": false,
+  "large_data": false,
+  "order": 149,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "locus",
+        "title": "STAT1 transcript structure and junction support",
+        "x_label": "Genomic position · declared reference build",
+        "y_label": "",
+        "definition": "STAT1 transcript structure and junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "locus_kind": "transcript_structure",
+        "coordinate_system": "0-based half-open",
+        "genome_build": "Explicit fictional reference v1; not a human locus",
+        "contig": "synthetic_contig_1",
+        "strand": "+",
+        "id": "p1"
+      }
+    ],
+    "title": "STAT1 transcript structure and junction support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.dtu supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "STAT1 transcript structure and junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "STAT1 transcript structure and junction support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "record_type",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_dtu_04/example.png",
+    "svg": "B_dtu_04/example.svg",
+    "pdf": "B_dtu_04/example.pdf",
+    "tsv": "B_dtu_04/example.tsv",
+    "spec": "B_dtu_04/input/example.spec.json",
+    "preview": "B_dtu_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "3e7e0a9d7ea3cad5f45c3668de758ac3246967683e77de2a17f2e0d2285bf0cd",
+    "svg": "69106aeeb3ca10eff84571e892becb29e3eda0cc8891719ce7e18fdd2ea7ff30",
+    "pdf": "7b299e5631141ffefd0674aa0d07cc454e8d9d0f8fc91180bb7539538d50dfb3",
+    "tsv": "8f336f64cba003b6854a582ab0ce6b6ab8120ecc50e7a411af26a96bb735ef5b",
+    "spec": "4e8c1f0eba7b299897ba4cc148a17552bc48a2cad4a18638d3d17283ae7bee07"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 162.42153472222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 14.222252018186047,
+    "p10_pt": 14.222252018186047,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_dtu_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3e7e0a9d7ea3cad5f45c3668de758ac3246967683e77de2a17f2e0d2285bf0cd",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: aligned effect intervals and q/n tables, full donor-denominator bars, distinct STAT1 transcript structures and readable multirow layouts; fictional drawing channels, no biological validation claimed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

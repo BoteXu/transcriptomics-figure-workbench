@@ -1,0 +1,84 @@
+{
+  "id": "S_spatial_05",
+  "title": "Measured-distance and neighborhood summaries",
+  "chapters": [
+    "single_cell.spatial"
+  ],
+  "stage": "interpretation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 412,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Measured-distance and neighborhood summaries",
+        "x_label": "Supplied tissue distance (µm)",
+        "y_label": "Supplied neighborhood statistic",
+        "definition": "Measured-distance and neighborhood summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "spatial neighborhood nested within section",
+        "id": "p1"
+      }
+    ],
+    "title": "Measured-distance and neighborhood summaries",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.spatial supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Measured-distance and neighborhood summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Measured-distance and neighborhood summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_spatial_05/example.png",
+    "svg": "S_spatial_05/example.svg",
+    "pdf": "S_spatial_05/example.pdf",
+    "tsv": "S_spatial_05/example.tsv",
+    "spec": "S_spatial_05/input/example.spec.json",
+    "preview": "S_spatial_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "b5029f8c1abf9121a5f5c0ebbe5b025e04c4328932eda948a5ea39fe070b1ca3",
+    "svg": "f7589c69070cce3e1db71a4f122b1c407b32b8b3184e1aafb8847d15e06d5eb3",
+    "pdf": "8655f5acaab41aff73350fc1f79a3de7c3c3ff43137c3b6d68e28c16676cc237",
+    "tsv": "3baa416cbdc2f7733365c2ba885ae285e6ef64ea4f079aa35c51589b6b45a235",
+    "spec": "7b5fb1c3b52e79a478a608cf263fb98bb5e8569156884fa9207f751f3fe15f8e"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 159.9151588541667,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 20,
+    "smallest_pt": 14.445159649352476,
+    "p10_pt": 14.445159649352476,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_spatial_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b5029f8c1abf9121a5f5c0ebbe5b025e04c4328932eda948a5ea39fe070b1ca3",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Reviewed actual PNGs: common-gene identity and cohort denominators preserved; regional identities, micrometre units, evidence panels and reading layouts legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

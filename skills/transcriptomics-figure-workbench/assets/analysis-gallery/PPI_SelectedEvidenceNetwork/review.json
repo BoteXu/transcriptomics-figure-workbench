@@ -25,8 +25,32 @@
     "definition": "Fictional prespecified undirected PPI evidence edges, upstream confidence scores and module membership; node area encodes separately supplied |kME|, not PPI degree. No database retrieval or inferred binding.",
     "label_genes": [
       "M1_G1",
+      "M1_G2",
+      "M1_G3",
+      "M1_G4",
+      "M1_G5",
+      "M1_G6",
+      "M1_G7",
+      "M1_G8",
+      "M1_G9",
       "M2_G1",
-      "M3_G1"
+      "M2_G2",
+      "M2_G3",
+      "M2_G4",
+      "M2_G5",
+      "M2_G6",
+      "M2_G7",
+      "M2_G8",
+      "M2_G9",
+      "M3_G1",
+      "M3_G2",
+      "M3_G3",
+      "M3_G4",
+      "M3_G5",
+      "M3_G6",
+      "M3_G7",
+      "M3_G8",
+      "M3_G9"
     ],
     "edge_semantics": "Undirected fictional PPI support; differs from coexpression",
     "directed": false
@@ -50,17 +74,17 @@
     "preview": "PPI_SelectedEvidenceNetwork/preview.jpg"
   },
   "sha256": {
-    "png": "06a85331dbbfd63854ea189785a1ec7cc46e59f3c37775c304a5c4579e5bb560",
-    "svg": "b8e53bff49e82ee1f55b9611cf7acea4a3a2795546c67bc229a512e069b1f609",
-    "pdf": "d97305638250867489dd71fdcc9f671fcef11daa9ab080a1d032c2f79ebbb1dc",
-    "tsv": "a55683de7b65bdd2dddeb8da0420ae55e29076c1974dcf9d5643b738e5707aa9",
-    "spec": "96b079d34665bfc1da8fa4cc81b723d738a81f843342bc15baee01a880f867ff"
+    "png": "abd64b4bfeda0303c8a253e20191dc4b6625de2bc44aa3295d49e409f8cd8788",
+    "svg": "4ae89a56e2ecb059260c8225eb56b608fb933eca3147b92c8a9b6caf62020ce0",
+    "pdf": "d1103516466b222f434aaf006dabb53dde52a412757eaba1acc71e57fb5e0b2b",
+    "tsv": "6ce5fcb6a378aee197aa33a6e4241b262123d62cdf11ff789350ee7de1641d6e",
+    "spec": "7f8eaf54071685c60b120c9c7fb4b3b75af521f0255fcad2c71c6bf3b98abdc4"
   },
   "readability": {
     "target_width_mm": 297,
     "native_width_mm": 233.67999999999998,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 8,
+    "essential_text_count": 32,
     "smallest_pt": 13.980657309140707,
     "p10_pt": 13.980657309140707,
     "below_threshold": [],
@@ -71,12 +95,13 @@
   "review": {
     "id": "PPI_SelectedEvidenceNetwork",
     "state": "SCREEN_REVIEWED",
-    "png_sha256": "06a85331dbbfd63854ea189785a1ec7cc46e59f3c37775c304a5c4579e5bb560",
-    "review_method": "Each final exported PNG individually viewed on screen at readable size; no contact-sheet-only approval",
-    "notes": "Explicit PPI meaning reviewed separately from coexpression; labels and guide readable.",
+    "png_sha256": "abd64b4bfeda0303c8a253e20191dc4b6625de2bc44aa3295d49e409f8cd8788",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
     "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "analysis_performed": false,
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

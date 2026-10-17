@@ -1,0 +1,84 @@
+{
+  "id": "S_qc_03",
+  "title": "Cell complexity and mitochondrial burden",
+  "chapters": [
+    "single_cell.qc"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 220,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Cell complexity and mitochondrial burden",
+        "x_label": "Supplied log UMI count",
+        "y_label": "Mitochondrial fraction",
+        "definition": "Cell complexity and mitochondrial burden; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "cell nested within donor",
+        "id": "p1"
+      }
+    ],
+    "title": "Cell complexity and mitochondrial burden",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.qc supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Cell complexity and mitochondrial burden; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Cell complexity and mitochondrial burden; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_qc_03/example.png",
+    "svg": "S_qc_03/example.svg",
+    "pdf": "S_qc_03/example.pdf",
+    "tsv": "S_qc_03/example.tsv",
+    "spec": "S_qc_03/input/example.spec.json",
+    "preview": "S_qc_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "9b112e97f20255d7334b6b9228191195b7e84d00191dd896442fcf9b7ce4de66",
+    "svg": "7838694dacb5de7e2092cc95b9aa393020fb2dc7f7f8a33a049eecbf938ad649",
+    "pdf": "a6ee070ab9c0fca671942f7f77a09c99f5cc6b92880affb2b2a3c8015a1ca399",
+    "tsv": "ad09d8a5557f6f262dd98bdf0e27488de67ecdb68976985353ae5cd4be80bf5d",
+    "spec": "efc6d953208b893d84a7bb05bca8b01c93e88f6c816387b9be0332cdb124ab89"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_qc_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9b112e97f20255d7334b6b9228191195b7e84d00191dd896442fcf9b7ce4de66",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed final PNGs: barcode/calling profiles, raincloud donor QC, probability/scoring matrices and supplied counts have clear legends and complete identities; layout spacing and labels reviewed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

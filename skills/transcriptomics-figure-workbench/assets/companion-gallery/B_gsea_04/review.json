@@ -1,0 +1,89 @@
+{
+  "id": "B_gsea_04",
+  "title": "Leading-edge membership across selected terms",
+  "chapters": [
+    "bulk.gsea"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 88,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Leading-edge membership across selected terms",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Leading-edge membership across selected terms; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit leading-edge membership",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Leading-edge membership across selected terms",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Leading-edge membership across selected terms; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Leading-edge membership across selected terms; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_04/example.png",
+    "svg": "B_gsea_04/example.svg",
+    "pdf": "B_gsea_04/example.pdf",
+    "tsv": "B_gsea_04/example.tsv",
+    "spec": "B_gsea_04/input/example.spec.json",
+    "preview": "B_gsea_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "1e1e32cff7643abaceb2db637fc5aabab011f2301e6fbcfca8c9d569f2a0123a",
+    "svg": "63c78a4aa8df591816752ba14d3b35f2416d2034e4b8ade24a7724b84f7eeea3",
+    "pdf": "e42b714c5db7d2281b4cb5186c81ad522b25978f04dad52815a80621f8520296",
+    "tsv": "a0ba58be8d735bdc134a78e6d841206829dc7b50bf0ca35b2c95b2b12ae5eb2b",
+    "spec": "a222a217bc0d6a4c9179bb32289e12259b0af547c21e4b38b62bbc1b401f60b9"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 187.67072222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 12.30879261638218,
+    "p10_pt": 12.30879261638218,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1e1e32cff7643abaceb2db637fc5aabab011f2301e6fbcfca8c9d569f2a0123a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final images inspected: complete denominators and fraction scales, clear reserved legends, explicit leading-edge zero/one membership, legible gene/pathway labels and no cropping. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

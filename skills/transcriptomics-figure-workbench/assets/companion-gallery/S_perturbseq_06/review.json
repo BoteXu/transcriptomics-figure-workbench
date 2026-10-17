@@ -1,0 +1,94 @@
+{
+  "id": "S_perturbseq_06",
+  "title": "Perturbation response in independent donors",
+  "chapters": [
+    "single_cell.perturbseq"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 398,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Perturbation response in independent donors",
+        "x_label": "Perturbation-response log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Perturbation response in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Perturbation response in independent donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.perturbseq supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Perturbation response in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Perturbation response in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_perturbseq_06/example.png",
+    "svg": "S_perturbseq_06/example.svg",
+    "pdf": "S_perturbseq_06/example.pdf",
+    "tsv": "S_perturbseq_06/example.tsv",
+    "spec": "S_perturbseq_06/input/example.spec.json",
+    "preview": "S_perturbseq_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "181258ba975b210ac734dd98afeb419b8a710d875d90dbf65e8a2fc6bcd9c86e",
+    "svg": "caea668377e8fd645f2444ed8b087f6a31ef68221561d17d0be0e1464aa5e5c8",
+    "pdf": "fca9dbdabbcc408287161b054b48519fbfeb2037cfc8a7218b7cfd2a88feca69",
+    "tsv": "96569abcf1a604cf392d75f70b009f56e63bf1246728c52f4680e6a1c3481965",
+    "spec": "926f4d8758b4c98d29525184b09664e46729e050cc67b636ad9df8609fe35ac8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_perturbseq_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "181258ba975b210ac734dd98afeb419b8a710d875d90dbf65e8a2fc6bcd9c86e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: complete guide assignment and support, program response channels, donor-level replication effects and cohort mapping remain readable with full selected scope and explicit independent n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

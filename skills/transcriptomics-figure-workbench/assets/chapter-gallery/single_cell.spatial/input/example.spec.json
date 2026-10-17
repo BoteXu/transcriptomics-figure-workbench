@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "fa828a7f6fb8aad43bf277276e818a884f5cd6caeda183bad23f9a5491a66780",
+    "sha256": "e4ca26dc0d5b67bac7a0d5fd4556a6e59f097cfa280c22033c6a4c231b97f61c",
     "numeric_columns": [
       "x",
       "y",
@@ -20,15 +20,15 @@
     "panels": [
       {
         "kind": "embedding",
-        "title": "Registered measured spatial coordinates",
-        "x_label": "Stored coordinate 1",
-        "y_label": "Stored coordinate 2",
+        "title": "Supplied tissue positions · section S01",
+        "x_label": "Tissue x (µm)",
+        "y_label": "Tissue y (µm)",
         "id": "p1"
       },
       {
         "kind": "interval",
-        "title": "Donor/section region contrasts",
-        "x_label": "Supplied effect and 95% interval",
+        "title": "Interferon-program region contrasts",
+        "x_label": "Interferon-score difference · 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -38,7 +38,7 @@
         "title": "Regional molecular programs",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied regional score",
+        "value_label": "Standardized program score",
         "limits": [
           -2,
           2
@@ -50,7 +50,7 @@
       }
     ],
     "title": "Spatial localization and donor/section context",
-    "scope_note": "Fictional frozen inputs · single_cell · no analysis performed",
+    "scope_note": "Fictional section S01 positions · donor-level contrast summaries supplied separately",
     "columns": "auto"
   },
   "theme": {
@@ -180,10 +180,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional spatial display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

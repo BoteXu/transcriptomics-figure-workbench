@@ -1,0 +1,121 @@
+{
+  "id": "S_design_Layout",
+  "title": "Single cell · design — complementary evidence",
+  "chapters": [
+    "single_cell.design"
+  ],
+  "stage": "layout",
+  "family": "fraction,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 210,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Capture contribution within independent donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Capture contribution within independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Donor, condition and capture design",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Donor, condition and capture design; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Declared design code",
+        "categorical_design": true,
+        "limits": [
+          0,
+          3
+        ],
+        "integer": true,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Donor-level design sensitivity",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-level design sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · design — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.design supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Capture contribution within independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor, condition and capture design; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-level design sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Capture contribution within independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor, condition and capture design; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-level design sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_design_Layout/example.png",
+    "svg": "S_design_Layout/example.svg",
+    "pdf": "S_design_Layout/example.pdf",
+    "tsv": "S_design_Layout/example.tsv",
+    "spec": "S_design_Layout/input/example.spec.json",
+    "preview": "S_design_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "28d5fe7ccc7f6c71d0f01dc3cbc44b7de35dc04f1cf3787c54809a52d8fa5e62",
+    "svg": "26206a5fc2e9491b8ffb333cbe20566832e1952ef91fe66d9286ce04fa442e9e",
+    "pdf": "c969ec9aed15c290752972d9248b24851e2cf908aaf203d32a2fe7bb4bb103cb",
+    "tsv": "5edec6e758b17ee7458a26b7246fc67b9832c6a6cbb0d69dc87575fa4a2b6035",
+    "spec": "430509dbad998bc9506538c2a5de39374556b10ba4d7e66f9a19af28c2788854"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 133,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_design_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "28d5fe7ccc7f6c71d0f01dc3cbc44b7de35dc04f1cf3787c54809a52d8fa5e62",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed complete single and composed exports: supplier intervals and q aligned, capture proportions and design code separated, six independent donors per cloud visible, retained cell categories fully represented. No label collision or clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

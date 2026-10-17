@@ -1,0 +1,89 @@
+{
+  "id": "S_communication_04",
+  "title": "Donor-aware signaling contrasts",
+  "chapters": [
+    "single_cell.communication"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 346,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-aware signaling contrasts",
+        "x_label": "Supplied signaling contrast · interval",
+        "y_label": "",
+        "definition": "Donor-aware signaling contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-aware signaling contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.communication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor-aware signaling contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor-aware signaling contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_communication_04/example.png",
+    "svg": "S_communication_04/example.svg",
+    "pdf": "S_communication_04/example.pdf",
+    "tsv": "S_communication_04/example.tsv",
+    "spec": "S_communication_04/input/example.spec.json",
+    "preview": "S_communication_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "8ea5c6db5e699c559f957feb5f33d76840174f5d594771969c62675eda8e5693",
+    "svg": "d60fcb70b1392a0a2ca6fb9740fea0387a9978f913af3ab817245fe0ff3afeea",
+    "pdf": "f90075b282be1d5409b4eeaf47d4a22c43ecb27b67beaed0b31bfa22153a70f2",
+    "tsv": "7460a1c14ec337eefa7152dffe6823ea30b01dfc881817e860f019afbaa27614",
+    "spec": "96bb3b5eebabef935d4e35146990a76fb1519b766a81297ebf3c7ff5f74f8c41"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_communication_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "8ea5c6db5e699c559f957feb5f33d76840174f5d594771969c62675eda8e5693",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed actual exports: ligand-receptor donor denominators, signaling estimates, supplied intervals and independent-cohort n are explicit and legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

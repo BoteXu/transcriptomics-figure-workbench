@@ -1,0 +1,88 @@
+{
+  "id": "S_replication_04",
+  "title": "Label-transfer confidence and review",
+  "chapters": [
+    "single_cell.replication"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 404,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Label-transfer confidence and review",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Label-transfer confidence and review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied confidence",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Label-transfer confidence and review",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Label-transfer confidence and review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Label-transfer confidence and review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_replication_04/example.png",
+    "svg": "S_replication_04/example.svg",
+    "pdf": "S_replication_04/example.pdf",
+    "tsv": "S_replication_04/example.tsv",
+    "spec": "S_replication_04/input/example.spec.json",
+    "preview": "S_replication_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "2bddb767922721d58904eec91192ef61963ae50ea1b3c1552fbda62ebc50e93c",
+    "svg": "6aadfd8fdc3af6375e170bb3a28dc7c1316598d3d6a6377380cf0db5d6581d55",
+    "pdf": "f2ba52b3cbb939349dab327f6a43da8ef17055b97e04aa060fc39ff2512ecd3a",
+    "tsv": "6a715120da981ae7e29ea80d957bd37bfa374b721cc532860c6063b879220da3",
+    "spec": "d3d74d9a693a1ed3574174f21a1d75708340507e1fa025f26444190dfb1cd6c9"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_replication_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "2bddb767922721d58904eec91192ef61963ae50ea1b3c1552fbda62ebc50e93c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed actual PNGs: label-transfer confidence channels retain separate stated meanings; regional donor raincloud shows all twelve independent donors and clear region identity without nested observations counted as n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

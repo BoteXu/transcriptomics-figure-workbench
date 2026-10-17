@@ -1,0 +1,119 @@
+{
+  "id": "B_replication_Evidence",
+  "title": "Bulk · replication — complementary evidence",
+  "chapters": [
+    "bulk.replication"
+  ],
+  "stage": "interpretation",
+  "family": "fraction,scatter,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 166,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Shared versus unavailable feature coverage",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Shared versus unavailable feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "scatter",
+        "title": "Effect concordance across independent cohorts",
+        "x_label": "Discovery effect",
+        "y_label": "Replication effect",
+        "definition": "Effect concordance across independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Leave-one-cohort sensitivity",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Leave-one-cohort sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "explicit_effects": [
+          0.58,
+          0.595,
+          0.58,
+          0.565
+        ],
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · replication — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Shared versus unavailable feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Effect concordance across independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope. | Leave-one-cohort sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Shared versus unavailable feature coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Effect concordance across independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope. | Leave-one-cohort sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "x",
+    "y",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_replication_Evidence/example.png",
+    "svg": "B_replication_Evidence/example.svg",
+    "pdf": "B_replication_Evidence/example.pdf",
+    "tsv": "B_replication_Evidence/example.tsv",
+    "spec": "B_replication_Evidence/input/example.spec.json",
+    "preview": "B_replication_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "a062f235e3681454e853ed39ade867de290cdcdb2e28d34c724a2e5bf48c446e",
+    "svg": "b316d04ef5511cf7573b09bd47fae47d10b0bdc5fd7ea6ac9079d3d903fe3aca",
+    "pdf": "9fddf38f5bbd1c07c62097cb8ce93d41f2f7d41857c80f316b78834c32d1477b",
+    "tsv": "5a89f4093fe061b52b38f09fe0afb248f91ab27e6f26770d5b52ae1851aea264",
+    "spec": "9ad57955d3e1eace945b16cdeb1ad5990313aebb524be7b26b5a1b89e1de0b40"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 71,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_replication_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a062f235e3681454e853ed39ade867de290cdcdb2e28d34c724a2e5bf48c446e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual PNG inspected: full effect and cohort tables, log-scale ratio reference, monotone supplied survival steps, calibration identity line and barcode knee/bins remain readable and unclipped in custom layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

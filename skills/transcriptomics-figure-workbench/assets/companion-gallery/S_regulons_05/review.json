@@ -1,0 +1,88 @@
+{
+  "id": "S_regulons_05",
+  "title": "Motif support and signed target priors",
+  "chapters": [
+    "single_cell.regulons"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 364,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Motif support and signed target priors",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Motif support and signed target priors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied regulatory prior",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Motif support and signed target priors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.regulons supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Motif support and signed target priors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Motif support and signed target priors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_regulons_05/example.png",
+    "svg": "S_regulons_05/example.svg",
+    "pdf": "S_regulons_05/example.pdf",
+    "tsv": "S_regulons_05/example.tsv",
+    "spec": "S_regulons_05/input/example.spec.json",
+    "preview": "S_regulons_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "c8c68aaa2404ffa1dc52c75b0cc94483a983dff94e577d52e263dee68cea0593",
+    "svg": "06ff6a17fcebe3b06cbf951ef5cb821d999c614b6437527adb30b0236104d4d8",
+    "pdf": "22f8504ae227cca9a06d93ec901210b858357c66e000c7ad2909d49d0e1773f5",
+    "tsv": "8bb27b23fcc769dbcfd05f0d0444ae2db57981f0e0dbe50d535fcadd7b00fb77",
+    "spec": "36234a3901b3b5fd8366c19a4ae9724959f9a566b4d1bff6c2ee906b440e312f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_regulons_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "c8c68aaa2404ffa1dc52c75b0cc94483a983dff94e577d52e263dee68cea0593",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual exports individually viewed: full coverage, donor AUCell raincloud, signed target priors and donor/reference support are readable with explicit complete quantities.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

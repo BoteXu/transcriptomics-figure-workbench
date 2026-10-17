@@ -1,0 +1,125 @@
+{
+  "id": "B_fusions_Layout",
+  "title": "Bulk · fusions — complementary evidence",
+  "chapters": [
+    "bulk.fusions"
+  ],
+  "stage": "layout",
+  "family": "matrix,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 203,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Split-read and spanning-pair support",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Split-read and spanning-pair support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supporting reads",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Artifact and orthogonal evidence",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Artifact and orthogonal evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit evidence indicator",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Event support in independent libraries",
+        "x_label": "Supplied log support ratio · interval",
+        "y_label": "",
+        "definition": "Event support in independent libraries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · fusions — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.fusions supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Split-read and spanning-pair support; all quantities are supplied frozen channels, with explicitly declared units and scope. | Artifact and orthogonal evidence; all quantities are supplied frozen channels, with explicitly declared units and scope. | Event support in independent libraries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Split-read and spanning-pair support; all quantities are supplied frozen channels, with explicitly declared units and scope. | Artifact and orthogonal evidence; all quantities are supplied frozen channels, with explicitly declared units and scope. | Event support in independent libraries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_fusions_Layout/example.png",
+    "svg": "B_fusions_Layout/example.svg",
+    "pdf": "B_fusions_Layout/example.pdf",
+    "tsv": "B_fusions_Layout/example.tsv",
+    "spec": "B_fusions_Layout/input/example.spec.json",
+    "preview": "B_fusions_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "43e9aa83e493f0cc518cad4593764f6254b578692da6a94b4c91042f9b9e6e07",
+    "svg": "3b5fe656704ff0d46e4a07c550b3e2960fedd774c3d056873b1c6577bc0fd79e",
+    "pdf": "e24e79246f55d44c69e96c6cac66c12a3a64defb4387eeb26c4f2491fc9a6fca",
+    "tsv": "7349dd5cd4fc44d66af811c7bd98e87d0cf01296959f17b67af74747785a0c61",
+    "spec": "3732598728ace854a8bc3f5d0c8cd7c4f3b8427b24754f777d962f7966a7c341"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 87,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_fusions_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "43e9aa83e493f0cc518cad4593764f6254b578692da6a94b4c91042f9b9e6e07",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually inspected: aligned full-support matrices, evidence indicators, junction tracks and independent-library intervals; one-column enlarged reading example retains complete labels and rows. Donor capture design and cell-support matrices are legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,89 @@
+{
+  "id": "B_gene_support_01",
+  "title": "Explicit pathway membership",
+  "chapters": [
+    "bulk.gene_support"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 101,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Explicit pathway membership",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Explicit pathway membership; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Annotation membership",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Explicit pathway membership",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Explicit pathway membership; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Explicit pathway membership; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gene_support_01/example.png",
+    "svg": "B_gene_support_01/example.svg",
+    "pdf": "B_gene_support_01/example.pdf",
+    "tsv": "B_gene_support_01/example.tsv",
+    "spec": "B_gene_support_01/input/example.spec.json",
+    "preview": "B_gene_support_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "0c61d8e3491dbddbb0852610f8d69c709e7994d94e927ba60e1eca79f84a5edb",
+    "svg": "f90b701ec10a9e57b80bed4256016142322d97aceb54a42a5d223262cedb6847",
+    "pdf": "2cf651c7f94ccd82da738e4fc9cf27c0b79d53b09476589cabd73c0fcb2fc568",
+    "tsv": "cf9ec6ca1980ee468c655071fda3edb65824273c8166e29975d59aceb99159bb",
+    "spec": "8ec833bb6eca66b43941b08c4ed622bf905d421f742d1cee1e8181f02d15242f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 157.502167522907,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 14.666464826041427,
+    "p10_pt": 14.666464826041427,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gene_support_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0c61d8e3491dbddbb0852610f8d69c709e7994d94e927ba60e1eca79f84a5edb",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: full term labels and typed upstream support counts remain readable in single, two-column, three-column and larger one-column compositions; no clipping or legend collision.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

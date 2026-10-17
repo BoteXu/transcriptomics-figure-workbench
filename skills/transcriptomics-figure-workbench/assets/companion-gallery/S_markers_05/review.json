@@ -1,0 +1,94 @@
+{
+  "id": "S_markers_05",
+  "title": "Marker evidence in independent donors",
+  "chapters": [
+    "single_cell.markers"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 274,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Marker evidence in independent donors",
+        "x_label": "Donor marker log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Marker evidence in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Marker evidence in independent donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.markers supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Marker evidence in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Marker evidence in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_markers_05/example.png",
+    "svg": "S_markers_05/example.svg",
+    "pdf": "S_markers_05/example.pdf",
+    "tsv": "S_markers_05/example.tsv",
+    "spec": "S_markers_05/input/example.spec.json",
+    "preview": "S_markers_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "6a8a252bdf10df70e8bb22bea7ae8663f2b4a8ddc94e36e1362bf3c5d42f15cc",
+    "svg": "34ee2668f15f01c591ce0db1c1247ba5f0785cedc8a15abf8a74e84f91c27ef5",
+    "pdf": "d5aad6d8944cb39f7d7a11f83fcadede0620727b2b87e16513a424c50bcdb9c0",
+    "tsv": "96569abcf1a604cf392d75f70b009f56e63bf1246728c52f4680e6a1c3481965",
+    "spec": "14db4db9dfeaa0ca01f5e7df869446c8919090698708002673c5ab184e91fff9"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_markers_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6a8a252bdf10df70e8bb22bea7ae8663f2b4a8ddc94e36e1362bf3c5d42f15cc",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: expanded child-state evidence, aligned donor marker effects, all points in donor expression cloud, complete interval tables, composition effects and cell-support matrix. Long labels and rows readable without clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

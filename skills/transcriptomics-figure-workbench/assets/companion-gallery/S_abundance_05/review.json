@@ -1,0 +1,94 @@
+{
+  "id": "S_abundance_05",
+  "title": "Neighborhood and model-choice sensitivity",
+  "chapters": [
+    "single_cell.abundance"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 288,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Neighborhood and model-choice sensitivity",
+        "x_label": "Log neighborhood abundance ratio · supplied 95% interval",
+        "y_label": "",
+        "definition": "Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Neighborhood and model-choice sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.abundance supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_abundance_05/example.png",
+    "svg": "S_abundance_05/example.svg",
+    "pdf": "S_abundance_05/example.pdf",
+    "tsv": "S_abundance_05/example.tsv",
+    "spec": "S_abundance_05/input/example.spec.json",
+    "preview": "S_abundance_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "79090e5de3d222c88ee26ba2e68bf8c3128ef51e3a5a0f94af9fe752302f93e5",
+    "svg": "bdd4b47b7c9dcfc32f85b129dd8f7c6b6a75b4d1118bdd6fa0ececae56af9b94",
+    "pdf": "1efd24586ee6e36690eb6b839df9da141741ed6ed1febd7284cdfb19701e0249",
+    "tsv": "1ff9821a5822e88d95238d9c49e2fe3563ca5a581a333d204e61607720cf4fcd",
+    "spec": "a5bbadd6253d99f3371e5910ccc61b0defcb9c6611bbdfbf48d7cc351e7983df"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_abundance_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "79090e5de3d222c88ee26ba2e68bf8c3128ef51e3a5a0f94af9fe752302f93e5",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: marker matrices use distinct detection/centered-expression scales; neighborhood identities, donor support counts and effect/sensitivity tables remain complete and readable in single and combined exports.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

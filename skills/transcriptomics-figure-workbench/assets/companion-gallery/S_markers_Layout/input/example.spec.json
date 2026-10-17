@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "figure_id": "S_markers_Layout",
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "input": {
+    "path": "example.tsv",
+    "sha256": "fb4b3cd1bbac93aa8fc270ba49735d2e2bbaeed8930c25e06268fd0319b70099",
+    "numeric_columns": [
+      "value",
+      "estimate",
+      "lower",
+      "upper",
+      "q",
+      "n"
+    ]
+  },
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Marker detection coverage",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Marker detection coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Fraction of cells detected",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Marker mean-expression specificity",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Supplied gene-centered mean expression by identity; negative centered values are not negative molecular counts.",
+        "value_label": "Centered mean expression",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Marker evidence in independent donors",
+        "x_label": "Donor marker log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Marker evidence in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · markers — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.markers supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Marker detection coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supplied gene-centered mean expression by identity; negative centered values are not negative molecular counts. | Marker evidence in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-transcriptomic-study",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Control": 0,
+      "Treated": 1,
+      "T cells": 0,
+      "B cells": 1,
+      "Myeloid": 2,
+      "Stromal": 3,
+      "Endothelial": 4,
+      "Batch 1": 0,
+      "Batch 2": 1,
+      "Batch 3": 2,
+      "Interferon response": 0,
+      "Extracellular matrix": 1,
+      "Mitochondrial function": 2,
+      "RNA processing": 3,
+      "Cell cycle": 4,
+      "Inflammatory response": 5,
+      "M1": 0,
+      "M2": 1,
+      "M3": 2,
+      "M4": 3,
+      "M5": 4,
+      "M6": 5,
+      "Grey": 6,
+      "Branch A": 0,
+      "Branch B": 1
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true,
+    "category_colors": {
+      "M1a": "#64AAA7",
+      "M1b": "#A6CECA",
+      "M2a": "#DFA08A",
+      "M2b": "#ECC6B9",
+      "M3a": "#7695BE",
+      "M3b": "#B5C6DD",
+      "M4a": "#AB95BF",
+      "M4b": "#D2C1DF"
+    }
+  },
+  "provenance": {
+    "source": "Fictional per-analysis drawing fixtures v0.10.0",
+    "input_unit": "Explicitly typed frozen single_cell.markers channels",
+    "experimental_unit": "fictional biological donors; cells and reads are nested observations",
+    "contrast": "Comparisons explicitly named per panel; descriptive QC as declared",
+    "denominator": "Every declared row and stated panel-specific denominator; independent units=24",
+    "model": "No scientific model, density, test, enrichment or network fitted",
+    "limits": "Declared complete display scope; data have no biomedical validity",
+    "filtering": "Declared fixture selection only; no research filtering",
+    "uncertainty": "Only explicitly supplied illustrative intervals; no new uncertainty estimation",
+    "interpretation_limit": "Software drawing fixtures only; real methods, units and backend acceptance remain separate",
+    "synthetic": true
+  },
+  "appearance": {
+    "preset": "paper",
+    "label_pt": 12,
+    "tick_pt": 11,
+    "note_pt": 11,
+    "title_pt": 14
+  },
+  "export": {
+    "raster_dpi": 300,
+    "target_width_mm": 210,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "block"
+  }
+}

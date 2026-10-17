@@ -1,0 +1,118 @@
+{
+  "id": "S_ligand_target_Evidence",
+  "title": "Single cell · ligand_target — complementary evidence",
+  "chapters": [
+    "single_cell.ligand_target"
+  ],
+  "stage": "interpretation",
+  "family": "fraction,effects,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 358,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Prior coverage in the receiver context",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Prior coverage in the receiver context; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Prespecified ligand-activity contrasts",
+        "x_label": "Donor ligand-activity difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified ligand-activity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Ligand-to-target evidence across prior choices",
+        "x_label": "Donor ligand-activity difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Ligand-to-target evidence across prior choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · ligand_target — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.ligand_target supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prior coverage in the receiver context; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified ligand-activity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope. | Ligand-to-target evidence across prior choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Prior coverage in the receiver context; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified ligand-activity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope. | Ligand-to-target evidence across prior choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_ligand_target_Evidence/example.png",
+    "svg": "S_ligand_target_Evidence/example.svg",
+    "pdf": "S_ligand_target_Evidence/example.pdf",
+    "tsv": "S_ligand_target_Evidence/example.tsv",
+    "spec": "S_ligand_target_Evidence/input/example.spec.json",
+    "preview": "S_ligand_target_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "a2a525b376c86f9d94461109aa13fbf5e4d28d917b2b9ad42bc6e81c7be11bc9",
+    "svg": "695b69c9a6a1ca7f4b257ca06df74c246033fb0624e502bbb837d645e3dfb20e",
+    "pdf": "a21d81d78784fef5fa02a35fbf6087e92d86cf2f7dd5317f3982f2c115c45dee",
+    "tsv": "6216847d08e97e3ef726c658cd1a657ed88f7943255d24e2e3d71b87d474f4d9",
+    "spec": "2255ab1d3994ed34e35c87d56e5404bee25f4abfc40dbb6ee00e93581db1716a"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 100,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_ligand_target_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a2a525b376c86f9d94461109aa13fbf5e4d28d917b2b9ad42bc6e81c7be11bc9",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: signaling and ligand-target comparisons use distinct declared receiver/ligand units, full prior-sensitivity rows and separate interval tables; one/three-column compositions remain unclipped, regulon AUCell differences bounded.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

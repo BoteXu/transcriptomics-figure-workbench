@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "abae10b1fec83137e227623f043cd254434fcdd9213ca16dce556ee8ce8b1e7d",
+    "sha256": "833b9bc88522451da8845842e99707fde4e5dc3b66b20f3c50c72f90f35f766f",
     "numeric_columns": [
       "x",
       "y",
@@ -27,9 +27,9 @@
       },
       {
         "kind": "points",
-        "title": "Splicing phase diagnostics",
-        "x_label": "Supplied spliced",
-        "y_label": "Supplied unspliced",
+        "title": "Illustrative STAT1 / IRF7 phase portraits",
+        "x_label": "Normalized spliced counts",
+        "y_label": "Normalized unspliced counts",
         "point_unit": "Cell-phase observation",
         "id": "p2"
       }
@@ -127,7 +127,9 @@
       "Declared relationship": 0,
       "Read 1": 0,
       "Read 2": 1,
-      "Complete supplied PCs": 0
+      "Complete supplied PCs": 0,
+      "STAT1": 0,
+      "IRF7": 1
     },
     "roles": {
       "primary": "#218C8D",
@@ -165,10 +167,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional velocity display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

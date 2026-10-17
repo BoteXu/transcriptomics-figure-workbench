@@ -1,0 +1,124 @@
+{
+  "id": "S_multi_contrast_Layout",
+  "title": "Single cell · multi_contrast — complementary evidence",
+  "chapters": [
+    "single_cell.multi_contrast"
+  ],
+  "stage": "layout",
+  "family": "matrix,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 305,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Independent support across contrast families",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Independent support across contrast families; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Independent donor count",
+        "limits": [
+          0,
+          24
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Complete signed effect atlas",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Complete signed effect atlas; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied log2 fold change",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Cross-contrast replication effects",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Cross-contrast replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · multi_contrast — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.multi_contrast supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Independent support across contrast families; all quantities are supplied frozen channels, with explicitly declared units and scope. | Complete signed effect atlas; all quantities are supplied frozen channels, with explicitly declared units and scope. | Cross-contrast replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Independent support across contrast families; all quantities are supplied frozen channels, with explicitly declared units and scope. | Complete signed effect atlas; all quantities are supplied frozen channels, with explicitly declared units and scope. | Cross-contrast replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multi_contrast_Layout/example.png",
+    "svg": "S_multi_contrast_Layout/example.svg",
+    "pdf": "S_multi_contrast_Layout/example.pdf",
+    "tsv": "S_multi_contrast_Layout/example.tsv",
+    "spec": "S_multi_contrast_Layout/input/example.spec.json",
+    "preview": "S_multi_contrast_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "93ed5d4d1b1189838e706bad4028161083cfd39768bdf3551179517384853425",
+    "svg": "f56c0e1b13005e95c2eb141a12ddb065427efc68d10fa9f5b8048a825c8a4d90",
+    "pdf": "0419ce58a4c9d0300ae418dd304be91663b498d0435c8db60d1eec884104230c",
+    "tsv": "f1708d6335ac91bf4c9deff3159cf3de011737d9d0e39f1572b78c8b2a0904a1",
+    "spec": "959e18ff7fe4d683f17424b5f5b40d011280655ca01668205fd2718e71bec276"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 183,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multi_contrast_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "93ed5d4d1b1189838e706bad4028161083cfd39768bdf3551179517384853425",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: pseudobulk omission support, multi-contrast independent counts and signed effects, pathway coverage/NES/membership have visible units and readable legends in full-data custom pages.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

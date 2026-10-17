@@ -1,0 +1,83 @@
+{
+  "id": "B_batch_03",
+  "title": "Donor RLE medians before/after batch adjustment",
+  "chapters": [
+    "bulk.batch"
+  ],
+  "stage": "qc",
+  "family": "paired",
+  "variant": false,
+  "large_data": false,
+  "order": 41,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "paired",
+        "title": "Donor RLE medians before/after batch adjustment",
+        "x_label": "Repeated condition",
+        "y_label": "Donor median relative log2 expression",
+        "definition": "Donor RLE medians before/after batch adjustment; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "rle_median": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Donor RLE medians before/after batch adjustment",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.batch supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor RLE medians before/after batch adjustment; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor RLE medians before/after batch adjustment; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "unit",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_batch_03/example.png",
+    "svg": "B_batch_03/example.svg",
+    "pdf": "B_batch_03/example.pdf",
+    "tsv": "B_batch_03/example.tsv",
+    "spec": "B_batch_03/input/example.spec.json",
+    "preview": "B_batch_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "b723f29823383e18e595622068be22909c7e5593d78317dcf29cc174f34b5ff1",
+    "svg": "0aabc2a073cdb127c34372db96d441f8f69686173df50dade65ea0d8c5bbdd43",
+    "pdf": "90da973af6309a1198773ac79e4e989704cb1d9286d31a007408d053e975a297",
+    "tsv": "116479a6895d99d49f466ff05c5b434c5443ee447f34da5a9eb051e48c112b8e",
+    "spec": "f59e36a85098699881156abb161e4bc4814616f436aafdef3a03ece8deaaf52f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 165.24915885416667,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 15,
+    "smallest_pt": 13.978891124272458,
+    "p10_pt": 13.978891124272458,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_batch_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b723f29823383e18e595622068be22909c7e5593d78317dcf29cc174f34b5ff1",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed all complete exports: larger-data filtering matrix and threshold direction are legible; RLE summary is named, paired donor lines preserve n and shrink toward zero; three batches show four donors each and model alternatives align with numeric table. No label collisions in either composition. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

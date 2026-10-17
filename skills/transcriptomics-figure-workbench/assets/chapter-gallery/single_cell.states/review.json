@@ -28,40 +28,33 @@
     "preview": "single_cell.states/preview.jpg"
   },
   "sha256": {
-    "png": "1fe184c970b201c228c9b749ba85726b240ac4fe920348fe57bec5146b694b23",
-    "svg": "46ed81b5d3c2b3819bf6edf3ea55b27c1479a5b26db806849686320d78ca61c9",
-    "pdf": "97d89761571068017649d4c9e44b7333a44a1ad1797cbc5c62eeba94c8561fba",
+    "png": "1c66525b8ad77f7e979f084e0dc2427fce19b646745e1e616de933ee8d0e2d50",
+    "svg": "2dac7b6a1748b689d2c128bc3ba6655784f28dfd64ad7c2a6f275f911d8c6e86",
+    "pdf": "69e86badf91af52da12211b405d93eac6c55e20a9c3b33ccddc2bd1fc6889ef4",
     "tsv": "377df0f5f9a0ab7387488f6bbe113775449cdc596bd5ce6bdfaa4a1f95bc2d32",
-    "spec": "884ada5d06fd182ac75f2e237d05a51fa3b8bbd3e4b2eb4a396d194ff413c350"
+    "spec": "24ad4e0f3d528a789042dc6beffc8524f5594c5a4a03dd3201c5014eea6bd582"
   },
   "visual_review": {
-    "id": "single_cell.states",
-    "png_sha256": "1fe184c970b201c228c9b749ba85726b240ac4fe920348fe57bec5146b694b23",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.states.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1c66525b8ad77f7e979f084e0dc2427fce19b646745e1e616de933ee8d0e2d50",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 297,
-    "native_width_mm": 321.8246502862882,
+    "native_width_mm": 321.66276285859726,
     "minimum_required_pt": 7.5,
     "essential_text_count": 79,
-    "smallest_pt": 10.15149087272758,
-    "p10_pt": 10.15149087272758,
+    "smallest_pt": 10.15659994637356,
+    "p10_pt": 10.15659994637356,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

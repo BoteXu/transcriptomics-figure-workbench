@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "3d2efb161cb0feaad2b3f324ea7adb43a28c882371c298ee79516b6a663ce867",
+    "sha256": "5ec3e8ebd5fb09c3d7448786da993ccb946cb9dcb4c959fbe7c23f3e65ef437a",
     "numeric_columns": [
       "value",
       "x",
@@ -18,7 +18,7 @@
       {
         "kind": "stack",
         "title": "Within-donor composition",
-        "x_label": "Supplied fraction",
+        "x_label": "Fraction of productive clonotype-assigned cells",
         "y_label": "",
         "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
         "id": "p1"
@@ -26,7 +26,7 @@
       {
         "kind": "interval",
         "title": "Prespecified compositional comparisons",
-        "x_label": "Supplied log-ratio effect and 95% interval",
+        "x_label": "ln(Treated fraction / Control fraction)\nSupplied 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -36,7 +36,7 @@
         "title": "Clonotype sharing",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied overlap index",
+        "value_label": "Supplied Jaccard overlap",
         "limits": [
           0,
           1
@@ -178,10 +178,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional clones display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

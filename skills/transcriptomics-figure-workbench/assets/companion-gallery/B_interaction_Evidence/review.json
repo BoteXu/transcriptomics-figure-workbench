@@ -1,0 +1,125 @@
+{
+  "id": "B_interaction_Evidence",
+  "title": "Bulk · interaction — complementary evidence",
+  "chapters": [
+    "bulk.interaction"
+  ],
+  "stage": "interpretation",
+  "family": "matrix,profile,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 61,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Independent support for factorial cells",
+        "x_label": "",
+        "y_label": "",
+        "definition": "The same independent donors are measured early and late; each time includes all twelve donors across two conditions and two batches.",
+        "value_label": "Independent donor count",
+        "factorial_repeated": true,
+        "limits": [
+          0,
+          12
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "STAT1 condition-by-time predictions",
+        "x_label": "Time (days)",
+        "y_label": "Supplied log2 STAT1 expression",
+        "definition": "STAT1 condition-by-time predictions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "factorial_profile": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Interaction-model sensitivity",
+        "x_label": "STAT1 log2 response contrast · supplied 95% interval",
+        "y_label": "",
+        "definition": "Interaction-model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "explicit_effects": [
+          0.53,
+          0.5,
+          0.57,
+          0.51
+        ],
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · interaction — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.interaction supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "The same independent donors are measured early and late; each time includes all twelve donors across two conditions and two batches. | STAT1 condition-by-time predictions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Interaction-model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "The same independent donors are measured early and late; each time includes all twelve donors across two conditions and two batches. | STAT1 condition-by-time predictions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Interaction-model sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "estimate",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_interaction_Evidence/example.png",
+    "svg": "B_interaction_Evidence/example.svg",
+    "pdf": "B_interaction_Evidence/example.pdf",
+    "tsv": "B_interaction_Evidence/example.tsv",
+    "spec": "B_interaction_Evidence/input/example.spec.json",
+    "preview": "B_interaction_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "97682ba43061f4efd85adb9c9767156ebc62ee85703b26d114024ab69ae06154",
+    "svg": "07db11b9e78bf7b96a7e5cbcca7cec4ba27ca5bba801373016e89b5ddc1e5942",
+    "pdf": "4b0978e52c81f449138df8c52f93f581a2f0a7eda25d4377e855a17abd942258",
+    "tsv": "e46e1d4b42b3fdb30edf0b31151a0a965c3dcc86bc2d897b52cf39fa3b5d51ae",
+    "spec": "142a35572e2e5f18c485be61ad01642c3eaa97af7771815536cb4b1918b50d84"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 74,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_interaction_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "97682ba43061f4efd85adb9c9767156ebc62ee85703b26d114024ab69ae06154",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected revised PNGs: all supplied interaction effects, donor n, residual signs and monotone QQ positions are legible; expanded reading layouts retain complete panels and aligned uncertainty tables.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

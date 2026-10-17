@@ -28,34 +28,26 @@
     "preview": "single_cell.multi_contrast/preview.jpg"
   },
   "sha256": {
-    "png": "55c4b75cd4db3bac39e22928522b97a3671658e4c1b51ba0d8d659ec7e52a2a5",
-    "svg": "2a1ba929af3280fcf5015fb31ba4e142e7ef8b338c3070dcdcea5566c07b0366",
-    "pdf": "8dceb9ea9cd3416ac5e6340b9b071016bb9566e012665f06eab0dab7d3d49d99",
-    "tsv": "04f0899c8f17618478b92226a6fa12c8fe3299fdc0b05bedbe2f18c68d69b6c2",
-    "spec": "97bff986012ae5b8dd4838300119564deb0a8cd40f85724b191e7dc0804ca5e7"
+    "png": "a31b23835b51292c547ea471c3880300e3c4921b3baefe8c2874005402317a56",
+    "svg": "3f9113d93b61c9a954058155063c332ddd30c883168ec94e78c5bab90f4e8b9d",
+    "pdf": "9bc8dbd773b17d43aa17829d8abd546d7d95d7b3660257580cf23b1f138dba95",
+    "tsv": "0f6755451fc1d1ec39638653c5fb9c04c1a397e96782ded062fc78fa8fa0cc67",
+    "spec": "3c6342cb4de524bb4f828da946a4548a564d5593eacb4321bfbb64c585e55238"
   },
   "visual_review": {
-    "id": "single_cell.multi_contrast",
-    "png_sha256": "55c4b75cd4db3bac39e22928522b97a3671658e4c1b51ba0d8d659ec7e52a2a5",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.multi_contrast.p1",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a31b23835b51292c547ea471c3880300e3c4921b3baefe8c2874005402317a56",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 297,
     "native_width_mm": 304.79999999999995,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 52,
+    "essential_text_count": 50,
     "smallest_pt": 10.718503937007876,
     "p10_pt": 10.718503937007876,
     "below_threshold": [],
@@ -63,5 +55,6 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

@@ -1,0 +1,84 @@
+{
+  "id": "B_gsea_02",
+  "title": "Set coverage in the ranked universe",
+  "chapters": [
+    "bulk.gsea"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 86,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Set coverage in the ranked universe",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Set coverage in the ranked universe; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Set coverage in the ranked universe",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Set coverage in the ranked universe; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Set coverage in the ranked universe; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_02/example.png",
+    "svg": "B_gsea_02/example.svg",
+    "pdf": "B_gsea_02/example.pdf",
+    "tsv": "B_gsea_02/example.tsv",
+    "spec": "B_gsea_02/input/example.spec.json",
+    "preview": "B_gsea_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "c6f0b6deb172eba57f732dbf79105de2187f0d8fa8c0546eada700c8f47e1dab",
+    "svg": "95928e1d51e94d80ccdbc53e3343a03ab6a3ce9c2f6a17a848a0adfdadbe81a7",
+    "pdf": "171d49d85e0e6eb3ea8e9b5560d338a2c4da58fda4b4de5925eaf7b498bacf51",
+    "tsv": "fdd8e5803caa47eff4b14d0209a5b796cdbcfcf542dc1ba74371c1751e267130",
+    "spec": "b4cc78729a71675df54be78e152592338d59ff53dc585df66c6621ebb2ba155d"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "c6f0b6deb172eba57f732dbf79105de2187f0d8fa8c0546eada700c8f47e1dab",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final images inspected: complete denominators and fraction scales, clear reserved legends, explicit leading-edge zero/one membership, legible gene/pathway labels and no cropping. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,89 @@
+{
+  "id": "S_multiome_04",
+  "title": "Prespecified peak–gene association estimates",
+  "chapters": [
+    "single_cell.multiome"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 419,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified peak–gene association estimates",
+        "x_label": "Peak–gene regression coefficient · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified peak–gene association estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified peak–gene association estimates",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.multiome supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified peak–gene association estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified peak–gene association estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multiome_04/example.png",
+    "svg": "S_multiome_04/example.svg",
+    "pdf": "S_multiome_04/example.pdf",
+    "tsv": "S_multiome_04/example.tsv",
+    "spec": "S_multiome_04/input/example.spec.json",
+    "preview": "S_multiome_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "4c22a46b4c4b467434f2a6379cf39d31ebee3d3cdc073a73d73c5e834fb93f69",
+    "svg": "daaf3af2cf3e732cc3576d9e950b86f937cfd68a43fbc6a6b4f9102823f106fa",
+    "pdf": "43e0e0406558241df6ec04f6b434e1837ba3e9df8bd16a65531583b15cfde3cf",
+    "tsv": "4deee77f6d1f437bf616b114ac11b5ea981040fdcdc9a2195c17c9e20693070c",
+    "spec": "148c8a14e51a73d090a870f0d9e29ebaf839307b5bcfda5157654b50c94c5904"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multiome_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "4c22a46b4c4b467434f2a6379cf39d31ebee3d3cdc073a73d73c5e834fb93f69",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNG review: peak-gene units and cohort-specific independent n explicit; modality legend, matrix values, full intervals and single/two/three-column layouts readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

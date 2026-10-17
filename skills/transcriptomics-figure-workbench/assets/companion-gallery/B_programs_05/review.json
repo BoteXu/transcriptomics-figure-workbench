@@ -1,0 +1,90 @@
+{
+  "id": "B_programs_05",
+  "title": "Interferon response in independent cohorts",
+  "chapters": [
+    "bulk.programs"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 74,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Interferon response in independent cohorts",
+        "x_label": "Donor program-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Interferon response in independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "cohort_synthesis": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Interferon response in independent cohorts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.programs supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Interferon response in independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Interferon response in independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_programs_05/example.png",
+    "svg": "B_programs_05/example.svg",
+    "pdf": "B_programs_05/example.pdf",
+    "tsv": "B_programs_05/example.tsv",
+    "spec": "B_programs_05/input/example.spec.json",
+    "preview": "B_programs_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "03d6743b9210caf245d35426b9723593571f560ea6b20b3e4d451798a734997f",
+    "svg": "b51f5c8a31524e9e27bd9a54ea6a5cb4660d325251b5adf01f1b18f9ca40dc9e",
+    "pdf": "befc69232c11a8b3a846837d77538ab263265d281fafe85781a9e82e3229a564",
+    "tsv": "b276dca40f43ca289fa49bfd0a6d09eaa87d74e5617ad0ddf189aa0abb69334a",
+    "spec": "d956800f8bbd8a33fb8b88f2e1b515cb6aaf23ab790e9b95f8e58b1b871e1061"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_programs_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "03d6743b9210caf245d35426b9723593571f560ea6b20b3e4d451798a734997f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each final PNG viewed separately: program membership, donor raincloud and named trajectory/cohort synthesis; ORA universe coverage, aligned uncertainty and background alternatives, complete term overlap. Custom reading layout retains all rows, units and distinct upstream donor n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

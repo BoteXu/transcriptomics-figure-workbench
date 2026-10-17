@@ -1,0 +1,84 @@
+{
+  "id": "B_model_qc_01",
+  "title": "Fitted values and residual structure",
+  "chapters": [
+    "bulk.model_qc"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 63,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Fitted values and residual structure",
+        "x_label": "Supplied fitted value",
+        "y_label": "Supplied residual",
+        "definition": "Fitted values and residual structure; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Fitted values and residual structure",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.model_qc supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Fitted values and residual structure; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Fitted values and residual structure; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_model_qc_01/example.png",
+    "svg": "B_model_qc_01/example.svg",
+    "pdf": "B_model_qc_01/example.pdf",
+    "tsv": "B_model_qc_01/example.tsv",
+    "spec": "B_model_qc_01/input/example.spec.json",
+    "preview": "B_model_qc_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "70ba6f7251fd7a0f74a8408b5da057133b66c124e4c2e3af4c86ec5da444149f",
+    "svg": "04406be6566059c29eb44cb37b552e77a5d274d9da7d8f07b6825d11a9168df6",
+    "pdf": "c2bcc8e38501e5f2748784a0fe9f3a6c9095c0c4a10936bbbe7f684f80752feb",
+    "tsv": "6b88e33040f1146b817bc4474fb162ef64372bbf78b72240c09bb599bb439b46",
+    "spec": "bbca185948f5fa42daa91adfba452dc700a0373859a6d4e4329536a56bf733cf"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_model_qc_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "70ba6f7251fd7a0f74a8408b5da057133b66c124e4c2e3af4c86ec5da444149f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected revised PNGs: all supplied interaction effects, donor n, residual signs and monotone QQ positions are legible; expanded reading layouts retain complete panels and aligned uncertainty tables.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

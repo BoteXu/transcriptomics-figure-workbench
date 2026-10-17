@@ -1,0 +1,83 @@
+{
+  "id": "B_reads_06",
+  "title": "GC distributions against a frozen reference",
+  "chapters": [
+    "bulk.reads"
+  ],
+  "stage": "qc",
+  "family": "bins",
+  "variant": false,
+  "large_data": false,
+  "order": 13,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "bins",
+        "title": "GC distributions against a frozen reference",
+        "x_label": "GC fraction",
+        "y_label": "Supplied count",
+        "definition": "GC distributions against a frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "id": "p1"
+      }
+    ],
+    "title": "GC distributions against a frozen reference",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.reads supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "GC distributions against a frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "GC distributions against a frozen reference; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_reads_06/example.png",
+    "svg": "B_reads_06/example.svg",
+    "pdf": "B_reads_06/example.pdf",
+    "tsv": "B_reads_06/example.tsv",
+    "spec": "B_reads_06/input/example.spec.json",
+    "preview": "B_reads_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "c53702139240e26c7d25eb472d8469dda11ab310b3aa6f5523d61f558fe07e62",
+    "svg": "31bbbfae3717f60d3af8deaf4bbe4734b049c45cca4228d8f682a62895f5023b",
+    "pdf": "a4926c47325e3969f97c5a1f1cbb2f0ea28fdb75ed3900b600e2325103759e81",
+    "tsv": "465e752e65501a4a15509d68ebc902d222edee045f4285a84edc6bd8e7e7999f",
+    "spec": "4e892439426075500801e6b861854ee61196bb3ad6faf11a24671bceaa38a28a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 19,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_reads_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "c53702139240e26c7d25eb472d8469dda11ab310b3aa6f5523d61f558fe07e62",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual exported PNG viewed individually after repair: opaque histogram outlines, visible ribbon definition, explicit reference and repeated-model labels, correct decreasing filter retention, decreasing feature counts, paired RLE medians, twelve-donor batch totals, complete variance components, fully readable wrapped term names and wide three-column guide lanes. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

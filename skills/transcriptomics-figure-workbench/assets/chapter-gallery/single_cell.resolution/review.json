@@ -1,7 +1,7 @@
 {
   "id": "single_cell.resolution",
   "assay": "single_cell",
-  "title": "Cluster resolution and donor support",
+  "title": "Resolution changes · cell flows and cluster sizes",
   "family": "resolution",
   "required_results": [
     "resolution_edges",
@@ -28,27 +28,19 @@
     "preview": "single_cell.resolution/preview.jpg"
   },
   "sha256": {
-    "png": "ece8d019cd4bfa626f602d75c914fa7ad0f1283085d9bf7bd8ae71ecb727dc48",
-    "svg": "58bb87ef288dc19c9991d86470c52965bb11c27927256e839c9cbd6e9a2efe66",
-    "pdf": "10c8e2a3fddfc743dc965c6fe140aba7b9fc92cbe7a62eb0e4101222a6125fab",
+    "png": "c7b35a99045ae649d542de9b56794c5c6205f03d8ace777937630eb56e6c0f6c",
+    "svg": "b4e642de11bbb5885df36aa6d94c01152894000de7344613800d52f5256066f1",
+    "pdf": "3d5ccea1fda1859ba83f664e04ac471f2f793b689ed39ea90d4795386115eeda",
     "tsv": "73d0456f5ccb26d9d252df50deb6753582f0fe3d4bc921a33f11e88512851ea8",
-    "spec": "b20d59ca2eef13249b64e053bbb7a855001dfbb9d424ca14d9a7e000b8834d78"
+    "spec": "a2b8ceffbba67b1b63e2713aca91fafb717aa5e35925f3cfea925e0bd97f9af5"
   },
   "visual_review": {
-    "id": "single_cell.resolution",
-    "png_sha256": "ece8d019cd4bfa626f602d75c914fa7ad0f1283085d9bf7bd8ae71ecb727dc48",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
+    "id": "single_cell.resolution.complete",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "c7b35a99045ae649d542de9b56794c5c6205f03d8ace777937630eb56e6c0f6c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+    "independent_reviewer": false,
     "scientific_acceptance": false
   },
   "readability": {
@@ -63,5 +55,6 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.10.0"
 }

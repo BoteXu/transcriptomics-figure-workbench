@@ -1,0 +1,85 @@
+{
+  "id": "B_reads_04",
+  "title": "Base composition across cycles",
+  "chapters": [
+    "bulk.reads"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 11,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Base composition across cycles",
+        "x_label": "Read position (nt)",
+        "y_label": "Base fraction",
+        "definition": "Base composition across cycles; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "composition_profile": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Base composition across cycles",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.reads supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Base composition across cycles; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Base composition across cycles; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_reads_04/example.png",
+    "svg": "B_reads_04/example.svg",
+    "pdf": "B_reads_04/example.pdf",
+    "tsv": "B_reads_04/example.tsv",
+    "spec": "B_reads_04/input/example.spec.json",
+    "preview": "B_reads_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "8ab305c89434357a41d06b508fa967fc7f9cced85845643fdb6a5e38dfcac608",
+    "svg": "7ed033ac5a58ef909e33a5ec2354696fd74d589dd7302b32c9009bc4fda22796",
+    "pdf": "0c70b82562530868226d68f16463a8f5f2c66bc794d7a86f46eb4b358a108cb2",
+    "tsv": "372861110706d1298085d52c2915df96450d6dfbf28b932c8c803fd3533ddf7f",
+    "spec": "751801dac53363ecb8b73cb9bff1bb6407deb73ff67829ac62904b3865735b23"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_reads_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "8ab305c89434357a41d06b508fa967fc7f9cced85845643fdb6a5e38dfcac608",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected adapter and complete four-base profiles: units, category colours, complete legend and vertical scales are readable; base fractions sum to one and are shown without fabricated uncertainty. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

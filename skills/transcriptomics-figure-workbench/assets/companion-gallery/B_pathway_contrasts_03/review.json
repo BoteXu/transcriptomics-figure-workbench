@@ -1,0 +1,89 @@
+{
+  "id": "B_pathway_contrasts_03",
+  "title": "Shared and contrast-specific leading edges",
+  "chapters": [
+    "bulk.pathway_contrasts"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 96,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Shared and contrast-specific leading edges",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Shared and contrast-specific leading edges; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit membership",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Shared and contrast-specific leading edges",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.pathway_contrasts supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Shared and contrast-specific leading edges; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Shared and contrast-specific leading edges; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_pathway_contrasts_03/example.png",
+    "svg": "B_pathway_contrasts_03/example.svg",
+    "pdf": "B_pathway_contrasts_03/example.pdf",
+    "tsv": "B_pathway_contrasts_03/example.tsv",
+    "spec": "B_pathway_contrasts_03/input/example.spec.json",
+    "preview": "B_pathway_contrasts_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "2b6e3eb655f4f7f7daa7fe0ddb3a32d294615cac647892bf40dcec4f21807fd8",
+    "svg": "75c09e9c483f7e840616692d41c02037b957148c20ec3cde5d668e724b876fe8",
+    "pdf": "29848234b4172f2d2a679b507044b600c56a03208120ce6c044303730a024e69",
+    "tsv": "9981e76992a99e131baaed4e09db9669a55b2b4729919e4dbb17b4cb9aa3846f",
+    "spec": "9c959d5468217be6832413a355949ac23d1ac4bf4b8bd724fd1dde67dadf4181"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_pathway_contrasts_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "2b6e3eb655f4f7f7daa7fe0ddb3a32d294615cac647892bf40dcec4f21807fd8",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual exports inspected: symmetric overlap matrix retains diagonal and range, all selected pathway/contrast membership cells explicit, horizontal label wrapping and scales readable without overlap. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

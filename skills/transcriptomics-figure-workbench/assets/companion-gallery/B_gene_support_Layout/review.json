@@ -1,0 +1,123 @@
+{
+  "id": "B_gene_support_Layout",
+  "title": "Bulk · gene_support — complementary evidence",
+  "chapters": [
+    "bulk.gene_support"
+  ],
+  "stage": "layout",
+  "family": "matrix,effects,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 107,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Explicit pathway membership",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Explicit pathway membership; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Annotation membership",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Supporting-gene effect estimates",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Supporting-gene effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Supporting-gene replication effects",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Supporting-gene replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · gene_support — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Explicit pathway membership; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supporting-gene effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supporting-gene replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Explicit pathway membership; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supporting-gene effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope. | Supporting-gene replication effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gene_support_Layout/example.png",
+    "svg": "B_gene_support_Layout/example.svg",
+    "pdf": "B_gene_support_Layout/example.pdf",
+    "tsv": "B_gene_support_Layout/example.tsv",
+    "spec": "B_gene_support_Layout/input/example.spec.json",
+    "preview": "B_gene_support_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "d31c08e6c670baa16771dc375c1d4c26c7138196e8d3c69b07c05f1b3be3e38e",
+    "svg": "975d156626d57f108d16fb285b0864ea29402e650cdea3b4a4e93b128ef56b3b",
+    "pdf": "a1e750999f9609455b9318aade10cbe4a5af0ec54e04b506b24e20ad1f370dbd",
+    "tsv": "9a8e0e8d38258252e93b70f52190c10d30fa02070a7bf3eff133060a68adba96",
+    "spec": "819338c63e134a72ae93987e472bc6c821fc176c8f3cdf50288ab45c79f9b3b7"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 162,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gene_support_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d31c08e6c670baa16771dc375c1d4c26c7138196e8d3c69b07c05f1b3be3e38e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: aligned effect intervals and q/n tables, full donor-denominator bars, distinct STAT1 transcript structures and readable multirow layouts; fictional drawing channels, no biological validation claimed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

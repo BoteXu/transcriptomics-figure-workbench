@@ -1,0 +1,89 @@
+{
+  "id": "B_programs_03",
+  "title": "Program response estimates",
+  "chapters": [
+    "bulk.programs"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 72,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Program response estimates",
+        "x_label": "Donor program-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Program response estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Program response estimates",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.programs supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Program response estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Program response estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_programs_03/example.png",
+    "svg": "B_programs_03/example.svg",
+    "pdf": "B_programs_03/example.pdf",
+    "tsv": "B_programs_03/example.tsv",
+    "spec": "B_programs_03/input/example.spec.json",
+    "preview": "B_programs_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "abae24a9b6ea4c24522b340be5a866a321ef69fd25ea905ddfd26ae0e0a0afd3",
+    "svg": "31f8cb29a69ae78e15effcf67199a3b377ce1678e43c45d8afc0e4e814a3ec83",
+    "pdf": "390f6dda2458a5d155260c2ae90387fef9dc74b9f7f43f20308ccbbfbf4a4276",
+    "tsv": "844615e7b95efe3aaa4c0f84cce9b564d156f7dd546ff09abfe9fd10f6fcb1d5",
+    "spec": "5b7c9eea912241ef04468ec23568747ee98c6a7d07ded37a7fc76cfb797063dc"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_programs_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "abae24a9b6ea4c24522b340be5a866a321ef69fd25ea905ddfd26ae0e0a0afd3",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each final PNG viewed separately: program membership, donor raincloud and named trajectory/cohort synthesis; ORA universe coverage, aligned uncertainty and background alternatives, complete term overlap. Custom reading layout retains all rows, units and distinct upstream donor n.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

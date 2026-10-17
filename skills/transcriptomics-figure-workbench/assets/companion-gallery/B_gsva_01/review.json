@@ -1,0 +1,84 @@
+{
+  "id": "B_gsva_01",
+  "title": "Gene-set coverage in the measured universe",
+  "chapters": [
+    "bulk.gsva"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 115,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Gene-set coverage in the measured universe",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Gene-set coverage in the measured universe; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Gene-set coverage in the measured universe",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsva supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Gene-set coverage in the measured universe; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Gene-set coverage in the measured universe; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsva_01/example.png",
+    "svg": "B_gsva_01/example.svg",
+    "pdf": "B_gsva_01/example.pdf",
+    "tsv": "B_gsva_01/example.tsv",
+    "spec": "B_gsva_01/input/example.spec.json",
+    "preview": "B_gsva_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "335324695b8758f8daf6bcaaf54aa593748020d1bde6012318bab0f020ec2adf",
+    "svg": "617ad72a080bbe18c7c80e628aba571c716ffff0dd36d46152181242708502a1",
+    "pdf": "6924677ab375472bdabc4f0fd3be9902fb99247139298ae90a44fdaccf035b1f",
+    "tsv": "2ab1059a34f0a52cc56a0e2b1acc4c282c3bc9e677953396b13e1a03a696ef29",
+    "spec": "5b93e7523b3d9565e1698f4566a8309e49c4d5893986773b0395916c1b402b52"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 175.98672222222223,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 13.125990249895747,
+    "p10_pt": 13.125990249895747,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsva_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "335324695b8758f8daf6bcaaf54aa593748020d1bde6012318bab0f020ec2adf",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG viewed: complete donor/numerical support, explicit uncertainty lanes and separate scale definitions; native GSEA curve remains primary and these provide coverage, ranking and gene-support companions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

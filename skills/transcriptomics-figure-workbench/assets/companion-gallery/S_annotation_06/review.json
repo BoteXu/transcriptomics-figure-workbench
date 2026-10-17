@@ -1,0 +1,84 @@
+{
+  "id": "S_annotation_06",
+  "title": "Discordant calls retained for review",
+  "chapters": [
+    "single_cell.annotation"
+  ],
+  "stage": "validation",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 259,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Discordant calls retained for review",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Discordant calls retained for review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Discordant calls retained for review",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.annotation supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Discordant calls retained for review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Discordant calls retained for review; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_annotation_06/example.png",
+    "svg": "S_annotation_06/example.svg",
+    "pdf": "S_annotation_06/example.pdf",
+    "tsv": "S_annotation_06/example.tsv",
+    "spec": "S_annotation_06/input/example.spec.json",
+    "preview": "S_annotation_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "b9124b6acc6d66bae41b1a9b281865e8f3a849b584df67af27988b46fcf1a55b",
+    "svg": "288660dcf019c12049a2223a7c36c4455feb227ec2b5869cce1f80f348f5fe5d",
+    "pdf": "7780e4db397629bf52fe59baa3b0a780d8c2444dda4e6247bf549da54a553948",
+    "tsv": "9851470f6fa720faf9599ebc073cb9ba608d1a2498c83a8640386ce283bad405",
+    "spec": "4b72e0735b0a63bbccb5d5030aaabf96f113798c096400fc20c21f7288f6b3f8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_annotation_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b9124b6acc6d66bae41b1a9b281865e8f3a849b584df67af27988b46fcf1a55b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected annotation cohort intervals and discordance classes; child-lineage support, positive/exclusion marker matrix, complete child composition, donor effects and alternative choices. Complete readable labels and interval table; composed page has distinct information channels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

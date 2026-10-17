@@ -1,0 +1,89 @@
+{
+  "id": "B_noncoding_04",
+  "title": "RNA–target evidence classes",
+  "chapters": [
+    "bulk.noncoding"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 193,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "RNA–target evidence classes",
+        "x_label": "",
+        "y_label": "",
+        "definition": "RNA–target evidence classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied evidence indicator",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "RNA–target evidence classes",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.noncoding supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "RNA–target evidence classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "RNA–target evidence classes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_noncoding_04/example.png",
+    "svg": "B_noncoding_04/example.svg",
+    "pdf": "B_noncoding_04/example.pdf",
+    "tsv": "B_noncoding_04/example.tsv",
+    "spec": "B_noncoding_04/input/example.spec.json",
+    "preview": "B_noncoding_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "d513f4a8c24b56de802054f1d8ea71c46d1d6d8f9e521a6038698971122e4110",
+    "svg": "a09bad84bbd517ef65fe4e3b71af87784288ca7adf3ff38abc4c6e76c48f6108",
+    "pdf": "79121e0db5c9163c78ced0563243c90029b44cfaf1badff130055aa5b1652858",
+    "tsv": "53c53f9167ec16ea5704c4f9037c5692f1ebb0de30e5f1910ab27070ac9d0e55",
+    "spec": "90e073453a291414790a9d00c1bd61a92f0f17fe3370a81100efcc09619006ed"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 27,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_noncoding_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d513f4a8c24b56de802054f1d8ea71c46d1d6d8f9e521a6038698971122e4110",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected final PNGs: complete selected PPI rectangle and effect rows remain readable; connectivity support, dose profiles and replication rows have visible channels; noncoding mapping, effect, donor distributions, evidence classes and cohort rows have clear labels. No clipping or collisions in single or expanded layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

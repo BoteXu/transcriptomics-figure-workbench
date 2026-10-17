@@ -1,0 +1,89 @@
+{
+  "id": "S_gene_support_02",
+  "title": "Supporting-gene donor-level effects",
+  "chapters": [
+    "single_cell.gene_support"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 315,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Supporting-gene donor-level effects",
+        "x_label": "Donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Supporting-gene donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Supporting-gene donor-level effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.gene_support supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Supporting-gene donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Supporting-gene donor-level effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_gene_support_02/example.png",
+    "svg": "S_gene_support_02/example.svg",
+    "pdf": "S_gene_support_02/example.pdf",
+    "tsv": "S_gene_support_02/example.tsv",
+    "spec": "S_gene_support_02/input/example.spec.json",
+    "preview": "S_gene_support_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "7cd9b024c6bd394542a06569eefd6ba2cb407144c78095b098e740a80beed22d",
+    "svg": "e124c143559da9351dd25c69a9799138fc8159583b8ac672cf0c98b456da245a",
+    "pdf": "35e833f4f0cc681722fdfe255beb8da64321da24f847bebea0d356add809cca7",
+    "tsv": "6a37116d2eef71614625d72c09bd51554c121144e8ee4816c7a8e6d4026e2ca6",
+    "spec": "28802a54095fb817e6b3f043e5115843b5d2991d1584ebf4e45a0a047d8846c8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_gene_support_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7cd9b024c6bd394542a06569eefd6ba2cb407144c78095b098e740a80beed22d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: clear donor rainclouds, aligned effect tables, full denominators and readable branch profiles; single and custom layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

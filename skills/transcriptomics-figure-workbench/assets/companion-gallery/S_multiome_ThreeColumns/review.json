@@ -1,0 +1,120 @@
+{
+  "id": "S_multiome_ThreeColumns",
+  "title": "Single cell · multiome — complementary evidence",
+  "chapters": [
+    "single_cell.multiome"
+  ],
+  "stage": "layout",
+  "family": "fraction,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 424,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Paired-modality support within donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Paired-modality support within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Motif and RNA response evidence",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Motif and RNA response evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied standardized effect",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Regulatory association in independent donors",
+        "x_label": "Peak–gene coefficient difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Regulatory association in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · multiome — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.multiome supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Paired-modality support within donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Motif and RNA response evidence; all quantities are supplied frozen channels, with explicitly declared units and scope. | Regulatory association in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 3
+  },
+  "definition": "Paired-modality support within donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Motif and RNA response evidence; all quantities are supplied frozen channels, with explicitly declared units and scope. | Regulatory association in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multiome_ThreeColumns/example.png",
+    "svg": "S_multiome_ThreeColumns/example.svg",
+    "pdf": "S_multiome_ThreeColumns/example.pdf",
+    "tsv": "S_multiome_ThreeColumns/example.tsv",
+    "spec": "S_multiome_ThreeColumns/input/example.spec.json",
+    "preview": "S_multiome_ThreeColumns/preview.jpg"
+  },
+  "sha256": {
+    "png": "7052f33b1679f90cfe41f81880025f763904cf6d057de6b3ff0190f138c771ce",
+    "svg": "c2046696b183ce0d4d993a223ad5b40b9f4a4826e9242b234492de1b4472fd5d",
+    "pdf": "e42e2ee12bb0421dee111294bba479bc50d0393a749b5ae9065ca1581c5dce3d",
+    "tsv": "714e7a98cf5830bad5f23e9b5bb766e0c893342acab3892265752f4812815abd",
+    "spec": "d0977bd778b677f3062d4ce46bffc857fbed6921cd2bb4ff4a470f372eafb66c"
+  },
+  "readability": {
+    "target_width_mm": 594,
+    "native_width_mm": 702.621666501457,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 143,
+    "smallest_pt": 9.299457035725288,
+    "p10_pt": 9.299457035725288,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multiome_ThreeColumns",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7052f33b1679f90cfe41f81880025f763904cf6d057de6b3ff0190f138c771ce",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNG review: peak-gene units and cohort-specific independent n explicit; modality legend, matrix values, full intervals and single/two/three-column layouts readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

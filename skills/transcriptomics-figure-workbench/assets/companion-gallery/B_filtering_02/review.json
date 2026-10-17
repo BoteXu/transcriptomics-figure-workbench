@@ -1,0 +1,84 @@
+{
+  "id": "B_filtering_02",
+  "title": "Gene-retention sensitivity",
+  "chapters": [
+    "bulk.filtering"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 26,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Gene-retention sensitivity",
+        "x_label": "Declared count threshold",
+        "y_label": "Retained fraction",
+        "definition": "Gene-retention sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "gene",
+        "id": "p1"
+      }
+    ],
+    "title": "Gene-retention sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.filtering supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Gene-retention sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Gene-retention sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_filtering_02/example.png",
+    "svg": "B_filtering_02/example.svg",
+    "pdf": "B_filtering_02/example.pdf",
+    "tsv": "B_filtering_02/example.tsv",
+    "spec": "B_filtering_02/input/example.spec.json",
+    "preview": "B_filtering_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "09fd33de7f92da3ed11c7bbd25c1f745b4c52f6c413f19bb04630c69af92cc4f",
+    "svg": "2d1624db44d9c36779e55ff5097c93fbcc674f30ffa1cebb023b112cb2f07e03",
+    "pdf": "851ca089697ec70519250a899a3b50a8a7324e1536b94fbf2b213c5a99df1660",
+    "tsv": "e1944c0486406e22577f52ed1ecc4b5298328b5e48e5abff50fdb2ca9a6a3964",
+    "spec": "a228677c659a5bb012fed6ad1e66516f8e0c34d93dbf2333409a91d90f0679e1"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 25,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_filtering_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "09fd33de7f92da3ed11c7bbd25c1f745b4c52f6c413f19bb04630c69af92cc4f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual exported PNG viewed individually after repair: opaque histogram outlines, visible ribbon definition, explicit reference and repeated-model labels, correct decreasing filter retention, decreasing feature counts, paired RLE medians, twelve-donor batch totals, complete variance components, fully readable wrapped term names and wide three-column guide lanes. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,87 @@
+{
+  "id": "S_velocity_04",
+  "title": "STAT1 response along supplied latent time",
+  "chapters": [
+    "single_cell.velocity"
+  ],
+  "stage": "interpretation",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 339,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "STAT1 response along supplied latent time",
+        "x_label": "Supplied latent time",
+        "y_label": "Supplied normalized STAT1 response",
+        "definition": "STAT1 response along supplied latent time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "STAT1 response along supplied latent time",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.velocity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "STAT1 response along supplied latent time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "STAT1 response along supplied latent time; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_velocity_04/example.png",
+    "svg": "S_velocity_04/example.svg",
+    "pdf": "S_velocity_04/example.pdf",
+    "tsv": "S_velocity_04/example.tsv",
+    "spec": "S_velocity_04/input/example.spec.json",
+    "preview": "S_velocity_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "a50605e1365e002683dc5200f4617cfb494c6d1155b90c7c9594c1f7a2752803",
+    "svg": "dca0951c23ed6a5ef6bd7e919b0a4f056240bf6314534721a7257bb1d7cbac8a",
+    "pdf": "4d81c8385eab0f5c7ef7e6c3df9f9e9ebffe496d36dcf2e83e5dc5a741c97e69",
+    "tsv": "17797669bd6a506ef8feac7be8a94e0388a899c20a1365ddd5762352231b4be3",
+    "spec": "151e1be41053130c55b305f779f501439bf023bf0bc7e96f01dc99bd2b68fe38"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_velocity_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a50605e1365e002683dc5200f4617cfb494c6d1155b90c7c9594c1f7a2752803",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual exports: complete ordered trajectory, phase diagnostic columns, donor confidence raincloud, latent-time ranges and model sensitivity tables have readable axes, complete values and clear legends.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,88 @@
+{
+  "id": "S_ligand_target_03",
+  "title": "Ligand-to-target potential",
+  "chapters": [
+    "single_cell.ligand_target"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 355,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Ligand-to-target potential",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Ligand-to-target potential; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied target potential",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Ligand-to-target potential",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.ligand_target supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Ligand-to-target potential; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Ligand-to-target potential; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_ligand_target_03/example.png",
+    "svg": "S_ligand_target_03/example.svg",
+    "pdf": "S_ligand_target_03/example.pdf",
+    "tsv": "S_ligand_target_03/example.tsv",
+    "spec": "S_ligand_target_03/input/example.spec.json",
+    "preview": "S_ligand_target_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "9765e9e79cf9964f74bfd31d09295d3f95c9d28504aacfa958f8dd290d8c2965",
+    "svg": "04bcff15177c4b6920c7b33aa421c94bf512bfb9e593e74baa5ed4735a46bf38",
+    "pdf": "e590fb4fe59626b9c6835813f00f6ccf417e7caa54d190a2f4f93fdd1364fdd1",
+    "tsv": "1794e72a5d723b36ed3b38c20373bad6716dce891908179d4958d6ba61a97c0e",
+    "spec": "fbafbc63510c9124e28dfa8d26e17f912c37a7ebcb94ead1182f9399b007fa51"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_ligand_target_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9765e9e79cf9964f74bfd31d09295d3f95c9d28504aacfa958f8dd290d8c2965",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual single exports individually inspected: prior coverage retains full denominators, ligand activity estimates and bounds align with the numeric lane, and ligand-target weights remain explicit with a bounded color scale.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,88 @@
+{
+  "id": "S_trajectory_01",
+  "title": "Donor support across branches",
+  "chapters": [
+    "single_cell.trajectory"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 328,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Donor support across branches",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Donor support across branches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied cell count",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Donor support across branches",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.trajectory supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor support across branches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor support across branches; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_trajectory_01/example.png",
+    "svg": "S_trajectory_01/example.svg",
+    "pdf": "S_trajectory_01/example.pdf",
+    "tsv": "S_trajectory_01/example.tsv",
+    "spec": "S_trajectory_01/input/example.spec.json",
+    "preview": "S_trajectory_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "e7d5ed61830a878af14fed2a391f2d3a92d630652310d3fa7cc646061bbb469d",
+    "svg": "9e379a32daa9c62b37c593a20c68eb380062265f86b0b4c9c904e724f091f202",
+    "pdf": "24316fdec6de8938fa937f54d87fbd57383631db6da6f253bd229b14483d1243",
+    "tsv": "7f97f8b826c96ec02b9548a9654e51949b416875ecf10c18fdd68dc5dc2e8da5",
+    "spec": "1bcad2a8bb78d37d067c62f21dd4e4b6b05467ae626bf8f9263af255a683d7a4"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_trajectory_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e7d5ed61830a878af14fed2a391f2d3a92d630652310d3fa7cc646061bbb469d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: clear donor rainclouds, aligned effect tables, full denominators and readable branch profiles; single and custom layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,88 @@
+{
+  "id": "S_splicing_05",
+  "title": "Splicing-event effects across identities",
+  "chapters": [
+    "single_cell.splicing"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 389,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Splicing-event effects across identities",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Splicing-event effects across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied delta PSI",
+        "limits": [
+          -1,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Splicing-event effects across identities",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.splicing supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Splicing-event effects across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Splicing-event effects across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_splicing_05/example.png",
+    "svg": "S_splicing_05/example.svg",
+    "pdf": "S_splicing_05/example.pdf",
+    "tsv": "S_splicing_05/example.tsv",
+    "spec": "S_splicing_05/input/example.spec.json",
+    "preview": "S_splicing_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "26d7d85fcee3bda49ee605b01eea531ab5b9a894c4ff52b823fdcc5eba7cdf3d",
+    "svg": "2e2646445cf89a0cce9ba365db240c5b802ab42d23f4d5e293e861f2db671cbf",
+    "pdf": "a9da2bcff86e3d813bae3c52e13053fe139d8dc18fa617c3e81beab3d2af4126",
+    "tsv": "b36e6fe07169890a074c05ba9c0afe58bd71da96b6fc8531027ac0a1e944903e",
+    "spec": "f7e16d1dc3f6d326bc6258dfe914ee4b19b23cfe9ad40a0aaf4e1535b2999210"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 202.41059441092324,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 52,
+    "smallest_pt": 11.412446106009455,
+    "p10_pt": 11.412446106009455,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_splicing_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "26d7d85fcee3bda49ee605b01eea531ab5b9a894c4ff52b823fdcc5eba7cdf3d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: gene-event labels and delta PSI bounds retained, complete guide controls and guide-level estimates visible, and two-column versus larger one-column pages have aligned tables and clear reading order.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

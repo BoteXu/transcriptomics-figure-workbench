@@ -1,0 +1,122 @@
+{
+  "id": "S_abundance_Layout",
+  "title": "Single cell · abundance — complementary evidence",
+  "chapters": [
+    "single_cell.abundance"
+  ],
+  "stage": "layout",
+  "family": "matrix,effects,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 290,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Neighborhood support across donors",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied neighborhood cells",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Donor-aware neighborhood abundance effects",
+        "x_label": "Supplied log abundance ratio · interval",
+        "y_label": "",
+        "definition": "Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Neighborhood and model-choice sensitivity",
+        "x_label": "Log neighborhood abundance ratio · supplied 95% interval",
+        "y_label": "",
+        "definition": "Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · abundance — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.abundance supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope. | Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Neighborhood support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-aware neighborhood abundance effects; all quantities are supplied frozen channels, with explicitly declared units and scope. | Neighborhood and model-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_abundance_Layout/example.png",
+    "svg": "S_abundance_Layout/example.svg",
+    "pdf": "S_abundance_Layout/example.pdf",
+    "tsv": "S_abundance_Layout/example.tsv",
+    "spec": "S_abundance_Layout/input/example.spec.json",
+    "preview": "S_abundance_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "ceb275e6fd50906e0d548f5234d391b13edec9abbd5b3fe6e4d7376a920dcde7",
+    "svg": "e6f7d174836e57bbedd11d1bbb7ccbf4283af6aacf76c50e8def7d670a3f95c9",
+    "pdf": "2fca9e93a192887ad340c54ba00b02af46e4aec26c4790d14bf703414e96be64",
+    "tsv": "83336505749fc61de657f6129463c21cb5452ed443821071593cb86b5d3c43da",
+    "spec": "db8f32bd0c17323ee582a129fbb071ada405dadf608f8714f227537c63b2ac4c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 182,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_abundance_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ceb275e6fd50906e0d548f5234d391b13edec9abbd5b3fe6e4d7376a920dcde7",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected PNGs: complete one-column neighborhood support/effects and pseudobulk donor rainclouds/tables; explicit units, omitted-donor n and readable row spacing retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

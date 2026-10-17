@@ -1,0 +1,89 @@
+{
+  "id": "B_gsea_multitrack_04",
+  "title": "Leading-edge support across the common gene scope",
+  "chapters": [
+    "bulk.gsea_multitrack"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 111,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Leading-edge support across the common gene scope",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Leading-edge support across the common gene scope; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit leading-edge membership",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Leading-edge support across the common gene scope",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea_multitrack supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Leading-edge support across the common gene scope; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Leading-edge support across the common gene scope; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_multitrack_04/example.png",
+    "svg": "B_gsea_multitrack_04/example.svg",
+    "pdf": "B_gsea_multitrack_04/example.pdf",
+    "tsv": "B_gsea_multitrack_04/example.tsv",
+    "spec": "B_gsea_multitrack_04/input/example.spec.json",
+    "preview": "B_gsea_multitrack_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "7d80d4b868a407ee9eda50e7059441884b065a1847943e0a42d352567af26fb4",
+    "svg": "05823b5b4d71c483c3652a6bd38d50eebaa526d7578450ecb9c9457d40a7aa63",
+    "pdf": "6d318584aa98b082ab2bbcad8b1abb014a23bea54a5fc15d0d9a185736477bb7",
+    "tsv": "636d107f84b35c111396e75bbd2b4fdf5dfade9ea4297066ef56c8a581afacb6",
+    "spec": "08cb4570fb15c22bc7787478f0d06682091777d854b0c85b6e3e62de9fbc04b7"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 157.0562392903209,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 42,
+    "smallest_pt": 14.708107175098782,
+    "p10_pt": 14.708107175098782,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_multitrack_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7d80d4b868a407ee9eda50e7059441884b065a1847943e0a42d352567af26fb4",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual complete fraction and binary leading-edge views inspected: clear denominators, full zero-to-one scales and readable labels without overlap. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

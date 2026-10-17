@@ -1,0 +1,94 @@
+{
+  "id": "B_filtering_04",
+  "title": "Effect stability across filter choices",
+  "chapters": [
+    "bulk.filtering"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 28,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Effect stability across filter choices",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Effect stability across filter choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Effect stability across filter choices",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.filtering supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Effect stability across filter choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Effect stability across filter choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_filtering_04/example.png",
+    "svg": "B_filtering_04/example.svg",
+    "pdf": "B_filtering_04/example.pdf",
+    "tsv": "B_filtering_04/example.tsv",
+    "spec": "B_filtering_04/input/example.spec.json",
+    "preview": "B_filtering_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "47c1d06610f6002a0f2d8418bd85f4e1175c85cc2aa37fba4bc53adbc7c25dd9",
+    "svg": "103a634ceb8395a7891ccb121c650b8682616ca27e6df81eeeb6ea02dc3641ae",
+    "pdf": "7c31abdf16d0892aaf25534aab280cac545c62fc6e60a561ac8aa3977b78d2ab",
+    "tsv": "9533b52b7f01c9bf44e783d4f0d192cf1e19e22edb951fa276ef5fb4119c914a",
+    "spec": "893e7f6712881ffa5299e561eca5d6c5cab8b5d1bd72c5b172479810f259d01a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 34,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_filtering_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "47c1d06610f6002a0f2d8418bd85f4e1175c85cc2aa37fba4bc53adbc7c25dd9",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual PNGs viewed: matching read units, explicit profile ranges, complete retention denominators, clear overlapping bin outlines, and aligned primary/alternative effects with coherent supplied intervals; one-column reading layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

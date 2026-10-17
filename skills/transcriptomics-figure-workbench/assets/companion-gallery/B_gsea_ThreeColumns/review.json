@@ -1,0 +1,122 @@
+{
+  "id": "B_gsea_ThreeColumns",
+  "title": "Bulk · gsea — complementary evidence",
+  "chapters": [
+    "bulk.gsea"
+  ],
+  "stage": "layout",
+  "family": "profile,effects,matrix",
+  "variant": true,
+  "large_data": true,
+  "order": 93,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Complete ranked-universe statistic",
+        "x_label": "Supplied gene rank",
+        "y_label": "Supplied ranking statistic",
+        "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Normalized enrichment across contrasts",
+        "x_label": "Supplied NES · upstream interval",
+        "y_label": "",
+        "definition": "Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "matrix",
+        "title": "Leading-edge overlap across pathways",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied overlap fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · gsea — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.gsea supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope. | Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope. | Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 3
+  },
+  "definition": "Complete ranked-universe statistic; all quantities are supplied frozen channels, with explicitly declared units and scope. | Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope. | Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "value",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_ThreeColumns/example.png",
+    "svg": "B_gsea_ThreeColumns/example.svg",
+    "pdf": "B_gsea_ThreeColumns/example.pdf",
+    "tsv": "B_gsea_ThreeColumns/example.tsv",
+    "spec": "B_gsea_ThreeColumns/input/example.spec.json",
+    "preview": "B_gsea_ThreeColumns/preview.jpg"
+  },
+  "sha256": {
+    "png": "3fa4a925d41713e272625f27a98eea9e08023c210ad3332e3828f0ba0b8b2209",
+    "svg": "bbe97d428173859507a33f53d22709c4392575690304488470e13e5cac3385ca",
+    "pdf": "14e20ea4457d966dcbfcf70ee5b6617543026e97b8ffc593fbe797fccb03f702",
+    "tsv": "20a4a5cb9263d93cd89cabff943756ec9d7a274e4711a0af6277ba9ad39766a9",
+    "spec": "1592c8ed60b0b335d64b923e5dab73a639136f3d2500ab31c1699aa7a978b976"
+  },
+  "readability": {
+    "target_width_mm": 594,
+    "native_width_mm": 701.0399999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 163,
+    "smallest_pt": 9.320438206093806,
+    "p10_pt": 9.320438206093806,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_ThreeColumns",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3fa4a925d41713e272625f27a98eea9e08023c210ad3332e3828f0ba0b8b2209",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: full term labels and typed upstream support counts remain readable in single, two-column, three-column and larger one-column compositions; no clipping or legend collision.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

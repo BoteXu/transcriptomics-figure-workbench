@@ -1,0 +1,84 @@
+{
+  "id": "S_qc_04",
+  "title": "Cell-retention audit within each donor",
+  "chapters": [
+    "single_cell.qc"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 221,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Cell-retention audit within each donor",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Cell-retention audit within each donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Cell-retention audit within each donor",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.qc supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Cell-retention audit within each donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Cell-retention audit within each donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_qc_04/example.png",
+    "svg": "S_qc_04/example.svg",
+    "pdf": "S_qc_04/example.pdf",
+    "tsv": "S_qc_04/example.tsv",
+    "spec": "S_qc_04/input/example.spec.json",
+    "preview": "S_qc_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "3b60929ff0715ce378beef93c071414a9ecf7d15751e7e04ded63c5b85982aec",
+    "svg": "20fa49e0b97a1e2a0268619e6a004487f796ebd0e9d9aa290ab95a85dc5c653c",
+    "pdf": "5af0cbb5b3f678a2fe8aeaa6733568c461f50d44a7264cc40b45444261cc5fb6",
+    "tsv": "f2da561c1d0e7157def89e9349b4fac7f7e018417f8faa2e5ac44ebd5ac2b5ff",
+    "spec": "0060328c80e450fee614b2edf960e7492e7ab5c4b2fbe62290c3c5cd1ec94b19"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_qc_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3b60929ff0715ce378beef93c071414a9ecf7d15751e7e04ded63c5b85982aec",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed complete single and composed exports: supplier intervals and q aligned, capture proportions and design code separated, six independent donors per cloud visible, retained cell categories fully represented. No label collision or clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

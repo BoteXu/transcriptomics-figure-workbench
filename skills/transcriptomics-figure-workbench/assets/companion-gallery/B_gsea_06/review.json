@@ -1,0 +1,88 @@
+{
+  "id": "B_gsea_06",
+  "title": "Leading-edge overlap across pathways",
+  "chapters": [
+    "bulk.gsea"
+  ],
+  "stage": "validation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 90,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Leading-edge overlap across pathways",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied overlap fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Leading-edge overlap across pathways",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Leading-edge overlap across pathways; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_06/example.png",
+    "svg": "B_gsea_06/example.svg",
+    "pdf": "B_gsea_06/example.pdf",
+    "tsv": "B_gsea_06/example.tsv",
+    "spec": "B_gsea_06/input/example.spec.json",
+    "preview": "B_gsea_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "895bbe72ece379020bd5b6139fd724b7001de41f76b024acb9ccb77f6376e51d",
+    "svg": "d095e359f72347f693a54a6dab5d81e075dd6a2bac6696ba41cc5648ed602747",
+    "pdf": "3f9d22c0d6aab8989ebcdf13a1276c9aeff16ae7a986e7abb1497c8a6ab96773",
+    "tsv": "0a6de0037f295272066f99c91e775822b90458982b56a27f3e3adcf8699e30c5",
+    "spec": "e4d893ccbc36d9dd24e5d08b412358e358644dd0affe5020d97b2d7439a8bb57"
+  },
+  "readability": {
+    "target_width_mm": 240,
+    "native_width_mm": 333.5663606418651,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 7.914467139072356,
+    "p10_pt": 7.914467139072356,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "895bbe72ece379020bd5b6139fd724b7001de41f76b024acb9ccb77f6376e51d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs inspected: full six-term overlap labels and counts readable; all 12 mixture categories uniquely coloured with complete legend; reading layout complete; droplet axes explicitly log10 UMI and gene counts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

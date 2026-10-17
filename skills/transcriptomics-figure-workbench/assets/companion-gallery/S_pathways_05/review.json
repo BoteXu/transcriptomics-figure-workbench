@@ -1,0 +1,89 @@
+{
+  "id": "S_pathways_05",
+  "title": "Celltype-specific leading-edge support",
+  "chapters": [
+    "single_cell.pathways"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 310,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Celltype-specific leading-edge support",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Celltype-specific leading-edge support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit leading-edge membership",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Celltype-specific leading-edge support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.pathways supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Celltype-specific leading-edge support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Celltype-specific leading-edge support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_pathways_05/example.png",
+    "svg": "S_pathways_05/example.svg",
+    "pdf": "S_pathways_05/example.pdf",
+    "tsv": "S_pathways_05/example.tsv",
+    "spec": "S_pathways_05/input/example.spec.json",
+    "preview": "S_pathways_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "92fd46f95403b98dd027e5a14568c2947b3837c1c80498203798cf16b7fce3db",
+    "svg": "4332dc94ab2adedb801eed440257b52c84e26592739c0043d13d08f1c3eba830",
+    "pdf": "69d934e64ba81af490e686e59dfd1d739b38a9348ac694f7f2062169fbc1cd30",
+    "tsv": "2714fe35cdc7666704ab36ad3a87c031f6baaef616935e5fd807094addd5cc36",
+    "spec": "6ea244ae6468f8a3bc3b609a9c2560d22bed8f358174e63cf8fd7f2f9c8ae9c0"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 164.53097039890065,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 14.039909899026735,
+    "p10_pt": 14.039909899026735,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_pathways_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "92fd46f95403b98dd027e5a14568c2947b3837c1c80498203798cf16b7fce3db",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: pseudobulk omission support, multi-contrast independent counts and signed effects, pathway coverage/NES/membership have visible units and readable legends in full-data custom pages.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

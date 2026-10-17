@@ -1,0 +1,88 @@
+{
+  "id": "B_gsva_04",
+  "title": "GSVA scores across independent donors",
+  "chapters": [
+    "bulk.gsva"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 118,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "GSVA scores across independent donors",
+        "x_label": "",
+        "y_label": "",
+        "definition": "GSVA scores across independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied GSVA score",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "GSVA scores across independent donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsva supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "GSVA scores across independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "GSVA scores across independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsva_04/example.png",
+    "svg": "B_gsva_04/example.svg",
+    "pdf": "B_gsva_04/example.pdf",
+    "tsv": "B_gsva_04/example.tsv",
+    "spec": "B_gsva_04/input/example.spec.json",
+    "preview": "B_gsva_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "d5dc4a17a6625a93a727670c4c21d7acb1bb48ba0f70eceeab9352ee71ec6cbf",
+    "svg": "b479d09bc0e0e1b94a5c06a82b5a9892acbf45b8719f88eec34d707dc4037bee",
+    "pdf": "e98c7636b0f3d07a746a453e08fa7d69758e25f7210de06862af6bc38235dcef",
+    "tsv": "7e40d5c212c5a837e8ed98cf3cf61c514bb19d14e3fc50eb73a392870cbbfb34",
+    "spec": "97b9b86a948ac6ee837d7cb511b61dc32cabce5d9a414961707883b5875e5219"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 57,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsva_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d5dc4a17a6625a93a727670c4c21d7acb1bb48ba0f70eceeab9352ee71ec6cbf",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "All nine final exports separately inspected: bounded donor GSVA distributions, complete donor score matrix, declared GSVA/TF contrast units, independent-cohort n, readable evidence and expanded reading layouts. Legends and numerical tables do not overlap.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

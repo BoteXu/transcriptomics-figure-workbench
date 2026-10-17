@@ -1,0 +1,89 @@
+{
+  "id": "B_batch_02",
+  "title": "Complete covariate-associated variance",
+  "chapters": [
+    "bulk.batch"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 40,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Complete covariate-associated variance",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Complete covariate-associated variance; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied variance fraction",
+        "row_composition": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Complete covariate-associated variance",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.batch supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete covariate-associated variance; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete covariate-associated variance; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_batch_02/example.png",
+    "svg": "B_batch_02/example.svg",
+    "pdf": "B_batch_02/example.pdf",
+    "tsv": "B_batch_02/example.tsv",
+    "spec": "B_batch_02/input/example.spec.json",
+    "preview": "B_batch_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "0d42bfc8a30de9d9b0c34a926e991d0ab0cf7508322ae874b3e79bb4219efcad",
+    "svg": "99087bc18ccb728dbec4ab5ae280f10a3493faa9141080062e0488aa12d1b49f",
+    "pdf": "da5e4654ff0b04015e23605527281a75ddf60fcbb09ace981522d88398654722",
+    "tsv": "7070ba5757b6d3440feea8d75090e85c9a9a3bd0e520655c229daa2da5c43425",
+    "spec": "15bad45c0792167fcb4e024f5d7a146c26d40301273b300134b3e2f039880313"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_batch_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0d42bfc8a30de9d9b0c34a926e991d0ab0cf7508322ae874b3e79bb4219efcad",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual exported PNG viewed individually after repair: opaque histogram outlines, visible ribbon definition, explicit reference and repeated-model labels, correct decreasing filter retention, decreasing feature counts, paired RLE medians, twelve-donor batch totals, complete variance components, fully readable wrapped term names and wide three-column guide lanes. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

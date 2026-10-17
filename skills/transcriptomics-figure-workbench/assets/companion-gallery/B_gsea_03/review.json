@@ -1,0 +1,95 @@
+{
+  "id": "B_gsea_03",
+  "title": "Normalized enrichment across contrasts",
+  "chapters": [
+    "bulk.gsea"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 87,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Normalized enrichment across contrasts",
+        "x_label": "Supplied NES · upstream interval",
+        "y_label": "",
+        "definition": "Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Normalized enrichment across contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Normalized enrichment across contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_03/example.png",
+    "svg": "B_gsea_03/example.svg",
+    "pdf": "B_gsea_03/example.pdf",
+    "tsv": "B_gsea_03/example.tsv",
+    "spec": "B_gsea_03/input/example.spec.json",
+    "preview": "B_gsea_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "e03e2891cb9e93b14564f0fb6d99dba0c99e8ec6ee814df7149fafb3fbc9a9b4",
+    "svg": "5164ef8ca971f2ad8a80190c7aaab1303629bea0ef9bbef5b9d681d2f6058869",
+    "pdf": "46f61ff26db32fac66fe0ac2204c611ff7ab644f6c9bdf90d1f8f83f43d4dc04",
+    "tsv": "c27c0fc634571855a03f1fff0b2860a647266a0e7242d5501abbaa757d9f8528",
+    "spec": "cbf47fd2738d203542f691993393e6df62a57b1b1950d3906cd2d3cedfd7e002"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e03e2891cb9e93b14564f0fb6d99dba0c99e8ec6ee814df7149fafb3fbc9a9b4",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: ranked-universe diagnostic, supplied NES comparisons and leading-edge overlap; contrast estimates plus concordance. Dense reading layout expands to every row and three-column alternative remains non-overlapping; these accompany the native running-score core.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

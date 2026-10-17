@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "24e566d637810d0211de21360e6598759ce722cc8b859a8e9c9d6cdd78d0bc2a",
+    "sha256": "d0b137ee38adfb72050b77143fe947380df3ff9324275742d898e211d02f0519",
     "numeric_columns": [
       "x",
       "y",
@@ -17,16 +17,16 @@
     "panels": [
       {
         "kind": "curve",
-        "title": "Frozen junction/coverage profiles",
-        "x_label": "Declared genomic offset",
-        "y_label": "Supplied coverage",
+        "title": "STAT1 fictional locus coverage",
+        "x_label": "Relative position in declared STAT1 window",
+        "y_label": "Normalized coverage",
         "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
         "interval_label": "Shading: supplied illustrative range",
         "id": "p1"
       },
       {
         "kind": "interval",
-        "title": "Junction usage differences",
+        "title": "STAT1 junction-usage contrasts",
         "x_label": "Supplied delta PSI and 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
@@ -34,15 +34,15 @@
       },
       {
         "kind": "stack",
-        "title": "Transcript usage",
-        "x_label": "Supplied fraction",
+        "title": "STAT1 transcript usage",
+        "x_label": "Fraction of quantified STAT1 transcripts",
         "y_label": "",
         "denominator_definition": "All explicitly declared observations for each displayed object; full segments sum to one",
         "id": "p3"
       }
     ],
     "title": "Celltype-specific RNA processing",
-    "scope_note": "Fictional frozen inputs · single_cell · no analysis performed",
+    "scope_note": "Selected identity: T cells · fictional normalized STAT1 window · no genomic-coordinate claim",
     "columns": "auto"
   },
   "theme": {
@@ -172,10 +172,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional splicing display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

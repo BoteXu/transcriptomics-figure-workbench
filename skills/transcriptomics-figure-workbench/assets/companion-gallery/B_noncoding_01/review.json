@@ -1,0 +1,84 @@
+{
+  "id": "B_noncoding_01",
+  "title": "RNA-biotype annotation and mapping",
+  "chapters": [
+    "bulk.noncoding"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 190,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "RNA-biotype annotation and mapping",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "RNA-biotype annotation and mapping; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "RNA-biotype annotation and mapping",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.noncoding supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "RNA-biotype annotation and mapping; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "RNA-biotype annotation and mapping; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_noncoding_01/example.png",
+    "svg": "B_noncoding_01/example.svg",
+    "pdf": "B_noncoding_01/example.pdf",
+    "tsv": "B_noncoding_01/example.tsv",
+    "spec": "B_noncoding_01/input/example.spec.json",
+    "preview": "B_noncoding_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "62e3b197ef22b8ca69325b994664cac14163102b6fc6c239f26bc71a5c4ddaf5",
+    "svg": "d115dcddf349f33aa7cbd8a8feae2bf7328f22978ab5485ea28b7a08f2d6d9b2",
+    "pdf": "7c80dbcd39f3ef10991c48ed2af210c0ef1a097ad95e04af5d2e2b50be045f36",
+    "tsv": "63652503d45e589e7169ddb611f565d53631ad4be5f422f50fb635009b0cf868",
+    "spec": "d6b1578602eccd0dfae7c61094473e59ecfe336e9aea51368047e4174d541e4e"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_noncoding_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "62e3b197ef22b8ca69325b994664cac14163102b6fc6c239f26bc71a5c4ddaf5",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected final PNGs: complete selected PPI rectangle and effect rows remain readable; connectivity support, dose profiles and replication rows have visible channels; noncoding mapping, effect, donor distributions, evidence classes and cohort rows have clear labels. No clipping or collisions in single or expanded layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

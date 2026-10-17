@@ -37,7 +37,7 @@ def plot_lineage_view(data,theme,*,mode,title,definition,level_order=None,root_i
             q=nodes[nodes.level==level];bottom=0
             for r in q.itertuples():b.barh(i,r.n,left=bottom,color=pal[level],alpha=.4+.5*(list(q.node).index(r.node)+1)/len(q),height=.55,ec='white',lw=1);b.text(bottom+r.n/2,i,str(int(r.n)),ha='center',va='center',fontsize=10);bottom+=r.n
         b.set(yticks=range(len(levels)),yticklabels=levels,xlabel='Cells / same complete denominator');b.invert_yaxis();b.set_title('B  Cluster sizes at each resolution',loc='left',fontsize=12,fontweight='bold')
-        fig.text(.5,.005,'Node area: 120 + 500 n/max(n) pt² · edge width: .6 + 3 n/max(node n) · opacity: .2 + .65 incoming fraction',ha='center',fontsize=9)
+        fig.text(.5,.005,'Node area and edge width: cell count · edge opacity: incoming fraction',ha='center',fontsize=9)
     else:
         cells=checked(data[data.record_type=='cell'],['cell','branch','x','y','pseudotime','donor'],['x','y','pseudotime']);nodes=checked(data[data.record_type=='node'],['node','x','y'],['x','y']);edges=checked(data[data.record_type=='edge'],['source','target'])
         if cells.cell.duplicated().any() or nodes.node.duplicated().any() or edges.duplicated(['source','target']).any() or root_id not in set(nodes.node):raise ValueError('Unique cells, frozen graph and explicit root required')

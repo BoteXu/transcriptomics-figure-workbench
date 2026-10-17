@@ -4,7 +4,7 @@
   "renderer": "figure_enrichment_story.plot_enrichment_story",
   "input": {
     "path": "example.tsv",
-    "sha256": "340b4c7ca2d9c13ac1aebf5624967ed572696867d4cf4c724249b1689cbdc021",
+    "sha256": "4f3c90b99ed87ce834fdc528808f4ef509d9856eb9159c9936de5bd751aa600f",
     "numeric_columns": [
       "padj",
       "count",
@@ -16,7 +16,7 @@
   },
   "parameters": {
     "mode": "gsea_comparison",
-    "title": "Celltype pathway responses",
+    "title": "T-cell donor pathways across specified contrasts",
     "background_definition": "Fictional complete 1200-gene ranked universe",
     "tested_size": 1200,
     "query_size": null,
@@ -160,10 +160,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional story:gsea_comparison display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

@@ -1,0 +1,84 @@
+{
+  "id": "S_design_01",
+  "title": "Capture contribution within independent donors",
+  "chapters": [
+    "single_cell.design"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 204,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Capture contribution within independent donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Capture contribution within independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Capture contribution within independent donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.design supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Capture contribution within independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Capture contribution within independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_design_01/example.png",
+    "svg": "S_design_01/example.svg",
+    "pdf": "S_design_01/example.pdf",
+    "tsv": "S_design_01/example.tsv",
+    "spec": "S_design_01/input/example.spec.json",
+    "preview": "S_design_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "70d6cb0eca871872c51460d3d343d06053a6dd34c256dc95a12f3db98fc01b40",
+    "svg": "90b09a8d0f9e6d2f91327806729e3b4603557adea6db6bf778aec2dda686fa90",
+    "pdf": "1ea4246897fcf5ce991c79c463b2b589fec45e18c4ae303d6d87d9766590c9a4",
+    "tsv": "994d56bc1218451662a6632968e97fe4177edd886aa422311eb31bc8c73a6177",
+    "spec": "b9648e4a5b0570f38caa03ffffea8d9e3d581d7a4cdafe8a4054a4f7c1be8390"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.87272222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.110609443077012,
+    "p10_pt": 15.110609443077012,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_design_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "70d6cb0eca871872c51460d3d343d06053a6dd34c256dc95a12f3db98fc01b40",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually inspected: aligned full-support matrices, evidence indicators, junction tracks and independent-library intervals; one-column enlarged reading example retains complete labels and rows. Donor capture design and cell-support matrices are legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

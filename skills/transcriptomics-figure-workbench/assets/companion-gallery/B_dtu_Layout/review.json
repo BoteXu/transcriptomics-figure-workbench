@@ -1,0 +1,120 @@
+{
+  "id": "B_dtu_Layout",
+  "title": "Bulk · dtu — complementary evidence",
+  "chapters": [
+    "bulk.dtu"
+  ],
+  "stage": "layout",
+  "family": "fraction,fraction,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 153,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Quantifiable transcript support",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Quantifiable transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "fraction",
+        "title": "Within-gene STAT1 transcript usage by donor",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Within-gene STAT1 transcript usage by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Transcript-version sensitivity",
+        "x_label": "Transcript-fraction change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Transcript-version sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "explicit_effects": [
+          -0.3125,
+          0.3125,
+          0
+        ],
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · dtu — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "bulk.dtu supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Quantifiable transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope. | Within-gene STAT1 transcript usage by donor; all quantities are supplied frozen channels, with explicitly declared units and scope. | Transcript-version sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Quantifiable transcript support; all quantities are supplied frozen channels, with explicitly declared units and scope. | Within-gene STAT1 transcript usage by donor; all quantities are supplied frozen channels, with explicitly declared units and scope. | Transcript-version sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_dtu_Layout/example.png",
+    "svg": "B_dtu_Layout/example.svg",
+    "pdf": "B_dtu_Layout/example.pdf",
+    "tsv": "B_dtu_Layout/example.tsv",
+    "spec": "B_dtu_Layout/input/example.spec.json",
+    "preview": "B_dtu_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "1a89014e46fee1443d892774d196fb3fd4b3f615fc1655f62bde5493725b4ac4",
+    "svg": "69624f9922e870875231b104f5c6f3cf9506d4b3bd1c2a4247fe5c0cd83638b8",
+    "pdf": "0dba4670e85d3e0105e994056afca1d091acfd20ec5bcc28a99081bd284c02d9",
+    "tsv": "58dbcb9a3bb08d6fcd6e4de95b5e54c62206fa39485d8a092e38a0e587cea903",
+    "spec": "c844cce62c25e1788b072b85d2a7b37cd7113dc31197fe486099bef9662c402b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 83,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_dtu_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1a89014e46fee1443d892774d196fb3fd4b3f615fc1655f62bde5493725b4ac4",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: transcript usage, paired donor response, cohort effect summaries and larger layouts have aligned labels, explicit intervals and complete numeric tables; signed scales and denominators remain visible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

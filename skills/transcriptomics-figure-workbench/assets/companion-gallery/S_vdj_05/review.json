@@ -1,0 +1,89 @@
+{
+  "id": "S_vdj_05",
+  "title": "Donor-level diversity contrasts",
+  "chapters": [
+    "single_cell.vdj"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 380,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-level diversity contrasts",
+        "x_label": "Supplied diversity contrast · interval",
+        "y_label": "",
+        "definition": "Donor-level diversity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-level diversity contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.vdj supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor-level diversity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor-level diversity contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_vdj_05/example.png",
+    "svg": "S_vdj_05/example.svg",
+    "pdf": "S_vdj_05/example.pdf",
+    "tsv": "S_vdj_05/example.tsv",
+    "spec": "S_vdj_05/input/example.spec.json",
+    "preview": "S_vdj_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "5a0aab642f5420105ded3242c839995340da4c7339c5f5e035b72cf6ee7fc80c",
+    "svg": "aa7543a73a752b329975e38e7a5cbb75a30ed7c83ac5fad39c8381792352afa6",
+    "pdf": "a0a21eedec760863e800f5272c670ae81d477b669f666ac3c8c310cae3513d50",
+    "tsv": "539ef63e6aa772cb34f59e8519c988358825c7d0bb9cdef0205e341f363af034",
+    "spec": "08e02fc721a26fb710fd5bc0f702f54d15bea8ce752cd6e3da66754535985ad1"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_vdj_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5a0aab642f5420105ded3242c839995340da4c7339c5f5e035b72cf6ee7fc80c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: explicit CNV units and supplied contrasts, complete clone/VDJ categories, frozen size bins and compartment sharing are legible; complete denominators and effect bounds are retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,120 @@
+{
+  "id": "B_ora_Evidence",
+  "title": "Bulk · ora — complementary evidence",
+  "chapters": [
+    "bulk.ora"
+  ],
+  "stage": "interpretation",
+  "family": "matrix,effects,matrix",
+  "variant": true,
+  "large_data": false,
+  "order": 83,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Selected queries and tested-universe coverage",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Selected queries and tested-universe coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied coverage fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Prespecified enrichment effect estimates",
+        "x_label": "Supplied log odds ratio · supplied interval",
+        "y_label": "",
+        "definition": "Prespecified enrichment effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "matrix",
+        "title": "Term overlap and redundancy context",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Term overlap and redundancy context; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied overlap fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · ora — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ora supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Selected queries and tested-universe coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified enrichment effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope. | Term overlap and redundancy context; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Selected queries and tested-universe coverage; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified enrichment effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope. | Term overlap and redundancy context; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ora_Evidence/example.png",
+    "svg": "B_ora_Evidence/example.svg",
+    "pdf": "B_ora_Evidence/example.pdf",
+    "tsv": "B_ora_Evidence/example.tsv",
+    "spec": "B_ora_Evidence/input/example.spec.json",
+    "preview": "B_ora_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "8811059290002e9871925baa2ee2a07c6afc6a4d602cd5f8052624701b53f311",
+    "svg": "52e9d95bbc7fff0d65bb39253127888d42d5ccea4016aff4d8963f45623ce0cf",
+    "pdf": "7fa1c9c9e41b4aa125036d2b936defb19312fc31fd7b8320cf07ba437d1d0c41",
+    "tsv": "ec1d01ba2742b2bb8fe572451229901fda56a76631b4165cb885c23779df633d",
+    "spec": "5e097775e783c400d406d1f58a234af0c6db78dfbdb063aaf6e7ef603d735dd3"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 116,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ora_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "8811059290002e9871925baa2ee2a07c6afc6a4d602cd5f8052624701b53f311",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: full term labels and typed upstream support counts remain readable in single, two-column, three-column and larger one-column compositions; no clipping or legend collision.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

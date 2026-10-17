@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "804f88895dbfcc6cfa0a93e2734f6f70badc7234bbd1614aa69219f2a3d48b56",
+    "sha256": "2b0a4b6c509e3c53c902dbe2fcc6545434fc8270c74487d436aa8ba9c3806c69",
     "numeric_columns": [
       "x",
       "y",
@@ -19,21 +19,21 @@
       {
         "kind": "curve",
         "title": "Explained-variance profile",
-        "x_label": "Scaled PC order",
-        "y_label": "Supplied variance percent",
+        "x_label": "Principal component",
+        "y_label": "Explained variance (%)",
         "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
         "interval_label": "Shading: supplied illustrative range",
         "id": "p1"
       },
       {
         "kind": "matrix",
-        "title": "Selected PC loadings",
+        "title": "Selected ordinary PCA loadings",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied loading",
+        "value_label": "Unit-vector loading",
         "limits": [
-          -2,
-          2
+          -1,
+          1
         ],
         "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
         "size_label": "Coverage",
@@ -172,10 +172,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional pca display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

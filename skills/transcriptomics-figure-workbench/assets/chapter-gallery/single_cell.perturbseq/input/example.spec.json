@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "ac99c1158ffff3eb0cc59c6861b49c77de83a38aa9afbfea92b4144f2c020dad",
+    "sha256": "6f553a3e3176212860627c13cd97dda175a96d68524207434903d9787095a1bd",
     "numeric_columns": [
       "value",
       "x",
@@ -25,8 +25,8 @@
       },
       {
         "kind": "interval",
-        "title": "Guide-level donor response",
-        "x_label": "Supplied effect and 95% interval",
+        "title": "STAT1 response by guide",
+        "x_label": "Log2 STAT1 fold change · 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -36,7 +36,7 @@
         "title": "Perturbation programs",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied effect",
+        "value_label": "Standardized program-score difference",
         "limits": [
           -2,
           2
@@ -178,10 +178,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional perturbation display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

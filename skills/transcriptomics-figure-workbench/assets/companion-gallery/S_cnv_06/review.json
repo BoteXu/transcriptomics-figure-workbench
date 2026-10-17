@@ -1,0 +1,89 @@
+{
+  "id": "S_cnv_06",
+  "title": "Orthogonal genomic support by chromosome",
+  "chapters": [
+    "single_cell.cnv"
+  ],
+  "stage": "validation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 373,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Orthogonal genomic support by chromosome",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Orthogonal genomic support by chromosome; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit support indicator",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Orthogonal genomic support by chromosome",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.cnv supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Orthogonal genomic support by chromosome; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Orthogonal genomic support by chromosome; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_cnv_06/example.png",
+    "svg": "S_cnv_06/example.svg",
+    "pdf": "S_cnv_06/example.pdf",
+    "tsv": "S_cnv_06/example.tsv",
+    "spec": "S_cnv_06/input/example.spec.json",
+    "preview": "S_cnv_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "bcbf4cce3d7ca9fba7137175d4ecd905685378fcc4c0317a0e62d3e46c1338a7",
+    "svg": "818c9aba86bd0bc0e5af657984528ab5e3154e3c8f3783280f79b43ad1af191c",
+    "pdf": "39fad905597e2670b9d306948b2befc8cb0a7b7e48f5ed695874071b6ac8f154",
+    "tsv": "55cdadc0e54be1c0780cc89f0639481f444eb23d98e85650f99187b63f60c84f",
+    "spec": "ec28b0c78eba04ae9ff3626ea6f119b56a287d4d66a5e3cb11ca2e4f3645230c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 27,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_cnv_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "bcbf4cce3d7ca9fba7137175d4ecd905685378fcc4c0317a0e62d3e46c1338a7",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: explicit CNV units and supplied contrasts, complete clone/VDJ categories, frozen size bins and compartment sharing are legible; complete denominators and effect bounds are retained.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

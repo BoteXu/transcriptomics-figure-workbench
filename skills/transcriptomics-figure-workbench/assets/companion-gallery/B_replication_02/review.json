@@ -1,0 +1,85 @@
+{
+  "id": "B_replication_02",
+  "title": "Effect concordance across independent cohorts",
+  "chapters": [
+    "bulk.replication"
+  ],
+  "stage": "interpretation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 162,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Effect concordance across independent cohorts",
+        "x_label": "Discovery effect",
+        "y_label": "Replication effect",
+        "definition": "Effect concordance across independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Effect concordance across independent cohorts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Effect concordance across independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Effect concordance across independent cohorts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_replication_02/example.png",
+    "svg": "B_replication_02/example.svg",
+    "pdf": "B_replication_02/example.pdf",
+    "tsv": "B_replication_02/example.tsv",
+    "spec": "B_replication_02/input/example.spec.json",
+    "preview": "B_replication_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "ffb832a1a2f23ad882ced571fad7d538cda1eac74cef86c2eb1811cc2fc1fd70",
+    "svg": "2aaee846c97db733390a5b5dda25904cef91a3f629110471913444030fd371ba",
+    "pdf": "7a4ae1753f3ed1a0ea206233c6ee30836b48e80a82c96642e5308bed701aed25",
+    "tsv": "23906e9cbadc6e3e4094373864bc40fcd99b6088784c559e25442e4663a1df3b",
+    "spec": "9656d8d64d9d790fd08186c9b2ee25d41ffe821a4bacb0f167f5ddfa7d7db168"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 156.61315885416667,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 14.749718458530044,
+    "p10_pt": 14.749718458530044,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_replication_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ffb832a1a2f23ad882ced571fad7d538cda1eac74cef86c2eb1811cc2fc1fd70",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed seven actual PNGs: complete feature scope, cohort concordance, named STAT1 synthesis with per-cohort n, signed effect matrix, time-model sensitivity and correctly bounded stepwise survival curves/endpoint denominator. Readable labels, tables and interval key.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

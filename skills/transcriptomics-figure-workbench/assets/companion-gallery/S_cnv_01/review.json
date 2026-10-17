@@ -1,0 +1,88 @@
+{
+  "id": "S_cnv_01",
+  "title": "Reference-normal support by donor",
+  "chapters": [
+    "single_cell.cnv"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 368,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Reference-normal support by donor",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Reference-normal support by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied reference cells",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Reference-normal support by donor",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.cnv supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reference-normal support by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Reference-normal support by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_cnv_01/example.png",
+    "svg": "S_cnv_01/example.svg",
+    "pdf": "S_cnv_01/example.pdf",
+    "tsv": "S_cnv_01/example.tsv",
+    "spec": "S_cnv_01/input/example.spec.json",
+    "preview": "S_cnv_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "2f5ba3ea9a28c6c6eb13c16505587668dceb43849ad40e1a2596462be2f151ec",
+    "svg": "31f4ff67757e99439cf91b6b8841c6ec368d27a10a628fb8c7922c215edf8118",
+    "pdf": "68dac024f6bd10528b771bf07d1a51cd5293ac275c03f82e5a3fbb0d4bce994d",
+    "tsv": "b0cc7214884ed4d2b5ae4bb342d273d99782fd5337843c4c78ac906e08a95e84",
+    "spec": "ac43ace5d35df411f59ceae9d5777f792c30d6532a04883ab0e932875682180c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_cnv_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "2f5ba3ea9a28c6c6eb13c16505587668dceb43849ad40e1a2596462be2f151ec",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual exports individually viewed: full coverage, donor AUCell raincloud, signed target priors and donor/reference support are readable with explicit complete quantities.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,85 @@
+{
+  "id": "S_hvg_pca_04",
+  "title": "Feature support across donors",
+  "chapters": [
+    "single_cell.hvg_pca"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 243,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Feature support across donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Feature support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "donor_denominator": true,
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Feature support across donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.hvg_pca supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Feature support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Feature support across donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_hvg_pca_04/example.png",
+    "svg": "S_hvg_pca_04/example.svg",
+    "pdf": "S_hvg_pca_04/example.pdf",
+    "tsv": "S_hvg_pca_04/example.tsv",
+    "spec": "S_hvg_pca_04/input/example.spec.json",
+    "preview": "S_hvg_pca_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "5cb67d89f45ca37099e48d587ed860ecaabdac70b5e8e4f11cb2b144f1f9be25",
+    "svg": "620d46015f8d5a9660949e1ed2b63aefaf8ed5d17155b50c1a6f0b6ec3a5349a",
+    "pdf": "8afb22496ec28a22eb7a3d710fbd2721ce6dadf2c5a2f601a27cb7d953f050d0",
+    "tsv": "979f4e54400058ab686b5db9680d26e029a8102ce5597096a2b1b674c1c069ee",
+    "spec": "9ef6f120013f616ed349b7374d37818b4bb6f40b13c9e4562e36e9c45fe8658c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_hvg_pca_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5cb67d89f45ca37099e48d587ed860ecaabdac70b5e8e4f11cb2b144f1f9be25",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed final PNGs: barcode/calling profiles, raincloud donor QC, probability/scoring matrices and supplied counts have clear legends and complete identities; layout spacing and labels reviewed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

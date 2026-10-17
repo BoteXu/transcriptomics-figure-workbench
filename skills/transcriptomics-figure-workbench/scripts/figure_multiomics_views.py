@@ -141,7 +141,7 @@ def plot_diagnostic_panel(data,theme,*,mode,model_definition,reference_definitio
         for g in pal:
             ix=d.group==g;areas=15+cook_area_scale*d.loc[ix,'cook'] if mode=='influence' else 25;ax.scatter(x[ix],y[ix],c=pal[g],s=areas,ec='white',lw=.35,label=g,alpha=.8)
         if mode!='scale_location':ax.axhline(0,c=theme['roles']['border'],lw=.7)
-        ax.set(xlabel='Supplied leverage' if mode=='influence' else 'Supplied fitted response',ylabel='Supplied standardized residual' if mode=='influence' else 'sqrt(abs(supplied standardized residual))' if mode=='scale_location' else 'Supplied residual');fig.legend(*ax.get_legend_handles_labels(),bbox_to_anchor=(.77,.83),loc='upper left',frameon=False)
+        ax.set(xlabel='Supplied leverage' if mode=='influence' else 'Supplied fitted response',ylabel='Supplied standardized residual' if mode=='influence' else r'$\sqrt{|r_{standardized}|}$' if mode=='scale_location' else 'Supplied residual');fig.legend(*ax.get_legend_handles_labels(),bbox_to_anchor=(.77,.83),loc='upper left',frameon=False)
         if mode=='influence':fig.text(.77,.50,'Area (pt2)\n15 + '+str(cook_area_scale)+' Cook\nGiven Cook distance\nNo exclusion rule',fontsize=8)
     ax.set_title(title);fig.text(.12,.07,'Frozen diagnostics; no fitting, LOWESS, normality test or automatic case exclusion.',fontsize=8)
     return _finish(fig,data,theme,'model_diagnostic_'+mode,mode=mode,model_definition=model_definition,reference_definition=reference_definition,cook_area_scale=cook_area_scale,model_fit='none; one frozen diagnostic table reused by all modes')

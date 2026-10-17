@@ -1,0 +1,82 @@
+{
+  "id": "S_vdj_06",
+  "title": "Paired clonotype summaries over follow-up",
+  "chapters": [
+    "single_cell.vdj"
+  ],
+  "stage": "interpretation",
+  "family": "paired",
+  "variant": false,
+  "large_data": false,
+  "order": 381,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "paired",
+        "title": "Paired clonotype summaries over follow-up",
+        "x_label": "Repeated condition",
+        "y_label": "Supplied Shannon diversity score",
+        "definition": "Paired donor Shannon diversity in natural-log units; nonnegative fictional supplied values, not re-estimated during plotting.",
+        "id": "p1"
+      }
+    ],
+    "title": "Paired clonotype summaries over follow-up",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.vdj supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Paired donor Shannon diversity in natural-log units; nonnegative fictional supplied values, not re-estimated during plotting.",
+    "columns": "auto"
+  },
+  "definition": "Paired donor Shannon diversity in natural-log units; nonnegative fictional supplied values, not re-estimated during plotting.",
+  "requirements": [
+    "unit",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_vdj_06/example.png",
+    "svg": "S_vdj_06/example.svg",
+    "pdf": "S_vdj_06/example.pdf",
+    "tsv": "S_vdj_06/example.tsv",
+    "spec": "S_vdj_06/input/example.spec.json",
+    "preview": "S_vdj_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "e46ef75f693d01e636de031ce174ef212beb44d12d62ad831472e85558da5812",
+    "svg": "454499acc57f60a33bcd59fac4aa849d2aa4385cc12d81f3aa1e30c17629be09",
+    "pdf": "90c360fbfa074802985275dbc1a09fe6cc4c24b37d2a73bdfe32b637a08f9fa9",
+    "tsv": "944dcdb2128472fbd923f2b7a92dfc3c7101d04efed8c01187489bc62a82916c",
+    "spec": "93c14f0b6322451d4e02c569e9ddef867b87df8e66dc846ea1537e9d51869e79"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 12,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_vdj_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e46ef75f693d01e636de031ce174ef212beb44d12d62ad831472e85558da5812",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: regulon activity versus support, CNV reference/clone identity consistency and orthogonal channels, paired Shannon summaries and physical splicing intervals are readable; legends and row heights checked at final export.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

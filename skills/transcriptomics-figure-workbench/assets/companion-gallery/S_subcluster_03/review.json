@@ -1,0 +1,84 @@
+{
+  "id": "S_subcluster_03",
+  "title": "Child-state composition within donors",
+  "chapters": [
+    "single_cell.subcluster"
+  ],
+  "stage": "interpretation",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 265,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Child-state composition within donors",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Child-state composition within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Child-state composition within donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.subcluster supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Child-state composition within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Child-state composition within donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_subcluster_03/example.png",
+    "svg": "S_subcluster_03/example.svg",
+    "pdf": "S_subcluster_03/example.pdf",
+    "tsv": "S_subcluster_03/example.tsv",
+    "spec": "S_subcluster_03/input/example.spec.json",
+    "preview": "S_subcluster_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "36d8ae6fcff6a01f64a7673a92db1265c5ee7e295dda6b63572da90c4a9871ab",
+    "svg": "513034011217068a90531f3c63535c73442b34048f87617bf7f8c6fb2d8a26b5",
+    "pdf": "13d84a22b073010589276b2e389dc5eb6909d9f15ba961ce7c7cbebe91f2c1e4",
+    "tsv": "a7d9353967772321f04c1c07e3534091d1e2c7b16434ad1e5c5fba78cbe11daa",
+    "spec": "6d49ef630f6e987a14fcb83d3295d5fa30752439a89ec2ea5ead7bd35d2402b6"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_subcluster_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "36d8ae6fcff6a01f64a7673a92db1265c5ee7e295dda6b63572da90c4a9871ab",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected annotation cohort intervals and discordance classes; child-lineage support, positive/exclusion marker matrix, complete child composition, donor effects and alternative choices. Complete readable labels and interval table; composed page has distinct information channels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

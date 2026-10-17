@@ -1,0 +1,108 @@
+{
+  "id": "B_filtering_Evidence",
+  "title": "Bulk · filtering — complementary evidence",
+  "chapters": [
+    "bulk.filtering"
+  ],
+  "stage": "interpretation",
+  "family": "scatter,profile,matrix",
+  "variant": true,
+  "large_data": false,
+  "order": 30,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Mean expression and detection",
+        "x_label": "Supplied mean log count",
+        "y_label": "Detection fraction",
+        "definition": "Mean expression and detection; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "Gene-retention sensitivity",
+        "x_label": "Declared count threshold",
+        "y_label": "Retained fraction",
+        "definition": "Gene-retention sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "gene",
+        "id": "p2"
+      },
+      {
+        "kind": "matrix",
+        "title": "Detection support across groups",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Detection support across groups; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Detected donor fraction",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · filtering — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.filtering supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Mean expression and detection; all quantities are supplied frozen channels, with explicitly declared units and scope. | Gene-retention sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope. | Detection support across groups; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Mean expression and detection; all quantities are supplied frozen channels, with explicitly declared units and scope. | Gene-retention sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope. | Detection support across groups; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "value",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_filtering_Evidence/example.png",
+    "svg": "B_filtering_Evidence/example.svg",
+    "pdf": "B_filtering_Evidence/example.pdf",
+    "tsv": "B_filtering_Evidence/example.tsv",
+    "spec": "B_filtering_Evidence/input/example.spec.json",
+    "preview": "B_filtering_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "26025435e9e8037bc2419fa815790b72e033fa7b0996c9dba70e8f8e460709c8",
+    "svg": "0a14fb76224e6b76c93ef546b96b09841db9ef09ced373b1044187b84b1c8d92",
+    "pdf": "af9d2761ca7c04fe253f3625d796ba17fc30130912107d2ae6bb77146873b9ca",
+    "tsv": "d97b5c670d1f4d6984643f0b0b2a230c4b0ad5e095029cb8fa995c875b16a07b",
+    "spec": "bc49e70e44cc2257889afcf9e92fa1cb97d09c509209343e44f2f8f188a40f5a"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 304.79999999999995,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 73,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_filtering_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "26025435e9e8037bc2419fa815790b72e033fa7b0996c9dba70e8f8e460709c8",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG inspected: one-column complete quality/adapter/retention lanes, clear histogram outlines and labels, decreasing filter retention, complete detection matrix and attached legend; no clipping or collapsed guides. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

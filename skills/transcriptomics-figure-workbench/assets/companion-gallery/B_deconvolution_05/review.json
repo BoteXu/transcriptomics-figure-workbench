@@ -1,0 +1,94 @@
+{
+  "id": "B_deconvolution_05",
+  "title": "Reference-choice sensitivity of mixture effects",
+  "chapters": [
+    "bulk.deconvolution"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 135,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Reference-choice sensitivity of mixture effects",
+        "x_label": "ln(Treated fraction / Control fraction) · supplied 95% interval",
+        "y_label": "",
+        "definition": "Reference-choice sensitivity of mixture effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Reference-choice sensitivity of mixture effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.deconvolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reference-choice sensitivity of mixture effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Reference-choice sensitivity of mixture effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_deconvolution_05/example.png",
+    "svg": "B_deconvolution_05/example.svg",
+    "pdf": "B_deconvolution_05/example.pdf",
+    "tsv": "B_deconvolution_05/example.tsv",
+    "spec": "B_deconvolution_05/input/example.spec.json",
+    "preview": "B_deconvolution_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "8a94ad9824fffc2fd3bdcf8058cb843bafcaab6f84470816fb2d2ade5895742a",
+    "svg": "ff276630534f840a54dd7a76d08cbabf98764f562aee3601af68251cff1eb14e",
+    "pdf": "83b79df7f53aced1015dd87cca9facc91842fa4410e4ca80ee8b14f28004c016",
+    "tsv": "29285f263e8ff04021eff13df1b71bdbbe9cfbd327da24ce2ee80f7a7e89f69a",
+    "spec": "d6677d2b300be2884883a2dbe2c14772291115551c3e13062da21859963f7a9b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_deconvolution_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "8a94ad9824fffc2fd3bdcf8058cb843bafcaab6f84470816fb2d2ade5895742a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Nine actual PNGs viewed individually: reconstruction diagnostics and reference-choice estimates; physical exon/junction lane, donor PSI and delta-PSI results, event classes, independent replication and adaptive reading/combined pages. Supplied arc counts and all donor points remain readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,84 @@
+{
+  "id": "B_ppi_02",
+  "title": "Protein mapping and coverage",
+  "chapters": [
+    "bulk.ppi"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 177,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Protein mapping and coverage",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Protein mapping and coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Protein mapping and coverage",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ppi supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Protein mapping and coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Protein mapping and coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ppi_02/example.png",
+    "svg": "B_ppi_02/example.svg",
+    "pdf": "B_ppi_02/example.pdf",
+    "tsv": "B_ppi_02/example.tsv",
+    "spec": "B_ppi_02/input/example.spec.json",
+    "preview": "B_ppi_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "530ed3725a87767de34ace8a05bc054b8d2a889ef5cce9e83e13f40a6cd720fa",
+    "svg": "df0ada9bde6fb64973bd7417dad82039e77fb29a197a5b2520885cd0df2c4e85",
+    "pdf": "b51a9f92d34ce304599ae787c0975af7d4ca75d5367c9fb2006a0a9098a49073",
+    "tsv": "77e5f96bb340884db2607f8523338d96a5d8d9f542d536aced0b6dc06de177db",
+    "spec": "a2681ab791009499b115c3c6d0601efc6d16ea8af8dca222ceb0cf577108c947"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ppi_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "530ed3725a87767de34ace8a05bc054b8d2a889ef5cce9e83e13f40a6cd720fa",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Eleven individual final PNGs inspected: supplied risk counts and step curves with intervals/calibration, source-specific PPI support and full symmetric interaction scope with explicit zeros, node response and cohort validation. Single and adaptive combined layouts remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

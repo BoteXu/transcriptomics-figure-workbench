@@ -1,0 +1,89 @@
+{
+  "id": "S_states_03",
+  "title": "Donor-level state-program effects",
+  "chapters": [
+    "single_cell.states"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 323,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-level state-program effects",
+        "x_label": "Donor state-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-level state-program effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-level state-program effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.states supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor-level state-program effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor-level state-program effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_states_03/example.png",
+    "svg": "S_states_03/example.svg",
+    "pdf": "S_states_03/example.pdf",
+    "tsv": "S_states_03/example.tsv",
+    "spec": "S_states_03/input/example.spec.json",
+    "preview": "S_states_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "b3ee20cc42557c679f2b876d0256a07d9d72198dfc54680d6407a16996f2851a",
+    "svg": "adf634643c9f82f3e4e901f697bb1687d5f683d2b5eabed059c70ebc682844b6",
+    "pdf": "5f86a8d3dd50fc81f08ea53408d079868fac30f61ac36f9363e472ec1d1093e6",
+    "tsv": "844615e7b95efe3aaa4c0f84cce9b564d156f7dd546ff09abfe9fd10f6fcb1d5",
+    "spec": "b333155ee57107ffa20cd6221c476f60532e5bd68cae1f3d9790e20cf987a1e7"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_states_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b3ee20cc42557c679f2b876d0256a07d9d72198dfc54680d6407a16996f2851a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: clear donor rainclouds, aligned effect tables, full denominators and readable branch profiles; single and custom layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

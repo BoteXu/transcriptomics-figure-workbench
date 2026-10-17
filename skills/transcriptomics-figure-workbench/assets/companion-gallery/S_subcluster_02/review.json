@@ -1,0 +1,88 @@
+{
+  "id": "S_subcluster_02",
+  "title": "Child-state positive and exclusion markers",
+  "chapters": [
+    "single_cell.subcluster"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 264,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Child-state positive and exclusion markers",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Child-state positive and exclusion markers; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied marker score",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Child-state positive and exclusion markers",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.subcluster supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Child-state positive and exclusion markers; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Child-state positive and exclusion markers; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_subcluster_02/example.png",
+    "svg": "S_subcluster_02/example.svg",
+    "pdf": "S_subcluster_02/example.pdf",
+    "tsv": "S_subcluster_02/example.tsv",
+    "spec": "S_subcluster_02/input/example.spec.json",
+    "preview": "S_subcluster_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "cd8d1f8f1b1456edb3bc057cd9650abdba1009175ace40291c9d4de1a8f2c915",
+    "svg": "cd3cff3509829a6034e3568a3f95cfcb27cd9c5e79b0d6a47b258a227634bf80",
+    "pdf": "e756f5f2d62fdb8b3ae806cb291d60d73419d26316d54390fe45235b72bd7769",
+    "tsv": "c919d816ed26867dd9b0fed5f5e490964a9f836594be03b8698aa2f81368919f",
+    "spec": "399e02e0b77d2561e743219c8e980297d054170e25869893e965a8b151170bc9"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_subcluster_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "cd8d1f8f1b1456edb3bc057cd9650abdba1009175ace40291c9d4de1a8f2c915",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected annotation cohort intervals and discordance classes; child-lineage support, positive/exclusion marker matrix, complete child composition, donor effects and alternative choices. Complete readable labels and interval table; composed page has distinct information channels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

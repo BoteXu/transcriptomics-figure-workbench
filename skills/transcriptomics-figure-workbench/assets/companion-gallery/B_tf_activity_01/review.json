@@ -1,0 +1,84 @@
+{
+  "id": "B_tf_activity_01",
+  "title": "Regulon target coverage",
+  "chapters": [
+    "bulk.tf_activity"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 123,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Regulon target coverage",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Regulon target coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Regulon target coverage",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.tf_activity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Regulon target coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Regulon target coverage; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_tf_activity_01/example.png",
+    "svg": "B_tf_activity_01/example.svg",
+    "pdf": "B_tf_activity_01/example.pdf",
+    "tsv": "B_tf_activity_01/example.tsv",
+    "spec": "B_tf_activity_01/input/example.spec.json",
+    "preview": "B_tf_activity_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "10305467feeb5a68c155f12b11571759237baf1625037a0d902ebf1696629ebc",
+    "svg": "d68841ff8c085fb58d9c3f4bfcc6c4487d940c46894638b8ca4e57763dcee180",
+    "pdf": "63204e5a31d232fc53cd60b49d5604e8a4771f8e2307838b3f53af51e6955115",
+    "tsv": "0502b82a788942df037af33e73a0a4f8420a5a2ef8e27c9dd68a1586b96fccdf",
+    "spec": "7a1d4ee09e44bc75fb64821efb96a1e6f1bef42fae26af012b0e7928033db559"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_tf_activity_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "10305467feeb5a68c155f12b11571759237baf1625037a0d902ebf1696629ebc",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual PNGs inspected: named TF and target labels, all supplied donor points/cloud shapes, complete coverage denominators and signed matrix scale readable without overlap. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

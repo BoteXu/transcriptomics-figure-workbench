@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "e997d0af0f3b9e5af4a6e3155b64c05cf7c24f7f9aa01f1c48f10937cd2ac0b9",
+    "sha256": "70b29ef449d997a1de93c70d4c1f48c07b35cc269fa765b31c7e21f552653d0a",
     "numeric_columns": [
       "value",
       "fraction",
@@ -17,10 +17,10 @@
     "panels": [
       {
         "kind": "matrix",
-        "title": "Celltype-by-contrast effect atlas",
+        "title": "STAT1 celltype-by-contrast effects",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied log2 effect",
+        "value_label": "STAT1 log2 fold change",
         "limits": [
           -2,
           2
@@ -32,8 +32,8 @@
       },
       {
         "kind": "interval",
-        "title": "Prespecified celltype comparisons",
-        "x_label": "Supplied effect and 95% interval",
+        "title": "STAT1 primary contrast by identity",
+        "x_label": "STAT1 log2 fold change · 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -170,10 +170,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional multi_contrast display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

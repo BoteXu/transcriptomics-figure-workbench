@@ -1,0 +1,121 @@
+{
+  "id": "S_hvg_pca_Layout",
+  "title": "Single cell · hvg_pca — complementary evidence",
+  "chapters": [
+    "single_cell.hvg_pca"
+  ],
+  "stage": "layout",
+  "family": "scatter,matrix,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 246,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Feature dispersion and mean expression",
+        "x_label": "Supplied mean expression",
+        "y_label": "Supplied dispersion",
+        "definition": "Feature dispersion and mean expression; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "gene",
+        "id": "p1"
+      },
+      {
+        "kind": "matrix",
+        "title": "Selected genes and principal-component loadings",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Selected genes and principal-component loadings; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied loading",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Biological summaries across PC choices",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Biological summaries across PC choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · hvg_pca — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.hvg_pca supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Feature dispersion and mean expression; all quantities are supplied frozen channels, with explicitly declared units and scope. | Selected genes and principal-component loadings; all quantities are supplied frozen channels, with explicitly declared units and scope. | Biological summaries across PC choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Feature dispersion and mean expression; all quantities are supplied frozen channels, with explicitly declared units and scope. | Selected genes and principal-component loadings; all quantities are supplied frozen channels, with explicitly declared units and scope. | Biological summaries across PC choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "value",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_hvg_pca_Layout/example.png",
+    "svg": "S_hvg_pca_Layout/example.svg",
+    "pdf": "S_hvg_pca_Layout/example.pdf",
+    "tsv": "S_hvg_pca_Layout/example.tsv",
+    "spec": "S_hvg_pca_Layout/input/example.spec.json",
+    "preview": "S_hvg_pca_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "75d6a0df714aaca4e0ef82af927a48818984d9f70a91bae6970d8509a733df5f",
+    "svg": "369992df93b01e09ba9726f965cca7a69c311e5ea5bfa324994f15070edcf0b4",
+    "pdf": "171114717b69d46bdf8a43059d0e7ac35f23718a03c361a80a09b4128870fa4f",
+    "tsv": "00d4b785ca69c20b36ab64c88af5d2b40173ef59dc799da331e8d4dcb44ba2f5",
+    "spec": "9975f79ba75ee678b83ef21d0f989c60081c80c35ddde6ee5c14981f85073cb2"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 140,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_hvg_pca_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "75d6a0df714aaca4e0ef82af927a48818984d9f70a91bae6970d8509a733df5f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNG review: principal-component loadings use clean zero labels with supplied values preserved; all composition identities and legend entries retained. Evidence and one-column reading variants remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

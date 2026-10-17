@@ -1,0 +1,118 @@
+{
+  "id": "B_differential_Evidence",
+  "title": "Bulk · differential — complementary evidence",
+  "chapters": [
+    "bulk.differential"
+  ],
+  "stage": "interpretation",
+  "family": "profile,effects,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 53,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Binned dispersion summaries and fitted trend",
+        "x_label": "Supplied mean",
+        "y_label": "Supplied dispersion",
+        "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Prespecified gene effects with uncertainty",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Effect stability across prespecified models",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · differential — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.differential supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope. | Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified gene effects with uncertainty; all quantities are supplied frozen channels, with explicitly declared units and scope. | Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_differential_Evidence/example.png",
+    "svg": "B_differential_Evidence/example.svg",
+    "pdf": "B_differential_Evidence/example.pdf",
+    "tsv": "B_differential_Evidence/example.tsv",
+    "spec": "B_differential_Evidence/input/example.spec.json",
+    "preview": "B_differential_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "546d90e5ae4ced76966641dbf69eee3a902fec1adda48ed045fb70d1972b6312",
+    "svg": "5c4c7d8b1be2b0d28033a6280497f92b67309926e4639918ec3739e5172055b0",
+    "pdf": "aef67e243370572d30a64043581c095c818a40794df79454fa4a9ec0d85e77d1",
+    "tsv": "b366c7ef784458c3557c0d297fc3c29b76f8f8b0b067fb87d48102f6e6c9e594",
+    "spec": "850cc161edc2180addfa9e5b73dbe40e56d362cb7d87a1fac3e66e9ed413a74d"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 100,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_differential_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "546d90e5ae4ced76966641dbf69eee3a902fec1adda48ed045fb70d1972b6312",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: legible shrinkage comparison, supplied effect and model stability, composed evidence and reading layouts; factorial donor cells retain repeated-unit meaning.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

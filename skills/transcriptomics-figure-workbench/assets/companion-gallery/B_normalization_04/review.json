@@ -1,0 +1,84 @@
+{
+  "id": "B_normalization_04",
+  "title": "Mean–variance transformation diagnostics",
+  "chapters": [
+    "bulk.normalization"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 35,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Mean–variance transformation diagnostics",
+        "x_label": "Supplied mean",
+        "y_label": "Supplied variance",
+        "definition": "Mean–variance transformation diagnostics; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Mean–variance transformation diagnostics",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.normalization supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Mean–variance transformation diagnostics; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Mean–variance transformation diagnostics; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_normalization_04/example.png",
+    "svg": "B_normalization_04/example.svg",
+    "pdf": "B_normalization_04/example.pdf",
+    "tsv": "B_normalization_04/example.tsv",
+    "spec": "B_normalization_04/input/example.spec.json",
+    "preview": "B_normalization_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "63d594355f07288607a6a611a91e522399855519c26f9c8acb38c9172d2d7b28",
+    "svg": "e5f0bb6b6bc6d305cf6830742a11c0440d2785784a256e58ae9623e0c2a53932",
+    "pdf": "e0fede6c99c0b64ce9db5a3bf643d07f6b657673b6016085096cb72a9350f0f0",
+    "tsv": "9a47be82ed804d0c1fb9409293825e93fa0af209b18d36f7c9442ad81f3d5860",
+    "spec": "830beca647a4a8f5d971b0770b9b226ef6c858a93d879b109625c5c6aef6cd26"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_normalization_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "63d594355f07288607a6a611a91e522399855519c26f9c8acb38c9172d2d7b28",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected: rainclouds expose all six donor points and n per condition; mean-variance points and guide visible; sensitivity has paired model contexts, aligned numeric table and complete range. Composition remains legible with no overlap. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

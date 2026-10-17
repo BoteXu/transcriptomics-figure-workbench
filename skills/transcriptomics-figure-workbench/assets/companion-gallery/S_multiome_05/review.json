@@ -1,0 +1,90 @@
+{
+  "id": "S_multiome_05",
+  "title": "Frozen peak and gene-locus evidence",
+  "chapters": [
+    "single_cell.multiome"
+  ],
+  "stage": "function",
+  "family": "locus",
+  "variant": false,
+  "large_data": false,
+  "order": 420,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "locus",
+        "title": "Frozen peak and gene-locus evidence",
+        "x_label": "Genomic position · declared reference build",
+        "y_label": "",
+        "definition": "Frozen peak and gene-locus evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "locus_kind": "peak_link",
+        "coordinate_system": "0-based half-open",
+        "genome_build": "Explicit fictional reference v1; not a human locus",
+        "contig": "synthetic_contig_1",
+        "strand": "+",
+        "link_definition": "Supplied illustrative noncausal peak–gene association weight",
+        "id": "p1"
+      }
+    ],
+    "title": "Frozen peak and gene-locus evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.multiome supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Frozen peak and gene-locus evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Frozen peak and gene-locus evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "record_type",
+    "start",
+    "end",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multiome_05/example.png",
+    "svg": "S_multiome_05/example.svg",
+    "pdf": "S_multiome_05/example.pdf",
+    "tsv": "S_multiome_05/example.tsv",
+    "spec": "S_multiome_05/input/example.spec.json",
+    "preview": "S_multiome_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "ebc62bdf79b0d0ee2a4ac3ac432ad81218a0c1ecabc5b1e0044de271d322551b",
+    "svg": "2a5d9a3247328ff7845a93fbedabed665fa13ddfdfa6b755f1f46dfabf40692e",
+    "pdf": "24356e15aeff794cbb5a20cc6ca6a8693a6569f53f6f41fef096bc08a960edf9",
+    "tsv": "c0ad2354574f38b5a9c919a69e581a0e76685e4b2f77226b0cab252b59dab1f3",
+    "spec": "9f65bb267fca676d326c6e5621dbca4e60dbb82599efd2700c4f41f93865b850"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multiome_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ebc62bdf79b0d0ee2a4ac3ac432ad81218a0c1ecabc5b1e0044de271d322551b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: complete paired-modality denominators, standardized separate QC channels, signed RNA/motif/accessibility evidence and physical locus tracks are readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

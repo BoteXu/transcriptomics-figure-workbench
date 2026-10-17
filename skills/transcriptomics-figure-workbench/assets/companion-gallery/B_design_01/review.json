@@ -1,0 +1,84 @@
+{
+  "id": "B_design_01",
+  "title": "Biological units and library contributions",
+  "chapters": [
+    "bulk.design"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 0,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Biological units and library contributions",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Biological units and library contributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Biological units and library contributions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.design supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Biological units and library contributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Biological units and library contributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_design_01/example.png",
+    "svg": "B_design_01/example.svg",
+    "pdf": "B_design_01/example.pdf",
+    "tsv": "B_design_01/example.tsv",
+    "spec": "B_design_01/input/example.spec.json",
+    "preview": "B_design_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "668301f2657300b2f0deedadc2aa12a5fe9e7b074e00f49a2f0056d080a4b987",
+    "svg": "771d57fabcf44285aec8494242eec36f608b37c574d1841fae82942aa45f2001",
+    "pdf": "fc81d630186492b94c1a721fd898c6d341949391614ddee84b328dd794b75d16",
+    "tsv": "b75ae3e7e9642921cc405cd86e38a64fea353d3f8ba2754758fb90941e15e484",
+    "spec": "8ff7c09b6edee7619c0ff39c81c64120cfa0964aea7757aa19efdef5f4e1d46c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_design_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "668301f2657300b2f0deedadc2aa12a5fe9e7b074e00f49a2f0056d080a4b987",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final individual PNGs inspected: complete donor/library rows, clear independent-donor batch totals summing to twelve, readable categorical design/missingness labels and attached full scales; no clipping. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

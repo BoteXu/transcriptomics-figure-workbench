@@ -1,0 +1,84 @@
+{
+  "id": "B_alignment_04",
+  "title": "Strandedness evidence by library",
+  "chapters": [
+    "bulk.alignment"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 20,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Strandedness evidence by library",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Strandedness evidence by library; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Strandedness evidence by library",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.alignment supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Strandedness evidence by library; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Strandedness evidence by library; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_alignment_04/example.png",
+    "svg": "B_alignment_04/example.svg",
+    "pdf": "B_alignment_04/example.pdf",
+    "tsv": "B_alignment_04/example.tsv",
+    "spec": "B_alignment_04/input/example.spec.json",
+    "preview": "B_alignment_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "6f5586175e88743ce01f2b93f261eb78b1ec9bfc782614ff7745e7db2c4ba3ab",
+    "svg": "6d8d35dbbb5cfe5ff5b742accd49be7367d79c72edce7ecf178cb68a4e34f288",
+    "pdf": "1fd3b57638a599f9d89710d5db5fd6ced8529b0eb30d4b453145a4106961d5cf",
+    "tsv": "b99da5668a2695961f351f47883b40f9f6bb2d7ffc83d551d415ec24f6cf60a3",
+    "spec": "748a1f61b58d71e45ddd6d2c7ab67c3c1dc2c41511c4e0a217807c70d63be529"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_alignment_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6f5586175e88743ce01f2b93f261eb78b1ec9bfc782614ff7745e7db2c4ba3ab",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual strand/feature assignment plots retain every supplied category and donor, clear fraction scales and totals, and no legend or axis collision. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

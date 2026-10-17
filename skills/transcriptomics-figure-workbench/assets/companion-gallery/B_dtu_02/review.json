@@ -1,0 +1,84 @@
+{
+  "id": "B_dtu_02",
+  "title": "Within-gene STAT1 transcript usage by donor",
+  "chapters": [
+    "bulk.dtu"
+  ],
+  "stage": "interpretation",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 147,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Within-gene STAT1 transcript usage by donor",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Within-gene STAT1 transcript usage by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Within-gene STAT1 transcript usage by donor",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.dtu supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Within-gene STAT1 transcript usage by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Within-gene STAT1 transcript usage by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_dtu_02/example.png",
+    "svg": "B_dtu_02/example.svg",
+    "pdf": "B_dtu_02/example.pdf",
+    "tsv": "B_dtu_02/example.tsv",
+    "spec": "B_dtu_02/input/example.spec.json",
+    "preview": "B_dtu_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "394175cae4c91bea16fa3d4d33f47f171a63ad711a448c6bd6e640176daa34b2",
+    "svg": "6052a3a6aae296b5e98ac8d960218aba1533e2363ac68561840e044b61b10532",
+    "pdf": "a268f6d927476281caad8b33990c809a88f3993cafc34d8895cae2b62d593365",
+    "tsv": "521764aa6ad40e3a564d596d3e4d793f6b7b09da376c74124b8de25565d24bc2",
+    "spec": "7dc43c565567dc6a629367218e918ec252ad8c380b4d5058bd601ac9396c0667"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_dtu_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "394175cae4c91bea16fa3d4d33f47f171a63ad711a448c6bd6e640176daa34b2",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: aligned effect intervals and q/n tables, full donor-denominator bars, distinct STAT1 transcript structures and readable multirow layouts; fictional drawing channels, no biological validation claimed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

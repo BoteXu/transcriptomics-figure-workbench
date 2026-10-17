@@ -1,7 +1,7 @@
 {
   "id": "single_cell.pathways",
   "assay": "single_cell",
-  "title": "Celltype pathway responses",
+  "title": "T-cell donor pathways across specified contrasts",
   "family": "story:gsea_comparison",
   "required_results": [
     "NES_grid",
@@ -27,29 +27,20 @@
     "preview": "single_cell.pathways/preview.jpg"
   },
   "sha256": {
-    "png": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
-    "svg": "9307ef1bcecb5da53c36aa26397949d500fb22c55ee0ca4cfdc92a069cb16fd2",
-    "pdf": "5ec5855f3ae9002883afcc498311318b164f68b21175181c874166281d7a5310",
+    "png": "1e551b1c4396095d4d905868b56f3f672f27b9eeb7326f92a80de8695e2839bd",
+    "svg": "ad1cbacac3ff3fec8c2a36b8c3aa773d2a148c99b8840b199022fea844352ded",
+    "pdf": "c40eab063e3f94d149b5b96226229d82b517f316ccd1ced35ad3688cea46b51d",
     "tsv": "727f92097cf6e98e1ef6f95e42f7d06e1be3dce83a87689065c5b539696ba544",
-    "spec": "eae2d37e2df6f6afc109f1a0f24cca667862021843cd979fe53e54397458ecb5"
+    "spec": "2cc88c348319f0462cdd6a1b7f9d4bd4c5e5c65e8b62727707134f818fb3e52c"
   },
   "visual_review": {
-    "id": "single_cell.pathways",
-    "png_sha256": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
-    "decision": "screen_reviewed",
-    "checks": [
-      "scientific display meaning and scope",
-      "complete intended input channels",
-      "readable labels and guides",
-      "stable identity and declared continuous units",
-      "panel balance and hierarchy",
-      "no observed clipping or label collision"
-    ],
-    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-    "independent_second_review": false,
-    "calibrated_paper_proof": false,
-    "scientific_acceptance": false,
-    "source_figure_id": "single_cell_pathways"
+    "id": "single_cell.pathways.complete",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "1e551b1c4396095d4d905868b56f3f672f27b9eeb7326f92a80de8695e2839bd",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
   },
   "readability": {
     "target_width_mm": 297,
@@ -64,6 +55,6 @@
     "visual_acceptance": false
   },
   "scientific_acceptance": false,
-  "display_revision": "0.9.2",
+  "display_revision": "0.10.0",
   "previous_png_sha256": "fe9dae63bffd0a1a830d35278c300c86bb1730004e65bc3138c4cf56a0019d6e"
 }

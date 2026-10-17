@@ -1,0 +1,84 @@
+{
+  "id": "B_tf_activity_05",
+  "title": "STAT1 activity and expression",
+  "chapters": [
+    "bulk.tf_activity"
+  ],
+  "stage": "interpretation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 127,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "STAT1 activity and expression",
+        "x_label": "Centered log2 STAT1 expression",
+        "y_label": "Supplied STAT1 activity score",
+        "definition": "These are distinct donor-level channels; association is not direct binding.",
+        "point_unit": "independent donor",
+        "id": "p1"
+      }
+    ],
+    "title": "STAT1 activity and expression",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.tf_activity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "These are distinct donor-level channels; association is not direct binding.",
+    "columns": "auto"
+  },
+  "definition": "These are distinct donor-level channels; association is not direct binding.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_tf_activity_05/example.png",
+    "svg": "B_tf_activity_05/example.svg",
+    "pdf": "B_tf_activity_05/example.pdf",
+    "tsv": "B_tf_activity_05/example.tsv",
+    "spec": "B_tf_activity_05/input/example.spec.json",
+    "preview": "B_tf_activity_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "0c1af42219bbebb5535029e7290cb466caaed744ad494378c7bd2375678cbbb0",
+    "svg": "d829c8efa2e4ed291c22bbb3df9f663c54eb2170b9abf0f095bd3a5a9794b7ce",
+    "pdf": "3877244d0c499485d681019a0402adda2fb830cda126153b2b75ebe95cc1b952",
+    "tsv": "1042c616d5d97e841959c09b0653acf74e3d06e67441763f2674c0c66a729d4a",
+    "spec": "948ba491c71f8e357ce55d2f632213cb73522d20b47ada249e0e00d834ba02bf"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_tf_activity_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0c1af42219bbebb5535029e7290cb466caaed744ad494378c7bd2375678cbbb0",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: aligned effect intervals and q/n tables, full donor-denominator bars, distinct STAT1 transcript structures and readable multirow layouts; fictional drawing channels, no biological validation claimed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

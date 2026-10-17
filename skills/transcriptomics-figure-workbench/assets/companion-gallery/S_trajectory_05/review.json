@@ -1,0 +1,88 @@
+{
+  "id": "S_trajectory_05",
+  "title": "Ordered expression on fixed pseudotime bins",
+  "chapters": [
+    "single_cell.trajectory"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 332,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Ordered expression on fixed pseudotime bins",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Ordered expression on fixed pseudotime bins; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied scaled expression",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Ordered expression on fixed pseudotime bins",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.trajectory supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Ordered expression on fixed pseudotime bins; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Ordered expression on fixed pseudotime bins; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_trajectory_05/example.png",
+    "svg": "S_trajectory_05/example.svg",
+    "pdf": "S_trajectory_05/example.pdf",
+    "tsv": "S_trajectory_05/example.tsv",
+    "spec": "S_trajectory_05/input/example.spec.json",
+    "preview": "S_trajectory_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "7dbce44d02f46980ac2f75fdd3768c65980a665e2671ecb73f3efb71f4793e96",
+    "svg": "996d7357863bd0aab7de17d85cf63edef02d00e2c5a30d2c05173a29145e3d30",
+    "pdf": "d520453c9348ce9467c9096570ed50a08c01b64c604fc62a844d1ec6cb252271",
+    "tsv": "fe9320c3f1adf330938ea9f8772d61739248cd41fe4e3fa68cedc74aa849417c",
+    "spec": "99525a4aed6c7af0a0745bde3bc53e850f7841c2e2ff56575165344e79eb3b11"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_trajectory_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7dbce44d02f46980ac2f75fdd3768c65980a665e2671ecb73f3efb71f4793e96",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs inspected individually: branch occupancy preserves independent donor points, explicit branch profiles and ordered bins are legible, and sensitivity estimates and supplied bounds align in individual and combined pages.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

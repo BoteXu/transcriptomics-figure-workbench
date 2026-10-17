@@ -1,0 +1,94 @@
+{
+  "id": "B_differential_07",
+  "title": "Effect stability across prespecified models",
+  "chapters": [
+    "bulk.differential"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 52,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Effect stability across prespecified models",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Effect stability across prespecified models",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.differential supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Effect stability across prespecified models; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_differential_07/example.png",
+    "svg": "B_differential_07/example.svg",
+    "pdf": "B_differential_07/example.pdf",
+    "tsv": "B_differential_07/example.tsv",
+    "spec": "B_differential_07/input/example.spec.json",
+    "preview": "B_differential_07/preview.jpg"
+  },
+  "sha256": {
+    "png": "ef9d3df975efdb1dad507bafac2c4c8b2d105ce829ef4b29b9d1f8f08c60e063",
+    "svg": "4aa9692848196c3dccfbb412f42f9ee90a054beea71e74c242662f733803023a",
+    "pdf": "e95a4875489f633a574a1d76e0c4b97ebc225dd3d3bddcaf9fdee0d64b907875",
+    "tsv": "f9b017310d83a2e9de21ed7e4919813fc661b464364e681217ae7078681c7bcd",
+    "spec": "f5c7f0b40f8f144e32219fe9b742115bd1ebee4a6bc1de678cbf35b3cb19e1f3"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_differential_07",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ef9d3df975efdb1dad507bafac2c4c8b2d105ce829ef4b29b9d1f8f08c60e063",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: legible shrinkage comparison, supplied effect and model stability, composed evidence and reading layouts; factorial donor cells retain repeated-unit meaning.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

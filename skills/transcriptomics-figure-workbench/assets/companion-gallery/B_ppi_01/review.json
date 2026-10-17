@@ -1,0 +1,88 @@
+{
+  "id": "B_ppi_01",
+  "title": "Interaction evidence by source",
+  "chapters": [
+    "bulk.ppi"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 176,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Interaction evidence by source",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Interaction evidence by source; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied evidence score",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Interaction evidence by source",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ppi supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Interaction evidence by source; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Interaction evidence by source; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ppi_01/example.png",
+    "svg": "B_ppi_01/example.svg",
+    "pdf": "B_ppi_01/example.pdf",
+    "tsv": "B_ppi_01/example.tsv",
+    "spec": "B_ppi_01/input/example.spec.json",
+    "preview": "B_ppi_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "6e9488448a58b2a840a2538e25ab4978d17301ea3d91f4e2aae6f80e6e219b4a",
+    "svg": "2952e9e44de9a176c555b09da0794e8185213aba7572099272e7dae29b4c74d6",
+    "pdf": "1764672ebbebc708e6068d4ab1ce5460d8f98de108dc453aa4963978fd5179a1",
+    "tsv": "287165a4b367351dda43c0897723bff6866741cda553c9d05f256c8c11d82c59",
+    "spec": "a99236090307937d17d4657bb0de6e1d28485024262b372436e25e0be517cb52"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 35,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ppi_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6e9488448a58b2a840a2538e25ab4978d17301ea3d91f4e2aae6f80e6e219b4a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Eleven individual final PNGs inspected: supplied risk counts and step curves with intervals/calibration, source-specific PPI support and full symmetric interaction scope with explicit zeros, node response and cohort validation. Single and adaptive combined layouts remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

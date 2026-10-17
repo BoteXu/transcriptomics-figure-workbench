@@ -1,0 +1,83 @@
+{
+  "id": "B_normalization_02",
+  "title": "Paired donor RLE medians before/after normalization",
+  "chapters": [
+    "bulk.normalization"
+  ],
+  "stage": "qc",
+  "family": "paired",
+  "variant": false,
+  "large_data": false,
+  "order": 33,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "paired",
+        "title": "Paired donor RLE medians before/after normalization",
+        "x_label": "Repeated condition",
+        "y_label": "Donor median relative log2 expression",
+        "definition": "Paired donor RLE medians before/after normalization; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "rle_median": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Paired donor RLE medians before/after normalization",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.normalization supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Paired donor RLE medians before/after normalization; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Paired donor RLE medians before/after normalization; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "unit",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_normalization_02/example.png",
+    "svg": "B_normalization_02/example.svg",
+    "pdf": "B_normalization_02/example.pdf",
+    "tsv": "B_normalization_02/example.tsv",
+    "spec": "B_normalization_02/input/example.spec.json",
+    "preview": "B_normalization_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "547999ce7d7083794cb468e89345b3b89c430ab0026a1797bef11fbbc79a1452",
+    "svg": "5624b183abe57dcff5dce8f9ba3b6db257da2ca2828f78ddbc630272ed665b90",
+    "pdf": "590a5415ad3b7f7893c496b3a1cdb1516bd803e9b74a59bf0fcae9d310f376a9",
+    "tsv": "116479a6895d99d49f466ff05c5b434c5443ee447f34da5a9eb051e48c112b8e",
+    "spec": "18be50bf2a17f3445fb270df34d439f2e4a0e457cbbbb00db8b77d47d4bff52c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 15,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_normalization_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "547999ce7d7083794cb468e89345b3b89c430ab0026a1797bef11fbbc79a1452",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual exported PNG viewed individually after repair: opaque histogram outlines, visible ribbon definition, explicit reference and repeated-model labels, correct decreasing filter retention, decreasing feature counts, paired RLE medians, twelve-donor batch totals, complete variance components, fully readable wrapped term names and wide three-column guide lanes. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

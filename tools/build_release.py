@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SKILL=ROOT/'skills/transcriptomics-figure-workbench'
 
 
-def main(output,routine_only=False,analysis_only=False):
+def main(output,routine_only=False,analysis_only=False,companions_only=False):
     output.mkdir(parents=True,exist_ok=False)
     version=(ROOT/'VERSION').read_text().strip()
     assert version==(SKILL/'VERSION').read_text().strip()
@@ -22,6 +22,26 @@ def main(output,routine_only=False,analysis_only=False):
         assert not z.testzip()
         for name,path in files.items():assert z.read('transcriptomics-figure-workbench/'+name)==path.read_bytes()
     assets=[archive]
+    if companions_only:
+        companion=SKILL/'assets/companion-gallery'
+        manifest=json.loads((companion/'manifest.json').read_text(encoding='utf8'))
+        assert len(manifest['records'])==425 and all(r['review']['state']=='SCREEN_REVIEWED' for r in manifest['records'])
+        book=output/'All_Analysis_Companions.pdf';shutil.copyfile(companion/book.name,book);assets.append(book)
+        gallery=output/f'analysis-companion-examples-v{version}.zip'
+        with zipfile.ZipFile(gallery,'x',compression=zipfile.ZIP_DEFLATED) as z:
+            for file in sorted(companion.rglob('*')):
+                if not file.is_file():continue
+                name='analysis-companions/'+file.relative_to(companion).as_posix()
+                if file.name=='index.html' and file.parent==companion:
+                    text=file.read_text(encoding='utf8');start=text.index('<a href="../routine-gallery/');end=text.index('</header>',start)
+                    text=text[:start]+'<a href="https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v'+version+'">完整技能与全部分析目录下载</a>'+text[end:];z.writestr(name,text)
+                else:z.write(file,name)
+            z.writestr('README.txt','Open analysis-companions/index.html. All 425 exported views are explicitly fictional frozen drawing examples: 307 question-specific singles, 56 complete compositions, 56 larger-data one-column layouts and 6 three-column layouts. They are not 425 scientific methods or backend validations. The full skill ZIP contains the complete 58-chapter offline library including existing WGCNA/hdWGCNA and native bulk/single-cell figures. Changed data/layout require new review.\n')
+        with zipfile.ZipFile(gallery) as z:assert not z.testzip()
+        assets.append(gallery)
+        (output/f'SHA256SUMS-v{version}.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in assets),encoding='utf8')
+        print(json.dumps(dict(status='PUBLIC_COMPANION_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
+        return
     if analysis_only:
         analysis=SKILL/'assets/analysis-gallery'
         book=output/'Analysis_Companions_FigureBook.pdf';shutil.copyfile(analysis/book.name,book);assets.append(book)
@@ -181,4 +201,4 @@ def main(output,routine_only=False,analysis_only=False):
     print(json.dumps(dict(status='PUBLIC_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);group=p.add_mutually_exclusive_group();group.add_argument('--routine-only',action='store_true');group.add_argument('--analysis-only',action='store_true');a=p.parse_args();main(a.output,a.routine_only,a.analysis_only)
+    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);group=p.add_mutually_exclusive_group();group.add_argument('--routine-only',action='store_true');group.add_argument('--analysis-only',action='store_true');group.add_argument('--companions-only',action='store_true');a=p.parse_args();main(a.output,a.routine_only,a.analysis_only,a.companions_only)

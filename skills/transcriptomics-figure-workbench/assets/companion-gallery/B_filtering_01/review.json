@@ -1,0 +1,84 @@
+{
+  "id": "B_filtering_01",
+  "title": "Mean expression and detection",
+  "chapters": [
+    "bulk.filtering"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 25,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Mean expression and detection",
+        "x_label": "Supplied mean log count",
+        "y_label": "Detection fraction",
+        "definition": "Mean expression and detection; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Mean expression and detection",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.filtering supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Mean expression and detection; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Mean expression and detection; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_filtering_01/example.png",
+    "svg": "B_filtering_01/example.svg",
+    "pdf": "B_filtering_01/example.pdf",
+    "tsv": "B_filtering_01/example.tsv",
+    "spec": "B_filtering_01/input/example.spec.json",
+    "preview": "B_filtering_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "71fc0e518ed49658368ae2006fdb49449330dcdca5c845a1ed881b2e89a14406",
+    "svg": "7b9693b23e3a89625027e06afea2625a927e4128aa0c3f7e20addd44b7fc604a",
+    "pdf": "b970771607a59f0f145933a6d02451641e5528e41578fbab1942311facc6c42f",
+    "tsv": "9c2e45cc5fab0a24667d440eb0779af888013e80b34d05551791f1dd78608226",
+    "spec": "011aa7b7cc228154f6eea4aed2adbebfd93ae96605ee016a6830a25b6b8b8838"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 20,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_filtering_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "71fc0e518ed49658368ae2006fdb49449330dcdca5c845a1ed881b2e89a14406",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed: detection versus mean expression has visible points, stable group legend and complete units without label clipping. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

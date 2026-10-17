@@ -1,0 +1,89 @@
+{
+  "id": "S_markers_03",
+  "title": "Donor-level marker effect estimates",
+  "chapters": [
+    "single_cell.markers"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 272,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-level marker effect estimates",
+        "x_label": "Donor marker log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-level marker effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-level marker effect estimates",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.markers supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor-level marker effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor-level marker effect estimates; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_markers_03/example.png",
+    "svg": "S_markers_03/example.svg",
+    "pdf": "S_markers_03/example.pdf",
+    "tsv": "S_markers_03/example.tsv",
+    "spec": "S_markers_03/input/example.spec.json",
+    "preview": "S_markers_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "d22c870061c956409b60a5d73f25356047339ae481b2965d920e3041f631e405",
+    "svg": "759c972d23e972c9b680560419810bd4c14989a2452bce290fbd814de1636fc8",
+    "pdf": "d02fc6f901f27d24311d9032eb4b8964063b8261d9b058323e82f47638e19064",
+    "tsv": "6a37116d2eef71614625d72c09bd51554c121144e8ee4816c7a8e6d4026e2ca6",
+    "spec": "8c2dceed2eae2c6116408f3300239c0990a99b7e66e7a6b0f2a64a600e287ade"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_markers_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d22c870061c956409b60a5d73f25356047339ae481b2965d920e3041f631e405",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: expanded child-state evidence, aligned donor marker effects, all points in donor expression cloud, complete interval tables, composition effects and cell-support matrix. Long labels and rows readable without clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,94 @@
+{
+  "id": "B_pathway_contrasts_02",
+  "title": "Prespecified cross-contrast pathway effects",
+  "chapters": [
+    "bulk.pathway_contrasts"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 95,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified cross-contrast pathway effects",
+        "x_label": "Supplied signed pathway effect · interval",
+        "y_label": "",
+        "definition": "Prespecified cross-contrast pathway effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Contrast A",
+          "Contrast B"
+        ],
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified cross-contrast pathway effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.pathway_contrasts supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified cross-contrast pathway effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified cross-contrast pathway effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_pathway_contrasts_02/example.png",
+    "svg": "B_pathway_contrasts_02/example.svg",
+    "pdf": "B_pathway_contrasts_02/example.pdf",
+    "tsv": "B_pathway_contrasts_02/example.tsv",
+    "spec": "B_pathway_contrasts_02/input/example.spec.json",
+    "preview": "B_pathway_contrasts_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "bad8b8ef04ff6c92be9b0e2e7d1a3bcd92bb7997250d658095509e54e7a10697",
+    "svg": "a22662a02614870437b367bce552ee1993ed14c57d32733118806d5d374cc822",
+    "pdf": "5199ba4655209e8d6a66828aeb006097913aded9c1abb23612480347955be5fd",
+    "tsv": "751766d2dcb3a2e5cbf5329a78ec37cbd835c204a3d54f2f66d0d77f4ca29dee",
+    "spec": "6ba477823831ef7455722d927c9eba471d5a06d421b8d3613c430615bc89779a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_pathway_contrasts_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "bad8b8ef04ff6c92be9b0e2e7d1a3bcd92bb7997250d658095509e54e7a10697",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: ranked-universe diagnostic, supplied NES comparisons and leading-edge overlap; contrast estimates plus concordance. Dense reading layout expands to every row and three-column alternative remains non-overlapping; these accompany the native running-score core.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

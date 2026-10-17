@@ -1,0 +1,97 @@
+{
+  "id": "S_perturbseq_03",
+  "title": "STAT1 response by guide and control",
+  "chapters": [
+    "single_cell.perturbseq"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 395,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "STAT1 response by guide and control",
+        "x_label": "Perturbation-response log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "STAT1 response by guide and control; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "explicit_effects": [
+          -0.01,
+          0.02,
+          -0.5,
+          -0.45,
+          0.36,
+          0.41
+        ],
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "STAT1 response by guide and control",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.perturbseq supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "STAT1 response by guide and control; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "STAT1 response by guide and control; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_perturbseq_03/example.png",
+    "svg": "S_perturbseq_03/example.svg",
+    "pdf": "S_perturbseq_03/example.pdf",
+    "tsv": "S_perturbseq_03/example.tsv",
+    "spec": "S_perturbseq_03/input/example.spec.json",
+    "preview": "S_perturbseq_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "9893d71506f7cd89e492655144dbc2fcc2a01895f03d2c36e5e8203e4785f7ef",
+    "svg": "1764589f6900ddaaed9736506bf93002bc0125cff861dc3802782fcc45a8841b",
+    "pdf": "0cc493fd09b43e44d20a59981284854398e20e5b441911c83971b60383bd69c0",
+    "tsv": "80f3768b43fed7ea2c664dd5bea9e84d60d3cf51d1032d5b18ea78c1c6c6cbcb",
+    "spec": "d016aeb3ec4fb922c6094348841b51ce66d58341795a0931f0443118d365c839"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 30,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_perturbseq_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "9893d71506f7cd89e492655144dbc2fcc2a01895f03d2c36e5e8203e4785f7ef",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: gene-event labels and delta PSI bounds retained, complete guide controls and guide-level estimates visible, and two-column versus larger one-column pages have aligned tables and clear reading order.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

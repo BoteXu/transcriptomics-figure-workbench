@@ -1,0 +1,88 @@
+{
+  "id": "S_regulons_04",
+  "title": "Regulon specificity across identities",
+  "chapters": [
+    "single_cell.regulons"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 363,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Regulon specificity across identities",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Regulon specificity across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied specificity",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Regulon specificity across identities",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.regulons supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Regulon specificity across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Regulon specificity across identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_regulons_04/example.png",
+    "svg": "S_regulons_04/example.svg",
+    "pdf": "S_regulons_04/example.pdf",
+    "tsv": "S_regulons_04/example.tsv",
+    "spec": "S_regulons_04/input/example.spec.json",
+    "preview": "S_regulons_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "98578b2f538f1e04e4916266396a801b381274bcce0e522ec628f5bc88b39c8e",
+    "svg": "9787545a0f05839a578248b7836952212151e9eccfd16fc12734d152a30fdcd4",
+    "pdf": "f555a705280e44f26d282b6b2404d8f0cbbaaccc3e5c63b49ccb3ea322e2a7ec",
+    "tsv": "800dc073973a3e28b5a91533e37b9aa237c25ce5695b8c3f22d9b75f0d8ffbb2",
+    "spec": "98f8af1ebc7a8f6a68cbbdbc294603bfcbcb587770a8f1fa7e7232cb22ba43bf"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 159.33711302030574,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 14.497564040247275,
+    "p10_pt": 14.497564040247275,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_regulons_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "98578b2f538f1e04e4916266396a801b381274bcce0e522ec628f5bc88b39c8e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNGs: signaling and ligand-target comparisons use distinct declared receiver/ligand units, full prior-sensitivity rows and separate interval tables; one/three-column compositions remain unclipped, regulon AUCell differences bounded.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,84 @@
+{
+  "id": "S_ligand_target_01",
+  "title": "Prior coverage in the receiver context",
+  "chapters": [
+    "single_cell.ligand_target"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 353,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Prior coverage in the receiver context",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Prior coverage in the receiver context; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Prior coverage in the receiver context",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.ligand_target supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prior coverage in the receiver context; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prior coverage in the receiver context; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_ligand_target_01/example.png",
+    "svg": "S_ligand_target_01/example.svg",
+    "pdf": "S_ligand_target_01/example.pdf",
+    "tsv": "S_ligand_target_01/example.tsv",
+    "spec": "S_ligand_target_01/input/example.spec.json",
+    "preview": "S_ligand_target_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "d7bb1c3082869d5f44493d3c9c26d23a79376b46efedec68471558b72d2b072e",
+    "svg": "4e4614ef61e30674fe45119953b65e2512ac794b385f7b8b1f8d048ad10c42cc",
+    "pdf": "70f91ec9c698b8e9cb94a656cf351c37e9772020600b4675f08651ec09c66ef4",
+    "tsv": "c4d650734c34f52a428a1e8cea2c0d47b0218ef0bff1834f7980e01a0713d072",
+    "spec": "d3972a8de0bf739fec530d9d0481c24f6777442fc75f6066d2e59eaa80dc189a"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_ligand_target_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "d7bb1c3082869d5f44493d3c9c26d23a79376b46efedec68471558b72d2b072e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual single exports individually inspected: prior coverage retains full denominators, ligand activity estimates and bounds align with the numeric lane, and ligand-target weights remain explicit with a bounded color scale.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

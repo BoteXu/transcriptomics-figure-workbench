@@ -1,0 +1,84 @@
+{
+  "id": "B_ora_04",
+  "title": "Annotated and unannotated query genes",
+  "chapters": [
+    "bulk.ora"
+  ],
+  "stage": "qc",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 80,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Annotated and unannotated query genes",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Annotated and unannotated query genes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Annotated and unannotated query genes",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ora supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Annotated and unannotated query genes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Annotated and unannotated query genes; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ora_04/example.png",
+    "svg": "B_ora_04/example.svg",
+    "pdf": "B_ora_04/example.pdf",
+    "tsv": "B_ora_04/example.tsv",
+    "spec": "B_ora_04/input/example.spec.json",
+    "preview": "B_ora_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "7195c91992ca31dc5ee1bd86090a6169260fc7d6e19a5181b689a82fde16737e",
+    "svg": "e53132285c99c81e9c9078d1388903435daa0c298c2270d194011f209034fd64",
+    "pdf": "9fc7338997bf7d0ad2c410230f4e9fe3a61d7a3cc0d1cadc566a0ee646a4b543",
+    "tsv": "67706f124ce6e8a625691fdcaab9bf5777eb1747cf315df232acc16efe6fe57f",
+    "spec": "5533b0ce12218108317d2c79b970b9c9a326b1dafdfb0688c016c1f51afda84c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 166.58872222222223,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 13.866484892768183,
+    "p10_pt": 13.866484892768183,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ora_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7195c91992ca31dc5ee1bd86090a6169260fc7d6e19a5181b689a82fde16737e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final images inspected: complete denominators and fraction scales, clear reserved legends, explicit leading-edge zero/one membership, legible gene/pathway labels and no cropping. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,115 @@
+{
+  "id": "S_cnv_Layout",
+  "title": "Single cell · cnv — complementary evidence",
+  "chapters": [
+    "single_cell.cnv"
+  ],
+  "stage": "layout",
+  "family": "matrix,profile,matrix",
+  "variant": true,
+  "large_data": true,
+  "order": 375,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Reference-normal support by donor",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Reference-normal support by donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied reference cells",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "profile",
+        "title": "Genomically ordered CNV summaries",
+        "x_label": "Ordered bin index · fictional reference",
+        "y_label": "Supplied log2 relative CNV",
+        "definition": "Genomically ordered CNV summaries; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "reference_zero": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p2"
+      },
+      {
+        "kind": "matrix",
+        "title": "Orthogonal genomic support by chromosome",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Orthogonal genomic support by chromosome; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Explicit support indicator",
+        "binary": true,
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · cnv — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.cnv supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reference-normal support by donor; all quantities are supplied frozen channels, with explicitly declared units and scope. | Genomically ordered CNV summaries; all quantities are supplied frozen channels, with explicitly declared units and scope. | Orthogonal genomic support by chromosome; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Reference-normal support by donor; all quantities are supplied frozen channels, with explicitly declared units and scope. | Genomically ordered CNV summaries; all quantities are supplied frozen channels, with explicitly declared units and scope. | Orthogonal genomic support by chromosome; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "x",
+    "y",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_cnv_Layout/example.png",
+    "svg": "S_cnv_Layout/example.svg",
+    "pdf": "S_cnv_Layout/example.pdf",
+    "tsv": "S_cnv_Layout/example.tsv",
+    "spec": "S_cnv_Layout/input/example.spec.json",
+    "preview": "S_cnv_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "62a5a77daaaca5f9a7a400355a8862546887466fbf841affa6e9c2fa37c3293f",
+    "svg": "0b5532286eba0834a0a64e97417110a64a42746ccca8da621c08aa17e74f9c9b",
+    "pdf": "de44682f7c5c9a8274f65c13e99414534b773823ebc0c0d1792d207993b3b722",
+    "tsv": "7083df0a347d99e8397e4a5bffe59f7b19c446b9fe36c1db371a8a4d23649f96",
+    "spec": "1c52f014faf7e4a6e3e2872ab8decf5f84429bb37e26f2764759f65dad1bcf2f"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 131,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_cnv_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "62a5a77daaaca5f9a7a400355a8862546887466fbf841affa6e9c2fa37c3293f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: regulon activity versus support, CNV reference/clone identity consistency and orthogonal channels, paired Shannon summaries and physical splicing intervals are readable; legends and row heights checked at final export.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

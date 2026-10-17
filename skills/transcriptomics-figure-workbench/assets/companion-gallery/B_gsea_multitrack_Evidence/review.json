@@ -1,0 +1,114 @@
+{
+  "id": "B_gsea_multitrack_Evidence",
+  "title": "Bulk · gsea_multitrack — complementary evidence",
+  "chapters": [
+    "bulk.gsea_multitrack"
+  ],
+  "stage": "interpretation",
+  "family": "fraction,effects,scatter",
+  "variant": true,
+  "large_data": false,
+  "order": 113,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Ranked-universe coverage per selected set",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Ranked-universe coverage per selected set; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Selected pathways on a common NES scale",
+        "x_label": "Supplied NES · upstream interval",
+        "y_label": "",
+        "definition": "Selected pathways on a common NES scale; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "scatter",
+        "title": "Prespecified ranking sensitivity",
+        "x_label": "NES · ranking A",
+        "y_label": "NES · ranking B",
+        "definition": "Prespecified ranking sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p3"
+      }
+    ],
+    "title": "Bulk · gsea_multitrack — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea_multitrack supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Ranked-universe coverage per selected set; all quantities are supplied frozen channels, with explicitly declared units and scope. | Selected pathways on a common NES scale; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified ranking sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Ranked-universe coverage per selected set; all quantities are supplied frozen channels, with explicitly declared units and scope. | Selected pathways on a common NES scale; all quantities are supplied frozen channels, with explicitly declared units and scope. | Prespecified ranking sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "x",
+    "y",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_multitrack_Evidence/example.png",
+    "svg": "B_gsea_multitrack_Evidence/example.svg",
+    "pdf": "B_gsea_multitrack_Evidence/example.pdf",
+    "tsv": "B_gsea_multitrack_Evidence/example.tsv",
+    "spec": "B_gsea_multitrack_Evidence/input/example.spec.json",
+    "preview": "B_gsea_multitrack_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "e4f35cab1f2c4784ab448f2c7aee5520d7b999bdae862e149e104e488b8569f2",
+    "svg": "41c5c1bca4e3026cd52d9f4ef2ff2f362ba66e6ecd875f9b8a1e642473cab2f8",
+    "pdf": "44fde12f3cec44d3014f0b3b26c10e6af9e64fdbd4e1b5e4c82adbaf50d1aaae",
+    "tsv": "2d6b8ba91c8be00ab1b7b5232093cdaf18449e0281f9bb0997b4365d1517f01a",
+    "spec": "341e56f55601d87fc457a4f9aeff585f3f7f0bcfb4a844ead96268d13b7bf016"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 472.26045331978327,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 74,
+    "smallest_pt": 9.78273740162538,
+    "p10_pt": 9.78273740162538,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_multitrack_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e4f35cab1f2c4784ab448f2c7aee5520d7b999bdae862e149e104e488b8569f2",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG viewed: complete donor/numerical support, explicit uncertainty lanes and separate scale definitions; native GSEA curve remains primary and these provide coverage, ranking and gene-support companions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

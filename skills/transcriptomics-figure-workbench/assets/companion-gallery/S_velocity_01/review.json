@@ -1,0 +1,84 @@
+{
+  "id": "S_velocity_01",
+  "title": "STAT1 spliced–unspliced phase support",
+  "chapters": [
+    "single_cell.velocity"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 336,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "STAT1 spliced–unspliced phase support",
+        "x_label": "Supplied normalized spliced counts",
+        "y_label": "Supplied normalized unspliced counts",
+        "definition": "STAT1 spliced–unspliced phase support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "cell nested within donor",
+        "id": "p1"
+      }
+    ],
+    "title": "STAT1 spliced–unspliced phase support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.velocity supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "STAT1 spliced–unspliced phase support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "STAT1 spliced–unspliced phase support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_velocity_01/example.png",
+    "svg": "S_velocity_01/example.svg",
+    "pdf": "S_velocity_01/example.pdf",
+    "tsv": "S_velocity_01/example.tsv",
+    "spec": "S_velocity_01/input/example.spec.json",
+    "preview": "S_velocity_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "ff39cf378efa874fddc20011e9fe0050ccaa9cc38e89681df86c2be1f9dff579",
+    "svg": "a1da02a4c6a90e1dc213bdf269ed9876bec7df35b744d6adb5ec71d67970c9c8",
+    "pdf": "724131d162fbddb80c07df6395d95f6cff9a2257916d40ad2d2f8816e0234ad6",
+    "tsv": "9a47be82ed804d0c1fb9409293825e93fa0af209b18d36f7c9442ad81f3d5860",
+    "spec": "478aaed6cf8713a2ddea2aeda2926fdb71f688d189d809a977defefaf6474f07"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_velocity_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "ff39cf378efa874fddc20011e9fe0050ccaa9cc38e89681df86c2be1f9dff579",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: velocity phase/profile/sensitivity and communication expression/contribution/role views retain declared scales and comparison labels; direct role labels, zero references and aligned numeric companions are readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

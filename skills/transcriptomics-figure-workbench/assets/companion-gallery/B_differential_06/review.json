@@ -1,0 +1,85 @@
+{
+  "id": "B_differential_06",
+  "title": "Unshrunk versus shrunk effects",
+  "chapters": [
+    "bulk.differential"
+  ],
+  "stage": "validation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 51,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Unshrunk versus shrunk effects",
+        "x_label": "Unshrunk log2 fold change",
+        "y_label": "Shrunk log2 fold change",
+        "definition": "Unshrunk versus shrunk effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Unshrunk versus shrunk effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.differential supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Unshrunk versus shrunk effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Unshrunk versus shrunk effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_differential_06/example.png",
+    "svg": "B_differential_06/example.svg",
+    "pdf": "B_differential_06/example.pdf",
+    "tsv": "B_differential_06/example.tsv",
+    "spec": "B_differential_06/input/example.spec.json",
+    "preview": "B_differential_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "de534a5d3cdbbe6360ba9390bd1e47e44f186023147c88114183371c5cec77b1",
+    "svg": "321836fa7c54d74f142bffc8d18ea394c981ceb3c16a7a330f34ab03a91d1ae0",
+    "pdf": "b323c567c201d7a6a33c3cb3c41b9a4f90d62d379a348e7224d178d3f8b1c831",
+    "tsv": "d369153bae5c950ea1dcec0ac527cd7bf387d34278be0cb4b31e64658c675c81",
+    "spec": "0806043dac05a36efb04c6f2f9ef9bbc5b8ba06e8a340e1995afd094ee5d243c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_differential_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "de534a5d3cdbbe6360ba9390bd1e47e44f186023147c88114183371c5cec77b1",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: legible shrinkage comparison, supplied effect and model stability, composed evidence and reading layouts; factorial donor cells retain repeated-unit meaning.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

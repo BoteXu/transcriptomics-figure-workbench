@@ -1,0 +1,89 @@
+{
+  "id": "B_interaction_01",
+  "title": "Independent support for factorial cells",
+  "chapters": [
+    "bulk.interaction"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 56,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Independent support for factorial cells",
+        "x_label": "",
+        "y_label": "",
+        "definition": "The same independent donors are measured early and late; each time includes all twelve donors across two conditions and two batches.",
+        "value_label": "Independent donor count",
+        "factorial_repeated": true,
+        "limits": [
+          0,
+          12
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Independent support for factorial cells",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.interaction supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "The same independent donors are measured early and late; each time includes all twelve donors across two conditions and two batches.",
+    "columns": "auto"
+  },
+  "definition": "The same independent donors are measured early and late; each time includes all twelve donors across two conditions and two batches.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_interaction_01/example.png",
+    "svg": "B_interaction_01/example.svg",
+    "pdf": "B_interaction_01/example.pdf",
+    "tsv": "B_interaction_01/example.tsv",
+    "spec": "B_interaction_01/input/example.spec.json",
+    "preview": "B_interaction_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "f4f2ac178be1e1315fad83419d44dbe227cc4b40c3cad87ec2e6c186b685acce",
+    "svg": "7af70bd81af0e9227013703bfed0027e09b4b1370b73588e90ec45ebf3c78647",
+    "pdf": "0967c4a4a80ef90b6a3b6246c89c6ca3b1d4afa4cba7153da8f2e658d3c071e3",
+    "tsv": "1641cdf265f260600492d677d845e3f826e943e7e469555fead2d074f24f6438",
+    "spec": "ce17e8fc39f42b8e71bc94c292b58c043eb384bb9bbebe5de90f7683a0f9d5cf"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_interaction_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f4f2ac178be1e1315fad83419d44dbe227cc4b40c3cad87ec2e6c186b685acce",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual revised PNGs individually inspected: reduced subset n is visible in each numeric lane, factorial donor cells and condition-time profiles are explicit, and the STAT1 interaction agrees with the frozen prediction endpoints. Single, one-column and three-column layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

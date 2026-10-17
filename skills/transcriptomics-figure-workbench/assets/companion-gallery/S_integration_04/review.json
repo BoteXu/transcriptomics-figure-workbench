@@ -1,0 +1,89 @@
+{
+  "id": "S_integration_04",
+  "title": "Donor-level biological-effect preservation",
+  "chapters": [
+    "single_cell.integration"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 236,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-level biological-effect preservation",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-level biological-effect preservation; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-level biological-effect preservation",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.integration supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor-level biological-effect preservation; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor-level biological-effect preservation; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_integration_04/example.png",
+    "svg": "S_integration_04/example.svg",
+    "pdf": "S_integration_04/example.pdf",
+    "tsv": "S_integration_04/example.tsv",
+    "spec": "S_integration_04/input/example.spec.json",
+    "preview": "S_integration_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "044475eb5486ef40ff7a85b58f67c7adab2abcf4b4c83fbc97fa181ea115328e",
+    "svg": "5545a17b471abf8ffeed4f2c8b1fb9b3e7cd74ba643588503db5bc24f2a5b4f9",
+    "pdf": "608d8c85eb42614d357410c6383942895db1d087048799d27a0bd564e0f76987",
+    "tsv": "6a4523331ebd4869e946f76d27777dcef1edc344bf6dab4bec851ee0d35add44",
+    "spec": "c8ec8fa5f6c3f1cb26bbf3160db87d2d6ea7590a0267dc0144b1b40842d7617d"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_integration_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "044475eb5486ef40ff7a85b58f67c7adab2abcf4b4c83fbc97fa181ea115328e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected donor QC clouds, paired integration trajectories, complete counts and composition, correction evidence matrix, effect intervals and custom longer pages. Supplied summaries stay distinct from nested cells; text and complete rows readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

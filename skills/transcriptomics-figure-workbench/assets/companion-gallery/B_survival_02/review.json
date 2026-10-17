@@ -1,0 +1,89 @@
+{
+  "id": "B_survival_02",
+  "title": "Frozen survival curves and confidence intervals",
+  "chapters": [
+    "bulk.survival"
+  ],
+  "stage": "interpretation",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 169,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Frozen survival curves and confidence intervals",
+        "x_label": "Follow-up time (months)",
+        "y_label": "Survival probability",
+        "definition": "Frozen survival curves and confidence intervals; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "steps": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "probability": true,
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "Frozen survival curves and confidence intervals",
+    "context": {
+      "independent_unit": "fictional participants",
+      "independent_n": 80,
+      "method_version": "bulk.survival supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Frozen survival curves and confidence intervals; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Frozen survival curves and confidence intervals; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_survival_02/example.png",
+    "svg": "B_survival_02/example.svg",
+    "pdf": "B_survival_02/example.pdf",
+    "tsv": "B_survival_02/example.tsv",
+    "spec": "B_survival_02/input/example.spec.json",
+    "preview": "B_survival_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "275913f8a7958ee22f6e68aa220ad100242ff78c1f5fa1e07ff2b30b4096ce50",
+    "svg": "e791e11562e6e9f91689682d740ec1bc994397c2b3e85b6365e027df1a25a324",
+    "pdf": "06a2c93464af6af2a803ea6576f404b58586add84ff3488df9a2b05f99cb7097",
+    "tsv": "c8aaa0fcc2c6b9566103a5ab6068d4ba50255c2c3c45db8826a01209bb616e69",
+    "spec": "32f9f1076bb4eff8fa945fdaf8020cea6c57f9bce9e0e56348455db274a75bc9"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 154.00965885416667,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 21,
+    "smallest_pt": 14.999059261519193,
+    "p10_pt": 14.999059261519193,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_survival_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "275913f8a7958ee22f6e68aa220ad100242ff78c1f5fa1e07ff2b30b4096ce50",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed seven actual PNGs: complete feature scope, cohort concordance, named STAT1 synthesis with per-cohort n, signed effect matrix, time-model sensitivity and correctly bounded stepwise survival curves/endpoint denominator. Readable labels, tables and interval key.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "a75d1f7608c16dbcd5bcc59226473bbf41c7639bb69d1ba6c3864e3938f67351",
+    "sha256": "c26214829c4ceee94c68bd204cb2adfa6555597c971eb460f5bddb157b9dd97b",
     "numeric_columns": [
       "x",
       "y",
@@ -16,17 +16,17 @@
     "panels": [
       {
         "kind": "curve",
-        "title": "Longitudinal expression profiles",
+        "title": "STAT1 longitudinal predictions",
         "x_label": "Scaled study time",
-        "y_label": "Supplied response",
+        "y_label": "Log2 STAT1 expression",
         "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
         "interval_label": "Shading: supplied illustrative range",
         "id": "p1"
       },
       {
         "kind": "interval",
-        "title": "Time interaction estimates",
-        "x_label": "Supplied effect and 95% interval",
+        "title": "Gene condition-by-time contrasts",
+        "x_label": "Log2 interaction contrast · 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -163,10 +163,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional time display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

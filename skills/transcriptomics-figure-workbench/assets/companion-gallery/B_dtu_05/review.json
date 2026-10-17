@@ -1,0 +1,88 @@
+{
+  "id": "B_dtu_05",
+  "title": "Transcript and parent-gene effects",
+  "chapters": [
+    "bulk.dtu"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 150,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Transcript and parent-gene effects",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Transcript and parent-gene effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied channel-specific standardized effect",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Transcript and parent-gene effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.dtu supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Transcript and parent-gene effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Transcript and parent-gene effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_dtu_05/example.png",
+    "svg": "B_dtu_05/example.svg",
+    "pdf": "B_dtu_05/example.pdf",
+    "tsv": "B_dtu_05/example.tsv",
+    "spec": "B_dtu_05/input/example.spec.json",
+    "preview": "B_dtu_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "64271a16b8a2b4e83f27f61a15808000f528c83bb0a99e2c02ebed806bbb5f2f",
+    "svg": "c59cab55cbea646d26e854d707d8a480ae26383d5d9423efe288a013fa66a2ce",
+    "pdf": "016483c2363325a704aa4218202f9a5912470dc2d6f392e38287c719ff372408",
+    "tsv": "abac3ede78d1aef22aaf4c4a7c1d61410cb1e78a06c2c30979ea5924a0061ac5",
+    "spec": "325a022969e8c791759b2086d24045a9ecd32104f2da4746f196bc773df88ec1"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_dtu_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "64271a16b8a2b4e83f27f61a15808000f528c83bb0a99e2c02ebed806bbb5f2f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: transcript usage, paired donor response, cohort effect summaries and larger layouts have aligned labels, explicit intervals and complete numeric tables; signed scales and denominators remain visible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

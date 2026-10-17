@@ -1,0 +1,88 @@
+{
+  "id": "S_annotation_02",
+  "title": "Positive and exclusion marker evidence",
+  "chapters": [
+    "single_cell.annotation"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 255,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Positive and exclusion marker evidence",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Positive and exclusion marker evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied marker score",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Positive and exclusion marker evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.annotation supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Positive and exclusion marker evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Positive and exclusion marker evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_annotation_02/example.png",
+    "svg": "S_annotation_02/example.svg",
+    "pdf": "S_annotation_02/example.pdf",
+    "tsv": "S_annotation_02/example.tsv",
+    "spec": "S_annotation_02/input/example.spec.json",
+    "preview": "S_annotation_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "20174d7afd3dcb36c31ed10c813a7eef8bb86de4a91a822327b435707eb72cb5",
+    "svg": "3ec72e032adfa991796501a6d59713312b7879b3efaca16b06fffa801feb47a3",
+    "pdf": "ea8e3d91e78d0f25cd84aedf72c1b6b19ef84cc4d92e558c181a85f1cef236ad",
+    "tsv": "c1e04adee516c004676df0aa2cb7c043b35cc15b881748b0c688c4569eb9d2c7",
+    "spec": "4ec97cc3bf49fef96dce00ad1c00e14edaed37f87d0d1542abc77689ea3ab00b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.7727893724176,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 13.526745147685103,
+    "p10_pt": 13.526745147685103,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_annotation_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "20174d7afd3dcb36c31ed10c813a7eef8bb86de4a91a822327b435707eb72cb5",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: annotation-marker matrix, mapped/ambiguous/unmapped coverage and discordance categories are legible and complete, with no overlap in compound page.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

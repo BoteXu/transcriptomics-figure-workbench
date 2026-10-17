@@ -1,0 +1,88 @@
+{
+  "id": "B_fusions_01",
+  "title": "Split-read and spanning-pair support",
+  "chapters": [
+    "bulk.fusions"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 197,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Split-read and spanning-pair support",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Split-read and spanning-pair support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supporting reads",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Split-read and spanning-pair support",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.fusions supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Split-read and spanning-pair support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Split-read and spanning-pair support; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_fusions_01/example.png",
+    "svg": "B_fusions_01/example.svg",
+    "pdf": "B_fusions_01/example.pdf",
+    "tsv": "B_fusions_01/example.tsv",
+    "spec": "B_fusions_01/input/example.spec.json",
+    "preview": "B_fusions_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "e9caa50903ead093d5e41eb69f5b4bc6636537a18bccbf7a8e605327eeff04c7",
+    "svg": "4f36ad9bb8c570f13de188eb6b48e71aec8a8873baf13af0b0565ef9cab52eef",
+    "pdf": "2f6ccdb3980cde0ce4cda37cf7afa6bde5890ac25b2ffd73a17ba6d400a776ba",
+    "tsv": "f223dce0de978153334861796f401cd96ce5c4e718c20b8cb21248fd6716c3fe",
+    "spec": "6ca0a1b1c1a76d693898e492a667f466cd74fa2e4683a48b4a906642837155b8"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_fusions_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e9caa50903ead093d5e41eb69f5b4bc6636537a18bccbf7a8e605327eeff04c7",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually inspected: aligned full-support matrices, evidence indicators, junction tracks and independent-library intervals; one-column enlarged reading example retains complete labels and rows. Donor capture design and cell-support matrices are legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

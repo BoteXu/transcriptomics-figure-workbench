@@ -1,0 +1,99 @@
+{
+  "id": "B_dtu_06",
+  "title": "Transcript-version sensitivity",
+  "chapters": [
+    "bulk.dtu"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 151,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Transcript-version sensitivity",
+        "x_label": "Transcript-fraction change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Transcript-version sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "explicit_effects": [
+          -0.3125,
+          0.3125,
+          0
+        ],
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Transcript-version sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.dtu supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Transcript-version sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Transcript-version sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_dtu_06/example.png",
+    "svg": "B_dtu_06/example.svg",
+    "pdf": "B_dtu_06/example.pdf",
+    "tsv": "B_dtu_06/example.tsv",
+    "spec": "B_dtu_06/input/example.spec.json",
+    "preview": "B_dtu_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "a5144861973db339cf6b1b89b1080479f2da6fcc782acf2adc720cb5d4cdb66c",
+    "svg": "289f44c4924a24fdc9af1e60b340d5a7d0fbd933d917587de89d1140ac6f03e6",
+    "pdf": "99bf81b5289a5f9781dc506cefeb0ca13c1e1abd079d99f31f8f422ba3b5328c",
+    "tsv": "dbee73c32f7a3054ac0d35d4dce7c765809f28e014e82c7685b36ee2f6c96a9e",
+    "spec": "6b9cdafd6005183e128c2444925e5cf9d7daf6819e35a628ea191ec94be1f700"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_dtu_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a5144861973db339cf6b1b89b1080479f2da6fcc782acf2adc720cb5d4cdb66c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: transcript usage, paired donor response, cohort effect summaries and larger layouts have aligned labels, explicit intervals and complete numeric tables; signed scales and denominators remain visible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

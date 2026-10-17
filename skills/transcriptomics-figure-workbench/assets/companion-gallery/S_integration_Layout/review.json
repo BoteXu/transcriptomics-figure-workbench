@@ -1,0 +1,118 @@
+{
+  "id": "S_integration_Layout",
+  "title": "Single cell · integration — complementary evidence",
+  "chapters": [
+    "single_cell.integration"
+  ],
+  "stage": "layout",
+  "family": "paired,effects,effects",
+  "variant": true,
+  "large_data": true,
+  "order": 239,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "paired",
+        "title": "Donor batch-mixing scores before/after integration",
+        "x_label": "Repeated condition",
+        "y_label": "Supplied donor median batch-mixing score",
+        "definition": "Donor batch-mixing scores before/after integration; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "probability": true,
+        "id": "p1"
+      },
+      {
+        "kind": "effects",
+        "title": "Donor-level biological-effect preservation",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-level biological-effect preservation; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Integration-choice sensitivity",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Integration-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · integration — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 24,
+      "method_version": "single_cell.integration supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor batch-mixing scores before/after integration; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-level biological-effect preservation; all quantities are supplied frozen channels, with explicitly declared units and scope. | Integration-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 1
+  },
+  "definition": "Donor batch-mixing scores before/after integration; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor-level biological-effect preservation; all quantities are supplied frozen channels, with explicitly declared units and scope. | Integration-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "unit",
+    "series",
+    "value",
+    "panel_id",
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_integration_Layout/example.png",
+    "svg": "S_integration_Layout/example.svg",
+    "pdf": "S_integration_Layout/example.pdf",
+    "tsv": "S_integration_Layout/example.tsv",
+    "spec": "S_integration_Layout/input/example.spec.json",
+    "preview": "S_integration_Layout/preview.jpg"
+  },
+  "sha256": {
+    "png": "6dcd21a3f05c55a71391fd07414aae3962ccf3781a438a5941381be718b9c31f",
+    "svg": "db19d5818ff06e24635d6b9fddf1f6e7e86806187d82dc0770a2e3d778b0c00a",
+    "pdf": "57fc439efed3b92d7f74f4f7b9670b7d8d4baf529dc619730c643ffe4e9c7202",
+    "tsv": "6f72d8ba3317c5fe119ab5bd9ec604fe40a58d5e5471addcfdf3e3cbff70f18d",
+    "spec": "e8569da7d3f0d9655b08bd735e7aca690ec51ca01da40720a08dfee6e5004bca"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 120,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_integration_Layout",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "6dcd21a3f05c55a71391fd07414aae3962ccf3781a438a5941381be718b9c31f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually inspected. Integration before/after donor connections and per-identity effects clear in two-column and expanded one-column pages. HVG mean-dispersion, scree and PC-choice sensitivity legible, no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

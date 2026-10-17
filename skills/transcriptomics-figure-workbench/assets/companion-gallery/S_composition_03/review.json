@@ -1,0 +1,89 @@
+{
+  "id": "S_composition_03",
+  "title": "Prespecified compositional effects",
+  "chapters": [
+    "single_cell.composition"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 279,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified compositional effects",
+        "x_label": "Supplied log-ratio effect · interval",
+        "y_label": "",
+        "definition": "Prespecified compositional effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified compositional effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.composition supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified compositional effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified compositional effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_composition_03/example.png",
+    "svg": "S_composition_03/example.svg",
+    "pdf": "S_composition_03/example.pdf",
+    "tsv": "S_composition_03/example.tsv",
+    "spec": "S_composition_03/input/example.spec.json",
+    "preview": "S_composition_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "75538f8b4aae2953cff9fe91f21e2693d00305b9c4e33cb90aec5b9a067b8177",
+    "svg": "af6683eed67fafe096d9055e0724c38bbaca6fa5a7ef7abfad18c542ea8ad186",
+    "pdf": "d52e6340cffbe4edb6de3b61156ec7c851402eeade4e71234261d34d11e669e0",
+    "tsv": "6a4523331ebd4869e946f76d27777dcef1edc344bf6dab4bec851ee0d35add44",
+    "spec": "862bb4e4363ff52e5acdf645b3ff3020ff8e626be61ef406e71b7eef137b4b5e"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_composition_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "75538f8b4aae2953cff9fe91f21e2693d00305b9c4e33cb90aec5b9a067b8177",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: expanded child-state evidence, aligned donor marker effects, all points in donor expression cloud, complete interval tables, composition effects and cell-support matrix. Long labels and rows readable without clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

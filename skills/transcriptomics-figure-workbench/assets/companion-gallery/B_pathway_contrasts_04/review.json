@@ -1,0 +1,85 @@
+{
+  "id": "B_pathway_contrasts_04",
+  "title": "Pathway concordance between contrasts",
+  "chapters": [
+    "bulk.pathway_contrasts"
+  ],
+  "stage": "interpretation",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 97,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Pathway concordance between contrasts",
+        "x_label": "NES · contrast A",
+        "y_label": "NES · contrast B",
+        "definition": "Pathway concordance between contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Pathway concordance between contrasts",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.pathway_contrasts supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Pathway concordance between contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Pathway concordance between contrasts; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_pathway_contrasts_04/example.png",
+    "svg": "B_pathway_contrasts_04/example.svg",
+    "pdf": "B_pathway_contrasts_04/example.pdf",
+    "tsv": "B_pathway_contrasts_04/example.tsv",
+    "spec": "B_pathway_contrasts_04/input/example.spec.json",
+    "preview": "B_pathway_contrasts_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "37d5208646450e101551bdc2388aeec042b6292a2b01b834300b7195ffd9c67d",
+    "svg": "88c6e03368667700cffbc6142da34aa6948bba09e6d17c1a575cf02217600f73",
+    "pdf": "14da23fa38c9622547518ab919b7d423430a4a10663b3cd699f14004b85a109a",
+    "tsv": "23906e9cbadc6e3e4094373864bc40fcd99b6088784c559e25442e4663a1df3b",
+    "spec": "f98fac4307758f2f381df3fa777a46f2b0c2fe3c754a14765edd5e21f9abcd79"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 23,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_pathway_contrasts_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "37d5208646450e101551bdc2388aeec042b6292a2b01b834300b7195ffd9c67d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: ranked-universe diagnostic, supplied NES comparisons and leading-edge overlap; contrast estimates plus concordance. Dense reading layout expands to every row and three-column alternative remains non-overlapping; these accompany the native running-score core.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

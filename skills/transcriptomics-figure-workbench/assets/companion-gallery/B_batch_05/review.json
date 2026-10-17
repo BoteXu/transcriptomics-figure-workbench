@@ -1,0 +1,94 @@
+{
+  "id": "B_batch_05",
+  "title": "Biological-effect preservation across choices",
+  "chapters": [
+    "bulk.batch"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 43,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Biological-effect preservation across choices",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Biological-effect preservation across choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Biological-effect preservation across choices",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.batch supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Biological-effect preservation across choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Biological-effect preservation across choices; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_batch_05/example.png",
+    "svg": "B_batch_05/example.svg",
+    "pdf": "B_batch_05/example.pdf",
+    "tsv": "B_batch_05/example.tsv",
+    "spec": "B_batch_05/input/example.spec.json",
+    "preview": "B_batch_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "7aa849a03726664070e729e4182aa12e41ecca560016a50b24a91808a84b371b",
+    "svg": "b92a77e55a70c2d84182e65c3d0e6ef548a9a62a170964e15380bb06e1deb256",
+    "pdf": "3792050dcb72bb7eff9aacb94c9eddf9389e03f82e9cc9f0f3d784136eeadcbb",
+    "tsv": "f9b017310d83a2e9de21ed7e4919813fc661b464364e681217ae7078681c7bcd",
+    "spec": "00106b1c02ef8307983d2a59e89feec334c27e08e7b5ec4fd69037338b154fad"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_batch_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7aa849a03726664070e729e4182aa12e41ecca560016a50b24a91808a84b371b",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual PNGs inspected: common-scoped filtering and detection channels, paired RLE donor connections, before/after point retention, batch donor denominators, and effect/uncertainty tables are complete and readable. Row-specific layout heights avoid stretching short panels; no text/guide collision.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

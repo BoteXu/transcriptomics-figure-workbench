@@ -1,0 +1,84 @@
+{
+  "id": "S_hvg_pca_02",
+  "title": "Supplied explained variance by PC",
+  "chapters": [
+    "single_cell.hvg_pca"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 241,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Supplied explained variance by PC",
+        "x_label": "Principal component",
+        "y_label": "Variance fraction",
+        "definition": "Supplied explained variance by PC; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Supplied explained variance by PC",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.hvg_pca supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Supplied explained variance by PC; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Supplied explained variance by PC; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_hvg_pca_02/example.png",
+    "svg": "S_hvg_pca_02/example.svg",
+    "pdf": "S_hvg_pca_02/example.pdf",
+    "tsv": "S_hvg_pca_02/example.tsv",
+    "spec": "S_hvg_pca_02/input/example.spec.json",
+    "preview": "S_hvg_pca_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "7e70383ebcca7e226cac77aa8dc8b4472f989b47d3f1afc1d51a62852cf10dc9",
+    "svg": "06f4736cf1f9e648ced00a78466b784ad5fab78dde642b4c035a051a4c4d85d8",
+    "pdf": "479dde07d0f30c3267697cd9a40161316a3110b843c9362d79633bf0499bc7fd",
+    "tsv": "e521ff6a331a99c5d61bd153807519d1caf7e379c8bf8dcfc4fdbce18d5198af",
+    "spec": "7b0170952652bc6fd6b8b82bdfbe82c24540490ac1b00140d982fdeaa0cce395"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 20,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_hvg_pca_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7e70383ebcca7e226cac77aa8dc8b4472f989b47d3f1afc1d51a62852cf10dc9",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final PNGs individually inspected. Integration before/after donor connections and per-identity effects clear in two-column and expanded one-column pages. HVG mean-dispersion, scree and PC-choice sensitivity legible, no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

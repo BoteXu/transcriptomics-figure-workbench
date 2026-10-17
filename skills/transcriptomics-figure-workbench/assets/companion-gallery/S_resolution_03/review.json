@@ -1,0 +1,88 @@
+{
+  "id": "S_resolution_03",
+  "title": "Marker specificity across candidate clusters",
+  "chapters": [
+    "single_cell.resolution"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 249,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Marker specificity across candidate clusters",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Marker specificity across candidate clusters; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied marker score",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Marker specificity across candidate clusters",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.resolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Marker specificity across candidate clusters; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Marker specificity across candidate clusters; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_resolution_03/example.png",
+    "svg": "S_resolution_03/example.svg",
+    "pdf": "S_resolution_03/example.pdf",
+    "tsv": "S_resolution_03/example.tsv",
+    "spec": "S_resolution_03/input/example.spec.json",
+    "preview": "S_resolution_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "0b8c36ad55ed1c56a935f99dd93bb5cd31538489eef4facf5b90c7abe7c51459",
+    "svg": "f949f6fc3f66a60f6f3e2409ce66ae593be598b94cab7977ed0858fe851b04aa",
+    "pdf": "8081c1ba0b6c2b0e41e0acf02d612cb023aefbe677a604b9eb88d7f5df881873",
+    "tsv": "435d7ec05abae4e2492e2bf4e545637f8c648de80db1aa55dd35230af4e6b91e",
+    "spec": "37846090a19e273f684bf86e4348247711a4c8b3838ace844b0074e35a6ab9f4"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 43,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_resolution_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0b8c36ad55ed1c56a935f99dd93bb5cd31538489eef4facf5b90c7abe7c51459",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually viewed: donor/cluster support, selected donor mixture, signed marker matrix, probability-bounded stability and independent-cohort label agreement. Complete categories, uncertainty, q and n visible; balanced composed page without collisions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

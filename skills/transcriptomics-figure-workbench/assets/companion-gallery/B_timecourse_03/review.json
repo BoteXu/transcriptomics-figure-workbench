@@ -1,0 +1,87 @@
+{
+  "id": "B_timecourse_03",
+  "title": "STAT1 longitudinal predictions",
+  "chapters": [
+    "bulk.timecourse"
+  ],
+  "stage": "interpretation",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 156,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "STAT1 longitudinal predictions",
+        "x_label": "Time (days)",
+        "y_label": "Supplied log2 STAT1 expression",
+        "definition": "STAT1 longitudinal predictions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "STAT1 longitudinal predictions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.timecourse supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "STAT1 longitudinal predictions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "STAT1 longitudinal predictions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_timecourse_03/example.png",
+    "svg": "B_timecourse_03/example.svg",
+    "pdf": "B_timecourse_03/example.pdf",
+    "tsv": "B_timecourse_03/example.tsv",
+    "spec": "B_timecourse_03/input/example.spec.json",
+    "preview": "B_timecourse_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "b43a12d3e2a092d04b9cf3161041644c6652ef39fd5e91d653218b5f45d93a5a",
+    "svg": "4d2fa2dec70f0d8b184bd693ae0781bb394017085891ee9b853f6f8d1003c11a",
+    "pdf": "8b4b8ee01e9e1235eca9281d9ad62506f0205cef72502fe801ddd50242199547",
+    "tsv": "a9b1f68054d9d777eee938a3ed1a957aa3ca259324912c441bc7797f30b201a4",
+    "spec": "9c8c98ee78bc29449a176080e96350e99f8829f9c1c0ed4f276e38c7222314ee"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_timecourse_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b43a12d3e2a092d04b9cf3161041644c6652ef39fd5e91d653218b5f45d93a5a",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each final PNG inspected: twelve donor pairs retained, named longitudinal curves with visible supplied-range key, and explicit log2 effects/interval/q lanes; no overlap or cut labels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,88 @@
+{
+  "id": "S_integration_02",
+  "title": "Batch mixing and biological conservation",
+  "chapters": [
+    "single_cell.integration"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 234,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Batch mixing and biological conservation",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Supplied bounded metrics retain their distinct upstream definitions; this display does not combine them into one quality score.",
+        "value_label": "Supplied score (0–1)",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Batch mixing and biological conservation",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.integration supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Supplied bounded metrics retain their distinct upstream definitions; this display does not combine them into one quality score.",
+    "columns": "auto"
+  },
+  "definition": "Supplied bounded metrics retain their distinct upstream definitions; this display does not combine them into one quality score.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_integration_02/example.png",
+    "svg": "S_integration_02/example.svg",
+    "pdf": "S_integration_02/example.pdf",
+    "tsv": "S_integration_02/example.tsv",
+    "spec": "S_integration_02/input/example.spec.json",
+    "preview": "S_integration_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "07dccfca02c4878590c65cbda90c84e3b3ce995b3af6f07bbfc6e72a266baf3c",
+    "svg": "42be6adcf0d64d7b3593a863e1a9f4822ad1e9e5c02861ee67c090f6c5f3e4f9",
+    "pdf": "e1363afd9f78cd9f4c15b44f40b226e5f90063ea71f2d35c0a821fe5518d2bff",
+    "tsv": "a29195ec7c0f2389aebd7a28bdeebf5ad51fdb6cdfd6ea0fead87da88431ecfb",
+    "spec": "1da00cd7bc86893c3e041d179b97d0e85d19eb4400d454f16a820bfb5fa44fe1"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 168.5572222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 13.704544780374619,
+    "p10_pt": 13.704544780374619,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_integration_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "07dccfca02c4878590c65cbda90c84e3b3ce995b3af6f07bbfc6e72a266baf3c",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed final PNGs: barcode/calling profiles, raincloud donor QC, probability/scoring matrices and supplied counts have clear legends and complete identities; layout spacing and labels reviewed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

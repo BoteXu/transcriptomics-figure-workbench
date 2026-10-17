@@ -1,0 +1,88 @@
+{
+  "id": "B_replication_04",
+  "title": "Direction and magnitude by cohort",
+  "chapters": [
+    "bulk.replication"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 164,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Direction and magnitude by cohort",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Direction and magnitude by cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied log2 effect",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Direction and magnitude by cohort",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Direction and magnitude by cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Direction and magnitude by cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_replication_04/example.png",
+    "svg": "B_replication_04/example.svg",
+    "pdf": "B_replication_04/example.pdf",
+    "tsv": "B_replication_04/example.tsv",
+    "spec": "B_replication_04/input/example.spec.json",
+    "preview": "B_replication_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "641100805bd57ef929f3552d2a106ca1e20807742498880b58909ddba903ac31",
+    "svg": "1dac04ae46cc0cd8e9e4a94092be42d8edb23b613f38e8e446a245bcf7108794",
+    "pdf": "ec360e6d2d19ebec478463422c9549a45453f935e0a7c0fa6a9d8a705219adcd",
+    "tsv": "5b3da97953b320515e252671a2125658844896d2165df2704ff6af33dee59409",
+    "spec": "6d7728e2d97f5ae013400d1d5f79906e2c00d513742847cd5d353ba5ff598a5e"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 36,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_replication_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "641100805bd57ef929f3552d2a106ca1e20807742498880b58909ddba903ac31",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: transcript usage, paired donor response, cohort effect summaries and larger layouts have aligned labels, explicit intervals and complete numeric tables; signed scales and denominators remain visible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

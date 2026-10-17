@@ -1,0 +1,84 @@
+{
+  "id": "B_differential_01",
+  "title": "Binned dispersion summaries and fitted trend",
+  "chapters": [
+    "bulk.differential"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 46,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Binned dispersion summaries and fitted trend",
+        "x_label": "Supplied mean",
+        "y_label": "Supplied dispersion",
+        "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "id": "p1"
+      }
+    ],
+    "title": "Binned dispersion summaries and fitted trend",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.differential supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Binned dispersion summaries and fitted trend; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_differential_01/example.png",
+    "svg": "B_differential_01/example.svg",
+    "pdf": "B_differential_01/example.pdf",
+    "tsv": "B_differential_01/example.tsv",
+    "spec": "B_differential_01/input/example.spec.json",
+    "preview": "B_differential_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "e63e5542f4789adc9d86528d53de246aa4b517dcc57ccc16176fda7b35cf9a59",
+    "svg": "7ffcb974afeeff99c651ef570681b7d9bb41b020ea1200abe9c5f73f6b4b974e",
+    "pdf": "aebe83707219c5a4b30b4aaea96022d6ef93bfedcc422feb4c02b4ae27380a1b",
+    "tsv": "4211e0fc8a6d82024b03e884b125b2e80c3ae5d58afd3a8aed1565c84247cd73",
+    "spec": "481598c347d42d7927d26fdcb182a42cd0b2048c66bec89cb700b07df2dd8c21"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_differential_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "e63e5542f4789adc9d86528d53de246aa4b517dcc57ccc16176fda7b35cf9a59",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs inspected: larger batch view has 8+8+8 donors with complete cloud points, dispersion trend and Cook axes/legends clear, named STAT1 expression includes every donor, and raw-P histograms have explicit contrast labels and sharp outlines. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

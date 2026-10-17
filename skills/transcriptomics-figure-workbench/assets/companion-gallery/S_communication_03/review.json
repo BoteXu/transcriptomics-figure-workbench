@@ -1,0 +1,88 @@
+{
+  "id": "S_communication_03",
+  "title": "Incoming pathway contributions",
+  "chapters": [
+    "single_cell.communication"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 345,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Incoming pathway contributions",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Incoming pathway contributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied incoming contribution",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Incoming pathway contributions",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.communication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Incoming pathway contributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Incoming pathway contributions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_communication_03/example.png",
+    "svg": "S_communication_03/example.svg",
+    "pdf": "S_communication_03/example.pdf",
+    "tsv": "S_communication_03/example.tsv",
+    "spec": "S_communication_03/input/example.spec.json",
+    "preview": "S_communication_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "afeb6dd119ee87663384cd5252ae293ddcce6b0ed43dd494a0669afc48652ac5",
+    "svg": "0ae765b8ea280713dc7788b362d7e638867327344c985d79e62fd2040ef4578d",
+    "pdf": "be0978896e2620c9bf6ddbbe14416a07fdbc4f5dda5774ca57752faf87840a1d",
+    "tsv": "872c5d67821825a053d9b6d051ba0837a483c1c100e2ece7880c841ea9bb49bd",
+    "spec": "1dce2aa29156c40f24f26223c64150231f5c5f7d5369bb672effc5206680da08"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 155.1136523584251,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 14.892306156663913,
+    "p10_pt": 14.892306156663913,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_communication_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "afeb6dd119ee87663384cd5252ae293ddcce6b0ed43dd494a0669afc48652ac5",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: velocity phase/profile/sensitivity and communication expression/contribution/role views retain declared scales and comparison labels; direct role labels, zero references and aligned numeric companions are readable.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

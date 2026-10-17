@@ -1,0 +1,87 @@
+{
+  "id": "B_reads_01",
+  "title": "Base-quality profiles by read",
+  "chapters": [
+    "bulk.reads"
+  ],
+  "stage": "qc",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 8,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Base-quality profiles by read",
+        "x_label": "Read position (nt)",
+        "y_label": "Phred quality",
+        "definition": "Base-quality profiles by read; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "supplied observation; independent units are separately declared",
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "Base-quality profiles by read",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.reads supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Base-quality profiles by read; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Base-quality profiles by read; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_reads_01/example.png",
+    "svg": "B_reads_01/example.svg",
+    "pdf": "B_reads_01/example.pdf",
+    "tsv": "B_reads_01/example.tsv",
+    "spec": "B_reads_01/input/example.spec.json",
+    "preview": "B_reads_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "fc5404dd281fcb7f0a22f5e0cf31c3e34f16f9f3a351896b364e06b733dfb594",
+    "svg": "e81a599ae5aa639e94f7ae1ad07ba9bdaf04036193dd38f2c8594be19da6f6c3",
+    "pdf": "006ca6ff24adc8a62b36280e8e75495e024ba5aefd1450c1053f859a1953e2cd",
+    "tsv": "59b82d2b34a990f8552dd0daba4541aff047a7b845729c72a537433ae079e575",
+    "spec": "50796203a6f07c66b47582c71764d59e7bc69fceb13a004f8029c11677910a81"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_reads_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "fc5404dd281fcb7f0a22f5e0cf31c3e34f16f9f3a351896b364e06b733dfb594",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual exported PNG viewed individually after repair: opaque histogram outlines, visible ribbon definition, explicit reference and repeated-model labels, correct decreasing filter retention, decreasing feature counts, paired RLE medians, twelve-donor batch totals, complete variance components, fully readable wrapped term names and wide three-column guide lanes. Exact current PNG bytes match the previously inspected artifact.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,89 @@
+{
+  "id": "B_noncoding_02",
+  "title": "Prespecified noncoding RNA effects",
+  "chapters": [
+    "bulk.noncoding"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 191,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified noncoding RNA effects",
+        "x_label": "Noncoding-RNA log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified noncoding RNA effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified noncoding RNA effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.noncoding supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified noncoding RNA effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified noncoding RNA effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_noncoding_02/example.png",
+    "svg": "B_noncoding_02/example.svg",
+    "pdf": "B_noncoding_02/example.pdf",
+    "tsv": "B_noncoding_02/example.tsv",
+    "spec": "B_noncoding_02/input/example.spec.json",
+    "preview": "B_noncoding_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "51935089830c4b6f1458f146b77c534d9353e021a274845501c43eb6c8f2013e",
+    "svg": "9b7937077e17687947e45a0007333dddbebbe93d8d64a5c5b71b36e90353870e",
+    "pdf": "7d27321f2bb53e10bbf5eb9cf62e1cc4f60803ab97537548503f510b5835f347",
+    "tsv": "314da7db1df9f22e20e2fd23d2eff3a58f4a1e28f9688328fb45d8bec5382815",
+    "spec": "7dc98bb42cc1ef15b166b5129cb61da55088137de32e5f2b164397281e3fc737"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_noncoding_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "51935089830c4b6f1458f146b77c534d9353e021a274845501c43eb6c8f2013e",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected final PNGs: complete selected PPI rectangle and effect rows remain readable; connectivity support, dose profiles and replication rows have visible channels; noncoding mapping, effect, donor distributions, evidence classes and cohort rows have clear labels. No clipping or collisions in single or expanded layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

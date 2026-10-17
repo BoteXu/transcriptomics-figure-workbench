@@ -1,0 +1,88 @@
+{
+  "id": "S_splicing_02",
+  "title": "Event support across donors and identities",
+  "chapters": [
+    "single_cell.splicing"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 386,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Event support across donors and identities",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Event support across donors and identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Fraction of supported donors",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Event support across donors and identities",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.splicing supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Event support across donors and identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Event support across donors and identities; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_splicing_02/example.png",
+    "svg": "S_splicing_02/example.svg",
+    "pdf": "S_splicing_02/example.pdf",
+    "tsv": "S_splicing_02/example.tsv",
+    "spec": "S_splicing_02/input/example.spec.json",
+    "preview": "S_splicing_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "844cbbd86e6e736091927e39561406f2fd0bbc84ed3adae91bc4f44ded801b78",
+    "svg": "99b44936051037a00d3f8cfd1dd190bb1551cdec691eb6c50c3186364cab214b",
+    "pdf": "40bdde24da7b0d54bda01a2a82797c87fd7b0ab201bb9e830365d3a5aa762e79",
+    "tsv": "151b6bcf0dd1731a4ddb598f74f49faf15b3aa0820f0dc89c805cddce2a52ade",
+    "spec": "404c9f572f9e1e13788ea4e7398205268c1920462a0e44404f68fa8e399906dc"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 187.76012272132823,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 49,
+    "smallest_pt": 12.302931882018845,
+    "p10_pt": 12.302931882018845,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_splicing_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "844cbbd86e6e736091927e39561406f2fd0bbc84ed3adae91bc4f44ded801b78",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: regulon activity versus support, CNV reference/clone identity consistency and orthogonal channels, paired Shannon summaries and physical splicing intervals are readable; legends and row heights checked at final export.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,89 @@
+{
+  "id": "B_survival_06",
+  "title": "Calibration from a held-out cohort",
+  "chapters": [
+    "bulk.survival"
+  ],
+  "stage": "validation",
+  "family": "profile",
+  "variant": false,
+  "large_data": false,
+  "order": 173,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "profile",
+        "title": "Calibration from a held-out cohort",
+        "x_label": "Supplied predicted risk",
+        "y_label": "Supplied observed risk",
+        "definition": "Calibration from a held-out cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "identity_reference": true,
+        "point_unit": "supplied observation; independent units are separately declared",
+        "probability": true,
+        "interval_definition": "Explicit illustrative frozen bounds; no fit, smoothing or uncertainty estimation",
+        "id": "p1"
+      }
+    ],
+    "title": "Calibration from a held-out cohort",
+    "context": {
+      "independent_unit": "fictional participants",
+      "independent_n": 80,
+      "method_version": "bulk.survival supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Calibration from a held-out cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Calibration from a held-out cohort; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "lower",
+    "upper",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_survival_06/example.png",
+    "svg": "B_survival_06/example.svg",
+    "pdf": "B_survival_06/example.pdf",
+    "tsv": "B_survival_06/example.tsv",
+    "spec": "B_survival_06/input/example.spec.json",
+    "preview": "B_survival_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "64660ba2c6815871575f0aae7f7cdad1824b02575d8c09880d327bbe84c8e700",
+    "svg": "e7971dda095d7b08e63d8b3130319c11ea544b4122c4fea39f544512c303a73d",
+    "pdf": "bba3b13a06f13cb8a8dff93248d9be3f07c7084d880f8022ad628e6fbb58d78a",
+    "tsv": "e44895838319a431adb5416873bf87dac9832a83042655151f1fb28252d5e155",
+    "spec": "4caf50c6ee0268d4c853d2174883979b87415352b95a0c7b96d143df8a625be2"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_survival_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "64660ba2c6815871575f0aae7f7cdad1824b02575d8c09880d327bbe84c8e700",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each actual PNG inspected: full effect and cohort tables, log-scale ratio reference, monotone supplied survival steps, calibration identity line and barcode knee/bins remain readable and unclipped in custom layouts.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

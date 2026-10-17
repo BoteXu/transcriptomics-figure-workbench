@@ -1,0 +1,84 @@
+{
+  "id": "S_ambient_doublet_02",
+  "title": "Doublet score and droplet complexity",
+  "chapters": [
+    "single_cell.ambient_doublet"
+  ],
+  "stage": "qc",
+  "family": "scatter",
+  "variant": false,
+  "large_data": false,
+  "order": 227,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "scatter",
+        "title": "Doublet score and droplet complexity",
+        "x_label": "Supplied log UMI count",
+        "y_label": "Supplied doublet score",
+        "definition": "Doublet score and droplet complexity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "point_unit": "droplet nested within donor",
+        "id": "p1"
+      }
+    ],
+    "title": "Doublet score and droplet complexity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.ambient_doublet supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Doublet score and droplet complexity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Doublet score and droplet complexity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "series",
+    "label",
+    "x",
+    "y",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_ambient_doublet_02/example.png",
+    "svg": "S_ambient_doublet_02/example.svg",
+    "pdf": "S_ambient_doublet_02/example.pdf",
+    "tsv": "S_ambient_doublet_02/example.tsv",
+    "spec": "S_ambient_doublet_02/input/example.spec.json",
+    "preview": "S_ambient_doublet_02/preview.jpg"
+  },
+  "sha256": {
+    "png": "f750560b853f977497ec601c398c040817313c16d6700fdda1460a8b1eb07e4f",
+    "svg": "e882efd38dffa9dbf4071d590c2dba6b39e1ad2ba59566265bab164ff75138a2",
+    "pdf": "f4b2d6ba58cbdcf380e8ebda572067489c08385a049f71259d18838fee3a3f83",
+    "tsv": "ad09d8a5557f6f262dd98bdf0e27488de67ecdb68976985353ae5cd4be80bf5d",
+    "spec": "efe8cc56daae8ce07759c0e9a1c0c06aa0e6d3144785d71c3a6c40c050cde69d"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_ambient_doublet_02",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f750560b853f977497ec601c398c040817313c16d6700fdda1460a8b1eb07e4f",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed final PNGs: barcode/calling profiles, raincloud donor QC, probability/scoring matrices and supplied counts have clear legends and complete identities; layout spacing and labels reviewed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

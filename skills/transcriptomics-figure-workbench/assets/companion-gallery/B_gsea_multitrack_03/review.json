@@ -1,0 +1,90 @@
+{
+  "id": "B_gsea_multitrack_03",
+  "title": "Selected pathways on a common NES scale",
+  "chapters": [
+    "bulk.gsea_multitrack"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 110,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Selected pathways on a common NES scale",
+        "x_label": "Supplied NES · upstream interval",
+        "y_label": "",
+        "definition": "Selected pathways on a common NES scale; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "n_label": "Upstream donor n",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Selected pathways on a common NES scale",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.gsea_multitrack supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Selected pathways on a common NES scale; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Selected pathways on a common NES scale; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_gsea_multitrack_03/example.png",
+    "svg": "B_gsea_multitrack_03/example.svg",
+    "pdf": "B_gsea_multitrack_03/example.pdf",
+    "tsv": "B_gsea_multitrack_03/example.tsv",
+    "spec": "B_gsea_multitrack_03/input/example.spec.json",
+    "preview": "B_gsea_multitrack_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "b6a3b7a98cd6a5727da8e18f53a5374f58a2b85c5cc8de07776e1f1e433eeb8d",
+    "svg": "80278233a65c7e3732ca846acf0648c255200bd95c7312fd0c1ec7d12294792d",
+    "pdf": "b6967f27b387356270476386bc1301868d8ed3062367344176125e04a8996f9b",
+    "tsv": "844615e7b95efe3aaa4c0f84cce9b564d156f7dd546ff09abfe9fd10f6fcb1d5",
+    "spec": "2aa51c674a604ab5d2806516e654236115c85691d36ee82253efa6df41bfe743"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_gsea_multitrack_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "b6a3b7a98cd6a5727da8e18f53a5374f58a2b85c5cc8de07776e1f1e433eeb8d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Each PNG viewed: complete donor/numerical support, explicit uncertainty lanes and separate scale definitions; native GSEA curve remains primary and these provide coverage, ranking and gene-support companions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

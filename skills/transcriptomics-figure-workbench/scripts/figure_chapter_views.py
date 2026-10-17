@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 from matplotlib.lines import Line2D
+from matplotlib.patches import FancyArrowPatch
 from figure_core import checked, stamp
 from project_theme import apply_project_style,group_palette
 
@@ -133,7 +134,9 @@ def _draw(ax, d, p, theme):
             for label,x,y in [(r.label,r.x,r.y),(r.target,r.target_x,r.target_y)]:
                 if label in nodes and nodes[label]!=(x,y):raise ValueError('Inconsistent frozen network coordinates')
                 nodes[label]=(x,y)
-            ax.plot([r.x,r.target_x],[r.y,r.target_y],color=pal[r.series],alpha=.22+.38*r.value/max(d.value.max(),1e-9),lw=.5+1.7*r.value/max(d.value.max(),1e-9),zorder=1)
+            if p.get('directed',False):
+                ax.add_patch(FancyArrowPatch((r.x,r.y),(r.target_x,r.target_y),arrowstyle='-|>',mutation_scale=12,shrinkA=8,shrinkB=8,color=pal[r.series],alpha=.65,lw=.5+1.7*r.value/max(d.value.max(),1e-9),zorder=1))
+            else:ax.plot([r.x,r.target_x],[r.y,r.target_y],color=pal[r.series],alpha=.22+.38*r.value/max(d.value.max(),1e-9),lw=.5+1.7*r.value/max(d.value.max(),1e-9),zorder=1)
         for label,(x,y) in nodes.items():
             ax.scatter(x,y,s=100,c='#FAFDFD',ec='#518895',lw=1.2,zorder=3);ax.annotate(_wrap(label,13),(x,y),xytext=(0,10),textcoords='offset points',ha='center',fontsize=10,zorder=4)
         ax.margins(.25);ax.set_aspect('equal');ax.spines[:].set_visible(False);ax.set_xticks([]);ax.set_yticks([])

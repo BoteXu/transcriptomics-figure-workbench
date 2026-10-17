@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "1e55b4cde21c6988356de9e1927bf29d751e126fac7ee395cb64dd48aab56da3",
+    "sha256": "79c3018be4aaa366abc00558080556d2641e647d39d61555d452a73abd4782c0",
     "numeric_columns": [
       "x",
       "y",
@@ -25,8 +25,8 @@
       },
       {
         "kind": "interval",
-        "title": "Sensitivity of selected effects",
-        "x_label": "Supplied effect and 95% interval",
+        "title": "Selected gene effects",
+        "x_label": "Log2 fold change · supplied 95% interval",
         "y_label": "",
         "interval_definition": "Explicit fictional 95% intervals; no interval estimation",
         "id": "p2"
@@ -163,10 +163,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional filtering display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

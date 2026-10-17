@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "6b95be6f323abc6b8fa6eb984b3bfe5175a17f28b4ea6be064ffa4d10a1b0cd8",
+    "sha256": "b5198affd1dd34620e9e98bafaf5b2620bb86375f9c8c5d9eb9d5cafa8776a60",
     "numeric_columns": [
       "value",
       "fraction"
@@ -14,13 +14,13 @@
     "panels": [
       {
         "kind": "matrix",
-        "title": "Sender-receiver landscape",
-        "x_label": "",
-        "y_label": "",
-        "value_label": "Supplied interaction score",
+        "title": "Sender–receiver normalized support",
+        "x_label": "Receiver",
+        "y_label": "Sender",
+        "value_label": "Normalized interaction support",
         "limits": [
           0,
-          2
+          1
         ],
         "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
         "size_label": "Coverage",
@@ -32,19 +32,19 @@
         "title": "Ligand-receptor support",
         "x_label": "",
         "y_label": "",
-        "value_label": "Supplied LR score",
+        "value_label": "Normalized LR support",
         "limits": [
           0,
-          2
+          1
         ],
-        "fraction_definition": "Explicit fictional detection or coverage fraction in each declared group",
-        "size_label": "Coverage",
+        "fraction_definition": "Explicit fraction of fictional donors supporting this ligand–receptor pair",
+        "size_label": "Donor support",
         "show_values": true,
         "id": "p2"
       }
     ],
     "title": "Communication themes and ligand-receptor support",
-    "scope_note": "Fictional frozen inputs · single_cell · no analysis performed",
+    "scope_note": "Fictional normalized evidence scores · neither physical binding nor a measured signaling rate",
     "columns": "auto"
   },
   "theme": {
@@ -174,10 +174,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen chapter fixture v0.9.1; not an analysis output",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Explicit fictional communication display channels",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "Complete explicit example table; selected display scope only",
     "model": "No analysis or model fitted; numerical channels supplied as illustrative input",
     "limits": "Declared complete display scope; data have no biomedical validity",

@@ -1,0 +1,84 @@
+{
+  "id": "S_cnv_03",
+  "title": "Clone composition within each donor",
+  "chapters": [
+    "single_cell.cnv"
+  ],
+  "stage": "interpretation",
+  "family": "fraction",
+  "variant": false,
+  "large_data": false,
+  "order": 370,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "fraction",
+        "title": "Clone composition within each donor",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Clone composition within each donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p1"
+      }
+    ],
+    "title": "Clone composition within each donor",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.cnv supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Clone composition within each donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Clone composition within each donor; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "denominator",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_cnv_03/example.png",
+    "svg": "S_cnv_03/example.svg",
+    "pdf": "S_cnv_03/example.pdf",
+    "tsv": "S_cnv_03/example.tsv",
+    "spec": "S_cnv_03/input/example.spec.json",
+    "preview": "S_cnv_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "f13785fc7b7a60bd16c84b4268430325e2b89b241fb779e4a8ce48f6d5777f02",
+    "svg": "a9681c3f20eff66e68498962a69954092ef784ffc66d51ed28a0cdc336b3b7cc",
+    "pdf": "a410a535cbebad73553e2340f5711c47113197260df453ca7318e3256bd88b20",
+    "tsv": "f09a2c0d45d3f6b647b8c7819cfcce0ebbe9416b6b65e7b48c5eff96ddc15d51",
+    "spec": "dbff636e7d315b59ac25a003c6a2bb0c891fd4374e5283864f60e0907df39ed0"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 24,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_cnv_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "f13785fc7b7a60bd16c84b4268430325e2b89b241fb779e4a8ce48f6d5777f02",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: regulon activity versus support, CNV reference/clone identity consistency and orthogonal channels, paired Shannon summaries and physical splicing intervals are readable; legends and row heights checked at final export.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

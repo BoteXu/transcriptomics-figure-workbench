@@ -1,0 +1,89 @@
+{
+  "id": "S_pseudobulk_03",
+  "title": "Donor-level differential-expression effects",
+  "chapters": [
+    "single_cell.pseudobulk"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 293,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Donor-level differential-expression effects",
+        "x_label": "Donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Donor-level differential-expression effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Donor-level differential-expression effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.pseudobulk supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor-level differential-expression effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Donor-level differential-expression effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_pseudobulk_03/example.png",
+    "svg": "S_pseudobulk_03/example.svg",
+    "pdf": "S_pseudobulk_03/example.pdf",
+    "tsv": "S_pseudobulk_03/example.tsv",
+    "spec": "S_pseudobulk_03/input/example.spec.json",
+    "preview": "S_pseudobulk_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "0adbb3743583fc2e3cb656be719e427662ed2a903fcb01fabd5bc4c8c6deeaee",
+    "svg": "5f60a1e68c817f2a7b419eadfbb44a1dbb4d7dc50d0d3c91a0e3112df4d0f7af",
+    "pdf": "aff5b1925454ee78aa382a0f982a8b4091f06423a802a23500b01985fa5a03b9",
+    "tsv": "6a37116d2eef71614625d72c09bd51554c121144e8ee4816c7a8e6d4026e2ca6",
+    "spec": "e4aba9008b333d19fbd47cfe6f855d32d328cc5ea67ae98abc9736b7436473f3"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_pseudobulk_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "0adbb3743583fc2e3cb656be719e427662ed2a903fcb01fabd5bc4c8c6deeaee",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed donor-by-identity cell-support matrix, donor-level differential effects and STAT1 expression with every donor point. Supplied intervals and group n legible; no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

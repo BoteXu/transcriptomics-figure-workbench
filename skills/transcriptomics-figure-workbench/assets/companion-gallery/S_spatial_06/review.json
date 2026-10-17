@@ -1,0 +1,94 @@
+{
+  "id": "S_spatial_06",
+  "title": "Section and registration-choice sensitivity",
+  "chapters": [
+    "single_cell.spatial"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 413,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Section and registration-choice sensitivity",
+        "x_label": "Regional program-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Section and registration-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Section and registration-choice sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.spatial supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Section and registration-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Section and registration-choice sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_spatial_06/example.png",
+    "svg": "S_spatial_06/example.svg",
+    "pdf": "S_spatial_06/example.pdf",
+    "tsv": "S_spatial_06/example.tsv",
+    "spec": "S_spatial_06/input/example.spec.json",
+    "preview": "S_spatial_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "726d79ff4a545318ba0387510bcfecec380fc4c0149d59398c0b553be09ecf70",
+    "svg": "5ca976bd864b3e2ead1868ccffae3d7d8d81d65f8ad467dc39676ab44efa7b86",
+    "pdf": "db19740f9fb500033c86b1d7c9a870d36c6061902a19b4b36459f06a9137641a",
+    "tsv": "3c2c108da355b3749ef9b2926da24ccdfd1512d69e3704ac8b2c9cabbb1155ff",
+    "spec": "4516dacc4edbe374a3ece6e5edd040db5b6c99f51647105a87f3618027df709b"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_spatial_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "726d79ff4a545318ba0387510bcfecec380fc4c0149d59398c0b553be09ecf70",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Reviewed actual PNGs: common-gene identity and cohort denominators preserved; regional identities, micrometre units, evidence panels and reading layouts legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

@@ -1,0 +1,94 @@
+{
+  "id": "S_states_05",
+  "title": "State effects after prespecified cycle adjustment",
+  "chapters": [
+    "single_cell.states"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 325,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "State effects after prespecified cycle adjustment",
+        "x_label": "Donor state-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "State effects after prespecified cycle adjustment; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "State effects after prespecified cycle adjustment",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.states supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "State effects after prespecified cycle adjustment; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "State effects after prespecified cycle adjustment; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_states_05/example.png",
+    "svg": "S_states_05/example.svg",
+    "pdf": "S_states_05/example.pdf",
+    "tsv": "S_states_05/example.tsv",
+    "spec": "S_states_05/input/example.spec.json",
+    "preview": "S_states_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "5592bf74bd34c6d5405676fc2ac4329450313a8d9b210a95bc12d13829dc61fc",
+    "svg": "211d0863469253d46b1c09bba1f25dba19280194fc742bae39c24b99256e0ea6",
+    "pdf": "d2275026d5f596a925ef6c0fc14b860a265f266954cc1f3c7fa06fb77b3592ee",
+    "tsv": "c27c0fc634571855a03f1fff0b2860a647266a0e7242d5501abbaa757d9f8528",
+    "spec": "049f0f8b4ae8e0a7e5d38ea82911e500b5604e775a0f1bb28956755ffda43b6c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_states_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "5592bf74bd34c6d5405676fc2ac4329450313a8d9b210a95bc12d13829dc61fc",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually inspected actual PNG: clear donor rainclouds, aligned effect tables, full denominators and readable branch profiles; single and custom layouts retain all panels.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

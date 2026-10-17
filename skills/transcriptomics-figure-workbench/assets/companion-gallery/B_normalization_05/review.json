@@ -1,0 +1,94 @@
+{
+  "id": "B_normalization_05",
+  "title": "Reference-feature normalization sensitivity",
+  "chapters": [
+    "bulk.normalization"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 36,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Reference-feature normalization sensitivity",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Reference-feature normalization sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Primary",
+          "Alternative"
+        ],
+        "independent_cohorts": false,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Reference-feature normalization sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.normalization supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Reference-feature normalization sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Reference-feature normalization sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_normalization_05/example.png",
+    "svg": "B_normalization_05/example.svg",
+    "pdf": "B_normalization_05/example.pdf",
+    "tsv": "B_normalization_05/example.tsv",
+    "spec": "B_normalization_05/input/example.spec.json",
+    "preview": "B_normalization_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "35f7b79c533222571e5138e3101dec28dab6e99217a20bab0f33626eb06737f2",
+    "svg": "422fd3638248cf9ac0a822c59b7eb2cc086acdd094fec1ca8b07b5e69a83a14e",
+    "pdf": "3573d32df17f44b7926bb4c002d746327fb8cabbc909fd20e4d50777ab54d153",
+    "tsv": "f9b017310d83a2e9de21ed7e4919813fc661b464364e681217ae7078681c7bcd",
+    "spec": "1e92343f6e79c941a70da5a5ce5dff8e6667e985e55e418f7e76bc8e2e224e19"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_normalization_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "35f7b79c533222571e5138e3101dec28dab6e99217a20bab0f33626eb06737f2",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individual PNGs inspected: common-scoped filtering and detection channels, paired RLE donor connections, before/after point retention, batch donor denominators, and effect/uncertainty tables are complete and readable. Row-specific layout heights avoid stretching short panels; no text/guide collision.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

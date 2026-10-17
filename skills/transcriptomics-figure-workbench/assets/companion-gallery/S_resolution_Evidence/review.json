@@ -1,0 +1,120 @@
+{
+  "id": "S_resolution_Evidence",
+  "title": "Single cell · resolution — complementary evidence",
+  "chapters": [
+    "single_cell.resolution"
+  ],
+  "stage": "interpretation",
+  "family": "matrix,fraction,effects",
+  "variant": true,
+  "large_data": false,
+  "order": 252,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Donor support at declared resolutions",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Donor support at declared resolutions; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied cell count",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      },
+      {
+        "kind": "fraction",
+        "title": "Donor mixture within selected clusters",
+        "x_label": "Fraction of declared denominator",
+        "y_label": "",
+        "definition": "Donor mixture within selected clusters; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "denominator_definition": "All explicitly declared observations within each displayed object; fixed complete fractions and denominator",
+        "id": "p2"
+      },
+      {
+        "kind": "effects",
+        "title": "Independent annotation consistency",
+        "x_label": "Label-agreement fraction difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Independent annotation consistency; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p3"
+      }
+    ],
+    "title": "Single cell · resolution — complementary evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.resolution supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Donor support at declared resolutions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor mixture within selected clusters; all quantities are supplied frozen channels, with explicitly declared units and scope. | Independent annotation consistency; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": 2
+  },
+  "definition": "Donor support at declared resolutions; all quantities are supplied frozen channels, with explicitly declared units and scope. | Donor mixture within selected clusters; all quantities are supplied frozen channels, with explicitly declared units and scope. | Independent annotation consistency; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "denominator",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_resolution_Evidence/example.png",
+    "svg": "S_resolution_Evidence/example.svg",
+    "pdf": "S_resolution_Evidence/example.pdf",
+    "tsv": "S_resolution_Evidence/example.tsv",
+    "spec": "S_resolution_Evidence/input/example.spec.json",
+    "preview": "S_resolution_Evidence/preview.jpg"
+  },
+  "sha256": {
+    "png": "cf1a0dd12755b6ad4291a3766c32fb707082fe67614fb28c328f28614949bbbb",
+    "svg": "921380234aff25e88866ba588f545e4bf5b1eeb0daf8aabce2c6bd748cb18d11",
+    "pdf": "b7ed7f93c089ef26226941eef8095e37da6b9fcd7be4fc425318c0124363ba76",
+    "tsv": "f645f40dd8da09e6eb7178a0fe952c4acf261038ab227befaf790462574885d1",
+    "spec": "928d7b4763c75240672f4bac28aa941dfb0e8a23cb9ab5ac18640cd1ae5549e0"
+  },
+  "readability": {
+    "target_width_mm": 420,
+    "native_width_mm": 467.35999999999996,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 129,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_resolution_Evidence",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "cf1a0dd12755b6ad4291a3766c32fb707082fe67614fb28c328f28614949bbbb",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Final PNGs individually viewed: donor/cluster support, selected donor mixture, signed marker matrix, probability-bounded stability and independent-cohort label agreement. Complete categories, uncertainty, q and n visible; balanced composed page without collisions.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

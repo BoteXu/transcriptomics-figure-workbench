@@ -1,0 +1,95 @@
+{
+  "id": "B_replication_05",
+  "title": "Leave-one-cohort sensitivity",
+  "chapters": [
+    "bulk.replication"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 165,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Leave-one-cohort sensitivity",
+        "x_label": "Log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Leave-one-cohort sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "explicit_effects": [
+          0.58,
+          0.595,
+          0.58,
+          0.565
+        ],
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Leave-one-cohort sensitivity",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.replication supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Leave-one-cohort sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Leave-one-cohort sensitivity; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_replication_05/example.png",
+    "svg": "B_replication_05/example.svg",
+    "pdf": "B_replication_05/example.pdf",
+    "tsv": "B_replication_05/example.tsv",
+    "spec": "B_replication_05/input/example.spec.json",
+    "preview": "B_replication_05/preview.jpg"
+  },
+  "sha256": {
+    "png": "a65ee2599cd627e67b755da8b2bb89d27d9c5ff3b2fb07c047c86390de5224e9",
+    "svg": "631df705157ecaf00184d72f620f72285d2c9959d8477016b51d719634539ebb",
+    "pdf": "3ac34fd8eab6a967d131c77b9b5a9d69d147cf8b6ba34719eee4628b8c246f5e",
+    "tsv": "20ba270b8095148fd53087c8fe6b6aa1e9ae1c768cf1031165b50a3cf588f7b9",
+    "spec": "d67f693d692d3a921452c099fcf4731851d8c249a54b90f9a25386b20e1a0517"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 22,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_replication_05",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "a65ee2599cd627e67b755da8b2bb89d27d9c5ff3b2fb07c047c86390de5224e9",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: transcript usage, paired donor response, cohort effect summaries and larger layouts have aligned labels, explicit intervals and complete numeric tables; signed scales and denominators remain visible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

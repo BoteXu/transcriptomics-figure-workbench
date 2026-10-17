@@ -1,0 +1,94 @@
+{
+  "id": "B_dtu_03",
+  "title": "Prespecified STAT1 transcript-usage changes",
+  "chapters": [
+    "bulk.dtu"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 148,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified STAT1 transcript-usage changes",
+        "x_label": "Supplied change in transcript fraction",
+        "y_label": "",
+        "definition": "Three fictional STAT1 transcripts form the complete within-gene composition; supplied changes sum to zero.",
+        "explicit_effects": [
+          -0.3125,
+          0.3125,
+          0
+        ],
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified STAT1 transcript-usage changes",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.dtu supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Three fictional STAT1 transcripts form the complete within-gene composition; supplied changes sum to zero.",
+    "columns": "auto"
+  },
+  "definition": "Three fictional STAT1 transcripts form the complete within-gene composition; supplied changes sum to zero.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_dtu_03/example.png",
+    "svg": "B_dtu_03/example.svg",
+    "pdf": "B_dtu_03/example.pdf",
+    "tsv": "B_dtu_03/example.tsv",
+    "spec": "B_dtu_03/input/example.spec.json",
+    "preview": "B_dtu_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "7ddb8cf54379a5421563d244d89b8239afdfa98ddd4f3e8b518c1253f84289d4",
+    "svg": "3be67a3b357a245e6c131fb4b6d5973195861aa74132b8ab58043b53c93bad7b",
+    "pdf": "2443457672a426f7c0fcf3a68bae254fbfe247994e500fa8635534562a56dc84",
+    "tsv": "123205ea2400d4c8e4153c2d8ad167324fec8e7c5623f630b45b5bfb59405fcb",
+    "spec": "7253251d6d98a9c1d0c204f0914a34d1eb4a50f65a992032195d012e77926528"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 19,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_dtu_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "7ddb8cf54379a5421563d244d89b8239afdfa98ddd4f3e8b518c1253f84289d4",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually viewed: aligned effect intervals and q/n tables, full donor-denominator bars, distinct STAT1 transcript structures and readable multirow layouts; fictional drawing channels, no biological validation claimed.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

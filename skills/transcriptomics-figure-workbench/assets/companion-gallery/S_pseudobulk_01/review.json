@@ -1,0 +1,88 @@
+{
+  "id": "S_pseudobulk_01",
+  "title": "Cell support for each donor–identity aggregate",
+  "chapters": [
+    "single_cell.pseudobulk"
+  ],
+  "stage": "qc",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 291,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Cell support for each donor–identity aggregate",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Cell support for each donor–identity aggregate; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied aggregate cells",
+        "limits": [
+          0,
+          100
+        ],
+        "integer": true,
+        "id": "p1"
+      }
+    ],
+    "title": "Cell support for each donor–identity aggregate",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.pseudobulk supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Cell support for each donor–identity aggregate; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Cell support for each donor–identity aggregate; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_pseudobulk_01/example.png",
+    "svg": "S_pseudobulk_01/example.svg",
+    "pdf": "S_pseudobulk_01/example.pdf",
+    "tsv": "S_pseudobulk_01/example.tsv",
+    "spec": "S_pseudobulk_01/input/example.spec.json",
+    "preview": "S_pseudobulk_01/preview.jpg"
+  },
+  "sha256": {
+    "png": "fff11e5185d4094fbab8f96c2f0c824c84634d56d7a6127691b5298db2dc52ee",
+    "svg": "e5890ecd206682a29ce0d51174555af146ecd90efb614f292a7c1cf550d9d8f1",
+    "pdf": "8231b6683e32c1b2ee887a251623c2be5973e456500a82e655be6a32d0944b05",
+    "tsv": "b0cc7214884ed4d2b5ae4bb342d273d99782fd5337843c4c78ac906e08a95e84",
+    "spec": "c095bd42df612d51290a3fa61ec96e13ff3ed187025ccb24059884a14672e55c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_pseudobulk_01",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "fff11e5185d4094fbab8f96c2f0c824c84634d56d7a6127691b5298db2dc52ee",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Individually viewed donor-by-identity cell-support matrix, donor-level differential effects and STAT1 expression with every donor point. Supplied intervals and group n legible; no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

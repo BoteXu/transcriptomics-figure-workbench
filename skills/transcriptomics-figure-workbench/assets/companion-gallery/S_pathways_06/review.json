@@ -1,0 +1,94 @@
+{
+  "id": "S_pathways_06",
+  "title": "Pathway replication in independent donors",
+  "chapters": [
+    "single_cell.pathways"
+  ],
+  "stage": "validation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 311,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Pathway replication in independent donors",
+        "x_label": "Donor pathway-score difference · supplied 95% interval",
+        "y_label": "",
+        "definition": "Pathway replication in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "comparison_contexts": [
+          "Cohort A",
+          "Cohort B"
+        ],
+        "independent_cohorts": true,
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Pathway replication in independent donors",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.pathways supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Pathway replication in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Pathway replication in independent donors; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_pathways_06/example.png",
+    "svg": "S_pathways_06/example.svg",
+    "pdf": "S_pathways_06/example.pdf",
+    "tsv": "S_pathways_06/example.tsv",
+    "spec": "S_pathways_06/input/example.spec.json",
+    "preview": "S_pathways_06/preview.jpg"
+  },
+  "sha256": {
+    "png": "83e226b57f6420c2aa8cd084664df9905d41ec8c0a2dc6793ed7d40249e70874",
+    "svg": "21ef2836ff69361f26e3720a4100d8f12204f3ed6ef8275c657de453244b71f4",
+    "pdf": "5d52937fae6d73de75c7b225c2184438924f52227c4137465776d9575639a100",
+    "tsv": "f841f4310e40ef9e5dd9173d98040bed0edf4e8860d59e9c0654323b952beaa9",
+    "spec": "d942eadd0f6da9d44eebf1de30a1a09dcb2d7d616ccb3ac2716eff2ccc35008c"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 46,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_pathways_06",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "83e226b57f6420c2aa8cd084664df9905d41ec8c0a2dc6793ed7d40249e70874",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual PNGs individually inspected: donor score cloud and complete pathway effects with independent-cohort rows. Every point, uncertainty and independent n remains visible; wrapped long pathway labels have enough row height.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

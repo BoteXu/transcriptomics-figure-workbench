@@ -1,0 +1,88 @@
+{
+  "id": "B_ppi_03",
+  "title": "Complete selected interaction weights",
+  "chapters": [
+    "bulk.ppi"
+  ],
+  "stage": "interpretation",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 178,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Complete selected interaction weights",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Complete selected interaction weights; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied PPI weight",
+        "limits": [
+          0,
+          1
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Complete selected interaction weights",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "bulk.ppi supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Complete selected interaction weights; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Complete selected interaction weights; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "B_ppi_03/example.png",
+    "svg": "B_ppi_03/example.svg",
+    "pdf": "B_ppi_03/example.pdf",
+    "tsv": "B_ppi_03/example.tsv",
+    "spec": "B_ppi_03/input/example.spec.json",
+    "preview": "B_ppi_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "3e8dcc3bfb7c42e476e7a5a985325a35c35806e70b8310b213243a12fb91da63",
+    "svg": "3ebbb0569edd714176127174585825c41d6613eeabbd8b0c7ff41a8dcab1cc3e",
+    "pdf": "d74e450dedcfb4752718e424ecfb0db657d6273bef01f056c3c8483a05efcce4",
+    "tsv": "81abc63ef37ba9bf7cf43fdaa1e74d3de8d3dfb6d98c8cedb7de8cf728aec09c",
+    "spec": "355a802ec1dc3818d838c730e7a16da93377ee5d6959fcb16119ce0835452f7d"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 170.68800000000002,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 56,
+    "smallest_pt": 13.533464566929132,
+    "p10_pt": 13.533464566929132,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "B_ppi_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "3e8dcc3bfb7c42e476e7a5a985325a35c35806e70b8310b213243a12fb91da63",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Eleven individual final PNGs inspected: supplied risk counts and step curves with intervals/calibration, source-specific PPI support and full symmetric interaction scope with explicit zeros, node response and cohort validation. Single and adaptive combined layouts remain legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

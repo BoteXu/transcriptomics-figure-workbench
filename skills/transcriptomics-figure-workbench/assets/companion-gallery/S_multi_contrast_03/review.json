@@ -1,0 +1,89 @@
+{
+  "id": "S_multi_contrast_03",
+  "title": "Prespecified identity-by-condition effects",
+  "chapters": [
+    "single_cell.multi_contrast"
+  ],
+  "stage": "interpretation",
+  "family": "effects",
+  "variant": false,
+  "large_data": false,
+  "order": 301,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "effects",
+        "title": "Prespecified identity-by-condition effects",
+        "x_label": "STAT1 donor log2 fold change · supplied 95% interval",
+        "y_label": "",
+        "definition": "Prespecified identity-by-condition effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "interval_definition": "Illustrative explicitly supplied 95% bounds; not estimated by the renderer",
+        "test_family": "All selected fictional labels in this specified contrast",
+        "reference": 0,
+        "effect_scale": "difference",
+        "id": "p1"
+      }
+    ],
+    "title": "Prespecified identity-by-condition effects",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.multi_contrast supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Prespecified identity-by-condition effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Prespecified identity-by-condition effects; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "estimate",
+    "lower",
+    "upper",
+    "q",
+    "n",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_multi_contrast_03/example.png",
+    "svg": "S_multi_contrast_03/example.svg",
+    "pdf": "S_multi_contrast_03/example.pdf",
+    "tsv": "S_multi_contrast_03/example.tsv",
+    "spec": "S_multi_contrast_03/input/example.spec.json",
+    "preview": "S_multi_contrast_03/preview.jpg"
+  },
+  "sha256": {
+    "png": "90bc5b08583ca3f5eb0ed17a7c27f5e3176e5adc047156393c6f1a8b572916d4",
+    "svg": "b83373a20b51d45304d171ed1dd60fc485691e9e5ecdf51c9c652ac786d1b11d",
+    "pdf": "650bebe08c943393d1eb32fb6f0d7ebdaeaed90237943996465f9df4527fb06d",
+    "tsv": "6a4523331ebd4869e946f76d27777dcef1edc344bf6dab4bec851ee0d35add44",
+    "spec": "9ca01f7e5cb764a6c89c9e0071b00d89bfd6a6b01b416a5719156928233b26fd"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 233.67999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 9.88531324888737,
+    "p10_pt": 9.88531324888737,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_multi_contrast_03",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "90bc5b08583ca3f5eb0ed17a7c27f5e3176e5adc047156393c6f1a8b572916d4",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Actual final images viewed: identity-condition STAT1 effects, same-unit contrast concordance with identity reference, cohort-separated replication. All supplied intervals, q and donor n clear; no clipping.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

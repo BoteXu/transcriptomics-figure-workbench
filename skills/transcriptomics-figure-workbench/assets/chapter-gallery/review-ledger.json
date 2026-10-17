@@ -1,7 +1,5 @@
 {
   "state": "SCREEN_REVIEWED",
-  "aesthetic_publication_approval": false,
-  "scope": "Actual complete final PNG self-inspection; dense/flagged views enlarged. Screen observation is not blanket aesthetic approval, journal acceptance, calibrated print proof or independent scientific acceptance.",
   "records": [
     {
       "id": "bulk.design",
@@ -55,20 +53,12 @@
       "scientific_acceptance": false
     },
     {
-      "id": "bulk.filtering",
-      "png_sha256": "7e9e5953e98d55b6b9b485456c391dd5450d0987d3520a9f10eb585bd14b5d38",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "bulk.filtering.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "a9ee61097e0d3b72a30c23a0f447a7c5f15e16e366b96fc7deb8a31388e534e9",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -262,20 +252,12 @@
       "scientific_acceptance": false
     },
     {
-      "id": "bulk.gsva",
-      "png_sha256": "8021a07a766f481532abe962e531e84c83d6ce3921f53174aa8ddc43af65ab2b",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "bulk.gsva.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "fb835ba7bb955038d27e00ef026208817979dfa6cc0f16c779cad029a3c900fd",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -296,20 +278,12 @@
       "scientific_acceptance": false
     },
     {
-      "id": "bulk.tf_activity",
-      "png_sha256": "e1bb319387fc26397c21470564af74c27f3781ca5b18ce216e3c59270e4c8911",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "bulk.tf_activity.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "8e87ae5fa2b27aa23ddb281259730435e38ec85f78e5c1d726810f5b84147511",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised exports: concise residual formula, explicitly named effect units, q consistency and valid correlation domain restored; legends and scales readable without collision.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -347,54 +321,30 @@
       "scientific_acceptance": false
     },
     {
-      "id": "bulk.dtu",
-      "png_sha256": "b4a326bd5fb7012cd4c6f2c16250cbf5b7e171691571041e291f2538b81292d4",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "bulk.dtu.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "b7e30d4989727e4c5dfaaee4f705ba7c2fec76307b04947d7f7d8757ebaab23c",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "bulk.timecourse",
-      "png_sha256": "62da94d999f257dc81a3622d6d1dc41dfe90e3d5fc0304449fdb340c240474c0",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "bulk.timecourse.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "a282e537f7971726888a4de59a60dc45b31f17c043f54e48624eb4c801a94b57",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "bulk.replication",
-      "png_sha256": "3d3ea95957b56a4b6fd0573472c5e2363f4213054c58ea1a6567e2319f3c2cca",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "bulk.replication.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "90ca30143bc664a960131186d7385f186ccdff960b8fdd816f852b8e2ba1e46a",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -432,37 +382,21 @@
       "scientific_acceptance": false
     },
     {
-      "id": "bulk.connectivity",
-      "png_sha256": "6fc0a06c7f46ea0ee47961802af6305270e95d34e12556c4763c999403e763ea",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "bulk.connectivity.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "615b5f78ebb85c82fcba8d671eea427555cf748f78ce57d39e1274a7ac4484f1",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "bulk.noncoding",
-      "png_sha256": "b6ec3579df85588b7cced8559abb5f8076c3bd9942a173054fc074198d04d51c",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "bulk.noncoding.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "33f97a8f5828e4458beaae8f0903281645ae7743a3e2fe63ae27b3e9fa75cab9",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -517,20 +451,12 @@
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.qc",
-      "png_sha256": "7e4d303ca2a7d6495d8eacdde70ff3812506405d1d86ca50bc9baff1cb04efcb",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.qc.complete",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "41d587516d3480b7b69bcebd51cee0ba4f34cb9034ec9dcd34d1c054e46e9ef3",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -551,54 +477,30 @@
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.integration",
-      "png_sha256": "cbae2b1dd9cb8f17fb69170569916ddf48ebf257dc1f721fbd136453f1c0c2bb",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.integration.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "11fe6fcb7ba171828803d43e8a967dde02b6064b2a3071e38a10528f82990529",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: same STAT1 cohort effects agree across forest and matrix, correct signed scores/scales, donor-stratified clouds retain every nested cell and counts; complete legends and text readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.hvg_pca",
-      "png_sha256": "b24e50aed2e7feecfa146e0cec8556e149f460f734426942e7709767b36d071b",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.hvg_pca.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "426951be740f58d620a09827b05eef7e3d33e59a30dc2f754d23f8a170bfb9ed",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.resolution",
-      "png_sha256": "ece8d019cd4bfa626f602d75c914fa7ad0f1283085d9bf7bd8ae71ecb727dc48",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.resolution.complete",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "c7b35a99045ae649d542de9b56794c5c6205f03d8ace777937630eb56e6c0f6c",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -654,20 +556,12 @@
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.composition",
-      "png_sha256": "a237bd182fdc0fb9a03bb7e765e001f570b52d35b84abd5d7e8d302053771cb0",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.composition.complete",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "520feecf08d9f9c6961579575f1035e661f2d516c52c30493ee0d61ec9539e29",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -705,73 +599,39 @@
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.multi_contrast",
-      "png_sha256": "55c4b75cd4db3bac39e22928522b97a3671658e4c1b51ba0d8d659ec7e52a2a5",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.multi_contrast.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "a31b23835b51292c547ea471c3880300e3c4921b3baefe8c2874005402317a56",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.pathways",
-      "png_sha256": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
-      "scientific_acceptance": false,
-      "source_figure_id": "single_cell_pathways"
+      "id": "single_cell.pathways.complete",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "1e551b1c4396095d4d905868b56f3f672f27b9eeb7326f92a80de8695e2839bd",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised exports viewed: complete flow counts and concise encoding key, integer donor support, all five donor raincloud panels and complete composition, coherent STAT1 cross-panel contrasts, named T-cell pathway scope; no cropped label or overlapping guide.",
+      "independent_reviewer": false,
+      "scientific_acceptance": false
     },
     {
-      "id": "single_cell.gene_support",
-      "png_sha256": "04716260f96739f2c14a22e2986546d9b8600ac48eadc56e44d52544bab6ad74",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
-      "scientific_acceptance": false,
-      "source_figure_id": "single_cell_gene_support"
+      "id": "single_cell.gene_support.complete",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "e7bc17e07a3e6771e01dd98622df48015cc5df071b0da7d7ff578a0b39e9c9d6",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+      "independent_reviewer": false,
+      "scientific_acceptance": false
     },
     {
-      "id": "single_cell.states",
-      "png_sha256": "1fe184c970b201c228c9b749ba85726b240ac4fe920348fe57bec5146b694b23",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.states.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "1c66525b8ad77f7e979f084e0dc2427fce19b646745e1e616de933ee8d0e2d50",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
@@ -809,194 +669,104 @@
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.velocity",
-      "png_sha256": "4f205c5b9943d79d3cbb41456d78070615e3cbd99a595203e5947e087acbab2a",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.velocity.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "56239b554d5dffe48b2279a0d5582eae423713ad3db946c03c5231495c9a05ae",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.communication",
-      "png_sha256": "e21ccad1928ec1bb1722925328623c4077ee30e9225da0c283b750395c2dbe3d",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.communication.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "a9a56329fad26dd6572dc0739a3cb81b6cb80ee7a33a7b190410a43b6904a536",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.ligand_target",
-      "png_sha256": "e7910675ad7af5baf529bc153a548b471b5a73d6ef15b4bbaa3880aa31972c2a",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.ligand_target.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "4a4d817001917c8f43e58fb766b23c29457774c7e528c930d0e9804f87b0e056",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.regulons",
-      "png_sha256": "5f0b8742b134d2a11ef9e2c5c4f2fb27723cd6df04dc59803d5b7a06c7cdd48e",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.regulons.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "28f153b5af1b86f19102a1157c12b0a496b709de7dfa11d9c608b91d87fd183b",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Viewed individual revised PNGs: named T-cell/gene/program scope, normalized phase/count and activity units, sender/receiver axes, mapped directed candidate chain and edge evidence; all selected labels and guides readable.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.cnv",
-      "png_sha256": "37052d953d3e091f545c088efb08c6938d9550f02136490557cc8da03cd9352e",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.cnv.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "05c0473cc44f324abf58428d1d080f75c8070b8b92a3eaad9f957aaeedc5a613",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.vdj",
-      "png_sha256": "f3855c534c987b060e022c401d8baac650899ca07fb32e43b4f0afd36db3e4f2",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.vdj.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "1e74f270a399726286e97ab9dbacec4a94c21f19d2b632623afdd68658e21380",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Actual final PNGs individually inspected: network labels separated from nodes, directed TF candidates distinct from undirected PPI, log-ratio units explicit, STAT1 time curves named, CNV clone identities consistent and VDJ categories complete; no clipped titles, legends or intervals.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.splicing",
-      "png_sha256": "f745a94fabebe462efdb7ddf55e1a8b81de331765daeba3bc2b4091918098fcf",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.splicing.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "0ab72ce39d415826c8a2d85bdef85d00a6b62a9ffd5aad95b98464d2f95b4b0d",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.perturbseq",
-      "png_sha256": "efb529595c13d4c66b4fe1696bfd6b0eadffba79cff038c18cad33bfa23e2853",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.perturbseq.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "a2d715ad842117464bc0f3e97b7ec397954eecace5a185817debdc07a3d9a98e",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.replication",
-      "png_sha256": "01287d9c885f7d2d7c12ff130fb6f74b7c7b4b011dcf4c22b01f3d2f79fe9222",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.replication.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "4f034631211528d7e4af24cc6a472902be76b48894a0ed9b61ae94d0608b8c3b",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.spatial",
-      "png_sha256": "b1c0b26aa6da75740347f1dc0a9a780507d76ddcee91935a364ff2d919aab7df",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.spatial.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "f064c951fec23185f9ceff66d6d8d729cfcb229f82c605d62872eba17772db35",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     },
     {
-      "id": "single_cell.multiome",
-      "png_sha256": "51a9278b82a929bbc6e152e564fd6abffdd520df94958449b27b014152e76234",
-      "decision": "screen_reviewed",
-      "checks": [
-        "scientific display meaning and scope",
-        "complete intended input channels",
-        "readable labels and guides",
-        "stable identity and declared continuous units",
-        "panel balance and hierarchy",
-        "no observed clipping or label collision"
-      ],
-      "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
-      "independent_second_review": false,
-      "calibrated_paper_proof": false,
+      "id": "single_cell.multiome.p1",
+      "state": "SCREEN_REVIEWED",
+      "png_sha256": "7642c34a5d774ab51f94845223ecd405e9320ecd72dfe05f7851e44cb032379d",
+      "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+      "notes": "Individual revised PNGs inspected: named gene/identity and effect scales, coherent STAT1 cohort values, reference-normalized spatial/program context and peak-to-gene edges only. Selected content, legends and supplied bounds remain legible.",
+      "independent_reviewer": false,
       "scientific_acceptance": false
     }
   ],
-  "analysis_performed": false,
-  "scientific_acceptance": false,
-  "display_revision": "0.9.2"
+  "scientific_acceptance": false
 }

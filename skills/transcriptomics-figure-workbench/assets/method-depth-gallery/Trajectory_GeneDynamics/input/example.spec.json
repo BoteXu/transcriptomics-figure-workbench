@@ -4,7 +4,7 @@
   "renderer": "figure_chapter_views.plot_transcriptomic_chapter",
   "input": {
     "path": "example.tsv",
-    "sha256": "55d247bcb7da2b2caa18543a1712e3bc9ec5228f14b4fbfd118a78af440afe2d",
+    "sha256": "d720efc59108c112cfdc15a4d070f54bc5d50a8e3a4b4857b0837e8c70e6e1c5",
     "numeric_columns": [
       "x",
       "y",
@@ -20,9 +20,9 @@
     "panels": [
       {
         "kind": "curve",
-        "title": "Supplied branch dynamics",
+        "title": "Interferon-program branch progression",
         "x_label": "Supplied pseudotime",
-        "y_label": "Supplied gene program",
+        "y_label": "Supplied interferon-program score",
         "interval_definition": "Explicit fictional range coordinates; no smoothing/fitting",
         "interval_label": "Shading: supplied illustrative range",
         "id": "p2"
@@ -43,7 +43,7 @@
         "id": "p3"
       }
     ],
-    "title": "Gene progression on supplied branches",
+    "title": "Branch program and gene progression",
     "scope_note": "Fictional frozen inputs · single_cell · no analysis performed",
     "columns": "auto"
   },
@@ -174,10 +174,10 @@
     "preview_only": true
   },
   "provenance": {
-    "source": "Fictional frozen method-depth display inputs v0.9.1",
+    "source": "Explicit fictional core fixture revision v0.10.0; no analysis backend executed",
     "input_unit": "Synthetic gene-sample measurement",
     "experimental_unit": "Synthetic donor; cells nested within donors",
-    "contrast": "Treated versus Control; purely illustrative",
+    "contrast": "Named comparisons and scales in the supplied panels",
     "denominator": "All 180 illustrative genes in each of 12 samples",
     "model": "No analysis, graph inference, model fit or significance calculation",
     "limits": "Declared complete display scope; data have no biomedical validity",

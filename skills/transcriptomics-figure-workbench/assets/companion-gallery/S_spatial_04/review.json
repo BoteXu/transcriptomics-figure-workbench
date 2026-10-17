@@ -1,0 +1,88 @@
+{
+  "id": "S_spatial_04",
+  "title": "Region-program evidence",
+  "chapters": [
+    "single_cell.spatial"
+  ],
+  "stage": "function",
+  "family": "matrix",
+  "variant": false,
+  "large_data": false,
+  "order": 411,
+  "renderer": "figure_analysis_evidence.plot_analysis_evidence",
+  "parameters": {
+    "panels": [
+      {
+        "kind": "matrix",
+        "title": "Region-program evidence",
+        "x_label": "",
+        "y_label": "",
+        "definition": "Region-program evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+        "value_label": "Supplied region score",
+        "limits": [
+          -1.4,
+          1.4
+        ],
+        "integer": false,
+        "id": "p1"
+      }
+    ],
+    "title": "Region-program evidence",
+    "context": {
+      "independent_unit": "fictional biological donors",
+      "independent_n": 12,
+      "method_version": "single_cell.spatial supplied result channels v0.10.0",
+      "source_version": "Fictional frozen drawing fixtures v0.10.0",
+      "selection": "All explicitly declared rows in this example; no result selection or model fit during drawing"
+    },
+    "definition": "Region-program evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+    "columns": "auto"
+  },
+  "definition": "Region-program evidence; all quantities are supplied frozen channels, with explicitly declared units and scope.",
+  "requirements": [
+    "label",
+    "series",
+    "value",
+    "panel_id",
+    "panel definitions",
+    "independent-unit/source context"
+  ],
+  "assets": {
+    "png": "S_spatial_04/example.png",
+    "svg": "S_spatial_04/example.svg",
+    "pdf": "S_spatial_04/example.pdf",
+    "tsv": "S_spatial_04/example.tsv",
+    "spec": "S_spatial_04/input/example.spec.json",
+    "preview": "S_spatial_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "de9c1beb78e71cb067fbb9b4dd9b9e9b4ce3046650d8f188d57b9729d4fc029d",
+    "svg": "43c4a6b3bc187458870aa22908c8ea19dec9008082e471fec4d5c828691ae2fd",
+    "pdf": "46bdcb2cb8ab58fd3a527d998681b3b122c869318dcdca92df767543c346daec",
+    "tsv": "08982f9ae11ff30d167f823e2b4686fc9c2d5ec05f8a8c4d3674b1ae3ebfabf1",
+    "spec": "f0a8e3205db90d73048e18fd007e79b7e3b2055d9b97da61bf7b03331d0846ad"
+  },
+  "readability": {
+    "target_width_mm": 210,
+    "native_width_mm": 152.39999999999998,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 15.157480314960633,
+    "p10_pt": 15.157480314960633,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "review": {
+    "id": "S_spatial_04",
+    "state": "SCREEN_REVIEWED",
+    "png_sha256": "de9c1beb78e71cb067fbb9b4dd9b9e9b4ce3046650d8f188d57b9729d4fc029d",
+    "review_method": "Actual final PNG individually viewed; complete readable export, not contact-sheet-only approval",
+    "notes": "Reviewed actual PNGs: common-gene identity and cohort denominators preserved; regional identities, micrometre units, evidence panels and reading layouts legible.",
+    "independent_reviewer": false,
+    "scientific_acceptance": false
+  },
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}
