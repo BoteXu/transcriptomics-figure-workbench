@@ -15,6 +15,15 @@ def read_catalog(path):
     assert path.stat().st_size <= 8*1024*1024
     return json.loads(path.read_text(encoding='utf8'))
 
+def check_revised_core_ledgers():
+    # A panel's callable ID must not replace its parent gallery's ledger key.
+    for name in ['analysis-gallery','chapter-gallery','method-depth-gallery']:
+        folder=SKILL/'assets'/name;gallery=read_catalog(folder/'manifest.json')['records']
+        ledger={r['id']:r for r in read_catalog(folder/'review-ledger.json')['records']}
+        assert set(ledger)=={r['id'] for r in gallery},name
+        for r in gallery:
+            assert ledger[r['id']]['png_sha256']==sha(folder/r['assets']['png'])
+
 def main():
     assert validate_recipes()==56
     base=SKILL/'assets/companion-gallery';m=read_catalog(base/'manifest.json');proof=read_json(base/'review-ledger.json')
@@ -51,6 +60,7 @@ def main():
     for r in library['records']:
         for key in ['png','svg','pdf','tsv','spec']:
             path=(SKILL/'assets/analysis-library'/r['assets'][key]).resolve();assert SKILL.resolve() in path.parents and path.is_file()
+    check_revised_core_ledgers()
     print(json.dumps(dict(state='ALL_ANALYSIS_COMPANION_COVERAGE_PASS',chapters=58,expanded_chapters=56,individually_reviewed_exports=425,portable_suites_checked=56,scientific_acceptance=False)))
 
 if __name__=='__main__':main()

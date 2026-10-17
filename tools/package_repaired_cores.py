@@ -39,7 +39,12 @@ def package(fixtures,rendered,review,snapshot):
         old['sha256']={k:sha(gallery/v) for k,v in old['assets'].items() if k!='preview'}
         if 'parameters' in old:old['parameters']=s['parameters']
         if 'definition' in old:old['definition']=s['parameters'].get('definition',s['parameters'].get('scope_note',old['definition']))
-        old['review' if 'review' in old else 'visual_review']=r;old['display_revision']='0.10.0';old['scientific_acceptance']=False
+        # A panel view ID and its parent gallery ID are distinct identities.
+        # The gallery ledger stays keyed by the gallery ID, retaining the view.
+        old['review' if 'review' in old else 'visual_review']=dict(r,id=old['id'],core_view_id=r['id'])
+        history=list(old.get('display_revision_history',[]))
+        if old.get('display_revision') and old['display_revision'] not in history:history.append(old['display_revision'])
+        old['display_revision_history']=history;old['display_revision']='0.10.0';old['scientific_acceptance']=False
         write(dest/'review.json',old);changed.setdefault(gallery,{})[old['id']]=old
     for gallery,updates in changed.items():
         current=read(gallery/'manifest.json');current['records']=[updates.get(r['id'],r) for r in current['records']];current['display_revision']='0.10.0';write(gallery/'manifest.json',current)

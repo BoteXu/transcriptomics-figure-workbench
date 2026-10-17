@@ -39,7 +39,7 @@ def check():
         lookup={r['id']:r for r in load(base/'review-ledger.json')['records']}
         for r in doc['records']:
             assert sha(base/r['assets']['png'])==r['sha256']['png']==lookup[r['id']]['png_sha256']
-            if r.get('display_revision')=='0.9.2':
+            if r.get('display_revision')=='0.9.2' or '0.9.2' in r.get('display_revision_history',[]):
                 updated+=1;spec=load(base/r['assets']['spec'])
                 assert sha((base/r['assets']['spec']).parent/spec['input']['path'])==spec['input']['sha256']
     assert updated==23
