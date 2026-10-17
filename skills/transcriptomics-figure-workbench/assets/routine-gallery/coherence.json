@@ -1,0 +1,28 @@
+{
+  "seed": 20261017,
+  "donors": 12,
+  "cells": 900,
+  "tested_genes": 1200,
+  "marker_channels": 20,
+  "markers_per_identity": 4,
+  "identities": [
+    "T cells",
+    "B cells",
+    "Myeloid",
+    "Stromal",
+    "Endothelial"
+  ],
+  "analysis_performed": false,
+  "limits": [
+    "Synthetic frozen result construction only; no RNA-seq engine acceptance",
+    "The declared 95% PCA contours are illustrative reference dispersion, not fitted sample confidence",
+    "NES, FDR and uncertainty values are fictional inputs, not inferred probabilities",
+    "Primary single-cell donor contrast is explicitly myeloid; no other cell-type DE is implied"
+  ],
+  "checks": [
+    "Shared exact cell coordinates and expression across overview and subgroup pages",
+    "Marker means and detection match all displayed cell values",
+    "GSEA hit genes, exact walk increments and leading edge agree",
+    "ORA query and overlap ratios use the declared fictional DE query"
+  ]
+}

@@ -128,15 +128,22 @@ def plot_enrichment_story(data, theme, *, mode, title, background_definition,
         a.text(0,1.025,'Numbers: overlap gene count',transform=a.transAxes,color=MUTED)
         left_title='A  Pathway enrichment';left_key=r'$-\log_{10}$ FDR'
     elif mode=='gsea_comparison':
-        xs=[contrasts.index(x) for x in z.contrast];ys=[names.index(x) for x in z.term]
+        xs=z.NES.to_numpy() if len(contrasts)==1 else [contrasts.index(x) for x in z.contrast];ys=[names.index(x) for x in z.term]
         sizes=30+50*(-np.log10(z.padj)).to_numpy()
         left_art=a.scatter(xs,ys,s=sizes,c=z.NES,
             cmap=LinearSegmentedColormap.from_list('nes',theme['continuous']['diverging']),
             norm=TwoSlopeNorm(vmin=nes_limits[0],vcenter=0,vmax=nes_limits[1]),ec='white',lw=.7,zorder=3)
         nonsig=z.padj>.05
         a.scatter(np.array(xs)[nonsig],np.array(ys)[nonsig],s=8,c='white',zorder=4)
-        a.set_xticks(range(len(contrasts)),[_label(x,14) for x in contrasts],rotation=30,ha='right')
-        a.set_xlim(-.6,len(contrasts)-.4);left_title='A  Direction across contrasts';left_key='NES'
+        if len(contrasts)==1:
+            for x,y in zip(xs,ys):a.plot([0,x],[y,y],c='#BFCED3',lw=1.2,zorder=1)
+            a.axvline(0,c='#AABAC2',lw=.8,ls=(0,(3,3)))
+            a.set_xlim(*nes_limits);a.xaxis.set_major_locator(MaxNLocator(5));a.set_xlabel('Normalized enrichment score (NES)',labelpad=9)
+            left_title='A  Pathway direction and magnitude'
+        else:
+            a.set_xticks(range(len(contrasts)),[_label(x,14) for x in contrasts],rotation=30,ha='right')
+            a.set_xlim(-.6,len(contrasts)-.4);left_title='A  Direction across contrasts'
+        left_key='NES'
     else:
         a.barh(range(len(names)),terms['count'],height=.48,color=[pal[x] for x in terms.family],alpha=.85)
         a.set_xlabel('Overlap gene count',labelpad=9);a.xaxis.set_major_locator(MaxNLocator(integer=True,nbins=5))

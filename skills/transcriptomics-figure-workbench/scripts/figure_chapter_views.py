@@ -36,6 +36,9 @@ def _draw(ax, d, p, theme):
     d=checked(d,required,numeric)
     if kind in ['curve','points','embedding','network','stack','matrix','bubble']:
         names=_order(d.series)
+        if 'series_order' in p:
+            if len(p['series_order'])!=len(names) or set(p['series_order'])!=set(names):raise ValueError('Series order must retain every supplied category')
+            names=list(p['series_order'])
         if kind not in ['matrix','bubble']:pal=_colours(theme,names)
     ax.spines[['top','right']].set_visible(False);ax.tick_params(length=3,width=.6,labelsize=10)
     ax.set_title(p['title'],loc='left',fontsize=12,fontweight='bold',pad=17)
@@ -53,8 +56,21 @@ def _draw(ax, d, p, theme):
                     if not p.get('interval_label'):raise ValueError('Supplied shaded intervals need a visible meaning')
                     ax.fill_between(q.x,q.lower,q.upper,color=c,alpha=.11,lw=0,step='post' if drawstyle=='steps-post' else None)
                 ax.plot(q.x,q.y,color=c,lw=1.8,label=name,drawstyle=drawstyle)
+            elif p.get('grouped_distribution',False):
+                if q.x.nunique()!=1 or float(q.x.iloc[0])!=names.index(name):raise ValueError('Grouped distributions require explicit nominal group positions')
+                if 'cloud_shapes' in p:
+                    from figure_raincloud_geometry import draw_supplied_raincloud
+                    if set(p['cloud_shapes'])!=set(names):raise ValueError('Supply one cloud shape per complete displayed group')
+                    draw_supplied_raincloud(ax,names.index(name),q.y,c,p['cloud_shapes'][name],point_size=32)
+                    continue
+                x=names.index(name);offsets=np.linspace(-.12,.12,len(q)) if len(q)>1 else [0]
+                box=ax.boxplot([q.y],positions=[x],widths=.44,patch_artist=True,showfliers=False,
+                    boxprops=dict(fc=c+'28',ec=c,lw=1),medianprops=dict(color=c,lw=1.7),whiskerprops=dict(color=c,lw=1),capprops=dict(color=c,lw=1))
+                ax.scatter(x+np.asarray(offsets),q.y,s=31,c=c,alpha=.9,ec='white',lw=.5,zorder=3)
             else:ax.scatter(q.x,q.y,s=17,c=c,alpha=.55,ec='none',rasterized=True,label=name)
-        ax.legend(loc='upper center',bbox_to_anchor=(.5,-.25),ncols=min(3,len(names)),frameon=False,fontsize=9,handlelength=1.3,title=('Point: '+p['point_unit']) if kind=='points' else p.get('interval_label',''),title_fontsize=9)
+        if p.get('grouped_distribution',False):
+            ax.set_xticks(range(len(names)),[name+'\nn='+str(sum(d.series==name)) for name in names]);ax.set_xlim(-.5,len(names)-.5)
+        else:ax.legend(loc='upper center',bbox_to_anchor=(.5,-.25),ncols=min(3,len(names)),frameon=False,fontsize=9,handlelength=1.3,title=('Point: '+p['point_unit']) if kind=='points' else p.get('interval_label',''),title_fontsize=9)
         ax.grid(axis='y',color='#E7EDF0',lw=.6);ax.set_axisbelow(True)
     elif kind=='interval':
         if d.label.duplicated().any() or ((d.lower>d.x)|(d.upper<d.x)).any() or not p.get('interval_definition'):raise ValueError('Unique labels and explicitly defined valid intervals required')
@@ -78,10 +94,11 @@ def _draw(ax, d, p, theme):
         if kind=='matrix':
             art=ax.imshow(values,aspect='auto',cmap=cmap,norm=norm,interpolation='nearest')
             if len(rows)*len(cols)<=60 and p.get('show_values',True):
+                value_format='.0f' if np.array_equal(values,np.round(values)) else '.2f'
                 for i in range(len(rows)):
                     for j in range(len(cols)):
                         rgba=cmap(norm(values[i,j]));lum=.2126*rgba[0]+.7152*rgba[1]+.0722*rgba[2]
-                        ax.text(j,i,format(values[i,j],'.2f'),ha='center',va='center',fontsize=9,color='white' if lum<.43 else '#294656')
+                        ax.text(j,i,format(values[i,j],value_format),ha='center',va='center',fontsize=9,color='white' if lum<.43 else '#294656')
         else:
             if ((d.fraction<0)|(d.fraction>1)).any() or not p.get('fraction_definition'):raise ValueError('Supply fractions in [0,1] and their denominator')
             xs=[cols.index(x) for x in d.series];ys=[rows.index(x) for x in d.label]
@@ -100,6 +117,13 @@ def _draw(ax, d, p, theme):
                 if len(anchors)!=1:raise ValueError('One explicit label anchor per category')
                 ax.text(*anchors.iloc[0],_wrap(name),fontsize=10,ha='center',bbox=dict(boxstyle='round,pad=.25',fc='white',ec='none',alpha=.85))
         ax.set_aspect('equal',adjustable='box');ax.margins(.15);ax.spines[:].set_visible(False);ax.set_xticks([]);ax.set_yticks([])
+        if 'coordinate_limits' in p:
+            bounds=p['coordinate_limits']
+            if not isinstance(bounds,list) or len(bounds)!=4 or not np.isfinite(bounds).all() or bounds[0]>=bounds[1] or bounds[2]>=bounds[3]:
+                raise ValueError('Declare increasing finite x/y embedding limits')
+            if d.x.min()<bounds[0] or d.x.max()>bounds[1] or d.y.min()<bounds[2] or d.y.max()>bounds[3]:
+                raise ValueError('Shared embedding limits must retain every supplied point')
+            ax.set(xlim=bounds[:2],ylim=bounds[2:])
         ax.legend(handles=[Line2D([],[],ls='',marker='o',ms=5,c=pal[x],label=x) for x in names],loc='upper center',bbox_to_anchor=(.5,-.10),ncols=min(3,len(names)),frameon=False,fontsize=9)
     elif kind=='network':
         if d.duplicated(['label','target']).any() or (d.value<0).any():raise ValueError('Unique explicit nonnegative edges required')

@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "figure_id": "BulkHeatmap",
+  "renderer": "figure_extensions.plot_annotated_heatmap",
+  "input": {
+    "path": "input.tsv",
+    "sha256": "dc8e1bf1f7a7f8defc8940fac67f5e6ae503e97e7694f6f0f4e60f97a08a8cf7",
+    "numeric_columns": [
+      "value"
+    ]
+  },
+  "parameters": {
+    "value_label": "Stored row z-score",
+    "scale_type": "signed",
+    "group_palette": {
+      "Control": "#218C8D",
+      "Treated": "#D8795B"
+    },
+    "block_palette": {
+      "Positive program": "#D8795B",
+      "Negative program": "#4477AA"
+    },
+    "row_order": [
+      "G0001",
+      "G0002",
+      "G0003",
+      "G0004",
+      "G0005",
+      "G0006",
+      "G0007",
+      "G0008",
+      "G0009",
+      "G0010",
+      "G0011",
+      "G0012",
+      "G0081",
+      "G0082",
+      "G0083",
+      "G0084",
+      "G0085",
+      "G0086",
+      "G0087",
+      "G0088",
+      "G0089",
+      "G0090",
+      "G0091",
+      "G0092"
+    ],
+    "column_order": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12"
+    ],
+    "column_annotation_label": "Condition",
+    "row_annotation_label": "Prespecified program",
+    "title": "Bulk selected expression programs"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-transcriptomic-study",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Control": 0,
+      "Treated": 1,
+      "T cells": 0,
+      "B cells": 1,
+      "Myeloid": 2,
+      "Stromal": 3,
+      "Endothelial": 4,
+      "Batch 1": 0,
+      "Batch 2": 1,
+      "Batch 3": 2,
+      "Interferon response": 0,
+      "Extracellular matrix": 1,
+      "Mitochondrial function": 2,
+      "RNA processing": 3,
+      "Cell cycle": 4,
+      "Inflammatory response": 5
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Synthetic routine-request audit; seed 20261017",
+    "input_unit": "Synthetic selected gene-sample result",
+    "experimental_unit": "Synthetic donor; cells nested within donors",
+    "contrast": "Treated versus Control; purely illustrative",
+    "denominator": "24 explicitly selected genes; all 12 donors; no rescaling or clustering",
+    "model": "No statistical model fitted; every estimate and uncertainty channel is an illustrative frozen input",
+    "limits": "Declared complete display scope; data have no biomedical validity",
+    "filtering": "Declared fixture selection only; no research filtering",
+    "uncertainty": "Only explicitly supplied illustrative intervals; no new uncertainty estimation",
+    "interpretation_limit": "Software and visual acceptance only; no biological or clinical conclusions",
+    "synthetic": true
+  },
+  "appearance": {
+    "preset": "paper"
+  },
+  "export": {
+    "raster_dpi": 300,
+    "target_width_mm": 210,
+    "minimum_text_pt": 7,
+    "readability_policy": "block"
+  }
+}

@@ -36,6 +36,10 @@ def build_studio(output,gallery=None,demo_svg=None):
     if studies.is_dir():
         prefix=Path(os.path.relpath(studies,output.resolve().parent)).as_posix()
         data['design_examples']=[dict(id=key,title=title,input_shape='完整冻结结果示例；主图与细节图配套，合成数据不是科学证据',png=prefix+'/'+key+'.jpg',source=prefix+'/index.html#'+key) for key,title in [('BulkMain','Bulk 转录组文章组图'),('SingleCellMain','单细胞文章组图')]]+data['design_examples']
+    routine=SKILL/'assets/routine-gallery'
+    if routine.is_dir():
+        prefix=Path(os.path.relpath(routine,output.resolve().parent)).as_posix()
+        data['design_examples']=[dict(id='Routine'+key,title=title,input_shape='当前普通请求整套图：15份bulk、23份单细胞与5份阅读/布局；模拟材料，须按实际尺寸重审',png=prefix+'/figures/'+key+'/'+key+'.png',source=prefix+'/index.html#'+str(index)) for key,title,index in [('BulkPCA','当前 Bulk 整套图 · 逐张浏览',3),('CellTypes','当前单细胞整套图 · 逐亚群多marker',20)]]+data['design_examples']
     package_gallery=SKILL/'assets/package-gallery'
     if package_gallery.is_dir():
         prefix=Path(os.path.relpath(package_gallery,output.resolve().parent)).as_posix()

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "assay": "single_cell",
+  "title": "Synthetic single_cell routine result set / seed 20261017",
+  "contrast": "Treated versus Control / illustrative",
+  "independent_unit": "Synthetic donor; n=12; cells nested within donors",
+  "denominator": "12 synthetic donors; 1200 fictional gene results; explicit cell-level display denominators",
+  "frozen_results": true,
+  "upstream_qc": "reviewed",
+  "results": [
+    {
+      "role": "qc_distribution",
+      "spec": "figures/CellQC/figure.spec.json"
+    },
+    {
+      "role": "donor_summary",
+      "spec": "figures/DonorCounts/figure.spec.json"
+    },
+    {
+      "role": "batch_embedding",
+      "spec": "figures/CellBatches/figure.spec.json"
+    },
+    {
+      "role": "celltype_embedding",
+      "spec": "figures/CellTypes/figure.spec.json"
+    },
+    {
+      "role": "marker_dot",
+      "spec": "figures/MarkerDot/figure.spec.json"
+    },
+    {
+      "role": "marker_features",
+      "spec": "figures/MarkerFeatures/figure.spec.json"
+    },
+    {
+      "role": "donor_composition",
+      "spec": "figures/DonorComposition/figure.spec.json"
+    },
+    {
+      "role": "donor_differential",
+      "spec": "figures/DonorDE/figure.spec.json"
+    },
+    {
+      "role": "effect_intervals",
+      "spec": "figures/DonorEffects/figure.spec.json"
+    },
+    {
+      "role": "ma",
+      "spec": "figures/DonorMA/figure.spec.json"
+    },
+    {
+      "role": "differential_heatmap",
+      "spec": "figures/DonorHeatmap/figure.spec.json"
+    },
+    {
+      "role": "enrichment_summary",
+      "spec": "figures/DonorPathways/figure.spec.json"
+    },
+    {
+      "role": "gsea_curves",
+      "spec": "figures/DonorEnrichmentTracks/figure.spec.json"
+    },
+    {
+      "role": "marker_subgroup",
+      "spec": "figures/Subgroup_01/figure.spec.json",
+      "id": "subgroup_01"
+    },
+    {
+      "role": "marker_subgroup",
+      "spec": "figures/Subgroup_02/figure.spec.json",
+      "id": "subgroup_02"
+    },
+    {
+      "role": "marker_subgroup",
+      "spec": "figures/Subgroup_03/figure.spec.json",
+      "id": "subgroup_03"
+    },
+    {
+      "role": "marker_subgroup",
+      "spec": "figures/Subgroup_04/figure.spec.json",
+      "id": "subgroup_04"
+    },
+    {
+      "role": "marker_subgroup",
+      "spec": "figures/Subgroup_05/figure.spec.json",
+      "id": "subgroup_05"
+    },
+    {
+      "role": "design_map",
+      "spec": "figures/CellStudyDesign/figure.spec.json"
+    },
+    {
+      "role": "condition_embedding",
+      "spec": "figures/ConditionAtlas/figure.spec.json"
+    },
+    {
+      "role": "donor_cell_support",
+      "spec": "figures/DonorTypeSupport/figure.spec.json"
+    },
+    {
+      "role": "enrichment_contrasts",
+      "spec": "figures/single_cell_GSEASummary/figure.spec.json"
+    },
+    {
+      "role": "pathway_gene_support",
+      "spec": "figures/single_cell_GeneSupport/figure.spec.json"
+    }
+  ]
+}

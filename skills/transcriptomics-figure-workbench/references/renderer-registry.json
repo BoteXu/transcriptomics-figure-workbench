@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.9.4",
+  "version": "0.9.5",
   "counts": {
     "python_functions": 131,
     "fixed_aliases": 82,
@@ -590,7 +590,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "04342c9fa68bcc8b9624dcba959ccb4d6831c1335808cb978bb79a1edbc7c834",
+      "source_sha256": "116233c3045427b31cf3b1fb7c8e7d4e9137aaf32b6f80120ab9ec23b18fdda3",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -1395,7 +1395,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "07efd281ff03e79a6242305090b86c117136633bf48e34811322e5b2bdda9812",
+      "source_sha256": "c51d61b8957d45db74fa7ea782e451bac5cb7708d997507471305b2554975abe",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "NES",
@@ -1727,7 +1727,7 @@
       "aliases": [
         "paired"
       ],
-      "source_sha256": "f4b60ee35b730f600ef8214888664baf1738296f6d927b0c72ff74399cca8785",
+      "source_sha256": "c9ca8ae8a98edb77aff6ea6ebf2befe8cc99b6cd7ff12d33552a859301dadfa6",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -1810,7 +1810,7 @@
       "aliases": [
         "effect_matrix"
       ],
-      "source_sha256": "f4b60ee35b730f600ef8214888664baf1738296f6d927b0c72ff74399cca8785",
+      "source_sha256": "c9ca8ae8a98edb77aff6ea6ebf2befe8cc99b6cd7ff12d33552a859301dadfa6",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -1941,12 +1941,24 @@
           "required": false,
           "annotation": null,
           "default": false
+        },
+        {
+          "name": "continuous_colors",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "title",
+          "required": false,
+          "annotation": null,
+          "default": ""
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "f4b60ee35b730f600ef8214888664baf1738296f6d927b0c72ff74399cca8785",
+      "source_sha256": "c9ca8ae8a98edb77aff6ea6ebf2befe8cc99b6cd7ff12d33552a859301dadfa6",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -1971,7 +1983,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "f4b60ee35b730f600ef8214888664baf1738296f6d927b0c72ff74399cca8785",
+      "source_sha256": "c9ca8ae8a98edb77aff6ea6ebf2befe8cc99b6cd7ff12d33552a859301dadfa6",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -2515,12 +2527,24 @@
           "required": false,
           "annotation": null,
           "default": "auto"
+        },
+        {
+          "name": "cloud_shapes",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "observation_unit",
+          "required": false,
+          "annotation": null,
+          "default": null
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "53e362bf5664fd5109ec3fa805c3cfaf48699bdca7c58bbbe1fc8b3394765888",
+      "source_sha256": "c51dabbef15d7f95a0f6b95ecbe0673033a82df57fa8042eaac6fce31ec735d1",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "average",
@@ -6957,7 +6981,7 @@
       "aliases": [
         "refined"
       ],
-      "source_sha256": "a0eb09b51ed54a3a3a4a4486a0175cac43d67342f59cafcf7e733461efa75d98",
+      "source_sha256": "921ee70cba73e553646337b4755ceef0d90d6c41c43febf0fe2a2326668a7172",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "NES",

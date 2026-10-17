@@ -25,9 +25,10 @@ try{
   await page.goto(url,{waitUntil:'networkidle'});
   const studioData=JSON.parse(await page.locator('#studio-data').textContent()),registry=studioData.registry;
   assert.equal(await page.locator('#catalog-count').innerText(),String(studioData.design_examples.length));
-  assert.equal(studioData.design_examples.length,92);
-  assert.deepEqual(studioData.design_examples.slice(0,2).map(r=>r.id),['BulkMain','SingleCellMain']);
-  checks.push('two coherent study quickstarts followed by 90 consolidated base entries');
+  assert.equal(studioData.design_examples.length,94);
+  assert.deepEqual(studioData.design_examples.slice(0,4).map(r=>r.id),['RoutineBulkPCA','RoutineCellTypes','BulkMain','SingleCellMain']);
+  assert.ok(studioData.design_examples[0].source.endsWith('routine-gallery/index.html#3'));
+  checks.push('current routine-set quickstarts precede two retained study snapshots and 90 base entries');
   await page.locator('#catalog-mode').selectOption('renderer');
   assert.equal(await page.locator('#catalog-count').innerText(),String(registry.counts.python_functions));checks.push('all source-derived callable entries visible');
   await page.waitForSelector('.svg-frame',{timeout:8000});

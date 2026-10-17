@@ -113,6 +113,9 @@ def gsea_facets(curve,hit,metric,summary,names,theme,options):
         q=curve[curve.pathway==name];h=hit[hit.pathway==name];s=summary.loc[name];color=palette[name]
         ax.plot(q['rank'],q.value,color=color,lw=1.5);ax.fill_between(q['rank'],0,q.value,color=color,alpha=.07)
         ax.axhline(0,color='#AAB5BE',lw=.6);ax.set_ylabel('Running ES',fontsize=8)
+        peak=q.loc[q.value.abs().idxmax()]
+        ax.scatter([peak['rank']],[peak.value],s=16,c=color,ec='white',lw=.5,zorder=4)
+        ax.axvline(peak['rank'],c=color,lw=.6,ls=(0,(3,3)),alpha=.4)
         ax.set_title('\n'.join(textwrap.wrap(str(name),32,break_long_words=False))+'\n'+f'NES {s.NES:+.2f}   FDR {s.padj:.2g}   n={int(s.set_size)}',loc='left',fontsize=8.5,pad=8)
         ax.tick_params(axis='x',labelbottom=False);ax.yaxis.set_major_locator(MaxNLocator(4))
         rug.vlines(h['rank'],0,1,color=color,lw=.6,alpha=.6)
@@ -121,11 +124,15 @@ def gsea_facets(curve,hit,metric,summary,names,theme,options):
         bottom.plot(metric['rank'],metric.value,color='#718392',lw=.6)
         bottom.fill_between(metric['rank'],0,metric.value,where=metric.value>=0,color=theme['roles']['positive'],alpha=.35)
         bottom.fill_between(metric['rank'],0,metric.value,where=metric.value<0,color=theme['roles']['negative'],alpha=.35)
-        bottom.set(xlabel='Rank in complete ordered list',ylabel=options['metric_label'],xlim=(1,options['ranked_universe']))
+        bottom.set(xlabel='Rank in complete ordered list',ylabel='Rank metric',xlim=(1,options['ranked_universe']))
         bottom.xaxis.set_major_locator(MaxNLocator(4,integer=True));bottom.yaxis.set_major_locator(MaxNLocator(2))
         for a in [ax,bottom]:
             a.spines[['top','right']].set_visible(False);a.tick_params(labelsize=7);a.grid(axis='y',color='#EDF0F2',lw=.5)
+        # Each nested track owns its own guide lane. Pairwise generic growth
+        # otherwise mistakes ES/rug/rank tracks for unrelated nearby panels and
+        # can turn a compact facet page into a needlessly tall reading strip.
+        for a in [ax,rug,bottom]:a._explicit_guide_layout=True
     caption=options['contrast']+' · '+options['gene_set_version']
-    fig.suptitle(options.get('title','Gene set enrichment')+'\n'+textwrap.fill(caption,max(28,int(cols*pw*7)),break_long_words=False)+'\nBold hits = supplied leading edge',fontsize=10)
+    fig.suptitle(options.get('title','Gene set enrichment')+'\n'+textwrap.fill(caption,max(28,int(cols*pw*7)),break_long_words=False)+'\nBold hits = supplied leading edge · rank metric: '+options['metric_label'],fontsize=10)
     fig._editorial_font=theme['font_family'];fig._responsive_facets={'rows':rows,'columns':cols,'panels':len(names),'complete_rank_tracks':True}
     return fig

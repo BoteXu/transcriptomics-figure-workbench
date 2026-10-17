@@ -202,7 +202,7 @@ def _annotation_atlas(data,theme,title,include_response=False,feature_columns='a
     return fig
 
 
-def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_definition=None,labels=(),alpha=.05,fc=1,feature_columns='auto'):
+def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_definition=None,labels=(),alpha=.05,fc=1,feature_columns='auto',cloud_shapes=None,observation_unit=None):
     """Prefer a compatible information-rich view; all extra scientific channels are supplied."""
     if mode not in ['pca','volcano','annotation_atlas','single_cell_main','qc','marker_dot','batch_facets','effect_table','ma','unit_profile']:raise ValueError('Choose a documented integrated presentation')
     if not isinstance(title,str) or not title.strip():raise ValueError('State the comparison')
@@ -211,6 +211,14 @@ def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_defini
     fig=plt.figure(figsize=(8.0,6.7));fig.suptitle(title,fontsize=13,fontweight='bold',y=.97)
     if mode=='pca':
         ax=_pca_panel(fig,[.12,.29,.75,.53],data,theme,axis_labels or ['PC1','PC2'],ellipse_definition)
+        points=data[data.record_type=='embedding']
+        # Sample identity is essential for a small QC plot. Keep every supplied
+        # point; labels are display annotations and never a new PCA fit.
+        if len(points)<=24:
+            for row in points.itertuples():
+                ax.annotate(str(row.object_id),(row.x,row.y),xytext=(5,5),
+                    textcoords='offset points',fontsize=8,color='#4D626D',
+                    bbox=dict(fc='white',ec='none',alpha=.8,pad=.5))
         groups=list(data[data.record_type=='embedding'].group.unique());pal=group_palette(theme,groups)
         fig.legend(handles=[Patch(fc=pal[g],label=g+' · n='+str(sum((data.record_type=='embedding')&(data.group==g)))) for g in groups],loc='upper center',bbox_to_anchor=(.5,.92),ncols=len(groups),frameon=False,fontsize=10)
         var=checked(data[data.record_type=='pc_variance'],['component','percent'],['percent'])
@@ -233,15 +241,21 @@ def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_defini
         fig.legend(handles=[Patch(color=c,label=g+' · '+str(sum(d.group==g))) for g,c in pal.items()],loc='upper center',bbox_to_anchor=(.5,.92),ncols=3,frameon=False,fontsize=9)
     elif mode=='qc':
         d=checked(data,['cell_id','sample','group','value'],['value']);metrics=list(data.metric.unique()) if 'metric' in data else ['Expression'];fig.set_size_inches(9,max(3.5,3*len(metrics)))
+        if observation_unit is not None and (not isinstance(observation_unit,str) or not observation_unit.strip()):raise ValueError('Declare the observation unit displayed in QC sample counts')
         if (d.groupby('sample').group.nunique()!=1).any():raise ValueError('Explicit consistent sample-group annotation required')
         palette=group_palette(theme,list(d.group.unique()))
         for j,metric in enumerate(metrics):
             q=d if 'metric' not in data else data[data.metric==metric];samples=list(q['sample'].unique());a=fig.add_subplot(len(metrics),1,j+1);_clean(a)
             for i,s in enumerate(samples):
                 z=q[q['sample']==s].value.to_numpy();color=palette[q[q['sample']==s].group.iloc[0]]
-                a.scatter(i-.22+(np.arange(len(z))*.61803398875%1)*.18,z,s=2.5,alpha=.20,color=color,ec='none',rasterized=True)
-                b=a.boxplot([z],positions=[i+.10],widths=.30,patch_artist=True,showfliers=False,medianprops=dict(color='#334E5C',lw=1),boxprops=dict(fc=color+'55',ec=color,lw=.8),whiskerprops=dict(color=color,lw=.8),capprops=dict(color=color,lw=.8))
-            a.set_xticks(range(len(samples)),samples,rotation=45,ha='right');a.set_ylabel(metric);a.set_title(title if len(metrics)==1 else metric,loc='left',fontsize=11,fontweight='bold')
+                if cloud_shapes is not None:
+                    from figure_raincloud_geometry import draw_supplied_raincloud
+                    if set(cloud_shapes)!=set(metrics) or set(cloud_shapes[metric])!=set(samples):raise ValueError('Supply frozen cloud geometry for every displayed metric and sample')
+                    draw_supplied_raincloud(a,i,z,color,cloud_shapes[metric][s],point_size=5)
+                else:
+                    a.scatter(i-.22+(np.arange(len(z))*.61803398875%1)*.18,z,s=2.5,alpha=.20,color=color,ec='none',rasterized=True)
+                    a.boxplot([z],positions=[i+.10],widths=.30,patch_artist=True,showfliers=False,medianprops=dict(color='#334E5C',lw=1),boxprops=dict(fc=color+'55',ec=color,lw=.8),whiskerprops=dict(color=color,lw=.8),capprops=dict(color=color,lw=.8))
+            a.set_xticks(range(len(samples)),[s+'\n'+(str(sum(q['sample']==s))+' '+observation_unit if observation_unit else 'n='+str(sum(q['sample']==s))) for s in samples],rotation=45,ha='right');a.set_ylabel(metric);a.set_title(title if len(metrics)==1 else metric,loc='left',fontsize=11,fontweight='bold')
         fig.suptitle('');fig.tight_layout(pad=1.5,h_pad=2)
         fig.legend(handles=[Patch(color=c,label=g) for g,c in palette.items()],loc='upper right',bbox_to_anchor=(.98,1),ncols=len(palette),frameon=False,fontsize=9)
     elif mode=='marker_dot':
@@ -254,11 +268,34 @@ def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_defini
     elif mode=='effect_table':
         d=checked(data,['label','estimate','lower','upper'],['estimate','lower','upper'])
         if d.label.duplicated().any() or ((d.lower>d.estimate)|(d.upper<d.estimate)).any():raise ValueError('Unique supplied effects and valid bounds required')
-        fig.set_size_inches(8,max(3.5,len(d)*.45+1.5));a=_axis(fig,[.15,.22,.50,.55]);y=np.arange(len(d))
+        # One aligned reading table: identity, interval, numerical estimate.
+        # A small four-row forest should not inherit a large scatter canvas.
+        fig.clear();height=1.65+.34*len(d);width=7.7
+        fig.set_size_inches(width,height);body=.34*len(d)
+        a=_axis(fig,[.18,.68/height,.43,body/height]);y=np.arange(len(d))
+        label_ax=_axis(fig,[.055,.68/height,.105,body/height])
+        number_ax=_axis(fig,[.65,.68/height,.31,body/height])
+        for axis in [a,label_ax,number_ax]:axis.set_ylim(len(d)-.5,-.5)
+        for axis in [label_ax,number_ax]:axis.set_xlim(0,1);axis.axis('off')
+        fig.text(.055,1-.17/height,textwrap.fill(title,74),fontsize=13,fontweight='bold',color='#283F4B',va='top')
+        if axis_labels:fig.text(.055,1-.46/height,str(axis_labels[0]),fontsize=9,color='#687E88',va='top')
+        header=(.68+body+.13)/height
+        for x,text in [(.055,'Gene'),(.18,'log2 fold change'),(.65,'Estimate [95% interval]')]:
+            fig.text(x,header,text,fontsize=9.5,fontweight='bold',color='#617A86')
         for i,row in enumerate(d.itertuples()):
-            c=theme['roles']['positive'] if row.estimate>0 else theme['roles']['negative'];a.errorbar(row.estimate,i,xerr=[[row.estimate-row.lower],[row.upper-row.estimate]],fmt='o',color=c,ecolor=c,ms=6,capsize=3,lw=1.4)
-            a.text(1.08,i,f'{row.estimate:+.2f}  [{row.lower:+.2f}, {row.upper:+.2f}]',transform=a.get_yaxis_transform(),fontsize=10,va='center')
-        a.axvline(0,color='#A4B2BC',lw=.8,ls='--');a.set_yticks(y,d.label);a.invert_yaxis();a.set_xlabel('Supplied log2 fold change and 95% interval');a.text(1.08,1.12,'Estimate [95% interval]',transform=a.transAxes,fontsize=10,fontweight='bold')
+            c=theme['roles']['positive'] if row.estimate>0 else theme['roles']['negative']
+            if i%2==0:
+                for axis in [a,label_ax,number_ax]:axis.axhspan(i-.5,i+.5,fc='#EDF4F5',ec='none',zorder=0)
+            a.plot([row.lower,row.upper],[i,i],c=c,lw=2.4,alpha=.65,zorder=2,solid_capstyle='round')
+            a.scatter([row.estimate],[i],c=c,s=43,ec='white',lw=.75,zorder=3)
+            label_ax.text(0,i,str(row.label),fontsize=10,va='center',color='#294650')
+            number_ax.text(.03,i,f'{row.estimate:+.2f}  [{row.lower:+.2f}, {row.upper:+.2f}]',fontsize=9.5,va='center',color='#294650')
+        a.axvline(0,color='#91A4AE',lw=.8,ls=(0,(2,3)),zorder=1)
+        a.set_yticks([]);a.spines[['left','top','right']].set_visible(False)
+        a.spines['bottom'].set_color('#B9C8CE');a.tick_params(axis='x',labelsize=9)
+        a.xaxis.set_major_locator(MaxNLocator(5));a.margins(x=.14)
+        fig.text(.18,.18/height,'Points: supplied estimates  ·  Lines: supplied 95% intervals',fontsize=9,color='#687E88')
+        for axis in fig.axes:axis._explicit_guide_layout=True
     elif mode=='unit_profile':
         d=checked(data,['sample_id','group','value'],['value'])
         if d.sample_id.duplicated().any() or (d.value<0).any() or not axis_labels:raise ValueError('Unique samples and explicit nonnegative count units required')

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "assay": "bulk",
+  "title": "Synthetic bulk routine result set / seed 20261017",
+  "contrast": "Treated versus Control / illustrative",
+  "independent_unit": "Synthetic donor; n=12; cells nested within donors",
+  "denominator": "12 synthetic donors; 1200 fictional gene results; explicit cell-level display denominators",
+  "frozen_results": true,
+  "upstream_qc": "reviewed",
+  "results": [
+    {
+      "role": "qc_distribution",
+      "spec": "figures/BulkQC/figure.spec.json"
+    },
+    {
+      "role": "sample_embedding",
+      "spec": "figures/BulkPCA/figure.spec.json"
+    },
+    {
+      "role": "sample_correlation",
+      "spec": "figures/BulkCorrelation/figure.spec.json"
+    },
+    {
+      "role": "library_summary",
+      "spec": "figures/LibrarySizes/figure.spec.json"
+    },
+    {
+      "role": "differential_expression",
+      "spec": "figures/BulkDE/figure.spec.json"
+    },
+    {
+      "role": "differential_heatmap",
+      "spec": "figures/BulkHeatmap/figure.spec.json"
+    },
+    {
+      "role": "effect_intervals",
+      "spec": "figures/GeneEffects/figure.spec.json"
+    },
+    {
+      "role": "ma",
+      "spec": "figures/BulkMA/figure.spec.json"
+    },
+    {
+      "role": "enrichment_summary",
+      "spec": "figures/Pathways/figure.spec.json"
+    },
+    {
+      "role": "gsea_curves",
+      "spec": "figures/EnrichmentTracks/figure.spec.json"
+    },
+    {
+      "role": "study_overview",
+      "spec": "figures/BulkMain/figure.spec.json"
+    },
+    {
+      "role": "design_map",
+      "spec": "figures/StudyDesign/figure.spec.json"
+    },
+    {
+      "role": "gene_expression",
+      "spec": "figures/GeneExpression/figure.spec.json"
+    },
+    {
+      "role": "enrichment_contrasts",
+      "spec": "figures/bulk_GSEASummary/figure.spec.json"
+    },
+    {
+      "role": "pathway_gene_support",
+      "spec": "figures/bulk_GeneSupport/figure.spec.json"
+    }
+  ]
+}

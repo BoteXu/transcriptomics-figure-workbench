@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SKILL=ROOT/'skills/transcriptomics-figure-workbench'
 
 
-def main(output):
+def main(output,routine_only=False):
     output.mkdir(parents=True,exist_ok=False)
     version=(ROOT/'VERSION').read_text().strip()
     assert version==(SKILL/'VERSION').read_text().strip()
@@ -22,6 +22,18 @@ def main(output):
         assert not z.testzip()
         for name,path in files.items():assert z.read('transcriptomics-figure-workbench/'+name)==path.read_bytes()
     assets=[archive]
+    if routine_only:
+        routine=SKILL/'assets/routine-gallery'
+        book=output/'Bulk_and_SingleCell_FigureBook.pdf';shutil.copyfile(routine/book.name,book);assets.append(book)
+        gallery=output/f'routine-figure-examples-v{version}.zip'
+        with zipfile.ZipFile(gallery,'x',compression=zipfile.ZIP_DEFLATED) as z:
+            for file in sorted(routine.rglob('*')):
+                if file.is_file():z.write(file,'routine-figures/'+file.relative_to(routine).as_posix())
+        with zipfile.ZipFile(gallery) as z:assert not z.testzip()
+        assets.append(gallery)
+        (output/f'SHA256SUMS-v{version}.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in assets),encoding='utf8')
+        print(json.dumps(dict(status='PUBLIC_ROUTINE_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
+        return
     for source,name in [('visualization-overview.pdf','visualization-overview.pdf'),('source-archive-v021.pdf','all-previews.pdf'),('new-result-modes-v024.jpg','new-result-modes-v024.jpg')]:
         destination=output/name;shutil.copy2(ROOT/'examples/overview'/source,destination);assets.append(destination)
     studio=output/f'figure-studio-v{version}.html'
@@ -151,4 +163,4 @@ def main(output):
     print(json.dumps(dict(status='PUBLIC_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);a=p.parse_args();main(a.output)
+    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);p.add_argument('--routine-only',action='store_true');a=p.parse_args();main(a.output,a.routine_only)

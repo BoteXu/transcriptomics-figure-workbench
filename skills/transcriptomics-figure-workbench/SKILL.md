@@ -118,12 +118,31 @@ state the missing channels or the user's explicit simplicity request. Unknown
 ellipse definitions, unreviewed annotations or absent densities cannot be
 created for decoration. A group-dispersion ellipse is not a mean confidence
 interval or a test of separation. Keep complete clear individual companions.
+For sample QC and unpaired gene-expression distributions, prefer a raincloud:
+supplied half-density, every raw observation, a narrow box/median and explicit
+counts. In small groups the individual dots carry the evidence; disclose the
+cloud definition and bandwidth, and do not imply that its smooth shape is
+stable. `plot_integrated_view(mode='qc')` accepts `cloud_shapes[metric][sample]`
+and `observation_unit`; chapter point panels accept `grouped_distribution`
+and `cloud_shapes[group]`. Each cloud contains frozen `grid`, `width`, `n`
+and `definition`. The renderer validates count and observed range and never
+estimates a density. If density is absent, disclose that dependency before
+using the complete points/box fallback. Do not replace paired-unit lines,
+effect/uncertainty forests or summary-only tables with an invented raincloud.
 Inspect the richer actual exports and their main-figure composition; do not
 grant beauty acceptance merely for adding panels or passing font checks.
 
 ## Workflow
 
 ### Transcriptomic figure sets and ordinary requests
+
+The [ordinary-request audit](references/routine-study-audit.md) supplies 15 bulk
+defaults, 23 single-cell defaults and five reading/custom-layout companions
+from one explicitly fictional result set. It includes five independently scoped
+four-marker subgroup pages. This is a bounded end-to-end drawing demonstration,
+not an assay-complete analysis or a validation of real scientific backends.
+Repeated `marker_subgroup` manifest entries need unique safe `id` values and
+distinct `focus_group` specifications; other roles keep one default each.
 
 Start with scientific semantics using `choose --request FigureChoiceRequest.json --output choice.json`. Define assay, method, question, biological independent unit, supplied semantic channels, actual display counts and purpose. This selects a design only. It never manufactures missing evidence or converts a generic UMAP request into PCA uncertainty. Summary-only GSEA gets an NES summary; ORA requires an actual query and tested universe. Large gene point counts do not imply hundreds of reading pages.
 
@@ -133,7 +152,7 @@ For cluster resolution use complete adjacent-resolution cell flows and fixed nod
 
 For a complete bulk or single-cell workbench, start with [58 analysis chapters](references/transcriptomic-chapters-v091.md) and `chapters`, `chapter-template`, `book-plan` / `book-render`. Every chapter has actual drawing code, a runnable synthetic FigureSpec/TSV and exported examples, including conditional extensions. Search author/community visualization sources when an improved form is needed, then implement and inspect it. Never label an unimplemented drawing capability as a missing project result. Use explicit multiple-contrast, celltype and cohort scopes; the small 11/14-figure study demonstration is not comprehensive coverage.
 
-Prefer the compatible richer presentation: PCA dispersion/reference ellipses and marginals; DE/MA stacked distributions; linked annotation/subcluster-marker atlases; ORA themes, ratios/counts/FDR and gene support; complete multi-GSEA and leading-edge/NES comparisons. [Current preferred examples](assets/study-gallery/index.html) and [chapter examples](assets/chapter-gallery/index.html) replace the older minimal ordinary defaults. Package/community designs are ideas to adapt, with attribution and exact input semantics; do not copy licenses away or execute unreviewed third-party code.
+Prefer the compatible richer presentation: PCA dispersion/reference ellipses and marginals; DE/MA stacked distributions; linked annotation/subcluster-marker atlases; ORA themes, ratios/counts/FDR and gene support; complete multi-GSEA and leading-edge/NES comparisons. [Current ordinary-request examples](assets/routine-gallery/index.html) and [chapter examples](assets/chapter-gallery/index.html) replace the older minimal ordinary defaults. The earlier study gallery is retained as a historical drawing snapshot, not the preferred answer when an updated matching view exists. Package/community designs are ideas to adapt, with attribution and exact input semantics; do not copy licenses away or execute unreviewed third-party code.
 
 For “画质控图”, “展示差异和通路” or “做一套文章组图”, plan a coherent figure set from explicit frozen results. Use [the study workflow](references/transcriptomic-study-v090.md) and `study-plan` to bind the request to selected FigureSpecs. The bounded phrase router assists the host; it does not infer a study design or locate arbitrary private files.
 

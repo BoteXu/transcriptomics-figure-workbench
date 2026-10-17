@@ -40,13 +40,16 @@ def _gsea(d,t,o):
         else:ax.plot(q['rank'],q.value,color=pal[name],lw=1.65)
         ax.axhline(0,color='#ABB5BE',lw=.6);ax.set_xlim(1,o['ranked_universe']);ax.set_ylabel('ES',fontsize=8);ax.yaxis.set_major_locator(ticker.MaxNLocator(3));_flat_axis(ax,None)
         ax.tick_params(axis='x',labelbottom=False)
-        ax.text(1.04,.90,'\n'.join(textwrap.wrap(name,17))+'\n'+f'NES {s.loc[name,"NES"]:+.2f}\nFDR {s.loc[name,"padj"]:.2g}',transform=ax.transAxes,va='top',fontsize=7.5,color=pal[name],linespacing=1.45)
+        peak=q.loc[q.value.abs().idxmax()];leading=hits[hits.leading_edge==1]
+        ax.scatter([peak['rank']],[peak.value],s=18,color=pal[name],ec='white',lw=.5,zorder=5)
+        ax.axvline(peak['rank'],color=pal[name],lw=.6,ls=(0,(3,3)),alpha=.45)
+        ax.text(1.04,.90,'\n'.join(textwrap.wrap(name,17))+'\n'+f'NES {s.loc[name,"NES"]:+.2f}\nFDR {s.loc[name,"padj"]:.2g}\n{int(s.loc[name,"set_size"])} hits / {o["ranked_universe"]} genes\nLeading edge: {len(leading)}',transform=ax.transAxes,va='top',fontsize=7.5,color=pal[name],linespacing=1.45)
         rug=fig.add_axes([left,bottom-.023,width,.016]);rug.set(xlim=(1,o['ranked_universe']),ylim=(0,1));rug.axis('off')
         rug.vlines(hits['rank'],0,1,color=pal[name],lw=.55,alpha=.45);rug.vlines(hits.loc[hits.leading_edge==1,'rank'],0,1,color=pal[name],lw=1.3)
     strip=fig.add_axes([left,.18,width,.035])
     strip.imshow(v[np.newaxis,:],aspect='auto',cmap=_cmap(t),norm=colors.TwoSlopeNorm(vmin=-limit,vcenter=0,vmax=limit),extent=(.5,o['ranked_universe']+.5,0,1),interpolation='nearest');strip.set(yticks=[],xlabel='Rank in the complete ordered list');strip.xaxis.set_major_locator(ticker.MaxNLocator(5,integer=True));strip.tick_params(labelsize=8)
     for sp in strip.spines.values():sp.set_visible(False)
-    cb=fig.colorbar(plt.cm.ScalarMappable(norm=colors.TwoSlopeNorm(vmin=-limit,vcenter=0,vmax=limit),cmap=_cmap(t)),cax=fig.add_axes([.84,.16,.015,.075]));cb.ax.tick_params(labelsize=7.4);cb.set_label(o['metric_label'],fontsize=7.5)
+    cb=fig.colorbar(plt.cm.ScalarMappable(norm=colors.TwoSlopeNorm(vmin=-limit,vcenter=0,vmax=limit),cmap=_cmap(t)),cax=fig.add_axes([.84,.16,.015,.11]));cb.ax.tick_params(labelsize=7.4);cb.set_ticks([-limit,0,limit]);cb.set_label(o['metric_label'],fontsize=7.5)
     _foot(fig,'Hit rugs retain exact ranks; bold hits are supplied leading edge. '+o['gene_set_version']+'. No ES, NES, FDR or membership recomputation.')
     return fig
 

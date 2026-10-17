@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import textwrap
 import matplotlib.pyplot as plt
-from matplotlib.colors import TwoSlopeNorm, to_rgba
+from matplotlib.colors import TwoSlopeNorm, to_rgba, LinearSegmentedColormap
 from matplotlib.patches import Patch
 from figure_core import checked, palette_check, canvas, stamp, effect_reference
 
@@ -76,7 +76,7 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
                            column_annotation_field='sample_group',row_annotation_field='feature_block',
                            row_order=None,column_order=None,row_aliases=None,column_aliases=None,
                            cell_width=.45,cell_height=.30,row_label_wrap=None,column_label_wrap=None,
-                           merge_annotation_legends=False):
+                           merge_annotation_legends=False,continuous_colors=None,title=''):
     d=checked(data,[row_field,column_field,value_field,column_annotation_field,row_annotation_field],[value_field])
     d=d.rename(columns={row_field:'feature',column_field:'sample',value_field:'value',column_annotation_field:'sample_group',row_annotation_field:'feature_block'})
     if d.duplicated(['feature','sample']).any() or len(d)!=d.feature.nunique()*d['sample'].nunique(): raise ValueError('Incomplete or duplicate heatmap grid')
@@ -101,14 +101,18 @@ def plot_annotated_heatmap(data, value_label, group_palette, block_palette, *, s
     xlabels=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in xlabels]
     ylabels=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in ylabels]
     fig=plt.figure(figsize=(max(8,len(cols)*float(cell_width)+3+min(max(len(x) for x in ylabels)-16,0)*.025),max(5,len(rows)*float(cell_height)+2)))
+    if title:fig.suptitle(title,fontsize=13,fontweight='bold',y=.97)
     grid=fig.add_gridspec(2,1,height_ratios=[.035,1],
                          left=.22,right=.69,bottom=.24,top=.88,hspace=.04)
     ax=fig.add_subplot(grid[1,0]); top=fig.add_subplot(grid[0,0])
     pos=ax.get_position()
-    # Keep the row annotation outside the text-label gutter.
-    left=fig.add_axes([.03,pos.y0,.018,pos.height])
+    # Keep the annotation beside the matrix, with row names outside it. A
+    # detached strip at a page margin implies an unrelated visual channel.
+    left=fig.add_axes([pos.x0-.026,pos.y0,.014,pos.height])
+    ax.tick_params(axis='y',pad=20)
     extent=max(abs(d.value).max(),1e-9)
-    im=ax.imshow(mat,aspect='auto',cmap='RdBu_r' if scale_type=='signed' else 'Blues',
+    ramp=continuous_colors or (['#4477AA','#F7F7F7','#D8795B'] if scale_type=='signed' else ['#E7F0F2','#326B8D'])
+    im=ax.imshow(mat,aspect='auto',cmap=LinearSegmentedColormap.from_list('annotated_matrix',ramp),
                  norm=TwoSlopeNorm(0,-extent,extent) if scale_type=='signed' else None)
     top.imshow(np.array([[to_rgba(group_palette[g]) for g in groups]]),aspect='auto')
     left.imshow(np.array([[to_rgba(block_palette[g])] for g in blocks]),aspect='auto')

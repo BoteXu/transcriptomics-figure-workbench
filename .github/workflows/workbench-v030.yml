@@ -54,6 +54,8 @@ jobs:
       - name: Check study routing, independent units and repaired layout regressions
         run: |
           python tests/check_study_figures.py
+          python tests/check_routine_study.py
+          python tests/check_routine_gallery.py
           python tests/check_layout_depth_v090.py
           python tests/check_rich_defaults.py
           python tests/check_method_depth.py
@@ -107,11 +109,13 @@ jobs:
           node tests/check_chapter_browser.mjs chapter-browser-ci
           node tests/check_dedicated_browser.mjs dedicated-browser-ci
           node tests/check_source_browser.mjs source-browser-ci
+          node tests/check_routine_browser.mjs routine-browser-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
           name: studio-browser-receipts
           path: |
             publication-browser-ci
+            routine-browser-ci
             forms-browser-ci
             v090-browser-ci

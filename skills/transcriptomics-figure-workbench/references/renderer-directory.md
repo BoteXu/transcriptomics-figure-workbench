@@ -588,6 +588,8 @@ See the fixed implementation and its input contract.
 | row_label_wrap | false | null |
 | column_label_wrap | false | null |
 | merge_annotation_legends | false | false |
+| continuous_colors | false | null |
+| title | false | "" |
 
 ## figure_extensions.plot_score_comparison
 
@@ -731,6 +733,8 @@ Prefer a compatible information-rich view; all extra scientific channels are sup
 | alpha | false | 0.05 |
 | fc | false | 1 |
 | feature_columns | false | "auto" |
+| cloud_shapes | false | null |
+| observation_unit | false | null |
 
 ## figure_lineage_views.plot_lineage_view
 

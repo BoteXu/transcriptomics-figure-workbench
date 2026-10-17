@@ -8,10 +8,10 @@ from pathlib import Path
 from build_transcriptomic_study_examples import prepare
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'skills/transcriptomics-figure-workbench/scripts'))
 
-def build(out):
+def build(out, seed=9031):
     import numpy as np,pandas as pd
     from figure_core import table_bytes
-    prepare(out)
+    prepare(out, seed=seed)
     def read(k):return pd.read_csv(out/k/(k+'.tsv'),sep='\t')
     def spec(k):return json.loads((out/k/(k+'.spec.json')).read_text(encoding='utf8'))
     def write(k,d,params,renderer='figure_integrated_views.plot_integrated_view',width=210):
@@ -71,7 +71,24 @@ def build(out):
     cells=pd.read_csv(out/'cells.tsv',sep='\t');emb=read('CellTypes').rename(columns={'cell_id':'object_id'}).assign(record_type='embedding')
     angle=np.arange(5)*2*np.pi/5
     anchors=pd.DataFrame([dict(record_type='embedding_label',group=t,label=t,x=float(np.cos(a)*3),y=float(np.sin(a)*3+.85)) for t,a in zip(types,angle)])
-    features=pd.concat([pd.DataFrame(dict(record_type='feature_map',object_id=cells.cell_id,feature=g,x=cells.x,y=cells.y,value=.05+4*(cells.celltype==t)+.5*(np.arange(len(cells))%7)/7)) for g,t in zip(markers[:5],types)],ignore_index=True)
+    # Declare every cell-marker channel first. The overview and all subgroup
+    # companions then share these exact values and exact display summaries.
+    # These means/fractions describe the fictional display, not a fitted model.
+    feature_frames=[];summary_rows=[]
+    for i,g in enumerate(markers):
+        t=types[i%5];idx=np.arange(len(cells));target=(cells.celltype==t).to_numpy()
+        values=np.where(target,2.1+.38*(i//5)+.95*(np.sin(idx*.41+i)+1)/2,
+                        .03+.12*(np.sin(idx*.27+i)+1)/2)
+        values=np.where((idx+i*3)%(7+i//5)==0,0,values)
+        values=np.where((~target)&((idx+i)%4<3),0,values)
+        feature_frames.append(pd.DataFrame(dict(record_type='feature_map',object_id=cells.cell_id,
+            feature=g,x=cells.x,y=cells.y,value=values)))
+        for comparison in types:
+            v=values[(cells.celltype==comparison).to_numpy()]
+            summary_rows.append(dict(record_type='marker_dot',feature=g,group=comparison,
+                feature_group=t,value=float(v.mean()),fraction=float(np.mean(v>0))))
+    features=pd.concat(feature_frames,ignore_index=True);dots=pd.DataFrame(summary_rows)
+    write('MarkerDot',dots,dict(mode='marker_dot',title='Marker specificity · annotation blocks and detection fractions'))
     # Plausible gene labels name entirely fictional expression channels; this
     # is not a validated marker annotation or a biological result.
     atlas=pd.concat([emb,anchors,dots,features],ignore_index=True)
@@ -82,8 +99,10 @@ def build(out):
         expression_limits=[0,5],group_order=types,
         marker_order=[g for t in types for g in dots[dots.feature_group==t].feature.unique()])
     write('CellTypes',atlas_page,annotation_params,renderer='figure_annotation_views.plot_annotation_evidence',width=240)
-    old_features=features.drop(columns='record_type').rename(columns={'object_id':'cell_id'})
-    write('MarkerFeatures',old_features,spec('MarkerFeatures')['parameters'],renderer=spec('MarkerFeatures')['renderer'])
+    old_features=features[features.feature.isin(markers[:5])].drop(columns='record_type').rename(columns={'object_id':'cell_id'})
+    write('MarkerFeatures',old_features,dict(spec('MarkerFeatures')['parameters'],ncols='auto'),renderer=spec('MarkerFeatures')['renderer'])
+    # Retained for scoped per-identity pages; atlas itself stays focused.
+    (out/'all-marker-channels.tsv').write_bytes(table_bytes(features))
     comp=read('DonorComposition').rename(columns={'celltype':'category','group':'condition'}).assign(record_type='composition')
     donor_de=read('DonorDE');full=pd.concat([atlas,comp,donor_de],ignore_index=True)
     write('SingleCellMain',atlas_page,dict(annotation_params,title='Single-cell atlas · annotation evidence'),renderer='figure_annotation_views.plot_annotation_evidence',width=240)
