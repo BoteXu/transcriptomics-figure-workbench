@@ -1,5 +1,13 @@
 # Change log
 
+## 0.9.2
+
+- Searched all 90 consolidated forms, prioritizing 2025–2026; separately inspected original pixels and captions for eight figures in seven recent papers. Kept search candidates, reviewed design principles and implementation scope distinct.
+- Rebuilt enrichment stories with exact shared pathway rows, one label lane, explicit membership/absence tiles, separate NES/FDR/effect guides and safe vertical reading layouts.
+- Reorganized annotation atlases and per-subgroup multi-marker evidence. Default evidence-first layout adapts to 2/4/8/12 markers; explicit grids remain available. Repaired final-export heading and long-label collisions.
+- Preserved the frozen inputs for 23 refreshed examples; added four explicitly fictional layout fixtures. Screen-inspected 27 final exports and preserved before images and historical snapshots.
+- Added runtime geometry/encoding regressions, per-form selection decisions, generated-reference checks and exact export/review binding checks. Preserve private installed profiles during update.
+
 ## 0.8.1
 
 - Audited at-use single-figure and composition layout; added native FigureSpec/Studio canvas and facet controls with explicit rejection of ignored or conflicting settings.

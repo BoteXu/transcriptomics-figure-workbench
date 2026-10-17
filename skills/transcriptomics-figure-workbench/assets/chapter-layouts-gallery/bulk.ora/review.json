@@ -14,19 +14,19 @@
     "preview": "bulk.ora/preview.jpg"
   },
   "sha256": {
-    "png": "cea3988365e5ff7502302b36e3ade994d62df3acc6a25d6fd2173b103be5bc07",
-    "svg": "19d561b7441f902bbcad1d1857125fd49b97071d974a535c5b033e05c12d7928",
-    "pdf": "516122dfdad2a5bc8fdff2e5de61789b50690a46de117d9b40f6df930418696d",
+    "png": "535d33d90cec95f24bc3a01a64d9fbd431bb47012369c3924ab6774119ea066d",
+    "svg": "0d8127353e94a0e6f7b7f4da325528244c474a6a5084cd994e69bd548398710c",
+    "pdf": "40d817ffdcdb9cf9a8ff7bf16740d9f836c1fa4cae156804ca09241a19303b8e",
     "tsv": "8a0ebb72c4aa5128cdf182fd2104760ceff8edab756a5b106cc80d15bd489f76",
     "spec": "fdbbaf08ac6f9c90e11836a8c315548188fcc5095f81670b7bdf8b004a16d609"
   },
   "readability": {
     "target_width_mm": 297,
-    "native_width_mm": 203.2,
+    "native_width_mm": 151.5392222222222,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 76,
-    "smallest_pt": 16.07775590551181,
-    "p10_pt": 16.07775590551181,
+    "essential_text_count": 69,
+    "smallest_pt": 21.558775029273683,
+    "p10_pt": 21.558775029273683,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
@@ -34,7 +34,7 @@
   },
   "visual_review": {
     "id": "bulk.ora",
-    "png_sha256": "cea3988365e5ff7502302b36e3ade994d62df3acc6a25d6fd2173b103be5bc07",
+    "png_sha256": "535d33d90cec95f24bc3a01a64d9fbd431bb47012369c3924ab6774119ea066d",
     "decision": "screen_reviewed",
     "checks": [
       "scientific display meaning and scope",
@@ -47,7 +47,8 @@
     "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false
+    "scientific_acceptance": false,
+    "source_figure_id": "bulk_ora_VerticalLarge"
   },
   "scientific_acceptance": false,
   "required_results": [
@@ -68,5 +69,7 @@
     "https://lazappi.github.io/clustree/articles/clustree.html",
     "https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/",
     "https://github.com/guigolab/ggsashimi"
-  ]
+  ],
+  "display_revision": "0.9.2",
+  "previous_png_sha256": "cea3988365e5ff7502302b36e3ade994d62df3acc6a25d6fd2173b103be5bc07"
 }

@@ -685,15 +685,15 @@
         "preview": "bulk.ora/preview.jpg"
       },
       "sha256": {
-        "png": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd",
-        "svg": "40fb74add24c6e73c31d5cc174504e6939e146a16eedaeac62c83f58edfcd4f0",
-        "pdf": "4ae74e7f12ed88f360c96b89c4310d2f10a4f37b47b5cdfbd998cab00cb5e1d4",
+        "png": "feac49ae01b568492d23961fdb180a157fabb42188b75a4fd402ae08b0bba25a",
+        "svg": "e0ece54d5c5439ededc3dd5f2fdef8b1751ad10910a6a26f6a17c7f692c8beb1",
+        "pdf": "0aac06325910fd2d20e560a1a96187ef2476d244e3135ba0447effd72b2b3032",
         "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
         "spec": "cbcdf115109f929570d424a8dd15c1c230e51b38d3dfc396ca3f12bf02404c39"
       },
       "visual_review": {
         "id": "bulk.ora",
-        "png_sha256": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd",
+        "png_sha256": "feac49ae01b568492d23961fdb180a157fabb42188b75a4fd402ae08b0bba25a",
         "decision": "screen_reviewed",
         "checks": [
           "scientific display meaning and scope",
@@ -706,21 +706,24 @@
         "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false
+        "scientific_acceptance": false,
+        "source_figure_id": "bulk_ora"
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 384.2226538433559,
+        "native_width_mm": 239.56376763673558,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 49,
-        "smallest_pt": 8.502882293171412,
-        "p10_pt": 8.502882293171412,
+        "essential_text_count": 45,
+        "smallest_pt": 13.637287609176115,
+        "p10_pt": 13.637287609176115,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.9.2",
+      "previous_png_sha256": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd"
     },
     {
       "id": "bulk.gsea",
@@ -820,15 +823,15 @@
         "preview": "bulk.pathway_contrasts/preview.jpg"
       },
       "sha256": {
-        "png": "4bdffffd475019b34fdf2ca9059c62103aecf6a6cddfd5e96496d9bce8ca53a9",
-        "svg": "db3e054808eaf0e196971c1ebaa09962290e7402205cfeb453a4bc0276196ff5",
-        "pdf": "3676220d5c6c4bbfcfc277ec639e0e0ea38660b3e21327355e19b89e51e73092",
+        "png": "e355fa76787a0ee57fa64614f353b309d2a046c0a019b9c85b01900e93e2f530",
+        "svg": "64f3e80481c904aa8bb9bf185c2beacde5cc90e4c0c0d12d5069502a127b93ea",
+        "pdf": "522526faf9edda9ae563582ff78709f375807e81d21c3b128e4e63ef6a7221f4",
         "tsv": "727f92097cf6e98e1ef6f95e42f7d06e1be3dce83a87689065c5b539696ba544",
         "spec": "8020845f05a3188375855598ca356c3cda95a6abfb05e93b3625ab3fea72b277"
       },
       "visual_review": {
         "id": "bulk.pathway_contrasts",
-        "png_sha256": "4bdffffd475019b34fdf2ca9059c62103aecf6a6cddfd5e96496d9bce8ca53a9",
+        "png_sha256": "e355fa76787a0ee57fa64614f353b309d2a046c0a019b9c85b01900e93e2f530",
         "decision": "screen_reviewed",
         "checks": [
           "scientific display meaning and scope",
@@ -841,21 +844,24 @@
         "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false
+        "scientific_acceptance": false,
+        "source_figure_id": "bulk_pathway_contrasts"
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 405.92790619542114,
+        "native_width_mm": 238.01514002103897,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 42,
-        "smallest_pt": 8.048227160877198,
-        "p10_pt": 8.048227160877198,
+        "essential_text_count": 39,
+        "smallest_pt": 13.726017595818563,
+        "p10_pt": 13.726017595818563,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.9.2",
+      "previous_png_sha256": "4bdffffd475019b34fdf2ca9059c62103aecf6a6cddfd5e96496d9bce8ca53a9"
     },
     {
       "id": "bulk.gene_support",
@@ -886,15 +892,15 @@
         "preview": "bulk.gene_support/preview.jpg"
       },
       "sha256": {
-        "png": "b9a1bd94520e4340f2e766f8b3fd21010a5a53c7f5c0f08c550c536576f3fbeb",
-        "svg": "75bb8d2188b81572e5345d3263dac11b59154b66b0a5114b4778ca37f4f83dfa",
-        "pdf": "fb8110e17c769b20674787e35b227aa179e1fa408fc3594ec00ff4088148adad",
+        "png": "c944fa432d88069940ff2f0cd36fdb10b421c7eb5520b6c07f1525768ded9580",
+        "svg": "1b09b959a2f6d0680ea8d68b8ef8fa457413a4900660e1062b19e027ac03c685",
+        "pdf": "8272ddbe1dff701aaca4edd19c6a6e818bb59f05441c2ea6b25b46d6fc8d1d7f",
         "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
         "spec": "3b289c3194da07b9bef76d37b94fe971440e600c373eae8f7f70c74f71086a4e"
       },
       "visual_review": {
         "id": "bulk.gene_support",
-        "png_sha256": "b9a1bd94520e4340f2e766f8b3fd21010a5a53c7f5c0f08c550c536576f3fbeb",
+        "png_sha256": "c944fa432d88069940ff2f0cd36fdb10b421c7eb5520b6c07f1525768ded9580",
         "decision": "screen_reviewed",
         "checks": [
           "scientific display meaning and scope",
@@ -907,21 +913,24 @@
         "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false
+        "scientific_acceptance": false,
+        "source_figure_id": "bulk_gene_support"
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 325.2340771724834,
+        "native_width_mm": 239.56376763673558,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 39,
-        "smallest_pt": 10.0450728546117,
-        "p10_pt": 10.0450728546117,
+        "essential_text_count": 32,
+        "smallest_pt": 13.637287609176115,
+        "p10_pt": 13.637287609176115,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.9.2",
+      "previous_png_sha256": "b9a1bd94520e4340f2e766f8b3fd21010a5a53c7f5c0f08c550c536576f3fbeb"
     },
     {
       "id": "bulk.gsea_multitrack",
@@ -2340,15 +2349,15 @@
         "preview": "single_cell.annotation/preview.jpg"
       },
       "sha256": {
-        "png": "8dd93fe9f9616ef27e0a96bcf5b0861de2c883e3b7d7e897789dcfcdb27ac9b4",
-        "svg": "be7edcc7ca451c80515b22b06fc7072df8e0580993473ee3065e772f4f47c8d1",
-        "pdf": "f3eae46c847a90a77bc5ed53683d7f6e61d199953ae66b6598d4e5548224cd5a",
+        "png": "92aa6ad4acfe67798c40d4145a8f95e6c492d63de0b1b2f428c944b95b302327",
+        "svg": "3a50ad3224c8fbe4243c939140b7c2753c66a1b1ea5aecef939da22cb9d35bcb",
+        "pdf": "215cf3a77c3604401d3298c65c8b1591d782d6a249cecc0dcd2e7cba23e91f20",
         "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
         "spec": "ce8f9526c8372be646ef500ba5fdf252381a0e9c1ce831ae1b083d78c1b9e62a"
       },
       "visual_review": {
         "id": "single_cell.annotation",
-        "png_sha256": "8dd93fe9f9616ef27e0a96bcf5b0861de2c883e3b7d7e897789dcfcdb27ac9b4",
+        "png_sha256": "92aa6ad4acfe67798c40d4145a8f95e6c492d63de0b1b2f428c944b95b302327",
         "decision": "screen_reviewed",
         "checks": [
           "scientific display meaning and scope",
@@ -2361,13 +2370,14 @@
         "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false
+        "scientific_acceptance": false,
+        "source_figure_id": "single_cell_annotation"
       },
       "readability": {
         "target_width_mm": 240,
         "native_width_mm": 255.27,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 45,
+        "essential_text_count": 50,
         "smallest_pt": 7.5214478787166525,
         "p10_pt": 7.5214478787166525,
         "below_threshold": [],
@@ -2375,7 +2385,9 @@
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.9.2",
+      "previous_png_sha256": "8dd93fe9f9616ef27e0a96bcf5b0861de2c883e3b7d7e897789dcfcdb27ac9b4"
     },
     {
       "id": "single_cell.subcluster",
@@ -2808,15 +2820,15 @@
         "preview": "single_cell.pathways/preview.jpg"
       },
       "sha256": {
-        "png": "fe9dae63bffd0a1a830d35278c300c86bb1730004e65bc3138c4cf56a0019d6e",
-        "svg": "b7dfdcbb2e384422dd9ab31ed166f5c27f02f5e25b9d6bdf2caa99c9b2eb6e2d",
-        "pdf": "ddac5c658cd341ccce302b9678cde2ffc08807c0a85f2f7c4b4d8464da93bf5f",
+        "png": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
+        "svg": "9307ef1bcecb5da53c36aa26397949d500fb22c55ee0ca4cfdc92a069cb16fd2",
+        "pdf": "5ec5855f3ae9002883afcc498311318b164f68b21175181c874166281d7a5310",
         "tsv": "727f92097cf6e98e1ef6f95e42f7d06e1be3dce83a87689065c5b539696ba544",
         "spec": "eae2d37e2df6f6afc109f1a0f24cca667862021843cd979fe53e54397458ecb5"
       },
       "visual_review": {
         "id": "single_cell.pathways",
-        "png_sha256": "fe9dae63bffd0a1a830d35278c300c86bb1730004e65bc3138c4cf56a0019d6e",
+        "png_sha256": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
         "decision": "screen_reviewed",
         "checks": [
           "scientific display meaning and scope",
@@ -2829,21 +2841,24 @@
         "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false
+        "scientific_acceptance": false,
+        "source_figure_id": "single_cell_pathways"
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 405.92790619542114,
+        "native_width_mm": 238.01514002103897,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 42,
-        "smallest_pt": 8.048227160877198,
-        "p10_pt": 8.048227160877198,
+        "essential_text_count": 39,
+        "smallest_pt": 13.726017595818563,
+        "p10_pt": 13.726017595818563,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.9.2",
+      "previous_png_sha256": "fe9dae63bffd0a1a830d35278c300c86bb1730004e65bc3138c4cf56a0019d6e"
     },
     {
       "id": "single_cell.gene_support",
@@ -2875,15 +2890,15 @@
         "preview": "single_cell.gene_support/preview.jpg"
       },
       "sha256": {
-        "png": "74322938040f57752737c1a30b442979581b85acb250f5b24b777b0583b83eb6",
-        "svg": "f65d7783f823b4879d22ded81c54960d681bcba34a05d13f822016b46447fc66",
-        "pdf": "970f054a1dc741b0e618d7f4b101ded6cb9ae9d7ff86024e8a11dd76fee654a5",
+        "png": "04716260f96739f2c14a22e2986546d9b8600ac48eadc56e44d52544bab6ad74",
+        "svg": "dfe4a88bd4e4e4d31be8315dc897c288f9882a3c3d9bd9a645fbec9abc7ee263",
+        "pdf": "96c1d4e92c8210e7aa3d6ef74b4bd05b485329da9e308d885f6f850b56e05656",
         "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
         "spec": "caec4faae68e74d03f429fbdd5024c546d7cf81ddfacc8299af9180b69deef42"
       },
       "visual_review": {
         "id": "single_cell.gene_support",
-        "png_sha256": "74322938040f57752737c1a30b442979581b85acb250f5b24b777b0583b83eb6",
+        "png_sha256": "04716260f96739f2c14a22e2986546d9b8600ac48eadc56e44d52544bab6ad74",
         "decision": "screen_reviewed",
         "checks": [
           "scientific display meaning and scope",
@@ -2896,21 +2911,24 @@
         "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
         "independent_second_review": false,
         "calibrated_paper_proof": false,
-        "scientific_acceptance": false
+        "scientific_acceptance": false,
+        "source_figure_id": "single_cell_gene_support"
       },
       "readability": {
         "target_width_mm": 297,
-        "native_width_mm": 325.2340771724834,
+        "native_width_mm": 239.56376763673558,
         "minimum_required_pt": 7.5,
-        "essential_text_count": 39,
-        "smallest_pt": 10.0450728546117,
-        "p10_pt": 10.0450728546117,
+        "essential_text_count": 32,
+        "smallest_pt": 13.637287609176115,
+        "p10_pt": 13.637287609176115,
         "below_threshold": [],
         "state": "MEASUREMENT_PASS",
         "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
         "visual_acceptance": false
       },
-      "scientific_acceptance": false
+      "scientific_acceptance": false,
+      "display_revision": "0.9.2",
+      "previous_png_sha256": "74322938040f57752737c1a30b442979581b85acb250f5b24b777b0583b83eb6"
     },
     {
       "id": "single_cell.states",
@@ -3852,5 +3870,6 @@
   ],
   "chapters": 58,
   "analysis_performed": false,
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.9.2"
 }

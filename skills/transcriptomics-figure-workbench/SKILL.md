@@ -5,6 +5,18 @@ description: Design, render and improve publication figures from frozen scientif
 
 # Scientific Figure Workbench
 
+## Current source-aware selection
+
+For redesigns or journal-quality examples, read
+[the per-form decisions](references/journal-form-review-v092.md) and
+[the recent-figure design review](references/journal-design-v092.md).
+All 90 consolidated forms were searched, with 2025–2026 preferred. Search hits
+are unverified candidates; only the separately identified eight original
+figures were visually reviewed. Do not turn a candidate into a recommendation
+or claim all forms received new implementations. Select by scientific channels,
+readability and output purpose. Compare [the actual 27 revised exports](assets/editorial-gallery/index.html).
+Publication prestige and extra panels do not establish better design.
+
 ## Publication design takes precedence over a catalogue of panels
 
 User review rejected the crowded integrated study pages. Historical screen
@@ -25,7 +37,7 @@ page per explicitly selected identity, with its own several declared markers,
 a location highlight, unchanged full-cell feature maps, and all-identity
 specificity means/fractions. The focus must match every marker assignment.
 Marker order, count, common expression limits, physical width and rows/columns
-are explicit. The example contains 2/4/8-marker layout variants; these are
+are explicit. The examples contain 2/4/8/12-marker layout variants; these are
 extensions of the same template. Never substitute one representative marker
 for each subgroup's multi-marker evidence. Main annotation atlas and donor
 response have separate pages; preserve their source tables and context.
@@ -67,9 +79,22 @@ Compare compatible existing extensions before choosing. For bulk PCA prefer
 supplied group-dispersion ellipses, complete marginal proportions and an
 explained-variance companion. For volcano/MA prefer exact stacked marginal
 counts and a clear direction/count/proportion key. For single-cell annotation,
-prefer an integrated subpopulation/marker atlas: explicit subgroup labels,
-annotation-block dot matrix, representative-gene maps with the same coordinates
-and common expression scale, plus donor composition when relevant.
+prefer one identity atlas with its ordered, assignment-labelled specificity
+matrix. Use separate per-identity multi-marker evidence pages, followed by
+donor composition and donor response companions when relevant. Do not pack
+these distinct questions into a narrow representative-map strip on the atlas.
+
+For subgroup pages the automatic evidence composition first shows location
+and cross-identity specificity, then an uninterrupted ordered block of feature
+maps. `composition: evidence` keeps that reading sequence and allows `ncols`
+to control the marker block. `composition: grid` retains exact total-panel
+rows/columns; explicit total `nrows` requests select this mode under `auto`.
+The one-column edition is a complete reading view, not a manuscript default.
+For linked enrichment prefer shared term rows and a single label lane across
+summary and membership; retain repeated labels in the stacked reading edition.
+Pale membership cells mean explicitly absent edges, not missing tests. Keep
+gene effects bound to the named support contrast; never infer leading edges
+from a generic gene-membership matrix.
 
 Use these richer defaults when their channels exist. A simple fallback must
 state the missing channels or the user's explicit simplicity request. Unknown

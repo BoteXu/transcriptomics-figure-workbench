@@ -1,0 +1,1880 @@
+{
+  "version": "0.9.2",
+  "records": [
+    {
+      "id": "CellTypes",
+      "title": "Cell identities and marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "CellTypes/example.png",
+        "svg": "CellTypes/example.svg",
+        "pdf": "CellTypes/example.pdf",
+        "tsv": "CellTypes/example.tsv",
+        "spec": "CellTypes/input/example.spec.json",
+        "preview": "CellTypes/preview.jpg"
+      },
+      "sha256": {
+        "png": "3b3b783f820619fd82cd20891c2f992a5821df03b01c90223f054c80f2bbe226",
+        "svg": "85378f8492dc418666e7fd20d4e3912f84343d832ec1b1c3877bcda54cbc1a31",
+        "pdf": "22ed77b9e7f10eaa3f0eec2f774b335f51c7f8c5a2c52ac467767e2c0971f710",
+        "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
+        "spec": "7d3a5f8e01f60faeee0d4a41218d4ed10227a18757c29281a85c9772e2aaf170"
+      },
+      "visual_review": {
+        "id": "CellTypes",
+        "png_sha256": "3b3b783f820619fd82cd20891c2f992a5821df03b01c90223f054c80f2bbe226",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 255.27,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 50,
+        "smallest_pt": 7.5214478787166525,
+        "p10_pt": 7.5214478787166525,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "group_order",
+        "marker_order",
+        "mode",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "CellTypes/before.png",
+      "before_sha256": "812a64646cd53bc968449e96474cc70cd5bc5e7005978bfbb9cec1cc3e82116d"
+    },
+    {
+      "id": "DonorPathways",
+      "title": "Enrichment themes · ratios, FDR and selected gene support",
+      "assay": "single_cell",
+      "assets": {
+        "png": "DonorPathways/example.png",
+        "svg": "DonorPathways/example.svg",
+        "pdf": "DonorPathways/example.pdf",
+        "tsv": "DonorPathways/example.tsv",
+        "spec": "DonorPathways/input/example.spec.json",
+        "preview": "DonorPathways/preview.jpg"
+      },
+      "sha256": {
+        "png": "caaf7bc861093be31244b15f6c323ca9fa0510116731196d05f4fb3c9c8e6fb0",
+        "svg": "f373e97ea7ac6929a1a55dde363c56c1f9effb813c6496f65bc8ecb1a7f4b098",
+        "pdf": "071d77aa31762c2d80fd4c06e285cd7542fcc11284c133d9cee35190d43bbe67",
+        "tsv": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
+        "spec": "cfa06e178e50b810624f7a744825ff007da042297eeb45b3f1b23abb78fe71a2"
+      },
+      "visual_review": {
+        "id": "DonorPathways",
+        "png_sha256": "caaf7bc861093be31244b15f6c323ca9fa0510116731196d05f4fb3c9c8e6fb0",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 224.8618784722222,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 48,
+        "smallest_pt": 14.52891891767942,
+        "p10_pt": 14.52891891767942,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "DonorPathways/before.png",
+      "before_sha256": "fb04b2767045410f8ab91e45b3d019a60e6b6e3495fb1db87b20c9448d5e829e"
+    },
+    {
+      "id": "Pathways",
+      "title": "Enrichment themes · ratios, FDR and selected gene support",
+      "assay": "bulk",
+      "assets": {
+        "png": "Pathways/example.png",
+        "svg": "Pathways/example.svg",
+        "pdf": "Pathways/example.pdf",
+        "tsv": "Pathways/example.tsv",
+        "spec": "Pathways/input/example.spec.json",
+        "preview": "Pathways/preview.jpg"
+      },
+      "sha256": {
+        "png": "2a2d323ca19179c0f0f52c08e719a51d921476f774c7316cfb047b93b5e12a4e",
+        "svg": "8cbc0121d173b4c613dafbd415007b3afdb95978640fc4e24c01663934d8e263",
+        "pdf": "c7f4dadb6e5bc75e1f8c7543df68ee2f543b2064df24a7b7e354851bab2e898d",
+        "tsv": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
+        "spec": "d994f11563801e885440c73736c3436cc80495ddda7b39419018dc703c674109"
+      },
+      "visual_review": {
+        "id": "Pathways",
+        "png_sha256": "2a2d323ca19179c0f0f52c08e719a51d921476f774c7316cfb047b93b5e12a4e",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 224.8618784722222,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 48,
+        "smallest_pt": 14.52891891767942,
+        "p10_pt": 14.52891891767942,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Pathways/before.png",
+      "before_sha256": "d878ac7b221eb1b5db4bae530d4c4824763a17b73fbbea8e0a63ecb7bb5cb258"
+    },
+    {
+      "id": "SingleCellMain",
+      "title": "Single-cell atlas · annotation evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "SingleCellMain/example.png",
+        "svg": "SingleCellMain/example.svg",
+        "pdf": "SingleCellMain/example.pdf",
+        "tsv": "SingleCellMain/example.tsv",
+        "spec": "SingleCellMain/input/example.spec.json",
+        "preview": "SingleCellMain/preview.jpg"
+      },
+      "sha256": {
+        "png": "4c88aa9347f74ff03ab394383b5aad7fbeed1d395eb87911a6b6b53155a86f81",
+        "svg": "69f50c6bdfaaa192727f83c04c7f869a65d0afa8b500d8596de87c792397be1e",
+        "pdf": "7e391b8e5b55091f757c6d6411513fe1b294e5711314b1d6d7b3e9f766b234cf",
+        "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
+        "spec": "32a90e2d8c3693702ece503a98c6137685cd5e3123e83da57c115c7659d7010d"
+      },
+      "visual_review": {
+        "id": "SingleCellMain",
+        "png_sha256": "4c88aa9347f74ff03ab394383b5aad7fbeed1d395eb87911a6b6b53155a86f81",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 255.27,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 50,
+        "smallest_pt": 8.461628863556234,
+        "p10_pt": 8.461628863556234,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "group_order",
+        "marker_order",
+        "mode",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "SingleCellMain/before.png",
+      "before_sha256": "354f8fbb95ac1731f9adbc2dc610830db6877b12b99cab6df77d3e5a7c97ad96"
+    },
+    {
+      "id": "bulk_gene_support",
+      "title": "Pathway membership and signed gene evidence",
+      "assay": "bulk",
+      "assets": {
+        "png": "bulk_gene_support/example.png",
+        "svg": "bulk_gene_support/example.svg",
+        "pdf": "bulk_gene_support/example.pdf",
+        "tsv": "bulk_gene_support/example.tsv",
+        "spec": "bulk_gene_support/input/example.spec.json",
+        "preview": "bulk_gene_support/preview.jpg"
+      },
+      "sha256": {
+        "png": "c944fa432d88069940ff2f0cd36fdb10b421c7eb5520b6c07f1525768ded9580",
+        "svg": "1b09b959a2f6d0680ea8d68b8ef8fa457413a4900660e1062b19e027ac03c685",
+        "pdf": "8272ddbe1dff701aaca4edd19c6a6e818bb59f05441c2ea6b25b46d6fc8d1d7f",
+        "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
+        "spec": "3b289c3194da07b9bef76d37b94fe971440e600c373eae8f7f70c74f71086a4e"
+      },
+      "visual_review": {
+        "id": "bulk_gene_support",
+        "png_sha256": "c944fa432d88069940ff2f0cd36fdb10b421c7eb5520b6c07f1525768ded9580",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 239.56376763673558,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 32,
+        "smallest_pt": 13.637287609176115,
+        "p10_pt": 13.637287609176115,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "bulk_gene_support/before.png",
+      "before_sha256": "b9a1bd94520e4340f2e766f8b3fd21010a5a53c7f5c0f08c550c536576f3fbeb"
+    },
+    {
+      "id": "bulk_ora",
+      "title": "ORA themes, ratios and supporting genes",
+      "assay": "bulk",
+      "assets": {
+        "png": "bulk_ora/example.png",
+        "svg": "bulk_ora/example.svg",
+        "pdf": "bulk_ora/example.pdf",
+        "tsv": "bulk_ora/example.tsv",
+        "spec": "bulk_ora/input/example.spec.json",
+        "preview": "bulk_ora/preview.jpg"
+      },
+      "sha256": {
+        "png": "feac49ae01b568492d23961fdb180a157fabb42188b75a4fd402ae08b0bba25a",
+        "svg": "e0ece54d5c5439ededc3dd5f2fdef8b1751ad10910a6a26f6a17c7f692c8beb1",
+        "pdf": "0aac06325910fd2d20e560a1a96187ef2476d244e3135ba0447effd72b2b3032",
+        "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
+        "spec": "cbcdf115109f929570d424a8dd15c1c230e51b38d3dfc396ca3f12bf02404c39"
+      },
+      "visual_review": {
+        "id": "bulk_ora",
+        "png_sha256": "feac49ae01b568492d23961fdb180a157fabb42188b75a4fd402ae08b0bba25a",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 239.56376763673558,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 45,
+        "smallest_pt": 13.637287609176115,
+        "p10_pt": 13.637287609176115,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "bulk_ora/before.png",
+      "before_sha256": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd"
+    },
+    {
+      "id": "bulk_pathway_contrasts",
+      "title": "Pathway enrichment across contrasts",
+      "assay": "bulk",
+      "assets": {
+        "png": "bulk_pathway_contrasts/example.png",
+        "svg": "bulk_pathway_contrasts/example.svg",
+        "pdf": "bulk_pathway_contrasts/example.pdf",
+        "tsv": "bulk_pathway_contrasts/example.tsv",
+        "spec": "bulk_pathway_contrasts/input/example.spec.json",
+        "preview": "bulk_pathway_contrasts/preview.jpg"
+      },
+      "sha256": {
+        "png": "e355fa76787a0ee57fa64614f353b309d2a046c0a019b9c85b01900e93e2f530",
+        "svg": "64f3e80481c904aa8bb9bf185c2beacde5cc90e4c0c0d12d5069502a127b93ea",
+        "pdf": "522526faf9edda9ae563582ff78709f375807e81d21c3b128e4e63ef6a7221f4",
+        "tsv": "727f92097cf6e98e1ef6f95e42f7d06e1be3dce83a87689065c5b539696ba544",
+        "spec": "8020845f05a3188375855598ca356c3cda95a6abfb05e93b3625ab3fea72b277"
+      },
+      "visual_review": {
+        "id": "bulk_pathway_contrasts",
+        "png_sha256": "e355fa76787a0ee57fa64614f353b309d2a046c0a019b9c85b01900e93e2f530",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 238.01514002103897,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 39,
+        "smallest_pt": 13.726017595818563,
+        "p10_pt": 13.726017595818563,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "bulk_pathway_contrasts/before.png",
+      "before_sha256": "4bdffffd475019b34fdf2ca9059c62103aecf6a6cddfd5e96496d9bce8ca53a9"
+    },
+    {
+      "id": "single_cell_annotation",
+      "title": "Cell identities and marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "single_cell_annotation/example.png",
+        "svg": "single_cell_annotation/example.svg",
+        "pdf": "single_cell_annotation/example.pdf",
+        "tsv": "single_cell_annotation/example.tsv",
+        "spec": "single_cell_annotation/input/example.spec.json",
+        "preview": "single_cell_annotation/preview.jpg"
+      },
+      "sha256": {
+        "png": "92aa6ad4acfe67798c40d4145a8f95e6c492d63de0b1b2f428c944b95b302327",
+        "svg": "3a50ad3224c8fbe4243c939140b7c2753c66a1b1ea5aecef939da22cb9d35bcb",
+        "pdf": "215cf3a77c3604401d3298c65c8b1591d782d6a249cecc0dcd2e7cba23e91f20",
+        "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
+        "spec": "ce8f9526c8372be646ef500ba5fdf252381a0e9c1ce831ae1b083d78c1b9e62a"
+      },
+      "visual_review": {
+        "id": "single_cell_annotation",
+        "png_sha256": "92aa6ad4acfe67798c40d4145a8f95e6c492d63de0b1b2f428c944b95b302327",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 255.27,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 50,
+        "smallest_pt": 7.5214478787166525,
+        "p10_pt": 7.5214478787166525,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "group_order",
+        "marker_order",
+        "mode",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "single_cell_annotation/before.png",
+      "before_sha256": "8dd93fe9f9616ef27e0a96bcf5b0861de2c883e3b7d7e897789dcfcdb27ac9b4"
+    },
+    {
+      "id": "single_cell_gene_support",
+      "title": "Celltype pathway membership and gene evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "single_cell_gene_support/example.png",
+        "svg": "single_cell_gene_support/example.svg",
+        "pdf": "single_cell_gene_support/example.pdf",
+        "tsv": "single_cell_gene_support/example.tsv",
+        "spec": "single_cell_gene_support/input/example.spec.json",
+        "preview": "single_cell_gene_support/preview.jpg"
+      },
+      "sha256": {
+        "png": "04716260f96739f2c14a22e2986546d9b8600ac48eadc56e44d52544bab6ad74",
+        "svg": "dfe4a88bd4e4e4d31be8315dc897c288f9882a3c3d9bd9a645fbec9abc7ee263",
+        "pdf": "96c1d4e92c8210e7aa3d6ef74b4bd05b485329da9e308d885f6f850b56e05656",
+        "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
+        "spec": "caec4faae68e74d03f429fbdd5024c546d7cf81ddfacc8299af9180b69deef42"
+      },
+      "visual_review": {
+        "id": "single_cell_gene_support",
+        "png_sha256": "04716260f96739f2c14a22e2986546d9b8600ac48eadc56e44d52544bab6ad74",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 239.56376763673558,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 32,
+        "smallest_pt": 13.637287609176115,
+        "p10_pt": 13.637287609176115,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "single_cell_gene_support/before.png",
+      "before_sha256": "74322938040f57752737c1a30b442979581b85acb250f5b24b777b0583b83eb6"
+    },
+    {
+      "id": "single_cell_pathways",
+      "title": "Celltype pathway responses",
+      "assay": "single_cell",
+      "assets": {
+        "png": "single_cell_pathways/example.png",
+        "svg": "single_cell_pathways/example.svg",
+        "pdf": "single_cell_pathways/example.pdf",
+        "tsv": "single_cell_pathways/example.tsv",
+        "spec": "single_cell_pathways/input/example.spec.json",
+        "preview": "single_cell_pathways/preview.jpg"
+      },
+      "sha256": {
+        "png": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
+        "svg": "9307ef1bcecb5da53c36aa26397949d500fb22c55ee0ca4cfdc92a069cb16fd2",
+        "pdf": "5ec5855f3ae9002883afcc498311318b164f68b21175181c874166281d7a5310",
+        "tsv": "727f92097cf6e98e1ef6f95e42f7d06e1be3dce83a87689065c5b539696ba544",
+        "spec": "eae2d37e2df6f6afc109f1a0f24cca667862021843cd979fe53e54397458ecb5"
+      },
+      "visual_review": {
+        "id": "single_cell_pathways",
+        "png_sha256": "6ad8cdcf7952be89e0b9b83cf1283b738e1a342a7b9a7979aa9451c3bf2d8ebc",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 238.01514002103897,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 39,
+        "smallest_pt": 13.726017595818563,
+        "p10_pt": 13.726017595818563,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "single_cell_pathways/before.png",
+      "before_sha256": "fe9dae63bffd0a1a830d35278c300c86bb1730004e65bc3138c4cf56a0019d6e"
+    },
+    {
+      "id": "Layout_02Markers_1Columns",
+      "title": "B cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Layout_02Markers_1Columns/example.png",
+        "svg": "Layout_02Markers_1Columns/example.svg",
+        "pdf": "Layout_02Markers_1Columns/example.pdf",
+        "tsv": "Layout_02Markers_1Columns/example.tsv",
+        "spec": "Layout_02Markers_1Columns/input/example.spec.json",
+        "preview": "Layout_02Markers_1Columns/preview.jpg"
+      },
+      "sha256": {
+        "png": "056d1c545bc3c466902dd525d7ee4f36df0fe1cdd413334ffa9a38ff8a0365c4",
+        "svg": "a062ea071d7ec698c3a8b9bb9cf3e82576e09bb1f2000051302efd97d3780fec",
+        "pdf": "1c46dbf73996a4864975dafa03b37f5dc47742463e100fa95441e25ab3a84b18",
+        "tsv": "754119bea420542aac78fd809aba47644164beecfa9c86303466776e6e905bd3",
+        "spec": "dc89355511bc5656d2c8a23054b58a801fede6c9ae1001571a345ceb22afbe68"
+      },
+      "visual_review": {
+        "id": "Layout_02Markers_1Columns",
+        "png_sha256": "056d1c545bc3c466902dd525d7ee4f36df0fe1cdd413334ffa9a38ff8a0365c4",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 110,
+        "native_width_mm": 112.60313888888889,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 24,
+        "smallest_pt": 9.280380727496002,
+        "p10_pt": 9.280380727496002,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Layout_02Markers_1Columns/before.png",
+      "before_sha256": "c70b16861d42058727566cd4f4da0eb7d123a3845c351aecaf5aabcd95d86b67"
+    },
+    {
+      "id": "Layout_04Markers_2Columns",
+      "title": "B cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Layout_04Markers_2Columns/example.png",
+        "svg": "Layout_04Markers_2Columns/example.svg",
+        "pdf": "Layout_04Markers_2Columns/example.pdf",
+        "tsv": "Layout_04Markers_2Columns/example.tsv",
+        "spec": "Layout_04Markers_2Columns/input/example.spec.json",
+        "preview": "Layout_04Markers_2Columns/preview.jpg"
+      },
+      "sha256": {
+        "png": "c380002076714a1dad1c30ed13292e9baa7788abb277dca144f107aa44493ef5",
+        "svg": "ea9262ec0ce2ec8434cde231206f1aedb3aa6d4fc96fcef7391eeb01c771cc0a",
+        "pdf": "fe4a10c7c2cf3e31922a800afe74aecf683b7149b54675a95036fa80d3c57b7e",
+        "tsv": "b6c221c1463bb0368a0f36afb5b753db0785684b6443d6945244d579e2d64a4d",
+        "spec": "02f5cd70ae9a5ce7af736c270d55d0afc16753e9b986b5eca1550bbe68448972"
+      },
+      "visual_review": {
+        "id": "Layout_04Markers_2Columns",
+        "png_sha256": "c380002076714a1dad1c30ed13292e9baa7788abb277dca144f107aa44493ef5",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 177.79999999999998,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 26,
+        "smallest_pt": 12.82339707536558,
+        "p10_pt": 12.82339707536558,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Layout_04Markers_2Columns/before.png",
+      "before_sha256": "3e08b29405ea0c47ea2d7dc6aa28097152c104d60952542cccbc03da338ecedb"
+    },
+    {
+      "id": "Layout_08Markers_3Columns",
+      "title": "B cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Layout_08Markers_3Columns/example.png",
+        "svg": "Layout_08Markers_3Columns/example.svg",
+        "pdf": "Layout_08Markers_3Columns/example.pdf",
+        "tsv": "Layout_08Markers_3Columns/example.tsv",
+        "spec": "Layout_08Markers_3Columns/input/example.spec.json",
+        "preview": "Layout_08Markers_3Columns/preview.jpg"
+      },
+      "sha256": {
+        "png": "66407805bf10b00e1e85729ad02b1949670af839b674a7b62258d27495ba3fd4",
+        "svg": "bec35ca36fae14cfc2eaf4086e386aa6dd844625db149057e1a4b3949eb58908",
+        "pdf": "9d90f31f3cf93b80406d559a9a520e0972313bcf2d4045e4a2ec77759e144e54",
+        "tsv": "3a55ce14b97ec130a491687e2f4fe2c47108107f064aa984dd9037652981f5fd",
+        "spec": "d0622730f4d927b01453d78429ad0daeaf91f6e22e94d52e722d3a40d361cf4e"
+      },
+      "visual_review": {
+        "id": "Layout_08Markers_3Columns",
+        "png_sha256": "66407805bf10b00e1e85729ad02b1949670af839b674a7b62258d27495ba3fd4",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 260,
+        "native_width_mm": 260.34999999999997,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 36,
+        "smallest_pt": 9.487228730555023,
+        "p10_pt": 9.487228730555023,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Layout_08Markers_3Columns/before.png",
+      "before_sha256": "fad6cf3aec02a8a0145082c985f22a1f641f7c24e21847077f9cdbe300c7f8c4"
+    },
+    {
+      "id": "Subgroup_01",
+      "title": "B cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Subgroup_01/example.png",
+        "svg": "Subgroup_01/example.svg",
+        "pdf": "Subgroup_01/example.pdf",
+        "tsv": "Subgroup_01/example.tsv",
+        "spec": "Subgroup_01/input/example.spec.json",
+        "preview": "Subgroup_01/preview.jpg"
+      },
+      "sha256": {
+        "png": "c33d0a51a70e26c6495b75a6df23d9777a2c4e5eccd6b2be701b42ec4ca1c03d",
+        "svg": "f0a2eada0d1a8700e072c7dc7e9bc43ac7bcd08a1780a8d0416dedaea2485b88",
+        "pdf": "949ee2a35a2903e3fac15b2da29e064a8936aa724ab1056fb237679d040f6c8a",
+        "tsv": "417aeac7c8db78329eea763a88de3bb1956cd49ec68189341fac830a23359e7d",
+        "spec": "f4ecc01d06ba4a1e52788e3407e226b5077b6d8225c9b66ff3af0da7503e4156"
+      },
+      "visual_review": {
+        "id": "Subgroup_01",
+        "png_sha256": "c33d0a51a70e26c6495b75a6df23d9777a2c4e5eccd6b2be701b42ec4ca1c03d",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 287.02,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 28,
+        "smallest_pt": 7.943697303323811,
+        "p10_pt": 7.943697303323811,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Subgroup_01/before.png",
+      "before_sha256": "cee0a93d1361e1b7eba9c3fdfe874a985432155d8206eda63d9fcbf93f96de43"
+    },
+    {
+      "id": "Subgroup_02",
+      "title": "T cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Subgroup_02/example.png",
+        "svg": "Subgroup_02/example.svg",
+        "pdf": "Subgroup_02/example.pdf",
+        "tsv": "Subgroup_02/example.tsv",
+        "spec": "Subgroup_02/input/example.spec.json",
+        "preview": "Subgroup_02/preview.jpg"
+      },
+      "sha256": {
+        "png": "524b1c68bb738b2cbc71687f0387d0edd21f4593da13eca3a905eb3c1ceb18c6",
+        "svg": "7e4cc27bfd0d7e8b2fa915d1567220fc8768535f3e2c9f6b14104a6d4b2136b4",
+        "pdf": "f3836bba7c149e3fba392f1a11e57df583941a3e01b1b566c46d9707a81d3537",
+        "tsv": "2cdedda8993683c83fae4ee649e9ea0793574827c0dc4b1c57a652474b1f8d4c",
+        "spec": "06661cd29a103d90928d9342e03603a94f2680e78dcbb7857893e14441d1616c"
+      },
+      "visual_review": {
+        "id": "Subgroup_02",
+        "png_sha256": "524b1c68bb738b2cbc71687f0387d0edd21f4593da13eca3a905eb3c1ceb18c6",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 287.02,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 28,
+        "smallest_pt": 7.943697303323811,
+        "p10_pt": 7.943697303323811,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Subgroup_02/before.png",
+      "before_sha256": "a95ba82a9a8c293a70b88b3c08825c58d7e55a67b09632dececc07021a2d5a8f"
+    },
+    {
+      "id": "Subgroup_03",
+      "title": "Stromal · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Subgroup_03/example.png",
+        "svg": "Subgroup_03/example.svg",
+        "pdf": "Subgroup_03/example.pdf",
+        "tsv": "Subgroup_03/example.tsv",
+        "spec": "Subgroup_03/input/example.spec.json",
+        "preview": "Subgroup_03/preview.jpg"
+      },
+      "sha256": {
+        "png": "dab23cd6c3178ca6333a02540117b086018230f251fa641460146b6db59a6f23",
+        "svg": "01560284709ecea7a45ab44fd7b59dfdd63825e0c436f52c316ecfb5ab62f38c",
+        "pdf": "abec692690a921a46b27ec9f09d4768b403f3855c729c0db8c5bd640355187ef",
+        "tsv": "7a39c5133bf629dca6f8dbe450ef6740b461cccf83b085879e1e488eb41fbc76",
+        "spec": "33cdb7c42514d2aacddb59194e45bbc6211b262c83a573bb1513c92ee8cfa233"
+      },
+      "visual_review": {
+        "id": "Subgroup_03",
+        "png_sha256": "dab23cd6c3178ca6333a02540117b086018230f251fa641460146b6db59a6f23",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 287.02,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 28,
+        "smallest_pt": 7.943697303323811,
+        "p10_pt": 7.943697303323811,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Subgroup_03/before.png",
+      "before_sha256": "5aee5606d821adc77adac094c7d07c80af56b43baa4f84e28606aa1b51427f80"
+    },
+    {
+      "id": "Subgroup_04",
+      "title": "Endothelial · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Subgroup_04/example.png",
+        "svg": "Subgroup_04/example.svg",
+        "pdf": "Subgroup_04/example.pdf",
+        "tsv": "Subgroup_04/example.tsv",
+        "spec": "Subgroup_04/input/example.spec.json",
+        "preview": "Subgroup_04/preview.jpg"
+      },
+      "sha256": {
+        "png": "84f7ecb259f12dc894ccdd10d7b0006d162e96372404e25349a19c9583d6157b",
+        "svg": "d278288bf09abdc6b6e4ca85bdfc9fbe18e4543e823d99c256867b4ade18e95d",
+        "pdf": "c1aaa092b9c3aec3ea590c6b6bcaf801b7490583d0120d1af1fe55dfee2c98c1",
+        "tsv": "4c71aa68b01613626c486e0400b656dfb47e396e6bc09bcf440d67dab535301a",
+        "spec": "5a9501dec1daefd56838ec360ffbb2380cbf184bae0c9468b68743c9e2e42aa8"
+      },
+      "visual_review": {
+        "id": "Subgroup_04",
+        "png_sha256": "84f7ecb259f12dc894ccdd10d7b0006d162e96372404e25349a19c9583d6157b",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 287.02,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 28,
+        "smallest_pt": 7.943697303323811,
+        "p10_pt": 7.943697303323811,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Subgroup_04/before.png",
+      "before_sha256": "a6d09f1a6f927e7c70795709b7b9abf04ba594ef55413d866aaf24afdf3a02e4"
+    },
+    {
+      "id": "Subgroup_05",
+      "title": "Myeloid · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Subgroup_05/example.png",
+        "svg": "Subgroup_05/example.svg",
+        "pdf": "Subgroup_05/example.pdf",
+        "tsv": "Subgroup_05/example.tsv",
+        "spec": "Subgroup_05/input/example.spec.json",
+        "preview": "Subgroup_05/preview.jpg"
+      },
+      "sha256": {
+        "png": "b2be99b0ca7e1a1124f2b50c6d8f5aa786bed1c041d18b742547c2116a7a229a",
+        "svg": "229822c64e6912f6a216e2526c586b5d638c7fa5fc19f8f0adf94291ff060a21",
+        "pdf": "33484f1841d0df859961b344a4827f42ef35ccf10f127cbf51dce067230a58a5",
+        "tsv": "0243b546b1670c3ed9b7ee0e16b705955c6bce81f1ec93db2633d1b3d96e886c",
+        "spec": "3f7c92893225380a78b363564e2992fbac6f28f8ca62b1f41431e6890f1948ae"
+      },
+      "visual_review": {
+        "id": "Subgroup_05",
+        "png_sha256": "b2be99b0ca7e1a1124f2b50c6d8f5aa786bed1c041d18b742547c2116a7a229a",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 287.02,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 28,
+        "smallest_pt": 7.943697303323811,
+        "p10_pt": 7.943697303323811,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "Subgroup_05/before.png",
+      "before_sha256": "50a7aa6ee838ce8f9d6b91c0b15cc58bad7ea2f893292023f40bdef612591391"
+    },
+    {
+      "id": "bulk_gene_support_VerticalLarge",
+      "title": "Pathway membership and signed gene evidence",
+      "assay": "bulk",
+      "assets": {
+        "png": "bulk_gene_support_VerticalLarge/example.png",
+        "svg": "bulk_gene_support_VerticalLarge/example.svg",
+        "pdf": "bulk_gene_support_VerticalLarge/example.pdf",
+        "tsv": "bulk_gene_support_VerticalLarge/example.tsv",
+        "spec": "bulk_gene_support_VerticalLarge/input/example.spec.json",
+        "preview": "bulk_gene_support_VerticalLarge/preview.jpg"
+      },
+      "sha256": {
+        "png": "62092ff8d60c2a66526f121a10a30996e11cd61f58045ebb53b2a35ec613b966",
+        "svg": "55c922a54dbb7f4e3a65d58ed75b700c62ddbe9c23fc636354f4a9d9b0c99b6c",
+        "pdf": "f54ea7b8e3977bc7d35666d75bca219609d141431280be853c2fa471de06ccb2",
+        "tsv": "8a0ebb72c4aa5128cdf182fd2104760ceff8edab756a5b106cc80d15bd489f76",
+        "spec": "d9fd95b6bc7f44c1d2b6cbd079233db752e0d6dd3e44fa52c50b6f10cf884347"
+      },
+      "visual_review": {
+        "id": "bulk_gene_support_VerticalLarge",
+        "png_sha256": "62092ff8d60c2a66526f121a10a30996e11cd61f58045ebb53b2a35ec613b966",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 151.5392222222222,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 50,
+        "smallest_pt": 21.558775029273683,
+        "p10_pt": 21.558775029273683,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "bulk_gene_support_VerticalLarge/before.png",
+      "before_sha256": "9c8eaada01edbe8d5d683bcf50df6aad356deda386c3b38486b858ee6d591241"
+    },
+    {
+      "id": "bulk_ora_VerticalLarge",
+      "title": "ORA themes, ratios and supporting genes",
+      "assay": "bulk",
+      "assets": {
+        "png": "bulk_ora_VerticalLarge/example.png",
+        "svg": "bulk_ora_VerticalLarge/example.svg",
+        "pdf": "bulk_ora_VerticalLarge/example.pdf",
+        "tsv": "bulk_ora_VerticalLarge/example.tsv",
+        "spec": "bulk_ora_VerticalLarge/input/example.spec.json",
+        "preview": "bulk_ora_VerticalLarge/preview.jpg"
+      },
+      "sha256": {
+        "png": "535d33d90cec95f24bc3a01a64d9fbd431bb47012369c3924ab6774119ea066d",
+        "svg": "0d8127353e94a0e6f7b7f4da325528244c474a6a5084cd994e69bd548398710c",
+        "pdf": "40d817ffdcdb9cf9a8ff7bf16740d9f836c1fa4cae156804ca09241a19303b8e",
+        "tsv": "8a0ebb72c4aa5128cdf182fd2104760ceff8edab756a5b106cc80d15bd489f76",
+        "spec": "fdbbaf08ac6f9c90e11836a8c315548188fcc5095f81670b7bdf8b004a16d609"
+      },
+      "visual_review": {
+        "id": "bulk_ora_VerticalLarge",
+        "png_sha256": "535d33d90cec95f24bc3a01a64d9fbd431bb47012369c3924ab6774119ea066d",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 151.5392222222222,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 69,
+        "smallest_pt": 21.558775029273683,
+        "p10_pt": 21.558775029273683,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "bulk_ora_VerticalLarge/before.png",
+      "before_sha256": "cea3988365e5ff7502302b36e3ade994d62df3acc6a25d6fd2173b103be5bc07"
+    },
+    {
+      "id": "bulk_pathway_contrasts_VerticalLarge",
+      "title": "Pathway enrichment across contrasts",
+      "assay": "bulk",
+      "assets": {
+        "png": "bulk_pathway_contrasts_VerticalLarge/example.png",
+        "svg": "bulk_pathway_contrasts_VerticalLarge/example.svg",
+        "pdf": "bulk_pathway_contrasts_VerticalLarge/example.pdf",
+        "tsv": "bulk_pathway_contrasts_VerticalLarge/example.tsv",
+        "spec": "bulk_pathway_contrasts_VerticalLarge/input/example.spec.json",
+        "preview": "bulk_pathway_contrasts_VerticalLarge/preview.jpg"
+      },
+      "sha256": {
+        "png": "bdf1b2b1473b911cd1eada0d6044ce5f317a67dc14a58db57047a5887c7e0bdc",
+        "svg": "c747646b531d99539e77c57ddbc221b6dd078748b1788c07ab7c2eb66aeea75b",
+        "pdf": "0be0fc5a6a0d045449499dceebc0e43215c3a928614cdee6d9173365d16a2b11",
+        "tsv": "6cd3bde11d7c44d5ab8a39a6798071fed75d6431bfbedbd96d2686af75e6522b",
+        "spec": "e0fb9e7a3a5399c158a49b1bcde1783200e81a0d9fa0a9bc2e03ca4d776a8a84"
+      },
+      "visual_review": {
+        "id": "bulk_pathway_contrasts_VerticalLarge",
+        "png_sha256": "bdf1b2b1473b911cd1eada0d6044ce5f317a67dc14a58db57047a5887c7e0bdc",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 150.2692222222222,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 55,
+        "smallest_pt": 21.74097896885812,
+        "p10_pt": 21.74097896885812,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "bulk_pathway_contrasts_VerticalLarge/before.png",
+      "before_sha256": "bac43317a5aae35b9a1df7e8ee403774b742d0ab6a44bce53081e5dea4b7357f"
+    },
+    {
+      "id": "single_cell_gene_support_VerticalLarge",
+      "title": "Celltype pathway membership and gene evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "single_cell_gene_support_VerticalLarge/example.png",
+        "svg": "single_cell_gene_support_VerticalLarge/example.svg",
+        "pdf": "single_cell_gene_support_VerticalLarge/example.pdf",
+        "tsv": "single_cell_gene_support_VerticalLarge/example.tsv",
+        "spec": "single_cell_gene_support_VerticalLarge/input/example.spec.json",
+        "preview": "single_cell_gene_support_VerticalLarge/preview.jpg"
+      },
+      "sha256": {
+        "png": "9bdb50a5a9c442e7b137dc1ae85997e26261d4d054649a6223e8afbf83e8bbd1",
+        "svg": "10ce98434454106a49685839331a3d70912df49ceaa3931056249ff6fecb0a2a",
+        "pdf": "4242696f893829806ff26de333c54f3529857be560407509f98986be0ab00253",
+        "tsv": "8a0ebb72c4aa5128cdf182fd2104760ceff8edab756a5b106cc80d15bd489f76",
+        "spec": "75288c03ae7e490e24d3f7a9f1bc140d5cb1de6e476311f7202cf7988421f2a4"
+      },
+      "visual_review": {
+        "id": "single_cell_gene_support_VerticalLarge",
+        "png_sha256": "9bdb50a5a9c442e7b137dc1ae85997e26261d4d054649a6223e8afbf83e8bbd1",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 151.5392222222222,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 50,
+        "smallest_pt": 21.558775029273683,
+        "p10_pt": 21.558775029273683,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "single_cell_gene_support_VerticalLarge/before.png",
+      "before_sha256": "5ce70fc51e5f92014c04dc6657891cd3c2146e139e281ca2c3ec142769382b07"
+    },
+    {
+      "id": "single_cell_pathways_VerticalLarge",
+      "title": "Celltype pathway responses",
+      "assay": "single_cell",
+      "assets": {
+        "png": "single_cell_pathways_VerticalLarge/example.png",
+        "svg": "single_cell_pathways_VerticalLarge/example.svg",
+        "pdf": "single_cell_pathways_VerticalLarge/example.pdf",
+        "tsv": "single_cell_pathways_VerticalLarge/example.tsv",
+        "spec": "single_cell_pathways_VerticalLarge/input/example.spec.json",
+        "preview": "single_cell_pathways_VerticalLarge/preview.jpg"
+      },
+      "sha256": {
+        "png": "4be80f26282bfc3eb23d18dc30afe3d6e935df7f41235de07f844c29a060e0a5",
+        "svg": "b01002444212e89dac1c493d6daa4f8b341c87b27f70d7a7b7a38a069dbc4cda",
+        "pdf": "5409da12d3e64387907dd237be92bfce8be8d29460333d41ed01eea952d9bb86",
+        "tsv": "6cd3bde11d7c44d5ab8a39a6798071fed75d6431bfbedbd96d2686af75e6522b",
+        "spec": "00d5949a4e26feb4b81ced3891b20d036ab1fe1e8c2c5b0ae5710902a27b5c38"
+      },
+      "visual_review": {
+        "id": "single_cell_pathways_VerticalLarge",
+        "png_sha256": "4be80f26282bfc3eb23d18dc30afe3d6e935df7f41235de07f844c29a060e0a5",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 297,
+        "native_width_mm": 150.2692222222222,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 55,
+        "smallest_pt": 21.74097896885812,
+        "p10_pt": 21.74097896885812,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "background_definition",
+        "columns",
+        "gene_effect_limits",
+        "gene_set_version",
+        "mode",
+        "nes_limits",
+        "query_size",
+        "selection_definition",
+        "support_contrast",
+        "tested_size",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": true,
+      "before_png": "single_cell_pathways_VerticalLarge/before.png",
+      "before_sha256": "717b81d7fc6593211a13e8b8aaf4f22310bcaaec003f1fa033b179cc56b477e6"
+    },
+    {
+      "id": "Evidence_02Markers_autoColumns",
+      "title": "B cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Evidence_02Markers_autoColumns/example.png",
+        "svg": "Evidence_02Markers_autoColumns/example.svg",
+        "pdf": "Evidence_02Markers_autoColumns/example.pdf",
+        "tsv": "Evidence_02Markers_autoColumns/example.tsv",
+        "spec": "Evidence_02Markers_autoColumns/input/example.spec.json",
+        "preview": "Evidence_02Markers_autoColumns/preview.jpg"
+      },
+      "sha256": {
+        "png": "805580dbc6ea3c41518600bec1f8f4ecce39b1811ffbc6a22ad52722d41d1cd9",
+        "svg": "39832fe9536bf7053a4e9a9e0ec02f1a04d496b5d1c880dc4eb8a4fdd7535a86",
+        "pdf": "f1fc17ef5d6168e127c147ccdd8a74ea9a500fea292b07a84089b52458410148",
+        "tsv": "f718697618c4701c08d5d0922c8f9488c2b03fc3af84b320c41b446b1fbaebd1",
+        "spec": "28b10b8b409628afe13b57281009c03610c8c8d55b6f8b384e92e63cd5a194a0"
+      },
+      "visual_review": {
+        "id": "Evidence_02Markers_autoColumns",
+        "png_sha256": "805580dbc6ea3c41518600bec1f8f4ecce39b1811ffbc6a22ad52722d41d1cd9",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 236.22,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 24,
+        "smallest_pt": 9.652019304038607,
+        "p10_pt": 9.652019304038607,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "composition",
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": false
+    },
+    {
+      "id": "Evidence_08Markers_autoColumns",
+      "title": "B cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Evidence_08Markers_autoColumns/example.png",
+        "svg": "Evidence_08Markers_autoColumns/example.svg",
+        "pdf": "Evidence_08Markers_autoColumns/example.pdf",
+        "tsv": "Evidence_08Markers_autoColumns/example.tsv",
+        "spec": "Evidence_08Markers_autoColumns/input/example.spec.json",
+        "preview": "Evidence_08Markers_autoColumns/preview.jpg"
+      },
+      "sha256": {
+        "png": "37e3a2bde85a8e412b030a09e75d73fcb2ee7c4b41242559743cc7354223e90e",
+        "svg": "62180fb64811e5de56eab021d2da76f77ab51be73b17388e907c7a6d6b954061",
+        "pdf": "dd23a2c449a53c1a67eec0173199325e4443d47e0c33ad07e47c47e7a1becaa1",
+        "tsv": "db5b882bd40693ff22b4f323ebb74d9c689ad073881d5bee99f9cebf45d9bdfb",
+        "spec": "f18598d6377cef6ed511949bd1d8750ede5ec7055de886dbac04209d13b46c83"
+      },
+      "visual_review": {
+        "id": "Evidence_08Markers_autoColumns",
+        "png_sha256": "37e3a2bde85a8e412b030a09e75d73fcb2ee7c4b41242559743cc7354223e90e",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 260,
+        "native_width_mm": 287.02,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 36,
+        "smallest_pt": 8.605672078600795,
+        "p10_pt": 8.605672078600795,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "composition",
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": false
+    },
+    {
+      "id": "Evidence_12Markers_autoColumns",
+      "title": "B cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Evidence_12Markers_autoColumns/example.png",
+        "svg": "Evidence_12Markers_autoColumns/example.svg",
+        "pdf": "Evidence_12Markers_autoColumns/example.pdf",
+        "tsv": "Evidence_12Markers_autoColumns/example.tsv",
+        "spec": "Evidence_12Markers_autoColumns/input/example.spec.json",
+        "preview": "Evidence_12Markers_autoColumns/preview.jpg"
+      },
+      "sha256": {
+        "png": "19cf3f1602a2aee5633bd1344b254a13fb12e83a27ad897088ce3b828133fcb7",
+        "svg": "e002a505c7da4bc63fb34ac76671c8a0fb5560790ff9db5a6f8d4e91f681c43d",
+        "pdf": "e7c71688728a112d75717051b2fcb4b74da2d8c6364254d7bad06b274943602c",
+        "tsv": "a4b4793c652a59b1b7cba281c049017c79ede952247fae16008c1526333a0c6c",
+        "spec": "d8cb18fffbb025e095cdf2d1e09cb0578641260d58fbf12b597bb2c8eefcee02"
+      },
+      "visual_review": {
+        "id": "Evidence_12Markers_autoColumns",
+        "png_sha256": "19cf3f1602a2aee5633bd1344b254a13fb12e83a27ad897088ce3b828133fcb7",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 260,
+        "native_width_mm": 287.02,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 44,
+        "smallest_pt": 8.605672078600795,
+        "p10_pt": 8.605672078600795,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "composition",
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": false
+    },
+    {
+      "id": "Evidence_04Markers_2Columns",
+      "title": "B cells · marker evidence",
+      "assay": "single_cell",
+      "assets": {
+        "png": "Evidence_04Markers_2Columns/example.png",
+        "svg": "Evidence_04Markers_2Columns/example.svg",
+        "pdf": "Evidence_04Markers_2Columns/example.pdf",
+        "tsv": "Evidence_04Markers_2Columns/example.tsv",
+        "spec": "Evidence_04Markers_2Columns/input/example.spec.json",
+        "preview": "Evidence_04Markers_2Columns/preview.jpg"
+      },
+      "sha256": {
+        "png": "8f9696e36861c90000f27bb0e2129455a3479778bdc16ca043186382a7bea5d9",
+        "svg": "3465b0f6dd3bf5046201ed064f42f35ae47e9a7be0ad90fa5d8a5fcf8792363c",
+        "pdf": "fcfbd7b72b986b3099c7ff83168a8f8cf4a939f5f6397fa8128ed05a2e960ef7",
+        "tsv": "f08632b2a8580842c17332a087c2aa91607399672740f65551534cf127e78c47",
+        "spec": "bd4a6423d90b45cfa3f7074fe39d88095fd691f803c5cb24c26f03cdb700bfce"
+      },
+      "visual_review": {
+        "id": "Evidence_04Markers_2Columns",
+        "png_sha256": "8f9696e36861c90000f27bb0e2129455a3479778bdc16ca043186382a7bea5d9",
+        "decision": "screen_reviewed",
+        "checks": [
+          "scientific display meaning and scope",
+          "complete intended input channels",
+          "readable labels and guides",
+          "stable identity and declared continuous units",
+          "panel balance and hierarchy",
+          "no observed clipping or label collision"
+        ],
+        "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+        "independent_second_review": false,
+        "calibrated_paper_proof": false,
+        "scientific_acceptance": false
+      },
+      "readability": {
+        "target_width_mm": 240,
+        "native_width_mm": 236.22,
+        "minimum_required_pt": 7.5,
+        "essential_text_count": 28,
+        "smallest_pt": 9.652019304038607,
+        "p10_pt": 9.652019304038607,
+        "below_threshold": [],
+        "state": "MEASUREMENT_PASS",
+        "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+        "visual_acceptance": false
+      },
+      "scientific_acceptance": false,
+      "required_results": [
+        "composition",
+        "detection_definition",
+        "expression_label",
+        "expression_limits",
+        "focus_group",
+        "group_order",
+        "marker_order",
+        "mode",
+        "ncols",
+        "title"
+      ],
+      "sources": [
+        "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+        "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+      ],
+      "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+      "input_unchanged": false
+    }
+  ],
+  "analysis_performed": false,
+  "scientific_acceptance": false
+}

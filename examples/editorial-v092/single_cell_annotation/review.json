@@ -1,0 +1,67 @@
+{
+  "id": "single_cell_annotation",
+  "title": "Cell identities and marker evidence",
+  "assay": "single_cell",
+  "assets": {
+    "png": "single_cell_annotation/example.png",
+    "svg": "single_cell_annotation/example.svg",
+    "pdf": "single_cell_annotation/example.pdf",
+    "tsv": "single_cell_annotation/example.tsv",
+    "spec": "single_cell_annotation/input/example.spec.json",
+    "preview": "single_cell_annotation/preview.jpg"
+  },
+  "sha256": {
+    "png": "92aa6ad4acfe67798c40d4145a8f95e6c492d63de0b1b2f428c944b95b302327",
+    "svg": "3a50ad3224c8fbe4243c939140b7c2753c66a1b1ea5aecef939da22cb9d35bcb",
+    "pdf": "215cf3a77c3604401d3298c65c8b1591d782d6a249cecc0dcd2e7cba23e91f20",
+    "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
+    "spec": "ce8f9526c8372be646ef500ba5fdf252381a0e9c1ce831ae1b083d78c1b9e62a"
+  },
+  "visual_review": {
+    "id": "single_cell_annotation",
+    "png_sha256": "92aa6ad4acfe67798c40d4145a8f95e6c492d63de0b1b2f428c944b95b302327",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 240,
+    "native_width_mm": 255.27,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 7.5214478787166525,
+    "p10_pt": 7.5214478787166525,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "detection_definition",
+    "expression_label",
+    "expression_limits",
+    "group_order",
+    "marker_order",
+    "mode",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "single_cell_annotation/before.png",
+  "before_sha256": "8dd93fe9f9616ef27e0a96bcf5b0861de2c883e3b7d7e897789dcfcdb27ac9b4"
+}

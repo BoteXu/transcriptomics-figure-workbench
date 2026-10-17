@@ -1,0 +1,69 @@
+{
+  "id": "Subgroup_04",
+  "title": "Endothelial · marker evidence",
+  "assay": "single_cell",
+  "assets": {
+    "png": "Subgroup_04/example.png",
+    "svg": "Subgroup_04/example.svg",
+    "pdf": "Subgroup_04/example.pdf",
+    "tsv": "Subgroup_04/example.tsv",
+    "spec": "Subgroup_04/input/example.spec.json",
+    "preview": "Subgroup_04/preview.jpg"
+  },
+  "sha256": {
+    "png": "84f7ecb259f12dc894ccdd10d7b0006d162e96372404e25349a19c9583d6157b",
+    "svg": "d278288bf09abdc6b6e4ca85bdfc9fbe18e4543e823d99c256867b4ade18e95d",
+    "pdf": "c1aaa092b9c3aec3ea590c6b6bcaf801b7490583d0120d1af1fe55dfee2c98c1",
+    "tsv": "4c71aa68b01613626c486e0400b656dfb47e396e6bc09bcf440d67dab535301a",
+    "spec": "5a9501dec1daefd56838ec360ffbb2380cbf184bae0c9468b68743c9e2e42aa8"
+  },
+  "visual_review": {
+    "id": "Subgroup_04",
+    "png_sha256": "84f7ecb259f12dc894ccdd10d7b0006d162e96372404e25349a19c9583d6157b",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 240,
+    "native_width_mm": 287.02,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 28,
+    "smallest_pt": 7.943697303323811,
+    "p10_pt": 7.943697303323811,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "detection_definition",
+    "expression_label",
+    "expression_limits",
+    "focus_group",
+    "group_order",
+    "marker_order",
+    "mode",
+    "ncols",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "Subgroup_04/before.png",
+  "before_sha256": "a6d09f1a6f927e7c70795709b7b9abf04ba594ef55413d866aaf24afdf3a02e4"
+}

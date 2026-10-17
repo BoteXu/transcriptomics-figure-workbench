@@ -197,6 +197,7 @@ Separate annotation atlas and per-subgroup multi-marker reading pages.
 | nrows | false | null |
 | panel_width | false | 3.25 |
 | panel_height | false | 3.15 |
+| composition | false | "auto" |
 
 ## figure_biomni_views.plot_sequence_logo
 
@@ -433,7 +434,7 @@ Six rebuilt frozen-result modes. Candidate aesthetics require actual review.
 
 ## figure_enrichment_story.plot_enrichment_story
 
-Prefer linked effect/ratio, probability, count and exact gene-support channels.
+Linked ORA/GSEA and complete selected gene support on aligned term rows.
 
 | Parameter | Required | Default |
 |---|---|---|

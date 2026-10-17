@@ -1,0 +1,71 @@
+{
+  "id": "bulk_pathway_contrasts_VerticalLarge",
+  "title": "Pathway enrichment across contrasts",
+  "assay": "bulk",
+  "assets": {
+    "png": "bulk_pathway_contrasts_VerticalLarge/example.png",
+    "svg": "bulk_pathway_contrasts_VerticalLarge/example.svg",
+    "pdf": "bulk_pathway_contrasts_VerticalLarge/example.pdf",
+    "tsv": "bulk_pathway_contrasts_VerticalLarge/example.tsv",
+    "spec": "bulk_pathway_contrasts_VerticalLarge/input/example.spec.json",
+    "preview": "bulk_pathway_contrasts_VerticalLarge/preview.jpg"
+  },
+  "sha256": {
+    "png": "bdf1b2b1473b911cd1eada0d6044ce5f317a67dc14a58db57047a5887c7e0bdc",
+    "svg": "c747646b531d99539e77c57ddbc221b6dd078748b1788c07ab7c2eb66aeea75b",
+    "pdf": "0be0fc5a6a0d045449499dceebc0e43215c3a928614cdee6d9173365d16a2b11",
+    "tsv": "6cd3bde11d7c44d5ab8a39a6798071fed75d6431bfbedbd96d2686af75e6522b",
+    "spec": "e0fb9e7a3a5399c158a49b1bcde1783200e81a0d9fa0a9bc2e03ca4d776a8a84"
+  },
+  "visual_review": {
+    "id": "bulk_pathway_contrasts_VerticalLarge",
+    "png_sha256": "bdf1b2b1473b911cd1eada0d6044ce5f317a67dc14a58db57047a5887c7e0bdc",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 150.2692222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 55,
+    "smallest_pt": 21.74097896885812,
+    "p10_pt": 21.74097896885812,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "columns",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "nes_limits",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "bulk_pathway_contrasts_VerticalLarge/before.png",
+  "before_sha256": "bac43317a5aae35b9a1df7e8ee403774b742d0ab6a44bce53081e5dea4b7357f"
+}

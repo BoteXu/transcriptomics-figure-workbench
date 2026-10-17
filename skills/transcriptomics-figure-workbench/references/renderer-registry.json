@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.9.1",
+  "version": "0.9.2",
   "counts": {
     "python_functions": 131,
     "fixed_aliases": 82,
@@ -246,12 +246,18 @@
           "required": false,
           "annotation": null,
           "default": 3.15
+        },
+        {
+          "name": "composition",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "546b1ac353c64a69ee4a02c952538b5f8bf5f0a2fa108359f625dc3102f1cddb",
+      "source_sha256": "a63b74cc7c02d3d98a47d016232165a57a6a0f57cc9af2cb75e7287b5e824f2d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "fraction",
@@ -1256,7 +1262,7 @@
       "module": "figure_enrichment_story",
       "function": "plot_enrichment_story",
       "display_name": "Linked enrichment and gene evidence",
-      "summary": "Prefer linked effect/ratio, probability, count and exact gene-support channels.",
+      "summary": "Linked ORA/GSEA and complete selected gene support on aligned term rows.",
       "parameters": [
         {
           "name": "mode",
@@ -1327,7 +1333,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "3d7700f0980b622bde850746d86212852492198705d4236e0d1d20e5f1e3fe8c",
+      "source_sha256": "07efd281ff03e79a6242305090b86c117136633bf48e34811322e5b2bdda9812",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "NES",

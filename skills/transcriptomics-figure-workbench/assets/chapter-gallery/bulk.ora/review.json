@@ -27,15 +27,15 @@
     "preview": "bulk.ora/preview.jpg"
   },
   "sha256": {
-    "png": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd",
-    "svg": "40fb74add24c6e73c31d5cc174504e6939e146a16eedaeac62c83f58edfcd4f0",
-    "pdf": "4ae74e7f12ed88f360c96b89c4310d2f10a4f37b47b5cdfbd998cab00cb5e1d4",
+    "png": "feac49ae01b568492d23961fdb180a157fabb42188b75a4fd402ae08b0bba25a",
+    "svg": "e0ece54d5c5439ededc3dd5f2fdef8b1751ad10910a6a26f6a17c7f692c8beb1",
+    "pdf": "0aac06325910fd2d20e560a1a96187ef2476d244e3135ba0447effd72b2b3032",
     "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
     "spec": "cbcdf115109f929570d424a8dd15c1c230e51b38d3dfc396ca3f12bf02404c39"
   },
   "visual_review": {
     "id": "bulk.ora",
-    "png_sha256": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd",
+    "png_sha256": "feac49ae01b568492d23961fdb180a157fabb42188b75a4fd402ae08b0bba25a",
     "decision": "screen_reviewed",
     "checks": [
       "scientific display meaning and scope",
@@ -48,19 +48,22 @@
     "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false
+    "scientific_acceptance": false,
+    "source_figure_id": "bulk_ora"
   },
   "readability": {
     "target_width_mm": 297,
-    "native_width_mm": 384.2226538433559,
+    "native_width_mm": 239.56376763673558,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 49,
-    "smallest_pt": 8.502882293171412,
-    "p10_pt": 8.502882293171412,
+    "essential_text_count": 45,
+    "smallest_pt": 13.637287609176115,
+    "p10_pt": 13.637287609176115,
     "below_threshold": [],
     "state": "MEASUREMENT_PASS",
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.9.2",
+  "previous_png_sha256": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd"
 }

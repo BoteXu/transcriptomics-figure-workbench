@@ -1,0 +1,71 @@
+{
+  "id": "bulk_gene_support_VerticalLarge",
+  "title": "Pathway membership and signed gene evidence",
+  "assay": "bulk",
+  "assets": {
+    "png": "bulk_gene_support_VerticalLarge/example.png",
+    "svg": "bulk_gene_support_VerticalLarge/example.svg",
+    "pdf": "bulk_gene_support_VerticalLarge/example.pdf",
+    "tsv": "bulk_gene_support_VerticalLarge/example.tsv",
+    "spec": "bulk_gene_support_VerticalLarge/input/example.spec.json",
+    "preview": "bulk_gene_support_VerticalLarge/preview.jpg"
+  },
+  "sha256": {
+    "png": "62092ff8d60c2a66526f121a10a30996e11cd61f58045ebb53b2a35ec613b966",
+    "svg": "55c922a54dbb7f4e3a65d58ed75b700c62ddbe9c23fc636354f4a9d9b0c99b6c",
+    "pdf": "f54ea7b8e3977bc7d35666d75bca219609d141431280be853c2fa471de06ccb2",
+    "tsv": "8a0ebb72c4aa5128cdf182fd2104760ceff8edab756a5b106cc80d15bd489f76",
+    "spec": "d9fd95b6bc7f44c1d2b6cbd079233db752e0d6dd3e44fa52c50b6f10cf884347"
+  },
+  "visual_review": {
+    "id": "bulk_gene_support_VerticalLarge",
+    "png_sha256": "62092ff8d60c2a66526f121a10a30996e11cd61f58045ebb53b2a35ec613b966",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 151.5392222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 21.558775029273683,
+    "p10_pt": 21.558775029273683,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "columns",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "nes_limits",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "bulk_gene_support_VerticalLarge/before.png",
+  "before_sha256": "9c8eaada01edbe8d5d683bcf50df6aad356deda386c3b38486b858ee6d591241"
+}

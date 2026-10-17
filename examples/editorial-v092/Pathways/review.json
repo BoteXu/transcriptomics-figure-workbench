@@ -1,0 +1,69 @@
+{
+  "id": "Pathways",
+  "title": "Enrichment themes · ratios, FDR and selected gene support",
+  "assay": "bulk",
+  "assets": {
+    "png": "Pathways/example.png",
+    "svg": "Pathways/example.svg",
+    "pdf": "Pathways/example.pdf",
+    "tsv": "Pathways/example.tsv",
+    "spec": "Pathways/input/example.spec.json",
+    "preview": "Pathways/preview.jpg"
+  },
+  "sha256": {
+    "png": "2a2d323ca19179c0f0f52c08e719a51d921476f774c7316cfb047b93b5e12a4e",
+    "svg": "8cbc0121d173b4c613dafbd415007b3afdb95978640fc4e24c01663934d8e263",
+    "pdf": "c7f4dadb6e5bc75e1f8c7543df68ee2f543b2064df24a7b7e354851bab2e898d",
+    "tsv": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
+    "spec": "d994f11563801e885440c73736c3436cc80495ddda7b39419018dc703c674109"
+  },
+  "visual_review": {
+    "id": "Pathways",
+    "png_sha256": "2a2d323ca19179c0f0f52c08e719a51d921476f774c7316cfb047b93b5e12a4e",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 224.8618784722222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 48,
+    "smallest_pt": 14.52891891767942,
+    "p10_pt": 14.52891891767942,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "Pathways/before.png",
+  "before_sha256": "d878ac7b221eb1b5db4bae530d4c4824763a17b73fbbea8e0a63ecb7bb5cb258"
+}

@@ -1,35 +1,10 @@
 {
+  "key": "study/DonorPathways",
   "id": "DonorPathways",
+  "section": "study",
+  "form": "enrichment_summary",
   "assay": "single_cell",
-  "role": "enrichment_summary",
-  "source": "Fictional frozen study; no scientific analysis",
-  "renderer": "figure_enrichment_story.plot_enrichment_story",
-  "parameters": {
-    "mode": "ora",
-    "title": "Enrichment themes · ratios, FDR and selected gene support",
-    "background_definition": "Fictional 200-gene query / 1200 tested genes",
-    "tested_size": 1200,
-    "query_size": 200,
-    "gene_effect_limits": [
-      -4,
-      4
-    ],
-    "gene_set_version": "Illustrative frozen study sets v0.9.1",
-    "selection_definition": "All six original ORA terms; four explicitly selected genes with fictional membership",
-    "support_contrast": "Treated versus Control"
-  },
-  "readability": {
-    "target_width_mm": 297,
-    "native_width_mm": 304.79999999999995,
-    "minimum_required_pt": 7.5,
-    "essential_text_count": 49,
-    "smallest_pt": 10.718503937007876,
-    "p10_pt": 10.718503937007876,
-    "below_threshold": [],
-    "state": "MEASUREMENT_PASS",
-    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
-    "visual_acceptance": false
-  },
+  "level": null,
   "assets": {
     "png": "study/DonorPathways/DonorPathways.png",
     "svg": "study/DonorPathways/DonorPathways.svg",
@@ -39,15 +14,17 @@
     "previous": "study/DonorPathways/previous.png"
   },
   "sha256": {
-    "png": "fb04b2767045410f8ab91e45b3d019a60e6b6e3495fb1db87b20c9448d5e829e",
-    "svg": "d17c16051991be7dc62d1f164a5a558b30870487dec43d3e48906a034d714de3",
-    "pdf": "657edbfb32b26c00e4efa64b2143dbe834480e8228fe4e4c6ef1ff785d4995e9",
+    "png": "caaf7bc861093be31244b15f6c323ca9fa0510116731196d05f4fb3c9c8e6fb0",
+    "svg": "f373e97ea7ac6929a1a55dde363c56c1f9effb813c6496f65bc8ecb1a7f4b098",
+    "pdf": "071d77aa31762c2d80fd4c06e285cd7542fcc11284c133d9cee35190d43bbe67",
     "tsv": "21516baacd7b05b29855ff9b9fa1a9d4e3fb3f569aea4da02c757ef7e06a86d9",
     "previous": "2249100c0d6768b39130dcb9e024d3831f3b182d1d4cdc9e05fdb49a682eea78"
   },
+  "preview": "study/DonorPathways/preview.jpg",
+  "review": "study/DonorPathways/review.json",
   "visual_review": {
     "id": "DonorPathways",
-    "png_sha256": "fb04b2767045410f8ab91e45b3d019a60e6b6e3495fb1db87b20c9448d5e829e",
+    "png_sha256": "caaf7bc861093be31244b15f6c323ca9fa0510116731196d05f4fb3c9c8e6fb0",
     "decision": "screen_reviewed",
     "checks": [
       "scientific display meaning and scope",
@@ -60,7 +37,21 @@
     "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false
+    "scientific_acceptance": false,
+    "source_figure_id": "DonorPathways"
   },
-  "scientific_acceptance": false
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 224.8618784722222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 48,
+    "smallest_pt": 14.52891891767942,
+    "p10_pt": 14.52891891767942,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "display_revision": "0.9.2",
+  "previous_png_sha256": "fb04b2767045410f8ab91e45b3d019a60e6b6e3495fb1db87b20c9448d5e829e"
 }

@@ -1,0 +1,71 @@
+{
+  "id": "single_cell_pathways_VerticalLarge",
+  "title": "Celltype pathway responses",
+  "assay": "single_cell",
+  "assets": {
+    "png": "single_cell_pathways_VerticalLarge/example.png",
+    "svg": "single_cell_pathways_VerticalLarge/example.svg",
+    "pdf": "single_cell_pathways_VerticalLarge/example.pdf",
+    "tsv": "single_cell_pathways_VerticalLarge/example.tsv",
+    "spec": "single_cell_pathways_VerticalLarge/input/example.spec.json",
+    "preview": "single_cell_pathways_VerticalLarge/preview.jpg"
+  },
+  "sha256": {
+    "png": "4be80f26282bfc3eb23d18dc30afe3d6e935df7f41235de07f844c29a060e0a5",
+    "svg": "b01002444212e89dac1c493d6daa4f8b341c87b27f70d7a7b7a38a069dbc4cda",
+    "pdf": "5409da12d3e64387907dd237be92bfce8be8d29460333d41ed01eea952d9bb86",
+    "tsv": "6cd3bde11d7c44d5ab8a39a6798071fed75d6431bfbedbd96d2686af75e6522b",
+    "spec": "00d5949a4e26feb4b81ced3891b20d036ab1fe1e8c2c5b0ae5710902a27b5c38"
+  },
+  "visual_review": {
+    "id": "single_cell_pathways_VerticalLarge",
+    "png_sha256": "4be80f26282bfc3eb23d18dc30afe3d6e935df7f41235de07f844c29a060e0a5",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 150.2692222222222,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 55,
+    "smallest_pt": 21.74097896885812,
+    "p10_pt": 21.74097896885812,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "columns",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "nes_limits",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "single_cell_pathways_VerticalLarge/before.png",
+  "before_sha256": "717b81d7fc6593211a13e8b8aaf4f22310bcaaec003f1fa033b179cc56b477e6"
+}

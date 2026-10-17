@@ -2,11 +2,24 @@
 
 按**数据结构与想表达的问题**选择图形，保留原始数值与参考图的视觉语言，用一套课题色卡和字体统一所有图。可安装为 Codex skill，也可以直接使用 Python/R 的冻结结果表绘图器。
 
-本版为 **v0.9.1**。优先选择信息更完整的美化扩展，并按 **58个分析章节**组织 bulk 与单细胞绘图：每章提供实际代码、可运行模板、准确模拟表和导出实例。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
+本版为 **v0.9.2**。优先选择信息更完整且易读的美化扩展，并按 **58个分析章节**组织 bulk 与单细胞绘图：每章提供实际代码、可运行模板、准确模拟表和导出实例。90个合并导航条目与458个历史编号继续保留，近似画法作为扩展。
+
+## v0.9.2 逐类期刊检索与版式修订
+
+[27个修订与布局示例，含修订前对照](examples/editorial-v092/index.html) · [90个图型逐项选择与检索](skills/transcriptomics-figure-workbench/references/journal-form-review-v092.md) · [近期期刊图形设计的采用与舍弃](skills/transcriptomics-figure-workbench/references/journal-design-v092.md)
+
+- **逐类寻找：** 90个现有基础图型均有检索记录，优先2025–2026年。另实际阅读7篇论文的图注并查看8张原图，覆盖 Nature、Nature Methods、Nature Biotechnology、Nature Immunology、Nature Genetics、Nature Medicine 和 Nature Communications。29个基础图型有相关的已审阅设计来源；其他图型保留已有验证画法，候选检索不冒充原图审阅。
+- **富集页重新组织：** 通路行对齐、单一标签区、清楚的NES/FDR含义；成员格明确区分非成员和零效应成员，注明基因效应所属对比。纵向阅读版的色标与标题独立留位。
+- **逐亚群证据页：** 先定位与跨群特异性，再连续展示所选marker；支持2/4/8/12个marker、自适应列数和显式网格。完整细胞背景、坐标及共同表达范围保持不变。
+- **实际验收范围：** 23个旧示例沿用相同冻结输入并更新导出，另4个明确虚构的marker数量样例用于布局检查；27份最终PNG逐张屏幕复看并绑定哈希。碰撞检查、屏幕自检、纸面校样与科学有效性分别记录。
+
+不复制出版商图片、第三方脚本或模型。默认画法按信息表达与可读性选择；近期论文中拥挤的小字、彩虹尺度和过多雷达轴也会明确舍弃。所有候选与逐图审阅的范围保留在记录中。
+
+安装包内的 Studio 使用92张可随包读取的导航预览（90个基础图型与2张课题示例）；完整历史导航保留在仓库示例与完整审阅库下载中，避免安装后出现指向仓库外部目录的旧预览。[本轮实际检查范围](skills/transcriptomics-figure-workbench/references/validation-v092.md)。
 
 ## v0.9.1 丰富默认画法与完整分析章节
 
-[当前默认图组](examples/rich-v091/index.html) · [58个章节的实际出图](examples/chapters-v091/index.html) · [章节、输入和调用方法](skills/transcriptomics-figure-workbench/references/transcriptomic-chapters-v091.md) · [社区方案的取舍](skills/transcriptomics-figure-workbench/references/rich-defaults-v091.md)
+[当前默认图组](skills/transcriptomics-figure-workbench/assets/study-gallery/index.html) · [58个章节的实际出图](skills/transcriptomics-figure-workbench/assets/chapter-gallery/index.html) · [章节、输入和调用方法](skills/transcriptomics-figure-workbench/references/transcriptomic-chapters-v091.md) · [社区方案的取舍](skills/transcriptomics-figure-workbench/references/rich-defaults-v091.md)
 
 **版式验收已收紧：** 撤回拥挤旧总图作为默认方案的推荐，保留[被否定的候选](examples/rejected-v091/README.md)供对照。每个亚群现在有单独的多 marker 证据页，支持完整背景、跨群特异性对照和可调布局。屏幕检查记录不等于美观认可或期刊接收。[具体返工与验收规则](skills/transcriptomics-figure-workbench/references/editorial-acceptance-v091.md) · [166份示例导出及检查范围](skills/transcriptomics-figure-workbench/references/validation-v091.md) · [45份较大数据量阅读布局](examples/chapter-layouts-v091/index.html)。
 

@@ -29,15 +29,15 @@
     "preview": "single_cell.annotation/preview.jpg"
   },
   "sha256": {
-    "png": "8dd93fe9f9616ef27e0a96bcf5b0861de2c883e3b7d7e897789dcfcdb27ac9b4",
-    "svg": "be7edcc7ca451c80515b22b06fc7072df8e0580993473ee3065e772f4f47c8d1",
-    "pdf": "f3eae46c847a90a77bc5ed53683d7f6e61d199953ae66b6598d4e5548224cd5a",
+    "png": "92aa6ad4acfe67798c40d4145a8f95e6c492d63de0b1b2f428c944b95b302327",
+    "svg": "3a50ad3224c8fbe4243c939140b7c2753c66a1b1ea5aecef939da22cb9d35bcb",
+    "pdf": "215cf3a77c3604401d3298c65c8b1591d782d6a249cecc0dcd2e7cba23e91f20",
     "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
     "spec": "ce8f9526c8372be646ef500ba5fdf252381a0e9c1ce831ae1b083d78c1b9e62a"
   },
   "visual_review": {
     "id": "single_cell.annotation",
-    "png_sha256": "8dd93fe9f9616ef27e0a96bcf5b0861de2c883e3b7d7e897789dcfcdb27ac9b4",
+    "png_sha256": "92aa6ad4acfe67798c40d4145a8f95e6c492d63de0b1b2f428c944b95b302327",
     "decision": "screen_reviewed",
     "checks": [
       "scientific display meaning and scope",
@@ -50,13 +50,14 @@
     "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
     "independent_second_review": false,
     "calibrated_paper_proof": false,
-    "scientific_acceptance": false
+    "scientific_acceptance": false,
+    "source_figure_id": "single_cell_annotation"
   },
   "readability": {
     "target_width_mm": 240,
     "native_width_mm": 255.27,
     "minimum_required_pt": 7.5,
-    "essential_text_count": 45,
+    "essential_text_count": 50,
     "smallest_pt": 7.5214478787166525,
     "p10_pt": 7.5214478787166525,
     "below_threshold": [],
@@ -64,5 +65,7 @@
     "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
     "visual_acceptance": false
   },
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "display_revision": "0.9.2",
+  "previous_png_sha256": "8dd93fe9f9616ef27e0a96bcf5b0861de2c883e3b7d7e897789dcfcdb27ac9b4"
 }

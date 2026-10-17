@@ -1,0 +1,71 @@
+{
+  "id": "bulk_gene_support",
+  "title": "Pathway membership and signed gene evidence",
+  "assay": "bulk",
+  "assets": {
+    "png": "bulk_gene_support/example.png",
+    "svg": "bulk_gene_support/example.svg",
+    "pdf": "bulk_gene_support/example.pdf",
+    "tsv": "bulk_gene_support/example.tsv",
+    "spec": "bulk_gene_support/input/example.spec.json",
+    "preview": "bulk_gene_support/preview.jpg"
+  },
+  "sha256": {
+    "png": "c944fa432d88069940ff2f0cd36fdb10b421c7eb5520b6c07f1525768ded9580",
+    "svg": "1b09b959a2f6d0680ea8d68b8ef8fa457413a4900660e1062b19e027ac03c685",
+    "pdf": "8272ddbe1dff701aaca4edd19c6a6e818bb59f05441c2ea6b25b46d6fc8d1d7f",
+    "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
+    "spec": "3b289c3194da07b9bef76d37b94fe971440e600c373eae8f7f70c74f71086a4e"
+  },
+  "visual_review": {
+    "id": "bulk_gene_support",
+    "png_sha256": "c944fa432d88069940ff2f0cd36fdb10b421c7eb5520b6c07f1525768ded9580",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 239.56376763673558,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 32,
+    "smallest_pt": 13.637287609176115,
+    "p10_pt": 13.637287609176115,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "columns",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "nes_limits",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "bulk_gene_support/before.png",
+  "before_sha256": "b9a1bd94520e4340f2e766f8b3fd21010a5a53c7f5c0f08c550c536576f3fbeb"
+}

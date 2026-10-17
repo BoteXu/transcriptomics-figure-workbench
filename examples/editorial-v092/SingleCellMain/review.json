@@ -1,0 +1,67 @@
+{
+  "id": "SingleCellMain",
+  "title": "Single-cell atlas · annotation evidence",
+  "assay": "single_cell",
+  "assets": {
+    "png": "SingleCellMain/example.png",
+    "svg": "SingleCellMain/example.svg",
+    "pdf": "SingleCellMain/example.pdf",
+    "tsv": "SingleCellMain/example.tsv",
+    "spec": "SingleCellMain/input/example.spec.json",
+    "preview": "SingleCellMain/preview.jpg"
+  },
+  "sha256": {
+    "png": "4c88aa9347f74ff03ab394383b5aad7fbeed1d395eb87911a6b6b53155a86f81",
+    "svg": "69f50c6bdfaaa192727f83c04c7f869a65d0afa8b500d8596de87c792397be1e",
+    "pdf": "7e391b8e5b55091f757c6d6411513fe1b294e5711314b1d6d7b3e9f766b234cf",
+    "tsv": "b97b8a56e665e6892e65d828a55d63b845b6ec0a85a100a4b574e088cdb3ecac",
+    "spec": "32a90e2d8c3693702ece503a98c6137685cd5e3123e83da57c115c7659d7010d"
+  },
+  "visual_review": {
+    "id": "SingleCellMain",
+    "png_sha256": "4c88aa9347f74ff03ab394383b5aad7fbeed1d395eb87911a6b6b53155a86f81",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 240,
+    "native_width_mm": 255.27,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 50,
+    "smallest_pt": 8.461628863556234,
+    "p10_pt": 8.461628863556234,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "detection_definition",
+    "expression_label",
+    "expression_limits",
+    "group_order",
+    "marker_order",
+    "mode",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "SingleCellMain/before.png",
+  "before_sha256": "354f8fbb95ac1731f9adbc2dc610830db6877b12b99cab6df77d3e5a7c97ad96"
+}

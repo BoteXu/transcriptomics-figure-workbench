@@ -1,0 +1,71 @@
+{
+  "id": "bulk_ora",
+  "title": "ORA themes, ratios and supporting genes",
+  "assay": "bulk",
+  "assets": {
+    "png": "bulk_ora/example.png",
+    "svg": "bulk_ora/example.svg",
+    "pdf": "bulk_ora/example.pdf",
+    "tsv": "bulk_ora/example.tsv",
+    "spec": "bulk_ora/input/example.spec.json",
+    "preview": "bulk_ora/preview.jpg"
+  },
+  "sha256": {
+    "png": "feac49ae01b568492d23961fdb180a157fabb42188b75a4fd402ae08b0bba25a",
+    "svg": "e0ece54d5c5439ededc3dd5f2fdef8b1751ad10910a6a26f6a17c7f692c8beb1",
+    "pdf": "0aac06325910fd2d20e560a1a96187ef2476d244e3135ba0447effd72b2b3032",
+    "tsv": "2b91935c47edcc935b77ee619baac118da452eb1e9000044231b82c0011f9f6a",
+    "spec": "cbcdf115109f929570d424a8dd15c1c230e51b38d3dfc396ca3f12bf02404c39"
+  },
+  "visual_review": {
+    "id": "bulk_ora",
+    "png_sha256": "feac49ae01b568492d23961fdb180a157fabb42188b75a4fd402ae08b0bba25a",
+    "decision": "screen_reviewed",
+    "checks": [
+      "scientific display meaning and scope",
+      "complete intended input channels",
+      "readable labels and guides",
+      "stable identity and declared continuous units",
+      "panel balance and hierarchy",
+      "no observed clipping or label collision"
+    ],
+    "notes": "Actual final image screened; dense or flagged plots enlarged. Exact duplicate pixels retain the earlier actual inspection. New project data or layouts require a new review.",
+    "independent_second_review": false,
+    "calibrated_paper_proof": false,
+    "scientific_acceptance": false
+  },
+  "readability": {
+    "target_width_mm": 297,
+    "native_width_mm": 239.56376763673558,
+    "minimum_required_pt": 7.5,
+    "essential_text_count": 45,
+    "smallest_pt": 13.637287609176115,
+    "p10_pt": 13.637287609176115,
+    "below_threshold": [],
+    "state": "MEASUREMENT_PASS",
+    "scope": "Declared Matplotlib font sizes scaled to target width; provenance footers excluded. Not a perceptual or print proof.",
+    "visual_acceptance": false
+  },
+  "scientific_acceptance": false,
+  "required_results": [
+    "background_definition",
+    "columns",
+    "gene_effect_limits",
+    "gene_set_version",
+    "mode",
+    "nes_limits",
+    "query_size",
+    "selection_definition",
+    "support_contrast",
+    "tested_size",
+    "title"
+  ],
+  "sources": [
+    "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+    "https://www.nature.com/articles/s41587-026-03068-6/figures/3"
+  ],
+  "specific_qc_and_limit": "Fictional frozen display inputs; no inference or biological acceptance. Long vertical variants are reading editions, not default manuscript layouts.",
+  "input_unchanged": true,
+  "before_png": "bulk_ora/before.png",
+  "before_sha256": "bdc0911e58d8647801bcd09c31c2b3be87c748390c4bcaef880c3009688b98bd"
+}

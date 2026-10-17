@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-17",
+  "scope": "Design self-review of eight original figures from seven papers. Original figure pixels were viewed in the browser, together with captions. This is not scientific replication, an impact-factor ranking or universal aesthetic acceptance.",
+  "redistributed_publisher_images": false,
+  "copied_third_party_code": false,
+  "sources": [
+    {
+      "id": "skin-atlas",
+      "title": "Human skin fibroblast single-cell and spatial atlas",
+      "journal": "Nature Immunology",
+      "published": "2025-09-24",
+      "url": "https://www.nature.com/articles/s41590-025-02267-8",
+      "figure": "1",
+      "figure_url": "https://www.nature.com/articles/s41590-025-02267-8/figures/1",
+      "inspection": "caption_and_original_pixels",
+      "forms": [
+        "embedding",
+        "dot-matrix",
+        "composition",
+        "palettes"
+      ],
+      "adopt": "One primary embedding, persistent identity colours, marker blocks labelled by identity, wide cross-population evidence lane.",
+      "reject": "Do not reproduce tiny marker labels or put every subgroup feature map in the overview. Split detailed reading pages.",
+      "implementation": "figure_annotation_views: labelled marker assignments and separate evidence-first subgroup compositions"
+    },
+    {
+      "id": "nuclear-space",
+      "title": "Cell-type-specific nuclear compartments from spatial multi-omics",
+      "journal": "Nature",
+      "published": "2025-04-09",
+      "url": "https://www.nature.com/articles/s41586-025-08838-x",
+      "figure": "2",
+      "figure_url": "https://www.nature.com/articles/s41586-025-08838-x/figures/2",
+      "inspection": "caption_and_original_pixels",
+      "forms": [
+        "spatial",
+        "slice",
+        "interval-tracks",
+        "scatter",
+        "correlation",
+        "composition"
+      ],
+      "adopt": "Overview to explicitly selected region to orthogonal quantitative support; align physical coordinate tracks and retain modality-specific units.",
+      "reject": "No invented image evidence or inferred registration. A cell count is not a biological replicate count. Dense image and track detail needs a separate page.",
+      "implementation": "Selection guidance retained; existing frozen-coordinate spatial and track renderers reused, no registration or imaging engine executed"
+    },
+    {
+      "id": "nicheformer",
+      "title": "Nicheformer single-cell and spatial omics foundation model",
+      "journal": "Nature Methods",
+      "published": "2025-10-30",
+      "url": "https://www.nature.com/articles/s41592-025-02814-z",
+      "figure": "3",
+      "figure_url": "https://www.nature.com/articles/s41592-025-02814-z/figures/3",
+      "inspection": "caption_and_original_pixels",
+      "forms": [
+        "profile",
+        "spatial",
+        "heatmap",
+        "volcano",
+        "composition"
+      ],
+      "adopt": "Rows follow a question; relate attention summaries to spatial context and selected effects. Align related matrices and make their separate ranges explicit.",
+      "reject": "Avoid neon identity colours and repeated panels with no additional question. The paper's red/blue gene classes must not be mistaken for up/down regulation.",
+      "implementation": "Selection guidance; no attention model executed and no inference copied"
+    },
+    {
+      "id": "total-rna",
+      "title": "Scalable single-cell total RNA sequencing",
+      "journal": "Nature Biotechnology",
+      "published": "2026-03-31",
+      "url": "https://www.nature.com/articles/s41587-026-03068-6",
+      "figure": "3",
+      "figure_url": "https://www.nature.com/articles/s41587-026-03068-6/figures/3",
+      "inspection": "caption_and_original_pixels",
+      "forms": [
+        "heatmap",
+        "embedding",
+        "feature-embedding",
+        "scatter",
+        "profile",
+        "violin",
+        "enrichment-summary",
+        "dot-matrix",
+        "composition"
+      ],
+      "adopt": "Named continuous ordering, stable state colours, selected-gene facets and enrichment summary with explicit member support.",
+      "reject": "Do not compare per-gene 0–1 values as absolute expression. No LOWESS or new scoring is fitted for styling. Reject crowded gene-program labels and significance-star piles.",
+      "implementation": "Aligned pathway rows, explicit membership tiles and contrast-specific gene-effect labels in figure_enrichment_story"
+    },
+    {
+      "id": "finemap-calibration",
+      "title": "Genome-wide fine-mapping calibration",
+      "journal": "Nature Genetics",
+      "published": "2026-03-30",
+      "url": "https://www.nature.com/articles/s41588-026-02549-3",
+      "figure": "2",
+      "figure_url": "https://www.nature.com/articles/s41588-026-02549-3/figures/2",
+      "inspection": "caption_and_original_pixels",
+      "forms": [
+        "calibration",
+        "scatter",
+        "composition"
+      ],
+      "adopt": "Equal x/y ranges and a visible identity reference; rows indicate scenarios and columns comparison families.",
+      "reject": "Avoid red/green-only contrasts and repeated small legends. Do not label these PIP calibration simulations as clinical-risk calibration.",
+      "implementation": "Selection guidance for supplied calibration tables; no fine-mapping engine executed"
+    },
+    {
+      "id": "compass-benchmark",
+      "title": "COMPASS clinical-cohort evaluation",
+      "journal": "Nature Medicine",
+      "publication_year": 2026,
+      "url": "https://www.nature.com/articles/s41591-026-04502-7",
+      "figure": "2",
+      "figure_url": "https://www.nature.com/articles/s41591-026-04502-7/figures/2",
+      "inspection": "caption_and_original_pixels",
+      "forms": [
+        "state-matrix",
+        "bars",
+        "mirrored-bars",
+        "point-interval",
+        "composition",
+        "object-schematic"
+      ],
+      "adopt": "Keep cohort design visible beside held-out evaluation. Encode opposing transfer counts around a common baseline and identify comparator/reference results.",
+      "reject": "Do not default to dozens of narrow bars with vertical method names, rainbow cohort annotations or plots that confuse patient, cohort and training-seed replication.",
+      "implementation": "Selection guidance: prefer horizontal estimates or a comparison matrix when method names are long"
+    },
+    {
+      "id": "compass-survival",
+      "title": "COMPASS survival and tumour-immune profiles",
+      "journal": "Nature Medicine",
+      "publication_year": 2026,
+      "url": "https://www.nature.com/articles/s41591-026-04502-7",
+      "figure": "5",
+      "figure_url": "https://www.nature.com/articles/s41591-026-04502-7/figures/5",
+      "inspection": "caption_and_original_pixels",
+      "forms": [
+        "survival",
+        "ribbon",
+        "radar",
+        "heatmap",
+        "composition"
+      ],
+      "adopt": "Show survival uncertainty and effect intervals, preserve state labels across profiles, and group concepts by biological role.",
+      "reject": "Do not copy dense 16-axis radar layouts or rainbow continuous scales. Supply risk counts when available and check group labels against actual data. Polygon area is not an effect size.",
+      "implementation": "Selection guidance: radar remains optional; aligned dot profiles or matrices are preferable for precise many-feature comparisons"
+    },
+    {
+      "id": "gbp2-network",
+      "title": "GBP2 module, enrichment and spatial evidence",
+      "journal": "Nature Communications",
+      "published": "2025-12-24",
+      "issue_year": 2026,
+      "url": "https://www.nature.com/articles/s41467-025-67690-9",
+      "figure": "1",
+      "figure_url": "https://www.nature.com/articles/s41467-025-67690-9/figures/1",
+      "inspection": "caption_and_original_pixels",
+      "forms": [
+        "hierarchy",
+        "heatmap",
+        "enrichment-summary",
+        "gsea",
+        "venn",
+        "forest",
+        "stacked",
+        "spatial",
+        "composition"
+      ],
+      "adopt": "Relate supplied module identities to module-trait estimates, enrichment and independent candidate support. Use the correct HR null and preserve the full source scope.",
+      "reject": "The crowded nine-part page and tiny spatial legends are unsuitable defaults. Retain full GSEA running score, hit positions and ranked metric when supplied; an enrichment curve alone is insufficient. One section is not replicated tissue evidence.",
+      "implementation": "Reuse WGCNA/hdWGCNA and full GSEA renderers; no module detection, Cox model or spatial analysis executed"
+    }
+  ]
+}

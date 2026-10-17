@@ -34,6 +34,8 @@ jobs:
           python tests/check_chapter_contracts.py
           python tests/check_selection_depth.py
           python tests/check_private_profile_sync.py
+          python tools/build_journal_review.py --check
+          python tests/check_editorial_release.py
           python skills/transcriptomics-figure-workbench/scripts/workbench.py methods --search GSEA
           python skills/transcriptomics-figure-workbench/scripts/render_frozen_table.py --help
   render:
@@ -55,6 +57,7 @@ jobs:
           python tests/check_rich_defaults.py
           python tests/check_method_depth.py
           python tests/check_subgroup_markers.py
+          python tests/check_editorial_runtime.py examples/editorial-v092
       - name: Exercise ordinary requests on two coherent fictional result packages
         run: |
           python tools/build_transcriptomic_study_examples.py --output study-ci-fixtures
