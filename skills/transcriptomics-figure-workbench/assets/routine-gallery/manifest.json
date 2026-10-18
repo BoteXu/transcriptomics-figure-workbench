@@ -21376,7 +21376,7 @@
       },
       {
         "id": "form_0977c6610cf1",
-        "title": "Bulk 表达质控云雨图",
+        "title": "QC · 云雨分布与样本分面",
         "stage": "qc",
         "default_id": "BulkQC",
         "member_ids": [
@@ -21395,7 +21395,7 @@
       },
       {
         "id": "form_277b0d20e63b",
-        "title": "PCA：样本、椭圆、边缘比例与解释方差",
+        "title": "PCA · 离散椭圆、边缘比例与方差",
         "stage": "qc",
         "default_id": "BulkPCA",
         "member_ids": [
@@ -21433,7 +21433,7 @@
       },
       {
         "id": "form_5016bf02319e",
-        "title": "Bulk 火山图与完整堆积分布",
+        "title": "火山图 · 完整基因与堆积分布",
         "stage": "interpretation",
         "default_id": "BulkDE",
         "member_ids": [
@@ -21471,7 +21471,7 @@
       },
       {
         "id": "form_d499f6597543",
-        "title": "Bulk MA 与完整边缘分布",
+        "title": "MA · 均值效应与边缘计数",
         "stage": "interpretation",
         "default_id": "BulkMA",
         "member_ids": [
@@ -21490,7 +21490,7 @@
       },
       {
         "id": "form_4ecc167d1332",
-        "title": "组图 · 观测点 + 观测点 + 观测点 + 观测点",
+        "title": "组图 · 观测点 ×4",
         "stage": "interpretation",
         "default_id": "GeneExpression",
         "member_ids": [
@@ -21507,7 +21507,7 @@
       },
       {
         "id": "form_60af438823b6",
-        "title": "Bulk ORA 富集与基因支持",
+        "title": "ORA · 比例、FDR与重叠数",
         "stage": "function",
         "default_id": "Pathways",
         "member_ids": [
@@ -21526,7 +21526,7 @@
       },
       {
         "id": "form_592efe2291ec",
-        "title": "Bulk GSEA 通路效应与基因支持",
+        "title": "GSEA · NES方向与跨对比",
         "stage": "function",
         "default_id": "bulk_GSEASummary",
         "member_ids": [
@@ -21545,7 +21545,7 @@
       },
       {
         "id": "form_8ad44dc5a167",
-        "title": "Bulk ORA 成员与基因效应",
+        "title": "通路成员 · 基因效应与支持",
         "stage": "function",
         "default_id": "bulk_GeneSupport",
         "member_ids": [
@@ -21564,7 +21564,7 @@
       },
       {
         "id": "form_c6dbac664b6e",
-        "title": "Bulk GSEA：三条完整排序轨道",
+        "title": "GSEA · 完整ES、命中与排序轨道",
         "stage": "function",
         "default_id": "EnrichmentTracks",
         "member_ids": [
@@ -21603,7 +21603,7 @@
       },
       {
         "id": "form_184c6ec3487d",
-        "title": "单细胞身份图谱与 20 个 marker 证据",
+        "title": "细胞图谱 · 身份与多 Marker 证据",
         "stage": "interpretation",
         "default_id": "CellTypes",
         "member_ids": [
@@ -21620,7 +21620,7 @@
       },
       {
         "id": "form_bf0a5f80c9f5",
-        "title": "组图 · 降维嵌入 + 降维嵌入",
+        "title": "组图 · 降维嵌入 ×2",
         "stage": "interpretation",
         "default_id": "ConditionAtlas",
         "member_ids": [
@@ -21637,7 +21637,7 @@
       },
       {
         "id": "form_1bfcfd568931",
-        "title": "T cells：定位、跨群特异性与四个 marker",
+        "title": "逐亚群多 Marker · 定位、特异性与表达",
         "stage": "interpretation",
         "default_id": "Subgroup_01",
         "member_ids": [
@@ -21660,7 +21660,7 @@
       },
       {
         "id": "form_14a5563625e8",
-        "title": "20 个 marker 的跨群均值与检出率",
+        "title": "Marker 点阵 · 均值与检出率",
         "stage": "interpretation",
         "default_id": "MarkerDot",
         "member_ids": [

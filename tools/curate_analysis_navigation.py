@@ -4,6 +4,7 @@ Groups are an editorial navigation decision. A declared layout/sample-size
 extension is not claimed to contain identical scientific data.
 """
 import hashlib,json,re
+from collections import Counter
 
 FORM_LABELS={
  'fraction':'比例与分母', 'matrix':'热图与矩阵注释', 'effects':'效应与区间',
@@ -11,6 +12,17 @@ FORM_LABELS={
  'raincloud':'云雨图', 'paired':'配对变化', 'locus':'基因组区域与结构',
  'stack':'堆积组成', 'curve':'变化曲线', 'interval':'区间估计', 'points':'观测点',
  'embedding':'降维嵌入', 'bubble':'点阵证据', 'network':'网络', 'bars':'条形统计', 'vector':'向量场'}
+NATIVE_LABELS={
+ 'figure_integrated_views.plot_integrated_view':{
+   'pca':'PCA · 离散椭圆、边缘比例与方差','volcano':'火山图 · 完整基因与堆积分布',
+   'qc':'QC · 云雨分布与样本分面','heatmap':'热图 · 注释、三角与表达程序',
+   'forest':'森林表 · 效应、区间与数值对齐','ma':'MA · 均值效应与边缘计数',
+   'marker_dot':'Marker 点阵 · 均值与检出率','bar':'数量与覆盖 · 全部独立单位',
+   'support':'支持计数 · 完整矩阵与总数','design':'设计 · 条件与批次编码'},
+ 'figure_annotation_views.plot_annotation_evidence':{'atlas':'细胞图谱 · 身份与多 Marker 证据','subgroup':'逐亚群多 Marker · 定位、特异性与表达'},
+ 'figure_enrichment_story.plot_enrichment_story':{'ora':'ORA · 比例、FDR与重叠数','gsea_comparison':'GSEA · NES方向与跨对比','gene_support':'通路成员 · 基因效应与支持'},
+ 'figure_coexpression_evidence.plot_coexpression_evidence':{'module_effects':'多对比效应 · 模块／通路／TF','program_profile':'供体分布 · 模块／通路／PSI','hub_network':'网络证据 · 共表达／PPI／Regulon','module_dynamics':'程序动态 · 模块与分支'},
+ 'refined':{'gsea_strip':'GSEA · 完整ES、命中与排序轨道'}}
 
 def form_navigation(rows,chapters):
     """A reusable drawing family is one entry; scoped datasets are examples.
@@ -31,9 +43,9 @@ def form_navigation(rows,chapters):
         members.sort(key=lambda r:(bool(r.get('variant')),r.get('order',0),r['id']))
         main=members[0];kinds=signature[1]
         if signature[0].endswith('plot_analysis_evidence') or signature[0].endswith('plot_transcriptomic_chapter'):
-            title=' + '.join(FORM_LABELS.get(k,k) for k in kinds)
+            title=' + '.join(FORM_LABELS.get(k,k)+((' ×'+str(n)) if n>1 else '') for k,n in Counter(kinds).items())
             if len(kinds)>1:title='组图 · '+title
-        else:title=main['title']
+        else:title=NATIVE_LABELS.get(signature[0],{}).get(kinds[0],main['title'])
         entry=dict(id=key,title=title,stage=main['stage'],default_id=main['id'],member_ids=[r['id'] for r in members],
                    chapters=list(dict.fromkeys(c for r in members for c in r['chapters'])),variant=all(r.get('variant',False) for r in members),
                    keywords=list(dict.fromkeys(k for r in members for k in r.get('keywords',[]))),
