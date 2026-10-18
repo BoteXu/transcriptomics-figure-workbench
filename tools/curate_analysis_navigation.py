@@ -16,13 +16,14 @@ NATIVE_LABELS={
  'figure_integrated_views.plot_integrated_view':{
    'pca':'PCA · 离散椭圆、边缘比例与方差','volcano':'火山图 · 完整基因与堆积分布',
    'qc':'QC · 云雨分布与样本分面','heatmap':'热图 · 注释、三角与表达程序',
-   'forest':'森林表 · 效应、区间与数值对齐','ma':'MA · 均值效应与边缘计数',
-   'marker_dot':'Marker 点阵 · 均值与检出率','bar':'数量与覆盖 · 全部独立单位',
+   'effect_table':'森林表 · 效应、区间与数值对齐','ma':'MA · 均值效应与边缘计数',
+   'marker_dot':'Marker 点阵 · 均值与检出率','unit_profile':'数量与覆盖 · 全部独立单位',
    'support':'支持计数 · 完整矩阵与总数','design':'设计 · 条件与批次编码'},
  'figure_annotation_views.plot_annotation_evidence':{'atlas':'细胞图谱 · 身份与多 Marker 证据','subgroup':'逐亚群多 Marker · 定位、特异性与表达'},
  'figure_enrichment_story.plot_enrichment_story':{'ora':'ORA · 比例、FDR与重叠数','gsea_comparison':'GSEA · NES方向与跨对比','gene_support':'通路成员 · 基因效应与支持'},
  'figure_coexpression_evidence.plot_coexpression_evidence':{'module_effects':'多对比效应 · 模块／通路／TF','program_profile':'供体分布 · 模块／通路／PSI','hub_network':'网络证据 · 共表达／PPI／Regulon','module_dynamics':'程序动态 · 模块与分支'},
- 'refined':{'gsea_strip':'GSEA · 完整ES、命中与排序轨道'}}
+ 'refined':{'gsea_strip':'GSEA · 完整ES、命中与排序轨道'},
+ 'figure_extensions.plot_annotated_heatmap':{'plot_annotated_heatmap':'热图 · 注释、三角与表达程序'}}
 
 def form_navigation(rows,chapters):
     """A reusable drawing family is one entry; scoped datasets are examples.

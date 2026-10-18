@@ -6,6 +6,10 @@ import {pathToFileURL} from 'node:url';
 const out=process.argv[2];if(!out)throw Error('Fresh evidence directory required');await fs.mkdir(out,{recursive:false});
 const base=path.resolve('skills/transcriptomics-figure-workbench/assets/analysis-library');
 const m=JSON.parse(await fs.readFile(path.join(base,'manifest.json'),'utf8'));
+for(const e of m.forms.entries){
+ const scopes=new Set(e.chapters.map(c=>c.split('.')[0]));
+ if(scopes.size>1)assert.ok(!/\bbulk\b|单细胞专用/i.test(e.title),'A reusable family title must not inherit one example cohort');
+}
 const {chromium}=await import(pathToFileURL(process.env.FIGURE_PLAYWRIGHT_MODULE));
 const options={headless:true};if(process.platform==='win32')options.channel='msedge';
 const browser=await chromium.launch(options),errors=[],external=[];
