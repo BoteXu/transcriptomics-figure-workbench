@@ -37,6 +37,7 @@ jobs:
           python tests/check_chapter_contracts.py
           python tests/check_selection_depth.py
           python tests/check_companion_catalog.py
+          python tests/check_visual_library.py
           python tests/check_private_profile_sync.py
           python tools/build_journal_review.py --check
           python tests/check_editorial_release.py
@@ -122,6 +123,7 @@ jobs:
           node tests/check_analysis_browser.mjs analysis-browser-ci
           node tests/check_companion_browser.mjs companion-browser-ci
           node tests/check_navigation_dedup.mjs navigation-dedup-ci
+          node tests/check_visual_library.mjs visual-library-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

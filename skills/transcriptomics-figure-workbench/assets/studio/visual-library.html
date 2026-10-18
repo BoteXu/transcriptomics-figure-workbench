@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>综合科研绘图库 · 全部方法与扩展</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef3f3;color:#28414a;font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}header{padding:23px 28px;background:#244d56;color:white}h1{font-size:25px;margin:0 0 5px}header p{margin:5px 0;color:#d7e8e6}a{color:#13787b}header a{color:#dfefeb}nav{display:flex;gap:16px;flex-wrap:wrap}.shell{display:grid;grid-template-columns:310px minmax(0,1fr);gap:20px;padding:20px}aside{padding:16px;background:white;border-radius:10px;position:sticky;top:14px;height:calc(100vh - 30px);overflow:auto}input,select,button{font:inherit;color:inherit}input[type=search],select{width:100%;padding:9px;border:1px solid #ccdbdd;border-radius:6px;background:white;margin:5px 0 11px}aside label{font-size:13px;display:block}button{cursor:pointer;border:1px solid #cfdee0;border-radius:6px;background:white;padding:8px 12px}#menu button{display:block;text-align:left;width:100%;font-size:13px;margin:6px 0}#menu button.active{background:#e4f2ed;border-color:#79aaa4}h2{font-size:23px;margin:15px 0 5px}h3{font-size:14px;margin:13px 0 5px}main{background:white;padding:24px;border-radius:10px;min-width:0}.muted{font-size:13px;color:#647d86}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.toolbar span{margin-right:auto}.selectors{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px;margin-top:15px}.selectors label{font-size:13px}#viewport{overflow:auto}#art{display:block;width:100%;height:auto;margin:18px 0}#art.native{width:auto;max-width:none}.note{padding:12px 15px;background:#eff6f4;border-left:3px solid #87b2a7;margin:14px 0}.links{display:flex;gap:16px;flex-wrap:wrap}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2f6f7;padding:14px;font:12px/1.6 ui-monospace,monospace}footer{font-size:12px;color:#69818a;margin-top:22px}#empty{padding:32px}@media(max-width:850px){.shell{display:block;padding:10px}aside{position:static;height:320px;margin-bottom:12px}main{padding:14px}header{padding:18px}h1{font-size:21px}.selectors{grid-template-columns:1fr;gap:0}}@media print{aside,.toolbar,.selectors,.links{display:none}.shell{display:block}header{background:white;color:#244d56}}
+</style>
+<header><h1>综合科研绘图库</h1><p>多组学 · 计算生物学 · 计算机建模。每种画法集中一处，具体方法、配套示例和历史版本全部保留。</p><nav><a href="../analysis-library/index.html">58章分析配套</a><a href="../routine-gallery/index.html">Bulk／单细胞常规图</a><a href="../figure-studio.html">绘图工作台</a><a href="../forms-gallery/index.html">原始画法目录</a></nav></header>
+<style>#methodLine{display:none}@media(max-width:850px){aside{height:auto}#methodLine{display:block}#menu{display:none}}</style>
+<div class="shell"><aside><input id="search" type="search" placeholder="雷达、三维、GSEA、WGCNA、模型评估…" aria-label="搜索全部画法"><label for="domain">应用领域</label><select id="domain"></select><label for="chapter">具体分析</label><select id="chapter"></select><label><input id="history" type="checkbox"> 同时查阅历史版本（不隐藏现有方法）</label><p id="summary" class="muted"></p><label id="methodLine">选择画法<select id="methodSelect"></select></label><div id="menu"></div></aside>
+<main><div class="toolbar"><button id="prev">← 上一种画法</button><span id="counter" class="muted"></span><button id="next">下一种画法 →</button><button id="zoom">原像素／适应宽度</button></div><div id="empty" hidden>没有匹配的示例，请调整检索条件。</div><section id="content"><h2 id="title"></h2><div id="meta" class="muted"></div><div class="selectors"><label>画法／扩展类型<select id="subtype"></select></label><label>对应数据示例与自定义布局<select id="edition"></select></label></div><div id="viewport"><img id="art" alt=""></div><div id="definition" class="note"></div><div id="links" class="links"></div><details><summary>原始入口、绘图参数和验收来源</summary><pre id="parameters"></pre></details><footer>所有示例是已有的冻结绘图或固定参考材料。本次目录整理不增加科学算法，不合并项目结果，也不为旧图重新授予美观性验收。可直接调用的 FigureSpec 与仅作固定参考的旧图明确区分；旧版完整下载需要联网，当前画法与示例可离线浏览。</footer></section></main></div>
+<script>
+const DATA=/*DATA*/{};
+const $=id=>document.getElementById(id),el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n};
+const byId=new Map(DATA.records.map(r=>[r.id,r]));
+let entries=[],current=0,selected='',subtype='';
+function options(id,items){$(id).replaceChildren();for(const[v,t]of items){const o=el('option',t);o.value=v;$(id).append(o)}}
+options('domain',[['','全部领域'],...DATA.domains.map(d=>[d.id,d.label])]);
+options('chapter',[['','全部分析与通用方法'],...DATA.chapters.map(c=>[c.id,c.label])]);
+function available(e){const q=$('search').value.trim().toLowerCase(),c=$('chapter').value,d=$('domain').value;return e.member_ids.map(id=>byId.get(id)).filter(r=>(!r.history||$('history').checked)&&(!c||r.chapters.includes(c))&&(!d||r.domains.includes(d))&&(!q||JSON.stringify([e.id,e.title,r.id,r.title,r.subtype,r.form,r.renderer,r.chapters,r.parameters]).toLowerCase().includes(q)))}
+function draw(preferred){
+ const e=entries[current];$('empty').hidden=!!e;$('content').hidden=!e;$('counter').textContent=e?`${current+1} / ${entries.length}`:'';$('prev').disabled=current<=0;$('next').disabled=current>=entries.length-1;
+ for(const b of $('menu').querySelectorAll('button'))b.classList.toggle('active',b.dataset.id===e?.id);
+ $('methodSelect').value=e?.id||'';
+ if(!e)return;
+ const all=available(e),wanted=all.find(r=>r.id===preferred)||all.find(r=>r.id===selected);
+ if(wanted)subtype=wanted.form;
+ const forms=[...new Set(all.map(r=>r.form))];if(!forms.includes(subtype))subtype=all.find(r=>r.id===e.default_id)?.form||forms[0];
+ options('subtype',forms.map(f=>[f,DATA.form_labels[f]||f]));$('subtype').value=subtype;
+ const choices=all.filter(r=>r.form===subtype),r=choices.find(r=>r.id===preferred)||choices.find(r=>r.id===selected)||choices.find(r=>r.id===e.default_id)||choices[0];selected=r.id;
+ options('edition',choices.map(r=>[r.id,(r.history?'历史 · ':'')+r.title+' ['+r.id+']']));$('edition').value=r.id;
+ $('title').textContent=e.title;$('meta').textContent=(r.history?'历史预览 · ':'当前示例 · ')+r.title+' · '+(r.executable_spec?'有可调用 FigureSpec':'固定参考／历史材料')+' · '+choices.length+' 个对应示例';
+ $('art').src=r.assets.png;$('art').alt=r.title;$('art').classList.remove('native');$('definition').textContent=r.definition;
+ $('links').replaceChildren();for(const[k,label]of [['png','当前预览 PNG'],['original_png','旧版完整 PNG（联网）'],['svg','SVG'],['pdf','PDF'],['tsv','冻结数据 TSV'],['spec','可调用 FigureSpec'],['meta','原始记录']]){if(!r.assets[k])continue;const a=el('a',label);a.href=r.assets[k];a.target='_blank';a.rel='noopener';$('links').append(a)}
+ const a=el('a','原图库与上下文');a.href=r.source_gallery;$('links').append(a);
+ $('parameters').textContent=JSON.stringify({source_id:r.id,method_family:e.id,original_form:r.form,renderer:r.renderer,parameters:r.parameters,chapters:r.chapters,review:r.review,aliases:r.aliases},null,2);
+ history.replaceState(null,'','#'+encodeURIComponent(r.id));
+}
+function filter(preferred){entries=DATA.entries.filter(e=>available(e).length);options('methodSelect',entries.map(e=>[e.id,e.title]));const row=byId.get(preferred||selected);current=Math.max(0,entries.findIndex(e=>e.id===row?.method));$('menu').replaceChildren();for(const e of entries){const b=el('button',e.title);b.dataset.id=e.id;b.onclick=()=>{current=entries.indexOf(e);selected='';subtype='';draw()};$('menu').append(b)}$('summary').textContent=entries.length+' 个画法族 · '+entries.reduce((n,e)=>n+available(e).length,0)+' 个可选示例。重复版本收在画法内；三维和雷达正常显示。';draw(preferred)}
+function openHash(){let id;try{id=decodeURIComponent(location.hash.slice(1))}catch{id=''}id=DATA.aliases[id]||id;const r=byId.get(id);if(!r)return false;$('search').value='';$('chapter').value='';$('domain').value='';if(r.history)$('history').checked=true;selected=id;subtype=r.form;filter(id);return true}
+for(const id of ['search','domain','chapter','history'])$(id).addEventListener(id==='search'?'input':'change',()=>{subtype='';filter()});
+$('edition').onchange=()=>draw($('edition').value);$('subtype').onchange=()=>{subtype=$('subtype').value;selected='';draw()};
+ $('methodSelect').onchange=()=>{current=entries.findIndex(e=>e.id===$('methodSelect').value);selected='';subtype='';draw()};
+$('prev').onclick=()=>{if(current>0){current--;selected='';subtype='';draw()}};$('next').onclick=()=>{if(current<entries.length-1){current++;selected='';subtype='';draw()}};
+$('zoom').onclick=()=>$('art').classList.toggle('native');window.addEventListener('hashchange',openHash);if(!openHash())filter();
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName))return;if(e.key==='ArrowRight')$('next').click();if(e.key==='ArrowLeft')$('prev').click()});
+</script></html>

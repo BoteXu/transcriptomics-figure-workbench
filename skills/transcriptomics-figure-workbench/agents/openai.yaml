@@ -1,6 +1,6 @@
 interface:
-  display_name: "科研数据与多组学绘图工作台"
-  short_description: "通用与方法专用绘图、GSEA美化、冻结结果、离线预览和版本验收"
-  default_prompt: "使用 $transcriptomics-figure-workbench 从当前实际目录选择绘图器，检查冻结输入与来源，生成统一课题样式的图形；提供逐图预览、可复核导出和独立视觉验收。"
+  display_name: "综合科研绘图工作台"
+  short_description: "多组学、计算生物学与建模绘图，完整方法与扩展、冻结输入及逐图验收"
+  default_prompt: "使用 $transcriptomics-figure-workbench 从综合绘图库按研究问题和已有通道选择画法及扩展，检查冻结输入、来源和可调用状态，适配单图与组图布局；提供实际预览与可复核导出，并在目标尺寸逐图检查。保留三维、雷达及全部已有方法。"
 policy:
   allow_implicit_invocation: true

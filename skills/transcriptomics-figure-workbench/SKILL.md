@@ -1,16 +1,42 @@
 ---
 name: transcriptomics-figure-workbench
-description: Design, render and improve publication figures from frozen scientific result tables. Prefer polished examples that match the research question, preserve statistical channels and identity, check the intended physical size and record artifact-bound visual review. Includes omics, enrichment, effects, networks, distributions and traceable multi-panel figures.
+description: Design, render and improve scientific figures for multi-omics, computational biology and computer modelling from frozen results. Select complete, attractive examples by question and available channels; preserve scales, uncertainty and identity, adapt single and multi-panel layouts, and inspect actual exports. Includes genomics, expression, networks, spatial data, structures, model evaluation and geometric profiles.
 ---
 
-# Scientific Figure Workbench
+# Scientific Figure Workbench · Multi-omics, Computational Biology and Modelling
+
+## Complete method discovery and preservation
+
+Start with the [complete visual library](assets/visual-library/index.html), rather
+than treating the transcriptomics analysis library as the whole package.
+The complete library indexes 19 existing galleries, keeps all 90 base forms and
+458 historical examples, and nests related forms in 83 parent families.
+Radar, 3D surface, circular networks, box, violin, and their alternatives remain
+selectable. A drawing is not removed merely because another form is preferred.
+The original folder and command names remain compatible.
+
+Use `visual-library --search <question-or-form>` for cross-domain discovery and
+`visual-template --entry <explicit-example-ID> --output <fresh-directory>` for a
+shipped executable FigureSpec and its exact frozen input. Historical fixed
+references cannot be exported as executable specs. Inspect [the generated
+coverage inventory](references/visual-library-coverage.md) and [the cross-domain
+selection rules](references/comprehensive-selection.md). The inventory accounts
+for all 133 registered Python entries: 132 have current or historical examples;
+one is a delegating single-panel wrapper. This does not mean every possible
+visualization, every analysis backend or every native software package is covered.
+
+Treat form, application domain, scientific scope, and example/layout as separate
+dimensions. Related matrices share a parent; TOM hierarchy, event states,
+correlations and expression keep their distinct definitions and required inputs.
+Repeated sources or colours do not become new methods. Preserve all exact
+assets, aliases, scientific results and private/customized profiles.
 
 ## Stable, deduplicated gallery navigation
 
-Use the current analysis library's default **按画法去重** view: one reusable form
+Within transcriptomics, use the analysis library's **按画法去重** view: one reusable form
 with its scoped examples and layout extensions inside the entry. The 550 source
-pages resolve to 103 form families, with 76 visible before enabling optional
-layouts. Heatmap/effect/raincloud examples are not separate methods merely
+pages resolve to 103 analysis-specific form families, with 76 visible before enabling optional
+layouts. These are a subset of the complete visual library. Heatmap/effect/raincloud examples are not separate methods merely
 because the data or title changes. Switch to **按分析问题阅读** for complementary
 questions within a chapter. Preserve old IDs, numeric routine links, fixed
 chapter order and the current image when toggling modes. Read

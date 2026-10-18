@@ -1,5 +1,12 @@
 # Change log
 
+## 0.10.0 source update · complete cross-domain visual library
+
+- Restored one complete entry point across 19 existing galleries. Preserve all 90 base forms, 458 historical examples, exact assets and original links, including radar, 3D surfaces, circular networks, structural references, multiomics and model-evaluation views.
+- Group related drawing forms across renderer/package boundaries into 83 parent families. Distinct modes, scientific definitions, datasets and custom layouts stay selectable within the family. Repeated panels, data sizes or colours do not become new method types.
+- Account for all 133 registered plotting entries: 90 have current FigureSpec examples, 42 have historical recipes, and one delegates a single panel to an existing renderer. These are implementation/coverage states, not new runtime, aesthetic or scientific acceptance.
+- Add offline cross-domain search, exact frozen-template export, source coverage checks and real-browser checks for all retained examples and aliases. Keep the old transcriptomics command and folder names compatible.
+
 ## 0.9.4
 
 - Fixed the unreleased 0.9.3 candidate's acceptance failures: preserve supplied radial bar heights after nonzero-origin unit conversion; update the stale 150-point dot-area assertion to the reviewed 260-point scale.

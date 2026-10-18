@@ -17,6 +17,8 @@ def main():
     method=commands.add_parser('method');method.add_argument('entry')
     forms=commands.add_parser('forms');forms.add_argument('--search',default='')
     form=commands.add_parser('form');form.add_argument('entry')
+    visual=commands.add_parser('visual-library');visual.add_argument('--search',default='')
+    visual_template=commands.add_parser('visual-template');visual_template.add_argument('--entry',required=True);visual_template.add_argument('--output',required=True,type=Path)
     lp=commands.add_parser('layout-plan');lp.add_argument('--request',required=True,type=Path);lp.add_argument('--output',required=True,type=Path)
     le=commands.add_parser('layout-export');le.add_argument('--plan',required=True,type=Path);le.add_argument('--output',required=True,type=Path)
     li=commands.add_parser('layout-inspect');li.add_argument('--bundle',required=True,type=Path);li.add_argument('--record',type=Path)
@@ -91,6 +93,12 @@ def main():
     elif args.command=='view-template':
         from figure_workbench.views import view_template
         result=view_template(args.entry,args.output)
+    elif args.command=='visual-library':
+        from figure_workbench.visual_library import find
+        result=find(args.search)
+    elif args.command=='visual-template':
+        from figure_workbench.visual_library import export
+        result=export(args.entry,args.output)
     elif args.command=='analysis-library':
         from figure_workbench.analysis_suites import analysis_library
         result={'suites':analysis_library(args.search),'analysis_performed':False}

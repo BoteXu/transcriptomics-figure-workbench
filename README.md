@@ -1,10 +1,21 @@
-# 科研数据绘图工作台 · Transcriptomics Figure Workbench
+# 综合科研绘图工作台 · Scientific Figure Workbench
+
+## 综合绘图库：多组学、计算生物学与计算机建模
+
+[打开完整绘图库](skills/transcriptomics-figure-workbench/assets/visual-library/index.html) · [方法覆盖与真实状态](skills/transcriptomics-figure-workbench/references/visual-library-coverage.md) · [跨领域选图规则](skills/transcriptomics-figure-workbench/references/comprehensive-selection.md)
+
+- **恢复完整范围：** 主目录覆盖19份现有图库；90个基础画法、458个历史示例及原始入口全部保留。雷达、三维曲面、环形网络、结构、质谱、基因组轨道和模型评估不再被转录组目录遮住。
+- **按画法去重，扩展仍可选：** 90种基础画法与专用配套归入83个父族，箱线／小提琴／云雨、矩阵注释／相关／状态等在同一父族内具名选择。不同数据、配色和布局不重复占据主菜单；分析、量尺、分母和准确文件分别保留。
+- **覆盖可以核对：** 1884条来源记录指向1334个保留示例条目，其中876个现有示例、458个历史条目；它们不是独立方法数。133个登记绘图入口中132个有当前或历史示例，1个是单面板委托封装，没有遗漏未归档的登记入口。
+- **综合检索与真实模板：** `visual-library --search 雷达` 跨领域查找；`visual-template --entry radar --output <fresh-directory>` 导出当前可运行配置与原始冻结表。历史参考明确区分，不伪装成可执行 FigureSpec。原有命令及目录名称继续兼容。
+
+本轮整理覆盖与访问入口；不把旧图重新宣称为已经达到美观验收。三维曲面有实际示例，但不因此宣称具备所有三维类型、体渲染或分子动画。当前绘图示例可离线浏览，历史版本的完整归档下载沿用既有公开链接。结构固定参考、绘图代码、原生软件包运行和真实科学分析分别记录。
 
 ## 图册去重与阅读顺序修订
 
-[打开去重图册](skills/transcriptomics-figure-workbench/assets/analysis-library/index.html) · [去重规则与统计范围](skills/transcriptomics-figure-workbench/references/navigation-dedup.md)
+[打开转录组分析子目录](skills/transcriptomics-figure-workbench/assets/analysis-library/index.html) · [去重规则与统计范围](skills/transcriptomics-figure-workbench/references/navigation-dedup.md)
 
-- **同一画法收成一个条目：** 统一目录550份来源示例归入103个可复用画法族，默认显示76族。热图、效应区间、云雨图等的不同数据示例，以及近似的单列／三列版在条目内切换。
+- **分析子目录的统计：** 550份转录组来源示例归入103个可复用画法族，默认显示76族。这仅是分析子目录，不是综合绘图库的全部方法。热图、效应区间、云雨图等的不同数据示例，以及近似的单列／三列版在条目内切换。
 - **保留按分析阅读：** 可切换回58章的分析问题目录，互补的QC、主结果、支持和验证仍可分别选取。画法合并没有删除科学问题或更改输入数据。
 - **固定顺序和原链接：** 浏览模式与扩展选项切换保留当前图；550个旧图ID全部可达，常规图库的旧数字链接和前版比较也保留。
 - **计数更准确：** 550表示来源文件页，103表示可复用画法族；不同图库有重叠，不能相加作为算法总数。旧说明中“550个去重实际图页”指去除了重复文件引用，未处理近似画法，现已纠正。
