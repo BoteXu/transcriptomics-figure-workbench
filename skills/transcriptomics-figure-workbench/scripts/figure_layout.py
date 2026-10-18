@@ -127,7 +127,16 @@ def optimize_guide_layout(fig):
 def add_software_bands(fig, figure_id, font_family='sans-serif'):
     """Dedicated synthetic provenance bands; never replace a scientific title."""
     if hasattr(fig,'_software_band_artists'):
-        fig._software_band_artists[0].set_text('SYNTHETIC DEMO | '+figure_id)
+        header=fig._software_band_artists[0]
+        header.set_text('SYNTHETIC DEMO | '+figure_id)
+        # A component renderer may expand the canvas after its first stamp.
+        # Reanchor the shared provenance lanes on the final whole figure;
+        # retaining a component transform can push a long ID off the page.
+        for artist in fig._software_band_artists:
+            artist.set_transform(fig.transFigure);artist.set_horizontalalignment('left')
+        header.set_position((.02,1-.04/fig.get_figheight()))
+        if len(fig._software_band_artists)>1:
+            fig._software_band_artists[1].set_position((.02,.04/fig.get_figheight()))
         return fig
     fig.canvas.draw();old=np.asarray(fig.get_size_inches(),float)
     _expand_canvas(fig,old+[0,.50],[0,.25])

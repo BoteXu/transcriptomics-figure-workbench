@@ -15,5 +15,15 @@ chapterOptions();const initial=decodeURIComponent(location.hash.slice(1));const 
 </script></html>'''
 
 
-def page(rows, chapters, scope):
-    return PAGE.replace('/*DATA*/',json.dumps(dict(rows=rows,chapters=chapters,scope=scope),ensure_ascii=False).replace('<','\\u003c'))
+def page(rows, chapters, scope, default_mode='forms', initial_chapter=None):
+    from pathlib import Path
+    from curate_analysis_navigation import curated_entries,form_navigation
+    navigation=curated_entries(rows,chapters)
+    data=json.dumps(dict(rows=rows,chapters=chapters,scope=scope,navigation=navigation,forms=form_navigation(rows,chapters),default_mode=default_mode,initial_chapter=initial_chapter),ensure_ascii=False).replace('<','\\u003c')
+    template=PAGE.replace('<div id="viewport">','<div id="editionLine" class="details"><label for="edition">画法与布局扩展：</label><select id="edition" aria-label="选择同一图的扩展版本" style="max-width:100%"></select></div><div id="viewport">')
+    template=template.replace('同时展示替代画法与自定义布局','查看补充画法与布局扩展')
+    template=template.replace('<button id="zoom">','<button id="compare" hidden>查看前版</button><button id="zoom">')
+    template=template.replace('<select id="chapter"','<select id="browseMode" aria-label="浏览方式"><option value="forms">按画法去重</option><option value="analysis">按分析问题阅读</option></select><select id="chapter"')
+    start=template.index('<script>');end=template.index('</script>',start)
+    script=(Path(__file__).resolve().parents[1]/'skills/transcriptomics-figure-workbench/assets/analysis-navigation.js').read_text(encoding='utf8')
+    return template[:start]+'<script>const DATA='+data+';\n'+script+template[end:]

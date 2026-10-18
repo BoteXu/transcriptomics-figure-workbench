@@ -1,11 +1,20 @@
 # 科研数据绘图工作台 · Transcriptomics Figure Workbench
 
+## 图册去重与阅读顺序修订
+
+[打开去重图册](skills/transcriptomics-figure-workbench/assets/analysis-library/index.html) · [去重规则与统计范围](skills/transcriptomics-figure-workbench/references/navigation-dedup.md)
+
+- **同一画法收成一个条目：** 统一目录550份来源示例归入103个可复用画法族，默认显示76族。热图、效应区间、云雨图等的不同数据示例，以及近似的单列／三列版在条目内切换。
+- **保留按分析阅读：** 可切换回58章的分析问题目录，互补的QC、主结果、支持和验证仍可分别选取。画法合并没有删除科学问题或更改输入数据。
+- **固定顺序和原链接：** 浏览模式与扩展选项切换保留当前图；550个旧图ID全部可达，常规图库的旧数字链接和前版比较也保留。
+- **计数更准确：** 550表示来源文件页，103表示可复用画法族；不同图库有重叠，不能相加作为算法总数。旧说明中“550个去重实际图页”指去除了重复文件引用，未处理近似画法，现已纠正。
+
 ## v0.10.0 逐分析的完整配套画法
 
 [58章统一分析目录](skills/transcriptomics-figure-workbench/assets/analysis-library/index.html) · [逐项问题与画法清单](skills/transcriptomics-figure-workbench/references/analysis-companion-coverage-v100.md) · [实际配套示例](skills/transcriptomics-figure-workbench/assets/companion-gallery/index.html) · [完整配套图册 PDF](skills/transcriptomics-figure-workbench/assets/companion-gallery/All_Analysis_Companions.pdf)
 
 - **按分析交付整套图：** 保留 WGCNA／hdWGCNA 的建网、模块、性状、功能和验证路线，其余56章分别补充输入/QC、主结果支持、效应与不确定性、功能解释和敏感性／独立复现。剪接、VDJ、空间、velocity、Perturb-seq等按实际数据前提选择。
-- **统一目录可逐项查找：** 58个分析章节连接597个调用视图与550个去重实际图页；单面板入口、替代画法、组图和布局分别统计。
+- **统一目录可逐项查找：** 58个分析章节连接597个调用视图与550份来源文件页；当前按103个可复用画法族导航，单面板入口、替代画法、组图和布局分别统计。
 - **有代码、有表、有实际导出：** 配套库包含307份单项图、56份互补组图、56份扩展数据单列阅读版及6份三列版，共425份明确虚构的冻结示例。每份提供 PNG／SVG／PDF、可运行配置和准确 TSV；布局数量不计作新分析算法。
 - **默认丰富且有依据：** 专用 PCA、火山/MA、GSEA、逐亚群多marker主图继续使用；供体分布优先保留全部点与给定云形，效应图带独立对齐数值区，比例图保留完整类别和分母，物理基因座保留参考版本、链与真实区间尺度。
 - **布局随内容调整：** 森林图行高随条目数增长，组图按各行内容分配高度，支持显式行列和物理尺寸。单列长页用于完整阅读；投稿尺寸须另行测量并复看，不能把宽版缩小后的小字当作合格。

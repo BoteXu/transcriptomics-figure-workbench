@@ -45,6 +45,9 @@ def select_stages(assay, request):
 
 
 def study_plan(manifest, request, base):
+    if isinstance(manifest,dict) and manifest.get('schema_version')==2:
+        from .study_bundle import plan_bundle
+        return plan_bundle(manifest,request,base)
     required={'schema_version','assay','title','contrast','independent_unit','denominator','frozen_results','upstream_qc','results'}
     if not isinstance(manifest, dict) or set(manifest)!=required or manifest['schema_version']!=1:
         raise ValueError('Use the complete documented StudyFigureManifest')
@@ -152,6 +155,9 @@ def study_plan(manifest, request, base):
 
 
 def render_study(plan, output):
+    if plan.get('state')=='STUDY_BUNDLE_PLANNED':
+        from .study_bundle import render_bundle
+        return render_bundle(plan,output)
     if plan.get('state')!='FIGURE_SET_PLANNED':raise ValueError('Resolve every figure-set HOLD before rendering')
     assay=plan.get('assay');panels=plan.get('panels')
     if assay not in STAGES or not isinstance(panels,list) or not 1<=len(panels)<=50:raise ValueError('A selected supported figure set is required')

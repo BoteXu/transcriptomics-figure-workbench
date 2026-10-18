@@ -75,6 +75,7 @@ def build(out,seed=20261017):
     # Exact toy walks are constructed BEFORE plotting from declared hit/miss
     # increments. They are synthetic frozen outputs, not computed research GSEA.
     # Ranking comes from the same fictional gene-effect list, with no new fit.
+    excluded_ora={}
     for assay,de_key,track_key,ora_key in [('bulk','BulkDE','EnrichmentTracks','Pathways'),('single_cell','DonorDE','DonorEnrichmentTracks','DonorPathways')]:
         de=read(de_key).query("record_type == 'de'").sort_values('log2FC',ascending=False,kind='stable')
         n=len(de);ranks=np.arange(1,n+1);metric=de.log2FC.to_numpy();genes=de.gene.to_numpy()
@@ -105,10 +106,15 @@ def build(out,seed=20261017):
         s=spec(ora_key);s['parameters'].update(mode='gsea_comparison',title='GSEA pathway responses and gene support',background_definition='Complete fictional 1200-gene ranking',tested_size=n,query_size=None,support_contrast='Treated versus Control',nes_limits=[-3,3],gene_effect_limits=[-6,6])
         add(assay,'enrichment_contrasts',assay+'_GSEASummary',support,s)
         s['parameters'].update(mode='gene_support',title='ORA membership and selected gene effects',query_size=len(query))
-        orasupport=pd.concat([pd.DataFrame(ora),pd.DataFrame(membership),selected],ignore_index=True)
+        # A new seed may leave a set without any query overlap. Record the
+        # exclusion instead of inventing a positive enriched overlap.
+        excluded_ora[assay]=[r['term'] for r in ora if r['count']==0]
+        ora=[r for r in ora if r['count']>0];ora_names={r['term'] for r in ora}
+        orasupport=pd.concat([pd.DataFrame(ora),pd.DataFrame([r for r in membership if r['term'] in ora_names]),selected],ignore_index=True)
         add(assay,'pathway_gene_support',assay+'_GeneSupport',orasupport,s)
         s=spec(ora_key);s['parameters'].update(query_size=len(query),tested_size=n,background_definition=str(len(query))+' fictional DE-query genes / 1200 tested genes',gene_effect_limits=[-6,6])
-        put(ora_key,pd.concat([pd.DataFrame(ora),pd.DataFrame(membership),selected],ignore_index=True),s)
+        s['parameters']['selection_definition']='All toy sets with nonzero declared query overlap; exclusions recorded separately'
+        put(ora_key,orasupport,s)
     for assay,m in manifests.items():
         m['title']='Synthetic '+assay+' routine result set / seed '+str(seed)
         (out/(assay+'.manifest.json')).write_text(json.dumps(m,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
@@ -133,6 +139,7 @@ def build(out,seed=20261017):
         s['export'].update(target_width_mm=240)
         put(key,d,s)
     (out/'coherence.json').write_text(json.dumps(dict(seed=seed,donors=12,cells=900,tested_genes=1200,marker_channels=20,markers_per_identity=4,identities=groups,analysis_performed=False,limits=['Synthetic frozen result construction only; no RNA-seq engine acceptance','The declared 95% PCA contours are illustrative reference dispersion, not fitted sample confidence','NES, FDR and uncertainty values are fictional inputs, not inferred probabilities','Primary single-cell donor contrast is explicitly myeloid; no other cell-type DE is implied'],checks=['Shared exact cell coordinates and expression across overview and subgroup pages','Marker means and detection match all displayed cell values','GSEA hit genes, exact walk increments and leading edge agree','ORA query and overlap ratios use the declared fictional DE query']),indent=2)+'\n')
+    (out/'ora-exclusions.json').write_text(json.dumps(dict(reason='Zero overlap with the exact toy DE query; not a biological negative result',terms=excluded_ora),indent=2)+'\n',encoding='utf8')
     print(json.dumps(dict(status='ROUTINE_STUDY_FIXTURES_PREPARED',figures={a:len(m['results']) for a,m in manifests.items()},seed=seed)),flush=True)
 
 

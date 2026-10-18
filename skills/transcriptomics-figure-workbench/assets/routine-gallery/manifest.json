@@ -20608,5 +20608,1158 @@
       ]
     }
   ],
-  "scientific_acceptance": false
+  "scientific_acceptance": false,
+  "navigation": {
+    "entries": [
+      {
+        "id": "StudyDesign",
+        "title": "条件、批次与设计矩阵",
+        "stage": "qc",
+        "chapters": [
+          "bulk.design"
+        ],
+        "default_id": "StudyDesign",
+        "member_ids": [
+          "StudyDesign"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 5,
+        "order": 0
+      },
+      {
+        "id": "BulkMain",
+        "title": "Bulk 研究总览",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.design"
+        ],
+        "default_id": "BulkMain",
+        "member_ids": [
+          "BulkMain"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 0,
+        "order": 1
+      },
+      {
+        "id": "LibrarySizes",
+        "title": "Bulk 文库覆盖",
+        "stage": "qc",
+        "chapters": [
+          "bulk.reads"
+        ],
+        "default_id": "LibrarySizes",
+        "member_ids": [
+          "LibrarySizes"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 4,
+        "order": 2
+      },
+      {
+        "id": "BulkQC",
+        "title": "Bulk 表达质控云雨图",
+        "stage": "qc",
+        "chapters": [
+          "bulk.normalization"
+        ],
+        "default_id": "BulkQC",
+        "member_ids": [
+          "BulkQC"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 1,
+        "order": 3
+      },
+      {
+        "id": "BulkPCA",
+        "title": "PCA：样本、椭圆、边缘比例与解释方差",
+        "stage": "qc",
+        "chapters": [
+          "bulk.batch"
+        ],
+        "default_id": "BulkPCA",
+        "member_ids": [
+          "BulkPCA"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 2,
+        "order": 4
+      },
+      {
+        "id": "BulkCorrelation",
+        "title": "Bulk 样本相关性",
+        "stage": "qc",
+        "chapters": [
+          "bulk.batch"
+        ],
+        "default_id": "BulkCorrelation",
+        "member_ids": [
+          "BulkCorrelation"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 3,
+        "order": 5
+      },
+      {
+        "id": "BulkDE",
+        "title": "Bulk 火山图与完整堆积分布",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.differential"
+        ],
+        "default_id": "BulkDE",
+        "member_ids": [
+          "BulkDE"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 6,
+        "order": 6
+      },
+      {
+        "id": "GeneEffects",
+        "title": "基因效应与区间",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.differential"
+        ],
+        "default_id": "GeneEffects",
+        "member_ids": [
+          "GeneEffects"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 8,
+        "order": 7
+      },
+      {
+        "id": "BulkMA",
+        "title": "Bulk MA 与完整边缘分布",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.differential"
+        ],
+        "default_id": "BulkMA",
+        "member_ids": [
+          "BulkMA"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 9,
+        "order": 8
+      },
+      {
+        "id": "BulkHeatmap",
+        "title": "Bulk 预先指定的表达程序",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.programs"
+        ],
+        "default_id": "BulkHeatmap",
+        "member_ids": [
+          "BulkHeatmap"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 7,
+        "order": 9
+      },
+      {
+        "id": "GeneExpression",
+        "title": "四个指定基因的逐供体云雨图",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.programs"
+        ],
+        "default_id": "GeneExpression",
+        "member_ids": [
+          "GeneExpression"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 10,
+        "order": 10
+      },
+      {
+        "id": "Pathways",
+        "title": "Bulk ORA 富集与基因支持",
+        "stage": "function",
+        "chapters": [
+          "bulk.ora"
+        ],
+        "default_id": "Pathways",
+        "member_ids": [
+          "Pathways"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 11,
+        "order": 11
+      },
+      {
+        "id": "bulk_GSEASummary",
+        "title": "Bulk GSEA 通路效应与基因支持",
+        "stage": "function",
+        "chapters": [
+          "bulk.pathway_contrasts"
+        ],
+        "default_id": "bulk_GSEASummary",
+        "member_ids": [
+          "bulk_GSEASummary"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 13,
+        "order": 12
+      },
+      {
+        "id": "bulk_GeneSupport",
+        "title": "Bulk ORA 成员与基因效应",
+        "stage": "function",
+        "chapters": [
+          "bulk.gene_support"
+        ],
+        "default_id": "bulk_GeneSupport",
+        "member_ids": [
+          "bulk_GeneSupport"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 14,
+        "order": 13
+      },
+      {
+        "id": "EnrichmentTracks",
+        "title": "Bulk GSEA：三条完整排序轨道",
+        "stage": "function",
+        "chapters": [
+          "bulk.gsea_multitrack"
+        ],
+        "default_id": "EnrichmentTracks",
+        "member_ids": [
+          "EnrichmentTracks",
+          "bulk_GSEADetail_Reading",
+          "EnrichmentTracks_Custom"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 12,
+        "order": 14
+      },
+      {
+        "id": "DonorCounts",
+        "title": "单细胞供体覆盖",
+        "stage": "qc",
+        "chapters": [
+          "single_cell.design"
+        ],
+        "default_id": "DonorCounts",
+        "member_ids": [
+          "DonorCounts"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 16,
+        "order": 15
+      },
+      {
+        "id": "CellStudyDesign",
+        "title": "单细胞条件与批次设计",
+        "stage": "qc",
+        "chapters": [
+          "single_cell.design"
+        ],
+        "default_id": "CellStudyDesign",
+        "member_ids": [
+          "CellStudyDesign"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 18,
+        "order": 16
+      },
+      {
+        "id": "CellQC",
+        "title": "单细胞三项质控云雨图",
+        "stage": "qc",
+        "chapters": [
+          "single_cell.qc"
+        ],
+        "default_id": "CellQC",
+        "member_ids": [
+          "CellQC"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 15,
+        "order": 17
+      },
+      {
+        "id": "CellBatches",
+        "title": "批次分面：保持完整坐标",
+        "stage": "qc",
+        "chapters": [
+          "single_cell.integration"
+        ],
+        "default_id": "CellBatches",
+        "member_ids": [
+          "CellBatches"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 17,
+        "order": 18
+      },
+      {
+        "id": "CellTypes",
+        "title": "单细胞身份图谱与 20 个 marker 证据",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.annotation"
+        ],
+        "default_id": "CellTypes",
+        "member_ids": [
+          "CellTypes"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 19,
+        "order": 19
+      },
+      {
+        "id": "ConditionAtlas",
+        "title": "按条件分开的细胞图谱：统一坐标范围",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.annotation"
+        ],
+        "default_id": "ConditionAtlas",
+        "member_ids": [
+          "ConditionAtlas"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 27,
+        "order": 20
+      },
+      {
+        "id": "Subgroup_01",
+        "title": "T cells：定位、跨群特异性与四个 marker",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.subcluster"
+        ],
+        "default_id": "Subgroup_01",
+        "member_ids": [
+          "Subgroup_01",
+          "Subgroup_01_Custom"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 22,
+        "order": 21
+      },
+      {
+        "id": "Subgroup_02",
+        "title": "B cells：定位、跨群特异性与四个 marker",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.subcluster"
+        ],
+        "default_id": "Subgroup_02",
+        "member_ids": [
+          "Subgroup_02"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 23,
+        "order": 22
+      },
+      {
+        "id": "Subgroup_03",
+        "title": "Myeloid：定位、跨群特异性与四个 marker",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.subcluster"
+        ],
+        "default_id": "Subgroup_03",
+        "member_ids": [
+          "Subgroup_03",
+          "Subgroup_03_Custom"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 24,
+        "order": 23
+      },
+      {
+        "id": "Subgroup_04",
+        "title": "Stromal：定位、跨群特异性与四个 marker",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.subcluster"
+        ],
+        "default_id": "Subgroup_04",
+        "member_ids": [
+          "Subgroup_04"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 25,
+        "order": 24
+      },
+      {
+        "id": "Subgroup_05",
+        "title": "Endothelial：定位、跨群特异性与四个 marker",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.subcluster"
+        ],
+        "default_id": "Subgroup_05",
+        "member_ids": [
+          "Subgroup_05"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 26,
+        "order": 25
+      },
+      {
+        "id": "MarkerDot",
+        "title": "20 个 marker 的跨群均值与检出率",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.markers"
+        ],
+        "default_id": "MarkerDot",
+        "member_ids": [
+          "MarkerDot"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 20,
+        "order": 26
+      },
+      {
+        "id": "MarkerFeatures",
+        "title": "五个代表 marker：共同表达色阶",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.markers"
+        ],
+        "default_id": "MarkerFeatures",
+        "member_ids": [
+          "MarkerFeatures"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 21,
+        "order": 27
+      },
+      {
+        "id": "DonorComposition",
+        "title": "逐供体细胞比例",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.composition"
+        ],
+        "default_id": "DonorComposition",
+        "member_ids": [
+          "DonorComposition"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 28,
+        "order": 28
+      },
+      {
+        "id": "DonorTypeSupport",
+        "title": "各亚群的逐供体细胞数",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.composition"
+        ],
+        "default_id": "DonorTypeSupport",
+        "member_ids": [
+          "DonorTypeSupport"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 29,
+        "order": 29
+      },
+      {
+        "id": "DonorDE",
+        "title": "Myeloid 供体级差异与堆积火山图",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.pseudobulk"
+        ],
+        "default_id": "DonorDE",
+        "member_ids": [
+          "DonorDE"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 30,
+        "order": 30
+      },
+      {
+        "id": "DonorEffects",
+        "title": "Myeloid 指定基因效应区间",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.pseudobulk"
+        ],
+        "default_id": "DonorEffects",
+        "member_ids": [
+          "DonorEffects"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 31,
+        "order": 31
+      },
+      {
+        "id": "DonorHeatmap",
+        "title": "Myeloid 指定表达程序",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.pseudobulk"
+        ],
+        "default_id": "DonorHeatmap",
+        "member_ids": [
+          "DonorHeatmap"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 32,
+        "order": 32
+      },
+      {
+        "id": "DonorMA",
+        "title": "Myeloid 供体级 MA 与边缘分布",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.pseudobulk"
+        ],
+        "default_id": "DonorMA",
+        "member_ids": [
+          "DonorMA"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 33,
+        "order": 33
+      },
+      {
+        "id": "DonorPathways",
+        "title": "Myeloid ORA 富集与基因支持",
+        "stage": "function",
+        "chapters": [
+          "single_cell.pathways"
+        ],
+        "default_id": "DonorPathways",
+        "member_ids": [
+          "DonorPathways"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 34,
+        "order": 34
+      },
+      {
+        "id": "DonorEnrichmentTracks",
+        "title": "Myeloid GSEA：三条完整轨道",
+        "stage": "function",
+        "chapters": [
+          "single_cell.pathways"
+        ],
+        "default_id": "DonorEnrichmentTracks",
+        "member_ids": [
+          "DonorEnrichmentTracks",
+          "single_cell_GSEADetail_Reading"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 35,
+        "order": 35
+      },
+      {
+        "id": "single_cell_GSEASummary",
+        "title": "Myeloid GSEA 通路效应",
+        "stage": "function",
+        "chapters": [
+          "single_cell.pathways"
+        ],
+        "default_id": "single_cell_GSEASummary",
+        "member_ids": [
+          "single_cell_GSEASummary"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 36,
+        "order": 36
+      },
+      {
+        "id": "single_cell_GeneSupport",
+        "title": "Myeloid ORA 成员与基因效应",
+        "stage": "function",
+        "chapters": [
+          "single_cell.gene_support"
+        ],
+        "default_id": "single_cell_GeneSupport",
+        "member_ids": [
+          "single_cell_GeneSupport"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 37,
+        "order": 37
+      }
+    ],
+    "aliases": {
+      "BulkMain": "BulkMain",
+      "BulkQC": "BulkQC",
+      "BulkPCA": "BulkPCA",
+      "BulkCorrelation": "BulkCorrelation",
+      "LibrarySizes": "LibrarySizes",
+      "StudyDesign": "StudyDesign",
+      "BulkDE": "BulkDE",
+      "BulkHeatmap": "BulkHeatmap",
+      "GeneEffects": "GeneEffects",
+      "BulkMA": "BulkMA",
+      "GeneExpression": "GeneExpression",
+      "Pathways": "Pathways",
+      "EnrichmentTracks": "EnrichmentTracks",
+      "bulk_GSEASummary": "bulk_GSEASummary",
+      "bulk_GeneSupport": "bulk_GeneSupport",
+      "CellQC": "CellQC",
+      "DonorCounts": "DonorCounts",
+      "CellBatches": "CellBatches",
+      "CellStudyDesign": "CellStudyDesign",
+      "CellTypes": "CellTypes",
+      "MarkerDot": "MarkerDot",
+      "MarkerFeatures": "MarkerFeatures",
+      "Subgroup_01": "Subgroup_01",
+      "Subgroup_02": "Subgroup_02",
+      "Subgroup_03": "Subgroup_03",
+      "Subgroup_04": "Subgroup_04",
+      "Subgroup_05": "Subgroup_05",
+      "ConditionAtlas": "ConditionAtlas",
+      "DonorComposition": "DonorComposition",
+      "DonorTypeSupport": "DonorTypeSupport",
+      "DonorDE": "DonorDE",
+      "DonorEffects": "DonorEffects",
+      "DonorHeatmap": "DonorHeatmap",
+      "DonorMA": "DonorMA",
+      "DonorPathways": "DonorPathways",
+      "DonorEnrichmentTracks": "DonorEnrichmentTracks",
+      "single_cell_GSEASummary": "single_cell_GSEASummary",
+      "single_cell_GeneSupport": "single_cell_GeneSupport",
+      "bulk_GSEADetail_Reading": "EnrichmentTracks",
+      "single_cell_GSEADetail_Reading": "DonorEnrichmentTracks",
+      "Subgroup_01_Custom": "Subgroup_01",
+      "Subgroup_03_Custom": "Subgroup_03",
+      "EnrichmentTracks_Custom": "EnrichmentTracks"
+    },
+    "source_pages": 43,
+    "navigation_entries": 38,
+    "folded_extensions": 5,
+    "default_entries": 38,
+    "asset_files_removed": 0,
+    "policy": "Stable chapter then evidence-stage order; extensions remain inside their canonical entry"
+  },
+  "forms": {
+    "entries": [
+      {
+        "id": "form_3bf44cd95b58",
+        "title": "Bulk 研究总览",
+        "stage": "interpretation",
+        "default_id": "BulkMain",
+        "member_ids": [
+          "BulkMain"
+        ],
+        "chapters": [
+          "bulk.design"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 0,
+        "order": 0
+      },
+      {
+        "id": "form_320d88dff682",
+        "title": "热图与矩阵注释",
+        "stage": "qc",
+        "default_id": "StudyDesign",
+        "member_ids": [
+          "StudyDesign",
+          "CellStudyDesign",
+          "DonorTypeSupport"
+        ],
+        "chapters": [
+          "bulk.design",
+          "single_cell.design",
+          "single_cell.composition"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 5,
+        "order": 1
+      },
+      {
+        "id": "form_e7eca50b3789",
+        "title": "Bulk 文库覆盖",
+        "stage": "qc",
+        "default_id": "LibrarySizes",
+        "member_ids": [
+          "LibrarySizes",
+          "DonorCounts"
+        ],
+        "chapters": [
+          "bulk.reads",
+          "single_cell.design"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 4,
+        "order": 2
+      },
+      {
+        "id": "form_0977c6610cf1",
+        "title": "Bulk 表达质控云雨图",
+        "stage": "qc",
+        "default_id": "BulkQC",
+        "member_ids": [
+          "BulkQC",
+          "CellQC"
+        ],
+        "chapters": [
+          "bulk.normalization",
+          "single_cell.qc"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 1,
+        "order": 3
+      },
+      {
+        "id": "form_277b0d20e63b",
+        "title": "PCA：样本、椭圆、边缘比例与解释方差",
+        "stage": "qc",
+        "default_id": "BulkPCA",
+        "member_ids": [
+          "BulkPCA"
+        ],
+        "chapters": [
+          "bulk.batch"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 2,
+        "order": 4
+      },
+      {
+        "id": "form_2f202af618de",
+        "title": "Bulk 样本相关性",
+        "stage": "qc",
+        "default_id": "BulkCorrelation",
+        "member_ids": [
+          "BulkCorrelation",
+          "BulkHeatmap",
+          "DonorHeatmap"
+        ],
+        "chapters": [
+          "bulk.batch",
+          "bulk.programs",
+          "single_cell.pseudobulk"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 3,
+        "order": 5
+      },
+      {
+        "id": "form_5016bf02319e",
+        "title": "Bulk 火山图与完整堆积分布",
+        "stage": "interpretation",
+        "default_id": "BulkDE",
+        "member_ids": [
+          "BulkDE",
+          "DonorDE"
+        ],
+        "chapters": [
+          "bulk.differential",
+          "single_cell.pseudobulk"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 6,
+        "order": 6
+      },
+      {
+        "id": "form_ffdcb4425eae",
+        "title": "基因效应与区间",
+        "stage": "interpretation",
+        "default_id": "GeneEffects",
+        "member_ids": [
+          "GeneEffects",
+          "DonorEffects"
+        ],
+        "chapters": [
+          "bulk.differential",
+          "single_cell.pseudobulk"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 8,
+        "order": 7
+      },
+      {
+        "id": "form_d499f6597543",
+        "title": "Bulk MA 与完整边缘分布",
+        "stage": "interpretation",
+        "default_id": "BulkMA",
+        "member_ids": [
+          "BulkMA",
+          "DonorMA"
+        ],
+        "chapters": [
+          "bulk.differential",
+          "single_cell.pseudobulk"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 9,
+        "order": 8
+      },
+      {
+        "id": "form_4ecc167d1332",
+        "title": "组图 · 观测点 + 观测点 + 观测点 + 观测点",
+        "stage": "interpretation",
+        "default_id": "GeneExpression",
+        "member_ids": [
+          "GeneExpression"
+        ],
+        "chapters": [
+          "bulk.programs"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 10,
+        "order": 9
+      },
+      {
+        "id": "form_60af438823b6",
+        "title": "Bulk ORA 富集与基因支持",
+        "stage": "function",
+        "default_id": "Pathways",
+        "member_ids": [
+          "Pathways",
+          "DonorPathways"
+        ],
+        "chapters": [
+          "bulk.ora",
+          "single_cell.pathways"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 11,
+        "order": 10
+      },
+      {
+        "id": "form_592efe2291ec",
+        "title": "Bulk GSEA 通路效应与基因支持",
+        "stage": "function",
+        "default_id": "bulk_GSEASummary",
+        "member_ids": [
+          "bulk_GSEASummary",
+          "single_cell_GSEASummary"
+        ],
+        "chapters": [
+          "bulk.pathway_contrasts",
+          "single_cell.pathways"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 13,
+        "order": 11
+      },
+      {
+        "id": "form_8ad44dc5a167",
+        "title": "Bulk ORA 成员与基因效应",
+        "stage": "function",
+        "default_id": "bulk_GeneSupport",
+        "member_ids": [
+          "bulk_GeneSupport",
+          "single_cell_GeneSupport"
+        ],
+        "chapters": [
+          "bulk.gene_support",
+          "single_cell.gene_support"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 14,
+        "order": 12
+      },
+      {
+        "id": "form_c6dbac664b6e",
+        "title": "Bulk GSEA：三条完整排序轨道",
+        "stage": "function",
+        "default_id": "EnrichmentTracks",
+        "member_ids": [
+          "EnrichmentTracks",
+          "DonorEnrichmentTracks",
+          "bulk_GSEADetail_Reading",
+          "single_cell_GSEADetail_Reading",
+          "EnrichmentTracks_Custom"
+        ],
+        "chapters": [
+          "bulk.gsea_multitrack",
+          "single_cell.pathways"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 12,
+        "order": 13
+      },
+      {
+        "id": "form_104dc5f69b9d",
+        "title": "批次分面：保持完整坐标",
+        "stage": "qc",
+        "default_id": "CellBatches",
+        "member_ids": [
+          "CellBatches"
+        ],
+        "chapters": [
+          "single_cell.integration"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 17,
+        "order": 14
+      },
+      {
+        "id": "form_184c6ec3487d",
+        "title": "单细胞身份图谱与 20 个 marker 证据",
+        "stage": "interpretation",
+        "default_id": "CellTypes",
+        "member_ids": [
+          "CellTypes"
+        ],
+        "chapters": [
+          "single_cell.annotation"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 19,
+        "order": 15
+      },
+      {
+        "id": "form_bf0a5f80c9f5",
+        "title": "组图 · 降维嵌入 + 降维嵌入",
+        "stage": "interpretation",
+        "default_id": "ConditionAtlas",
+        "member_ids": [
+          "ConditionAtlas"
+        ],
+        "chapters": [
+          "single_cell.annotation"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 27,
+        "order": 16
+      },
+      {
+        "id": "form_1bfcfd568931",
+        "title": "T cells：定位、跨群特异性与四个 marker",
+        "stage": "interpretation",
+        "default_id": "Subgroup_01",
+        "member_ids": [
+          "Subgroup_01",
+          "Subgroup_02",
+          "Subgroup_03",
+          "Subgroup_04",
+          "Subgroup_05",
+          "Subgroup_01_Custom",
+          "Subgroup_03_Custom"
+        ],
+        "chapters": [
+          "single_cell.subcluster"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 22,
+        "order": 17
+      },
+      {
+        "id": "form_14a5563625e8",
+        "title": "20 个 marker 的跨群均值与检出率",
+        "stage": "interpretation",
+        "default_id": "MarkerDot",
+        "member_ids": [
+          "MarkerDot"
+        ],
+        "chapters": [
+          "single_cell.markers"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 20,
+        "order": 18
+      },
+      {
+        "id": "form_e8b43bd8010e",
+        "title": "五个代表 marker：共同表达色阶",
+        "stage": "interpretation",
+        "default_id": "MarkerFeatures",
+        "member_ids": [
+          "MarkerFeatures"
+        ],
+        "chapters": [
+          "single_cell.markers"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 21,
+        "order": 19
+      },
+      {
+        "id": "form_699ff8e84f9a",
+        "title": "逐供体细胞比例",
+        "stage": "interpretation",
+        "default_id": "DonorComposition",
+        "member_ids": [
+          "DonorComposition"
+        ],
+        "chapters": [
+          "single_cell.composition"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 28,
+        "order": 20
+      }
+    ],
+    "aliases": {
+      "BulkMain": "form_3bf44cd95b58",
+      "BulkQC": "form_0977c6610cf1",
+      "CellQC": "form_0977c6610cf1",
+      "BulkPCA": "form_277b0d20e63b",
+      "BulkCorrelation": "form_2f202af618de",
+      "BulkHeatmap": "form_2f202af618de",
+      "DonorHeatmap": "form_2f202af618de",
+      "LibrarySizes": "form_e7eca50b3789",
+      "DonorCounts": "form_e7eca50b3789",
+      "StudyDesign": "form_320d88dff682",
+      "CellStudyDesign": "form_320d88dff682",
+      "DonorTypeSupport": "form_320d88dff682",
+      "BulkDE": "form_5016bf02319e",
+      "DonorDE": "form_5016bf02319e",
+      "GeneEffects": "form_ffdcb4425eae",
+      "DonorEffects": "form_ffdcb4425eae",
+      "BulkMA": "form_d499f6597543",
+      "DonorMA": "form_d499f6597543",
+      "GeneExpression": "form_4ecc167d1332",
+      "Pathways": "form_60af438823b6",
+      "DonorPathways": "form_60af438823b6",
+      "EnrichmentTracks": "form_c6dbac664b6e",
+      "DonorEnrichmentTracks": "form_c6dbac664b6e",
+      "bulk_GSEADetail_Reading": "form_c6dbac664b6e",
+      "single_cell_GSEADetail_Reading": "form_c6dbac664b6e",
+      "EnrichmentTracks_Custom": "form_c6dbac664b6e",
+      "bulk_GSEASummary": "form_592efe2291ec",
+      "single_cell_GSEASummary": "form_592efe2291ec",
+      "bulk_GeneSupport": "form_8ad44dc5a167",
+      "single_cell_GeneSupport": "form_8ad44dc5a167",
+      "CellBatches": "form_104dc5f69b9d",
+      "CellTypes": "form_184c6ec3487d",
+      "MarkerDot": "form_14a5563625e8",
+      "MarkerFeatures": "form_e8b43bd8010e",
+      "Subgroup_01": "form_1bfcfd568931",
+      "Subgroup_02": "form_1bfcfd568931",
+      "Subgroup_03": "form_1bfcfd568931",
+      "Subgroup_04": "form_1bfcfd568931",
+      "Subgroup_05": "form_1bfcfd568931",
+      "Subgroup_01_Custom": "form_1bfcfd568931",
+      "Subgroup_03_Custom": "form_1bfcfd568931",
+      "ConditionAtlas": "form_bf0a5f80c9f5",
+      "DonorComposition": "form_699ff8e84f9a"
+    },
+    "source_pages": 43,
+    "navigation_entries": 21,
+    "folded_extensions": 22,
+    "default_entries": 21,
+    "asset_files_removed": 0,
+    "policy": "Reusable form families, with scoped scientific examples and layouts inside each entry; no scientific result merging"
+  }
 }

@@ -7078,5 +7078,1292 @@
   ],
   "analysis_performed": false,
   "scientific_acceptance": false,
-  "display_revision": "0.10.0"
+  "display_revision": "0.10.0",
+  "navigation": {
+    "entries": [
+      {
+        "id": "GSVA_AdjustedPathwayContrasts",
+        "title": "Adjusted pathway score effects across contrasts",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.gsva",
+          "bulk.pathway_contrasts",
+          "single_cell.pathways"
+        ],
+        "default_id": "GSVA_AdjustedPathwayContrasts",
+        "member_ids": [
+          "GSVA_AdjustedPathwayContrasts"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 15,
+        "order": 0
+      },
+      {
+        "id": "GSVA_DonorScoreDistributions",
+        "title": "Pathway score distributions at the donor level",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.gsva",
+          "single_cell.pathways"
+        ],
+        "default_id": "GSVA_DonorScoreDistributions",
+        "member_ids": [
+          "GSVA_DonorScoreDistributions"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 14,
+        "order": 1
+      },
+      {
+        "id": "Core_WGCNA_SoftPower",
+        "title": "Soft power · topology and connectivity",
+        "stage": "qc",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_SoftPower",
+        "member_ids": [
+          "Core_WGCNA_SoftPower"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 21,
+        "order": 2
+      },
+      {
+        "id": "Core_WGCNA_SampleTree",
+        "title": "Samples · frozen clustering and design tracks",
+        "stage": "qc",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_SampleTree",
+        "member_ids": [
+          "Core_WGCNA_SampleTree"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 22,
+        "order": 3
+      },
+      {
+        "id": "SoftPower_CompleteDiagnostics",
+        "title": "Soft-power diagnostics across all supplied candidates",
+        "stage": "qc",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "SoftPower_CompleteDiagnostics",
+        "member_ids": [
+          "SoftPower_CompleteDiagnostics"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 35,
+        "order": 4
+      },
+      {
+        "id": "Modules_GenePartition",
+        "title": "Module composition and unassigned genes",
+        "stage": "network",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Modules_GenePartition",
+        "member_ids": [
+          "Modules_GenePartition"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 0,
+        "order": 5
+      },
+      {
+        "id": "TOM_AlignedHierarchy",
+        "title": "Topological overlap with frozen gene hierarchy and modules",
+        "stage": "network",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "TOM_AlignedHierarchy",
+        "member_ids": [
+          "TOM_AlignedHierarchy"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 7,
+        "order": 6
+      },
+      {
+        "id": "Core_WGCNA_ModuleTree",
+        "title": "Gene hierarchy · dynamic and merged modules",
+        "stage": "network",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_ModuleTree",
+        "member_ids": [
+          "Core_WGCNA_ModuleTree"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 23,
+        "order": 7
+      },
+      {
+        "id": "Core_WGCNA_TOM",
+        "title": "Topological overlap · complete selected frozen matrix",
+        "stage": "network",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_TOM",
+        "member_ids": [
+          "Core_WGCNA_TOM"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 27,
+        "order": 8
+      },
+      {
+        "id": "Core_WGCNA_TOM_Dissimilarity",
+        "title": "Topological dissimilarity · explicitly 1 − TOM",
+        "stage": "network",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_TOM_Dissimilarity",
+        "member_ids": [
+          "Core_WGCNA_TOM_Dissimilarity"
+        ],
+        "variant": true,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 28,
+        "order": 9
+      },
+      {
+        "id": "Core_WGCNA_EigengeneNetwork",
+        "title": "Relationships among oriented module eigengenes",
+        "stage": "network",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_EigengeneNetwork",
+        "member_ids": [
+          "Core_WGCNA_EigengeneNetwork"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 29,
+        "order": 10
+      },
+      {
+        "id": "Eigengenes_MergeHierarchy",
+        "title": "Oriented eigengene hierarchy and declared merge reference",
+        "stage": "network",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Eigengenes_MergeHierarchy",
+        "member_ids": [
+          "Eigengenes_MergeHierarchy"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 36,
+        "order": 11
+      },
+      {
+        "id": "Hubs_CoexpressionNeighborhoods",
+        "title": "Coexpression neighborhoods and hub candidates",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Hubs_CoexpressionNeighborhoods",
+        "member_ids": [
+          "Hubs_CoexpressionNeighborhoods"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 1,
+        "order": 12
+      },
+      {
+        "id": "Eigengenes_DonorContrasts",
+        "title": "Donor-level module effects across prespecified contrasts",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Eigengenes_DonorContrasts",
+        "member_ids": [
+          "Eigengenes_DonorContrasts",
+          "Layout_Contrasts_OneColumn"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 4,
+        "order": 13
+      },
+      {
+        "id": "Modules_ExpressionAndEigengenes",
+        "title": "Selected module genes aligned with donor eigengenes",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Modules_ExpressionAndEigengenes",
+        "member_ids": [
+          "Modules_ExpressionAndEigengenes",
+          "Layout_Expression_OneColumn"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 6,
+        "order": 14
+      },
+      {
+        "id": "Eigengenes_ContinuousTrait",
+        "title": "Continuous trait relationships at the donor level",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Eigengenes_ContinuousTrait",
+        "member_ids": [
+          "Eigengenes_ContinuousTrait"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 10,
+        "order": 15
+      },
+      {
+        "id": "Eigengenes_DonorRainclouds",
+        "title": "Donor-level eigengenes: distributions and individual units",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Eigengenes_DonorRainclouds",
+        "member_ids": [
+          "Eigengenes_DonorRainclouds",
+          "Layout_OneModule_8Donors",
+          "Layout_ThreeModules_OneColumn"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 13,
+        "order": 16
+      },
+      {
+        "id": "Core_WGCNA_ModuleTrait",
+        "title": "Module–trait associations · coefficient, q and effective n",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_ModuleTrait",
+        "member_ids": [
+          "Core_WGCNA_ModuleTrait"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 24,
+        "order": 17
+      },
+      {
+        "id": "Core_WGCNA_MM_GS",
+        "title": "Module membership and gene–trait association",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_MM_GS",
+        "member_ids": [
+          "Core_WGCNA_MM_GS"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 25,
+        "order": 18
+      },
+      {
+        "id": "Core_WGCNA_MM_GS_Absolute",
+        "title": "Upstream absolute MM and GS · separate declared convention",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_MM_GS_Absolute",
+        "member_ids": [
+          "Core_WGCNA_MM_GS_Absolute"
+        ],
+        "variant": true,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 26,
+        "order": 19
+      },
+      {
+        "id": "Core_WGCNA_EigengeneProfiles",
+        "title": "Donor-level module eigengenes · all units retained",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_EigengeneProfiles",
+        "member_ids": [
+          "Core_WGCNA_EigengeneProfiles"
+        ],
+        "variant": true,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 30,
+        "order": 20
+      },
+      {
+        "id": "Core_WGCNA_HubConnectivity",
+        "title": "Prespecified hub candidates · connectivity and membership",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_HubConnectivity",
+        "member_ids": [
+          "Core_WGCNA_HubConnectivity"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 31,
+        "order": 21
+      },
+      {
+        "id": "Modules_FunctionAndGeneSupport",
+        "title": "Module functions with explicit supporting gene counts",
+        "stage": "function",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Modules_FunctionAndGeneSupport",
+        "member_ids": [
+          "Modules_FunctionAndGeneSupport",
+          "Layout_Enrichment_12Modules"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 5,
+        "order": 22
+      },
+      {
+        "id": "Modules_CrossCohortOverlap",
+        "title": "Shared genes across two supplied module partitions",
+        "stage": "validation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Modules_CrossCohortOverlap",
+        "member_ids": [
+          "Modules_CrossCohortOverlap"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 2,
+        "order": 23
+      },
+      {
+        "id": "Connectivity_ReferenceAndChange",
+        "title": "Connectivity change on identical selected genes",
+        "stage": "validation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Connectivity_ReferenceAndChange",
+        "member_ids": [
+          "Connectivity_ReferenceAndChange"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 3,
+        "order": 24
+      },
+      {
+        "id": "Modules_SensitivityAndStability",
+        "title": "Module stability across prespecified network settings",
+        "stage": "validation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Modules_SensitivityAndStability",
+        "member_ids": [
+          "Modules_SensitivityAndStability"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 9,
+        "order": 25
+      },
+      {
+        "id": "Modules_ProjectionSupport",
+        "title": "External module projection: coverage and concordance",
+        "stage": "validation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna",
+          "bulk.replication",
+          "single_cell.replication"
+        ],
+        "default_id": "Modules_ProjectionSupport",
+        "member_ids": [
+          "Modules_ProjectionSupport"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 11,
+        "order": 26
+      },
+      {
+        "id": "Preservation_Attributes",
+        "title": "Preservation evidence for each network attribute",
+        "stage": "validation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Preservation_Attributes",
+        "member_ids": [
+          "Preservation_Attributes"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 12,
+        "order": 27
+      },
+      {
+        "id": "Core_WGCNA_Preservation",
+        "title": "External module preservation · size, Zsummary and medianRank",
+        "stage": "validation",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_WGCNA_Preservation",
+        "member_ids": [
+          "Core_WGCNA_Preservation"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 32,
+        "order": 28
+      },
+      {
+        "id": "Modules_BranchDynamics",
+        "title": "Module programs along supplied branches",
+        "stage": "extension",
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna",
+          "single_cell.trajectory"
+        ],
+        "default_id": "Modules_BranchDynamics",
+        "member_ids": [
+          "Modules_BranchDynamics",
+          "Layout_ThreeModules_ThreeColumns"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 8,
+        "order": 29
+      },
+      {
+        "id": "TF_ActivityContrasts",
+        "title": "Transcription-factor activity effects and uncertainty",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.tf_activity",
+          "single_cell.regulons"
+        ],
+        "default_id": "TF_ActivityContrasts",
+        "member_ids": [
+          "TF_ActivityContrasts"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 16,
+        "order": 30
+      },
+      {
+        "id": "Regulons_DirectedTargetEvidence",
+        "title": "Selected TF-to-target candidate support",
+        "stage": "extension",
+        "chapters": [
+          "bulk.tf_activity",
+          "single_cell.regulons",
+          "single_cell.ligand_target"
+        ],
+        "default_id": "Regulons_DirectedTargetEvidence",
+        "member_ids": [
+          "Regulons_DirectedTargetEvidence"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 17,
+        "order": 31
+      },
+      {
+        "id": "Splicing_DonorPSIDistributions",
+        "title": "Splicing events: donor-level inclusion distributions",
+        "stage": "interpretation",
+        "chapters": [
+          "bulk.splicing",
+          "single_cell.splicing"
+        ],
+        "default_id": "Splicing_DonorPSIDistributions",
+        "member_ids": [
+          "Splicing_DonorPSIDistributions"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 19,
+        "order": 32
+      },
+      {
+        "id": "Trajectory_ProgramProgression",
+        "title": "Gene programs along a supplied progression coordinate",
+        "stage": "extension",
+        "chapters": [
+          "single_cell.trajectory",
+          "single_cell.states",
+          "bulk.timecourse"
+        ],
+        "default_id": "Trajectory_ProgramProgression",
+        "member_ids": [
+          "Trajectory_ProgramProgression"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 20,
+        "order": 33
+      },
+      {
+        "id": "PPI_SelectedEvidenceNetwork",
+        "title": "Selected protein interactions and module context",
+        "stage": "extension",
+        "chapters": [
+          "bulk.ppi",
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "PPI_SelectedEvidenceNetwork",
+        "member_ids": [
+          "PPI_SelectedEvidenceNetwork"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 18,
+        "order": 34
+      },
+      {
+        "id": "Core_hdWGCNA_MetacellQC",
+        "title": "Metacell support · donors, celltypes and overlap",
+        "stage": "qc",
+        "chapters": [
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_hdWGCNA_MetacellQC",
+        "member_ids": [
+          "Core_hdWGCNA_MetacellQC"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 33,
+        "order": 35
+      },
+      {
+        "id": "Core_hdWGCNA_ModuleActivity",
+        "title": "Module activity · identical cells, coordinates and scale",
+        "stage": "interpretation",
+        "chapters": [
+          "single_cell.hdwgcna"
+        ],
+        "default_id": "Core_hdWGCNA_ModuleActivity",
+        "member_ids": [
+          "Core_hdWGCNA_ModuleActivity"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "Exact content alias or explicitly named alternative, reading layout or sample-size extension",
+        "original_order": 34,
+        "order": 36
+      }
+    ],
+    "aliases": {
+      "Modules_GenePartition": "Modules_GenePartition",
+      "Hubs_CoexpressionNeighborhoods": "Hubs_CoexpressionNeighborhoods",
+      "Modules_CrossCohortOverlap": "Modules_CrossCohortOverlap",
+      "Connectivity_ReferenceAndChange": "Connectivity_ReferenceAndChange",
+      "Eigengenes_DonorContrasts": "Eigengenes_DonorContrasts",
+      "Modules_FunctionAndGeneSupport": "Modules_FunctionAndGeneSupport",
+      "Modules_ExpressionAndEigengenes": "Modules_ExpressionAndEigengenes",
+      "TOM_AlignedHierarchy": "TOM_AlignedHierarchy",
+      "Modules_BranchDynamics": "Modules_BranchDynamics",
+      "Modules_SensitivityAndStability": "Modules_SensitivityAndStability",
+      "Eigengenes_ContinuousTrait": "Eigengenes_ContinuousTrait",
+      "Modules_ProjectionSupport": "Modules_ProjectionSupport",
+      "Preservation_Attributes": "Preservation_Attributes",
+      "Eigengenes_DonorRainclouds": "Eigengenes_DonorRainclouds",
+      "GSVA_DonorScoreDistributions": "GSVA_DonorScoreDistributions",
+      "GSVA_AdjustedPathwayContrasts": "GSVA_AdjustedPathwayContrasts",
+      "TF_ActivityContrasts": "TF_ActivityContrasts",
+      "Regulons_DirectedTargetEvidence": "Regulons_DirectedTargetEvidence",
+      "PPI_SelectedEvidenceNetwork": "PPI_SelectedEvidenceNetwork",
+      "Splicing_DonorPSIDistributions": "Splicing_DonorPSIDistributions",
+      "Trajectory_ProgramProgression": "Trajectory_ProgramProgression",
+      "Core_WGCNA_SoftPower": "Core_WGCNA_SoftPower",
+      "Core_WGCNA_SampleTree": "Core_WGCNA_SampleTree",
+      "Core_WGCNA_ModuleTree": "Core_WGCNA_ModuleTree",
+      "Core_WGCNA_ModuleTrait": "Core_WGCNA_ModuleTrait",
+      "Core_WGCNA_MM_GS": "Core_WGCNA_MM_GS",
+      "Core_WGCNA_MM_GS_Absolute": "Core_WGCNA_MM_GS_Absolute",
+      "Core_WGCNA_TOM": "Core_WGCNA_TOM",
+      "Core_WGCNA_TOM_Dissimilarity": "Core_WGCNA_TOM_Dissimilarity",
+      "Core_WGCNA_EigengeneNetwork": "Core_WGCNA_EigengeneNetwork",
+      "Core_WGCNA_EigengeneProfiles": "Core_WGCNA_EigengeneProfiles",
+      "Core_WGCNA_HubConnectivity": "Core_WGCNA_HubConnectivity",
+      "Core_WGCNA_Preservation": "Core_WGCNA_Preservation",
+      "Core_hdWGCNA_MetacellQC": "Core_hdWGCNA_MetacellQC",
+      "Core_hdWGCNA_ModuleActivity": "Core_hdWGCNA_ModuleActivity",
+      "SoftPower_CompleteDiagnostics": "SoftPower_CompleteDiagnostics",
+      "Eigengenes_MergeHierarchy": "Eigengenes_MergeHierarchy",
+      "Layout_OneModule_8Donors": "Eigengenes_DonorRainclouds",
+      "Layout_ThreeModules_OneColumn": "Eigengenes_DonorRainclouds",
+      "Layout_ThreeModules_ThreeColumns": "Modules_BranchDynamics",
+      "Layout_Expression_OneColumn": "Modules_ExpressionAndEigengenes",
+      "Layout_Contrasts_OneColumn": "Eigengenes_DonorContrasts",
+      "Layout_Enrichment_12Modules": "Modules_FunctionAndGeneSupport"
+    },
+    "source_pages": 43,
+    "navigation_entries": 37,
+    "folded_extensions": 6,
+    "default_entries": 34,
+    "asset_files_removed": 0,
+    "policy": "Stable chapter then evidence-stage order; extensions remain inside their canonical entry"
+  },
+  "forms": {
+    "entries": [
+      {
+        "id": "form_c4513d0659af",
+        "title": "Donor-level module effects across prespecified contrasts",
+        "stage": "interpretation",
+        "default_id": "Eigengenes_DonorContrasts",
+        "member_ids": [
+          "Eigengenes_DonorContrasts",
+          "GSVA_AdjustedPathwayContrasts",
+          "TF_ActivityContrasts",
+          "Layout_Contrasts_OneColumn"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna",
+          "bulk.gsva",
+          "bulk.pathway_contrasts",
+          "single_cell.pathways",
+          "bulk.tf_activity",
+          "single_cell.regulons"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 4,
+        "order": 0
+      },
+      {
+        "id": "form_dc669f30a7d5",
+        "title": "Donor-level eigengenes: distributions and individual units",
+        "stage": "interpretation",
+        "default_id": "Eigengenes_DonorRainclouds",
+        "member_ids": [
+          "Eigengenes_DonorRainclouds",
+          "GSVA_DonorScoreDistributions",
+          "Splicing_DonorPSIDistributions",
+          "Layout_OneModule_8Donors",
+          "Layout_ThreeModules_OneColumn"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna",
+          "bulk.gsva",
+          "single_cell.pathways",
+          "bulk.splicing",
+          "single_cell.splicing"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 13,
+        "order": 1
+      },
+      {
+        "id": "form_b912c4d5fedb",
+        "title": "Module composition and unassigned genes",
+        "stage": "network",
+        "default_id": "Modules_GenePartition",
+        "member_ids": [
+          "Modules_GenePartition"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 0,
+        "order": 2
+      },
+      {
+        "id": "form_210959646f01",
+        "title": "Coexpression neighborhoods and hub candidates",
+        "stage": "interpretation",
+        "default_id": "Hubs_CoexpressionNeighborhoods",
+        "member_ids": [
+          "Hubs_CoexpressionNeighborhoods",
+          "Regulons_DirectedTargetEvidence",
+          "PPI_SelectedEvidenceNetwork"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna",
+          "bulk.tf_activity",
+          "single_cell.regulons",
+          "single_cell.ligand_target",
+          "bulk.ppi"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 1,
+        "order": 3
+      },
+      {
+        "id": "form_b7aab1fdea4a",
+        "title": "Shared genes across two supplied module partitions",
+        "stage": "validation",
+        "default_id": "Modules_CrossCohortOverlap",
+        "member_ids": [
+          "Modules_CrossCohortOverlap"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 2,
+        "order": 4
+      },
+      {
+        "id": "form_9eece207a74f",
+        "title": "Connectivity change on identical selected genes",
+        "stage": "validation",
+        "default_id": "Connectivity_ReferenceAndChange",
+        "member_ids": [
+          "Connectivity_ReferenceAndChange"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 3,
+        "order": 5
+      },
+      {
+        "id": "form_479a2fa4fb47",
+        "title": "Module functions with explicit supporting gene counts",
+        "stage": "function",
+        "default_id": "Modules_FunctionAndGeneSupport",
+        "member_ids": [
+          "Modules_FunctionAndGeneSupport",
+          "Layout_Enrichment_12Modules"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 5,
+        "order": 6
+      },
+      {
+        "id": "form_54c3b2118ec5",
+        "title": "Selected module genes aligned with donor eigengenes",
+        "stage": "interpretation",
+        "default_id": "Modules_ExpressionAndEigengenes",
+        "member_ids": [
+          "Modules_ExpressionAndEigengenes",
+          "Layout_Expression_OneColumn"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 6,
+        "order": 7
+      },
+      {
+        "id": "form_0b93b3c46f8e",
+        "title": "Topological overlap with frozen gene hierarchy and modules",
+        "stage": "network",
+        "default_id": "TOM_AlignedHierarchy",
+        "member_ids": [
+          "TOM_AlignedHierarchy"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 7,
+        "order": 8
+      },
+      {
+        "id": "form_3a4cb8b20d80",
+        "title": "Module programs along supplied branches",
+        "stage": "extension",
+        "default_id": "Modules_BranchDynamics",
+        "member_ids": [
+          "Modules_BranchDynamics",
+          "Trajectory_ProgramProgression",
+          "Layout_ThreeModules_ThreeColumns"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna",
+          "single_cell.trajectory",
+          "single_cell.states",
+          "bulk.timecourse"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 8,
+        "order": 9
+      },
+      {
+        "id": "form_91ff85a8b40c",
+        "title": "Module stability across prespecified network settings",
+        "stage": "validation",
+        "default_id": "Modules_SensitivityAndStability",
+        "member_ids": [
+          "Modules_SensitivityAndStability"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 9,
+        "order": 10
+      },
+      {
+        "id": "form_edd262006660",
+        "title": "Continuous trait relationships at the donor level",
+        "stage": "interpretation",
+        "default_id": "Eigengenes_ContinuousTrait",
+        "member_ids": [
+          "Eigengenes_ContinuousTrait"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 10,
+        "order": 11
+      },
+      {
+        "id": "form_e03cf8606e64",
+        "title": "External module projection: coverage and concordance",
+        "stage": "validation",
+        "default_id": "Modules_ProjectionSupport",
+        "member_ids": [
+          "Modules_ProjectionSupport"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna",
+          "bulk.replication",
+          "single_cell.replication"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 11,
+        "order": 12
+      },
+      {
+        "id": "form_fd4f957fe2d0",
+        "title": "Preservation evidence for each network attribute",
+        "stage": "validation",
+        "default_id": "Preservation_Attributes",
+        "member_ids": [
+          "Preservation_Attributes"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 12,
+        "order": 13
+      },
+      {
+        "id": "form_09fec6ce2b81",
+        "title": "Soft power · topology and connectivity",
+        "stage": "qc",
+        "default_id": "Core_WGCNA_SoftPower",
+        "member_ids": [
+          "Core_WGCNA_SoftPower",
+          "SoftPower_CompleteDiagnostics"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 21,
+        "order": 14
+      },
+      {
+        "id": "form_fddf153d503e",
+        "title": "Samples · frozen clustering and design tracks",
+        "stage": "qc",
+        "default_id": "Core_WGCNA_SampleTree",
+        "member_ids": [
+          "Core_WGCNA_SampleTree"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 22,
+        "order": 15
+      },
+      {
+        "id": "form_4e4acc4dcbb2",
+        "title": "Gene hierarchy · dynamic and merged modules",
+        "stage": "network",
+        "default_id": "Core_WGCNA_ModuleTree",
+        "member_ids": [
+          "Core_WGCNA_ModuleTree",
+          "Eigengenes_MergeHierarchy"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 23,
+        "order": 16
+      },
+      {
+        "id": "form_cd9b0639e2c1",
+        "title": "Module–trait associations · coefficient, q and effective n",
+        "stage": "interpretation",
+        "default_id": "Core_WGCNA_ModuleTrait",
+        "member_ids": [
+          "Core_WGCNA_ModuleTrait"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 24,
+        "order": 17
+      },
+      {
+        "id": "form_dcdc3db00cb3",
+        "title": "Module membership and gene–trait association",
+        "stage": "interpretation",
+        "default_id": "Core_WGCNA_MM_GS",
+        "member_ids": [
+          "Core_WGCNA_MM_GS",
+          "Core_WGCNA_MM_GS_Absolute"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 25,
+        "order": 18
+      },
+      {
+        "id": "form_a1e276234e77",
+        "title": "Topological overlap · complete selected frozen matrix",
+        "stage": "network",
+        "default_id": "Core_WGCNA_TOM",
+        "member_ids": [
+          "Core_WGCNA_TOM",
+          "Core_WGCNA_TOM_Dissimilarity"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 27,
+        "order": 19
+      },
+      {
+        "id": "form_1cff39a7bff7",
+        "title": "Relationships among oriented module eigengenes",
+        "stage": "network",
+        "default_id": "Core_WGCNA_EigengeneNetwork",
+        "member_ids": [
+          "Core_WGCNA_EigengeneNetwork"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 29,
+        "order": 20
+      },
+      {
+        "id": "form_7c0596e6c1d3",
+        "title": "Donor-level module eigengenes · all units retained",
+        "stage": "interpretation",
+        "default_id": "Core_WGCNA_EigengeneProfiles",
+        "member_ids": [
+          "Core_WGCNA_EigengeneProfiles"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": true,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 30,
+        "order": 21
+      },
+      {
+        "id": "form_4823e27969d9",
+        "title": "Prespecified hub candidates · connectivity and membership",
+        "stage": "interpretation",
+        "default_id": "Core_WGCNA_HubConnectivity",
+        "member_ids": [
+          "Core_WGCNA_HubConnectivity"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 31,
+        "order": 22
+      },
+      {
+        "id": "form_1cbe5637b3a8",
+        "title": "External module preservation · size, Zsummary and medianRank",
+        "stage": "validation",
+        "default_id": "Core_WGCNA_Preservation",
+        "member_ids": [
+          "Core_WGCNA_Preservation"
+        ],
+        "chapters": [
+          "bulk.wgcna",
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 32,
+        "order": 23
+      },
+      {
+        "id": "form_c3139a4d9b94",
+        "title": "Metacell support · donors, celltypes and overlap",
+        "stage": "qc",
+        "default_id": "Core_hdWGCNA_MetacellQC",
+        "member_ids": [
+          "Core_hdWGCNA_MetacellQC"
+        ],
+        "chapters": [
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 33,
+        "order": 24
+      },
+      {
+        "id": "form_72224cd9db83",
+        "title": "Module activity · identical cells, coordinates and scale",
+        "stage": "interpretation",
+        "default_id": "Core_hdWGCNA_ModuleActivity",
+        "member_ids": [
+          "Core_hdWGCNA_ModuleActivity"
+        ],
+        "chapters": [
+          "single_cell.hdwgcna"
+        ],
+        "variant": false,
+        "keywords": [],
+        "merge_reason": "One configurable drawing family; scoped examples retain distinct data, units, titles and exact assets",
+        "original_order": 34,
+        "order": 25
+      }
+    ],
+    "aliases": {
+      "Modules_GenePartition": "form_b912c4d5fedb",
+      "Hubs_CoexpressionNeighborhoods": "form_210959646f01",
+      "Regulons_DirectedTargetEvidence": "form_210959646f01",
+      "PPI_SelectedEvidenceNetwork": "form_210959646f01",
+      "Modules_CrossCohortOverlap": "form_b7aab1fdea4a",
+      "Connectivity_ReferenceAndChange": "form_9eece207a74f",
+      "Eigengenes_DonorContrasts": "form_c4513d0659af",
+      "GSVA_AdjustedPathwayContrasts": "form_c4513d0659af",
+      "TF_ActivityContrasts": "form_c4513d0659af",
+      "Layout_Contrasts_OneColumn": "form_c4513d0659af",
+      "Modules_FunctionAndGeneSupport": "form_479a2fa4fb47",
+      "Layout_Enrichment_12Modules": "form_479a2fa4fb47",
+      "Modules_ExpressionAndEigengenes": "form_54c3b2118ec5",
+      "Layout_Expression_OneColumn": "form_54c3b2118ec5",
+      "TOM_AlignedHierarchy": "form_0b93b3c46f8e",
+      "Modules_BranchDynamics": "form_3a4cb8b20d80",
+      "Trajectory_ProgramProgression": "form_3a4cb8b20d80",
+      "Layout_ThreeModules_ThreeColumns": "form_3a4cb8b20d80",
+      "Modules_SensitivityAndStability": "form_91ff85a8b40c",
+      "Eigengenes_ContinuousTrait": "form_edd262006660",
+      "Modules_ProjectionSupport": "form_e03cf8606e64",
+      "Preservation_Attributes": "form_fd4f957fe2d0",
+      "Eigengenes_DonorRainclouds": "form_dc669f30a7d5",
+      "GSVA_DonorScoreDistributions": "form_dc669f30a7d5",
+      "Splicing_DonorPSIDistributions": "form_dc669f30a7d5",
+      "Layout_OneModule_8Donors": "form_dc669f30a7d5",
+      "Layout_ThreeModules_OneColumn": "form_dc669f30a7d5",
+      "Core_WGCNA_SoftPower": "form_09fec6ce2b81",
+      "SoftPower_CompleteDiagnostics": "form_09fec6ce2b81",
+      "Core_WGCNA_SampleTree": "form_fddf153d503e",
+      "Core_WGCNA_ModuleTree": "form_4e4acc4dcbb2",
+      "Eigengenes_MergeHierarchy": "form_4e4acc4dcbb2",
+      "Core_WGCNA_ModuleTrait": "form_cd9b0639e2c1",
+      "Core_WGCNA_MM_GS": "form_dcdc3db00cb3",
+      "Core_WGCNA_MM_GS_Absolute": "form_dcdc3db00cb3",
+      "Core_WGCNA_TOM": "form_a1e276234e77",
+      "Core_WGCNA_TOM_Dissimilarity": "form_a1e276234e77",
+      "Core_WGCNA_EigengeneNetwork": "form_1cff39a7bff7",
+      "Core_WGCNA_EigengeneProfiles": "form_7c0596e6c1d3",
+      "Core_WGCNA_HubConnectivity": "form_4823e27969d9",
+      "Core_WGCNA_Preservation": "form_1cbe5637b3a8",
+      "Core_hdWGCNA_MetacellQC": "form_c3139a4d9b94",
+      "Core_hdWGCNA_ModuleActivity": "form_72224cd9db83"
+    },
+    "source_pages": 43,
+    "navigation_entries": 26,
+    "folded_extensions": 17,
+    "default_entries": 25,
+    "asset_files_removed": 0,
+    "policy": "Reusable form families, with scoped scientific examples and layouts inside each entry; no scientific result merging"
+  }
 }

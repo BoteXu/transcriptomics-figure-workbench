@@ -73,8 +73,14 @@ def build():
             backend_analysis_performed=False))
     write(SKILL/'references/analysis-suites.json',dict(schema_version=1,version=version,suites=suites,analysis_performed=False))
     out=SKILL/'assets/analysis-library';out.mkdir(parents=True,exist_ok=True)
-    write(out/'manifest.json',dict(version=version,chapters=len(suites),callable_views=len(views),actual_pages=len(display),records=list(display.values())))
-    (out/'index.html').write_text(page(list(display.values()),suites,f'{len(suites)} 个分析章节 · {len(views)} 个实际调用视图 · {len(display)} 个去重图页。常规图、专用配套图和替代布局在同一目录中查找。'),encoding='utf8')
+    from curate_analysis_navigation import curated_entries,form_navigation
+    import copy,hashlib
+    for row in display.values():
+        s=read(SKILL/'assets/analysis-library'/row['assets']['spec']);p=copy.deepcopy(s['parameters']);p.pop('title',None)
+        row['drawing_fingerprint']=hashlib.sha256(json.dumps(dict(renderer=s['renderer'],input=s['input']['sha256'],parameters=p),sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+    navigation=curated_entries(list(display.values()),suites)
+    write(out/'manifest.json',dict(version=version,chapters=len(suites),callable_views=len(views),actual_pages=len(display),records=list(display.values()),navigation=navigation,forms=form_navigation(list(display.values()),suites)))
+    (out/'index.html').write_text(page(list(display.values()),suites,f'{len(suites)} 个分析章节 · {len(views)} 个调用视图 · {len(display)} 份源文件页。按章节固定顺序阅读，扩展收在同一条目中。'),encoding='utf8')
     lines=['# 按分析导出整套绘图模板','','从实际 FigureSpec 生成；章节、图页、调用视图与科学算法数量分别统计。所有示例均为冻结合成绘图材料，没有运行分析后端。','','|分析|默认配套视图|替代／布局|','|---|---:|---:|']
     for s in suites:lines.append('|'+s['label']+' (`'+s['id']+'`)|'+str(len(s['primary_views']))+'|'+str(len(s['alternative_views']))+'|')
     lines+=['','## 使用','','`analysis-library --search WGCNA` 列出对应整套路线。`analysis-suite --chapter bulk.wgcna --output <fresh-directory>` 导出该分析的全部默认合成模板、准确 TSV 和批量绘图 manifest；加 `--include-variants` 才导出相近替代与布局。`analysis-render --manifest <fresh-directory>/manifest.json --output <fresh-render-directory>` 串行绘制这些合成模板。实际项目应使用 `book-plan`，逐项绑定已经完成且 QC 审核的真实结果。','','默认与替代由实际数据语义决定；没有云形时不估算密度，没有完整命中时不冒充完整 GSEA，没有模块结果时不生成 WGCNA 结论。模板完整性与真实结果可用性是不同状态。各章节的主图和诊断／验证视图不是所有分析方法已穷尽的声明。']

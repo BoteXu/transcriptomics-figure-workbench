@@ -5,6 +5,26 @@ description: Design, render and improve publication figures from frozen scientif
 
 # Scientific Figure Workbench
 
+## Stable, deduplicated gallery navigation
+
+Use the current analysis library's default **按画法去重** view: one reusable form
+with its scoped examples and layout extensions inside the entry. The 550 source
+pages resolve to 103 form families, with 76 visible before enabling optional
+layouts. Heatmap/effect/raincloud examples are not separate methods merely
+because the data or title changes. Switch to **按分析问题阅读** for complementary
+questions within a chapter. Preserve old IDs, numeric routine links, fixed
+chapter order and the current image when toggling modes. Read
+[the exact deduplication policy](references/navigation-dedup.md).
+
+Template grouping never authorizes merging scientific results. A version-2
+study bundle can attach an explicit ChapterBookManifest to the routine v1
+manifest, using `study_id`, `routine`, `analysis_book`, `result_stages` and
+`variants`. Whole-study requests include all declared applicable frozen results;
+named analyses select supplied scopes rather than catalogue examples. Exact
+duplicate exports retain aliases; changed cohort, cell type, contrast, unit or
+denominator remains separate. Do not claim complete analysis coverage from the
+presence of a drawing recipe.
+
 ## Complete per-analysis evidence packages
 
 For a request covering an analysis, begin with the [58-chapter analysis library](assets/analysis-library/index.html), the [question-by-question coverage](references/analysis-companion-coverage-v100.md) and the [selection and input protocol](references/analysis-companion-protocol-v100.md). Keep the native main figure, then select complementary QC, support, effect/uncertainty, function and validation views using the actual returned channels. An overview is not a complete analysis package. WGCNA and hdWGCNA retain their detailed network routes; the other 56 chapters have named executable companion recipes and actual frozen example tables.
