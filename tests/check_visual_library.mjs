@@ -17,7 +17,7 @@ try{
  assert.equal(await p.locator('#menu button').count(),d.entries.length);
  async function open(id){await p.evaluate(id=>{location.hash=encodeURIComponent(id)},id);const target=d.aliases[id]||id;await p.waitForFunction(id=>document.querySelector('#edition').value===id,target);await p.locator('#art').evaluate(im=>im.decode())}
  // Direct links and both selectors must keep 3D and radar genuinely drawable.
- for(const id of ['radar','reference-surface-grid__surface','mass-spectrum-mirror','sequence-logo','roc','source-gallery/network__circular']){
+ for(const id of ['radar','reference-surface-grid__surface','mass-spectrum-mirror','sequence-logo','roc','source-gallery/network__circular','H02_forest','D01_Scatter3D','D02_Volume','D03_Trajectory','D01_Scatter3D_Composition']){
   await open(id);await p.screenshot({path:path.join(out,id.replaceAll('/','_')+'.png'),fullPage:true});
  }
  for(const f of JSON.parse(await fs.readFile(path.resolve('skills/transcriptomics-figure-workbench/references/form-catalog.json'),'utf8')).forms)await open(f.id);
@@ -27,7 +27,7 @@ try{
  for(const c of d.coverage)await open(c.source_id);
  await open('radar');await p.locator('#history').uncheck();
  assert.equal(await p.locator('#menu button').count(),d.entries.length);
- await p.locator('#search').fill('三维');assert.equal(await p.locator('#menu button').count(),1);
+ await p.locator('#search').fill('三维');assert.ok(await p.locator('#menu button').count()>=2);
  assert.ok((await p.locator('#title').textContent()).includes('三维'));
  await p.locator('#search').fill('');await p.selectOption('#domain','modelling');
  const expected=d.entries.filter(e=>e.member_ids.some(id=>{const r=d.records.find(r=>r.id===id);return !r.history&&r.domains.includes('modelling')}));

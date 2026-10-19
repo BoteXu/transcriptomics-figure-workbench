@@ -103,9 +103,9 @@ def plot_hierarchy_tracks(data,theme,*,leaf_order,height_definition,title=''):
 
 
 def plot_radial_hierarchy(data,theme,*,leaf_order,height_definition,metric_limits,metric_definition,
-                          outer_definition,area_definition,label_ids=(),title=''):
+                          outer_definition,area_definition,label_ids=(),title='',numeric_guides=False):
     l,m,x,h=_tree(data,leaf_order);l=checked(l,['metric','outer_value','area_value'],['metric','outer_value','area_value'])
-    if (l.outer_value<0).any() or ((l.area_value<0)|(l.area_value>1)).any() or not all([height_definition,metric_definition,outer_definition,area_definition]) or set(label_ids)-set(l.node_id) or len(label_ids)>15:raise ValueError('Explicit radial numeric channels and bounded labels required')
+    if (l.outer_value<0).any() or ((l.area_value<0)|(l.area_value>1)).any() or not all([height_definition,metric_definition,outer_definition,area_definition]) or set(label_ids)-set(l.node_id) or len(label_ids)>32:raise ValueError('Explicit radial numeric channels and bounded labels required')
     signed=metric_limits[0]<0<metric_limits[1]
     norm=_limits(l.metric,metric_limits,signed=signed);cm=_cmap(theme,signed);maxh=max(h.values());n=len(l);angles={v:2*np.pi*x[v]/n for v in x};radius={v:.80-.62*h[v]/maxh for v in h}
     fig=_new(theme,(9,8));ax=fig.add_axes([.03,.12,.73,.77]);ax.set_aspect('equal');ax.axis('off')
@@ -120,9 +120,19 @@ def plot_radial_hierarchy(data,theme,*,leaf_order,height_definition,metric_limit
         if id_ in label_ids:ax.annotate(id_,(.86*np.cos(a),.86*np.sin(a)),xytext=(.98*np.cos(a),.98*np.sin(a)),textcoords='data',ha='left' if np.cos(a)>0 else 'right',va='center',fontsize=8,arrowprops=dict(arrowstyle='-',color=color,lw=.6))
     ax.set(xlim=(-1.35,1.35),ylim=(-1.35,1.35),title=title)
     fig.colorbar(plt.cm.ScalarMappable(norm=norm,cmap=cm),cax=fig.add_axes([.83,.53,.023,.27]),label=metric_definition)
-    fig.text(.82,.34,'Point area:\n'+area_definition,fontsize=8);fig.text(.82,.21,'Outer height:\n'+outer_definition,fontsize=8)
+    if numeric_guides:
+        fig.text(.82,.45,'Point area:\n'+area_definition,fontsize=8)
+        area=fig.add_axes([.82,.35,.15,.075]);area.scatter([0,.5,1],[.5]*3,s=[12,72,132],color='#708BAD',ec='white',lw=.3)
+        area.set(xlim=(-.25,1.25),ylim=(0,1),xticks=[0,.5,1],xticklabels=['0','0.5','1'],yticks=[])
+        area.tick_params(length=0,labelsize=7);area.spines[:].set_visible(False)
+        fig.text(.82,.27,'Outer height:\n'+outer_definition,fontsize=8)
+        ruler=fig.add_axes([.85,.12,.11,.10]);ruler.bar([0,1,2],[0,maximum/2,maximum],color='#A3B4CA',width=.6)
+        ruler.set(ylim=(0,maximum*1.1),yticks=[0,maximum],xticks=[]);ruler.tick_params(labelsize=7,length=2);ruler.spines[['top','right','bottom']].set_visible(False)
+        area._explicit_guide_layout=True;ruler._explicit_guide_layout=True
+    else:
+        fig.text(.82,.34,'Point area:\n'+area_definition,fontsize=8);fig.text(.82,.21,'Outer height:\n'+outer_definition,fontsize=8)
     fig.text(.07,.05,'Frozen hierarchy; no target ranking or binding prediction. Distances and channels use their supplied definitions.',fontsize=8)
-    return _finish(fig,data,theme,'radial_hierarchy',leaf_order=leaf_order,height_definition=height_definition,metric_limits=metric_limits,metric_definition=metric_definition,outer_definition=outer_definition,area_definition=area_definition,label_ids=list(label_ids),area_mapping='12 + 120 * supplied area_value')
+    return _finish(fig,data,theme,'radial_hierarchy',leaf_order=leaf_order,height_definition=height_definition,metric_limits=metric_limits,metric_definition=metric_definition,outer_definition=outer_definition,area_definition=area_definition,label_ids=list(label_ids),numeric_guides=numeric_guides,area_mapping='12 + 120 * supplied area_value',outer_height_mapping='0.20 * supplied outer_value / maximum',outer_value_maximum=maximum)
 
 
 def plot_stacked_values(data,theme,*,object_order,segment_order,value_definition,additivity_definition,title=''):

@@ -21,7 +21,11 @@ def plot_process_dashboard(data,palette,*,surface_order,bar_group_order,stage_or
     nodes.loc[nodes.text.isna(),'text']=''
     _unique(nodes,['node_id']); _unique(edges,['edge_id']); _unique(paths,['object_id','order']); _unique(peaks,['surface_id','landmark']); _unique(counts,['bar_group','category','stage'])
     if len(surface_order)!=3 or len(set(surface_order))!=3 or len(bar_group_order)!=2 or len(set(bar_group_order))!=2 or len(set(stage_order))!=len(stage_order): raise ValueError('Layout requires three distinct surfaces and two distinct count groups')
-    if set(matrices.matrix_id)!={0,1,2} or set(peaks.surface_id)-set(surface_order): raise ValueError('Three numbered matrices and known landmark surfaces required')
+    # Matrix IDs are a declared numbered discriminator, not arbitrary names.
+    # FigureSpec preserves identifiers as strings, so accept the exact canonical
+    # textual IDs as well as the original numeric API without recoding identities.
+    if set(map(str,matrices.matrix_id)) not in ({'0','1','2'},{'0.0','1.0','2.0'}) or set(peaks.surface_id)-set(surface_order): raise ValueError('Three numbered matrices and known landmark surfaces required')
+    matrices['matrix_id']=[int(float(v)) for v in matrices.matrix_id]
     for _,obj in paths.groupby('object_id',sort=False):
         if obj.group.nunique()!=1 or obj['shape'].nunique()!=1: raise ValueError('Each geometry has one group and shape')
     palette_check(nodes.group,palette); palette_check(paths.group,palette); palette_check(peaks.group,palette); palette_check(counts.stage,palette)

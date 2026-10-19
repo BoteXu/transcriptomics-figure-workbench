@@ -38,6 +38,7 @@ jobs:
           python tests/check_selection_depth.py
           python tests/check_companion_catalog.py
           python tests/check_visual_library.py
+          python tests/check_method_upgrades.py
           python tests/check_private_profile_sync.py
           python tools/build_journal_review.py --check
           python tests/check_editorial_release.py
@@ -72,6 +73,7 @@ jobs:
           python tests/check_subgroup_markers.py
           python tests/check_editorial_runtime.py examples/editorial-v092
           python tests/check_source_runtime.py
+          python tests/check_three_dimensional.py
       - name: Exercise ordinary requests on two coherent fictional result packages
         run: |
           python tools/build_transcriptomic_study_examples.py --output study-ci-fixtures
@@ -124,6 +126,7 @@ jobs:
           node tests/check_companion_browser.mjs companion-browser-ci
           node tests/check_navigation_dedup.mjs navigation-dedup-ci
           node tests/check_visual_library.mjs visual-library-ci
+          node tests/check_trajectory_browser.mjs trajectory-browser-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

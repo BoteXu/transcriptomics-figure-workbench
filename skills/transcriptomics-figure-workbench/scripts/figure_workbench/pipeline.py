@@ -66,6 +66,13 @@ def render_plan(plan,output):
                 files.append(tiff)
             receipt_path=bundle/(spec['figure_id']+'.json')
             receipt=json.loads(receipt_path.read_text(encoding='utf8'))
+            animation_writer=getattr(fig,'_workbench_animation_writer',None)
+            if animation_writer is not None:
+                animation_files=animation_writer(bundle,spec['figure_id'],synthetic=bool(spec['provenance'].get('synthetic')))
+                for artifact in animation_files:
+                    receipt['output_sha256'][artifact.name]=digest(artifact)
+                files.extend(animation_files)
+                receipt['workbench']['animation_exports']=[p.name for p in animation_files]
             final_readability=print_readability(fig,settings)
             if settings.get('readability_policy')=='block' and final_readability['state']!='MEASUREMENT_PASS':
                 raise ValueError('PRINT_SIZE_HOLD: final export layout changed readability; reflow before publishing the bundle')

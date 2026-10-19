@@ -2,9 +2,9 @@
   "schema_version": 1,
   "version": "0.10.0",
   "counts": {
-    "python_functions": 133,
+    "python_functions": 136,
     "fixed_aliases": 82,
-    "table_entries": 133
+    "table_entries": 136
   },
   "renderers": [
     {
@@ -833,7 +833,7 @@
       "aliases": [
         "embedding"
       ],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -861,7 +861,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -888,12 +888,18 @@
           "name": "effect_scale",
           "required": true,
           "annotation": null
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "classic"
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -926,7 +932,7 @@
       "aliases": [
         "volcano"
       ],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "log2FC",
@@ -1051,7 +1057,7 @@
       "aliases": [
         "dot_matrix"
       ],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "fraction",
@@ -1232,7 +1238,7 @@
       "aliases": [
         "heatmap"
       ],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -1290,7 +1296,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -1350,7 +1356,7 @@
       "aliases": [
         "composition"
       ],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count"
@@ -1427,7 +1433,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "e08e506306a4e1ccd73210baf221d73106cdd565cc3ac7d20be2d3ab4c1e88e1",
+      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "lower",
@@ -2882,7 +2888,7 @@
       "aliases": [
         "membership_ribbons"
       ],
-      "source_sha256": "807d44221139b54458c7b141ad61c95ead35cd62818631ee7bdbc0683497ce91",
+      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count",
@@ -2945,7 +2951,7 @@
       "aliases": [
         "split_metric_matrix"
       ],
-      "source_sha256": "807d44221139b54458c7b141ad61c95ead35cd62818631ee7bdbc0683497ce91",
+      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "association",
@@ -2981,7 +2987,7 @@
       "aliases": [
         "hierarchy_tracks"
       ],
-      "source_sha256": "807d44221139b54458c7b141ad61c95ead35cd62818631ee7bdbc0683497ce91",
+      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "height"
@@ -3035,6 +3041,12 @@
           "required": false,
           "annotation": null,
           "default": ""
+        },
+        {
+          "name": "numeric_guides",
+          "required": false,
+          "annotation": null,
+          "default": false
         }
       ],
       "frozen_table_entry": true,
@@ -3042,7 +3054,7 @@
       "aliases": [
         "radial_hierarchy"
       ],
-      "source_sha256": "807d44221139b54458c7b141ad61c95ead35cd62818631ee7bdbc0683497ce91",
+      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "area_value",
@@ -3090,7 +3102,7 @@
       "aliases": [
         "stacked_values"
       ],
-      "source_sha256": "807d44221139b54458c7b141ad61c95ead35cd62818631ee7bdbc0683497ce91",
+      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -4031,7 +4043,7 @@
       "aliases": [
         "cross_effects"
       ],
-      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
+      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "effect_x",
@@ -4068,6 +4080,12 @@
           "required": false,
           "annotation": null,
           "default": ""
+        },
+        {
+          "name": "guide_clearance_pt",
+          "required": false,
+          "annotation": null,
+          "default": 0
         }
       ],
       "frozen_table_entry": true,
@@ -4075,7 +4093,7 @@
       "aliases": [
         "aligned_views"
       ],
-      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
+      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -4116,7 +4134,7 @@
       "aliases": [
         "loading_projection"
       ],
-      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
+      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -4174,7 +4192,7 @@
       "aliases": [
         "mass_spectrum"
       ],
-      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
+      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "intensity",
@@ -4235,7 +4253,7 @@
       "aliases": [
         "genomic_links"
       ],
-      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
+      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -4278,7 +4296,7 @@
       "aliases": [
         "pathway_overlay"
       ],
-      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
+      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -4326,7 +4344,7 @@
       "aliases": [
         "model_diagnostic"
       ],
-      "source_sha256": "cb9fcf5e1850142bd337e9b8ecabd9fcb6bcf6e9fa97d3fa4994cda2828b2ab7",
+      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "cook",
@@ -4367,7 +4385,7 @@
       "aliases": [
         "ternary"
       ],
-      "source_sha256": "61d9a539d1c07f2019c469617a4c40c14617b7cae9c7d2c792efe7350f454193",
+      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -4420,7 +4438,7 @@
       "aliases": [
         "genome_overview"
       ],
-      "source_sha256": "61d9a539d1c07f2019c469617a4c40c14617b7cae9c7d2c792efe7350f454193",
+      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "position",
@@ -4481,7 +4499,7 @@
       "aliases": [
         "locus_tracks"
       ],
-      "source_sha256": "61d9a539d1c07f2019c469617a4c40c14617b7cae9c7d2c792efe7350f454193",
+      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -4532,7 +4550,7 @@
       "aliases": [
         "funnel"
       ],
-      "source_sha256": "61d9a539d1c07f2019c469617a4c40c14617b7cae9c7d2c792efe7350f454193",
+      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -4568,7 +4586,7 @@
       "aliases": [
         "hierarchy_area"
       ],
-      "source_sha256": "61d9a539d1c07f2019c469617a4c40c14617b7cae9c7d2c792efe7350f454193",
+      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -4617,7 +4635,7 @@
       "aliases": [
         "uncertainty_fan"
       ],
-      "source_sha256": "61d9a539d1c07f2019c469617a4c40c14617b7cae9c7d2c792efe7350f454193",
+      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "center",
@@ -4678,7 +4696,7 @@
       "aliases": [
         "spatial_overlay"
       ],
-      "source_sha256": "61d9a539d1c07f2019c469617a4c40c14617b7cae9c7d2c792efe7350f454193",
+      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "blue",
@@ -4745,7 +4763,7 @@
       "aliases": [
         "typed_network"
       ],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "area",
@@ -4784,7 +4802,7 @@
       "aliases": [
         "weighted_chord"
       ],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "weight"
@@ -4873,7 +4891,7 @@
       "aliases": [
         "alluvial"
       ],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "weight"
@@ -4908,7 +4926,7 @@
       "aliases": [
         "upset"
       ],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -4977,7 +4995,7 @@
       "aliases": [
         "multistate_matrix"
       ],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -5010,7 +5028,7 @@
       "aliases": [
         "running_enrichment"
       ],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "rank",
@@ -5041,7 +5059,7 @@
       "aliases": [
         "rank_bump"
       ],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "rank"
@@ -5085,7 +5103,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -5129,12 +5147,18 @@
           "required": false,
           "annotation": null,
           "default": ""
+        },
+        {
+          "name": "label_contrast",
+          "required": false,
+          "annotation": null,
+          "default": "classic"
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "b33e94e1d7a767389e97ef468f4f4cd9ee863a5e513f653700324362355f4b88",
+      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -5592,7 +5616,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "f625c3e1875c401ce5716a70cbcc11e3cf4303262cebd41dcc78445ffe878904",
+      "source_sha256": "438de77a29aa36bb756a49f137ba4eff2750350d603bcd7605d22993918e52c4",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6183,7 +6207,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6218,7 +6242,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6260,7 +6284,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6304,7 +6328,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6348,7 +6372,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6393,7 +6417,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6442,7 +6466,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6504,7 +6528,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "left",
@@ -6568,7 +6592,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6612,12 +6636,18 @@
             9,
             9
           ]
+        },
+        {
+          "name": "numeric_guides",
+          "required": false,
+          "annotation": null,
+          "default": false
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6656,12 +6686,18 @@
             12,
             9
           ]
+        },
+        {
+          "name": "numeric_guides",
+          "required": false,
+          "annotation": null,
+          "default": false
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6720,12 +6756,18 @@
             10,
             15
           ]
+        },
+        {
+          "name": "numeric_guides",
+          "required": false,
+          "annotation": null,
+          "default": false
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6774,12 +6816,18 @@
             10,
             6
           ]
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "classic"
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6858,12 +6906,24 @@
           "required": false,
           "annotation": null,
           "default": "all"
+        },
+        {
+          "name": "column_label_rotation",
+          "required": false,
+          "annotation": null,
+          "default": 45
+        },
+        {
+          "name": "row_strip_left",
+          "required": false,
+          "annotation": null,
+          "default": 0.04
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6917,12 +6977,18 @@
             12,
             9
           ]
+        },
+        {
+          "name": "numeric_guides",
+          "required": false,
+          "annotation": null,
+          "default": false
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6971,7 +7037,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7039,7 +7105,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7103,7 +7169,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7163,7 +7229,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "5d09507da98b6201b97e3242989a0d6f122d58c0acfba86ed8f05bbe0f3336cc",
+      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7556,6 +7622,274 @@
       "numeric_columns": [
         "value"
       ]
+    },
+    {
+      "id": "figure_three_dimensional.plot_scatter3d",
+      "module": "figure_three_dimensional",
+      "function": "plot_scatter3d",
+      "display_name": "三维散点与正交投影",
+      "summary": "Actual 3D points and aligned orthographic companions, with no fitting.",
+      "parameters": [
+        {
+          "name": "axis_labels",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "coordinate_unit",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "coordinate_definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "views",
+          "required": false,
+          "annotation": null,
+          "default": [
+            [
+              23,
+              -58
+            ]
+          ]
+        },
+        {
+          "name": "include_projections",
+          "required": false,
+          "annotation": null,
+          "default": true
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "width",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "panel_height",
+          "required": false,
+          "annotation": null,
+          "default": 3.8
+        },
+        {
+          "name": "title",
+          "required": false,
+          "annotation": null,
+          "default": "Stored three-dimensional coordinates"
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "aea61541e5b7138073c831d403d8df1db7f01ccc19189bf7a36cb8808997a01f",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": [
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    {
+      "id": "figure_three_dimensional.plot_volume_rendering",
+      "module": "figure_three_dimensional",
+      "function": "plot_volume_rendering",
+      "display_name": "体渲染与给定传递函数",
+      "summary": "True direct volume compositing, declared transfer function and optional slices.",
+      "parameters": [
+        {
+          "name": "coordinate_unit",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "value_label",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "value_limits",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "transfer",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "opacity_unit_distance",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "volume_definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "views",
+          "required": false,
+          "annotation": null,
+          "default": [
+            "z+",
+            "x+",
+            "y+"
+          ]
+        },
+        {
+          "name": "slice_axes",
+          "required": false,
+          "annotation": null,
+          "default": []
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "width",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "panel_height",
+          "required": false,
+          "annotation": null,
+          "default": 3.6
+        },
+        {
+          "name": "title",
+          "required": false,
+          "annotation": null,
+          "default": "Direct volume rendering · supplied voxel field"
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "aea61541e5b7138073c831d403d8df1db7f01ccc19189bf7a36cb8808997a01f",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": []
+    },
+    {
+      "id": "figure_three_dimensional.plot_molecular_trajectory",
+      "module": "figure_three_dimensional",
+      "function": "plot_molecular_trajectory",
+      "display_name": "分子轨迹动画与逐帧查看",
+      "summary": "Static keyframes plus actual GIF and offline frame-by-frame HTML playback.",
+      "parameters": [
+        {
+          "name": "frame_order",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "coordinate_unit",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "time_unit",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "topology_definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "coordinate_definition",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "periodic_boundary_handling",
+          "required": true,
+          "annotation": null
+        },
+        {
+          "name": "key_frames",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "view",
+          "required": false,
+          "annotation": null,
+          "default": [
+            22,
+            -60
+          ]
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "width",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "panel_height",
+          "required": false,
+          "annotation": null,
+          "default": 3.2
+        },
+        {
+          "name": "animation_fps",
+          "required": false,
+          "annotation": null,
+          "default": 10
+        },
+        {
+          "name": "title",
+          "required": false,
+          "annotation": null,
+          "default": "Molecular trajectory · stored coordinates"
+        }
+      ],
+      "frozen_table_entry": true,
+      "theme_mode": "argument",
+      "aliases": [],
+      "source_sha256": "aea61541e5b7138073c831d403d8df1db7f01ccc19189bf7a36cb8808997a01f",
+      "validation": "implemented_source; runtime and visual receipts are separate",
+      "numeric_columns": []
     },
     {
       "id": "figure_wgcna_views.plot_wgcna_view",

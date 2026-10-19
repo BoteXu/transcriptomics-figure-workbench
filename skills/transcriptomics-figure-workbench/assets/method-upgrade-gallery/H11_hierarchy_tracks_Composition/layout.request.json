@@ -1,0 +1,26 @@
+{
+  "id": "H11_hierarchy_tracks_Composition",
+  "title": "Same frozen input · default and caller-selected layout",
+  "columns": 2,
+  "canvas_width_pt": 1728.0,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "heading_pt": 40,
+  "panel_label_gutter_pt": 20,
+  "packing": "masonry",
+  "packing_order": "input",
+  "panels": [
+    {
+      "id": "Default",
+      "svg": "../H11_hierarchy_tracks/H11_hierarchy_tracks.svg",
+      "table": "../H11_hierarchy_tracks/H11_hierarchy_tracks.tsv",
+      "label": "A  Default · complete source"
+    },
+    {
+      "id": "Custom",
+      "svg": "../H11_hierarchy_tracks_Custom/H11_hierarchy_tracks_Custom.svg",
+      "table": "../H11_hierarchy_tracks_Custom/H11_hierarchy_tracks_Custom.tsv",
+      "label": "B  Caller-selected layout · same source"
+    }
+  ]
+}

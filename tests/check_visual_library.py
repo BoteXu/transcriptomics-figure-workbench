@@ -20,6 +20,8 @@ def main():
     for e in families.values():
         assert by[e['default_id']]['history'] is False, 'A whole method was hidden behind history'
         assert len(e['member_ids'])==len(set(e['member_ids']))
+        if e['id'] not in {'scatter3d','volume-rendering','molecular-trajectory'}:
+            assert not e['default_id'].startswith('method-upgrade-gallery/'),'Historical migration replaced a richer current default'
     for f in forms:
         assert f['id'] in d['aliases']
         for ext in f['extensions']:
@@ -29,7 +31,7 @@ def main():
     covered={c['source_id'] for c in d['coverage']}
     # Inspect all authoritative manifests, independently of the builder list.
     folders={a.split('/')[0] for a in covered if not a.startswith('legacy/')}
-    assert len(folders)==19
+    assert len(folders)==20
     for folder in folders:
         m=json.loads((S/'assets'/folder/'manifest.json').read_text(encoding='utf8'))
         for r in m['records']:
@@ -49,6 +51,8 @@ def main():
     registry=json.loads((S/'references/renderer-registry.json').read_text(encoding='utf8'))['renderers']
     assert set(coverage)=={r['id'] for r in registry}
     assert all(r['state']!='SOURCE_ONLY' for r in coverage.values())
+    assert sum(r['state']=='CURRENT_SPEC' for r in coverage.values())==135
+    assert not any(r['state']=='HISTORICAL_RECIPE' for r in coverage.values())
     # The one wrapper is accounted for as a wrapper, not a fictitious example.
     tree=ast.parse((S/'scripts/figure_palette_applications.py').read_text(encoding='utf8'))
     fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='plot_palette_panel')
@@ -58,7 +62,7 @@ def main():
     for a,b in [('heatmap','correlation'),('forest','point-interval'),('raincloud','box'),('raincloud','violin')]:
         assert by[d['aliases'][a]]['method']==by[d['aliases'][b]]['method']
     with tempfile.TemporaryDirectory() as tmp:
-        for name in ['radar','reference-surface-grid__surface','mass-spectrum-mirror','roc','splice-tracks']:
+        for name in ['radar','reference-surface-grid__surface','mass-spectrum-mirror','roc','splice-tracks','H02_forest','D01_Scatter3D','D02_Volume','D03_Trajectory']:
             out=Path(tmp)/name; result=export(name,out)
             spec=json.loads((out/'example.spec.json').read_text(encoding='utf8')); make_plan(spec,out)
             if name=='radar': assert spec['parameters']['panel_specs'][0]['type']=='radar'

@@ -98,21 +98,33 @@ def plot_samples(data, palette, y_label):
     ax.grid(axis='y',color='#EDF0F2',linewidth=.6);ax.set_axisbelow(True)
     return stamp(fig, data, 'samples', palette=palette, y_label=y_label,point_placement='Deterministic categorical offsets; quantitative Y unchanged',group_counts={str(g):int((d.group==g).sum()) for g in groups})
 
-def plot_forest(data, x_label, interval_label, *, effect_scale):
+def plot_forest(data, x_label, interval_label, *, effect_scale, presentation='classic'):
     d = checked(data,['label','estimate','lower','upper'],['estimate','lower','upper'])
     if d.label.duplicated().any() or ((d.lower>d.estimate)|(d.upper<d.estimate)).any():
         raise ValueError('Duplicate labels or invalid interval')
     null = effect_reference(effect_scale)
     if effect_scale == 'ratio' and (d[['estimate','lower','upper']] <= 0).any().any():
         raise ValueError('Ratio estimates and bounds must be positive')
+    if presentation not in ['table','classic']:raise ValueError('Use table or classic forest presentation')
     fig, ax = canvas(); y = np.arange(len(d))
+    if presentation=='table':
+        fig.set_layout_engine(None);fig.set_size_inches(8.4,max(2.6,1.35+.36*len(d)));ax.set_position([.21,.23,.49,.60])
+        for i in range(len(d)):
+            if i%2==0:ax.axhspan(i-.5,i+.5,color='#F0F5F6',zorder=0)
     ax.axvline(null,color='#929AA1',linestyle='--',linewidth=.7)
     if effect_scale == 'ratio': ax.set_xscale('log')
-    ax.errorbar(d.estimate,y,xerr=np.array([d.estimate-d.lower,d.upper-d.estimate]),fmt='o',color='#35618F',capsize=3)
+    if presentation=='classic':ax.errorbar(d.estimate,y,xerr=np.array([d.estimate-d.lower,d.upper-d.estimate]),fmt='o',color='#35618F',capsize=3)
+    else:
+        for i,row in enumerate(d.itertuples()):
+            color='#497F9D' if row.estimate<null else '#CC8069'
+            ax.errorbar(row.estimate,i,xerr=[[row.estimate-row.lower],[row.upper-row.estimate]],fmt='o',color=color,capsize=2.5,ms=5,lw=1.4,zorder=3)
+            ax.text(1.05,i,f'{row.estimate:.2f}  [{row.lower:.2f}, {row.upper:.2f}]',transform=ax.get_yaxis_transform(),va='center',fontsize=8.5,color='#415763',clip_on=False)
+        ax.text(1.05,1.07,'Estimate [supplied interval]',transform=ax.transAxes,fontsize=8.5,color='#415763')
+        ax.spines[['top','right','left']].set_visible(False);ax.tick_params(axis='y',length=0)
     ax.set_yticks(y,d.label); ax.invert_yaxis()
     ax.set(xlabel=x_label,title=interval_label)
     return stamp(fig, data, 'forest', effect_scale=effect_scale, null_value=null,
-                 x_label=x_label, interval_label=interval_label)
+                 x_label=x_label, interval_label=interval_label,presentation=presentation)
 
 def plot_volcano(data, alpha=.05, fc=1):
     d = checked(data,['gene','log2FC','padj'],['log2FC','padj'])

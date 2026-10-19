@@ -6,7 +6,7 @@ import ast, collections, hashlib, json, re, sys, subprocess
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT/'skills/transcriptomics-figure-workbench'
 GALLERY = ROOT/'examples/gallery'
-TEXT_SUFFIXES = {'.md','.py','.R','.json','.yaml','.yml','.txt','.tsv','.html','.svg','.js'}
+TEXT_SUFFIXES = {'.md','.py','.R','.json','.yaml','.yml','.txt','.tsv','.html','.svg','.js','.mjs'}
 PRIVATE = re.compile(r'(?:(?<![A-Za-z0-9])[A-Za-z]:[\\/]|(?<![:A-Za-z0-9./])/(?:home|Users)/[^/\s]+/|wxid_[a-z0-9_]+|viewer-file:[/]{2}|https?://(?:localhost|127\.0\.0\.1):876[67])')
 SECRET = re.compile(r'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|AKIA[A-Z0-9]{16}|sk-[A-Za-z0-9_-]{40,})\b')
 

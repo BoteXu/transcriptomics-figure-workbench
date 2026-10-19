@@ -244,9 +244,14 @@ def plot_hex_density(data,theme,*,x_label,y_label,unit_label,gridsize=24,title='
     fig=_start(theme);ax=_ax(fig,[.14,.17,.60,.67]);h=ax.hexbin(d.x,d.y,gridsize=gridsize,mincnt=1,cmap=_cmap(theme),linewidths=.25);fig.colorbar(h,cax=fig.add_axes([.79,.18,.025,.63]),label='Object count per bin');ax.set(xlabel=x_label,ylabel=y_label,title=title);fig.text(.14,.035,unit_label+'; descriptive occupied-bin counts; no regression or independence claim',fontsize=8)
     return _done(fig,data,'hex_density',theme,gridsize=gridsize,unit_label=unit_label,display_summary='All supplied objects allocated to occupied hex bins')
 
-def plot_contour_field(data,theme,*,value_label,limits,levels,x_label,y_label,title=''):
+def plot_contour_field(data,theme,*,value_label,limits,levels,x_label,y_label,title='',label_contrast='classic'):
     d=checked(data,['x','y','value'],['x','y','value']);mat,ys,xs=_grid(d,'y','x','value');xs=sorted(xs);ys=sorted(ys);mat=mat.reindex(index=ys,columns=xs)
     if not limits[0]<limits[1] or len(levels)<2 or any(a>=b for a,b in zip(levels,levels[1:])) or levels[0]<limits[0] or levels[-1]>limits[1]:raise ValueError('Explicit ordered color limits and contour levels required')
     if d.value.min()<limits[0] or d.value.max()>limits[1]:raise ValueError('Field exceeds declared color limits')
     fig=_start(theme);ax=_ax(fig,[.14,.16,.61,.69]);signed=limits[0]<0<limits[1];norm=TwoSlopeNorm(0,*limits) if signed else Normalize(*limits);cf=ax.contourf(xs,ys,mat.to_numpy(),levels=levels,cmap=_cmap(theme,signed),norm=norm);lines=ax.contour(xs,ys,mat.to_numpy(),levels=levels,colors='#647481',linewidths=.4,alpha=.6);ax.clabel(lines,inline=True,fontsize=6,fmt='%.1f');_colorbar(fig,[.80,.18,.025,.63],_cmap(theme,signed),norm,value_label);ax.set(xlabel=x_label,ylabel=y_label,title=title)
-    return _done(fig,data,'contour_field',theme,value_label=value_label,limits=limits,levels=levels,analysis_boundary='Complete supplied grid; no spatial model or response fitting')
+    if label_contrast not in ('classic','clear'):raise ValueError('Choose classic or clear contour labels')
+    if label_contrast=='clear':
+        for label in lines.labelTexts:
+            label.set_color('#304C5E');label.set_alpha(1)
+            label.set_bbox(dict(facecolor='white',edgecolor='none',alpha=.80,pad=.4))
+    return _done(fig,data,'contour_field',theme,value_label=value_label,limits=limits,levels=levels,label_contrast=label_contrast,analysis_boundary='Complete supplied grid; no spatial model or response fitting')

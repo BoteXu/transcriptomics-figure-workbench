@@ -33,12 +33,13 @@ def plot_cross_effects(data,theme,*,x_label,y_label,comparison_definition,alpha=
     return _finish(fig,data,theme,'cross_layer_effects',x_label=x_label,y_label=y_label,comparison_definition=comparison_definition,alpha=alpha,label_ids=list(label_ids),state_rule='supplied q compared to declared alpha; no testing')
 
 
-def plot_aligned_views(data,theme,*,view_order,coordinate_definition,draw_links=True,title=''):
+def plot_aligned_views(data,theme,*,view_order,coordinate_definition,draw_links=True,title='',guide_clearance_pt=0):
     d=checked(data,['object_id','group','view','x','y'],['x','y']);_unique(d,['object_id','view'])
     if not 2<=len(view_order)<=3 or len(view_order)!=len(set(view_order)) or set(view_order)!=set(d.view) or not coordinate_definition:raise ValueError('Two or three explicit coordinate views required')
     if (d.groupby('object_id').group.nunique()!=1).any():raise ValueError('Object identities change between views')
     sets=[set(d.loc[d.view==v,'object_id']) for v in view_order]
     if draw_links and (any(s!=sets[0] for s in sets) or len(sets[0])>100):raise ValueError('Link views only for <=100 exact matched objects; unpaired views must disable links')
+    if not np.isfinite(guide_clearance_pt) or not 0<=guide_clearance_pt<=60:raise ValueError('Guide clearance must be 0 to 60 points')
     pal=group_palette(theme,list(pd.unique(d.group)));fig=_new(theme,(10.5,5.5));axes=[];w=.75/len(view_order)
     for j,view in enumerate(view_order):
         ax=_axis(fig,[.07+j*w,.22,w-.05,.58]);q=d[d.view==view]
@@ -53,9 +54,13 @@ def plot_aligned_views(data,theme,*,view_order,coordinate_definition,draw_links=
                 pa=fig.transFigure.inverted().transform(axes[j].transData.transform([a.loc[id_,'x'],a.loc[id_,'y']]));pb=fig.transFigure.inverted().transform(axes[j+1].transData.transform([b.loc[id_,'x'],b.loc[id_,'y']]))
                 # Connect only in the gutter; do not draw through either point cloud.
                 left=axes[j].get_position().x1;right=axes[j+1].get_position().x0
+                right-=min(guide_clearance_pt/72/fig.get_figwidth(),.7*(right-left))
                 fig.add_artist(Line2D([left,right],[pa[1],pb[1]],transform=fig.transFigure,color=pal[a.loc[id_,'group']],alpha=.20,lw=.45))
+        if guide_clearance_pt:
+            for ax in axes[1:]:
+                for tick in ax.get_yticklabels():tick.set_bbox(dict(facecolor='white',edgecolor='none',pad=1))
     fig.legend(*axes[0].get_legend_handles_labels(),bbox_to_anchor=(.86,.82),loc='upper left',frameon=False);fig.text(.07,.92,title,fontsize=11,weight='bold');fig.text(.07,.075,'Gutter links identify the same objects; separate view axes are not a shared metric space.',fontsize=8)
-    return _finish(fig,data,theme,'aligned_coordinate_views',view_order=view_order,coordinate_definition=coordinate_definition,draw_links=draw_links,matching='explicit object IDs; no matching or integration computed')
+    return _finish(fig,data,theme,'aligned_coordinate_views',view_order=view_order,coordinate_definition=coordinate_definition,draw_links=draw_links,guide_clearance_pt=guide_clearance_pt,matching='explicit object IDs; no matching or integration computed')
 
 
 def plot_loading_projection(data,theme,*,x_label,y_label,projection_definition,title=''):

@@ -1,0 +1,26 @@
+{
+  "id": "H37_embedding_atlas_Composition",
+  "title": "Same frozen input · default and caller-selected layout",
+  "columns": 1,
+  "canvas_width_pt": 876.0,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "heading_pt": 40,
+  "panel_label_gutter_pt": 20,
+  "packing": "masonry",
+  "packing_order": "input",
+  "panels": [
+    {
+      "id": "Default",
+      "svg": "../H37_embedding_atlas/H37_embedding_atlas.svg",
+      "table": "../H37_embedding_atlas/H37_embedding_atlas.tsv",
+      "label": "A  Default · complete source"
+    },
+    {
+      "id": "Custom",
+      "svg": "../H37_embedding_atlas_Custom/H37_embedding_atlas_Custom.svg",
+      "table": "../H37_embedding_atlas_Custom/H37_embedding_atlas_Custom.tsv",
+      "label": "B  Caller-selected layout · same source"
+    }
+  ]
+}

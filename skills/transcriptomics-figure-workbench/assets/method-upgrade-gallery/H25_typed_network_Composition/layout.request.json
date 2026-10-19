@@ -1,0 +1,26 @@
+{
+  "id": "H25_typed_network_Composition",
+  "title": "Same frozen input · default and caller-selected layout",
+  "columns": 2,
+  "canvas_width_pt": 1728.0,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "heading_pt": 40,
+  "panel_label_gutter_pt": 20,
+  "packing": "masonry",
+  "packing_order": "input",
+  "panels": [
+    {
+      "id": "Default",
+      "svg": "../H25_typed_network/H25_typed_network.svg",
+      "table": "../H25_typed_network/H25_typed_network.tsv",
+      "label": "A  Default · complete source"
+    },
+    {
+      "id": "Custom",
+      "svg": "../H25_typed_network_Custom/H25_typed_network_Custom.svg",
+      "table": "../H25_typed_network_Custom/H25_typed_network_Custom.tsv",
+      "label": "B  Caller-selected layout · same source"
+    }
+  ]
+}

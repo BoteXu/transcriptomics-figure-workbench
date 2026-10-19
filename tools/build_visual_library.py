@@ -49,6 +49,9 @@ EXTRA_TITLES = {
     'cluster-flow': '聚类流向与谱系 · 固定树和分支',
     'coexpression': '共表达网络诊断 · 拓扑、模块和保留性',
     'reference-surface-grid': '三维曲面与二维投影',
+    'scatter3d': '三维散点 · 多视角与正交投影',
+    'volume-rendering': '体渲染 · 透明度传递与物理切片',
+    'molecular-trajectory': '分子轨迹 · 关键帧与离线动画',
     'radar': '雷达图 · 叠加剖面与分面',
     'reference-parallel-trials': '平行坐标 · 多指标与试验记录',
     'distribution-ecdf': '累积分布 ECDF',
@@ -96,9 +99,9 @@ DOMAINS = dict(general='通用科研画法', bulk='Bulk 转录组', single_cell=
                modelling='计算机建模与模型评估', spatial='空间、三维与几何剖面')
 DOMAIN_FORMS = {
     'multiomics': set('feature-correlation-projection mass-spectrum-mirror pathway-quantity-overlay splice-tracks variant-posteriors genome-association-overview interval-tracks contact-tracks sequence-logo rainfall'.split()),
-    'structure': set('structures residue-confidence sequence-logo network chord'.split()),
+    'structure': set('structures residue-confidence sequence-logo network chord molecular-trajectory volume-rendering'.split()),
     'modelling': set('roc precision-recall calibration decision survival qq residual-diagnostics specification-curve contribution contribution-waterfall reference-parallel-trials bland-altman-supplied covariate-balance funnel-supplied-results'.split()),
-    'spatial': set('radar reference-surface-grid spatial slice registration field maps geographic-links ternary-composition supplied-vector-field'.split()),
+    'spatial': set('radar reference-surface-grid scatter3d volume-rendering molecular-trajectory spatial slice registration field maps geographic-links ternary-composition supplied-vector-field'.split()),
 }
 
 
@@ -163,7 +166,8 @@ def build():
                'editorial-gallery', 'study-gallery', 'chapter-layouts-gallery',
                'chapter-gallery', 'analysis-gallery', 'companion-gallery',
                'routine-layouts', 'refined-gallery', 'design-gallery',
-               'clarity-gallery', 'package-gallery', 'method-gallery', 'aesthetic-gallery']
+               'clarity-gallery', 'package-gallery', 'method-gallery', 'aesthetic-gallery',
+               'method-upgrade-gallery']
     rows = []; coverage = []; by_path = {}; missing = []
     analysis_by_png = {str((S / 'assets/analysis-library' / r['assets']['png']).resolve()): r for r in analysis['records']}
     from rebuild_gallery_navigation import adapt_routine
@@ -181,7 +185,7 @@ def build():
                 if (base / candidate).is_file(): a['spec'] = candidate
                 elif (base / raw['id'] / (raw['id'] + '.json')).is_file(): a['meta'] = raw['id'] + '/' + raw['id'] + '.json'
             assets = {k: '../' + (base / v).relative_to(S / 'assets').as_posix()
-                      for k, v in a.items() if k in ['png', 'svg', 'pdf', 'tsv', 'spec', 'meta'] and (base / v).is_file()}
+                      for k, v in a.items() if k in ['png', 'svg', 'pdf', 'tsv', 'spec', 'meta', 'gif', 'html', 'animation', 'layout'] and (base / v).is_file()}
             if 'png' not in assets:
                 missing.append(sid); continue
             image = (OUT / assets['png']).resolve()
@@ -250,6 +254,10 @@ def build():
         aliases[f['id']] = preferred['id']
         for e in f['extensions']: aliases[e['id']] = 'legacy/' + e['id']
     for row in source: aliases[row['id']] = aliases['source-gallery/' + row['id']]
+    # Historical short IDs remain archive aliases. Migrated recipes gain their
+    # own stable current IDs; old pixels and richer routine defaults survive.
+    for r in rows:
+        if r['origin']=='method-upgrade-gallery':aliases[r['original_id']]=r['id']
     for r in rows:
         r['domains'] = ['general']
         r['domains'] += list(dict.fromkeys(c.split('.')[0] for c in r['chapters']))
@@ -295,7 +303,7 @@ def build():
     for r in renderer_coverage:
         lines.append(f"|`{r['renderer']}`|{len(r['current_spec_examples'])}|{len(r['historical_or_reference_examples'])}|{r['state']}|")
     lines += ['', '## 全面性的边界', '',
-              '这份清单核对的是现有实现，不代表所有科学可视化方法已经穷尽。三维曲面有实际原始网格、二维映射及三维视角实例；不据此宣称已提供三维散点、体渲染、分子轨迹动画或交互三维网格。雷达保留原始剖面及历史示例；大于四条剖面需分面。', '',
+              '这份清单核对的是现有实现，不代表所有科学可视化方法已经穷尽。42 个历史配方各有当前 FigureSpec、冻结数据、默认与自定义布局、完整单图组装示例。三维散点提供给定视角及正交投影；体渲染提供规则体素的六个轴向前向透明合成及物理切片；分子轨迹提供给定坐标的关键帧、GIF 和离线滑块播放。尚未提供任意三维相机体绘制、交互三维网格、模拟引擎或拓扑推断。雷达、三维曲面及原历史示例继续保留。', '',
               '多组学索引含跨层关系、基因组轨道、变异后验、剪接、质谱和通路叠加；建模含ROC、PR、校准、决策、生存、残差、贡献与敏感性。结构固定参考与可运行数值图分别标记。原生软件包算法没有因绘图入口而被实现或重新验证。', '',
               '历史版本完整导出沿用既有公开 v0.8.0 归档链接，便携安装提供离线预览；当前 FigureSpec、输入和导出直接使用随包本地文件。']
     (S / 'references/visual-library-coverage.md').write_text('\n'.join(lines)+'\n', encoding='utf8')

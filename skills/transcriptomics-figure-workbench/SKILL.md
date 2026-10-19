@@ -9,9 +9,9 @@ description: Design, render and improve scientific figures for multi-omics, comp
 
 Start with the [complete visual library](assets/visual-library/index.html), rather
 than treating the transcriptomics analysis library as the whole package.
-The complete library indexes 19 existing galleries, keeps all 90 base forms and
-458 historical examples, and nests related forms in 83 parent families.
-Radar, 3D surface, circular networks, box, violin, and their alternatives remain
+The complete library indexes 20 galleries, keeps all 90 original base forms and
+458 historical examples, and nests original/new forms in 86 parent families.
+Radar, 3D surface, 3D scatter, volume rendering, molecular trajectory, circular networks, box, violin, and their alternatives remain
 selectable. A drawing is not removed merely because another form is preferred.
 The original folder and command names remain compatible.
 
@@ -21,9 +21,30 @@ shipped executable FigureSpec and its exact frozen input. Historical fixed
 references cannot be exported as executable specs. Inspect [the generated
 coverage inventory](references/visual-library-coverage.md) and [the cross-domain
 selection rules](references/comprehensive-selection.md). The inventory accounts
-for all 133 registered Python entries: 132 have current or historical examples;
+for all 136 registered Python entries: 135 have current executable examples;
 one is a delegating single-panel wrapper. This does not mean every possible
 visualization, every analysis backend or every native software package is covered.
+
+All 42 formerly historical-only recipes now have current FigureSpecs, exact
+frozen TSVs, default/custom layouts and real composed SVG examples. Use stable
+`H01_...` through `H42_...` IDs. Original historical IDs still open the original
+archive; richer routine defaults are unchanged. Read the [migration and 3D
+guide](references/historical-and-3d-methods.md), including its 42-row mapping.
+
+For `D01_Scatter3D`, preserve supplied XYZ and offer companion projections to
+expose occlusion. For `D02_Volume`, require a complete uniform grid, physical
+units, limits and explicit colour/opacity transfer; six axis-aligned front-to-back
+composites and central slices are implemented, not arbitrary-camera 3D interaction.
+For `D03_Trajectory`, require identical atom identities, supplied bonds, increasing
+physical times and explicit alignment/PBC provenance. Export keyframes, GIF and
+offline frame playback. Never infer bonds, fit an embedding, generate conformers,
+run MD or change coordinates to improve an image. Camera and limits stay fixed
+across frames; playback fps is separate from physical time.
+
+Use `columns`, `rows`, `width`, `panel_height`, explicit cameras/keyframes and
+portable layout requests as appropriate. Individual image reviews bind final
+PNG hashes; changing inputs, guides, code or dimensions requires a fresh review.
+Dense labelled reading pages and compact overviews have distinct intended sizes.
 
 Treat form, application domain, scientific scope, and example/layout as separate
 dimensions. Related matrices share a parent; TOM hierarchy, event states,

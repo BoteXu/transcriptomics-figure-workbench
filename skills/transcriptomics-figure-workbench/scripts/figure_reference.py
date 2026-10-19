@@ -401,7 +401,7 @@ def plot_pca_reference(data,palette,*,group_order,axis_labels,limits,ellipse_lab
     fig.text(.12,.88,ellipse_label,fontsize=8,color='#697278')
     return _finish(fig,data,'pca',palette=palette,axis_labels=list(axis_labels),limits=[list(l) for l in limits],ellipse_label=ellipse_label,spider=spider,landscape=landscape,ellipse_geometry='supplied, not fitted',PCA='not computed')
 
-def plot_state_dashboard(data,palette,*,family_order,condition_order,mean_label,program_label,size=(9,9)):
+def plot_state_dashboard(data,palette,*,family_order,condition_order,mean_label,program_label,size=(9,9),numeric_guides=False):
     _types(data,['embedding','state','effect','mean','program'])
     emb=_records(data,'embedding',['unit_id','family','x','y'],['x','y']); st=_records(data,'state',['state','family','order'],['order'])
     effect=_records(data,'effect',['state','condition','value','evidence'],['value','evidence']); mean=_records(data,'mean',['state','feature','value'],['value']); programs=_records(data,'program',['state','feature','value'],['value'])
@@ -423,6 +423,7 @@ def plot_state_dashboard(data,palette,*,family_order,condition_order,mean_label,
     effax.scatter([list(condition_order).index(c) for c in effect.condition],[ymap[s] for s in effect.state],s=effect.evidence*3,c=effect.value,cmap=effcm,norm=TwoSlopeNorm(0,-effect_bound,effect_bound),lw=0)
     effax.set_yticks([ymap[s] for s in states],states,fontsize=6.8); effax.set_xticks(range(len(condition_order)),condition_order,rotation=45,ha='left',fontsize=7); effax.xaxis.tick_top(); effax.set(xlim=(-.6,len(condition_order)-.4),ylim=(n-.2,-.8)); effax.spines[:].set_visible(False); effax.tick_params(length=0)
     for s in states: effax.scatter(-.65,ymap[s],s=25,color=palette[s],clip_on=False)
+    if numeric_guides:effax.tick_params(axis='y',pad=16)
     for source,left,width,label,cmap,norm in [(mean,.63,.14,mean_label,reference_cmap('expression_warm',semantic='sequential'),Normalize(0,max(mean.value.max(),1e-9))),(programs,.81,.17,program_label,effcm,TwoSlopeNorm(0,-max(programs.value.abs().max(),1e-9),max(programs.value.abs().max(),1e-9)))]:
         mat,rows,cols=_grid(source,'state','feature','value')
         if set(rows)!=set(states): raise ValueError('Heatmap states mismatch')
@@ -433,9 +434,14 @@ def plot_state_dashboard(data,palette,*,family_order,condition_order,mean_label,
         _colorbar(fig,[left,.078,width,.012],cmap,norm,label,orientation='horizontal')
     _colorbar(fig,[.44,.078,.14,.012],effcm,TwoSlopeNorm(0,-effect_bound,effect_bound),'Supplied log2 OR',orientation='horizontal')
     fig.text(.22,.084,'Dot area: supplied\n−log10(adjusted p)',fontsize=7)
-    return _finish(fig,data,'state_dashboard',family_order=list(family_order),condition_order=list(condition_order),palette=palette,mean_label=mean_label,program_label=program_label,area='supplied negative log adjusted p',shared_state_order=states)
+    if numeric_guides:
+        guide=_ax(fig,[.23,.12,.16,.05]);maximum=max(float(effect.evidence.max()),1e-9);values=[maximum/4,maximum/2,maximum]
+        guide.scatter([0,1,2],[.5]*3,s=np.array(values)*3,color='#718A9C')
+        guide.set(xlim=(-.5,2.5),ylim=(0,1),xticks=[0,1,2],xticklabels=[f'{v:.2g}' for v in values],yticks=[])
+        guide.tick_params(length=0,labelsize=7);guide.spines[:].set_visible(False)
+    return _finish(fig,data,'state_dashboard',family_order=list(family_order),condition_order=list(condition_order),palette=palette,mean_label=mean_label,program_label=program_label,numeric_guides=numeric_guides,area='3 times supplied negative log adjusted p',shared_state_order=states)
 
-def plot_multiclass_contributions(data,palette,*,class_order,feature_orders,limits,size=(12,9)):
+def plot_multiclass_contributions(data,palette,*,class_order,feature_orders,limits,size=(12,9),numeric_guides=False):
     _types(data,['contribution','share'])
     d=_records(data,'contribution',['unit_id','class','feature','contribution','feature_value'],['contribution','feature_value']); shares=_records(data,'share',['class','feature','value'],['value'])
     _unique(d,['unit_id','class','feature']); _unique(shares,['class','feature']); palette_check(shares.feature,palette)
@@ -443,6 +449,7 @@ def plot_multiclass_contributions(data,palette,*,class_order,feature_orders,limi
     if limits[0]>=limits[1] or ((d.contribution<limits[0])|(d.contribution>limits[1])).any(): raise ValueError('Clipped contributions')
     if not np.allclose(shares.groupby('class').value.sum(),1,atol=1e-6): raise ValueError('Shares must sum to 1 for each class')
     fig=_new(size); cm=reference_cmap('shap_reference_rainbow',semantic='sequential')
+    rose_limit=max(1.1,1.75*np.sqrt(float(shares.value.max()))*1.12)
     for k,cl in enumerate(class_order):
         row,col=divmod(k,3); left=.09+col*.32; bottom=.56-row*.43
         ax=_ax(fig,[left,bottom,.21,.32]); sub=d[d['class']==cl]; order=feature_orders[cl]
@@ -451,19 +458,26 @@ def plot_multiclass_contributions(data,palette,*,class_order,feature_orders,limi
         rose=_ax(fig,[left+.135,bottom+.03,.095,.105]); rose.axis('off'); rose.set_aspect('equal'); frac=shares[shares['class']==cl]
         angles=np.arange(len(frac))*360/len(frac)
         for a,r in zip(angles,frac.itertuples()): rose.add_patch(Wedge((0,0),np.sqrt(float(r.value))*1.75,a,a+360/len(frac),fc=palette[r.feature],ec='white',lw=.5))
-        rose.set(xlim=(-1.1,1.1),ylim=(-1.1,1.1))
+        if numeric_guides:
+            guide_value=min(.25,float(shares.value.max()));radius=np.sqrt(guide_value)*1.75
+            rose.add_patch(Circle((0,0),radius,fc='none',ec='#647887',lw=.55,ls='--'))
+            rose.text(0,-rose_limit*.9,f'Area: {guide_value:.2g}',ha='center',fontsize=6,color='#435C69',bbox=dict(fc='white',ec='none',pad=.2))
+        rose.set(xlim=(-rose_limit,rose_limit),ylim=(-rose_limit,rose_limit))
     ring=_ax(fig,[.76,.22,.20,.27]); ring.axis('off'); ring.set_aspect('equal')
     for k,cl in enumerate(class_order):
         sub=shares[shares['class']==cl]; start=90; radius=1.0-k*.145
         for r in sub.itertuples():
             extent=r.value*360; ring.add_patch(Wedge((0,0),radius,start-extent,start,width=.12,fc=palette[r.feature],ec='white',lw=.65)); start-=extent
     ring.set(xlim=(-1.1,1.1),ylim=(-1.1,1.1)); ring.set_title('Supplied absolute-contribution shares',fontsize=8)
+    if numeric_guides:
+        ring.text(0,0,'100%\nper ring',ha='center',va='center',fontsize=8,color='#405B69')
+        fig.text(.72,.19,textwrap.fill('Outer to inner: '+', '.join(map(str,class_order)),43),fontsize=7)
     fig.legend(handles=[Rectangle((0,0),1,1,fc=palette[f],label=f) for f in pd.unique(shares.feature)],loc='lower right',bbox_to_anchor=(.98,.085),ncol=3,frameon=False,fontsize=7)
     _colorbar(fig,[.78,.938,.17,.010],cm,Normalize(0,1),'Feature value',orientation='horizontal')
-    return _finish(fig,data,'multiclass_contributions',palette=palette,class_order=list(class_order),feature_orders=feature_orders,limits=list(limits),rose='equal angular sectors; area proportional to supplied share',rings='each ring is a class; angle supplied share',shares='provided upstream; not derived from points')
+    return _finish(fig,data,'multiclass_contributions',palette=palette,class_order=list(class_order),feature_orders=feature_orders,limits=list(limits),numeric_guides=numeric_guides,rose='equal angular sectors; area proportional to supplied share',rings='outer to inner follows explicit class_order; angle supplied share',shares='provided upstream; not derived from points')
 
 def plot_embedding_atlas(data,palette,stack_palette,*,atlas_order,main_order,marker_label,
-                         count_label,fraction_label,radial_count_max,size=(10,15)):
+                         count_label,fraction_label,radial_count_max,size=(10,15),numeric_guides=False):
     """R04 all three subfigures. Supplied tree segments are drawn, not clustered."""
     _types(data,['point','count','leaf','tree','marker'])
     pts=_records(data,'point',['unit_id','layer','group','x','y'],['x','y']); counts=_records(data,'count',['layer','group','segment','value'],['value'])
@@ -499,6 +513,9 @@ def plot_embedding_atlas(data,palette,stack_palette,*,atlas_order,main_order,mar
         col,row=divmod(i,rows); x=col/3; y=1-(row+.5)/rows
         lg.scatter(x,y,s=13,color=palette[g]); lg.text(x+.025,y,f'{i+1:02d} {g}',fontsize=5.6,va='center')
     lg.set(xlim=(-.03,1),ylim=(0,1)); fig.text(.55,.62,'Radial length: '+count_label+'; zero at ring base',fontsize=7)
+    if numeric_guides:
+        fig.text(.55,.60,f'Radial reference: 0 to {radial_count_max:g}; stacked segments below',fontsize=7)
+        fig.legend(handles=[Rectangle((0,0),1,1,fc=stack_palette[s],label=s) for s in segs],loc='upper left',bbox_to_anchor=(.04,.61),ncols=min(4,len(segs)),frameon=False,fontsize=7)
     main=_ax(fig,[.06,.34,.58,.23]); main.axis('off'); main.set_aspect('equal'); mp=pts[pts.layer=='main']
     for g in main_order:
         sub=mp[mp.group==g]; main.scatter(sub.x,sub.y,s=3,color=palette[g],alpha=.7,lw=0,label=g)
@@ -518,10 +535,10 @@ def plot_embedding_atlas(data,palette,stack_palette,*,atlas_order,main_order,mar
     dot.set_xticks(range(n),order,rotation=90,fontsize=5.5); dot.set_yticks(range(len(mrows)),mrows,fontsize=6); dot.set(xlim=(-.5,n-.5),ylim=(len(mrows)-.5,-.5))
     _colorbar(fig,[.89,.16,.012,.10],cm,norm,marker_label)
     fig.legend(handles=[Line2D([],[],ls='',marker='o',color='#AD3D3D',ms=np.sqrt(f*45),label=f'{f:.0%}') for f in [.25,.5,1]],title=fraction_label,loc='lower right',bbox_to_anchor=(.98,.083),frameon=False,fontsize=6,title_fontsize=6)
-    return _finish(fig,data,'embedding_atlas',palette=palette,stack_palette=stack_palette,atlas_order=list(atlas_order),main_order=order,radial_count_max=radial_count_max,uniform_display_scale=float(display_scale),display_translation=center.tolist(),tree='supplied exact segments, no clustering',marker_area='supplied fraction',marker_label=marker_label,fraction_label=fraction_label,count_label=count_label)
+    return _finish(fig,data,'embedding_atlas',palette=palette,stack_palette=stack_palette,atlas_order=list(atlas_order),main_order=order,radial_count_max=radial_count_max,numeric_guides=numeric_guides,uniform_display_scale=float(display_scale),display_translation=center.tolist(),tree='supplied exact segments, no clustering',marker_area='supplied fraction',marker_label=marker_label,fraction_label=fraction_label,count_label=count_label)
 
 def plot_training_dashboard(data,palette,*,selected_epoch,selection_label,loss_label,heat_label,
-                            gradient_label,size=(10,6)):
+                            gradient_label,size=(10,6),presentation='classic'):
     _types(data,['loss','heat','gradient','reference'])
     loss=_records(data,'loss',['series','epoch','value','lower','upper'],['epoch','value','lower','upper']); heat=_records(data,'heat',['run','epoch','value'],['epoch','value']); grad=_records(data,'gradient',['epoch','value','lower','upper'],['epoch','value','lower','upper']); reference=_records(data,'reference',['epoch','value'],['epoch','value'])
     _unique(loss,['series','epoch']); _unique(grad,['epoch']); _unique(reference,['epoch']); _intervals(loss); _intervals(grad); palette_check(loss.series,palette)
@@ -540,12 +557,23 @@ def plot_training_dashboard(data,palette,*,selected_epoch,selection_label,loss_l
     im=hax.pcolormesh(edges,np.arange(len(rs)+1)-.5,mat.to_numpy(),cmap=cm,shading='flat');hax.set_ylim(len(rs)-.5,-.5); hax.set(xlabel='Epoch',ylabel='Run',title='B'); hax.set_yticks(range(len(rs)),[str(r) for r in rs],fontsize=max(4,min(7,9-len(rs)*.12))); hax.axvline(selected_epoch,color='#54636E',ls='--',lw=.7)
     _colorbar(fig,[.92,.62,.012,.24],cm,im.norm,heat_label)
     gax=_ax(fig,[.80,.16,.18,.28]); grad=grad.sort_values('epoch'); reference=reference.sort_values('epoch'); gax.fill_between(grad.epoch,grad.lower,grad.upper,color=semantic_color('primary','#00A78D'),alpha=.20); gax.plot(grad.epoch,grad.value,color=semantic_color('primary','#00A78D'),lw=1.7); gax.plot(reference.epoch,reference.value,color=semantic_color('accent','#EDA019'),ls='--',lw=1.2); gticks=np.unique(np.linspace(0,len(grad)-1,min(5,len(grad))).astype(int)); gax.set_xticks(grad.epoch.iloc[gticks])
+    if presentation not in ('classic','balanced'):raise ValueError('Choose classic or balanced dashboard layout')
+    if presentation=='balanced':
+        fig.set_size_inches(*(size if size!=(10,6) else (12,8)))
+        ax.set_position([.09,.49,.52,.36]);hax.set_position([.75,.17,.16,.68]);gax.set_position([.09,.17,.52,.20])
+        fig.axes[2].set_position([.94,.17,.012,.68]);hax.set_title('',loc='center');hax.set_title('B  Recorded run diagnostics',fontsize=9,loc='left')
+        gax.set(xlabel='Epoch',ylabel=gradient_label,title='C  Stored gradient and supplied reference')
+        legend=ax.get_legend()
+        if legend:legend.remove()
+        fig.legend(*ax.get_legend_handles_labels(),loc='upper left',bbox_to_anchor=(.09,.97),ncols=2,frameon=False,fontsize=8)
+        fig.text(.09,.11,'Gradient: solid stored values / dashed supplied reference',fontsize=8)
+        for guide in fig.axes:guide._explicit_guide_layout=True
     fig.text(.09,.065,selection_label,fontsize=8)
-    return _finish(fig,data,'training_dashboard',palette=palette,selected_epoch=selected_epoch,selection_label=selection_label,loss_label=loss_label,heat_label=heat_label,gradient_label=gradient_label,uncertainty='supplied intervals; repeated runs not independent subjects')
+    return _finish(fig,data,'training_dashboard',palette=palette,selected_epoch=selected_epoch,selection_label=selection_label,loss_label=loss_label,heat_label=heat_label,gradient_label=gradient_label,presentation=presentation,uncertainty='supplied intervals; repeated runs not independent subjects')
 
 def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,bar_label,line_label,size=(10,7),
                             row_aliases=None,column_aliases=None,row_label_wrap=18,column_label_wrap=13,
-                            row_label_mode='all'):
+                            row_label_mode='all',column_label_rotation=45,row_strip_left=.04):
     _types(data,['matrix','row','top','density'])
     matrix=_records(data,'matrix',['row','column','value'],['value']); rows=_records(data,'row',['row','group']); top=_records(data,'top',['column','bar','line'],['bar','line']); density=_records(data,'density',['group','coordinate','value'],['coordinate','value'])
     _unique(rows,['row']); _unique(top,['column']); _unique(density,['group','coordinate']); palette_check(rows.group,palette)
@@ -553,14 +581,16 @@ def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,ba
     if set(rs)!=set(row_order) or set(cs)!=set(column_order) or set(rows.row)!=set(row_order) or set(top.column)!=set(column_order) or set(density.group)!=set(rows.group) or (density.value<0).any(): raise ValueError('Activity alignment mismatch')
     mat=mat.reindex(index=row_order,columns=column_order); groups=rows.set_index('row').reindex(row_order).group.tolist()
     if row_label_mode not in ('all','none'): raise ValueError("row_label_mode must be 'all' or 'none'")
+    if column_label_rotation not in (0,45,90):raise ValueError('Choose a 0, 45 or 90 degree column label rotation')
+    if not np.isfinite(row_strip_left) or not 0<=row_strip_left<=.07:raise ValueError('Row strip left must be in [0, 0.07]')
     rlabels=axis_labels(row_order,row_aliases,'row'); clabels=axis_labels(column_order,column_aliases,'column')
     if row_label_wrap is not None and (type(row_label_wrap) is not int or row_label_wrap<1): raise ValueError('row_label_wrap must be a positive integer or None')
     if column_label_wrap is not None and (type(column_label_wrap) is not int or column_label_wrap<1): raise ValueError('column_label_wrap must be a positive integer or None')
     rlabels=[textwrap.fill(x,row_label_wrap) if row_label_wrap else x for x in rlabels]; clabels=[textwrap.fill(x,column_label_wrap) if column_label_wrap else x for x in clabels]
     if size==(10,7): size=(max(10,7+len(column_order)*.34+max((len(x.replace('\n','')) for x in clabels),default=0)*.025),max(7,4+len(row_order)*.16))
     fig=_new(size); ax=_ax(fig,[.10,.16,.62,.61]); cm=reference_cmap('activity_blue',semantic='sequential')
-    im=ax.imshow(mat,aspect='auto',cmap=cm,vmin=float(matrix.value.min()),vmax=float(matrix.value.max())); ax.set_xticks(range(len(cs)),clabels,rotation=45,ha='right'); ax.set_yticks(range(len(row_order)),rlabels if row_label_mode=='all' else []); ax.set_xlabel('Supplied column order'); ax.set_title('A  Frozen matrix',loc='left',fontsize=10)
-    strip=_ax(fig,[.04,.16,.026,.61]); strip.axis('off')
+    im=ax.imshow(mat,aspect='auto',cmap=cm,vmin=float(matrix.value.min()),vmax=float(matrix.value.max())); ax.set_xticks(range(len(cs)),clabels,rotation=column_label_rotation,ha='center' if column_label_rotation==90 else 'right'); ax.set_yticks(range(len(row_order)),rlabels if row_label_mode=='all' else []); ax.set_xlabel('Supplied column order'); ax.set_title('A  Frozen matrix',loc='left',fontsize=10)
+    strip=_ax(fig,[row_strip_left,.16,.026,.61]); strip.axis('off')
     start=0
     for stop in range(1,len(groups)+1):
         if stop==len(groups) or groups[stop]!=groups[start]:
@@ -576,11 +606,15 @@ def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,ba
     for i,g in enumerate(cats):
         dy=.61/len(cats); dax=_ax(fig,[.82,.16+(len(cats)-1-i)*dy,.16,dy*.85]); sub=density[density.group==g].sort_values('coordinate'); dax.fill_between(sub.coordinate,0,sub.value,color=palette[g],alpha=.35); dax.plot(sub.coordinate,sub.value,color=palette[g],lw=1.2); dax.set_yticks([]); dax.set_title(g,loc='left',fontsize=7,pad=1)
         if i<len(cats)-1: dax.set_xticks([])
-        else: dax.set_xlabel('Supplied density coordinate',fontsize=7)
-    return _finish(fig,data,'activity_dashboard',palette=palette,row_order=list(row_order),column_order=list(column_order),row_aliases=dict(zip(row_order,rlabels)),column_aliases=dict(zip(column_order,clabels)),row_label_mode=row_label_mode,value_label=value_label,bar_label=bar_label,line_label=line_label,density='supplied, no KDE',top_scales='separate labelled axes')
+        else: dax.set_xlabel('Supplied density\ncoordinate',fontsize=7)
+    # These lanes explicitly own aligned strips, the dual-axis summary and
+    # density guides. Generic pairwise expansion mistakes the intentional twins
+    # for colliding panels and inflates dense reading pages without improving ink.
+    for guide in fig.axes:guide._explicit_guide_layout=True
+    return _finish(fig,data,'activity_dashboard',palette=palette,row_order=list(row_order),column_order=list(column_order),row_aliases=dict(zip(row_order,rlabels)),column_aliases=dict(zip(column_order,clabels)),row_label_mode=row_label_mode,column_label_rotation=column_label_rotation,row_strip_left=row_strip_left,value_label=value_label,bar_label=bar_label,line_label=line_label,density='supplied, no KDE',top_scales='separate labelled axes')
 
 def plot_effect_distribution_forest(data,*,row_order,panel_order,panel_labels,limits,
-                                    interval_label,count_label,p_type,size=(12,9)):
+                                    interval_label,count_label,p_type,size=(12,9),numeric_guides=False):
     _types(data,['effect','summary'])
     effects=_records(data,'effect',['effect_id','panel','row','value'],['value']); sums=_records(data,'summary',['panel','row','value','lower','upper','count_text','p'],['value','lower','upper','p'])
     _unique(effects,['effect_id','panel']); _unique(sums,['panel','row']); _intervals(sums); _p(sums)
@@ -602,8 +636,10 @@ def plot_effect_distribution_forest(data,*,row_order,panel_order,panel_labels,li
             ax.text(limits[1]-.18,i,star,ha='right',va='center',fontsize=7)
         ax.axvline(0,ls='--',color='#8A949B',lw=.8); ax.set(xlim=limits,ylim=(n-.5,-.5),xlabel=panel_labels[p],title=str(p)); ax.set_yticks(range(n),[f'{r}  {sums[(sums.panel==p)&(sums.row==r)].count_text.iloc[0]}' for r in row_order] if k==0 else [],fontsize=7)
     fig.text(.22,.02,interval_label+'; '+count_label,fontsize=8)
+    if numeric_guides:
+        fig.text(.22,.945,f'Supplied {p_type} p: * < 0.05, ** < 0.01, *** < 0.001; filled diamond < 0.05',fontsize=7,color='#54636E')
     _colorbar(fig,[.67,.055,.27,.012],cm,norm,'Supplied effect value',orientation='horizontal')
-    return _finish(fig,data,'effect_distribution_forest',row_order=list(row_order),panel_order=list(panel_order),panel_labels=panel_labels,limits=list(limits),interval_label=interval_label,count_label=count_label,summary='provided, not pooled by renderer',p_semantics=p_type+' supplied p; threshold glyph only')
+    return _finish(fig,data,'effect_distribution_forest',row_order=list(row_order),panel_order=list(panel_order),panel_labels=panel_labels,limits=list(limits),interval_label=interval_label,count_label=count_label,numeric_guides=numeric_guides,summary='provided, not pooled by renderer',p_semantics=p_type+' supplied p; threshold glyph only')
 
 def plot_facet_bubble_matrix(data,*,row_facets,column_facets,feature_order,window_order,
                             value_label,size=(10,8)):

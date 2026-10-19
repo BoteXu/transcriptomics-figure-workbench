@@ -1,0 +1,3243 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "H01_branch_tree",
+      "renderer": "figure_biomni_views.plot_branch_tree",
+      "form": "hierarchy",
+      "title": "已有分支长度树 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E40",
+      "source_sha256": "c943b98c291b88635a25d459cf5bedbee278ca2087bd925cd9a3f8ceca781cad",
+      "assets": {
+        "png": "H01_branch_tree/H01_branch_tree.png",
+        "svg": "H01_branch_tree/H01_branch_tree.svg",
+        "pdf": "H01_branch_tree/H01_branch_tree.pdf",
+        "tsv": "H01_branch_tree/H01_branch_tree.tsv",
+        "spec": "H01_branch_tree/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c8c56ebdcf58283c342ccf11e43a7bfbe03a91da2c2d78b6b2a538f6383c9cdc",
+        "notes": "Five supplied leaves and branch lengths are readable; aligned terminal labels and explicit distance definition; no clipping.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "c943b98c291b88635a25d459cf5bedbee278ca2087bd925cd9a3f8ceca781cad"
+    },
+    {
+      "id": "H01_branch_tree_Custom",
+      "renderer": "figure_biomni_views.plot_branch_tree",
+      "form": "hierarchy",
+      "title": "已有分支长度树 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E40",
+      "source_sha256": "c943b98c291b88635a25d459cf5bedbee278ca2087bd925cd9a3f8ceca781cad",
+      "assets": {
+        "png": "H01_branch_tree_Custom/H01_branch_tree_Custom.png",
+        "svg": "H01_branch_tree_Custom/H01_branch_tree_Custom.svg",
+        "pdf": "H01_branch_tree_Custom/H01_branch_tree_Custom.pdf",
+        "tsv": "H01_branch_tree_Custom/H01_branch_tree_Custom.tsv",
+        "spec": "H01_branch_tree_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "694187a2e20eb5d78a19d09315b3d4b4d33c55ebb72affede1a101c0a7f39825",
+        "notes": "Wide canvas preserves every branch length, direct label and distance caption without guide collision.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "c943b98c291b88635a25d459cf5bedbee278ca2087bd925cd9a3f8ceca781cad"
+    },
+    {
+      "id": "H02_forest",
+      "renderer": "figure_core.plot_forest",
+      "form": "forest",
+      "title": "效应区间森林图 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P19a",
+      "source_sha256": "82d2a916a399f477a2d4f9c4398a78de7a5578accff7c9eb00c03af582dabb5b",
+      "assets": {
+        "png": "H02_forest/H02_forest.png",
+        "svg": "H02_forest/H02_forest.svg",
+        "pdf": "H02_forest/H02_forest.pdf",
+        "tsv": "H02_forest/H02_forest.tsv",
+        "spec": "H02_forest/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3b812d8f21e6e593c55c852e99937f2c499c3013702dcb263494eadfc9218353",
+        "notes": "Compact table forest resolves excess whitespace; six asymmetric intervals, zero line and exact numeric lane align.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "82d2a916a399f477a2d4f9c4398a78de7a5578accff7c9eb00c03af582dabb5b"
+    },
+    {
+      "id": "H02_forest_Custom",
+      "renderer": "figure_core.plot_forest",
+      "form": "forest",
+      "title": "效应区间森林图 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P19a",
+      "source_sha256": "82d2a916a399f477a2d4f9c4398a78de7a5578accff7c9eb00c03af582dabb5b",
+      "assets": {
+        "png": "H02_forest_Custom/H02_forest_Custom.png",
+        "svg": "H02_forest_Custom/H02_forest_Custom.svg",
+        "pdf": "H02_forest_Custom/H02_forest_Custom.pdf",
+        "tsv": "H02_forest_Custom/H02_forest_Custom.tsv",
+        "spec": "H02_forest_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "930695b54a41c79704b584d46342e8e101687bea214bdf221470dbac983bc972",
+        "notes": "Wide forest retains all six rows, quiet alternating bands and separated numeric interval column.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "82d2a916a399f477a2d4f9c4398a78de7a5578accff7c9eb00c03af582dabb5b"
+    },
+    {
+      "id": "H03_volcano",
+      "renderer": "figure_core.plot_volcano",
+      "form": "volcano",
+      "title": "火山图 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P08",
+      "source_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10",
+      "assets": {
+        "png": "H03_volcano/H03_volcano.png",
+        "svg": "H03_volcano/H03_volcano.svg",
+        "pdf": "H03_volcano/H03_volcano.pdf",
+        "tsv": "H03_volcano/H03_volcano.tsv",
+        "spec": "H03_volcano/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "165652c9f7a5787f911a27af5fbb44f3bec72b35473e615b37994d865be7060c",
+        "notes": "Classic alternative retains full universe, three categories, both effect thresholds and adjusted-p axis; richer marginal defaults remain available.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10"
+    },
+    {
+      "id": "H03_volcano_Custom",
+      "renderer": "figure_core.plot_volcano",
+      "form": "volcano",
+      "title": "火山图 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P08",
+      "source_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10",
+      "assets": {
+        "png": "H03_volcano_Custom/H03_volcano_Custom.png",
+        "svg": "H03_volcano_Custom/H03_volcano_Custom.svg",
+        "pdf": "H03_volcano_Custom/H03_volcano_Custom.pdf",
+        "tsv": "H03_volcano_Custom/H03_volcano_Custom.tsv",
+        "spec": "H03_volcano_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "f1e23eed487039dbea9395e7e13754b5cb6444111c7e0871d57087f6bc5f2703",
+        "notes": "Wide classic volcano preserves complete cloud and thresholds with an external readable legend.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10"
+    },
+    {
+      "id": "H04_heatmap",
+      "renderer": "figure_core.plot_heatmap",
+      "form": "heatmap",
+      "title": "矩阵热图 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P12a",
+      "source_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+      "assets": {
+        "png": "H04_heatmap/H04_heatmap.png",
+        "svg": "H04_heatmap/H04_heatmap.svg",
+        "pdf": "H04_heatmap/H04_heatmap.pdf",
+        "tsv": "H04_heatmap/H04_heatmap.tsv",
+        "spec": "H04_heatmap/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3a0b424361003e1f083e935371e25ddfa8e99bf192bc8ee42b27d97d3ede75c1",
+        "notes": "All twelve features and eight samples remain legible; signed colour scale is centered and the guide clear.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288"
+    },
+    {
+      "id": "H04_heatmap_Custom",
+      "renderer": "figure_core.plot_heatmap",
+      "form": "heatmap",
+      "title": "矩阵热图 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P12a",
+      "source_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+      "assets": {
+        "png": "H04_heatmap_Custom/H04_heatmap_Custom.png",
+        "svg": "H04_heatmap_Custom/H04_heatmap_Custom.svg",
+        "pdf": "H04_heatmap_Custom/H04_heatmap_Custom.pdf",
+        "tsv": "H04_heatmap_Custom/H04_heatmap_Custom.tsv",
+        "spec": "H04_heatmap_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4053e28132387393ea42869b4a0bbaf5046464a11e27eec85142436e0f5ead7f",
+        "notes": "Wide matrix preserves all cells, row/column identity, signed scale and separated sample labels.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288"
+    },
+    {
+      "id": "H05_paired",
+      "renderer": "figure_extensions.plot_paired",
+      "form": "paired",
+      "title": "配对观测轨迹 · 当前默认",
+      "variant": false,
+      "upgraded_from": "AUX_paired",
+      "source_sha256": "29a401737bae3d319bc992e81c6a1154e8ab28a98f6c8a1d85f308602af09473",
+      "assets": {
+        "png": "H05_paired/H05_paired.png",
+        "svg": "H05_paired/H05_paired.svg",
+        "pdf": "H05_paired/H05_paired.pdf",
+        "tsv": "H05_paired/H05_paired.tsv",
+        "spec": "H05_paired/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "a713a54e229a05d0607805d55b417cb64cbd7b36ffd1d4a7ee5936bacf0ef47c",
+        "notes": "Forty-eight complete pairs retain thin connections, distinct endpoint colours, all extremes and measurement axis.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "29a401737bae3d319bc992e81c6a1154e8ab28a98f6c8a1d85f308602af09473"
+    },
+    {
+      "id": "H05_paired_Custom",
+      "renderer": "figure_extensions.plot_paired",
+      "form": "paired",
+      "title": "配对观测轨迹 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "AUX_paired",
+      "source_sha256": "29a401737bae3d319bc992e81c6a1154e8ab28a98f6c8a1d85f308602af09473",
+      "assets": {
+        "png": "H05_paired_Custom/H05_paired_Custom.png",
+        "svg": "H05_paired_Custom/H05_paired_Custom.svg",
+        "pdf": "H05_paired_Custom/H05_paired_Custom.pdf",
+        "tsv": "H05_paired_Custom/H05_paired_Custom.tsv",
+        "spec": "H05_paired_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "d35a0b33954339dca12930c78bdb75c9576e3c1ff92b5ad176691eda563d3ce0",
+        "notes": "Wide paired canvas keeps all links and subject-count title; endpoint labels remain separated.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "29a401737bae3d319bc992e81c6a1154e8ab28a98f6c8a1d85f308602af09473"
+    },
+    {
+      "id": "H06_effect_matrix",
+      "renderer": "figure_extensions.plot_effect_matrix",
+      "form": "dot-matrix",
+      "title": "效应与不确定性矩阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P14",
+      "source_sha256": "a166f8b8110d0b0a26af521b37f1afe90bc513bb5041145bd3a292e90a8bdeb4",
+      "assets": {
+        "png": "H06_effect_matrix/H06_effect_matrix.png",
+        "svg": "H06_effect_matrix/H06_effect_matrix.svg",
+        "pdf": "H06_effect_matrix/H06_effect_matrix.pdf",
+        "tsv": "H06_effect_matrix/H06_effect_matrix.tsv",
+        "spec": "H06_effect_matrix/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "fa24fc0d22ed2e9ca3027e200281b5b27df4bad31b3c89762710343e966d8bd1",
+        "notes": "Six-by-three supplied effects retain signed colour, FDR area and both separate guides; pale values remain distinguishable from grid.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "a166f8b8110d0b0a26af521b37f1afe90bc513bb5041145bd3a292e90a8bdeb4"
+    },
+    {
+      "id": "H06_effect_matrix_Custom",
+      "renderer": "figure_extensions.plot_effect_matrix",
+      "form": "dot-matrix",
+      "title": "效应与不确定性矩阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P14",
+      "source_sha256": "a166f8b8110d0b0a26af521b37f1afe90bc513bb5041145bd3a292e90a8bdeb4",
+      "assets": {
+        "png": "H06_effect_matrix_Custom/H06_effect_matrix_Custom.png",
+        "svg": "H06_effect_matrix_Custom/H06_effect_matrix_Custom.svg",
+        "pdf": "H06_effect_matrix_Custom/H06_effect_matrix_Custom.pdf",
+        "tsv": "H06_effect_matrix_Custom/H06_effect_matrix_Custom.tsv",
+        "spec": "H06_effect_matrix_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "ca4598310a8446c39db89f50f2b42f35a538b96b885fe216ab157f03d762eea3",
+        "notes": "Wide effect matrix keeps complete eighteen-cell scope and both guides without label overlap.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "a166f8b8110d0b0a26af521b37f1afe90bc513bb5041145bd3a292e90a8bdeb4"
+    },
+    {
+      "id": "H07_xy_points",
+      "renderer": "figure_general.plot_xy_points",
+      "form": "scatter",
+      "title": "独立单位散点 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P33",
+      "source_sha256": "463db5c7a96b10fa1c1ec2b3118d23aea360985e5a6c393ffcaf7f39ae39b3ce",
+      "assets": {
+        "png": "H07_xy_points/H07_xy_points.png",
+        "svg": "H07_xy_points/H07_xy_points.svg",
+        "pdf": "H07_xy_points/H07_xy_points.pdf",
+        "tsv": "H07_xy_points/H07_xy_points.tsv",
+        "spec": "H07_xy_points/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "9e12c42f6db27eaee399ddc26ea4f9ce4d54eac0a6b4583c963e25bfac4dc9ae",
+        "notes": "Exact named palette identities now run; all supplied XY coordinates and three group colours are visible; no inferred regression.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "463db5c7a96b10fa1c1ec2b3118d23aea360985e5a6c393ffcaf7f39ae39b3ce"
+    },
+    {
+      "id": "H07_xy_points_Custom",
+      "renderer": "figure_general.plot_xy_points",
+      "form": "scatter",
+      "title": "独立单位散点 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P33",
+      "source_sha256": "463db5c7a96b10fa1c1ec2b3118d23aea360985e5a6c393ffcaf7f39ae39b3ce",
+      "assets": {
+        "png": "H07_xy_points_Custom/H07_xy_points_Custom.png",
+        "svg": "H07_xy_points_Custom/H07_xy_points_Custom.svg",
+        "pdf": "H07_xy_points_Custom/H07_xy_points_Custom.pdf",
+        "tsv": "H07_xy_points_Custom/H07_xy_points_Custom.tsv",
+        "spec": "H07_xy_points_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "5d12d907a997a6e9f2252cfd9ad562e45ac933ba146ca8daa74e5816958b4bcb",
+        "notes": "Wide XY layout preserves every point, group key and labelled axes; extremes have clear margins.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "463db5c7a96b10fa1c1ec2b3118d23aea360985e5a6c393ffcaf7f39ae39b3ce"
+    },
+    {
+      "id": "H08_grouped_estimates",
+      "renderer": "figure_general.plot_grouped_estimates",
+      "form": "bars",
+      "title": "分组估计区间 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P34",
+      "source_sha256": "082afbe85126bcaaf3e20fe2ac48f6d075e45336f4b21377fea89b11b19a020b",
+      "assets": {
+        "png": "H08_grouped_estimates/H08_grouped_estimates.png",
+        "svg": "H08_grouped_estimates/H08_grouped_estimates.svg",
+        "pdf": "H08_grouped_estimates/H08_grouped_estimates.pdf",
+        "tsv": "H08_grouped_estimates/H08_grouped_estimates.tsv",
+        "spec": "H08_grouped_estimates/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "19e0043ec098d12237d505492e9c27f08bb93a5c14f4abb128bb740e64054765",
+        "notes": "Four categories by three groups preserve supplied estimates and interval caps with a readable external key and zero baseline.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "082afbe85126bcaaf3e20fe2ac48f6d075e45336f4b21377fea89b11b19a020b"
+    },
+    {
+      "id": "H08_grouped_estimates_Custom",
+      "renderer": "figure_general.plot_grouped_estimates",
+      "form": "bars",
+      "title": "分组估计区间 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P34",
+      "source_sha256": "082afbe85126bcaaf3e20fe2ac48f6d075e45336f4b21377fea89b11b19a020b",
+      "assets": {
+        "png": "H08_grouped_estimates_Custom/H08_grouped_estimates_Custom.png",
+        "svg": "H08_grouped_estimates_Custom/H08_grouped_estimates_Custom.svg",
+        "pdf": "H08_grouped_estimates_Custom/H08_grouped_estimates_Custom.pdf",
+        "tsv": "H08_grouped_estimates_Custom/H08_grouped_estimates_Custom.tsv",
+        "spec": "H08_grouped_estimates_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "f47639ceb0fe7e0f0a10d787e2b6d90f88b2aebcca271a3517007e7afd4354b2",
+        "notes": "Wide grouped estimates keep all interval caps and group labels without legend overlap.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "082afbe85126bcaaf3e20fe2ac48f6d075e45336f4b21377fea89b11b19a020b"
+    },
+    {
+      "id": "H09_confusion_counts",
+      "renderer": "figure_general.plot_confusion_counts",
+      "form": "heatmap",
+      "title": "给定混淆计数 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P36",
+      "source_sha256": "47c6328bde4b29c51a4050b55a13da5c0d46a60ee17bfe086d900a2f7f841835",
+      "assets": {
+        "png": "H09_confusion_counts/H09_confusion_counts.png",
+        "svg": "H09_confusion_counts/H09_confusion_counts.svg",
+        "pdf": "H09_confusion_counts/H09_confusion_counts.pdf",
+        "tsv": "H09_confusion_counts/H09_confusion_counts.tsv",
+        "spec": "H09_confusion_counts/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3bd47d419bedf65108c0d7df9dcae4305987276a2a144ad9d7898993f3ae9991",
+        "notes": "All nine exact counts have sufficient contrast on a zero-based sequential key; observed and predicted axes are explicit.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "47c6328bde4b29c51a4050b55a13da5c0d46a60ee17bfe086d900a2f7f841835"
+    },
+    {
+      "id": "H09_confusion_counts_Custom",
+      "renderer": "figure_general.plot_confusion_counts",
+      "form": "heatmap",
+      "title": "给定混淆计数 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P36",
+      "source_sha256": "47c6328bde4b29c51a4050b55a13da5c0d46a60ee17bfe086d900a2f7f841835",
+      "assets": {
+        "png": "H09_confusion_counts_Custom/H09_confusion_counts_Custom.png",
+        "svg": "H09_confusion_counts_Custom/H09_confusion_counts_Custom.svg",
+        "pdf": "H09_confusion_counts_Custom/H09_confusion_counts_Custom.pdf",
+        "tsv": "H09_confusion_counts_Custom/H09_confusion_counts_Custom.tsv",
+        "spec": "H09_confusion_counts_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4b56f6c67a884e53eec15e6c8d1774cc4c56f3820a67a77679c503596a897ae9",
+        "notes": "Repaired tall custom canvas removes excessive horizontal whitespace; all nine exact counts, zero-based colour key and class axes remain clear.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "47c6328bde4b29c51a4050b55a13da5c0d46a60ee17bfe086d900a2f7f841835"
+    },
+    {
+      "id": "H10_split_metric_matrix",
+      "renderer": "figure_linked_evidence.plot_split_metric_matrix",
+      "form": "heatmap",
+      "title": "双指标三角矩阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E35",
+      "source_sha256": "9848b8a6bad07be531c6fc8386a4bbdab4bda5ab1c78477d947f3cee09294e9a",
+      "assets": {
+        "png": "H10_split_metric_matrix/H10_split_metric_matrix.png",
+        "svg": "H10_split_metric_matrix/H10_split_metric_matrix.svg",
+        "pdf": "H10_split_metric_matrix/H10_split_metric_matrix.pdf",
+        "tsv": "H10_split_metric_matrix/H10_split_metric_matrix.tsv",
+        "spec": "H10_split_metric_matrix/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1dbb30288fda17364eacfdb21eec0b9bee0daa03c15709dbdd8c67814d331d01",
+        "notes": "Four declared rows and three traits retain independent upper probability and lower signed-association keys.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "9848b8a6bad07be531c6fc8386a4bbdab4bda5ab1c78477d947f3cee09294e9a"
+    },
+    {
+      "id": "H10_split_metric_matrix_Custom",
+      "renderer": "figure_linked_evidence.plot_split_metric_matrix",
+      "form": "heatmap",
+      "title": "双指标三角矩阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E35",
+      "source_sha256": "9848b8a6bad07be531c6fc8386a4bbdab4bda5ab1c78477d947f3cee09294e9a",
+      "assets": {
+        "png": "H10_split_metric_matrix_Custom/H10_split_metric_matrix_Custom.png",
+        "svg": "H10_split_metric_matrix_Custom/H10_split_metric_matrix_Custom.svg",
+        "pdf": "H10_split_metric_matrix_Custom/H10_split_metric_matrix_Custom.pdf",
+        "tsv": "H10_split_metric_matrix_Custom/H10_split_metric_matrix_Custom.tsv",
+        "spec": "H10_split_metric_matrix_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "07db8bbce3f065cde8afa06b7a2623bc221f63908f697a6f502109f3f333d044",
+        "notes": "Wide split matrix keeps identity strip, both numeric domains and explanatory footer unclipped.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "9848b8a6bad07be531c6fc8386a4bbdab4bda5ab1c78477d947f3cee09294e9a"
+    },
+    {
+      "id": "H11_hierarchy_tracks",
+      "renderer": "figure_linked_evidence.plot_hierarchy_tracks",
+      "form": "hierarchy",
+      "title": "已有层次树与轨道 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E36",
+      "source_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba",
+      "assets": {
+        "png": "H11_hierarchy_tracks/H11_hierarchy_tracks.png",
+        "svg": "H11_hierarchy_tracks/H11_hierarchy_tracks.svg",
+        "pdf": "H11_hierarchy_tracks/H11_hierarchy_tracks.pdf",
+        "tsv": "H11_hierarchy_tracks/H11_hierarchy_tracks.tsv",
+        "spec": "H11_hierarchy_tracks/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "5e347002631cfbecf30bdc1528bf4db800b8032dc356499657b89176f9b6ed5f",
+        "notes": "All sixteen leaves align with the categorical strip; merge heights, leaf IDs and group key remain readable.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba"
+    },
+    {
+      "id": "H11_hierarchy_tracks_Custom",
+      "renderer": "figure_linked_evidence.plot_hierarchy_tracks",
+      "form": "hierarchy",
+      "title": "已有层次树与轨道 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E36",
+      "source_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba",
+      "assets": {
+        "png": "H11_hierarchy_tracks_Custom/H11_hierarchy_tracks_Custom.png",
+        "svg": "H11_hierarchy_tracks_Custom/H11_hierarchy_tracks_Custom.svg",
+        "pdf": "H11_hierarchy_tracks_Custom/H11_hierarchy_tracks_Custom.pdf",
+        "tsv": "H11_hierarchy_tracks_Custom/H11_hierarchy_tracks_Custom.tsv",
+        "spec": "H11_hierarchy_tracks_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "bf37090fca67a6c85fa92d42645125d2a7136a79a6610af6593d78a037a8e2fc",
+        "notes": "Wide hierarchy preserves every leaf/strip alignment and complete category and merge-height guides.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba"
+    },
+    {
+      "id": "H12_radial_hierarchy",
+      "renderer": "figure_linked_evidence.plot_radial_hierarchy",
+      "form": "hierarchy",
+      "title": "已有环形层次树 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E37",
+      "source_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba",
+      "assets": {
+        "png": "H12_radial_hierarchy/H12_radial_hierarchy.png",
+        "svg": "H12_radial_hierarchy/H12_radial_hierarchy.svg",
+        "pdf": "H12_radial_hierarchy/H12_radial_hierarchy.pdf",
+        "tsv": "H12_radial_hierarchy/H12_radial_hierarchy.tsv",
+        "spec": "H12_radial_hierarchy/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "25f3c01fd25658b4dd5d8a1ef51bedd0cac588a5b39dae099520d4d8171c222b",
+        "notes": "All sixteen leaf IDs and exact branches remain readable; signed colour, calibrated area examples and true outer-height scale are now explicit.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba"
+    },
+    {
+      "id": "H12_radial_hierarchy_Custom",
+      "renderer": "figure_linked_evidence.plot_radial_hierarchy",
+      "form": "hierarchy",
+      "title": "已有环形层次树 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E37",
+      "source_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba",
+      "assets": {
+        "png": "H12_radial_hierarchy_Custom/H12_radial_hierarchy_Custom.png",
+        "svg": "H12_radial_hierarchy_Custom/H12_radial_hierarchy_Custom.svg",
+        "pdf": "H12_radial_hierarchy_Custom/H12_radial_hierarchy_Custom.pdf",
+        "tsv": "H12_radial_hierarchy_Custom/H12_radial_hierarchy_Custom.tsv",
+        "spec": "H12_radial_hierarchy_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c27dcecf7a50eb40b73ad4c07a39ffa0134c5abbfae6358a0d1090e3fbecae12",
+        "notes": "Wider radial hierarchy retains every leaf and all three independent numeric guides without label or key collisions.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba"
+    },
+    {
+      "id": "H13_stacked_values",
+      "renderer": "figure_linked_evidence.plot_stacked_values",
+      "form": "bars",
+      "title": "同单位可加量堆积 · 当前默认",
+      "variant": false,
+      "upgraded_from": "AUX_c37_terms",
+      "source_sha256": "75d756118f145c3052136581c06d3bf8aca91df96a2d473d77023e94c278871d",
+      "assets": {
+        "png": "H13_stacked_values/H13_stacked_values.png",
+        "svg": "H13_stacked_values/H13_stacked_values.svg",
+        "pdf": "H13_stacked_values/H13_stacked_values.pdf",
+        "tsv": "H13_stacked_values/H13_stacked_values.tsv",
+        "spec": "H13_stacked_values/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "09713de1b9229987a062b21db2be7672261cef7dd504e26537b9ff7550603813",
+        "notes": "Eight terms, category key and probability axis are clear; explicit one-nonzero-category note avoids implying a sum across tests.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "75d756118f145c3052136581c06d3bf8aca91df96a2d473d77023e94c278871d"
+    },
+    {
+      "id": "H13_stacked_values_Custom",
+      "renderer": "figure_linked_evidence.plot_stacked_values",
+      "form": "bars",
+      "title": "同单位可加量堆积 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "AUX_c37_terms",
+      "source_sha256": "75d756118f145c3052136581c06d3bf8aca91df96a2d473d77023e94c278871d",
+      "assets": {
+        "png": "H13_stacked_values_Custom/H13_stacked_values_Custom.png",
+        "svg": "H13_stacked_values_Custom/H13_stacked_values_Custom.svg",
+        "pdf": "H13_stacked_values_Custom/H13_stacked_values_Custom.pdf",
+        "tsv": "H13_stacked_values_Custom/H13_stacked_values_Custom.tsv",
+        "spec": "H13_stacked_values_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "ecc346aac3b021a4342d719d9b27d70cfae6cbd9d5631951c3bcac3e33eefaed",
+        "notes": "Wide bars retain all terms and categories, readable footer and zero baseline.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "75d756118f145c3052136581c06d3bf8aca91df96a2d473d77023e94c278871d"
+    },
+    {
+      "id": "H14_enrichment_grid",
+      "renderer": "figure_method_extensions.plot_enrichment_grid",
+      "form": "dot-matrix",
+      "title": "已有富集结果点阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E01",
+      "source_sha256": "4693c93c12e01023e7b381077de14b371ff28a38db141660204b3bb417d43b4d",
+      "assets": {
+        "png": "H14_enrichment_grid/H14_enrichment_grid.png",
+        "svg": "H14_enrichment_grid/H14_enrichment_grid.svg",
+        "pdf": "H14_enrichment_grid/H14_enrichment_grid.pdf",
+        "tsv": "H14_enrichment_grid/H14_enrichment_grid.tsv",
+        "spec": "H14_enrichment_grid/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3ff544c1ebac7396ecdf7c19d3816a1cf6b5577f923962b36f7fdb8f858a231f",
+        "notes": "Eighteen full term names, six slots, probability keys and ratio sizes are readable; untested and unreported states remain distinct.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "4693c93c12e01023e7b381077de14b371ff28a38db141660204b3bb417d43b4d"
+    },
+    {
+      "id": "H14_enrichment_grid_Custom",
+      "renderer": "figure_method_extensions.plot_enrichment_grid",
+      "form": "dot-matrix",
+      "title": "已有富集结果点阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E01",
+      "source_sha256": "4693c93c12e01023e7b381077de14b371ff28a38db141660204b3bb417d43b4d",
+      "assets": {
+        "png": "H14_enrichment_grid_Custom/H14_enrichment_grid_Custom.png",
+        "svg": "H14_enrichment_grid_Custom/H14_enrichment_grid_Custom.svg",
+        "pdf": "H14_enrichment_grid_Custom/H14_enrichment_grid_Custom.pdf",
+        "tsv": "H14_enrichment_grid_Custom/H14_enrichment_grid_Custom.tsv",
+        "spec": "H14_enrichment_grid_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "211b42c8455af87c5ba4aac0c3eeb044a2d906468f4f3e3ef242d5d68e95f5a3",
+        "notes": "Custom width retains every term label, common probability limits and unclipped missingness and size keys.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "4693c93c12e01023e7b381077de14b371ff28a38db141660204b3bb417d43b4d"
+    },
+    {
+      "id": "H15_term_key",
+      "renderer": "figure_method_extensions.plot_term_key",
+      "form": "term-circle",
+      "title": "条目索引表 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E06a",
+      "source_sha256": "3a3b9715b686e4dfce46380033a99feff4fb4ba677ff040e349a39bff53f449e",
+      "assets": {
+        "png": "H15_term_key/H15_term_key.png",
+        "svg": "H15_term_key/H15_term_key.svg",
+        "pdf": "H15_term_key/H15_term_key.pdf",
+        "tsv": "H15_term_key/H15_term_key.tsv",
+        "spec": "H15_term_key/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "2fda277cf72a72315602f8f59e325588a8cc6ba7b8a3c9f23bab78a6fa4e9904",
+        "notes": "All six complete IDs and descriptions are readable in a quiet alternating-row dictionary.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "3a3b9715b686e4dfce46380033a99feff4fb4ba677ff040e349a39bff53f449e"
+    },
+    {
+      "id": "H15_term_key_Custom",
+      "renderer": "figure_method_extensions.plot_term_key",
+      "form": "term-circle",
+      "title": "条目索引表 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E06a",
+      "source_sha256": "3a3b9715b686e4dfce46380033a99feff4fb4ba677ff040e349a39bff53f449e",
+      "assets": {
+        "png": "H15_term_key_Custom/H15_term_key_Custom.png",
+        "svg": "H15_term_key_Custom/H15_term_key_Custom.svg",
+        "pdf": "H15_term_key_Custom/H15_term_key_Custom.pdf",
+        "tsv": "H15_term_key_Custom/H15_term_key_Custom.tsv",
+        "spec": "H15_term_key_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "598131ec5a6b244062d9728b450539dc06463a556a71be8573ed02a16ff730f4",
+        "notes": "Wide dictionary keeps exact ID-description mapping and consistent column alignment.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "3a3b9715b686e4dfce46380033a99feff4fb4ba677ff040e349a39bff53f449e"
+    },
+    {
+      "id": "H16_bivariate_tiles",
+      "renderer": "figure_method_extensions.plot_bivariate_tiles",
+      "form": "heatmap",
+      "title": "双量值色块矩阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E19",
+      "source_sha256": "8173f54c86643e548ed476f96c348190947c6780d4668b5e2cfe4cebe52c5000",
+      "assets": {
+        "png": "H16_bivariate_tiles/H16_bivariate_tiles.png",
+        "svg": "H16_bivariate_tiles/H16_bivariate_tiles.svg",
+        "pdf": "H16_bivariate_tiles/H16_bivariate_tiles.pdf",
+        "tsv": "H16_bivariate_tiles/H16_bivariate_tiles.tsv",
+        "spec": "H16_bivariate_tiles/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b4781d7c900ddd2197142795b4a3c338592813da5538976762690b5282162d29",
+        "notes": "All seventy-two cells and nine-bin bivariate key remain legible; both metric directions and boundary convention are explicit.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "8173f54c86643e548ed476f96c348190947c6780d4668b5e2cfe4cebe52c5000"
+    },
+    {
+      "id": "H16_bivariate_tiles_Custom",
+      "renderer": "figure_method_extensions.plot_bivariate_tiles",
+      "form": "heatmap",
+      "title": "双量值色块矩阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E19",
+      "source_sha256": "8173f54c86643e548ed476f96c348190947c6780d4668b5e2cfe4cebe52c5000",
+      "assets": {
+        "png": "H16_bivariate_tiles_Custom/H16_bivariate_tiles_Custom.png",
+        "svg": "H16_bivariate_tiles_Custom/H16_bivariate_tiles_Custom.svg",
+        "pdf": "H16_bivariate_tiles_Custom/H16_bivariate_tiles_Custom.pdf",
+        "tsv": "H16_bivariate_tiles_Custom/H16_bivariate_tiles_Custom.tsv",
+        "spec": "H16_bivariate_tiles_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "e7f46210f320d1436f31580fc874cf83bba43a802f79aaaac135d0dc9f4f06b5",
+        "notes": "Wide tiles preserve both domains, full bivariate legend and every row and column label without clipping.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "8173f54c86643e548ed476f96c348190947c6780d4668b5e2cfe4cebe52c5000"
+    },
+    {
+      "id": "H17_cohort_intervals",
+      "renderer": "figure_multimodal.plot_cohort_intervals",
+      "form": "forest",
+      "title": "队列估计区间 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P21a",
+      "source_sha256": "188271cbd829a87354f03ec6c7e2fd5d979432b8b0993e65e161d83bc99f6b5f",
+      "assets": {
+        "png": "H17_cohort_intervals/H17_cohort_intervals.png",
+        "svg": "H17_cohort_intervals/H17_cohort_intervals.svg",
+        "pdf": "H17_cohort_intervals/H17_cohort_intervals.pdf",
+        "tsv": "H17_cohort_intervals/H17_cohort_intervals.tsv",
+        "spec": "H17_cohort_intervals/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3d42b58f687da96bcc85fb51631b95749a511ec01d634d0a5377b795e6d557ff",
+        "notes": "Five programmes by three cohorts retain distinct marker shapes, exact supplied intervals and zero reference; key is readable.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "188271cbd829a87354f03ec6c7e2fd5d979432b8b0993e65e161d83bc99f6b5f"
+    },
+    {
+      "id": "H17_cohort_intervals_Custom",
+      "renderer": "figure_multimodal.plot_cohort_intervals",
+      "form": "forest",
+      "title": "队列估计区间 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P21a",
+      "source_sha256": "188271cbd829a87354f03ec6c7e2fd5d979432b8b0993e65e161d83bc99f6b5f",
+      "assets": {
+        "png": "H17_cohort_intervals_Custom/H17_cohort_intervals_Custom.png",
+        "svg": "H17_cohort_intervals_Custom/H17_cohort_intervals_Custom.svg",
+        "pdf": "H17_cohort_intervals_Custom/H17_cohort_intervals_Custom.pdf",
+        "tsv": "H17_cohort_intervals_Custom/H17_cohort_intervals_Custom.tsv",
+        "spec": "H17_cohort_intervals_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "fcd865eb754168c4c77a7a4c732866cf7ea204655c6d748654e2b0d302cec5ee",
+        "notes": "Wide cohort forest retains fifteen intervals, common scale and readable row and cohort labels.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "188271cbd829a87354f03ec6c7e2fd5d979432b8b0993e65e161d83bc99f6b5f"
+    },
+    {
+      "id": "H18_association_matrix",
+      "renderer": "figure_multimodal.plot_association_matrix",
+      "form": "correlation",
+      "title": "关联结果矩阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P18",
+      "source_sha256": "bd956854ab851b778ebda369e5ef53e1251b788b5ea55e6d89bd8524036c6ba2",
+      "assets": {
+        "png": "H18_association_matrix/H18_association_matrix.png",
+        "svg": "H18_association_matrix/H18_association_matrix.svg",
+        "pdf": "H18_association_matrix/H18_association_matrix.pdf",
+        "tsv": "H18_association_matrix/H18_association_matrix.tsv",
+        "spec": "H18_association_matrix/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "adc167bed48ba1e8fbff800ef3b35a95d877b95ba5d8f24668f89a6fcc174760",
+        "notes": "Seven-by-four supplied correlations retain exact signed values, FDR dots and hatched unavailable cells; missing is not zero.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "bd956854ab851b778ebda369e5ef53e1251b788b5ea55e6d89bd8524036c6ba2"
+    },
+    {
+      "id": "H18_association_matrix_Custom",
+      "renderer": "figure_multimodal.plot_association_matrix",
+      "form": "correlation",
+      "title": "关联结果矩阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P18",
+      "source_sha256": "bd956854ab851b778ebda369e5ef53e1251b788b5ea55e6d89bd8524036c6ba2",
+      "assets": {
+        "png": "H18_association_matrix_Custom/H18_association_matrix_Custom.png",
+        "svg": "H18_association_matrix_Custom/H18_association_matrix_Custom.svg",
+        "pdf": "H18_association_matrix_Custom/H18_association_matrix_Custom.pdf",
+        "tsv": "H18_association_matrix_Custom/H18_association_matrix_Custom.tsv",
+        "spec": "H18_association_matrix_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4b28da1d53aedf285c25581572aad8b932f57b99e86bbcc2d18bdae154613017",
+        "notes": "Wide association matrix preserves annotations, full signed domain and distinct missingness with a readable key.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "bd956854ab851b778ebda369e5ef53e1251b788b5ea55e6d89bd8524036c6ba2"
+    },
+    {
+      "id": "H19_calibration_counts",
+      "renderer": "figure_multimodal.plot_calibration_counts",
+      "form": "calibration",
+      "title": "已有校准结果与人数 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P27",
+      "source_sha256": "1ce5698c07b8d49ebeff11554da3437b5eabb3bf37979ab27d27bb5083d9f213",
+      "assets": {
+        "png": "H19_calibration_counts/H19_calibration_counts.png",
+        "svg": "H19_calibration_counts/H19_calibration_counts.svg",
+        "pdf": "H19_calibration_counts/H19_calibration_counts.pdf",
+        "tsv": "H19_calibration_counts/H19_calibration_counts.tsv",
+        "spec": "H19_calibration_counts/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c8f008869bfb52b40d0bb3603cbb9c7e43d76f0241ac5b0b9cbbf8987e3e9740",
+        "notes": "Three model curves retain distinct shapes/styles, supplied intervals, identity line and aligned bin counts; within-model count note is visible.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "1ce5698c07b8d49ebeff11554da3437b5eabb3bf37979ab27d27bb5083d9f213"
+    },
+    {
+      "id": "H19_calibration_counts_Custom",
+      "renderer": "figure_multimodal.plot_calibration_counts",
+      "form": "calibration",
+      "title": "已有校准结果与人数 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P27",
+      "source_sha256": "1ce5698c07b8d49ebeff11554da3437b5eabb3bf37979ab27d27bb5083d9f213",
+      "assets": {
+        "png": "H19_calibration_counts_Custom/H19_calibration_counts_Custom.png",
+        "svg": "H19_calibration_counts_Custom/H19_calibration_counts_Custom.svg",
+        "pdf": "H19_calibration_counts_Custom/H19_calibration_counts_Custom.pdf",
+        "tsv": "H19_calibration_counts_Custom/H19_calibration_counts_Custom.tsv",
+        "spec": "H19_calibration_counts_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "cb83946dd23a0c5844890bbc2e64135f45c8806f098cd68184e61a448e349bf6",
+        "notes": "Wide calibration keeps probability alignment and uncertainty bars; footer and three-model key remain readable.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "1ce5698c07b8d49ebeff11554da3437b5eabb3bf37979ab27d27bb5083d9f213"
+    },
+    {
+      "id": "H20_cross_effects",
+      "renderer": "figure_multiomics_views.plot_cross_effects",
+      "form": "scatter",
+      "title": "跨组学配对效应 · 当前默认",
+      "variant": false,
+      "upgraded_from": "M01",
+      "source_sha256": "79b2b2300b8899ad4c9eea995d4ab7b2efd145feb182d29b3c17d018ceae2494",
+      "assets": {
+        "png": "H20_cross_effects/H20_cross_effects.png",
+        "svg": "H20_cross_effects/H20_cross_effects.svg",
+        "pdf": "H20_cross_effects/H20_cross_effects.pdf",
+        "tsv": "H20_cross_effects/H20_cross_effects.tsv",
+        "spec": "H20_cross_effects/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "432511a9db5213314b86363a8560978120234ce9681e7a460d9a7b9168063eb3",
+        "notes": "Full matched effect coordinates, zero references, four declared categories and contrast-sign caption remain visible.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "79b2b2300b8899ad4c9eea995d4ab7b2efd145feb182d29b3c17d018ceae2494"
+    },
+    {
+      "id": "H20_cross_effects_Custom",
+      "renderer": "figure_multiomics_views.plot_cross_effects",
+      "form": "scatter",
+      "title": "跨组学配对效应 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "M01",
+      "source_sha256": "79b2b2300b8899ad4c9eea995d4ab7b2efd145feb182d29b3c17d018ceae2494",
+      "assets": {
+        "png": "H20_cross_effects_Custom/H20_cross_effects_Custom.png",
+        "svg": "H20_cross_effects_Custom/H20_cross_effects_Custom.svg",
+        "pdf": "H20_cross_effects_Custom/H20_cross_effects_Custom.pdf",
+        "tsv": "H20_cross_effects_Custom/H20_cross_effects_Custom.tsv",
+        "spec": "H20_cross_effects_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3bfff02f71e85ebb5bf95fbb130123071c0c7b67498ad3ed4f1edf8d6abc6a0b",
+        "notes": "Wide cross-effect plot retains every mapped point and category guide without inferred fit.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "79b2b2300b8899ad4c9eea995d4ab7b2efd145feb182d29b3c17d018ceae2494"
+    },
+    {
+      "id": "H21_aligned_views",
+      "renderer": "figure_multiomics_views.plot_aligned_views",
+      "form": "embedding",
+      "title": "同对象对齐视图 · 当前默认",
+      "variant": false,
+      "upgraded_from": "M04",
+      "source_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d",
+      "assets": {
+        "png": "H21_aligned_views/H21_aligned_views.png",
+        "svg": "H21_aligned_views/H21_aligned_views.svg",
+        "pdf": "H21_aligned_views/H21_aligned_views.pdf",
+        "tsv": "H21_aligned_views/H21_aligned_views.tsv",
+        "spec": "H21_aligned_views/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1d60c74492ba590fa785d6ca654212b16d89a1f82e57e837227e07682184d06e",
+        "notes": "All RNA, protein and ATAC coordinates retained. Gutter links stop before tick text; view identities and nonshared-space caption remain explicit.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d"
+    },
+    {
+      "id": "H21_aligned_views_Custom",
+      "renderer": "figure_multiomics_views.plot_aligned_views",
+      "form": "embedding",
+      "title": "同对象对齐视图 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "M04",
+      "source_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d",
+      "assets": {
+        "png": "H21_aligned_views_Custom/H21_aligned_views_Custom.png",
+        "svg": "H21_aligned_views_Custom/H21_aligned_views_Custom.svg",
+        "pdf": "H21_aligned_views_Custom/H21_aligned_views_Custom.pdf",
+        "tsv": "H21_aligned_views_Custom/H21_aligned_views_Custom.tsv",
+        "spec": "H21_aligned_views_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4d5ee2de94d1e53256fd052d1bd90cb1ad180382a54e51c0a69e239d7896e57f",
+        "notes": "Custom width preserves all three complete views, point identities and legend. Shortened gutter links no longer cross interior tick labels.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d"
+    },
+    {
+      "id": "H22_genomic_links",
+      "renderer": "figure_multiomics_views.plot_genomic_links",
+      "form": "interval-tracks",
+      "title": "基因组候选连接 · 当前默认",
+      "variant": false,
+      "upgraded_from": "M08",
+      "source_sha256": "89bcf3393693d79a1d6de20598e12510fdf768af4289d5279208c3f61775fe50",
+      "assets": {
+        "png": "H22_genomic_links/H22_genomic_links.png",
+        "svg": "H22_genomic_links/H22_genomic_links.svg",
+        "pdf": "H22_genomic_links/H22_genomic_links.pdf",
+        "tsv": "H22_genomic_links/H22_genomic_links.tsv",
+        "spec": "H22_genomic_links/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "41f1f66e525dbebee862a1ec3a9ad4a5ec450270710356d51618f8130dd3942a",
+        "notes": "Three complete signal tracks share actual physical bounds; arc-height layout and bounded opacity score are explicitly distinguished from evidence direction.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "89bcf3393693d79a1d6de20598e12510fdf768af4289d5279208c3f61775fe50"
+    },
+    {
+      "id": "H22_genomic_links_Custom",
+      "renderer": "figure_multiomics_views.plot_genomic_links",
+      "form": "interval-tracks",
+      "title": "基因组候选连接 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "M08",
+      "source_sha256": "89bcf3393693d79a1d6de20598e12510fdf768af4289d5279208c3f61775fe50",
+      "assets": {
+        "png": "H22_genomic_links_Custom/H22_genomic_links_Custom.png",
+        "svg": "H22_genomic_links_Custom/H22_genomic_links_Custom.svg",
+        "pdf": "H22_genomic_links_Custom/H22_genomic_links_Custom.pdf",
+        "tsv": "H22_genomic_links_Custom/H22_genomic_links_Custom.tsv",
+        "spec": "H22_genomic_links_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "142a7a89e9a78a5ac2371ee23fb919711939d3ea8a2cee9b565bd54a698f4c59",
+        "notes": "Wide genome tracks retain aligned bin spans, common scale and full link-opacity and synthetic-assembly caption.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "89bcf3393693d79a1d6de20598e12510fdf768af4289d5279208c3f61775fe50"
+    },
+    {
+      "id": "H23_locus_tracks",
+      "renderer": "figure_multiscale.plot_locus_tracks",
+      "form": "interval-tracks",
+      "title": "局部位点结果轨道 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E29",
+      "source_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2",
+      "assets": {
+        "png": "H23_locus_tracks/H23_locus_tracks.png",
+        "svg": "H23_locus_tracks/H23_locus_tracks.svg",
+        "pdf": "H23_locus_tracks/H23_locus_tracks.pdf",
+        "tsv": "H23_locus_tracks/H23_locus_tracks.tsv",
+        "spec": "H23_locus_tracks/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "f419cd891ee850d2105efdcabfe8273345c182671adfcb6da907b60fa65fa944",
+        "notes": "Boundary LD-unknown cross is now whole; all variants, reference marker, supplied rate curve and gene direction tracks align on the same region.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2"
+    },
+    {
+      "id": "H23_locus_tracks_Custom",
+      "renderer": "figure_multiscale.plot_locus_tracks",
+      "form": "interval-tracks",
+      "title": "局部位点结果轨道 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E29",
+      "source_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2",
+      "assets": {
+        "png": "H23_locus_tracks_Custom/H23_locus_tracks_Custom.png",
+        "svg": "H23_locus_tracks_Custom/H23_locus_tracks_Custom.svg",
+        "pdf": "H23_locus_tracks_Custom/H23_locus_tracks_Custom.pdf",
+        "tsv": "H23_locus_tracks_Custom/H23_locus_tracks_Custom.tsv",
+        "spec": "H23_locus_tracks_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "51b0ce0aee5d82e51ce36947e850bbed818582f61c7d7c7269fb1c40c0af8708",
+        "notes": "Wide locus keeps exact region endpoints and all full boundary symbols, colour key and three gene spans unclipped.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2"
+    },
+    {
+      "id": "H24_uncertainty_fan",
+      "renderer": "figure_multiscale.plot_uncertainty_fan",
+      "form": "ribbon",
+      "title": "给定多层不确定区间 · 当前默认",
+      "variant": false,
+      "upgraded_from": "E32",
+      "source_sha256": "74c367b77ac669919c2ccc1ddcf36106c99c8d5430ce109e2d5938002065c3a6",
+      "assets": {
+        "png": "H24_uncertainty_fan/H24_uncertainty_fan.png",
+        "svg": "H24_uncertainty_fan/H24_uncertainty_fan.svg",
+        "pdf": "H24_uncertainty_fan/H24_uncertainty_fan.pdf",
+        "tsv": "H24_uncertainty_fan/H24_uncertainty_fan.tsv",
+        "spec": "H24_uncertainty_fan/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "cdb606cfe7f8c8ed16f97a2a15b3ac0f184934e6bf5bb30c94d7044ac65d6183",
+        "notes": "Two supplied trajectories and three nested interval levels retain common axes, transparent bands and separate series/coverage keys.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "74c367b77ac669919c2ccc1ddcf36106c99c8d5430ce109e2d5938002065c3a6"
+    },
+    {
+      "id": "H24_uncertainty_fan_Custom",
+      "renderer": "figure_multiscale.plot_uncertainty_fan",
+      "form": "ribbon",
+      "title": "给定多层不确定区间 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "E32",
+      "source_sha256": "74c367b77ac669919c2ccc1ddcf36106c99c8d5430ce109e2d5938002065c3a6",
+      "assets": {
+        "png": "H24_uncertainty_fan_Custom/H24_uncertainty_fan_Custom.png",
+        "svg": "H24_uncertainty_fan_Custom/H24_uncertainty_fan_Custom.svg",
+        "pdf": "H24_uncertainty_fan_Custom/H24_uncertainty_fan_Custom.pdf",
+        "tsv": "H24_uncertainty_fan_Custom/H24_uncertainty_fan_Custom.tsv",
+        "spec": "H24_uncertainty_fan_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "88f203dc42ae06d15cc99e8b2858a11ad66742b94b12410fb6b2277c7da2df43",
+        "notes": "Wide uncertainty fan keeps all nested bands visible without clipping, and preserves supplied-interval definitions.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "74c367b77ac669919c2ccc1ddcf36106c99c8d5430ce109e2d5938002065c3a6"
+    },
+    {
+      "id": "H25_typed_network",
+      "renderer": "figure_network_extensions.plot_typed_network",
+      "form": "network",
+      "title": "类型互作网络 · 当前默认",
+      "variant": false,
+      "upgraded_from": "N01",
+      "source_sha256": "d8727314f4134564b9ffd7e8573d8e49d1d3a5b563976f7dbbe5bf00aacc6f68",
+      "assets": {
+        "png": "H25_typed_network/H25_typed_network.png",
+        "svg": "H25_typed_network/H25_typed_network.svg",
+        "pdf": "H25_typed_network/H25_typed_network.pdf",
+        "tsv": "H25_typed_network/H25_typed_network.tsv",
+        "spec": "H25_typed_network/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b4f07f079e012fdfba3606cbbc1a0540a77882ba1d0569b9232573f5dfbf4ecc",
+        "notes": "Four supplied communities and every labelled leaf remain visible; entity shape, identity colour and relationship sign have separate guides.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "d8727314f4134564b9ffd7e8573d8e49d1d3a5b563976f7dbbe5bf00aacc6f68"
+    },
+    {
+      "id": "H25_typed_network_Custom",
+      "renderer": "figure_network_extensions.plot_typed_network",
+      "form": "network",
+      "title": "类型互作网络 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "N01",
+      "source_sha256": "d8727314f4134564b9ffd7e8573d8e49d1d3a5b563976f7dbbe5bf00aacc6f68",
+      "assets": {
+        "png": "H25_typed_network_Custom/H25_typed_network_Custom.png",
+        "svg": "H25_typed_network_Custom/H25_typed_network_Custom.svg",
+        "pdf": "H25_typed_network_Custom/H25_typed_network_Custom.pdf",
+        "tsv": "H25_typed_network_Custom/H25_typed_network_Custom.tsv",
+        "spec": "H25_typed_network_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3472eff8d772f7480f7743d60444a662d99de470f690be2917ebc820b25b3a6f",
+        "notes": "Wide typed network preserves fixed node positions, all labels and edge paths; keys remain separated and connections readable.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "d8727314f4134564b9ffd7e8573d8e49d1d3a5b563976f7dbbe5bf00aacc6f68"
+    },
+    {
+      "id": "H26_multistate_matrix",
+      "renderer": "figure_network_extensions.plot_multistate_matrix",
+      "form": "state-matrix",
+      "title": "多事件状态矩阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "N07",
+      "source_sha256": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0",
+      "assets": {
+        "png": "H26_multistate_matrix/H26_multistate_matrix.png",
+        "svg": "H26_multistate_matrix/H26_multistate_matrix.svg",
+        "pdf": "H26_multistate_matrix/H26_multistate_matrix.pdf",
+        "tsv": "H26_multistate_matrix/H26_multistate_matrix.tsv",
+        "spec": "H26_multistate_matrix/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "68df999ce281c1d43ae03a8ecb35f5ed9179421dfe18aeb4341781bf53909356",
+        "notes": "All eight features and twelve samples retain coexisting split states; explicit measured-None background remains different from absence.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0"
+    },
+    {
+      "id": "H26_multistate_matrix_Custom",
+      "renderer": "figure_network_extensions.plot_multistate_matrix",
+      "form": "state-matrix",
+      "title": "多事件状态矩阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "N07",
+      "source_sha256": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0",
+      "assets": {
+        "png": "H26_multistate_matrix_Custom/H26_multistate_matrix_Custom.png",
+        "svg": "H26_multistate_matrix_Custom/H26_multistate_matrix_Custom.svg",
+        "pdf": "H26_multistate_matrix_Custom/H26_multistate_matrix_Custom.pdf",
+        "tsv": "H26_multistate_matrix_Custom/H26_multistate_matrix_Custom.tsv",
+        "spec": "H26_multistate_matrix_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "fe2d74777174bb199b615f5386db446840180dd898e36b8b995186bbd5da5ebc",
+        "notes": "Wide multistate matrix retains every event, sample label and state legend; split-cell semantics remain readable.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0"
+    },
+    {
+      "id": "H27_running_enrichment",
+      "renderer": "figure_network_extensions.plot_running_enrichment",
+      "form": "gsea",
+      "title": "已有富集运行曲线 · 当前默认",
+      "variant": false,
+      "upgraded_from": "N08",
+      "source_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a",
+      "assets": {
+        "png": "H27_running_enrichment/H27_running_enrichment.png",
+        "svg": "H27_running_enrichment/H27_running_enrichment.svg",
+        "pdf": "H27_running_enrichment/H27_running_enrichment.pdf",
+        "tsv": "H27_running_enrichment/H27_running_enrichment.tsv",
+        "spec": "H27_running_enrichment/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "400be486a72e28a398b643200a99ba40e08c8625a20ee75c129b7c370b1c2965",
+        "notes": "Both supplied running curves, all hit ranks and complete ranked metric align; this classic track-only alternative does not invent missing NES/FDR.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a"
+    },
+    {
+      "id": "H27_running_enrichment_Custom",
+      "renderer": "figure_network_extensions.plot_running_enrichment",
+      "form": "gsea",
+      "title": "已有富集运行曲线 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "N08",
+      "source_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a",
+      "assets": {
+        "png": "H27_running_enrichment_Custom/H27_running_enrichment_Custom.png",
+        "svg": "H27_running_enrichment_Custom/H27_running_enrichment_Custom.svg",
+        "pdf": "H27_running_enrichment_Custom/H27_running_enrichment_Custom.pdf",
+        "tsv": "H27_running_enrichment_Custom/H27_running_enrichment_Custom.tsv",
+        "spec": "H27_running_enrichment_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b5698d0baba4b8ff2cd894b9e0d4946100241e0ee5787bcca073fd72462d8f7a",
+        "notes": "Wide enrichment tracks preserve full rank universe and all three aligned layers, with clear source-only semantics.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a"
+    },
+    {
+      "id": "H28_contour_field",
+      "renderer": "figure_network_extensions.plot_contour_field",
+      "form": "field",
+      "title": "给定等值场 · 当前默认",
+      "variant": false,
+      "upgraded_from": "N11",
+      "source_sha256": "73880761c78e646d2353b388e93a3ff7deb550109236a7f8161a2f13dec20d0c",
+      "assets": {
+        "png": "H28_contour_field/H28_contour_field.png",
+        "svg": "H28_contour_field/H28_contour_field.svg",
+        "pdf": "H28_contour_field/H28_contour_field.pdf",
+        "tsv": "H28_contour_field/H28_contour_field.tsv",
+        "spec": "H28_contour_field/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b66d168aa186204e892f8eecfd1e71a27223dab5442aba638fa0e33a28bd672d",
+        "notes": "Repaired dark contour labels on quiet white backing are readable at positive, zero and negative levels; signed field and key unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "73880761c78e646d2353b388e93a3ff7deb550109236a7f8161a2f13dec20d0c"
+    },
+    {
+      "id": "H28_contour_field_Custom",
+      "renderer": "figure_network_extensions.plot_contour_field",
+      "form": "field",
+      "title": "给定等值场 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "N11",
+      "source_sha256": "73880761c78e646d2353b388e93a3ff7deb550109236a7f8161a2f13dec20d0c",
+      "assets": {
+        "png": "H28_contour_field_Custom/H28_contour_field_Custom.png",
+        "svg": "H28_contour_field_Custom/H28_contour_field_Custom.svg",
+        "pdf": "H28_contour_field_Custom/H28_contour_field_Custom.pdf",
+        "tsv": "H28_contour_field_Custom/H28_contour_field_Custom.tsv",
+        "spec": "H28_contour_field_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "2fa2a2cc3bae7e0ccc50f536fbbbcddb0571af7806973bc28b8e85b494f0e72d",
+        "notes": "Wide supplied field retains all cells and labelled levels; improved contour contrast resolves the earlier pale text without smoothing source values.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "73880761c78e646d2353b388e93a3ff7deb550109236a7f8161a2f13dec20d0c"
+    },
+    {
+      "id": "H29_process_dashboard",
+      "renderer": "figure_process_dashboard.plot_process_dashboard",
+      "form": "dashboards",
+      "title": "流程与结果组合 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R24",
+      "source_sha256": "9df925fce91622f8c8f19138a1dfbecb6322ce00f1d8cf4ceb8557698127ba56",
+      "assets": {
+        "png": "H29_process_dashboard/H29_process_dashboard.png",
+        "svg": "H29_process_dashboard/H29_process_dashboard.svg",
+        "pdf": "H29_process_dashboard/H29_process_dashboard.pdf",
+        "tsv": "H29_process_dashboard/H29_process_dashboard.tsv",
+        "spec": "H29_process_dashboard/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "fb68c0485b3a7246df271ef550a58e9b1a93fa5b359a00ba1c598348828553bf",
+        "notes": "Workflow, three numbered matrices, five object schematics, three given surfaces and exact stage counts all render; this dense reading page needs native zoom for small labels.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "9df925fce91622f8c8f19138a1dfbecb6322ce00f1d8cf4ceb8557698127ba56"
+    },
+    {
+      "id": "H29_process_dashboard_Custom",
+      "renderer": "figure_process_dashboard.plot_process_dashboard",
+      "form": "dashboards",
+      "title": "流程与结果组合 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R24",
+      "source_sha256": "9df925fce91622f8c8f19138a1dfbecb6322ce00f1d8cf4ceb8557698127ba56",
+      "assets": {
+        "png": "H29_process_dashboard_Custom/H29_process_dashboard_Custom.png",
+        "svg": "H29_process_dashboard_Custom/H29_process_dashboard_Custom.svg",
+        "pdf": "H29_process_dashboard_Custom/H29_process_dashboard_Custom.pdf",
+        "tsv": "H29_process_dashboard_Custom/H29_process_dashboard_Custom.tsv",
+        "spec": "H29_process_dashboard_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "eb2248fb7af30c155802ce0f3be41ae78dcca5b48a0a07c02484e540b3f1d0da",
+        "notes": "Caller width is expanded by measured guide constraints rather than hiding content; every schematic, surface and count remains available at actual size.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "9df925fce91622f8c8f19138a1dfbecb6322ce00f1d8cf4ceb8557698127ba56"
+    },
+    {
+      "id": "H30_publication_curve",
+      "renderer": "figure_publication.plot_publication_curve",
+      "form": "roc",
+      "title": "已有 ROC 与 PR 曲线 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P26a",
+      "source_sha256": "deb7b0523c961b42e4aadb8f1ef42f10d589cb9f27ee5a3063e9ab8f9fea284b",
+      "assets": {
+        "png": "H30_publication_curve/H30_publication_curve.png",
+        "svg": "H30_publication_curve/H30_publication_curve.svg",
+        "pdf": "H30_publication_curve/H30_publication_curve.pdf",
+        "tsv": "H30_publication_curve/H30_publication_curve.tsv",
+        "spec": "H30_publication_curve/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "9e3c12dbed6f36b5a4810cb1e3175d4fa892c91597132669bc8617f1fba2365e",
+        "notes": "Three complete empirical ROC paths retain distinct line styles, square numeric domain, identity reference and explicit demo labels.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "deb7b0523c961b42e4aadb8f1ef42f10d589cb9f27ee5a3063e9ab8f9fea284b"
+    },
+    {
+      "id": "H30_publication_curve_Custom",
+      "renderer": "figure_publication.plot_publication_curve",
+      "form": "roc",
+      "title": "已有 ROC 与 PR 曲线 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P26a",
+      "source_sha256": "deb7b0523c961b42e4aadb8f1ef42f10d589cb9f27ee5a3063e9ab8f9fea284b",
+      "assets": {
+        "png": "H30_publication_curve_Custom/H30_publication_curve_Custom.png",
+        "svg": "H30_publication_curve_Custom/H30_publication_curve_Custom.svg",
+        "pdf": "H30_publication_curve_Custom/H30_publication_curve_Custom.pdf",
+        "tsv": "H30_publication_curve_Custom/H30_publication_curve_Custom.tsv",
+        "spec": "H30_publication_curve_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "8c3d6fc23dacc3e1ece418decbe89ba7f0c296979c8deb78236dc4639c7955e5",
+        "notes": "Square custom canvas restores equal ROC axes; three supplied step curves, diagonal and line-style legend remain complete and separated.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "deb7b0523c961b42e4aadb8f1ef42f10d589cb9f27ee5a3063e9ab8f9fea284b"
+    },
+    {
+      "id": "H31_aligned_matrix",
+      "renderer": "figure_publication.plot_aligned_matrix",
+      "form": "heatmap",
+      "title": "带对齐注释的矩阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P16a",
+      "source_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+      "assets": {
+        "png": "H31_aligned_matrix/H31_aligned_matrix.png",
+        "svg": "H31_aligned_matrix/H31_aligned_matrix.svg",
+        "pdf": "H31_aligned_matrix/H31_aligned_matrix.pdf",
+        "tsv": "H31_aligned_matrix/H31_aligned_matrix.tsv",
+        "spec": "H31_aligned_matrix/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4726168620095f2ef8c68e6b287153c16a3c66a529824872138344ae9f87d8c5",
+        "notes": "All twelve rows, eight columns, exact count labels and signed values remain aligned; a native-pixel crop confirmed all three annotation colours and four-row blocks.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288"
+    },
+    {
+      "id": "H31_aligned_matrix_Custom",
+      "renderer": "figure_publication.plot_aligned_matrix",
+      "form": "heatmap",
+      "title": "带对齐注释的矩阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P16a",
+      "source_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+      "assets": {
+        "png": "H31_aligned_matrix_Custom/H31_aligned_matrix_Custom.png",
+        "svg": "H31_aligned_matrix_Custom/H31_aligned_matrix_Custom.svg",
+        "pdf": "H31_aligned_matrix_Custom/H31_aligned_matrix_Custom.pdf",
+        "tsv": "H31_aligned_matrix_Custom/H31_aligned_matrix_Custom.tsv",
+        "spec": "H31_aligned_matrix_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "963c33e6fc20c71d78ade87241d614d3f6ea2f404cb4f5783c62d88aa53ed5ce",
+        "notes": "Wide aligned matrix keeps twelve count bars, complete module strip and signed key; all labels and cell boundaries are separated.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288"
+    },
+    {
+      "id": "H32_mantel_matrix",
+      "renderer": "figure_reference.plot_mantel_matrix",
+      "form": "correlation",
+      "title": "已有 Mantel 结果矩阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R07",
+      "source_sha256": "6d37fe1625dca5d201d1a8df4c4a5121fca653866a107851c1efaebba25e6209",
+      "assets": {
+        "png": "H32_mantel_matrix/H32_mantel_matrix.png",
+        "svg": "H32_mantel_matrix/H32_mantel_matrix.svg",
+        "pdf": "H32_mantel_matrix/H32_mantel_matrix.pdf",
+        "tsv": "H32_mantel_matrix/H32_mantel_matrix.tsv",
+        "spec": "H32_mantel_matrix/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "fa14599387af39d83c353014eb7518d50d5d50519610339930d50ec9e392deb2",
+        "notes": "All fourteen variables and four supplied sets are retained; Pearson colour, Mantel-p edge colours and Mantel-r widths have distinct keys; dense links require native-size reading.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "6d37fe1625dca5d201d1a8df4c4a5121fca653866a107851c1efaebba25e6209"
+    },
+    {
+      "id": "H32_mantel_matrix_Custom",
+      "renderer": "figure_reference.plot_mantel_matrix",
+      "form": "correlation",
+      "title": "已有 Mantel 结果矩阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R07",
+      "source_sha256": "6d37fe1625dca5d201d1a8df4c4a5121fca653866a107851c1efaebba25e6209",
+      "assets": {
+        "png": "H32_mantel_matrix_Custom/H32_mantel_matrix_Custom.png",
+        "svg": "H32_mantel_matrix_Custom/H32_mantel_matrix_Custom.svg",
+        "pdf": "H32_mantel_matrix_Custom/H32_mantel_matrix_Custom.pdf",
+        "tsv": "H32_mantel_matrix_Custom/H32_mantel_matrix_Custom.tsv",
+        "spec": "H32_mantel_matrix_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "d5f9e9f5de219c17e3c00c428efceeec8d079511658340b366406c937e1cc247",
+        "notes": "Wide Mantel matrix retains all matrix cells, labels and edges; line/colour keys remain separate and readable.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "6d37fe1625dca5d201d1a8df4c4a5121fca653866a107851c1efaebba25e6209"
+    },
+    {
+      "id": "H33_contribution_swarm",
+      "renderer": "figure_reference.plot_contribution_swarm",
+      "form": "contribution",
+      "title": "给定贡献点分布 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R10",
+      "source_sha256": "5a30ac9de883658a9c58c83547ae4063e711cba1af563478a03877a628421372",
+      "assets": {
+        "png": "H33_contribution_swarm/H33_contribution_swarm.png",
+        "svg": "H33_contribution_swarm/H33_contribution_swarm.svg",
+        "pdf": "H33_contribution_swarm/H33_contribution_swarm.pdf",
+        "tsv": "H33_contribution_swarm/H33_contribution_swarm.tsv",
+        "spec": "H33_contribution_swarm/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "ec6a8681777012db534fda0fb58868461af718dbe4948b237724384c301c6297",
+        "notes": "All nineteen features and interactions remain visible, including near-zero effects; no zoom distortion hides small contributions; upstream feature scale is explicit.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "5a30ac9de883658a9c58c83547ae4063e711cba1af563478a03877a628421372"
+    },
+    {
+      "id": "H33_contribution_swarm_Custom",
+      "renderer": "figure_reference.plot_contribution_swarm",
+      "form": "contribution",
+      "title": "给定贡献点分布 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R10",
+      "source_sha256": "5a30ac9de883658a9c58c83547ae4063e711cba1af563478a03877a628421372",
+      "assets": {
+        "png": "H33_contribution_swarm_Custom/H33_contribution_swarm_Custom.png",
+        "svg": "H33_contribution_swarm_Custom/H33_contribution_swarm_Custom.svg",
+        "pdf": "H33_contribution_swarm_Custom/H33_contribution_swarm_Custom.pdf",
+        "tsv": "H33_contribution_swarm_Custom/H33_contribution_swarm_Custom.tsv",
+        "spec": "H33_contribution_swarm_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "bd2e319406a4002fbd4d7144361089b9db3e21114dd2b910fc5b5d3f51c47c5c",
+        "notes": "Wide contribution swarm keeps every feature row, zero line and shared feature-value colour guide; quantitative x coordinates are unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "5a30ac9de883658a9c58c83547ae4063e711cba1af563478a03877a628421372"
+    },
+    {
+      "id": "H34_pca_reference",
+      "renderer": "figure_reference.plot_pca_reference",
+      "form": "embedding",
+      "title": "已有 PCA 坐标与区间 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R18",
+      "source_sha256": "0b95ddf8b4c2be649fb83954a01666245cf902e3fd0c435b36da1e58171cc94a",
+      "assets": {
+        "png": "H34_pca_reference/H34_pca_reference.png",
+        "svg": "H34_pca_reference/H34_pca_reference.svg",
+        "pdf": "H34_pca_reference/H34_pca_reference.pdf",
+        "tsv": "H34_pca_reference/H34_pca_reference.tsv",
+        "spec": "H34_pca_reference/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "2960a145fdfd51e86c90da0d1c19ba48be3997dd21c2ed663a477f4f1467d69f",
+        "notes": "Both supplied dispersion ellipses, all points, centroids and radial links are visible; axes retain supplied variance percentages and no confidence claim.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "0b95ddf8b4c2be649fb83954a01666245cf902e3fd0c435b36da1e58171cc94a"
+    },
+    {
+      "id": "H34_pca_reference_Custom",
+      "renderer": "figure_reference.plot_pca_reference",
+      "form": "embedding",
+      "title": "已有 PCA 坐标与区间 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R18",
+      "source_sha256": "0b95ddf8b4c2be649fb83954a01666245cf902e3fd0c435b36da1e58171cc94a",
+      "assets": {
+        "png": "H34_pca_reference_Custom/H34_pca_reference_Custom.png",
+        "svg": "H34_pca_reference_Custom/H34_pca_reference_Custom.svg",
+        "pdf": "H34_pca_reference_Custom/H34_pca_reference_Custom.pdf",
+        "tsv": "H34_pca_reference_Custom/H34_pca_reference_Custom.tsv",
+        "spec": "H34_pca_reference_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "754e204ebcd56ba47f3055bade4886b75503e2b12f5f156135fc3347f9153d1b",
+        "notes": "Wide PCA preserves centroids, both supplied ellipse geometries and all points; source group legend and interpretation caption are clear.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "0b95ddf8b4c2be649fb83954a01666245cf902e3fd0c435b36da1e58171cc94a"
+    },
+    {
+      "id": "H35_state_dashboard",
+      "renderer": "figure_reference.plot_state_dashboard",
+      "form": "dashboards",
+      "title": "状态结果组合 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R03",
+      "source_sha256": "5cc781b5179abfa3a6f3ba724478d42d13d07e9c842c5fc5bb52e410be078c3f",
+      "assets": {
+        "png": "H35_state_dashboard/H35_state_dashboard.png",
+        "svg": "H35_state_dashboard/H35_state_dashboard.svg",
+        "pdf": "H35_state_dashboard/H35_state_dashboard.pdf",
+        "tsv": "H35_state_dashboard/H35_state_dashboard.tsv",
+        "spec": "H35_state_dashboard/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "5bb46f8beefeaab7552e9d8e3c6fb0a4f9f9a7317501ec0eb9e426527080554d",
+        "notes": "Four blocks of seven states align across effect dots and two matrices. Identity bullets clear row labels; area values and all three colour scales are explicit.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "5cc781b5179abfa3a6f3ba724478d42d13d07e9c842c5fc5bb52e410be078c3f"
+    },
+    {
+      "id": "H35_state_dashboard_Custom",
+      "renderer": "figure_reference.plot_state_dashboard",
+      "form": "dashboards",
+      "title": "状态结果组合 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R03",
+      "source_sha256": "5cc781b5179abfa3a6f3ba724478d42d13d07e9c842c5fc5bb52e410be078c3f",
+      "assets": {
+        "png": "H35_state_dashboard_Custom/H35_state_dashboard_Custom.png",
+        "svg": "H35_state_dashboard_Custom/H35_state_dashboard_Custom.svg",
+        "pdf": "H35_state_dashboard_Custom/H35_state_dashboard_Custom.pdf",
+        "tsv": "H35_state_dashboard_Custom/H35_state_dashboard_Custom.tsv",
+        "spec": "H35_state_dashboard_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c7c621c046bb083eadfbc6e49cdedd2ef8604031b72ed7e30325f4cde6c6e42f",
+        "notes": "Custom width keeps complete state rows and clean identity strip. Numeric dot-area key and independent matrix scales remain outside the data.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "5cc781b5179abfa3a6f3ba724478d42d13d07e9c842c5fc5bb52e410be078c3f"
+    },
+    {
+      "id": "H36_multiclass_contributions",
+      "renderer": "figure_reference.plot_multiclass_contributions",
+      "form": "contribution",
+      "title": "分类贡献分解 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R11",
+      "source_sha256": "4cfc42e8fdfcca65e408b3acd8c54e2d24e04cafc1ece69f792ef9bcf660f721",
+      "assets": {
+        "png": "H36_multiclass_contributions/H36_multiclass_contributions.png",
+        "svg": "H36_multiclass_contributions/H36_multiclass_contributions.svg",
+        "pdf": "H36_multiclass_contributions/H36_multiclass_contributions.pdf",
+        "tsv": "H36_multiclass_contributions/H36_multiclass_contributions.tsv",
+        "spec": "H36_multiclass_contributions/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "2ff3806559d299f253c486cbba3507035d8f33426f408f9db1440a0db9c284d2",
+        "notes": "Five classes retain all nineteen feature distributions. Rose area reference, common zero axes, ring class order and share-feature key are now explicit.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "4cfc42e8fdfcca65e408b3acd8c54e2d24e04cafc1ece69f792ef9bcf660f721"
+    },
+    {
+      "id": "H36_multiclass_contributions_Custom",
+      "renderer": "figure_reference.plot_multiclass_contributions",
+      "form": "contribution",
+      "title": "分类贡献分解 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R11",
+      "source_sha256": "4cfc42e8fdfcca65e408b3acd8c54e2d24e04cafc1ece69f792ef9bcf660f721",
+      "assets": {
+        "png": "H36_multiclass_contributions_Custom/H36_multiclass_contributions_Custom.png",
+        "svg": "H36_multiclass_contributions_Custom/H36_multiclass_contributions_Custom.svg",
+        "pdf": "H36_multiclass_contributions_Custom/H36_multiclass_contributions_Custom.pdf",
+        "tsv": "H36_multiclass_contributions_Custom/H36_multiclass_contributions_Custom.tsv",
+        "spec": "H36_multiclass_contributions_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "267226d921851847fab624086d68c5504a024f4ee26954c73b937c3100f4c4fb",
+        "notes": "Custom width retains the five full distribution panels and unclipped rose glyphs. Concentric shares have declared outer-to-inner identities and 100 percent normalization.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "4cfc42e8fdfcca65e408b3acd8c54e2d24e04cafc1ece69f792ef9bcf660f721"
+    },
+    {
+      "id": "H37_embedding_atlas",
+      "renderer": "figure_reference.plot_embedding_atlas",
+      "form": "dashboards",
+      "title": "已有嵌入坐标多视图 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R04",
+      "source_sha256": "3f2f9f67af37b32b28153b0bd6638e24c2b525ecfd5828b6520086c3e0fbeb36",
+      "assets": {
+        "png": "H37_embedding_atlas/H37_embedding_atlas.png",
+        "svg": "H37_embedding_atlas/H37_embedding_atlas.svg",
+        "pdf": "H37_embedding_atlas/H37_embedding_atlas.pdf",
+        "tsv": "H37_embedding_atlas/H37_embedding_atlas.tsv",
+        "spec": "H37_embedding_atlas/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4fe54007a6e63850569896457eea1b0a42c69a54d401d31a27549d38f2597d46",
+        "notes": "Complete seventy-type atlas, sixteen-class embedding, supplied hierarchy/counts and nine-feature matrix are preserved. Added segment key and radial reference are separated from data.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "3f2f9f67af37b32b28153b0bd6638e24c2b525ecfd5828b6520086c3e0fbeb36"
+    },
+    {
+      "id": "H37_embedding_atlas_Custom",
+      "renderer": "figure_reference.plot_embedding_atlas",
+      "form": "dashboards",
+      "title": "已有嵌入坐标多视图 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R04",
+      "source_sha256": "3f2f9f67af37b32b28153b0bd6638e24c2b525ecfd5828b6520086c3e0fbeb36",
+      "assets": {
+        "png": "H37_embedding_atlas_Custom/H37_embedding_atlas_Custom.png",
+        "svg": "H37_embedding_atlas_Custom/H37_embedding_atlas_Custom.svg",
+        "pdf": "H37_embedding_atlas_Custom/H37_embedding_atlas_Custom.pdf",
+        "tsv": "H37_embedding_atlas_Custom/H37_embedding_atlas_Custom.tsv",
+        "spec": "H37_embedding_atlas_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "efe5538a484b0a874c06d03531777905fe6bf09fa5bea83b7c9566fe97c889a9",
+        "notes": "Wider reading page preserves all seventy named types and main-class guides. Native text, counts, source hierarchy and matrix identities remain aligned.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "3f2f9f67af37b32b28153b0bd6638e24c2b525ecfd5828b6520086c3e0fbeb36"
+    },
+    {
+      "id": "H38_training_dashboard",
+      "renderer": "figure_reference.plot_training_dashboard",
+      "form": "dashboards",
+      "title": "已有训练曲线组合 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R14",
+      "source_sha256": "7383e79221d9fb47407fbd9036c7350c26344f528d3481a83cc81a8e2ec2cfac",
+      "assets": {
+        "png": "H38_training_dashboard/H38_training_dashboard.png",
+        "svg": "H38_training_dashboard/H38_training_dashboard.svg",
+        "pdf": "H38_training_dashboard/H38_training_dashboard.pdf",
+        "tsv": "H38_training_dashboard/H38_training_dashboard.tsv",
+        "spec": "H38_training_dashboard/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "bf0672a0c3d618441f60bd5b8cb24e30c713f11e6a797a2a713547a9ab3e3c39",
+        "notes": "Balanced layout retains all loss points and supplied uncertainty, full 28-run heatmap and labelled gradient/reference. Duplicate B title is removed; no label collision.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "7383e79221d9fb47407fbd9036c7350c26344f528d3481a83cc81a8e2ec2cfac"
+    },
+    {
+      "id": "H38_training_dashboard_Custom",
+      "renderer": "figure_reference.plot_training_dashboard",
+      "form": "dashboards",
+      "title": "已有训练曲线组合 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R14",
+      "source_sha256": "7383e79221d9fb47407fbd9036c7350c26344f528d3481a83cc81a8e2ec2cfac",
+      "assets": {
+        "png": "H38_training_dashboard_Custom/H38_training_dashboard_Custom.png",
+        "svg": "H38_training_dashboard_Custom/H38_training_dashboard_Custom.svg",
+        "pdf": "H38_training_dashboard_Custom/H38_training_dashboard_Custom.pdf",
+        "tsv": "H38_training_dashboard_Custom/H38_training_dashboard_Custom.tsv",
+        "spec": "H38_training_dashboard_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "7e546ebea605f4e36b196a8c579787135e6597b8275be6cee7654dde71058b37",
+        "notes": "Caller-selected width preserves all three training diagnostics, 120 epochs and 28 run labels. The full-height heatmap replaces the previously cramped inset.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "7383e79221d9fb47407fbd9036c7350c26344f528d3481a83cc81a8e2ec2cfac"
+    },
+    {
+      "id": "H39_activity_dashboard",
+      "renderer": "figure_reference.plot_activity_dashboard",
+      "form": "dashboards",
+      "title": "已有活性结果组合 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R15",
+      "source_sha256": "5c6b0553988367f8ae25175a874d8ef08b59bba3d885323f2acad0d66a913009",
+      "assets": {
+        "png": "H39_activity_dashboard/H39_activity_dashboard.png",
+        "svg": "H39_activity_dashboard/H39_activity_dashboard.svg",
+        "pdf": "H39_activity_dashboard/H39_activity_dashboard.pdf",
+        "tsv": "H39_activity_dashboard/H39_activity_dashboard.tsv",
+        "spec": "H39_activity_dashboard/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c54da943a326fbcbfb5711193a86c95f8fa6e8a140c80bd8a7ce3f6f4ba56b62",
+        "notes": "Full 150-by-44 reading page preserves every row ID. Native crops detected the earlier module-strip overlap; the strip now has its own lane and full Row000 through Row149 labels are clear. All numeric values and column aliases remain unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "5c6b0553988367f8ae25175a874d8ef08b59bba3d885323f2acad0d66a913009"
+    },
+    {
+      "id": "H39_activity_dashboard_Custom",
+      "renderer": "figure_reference.plot_activity_dashboard",
+      "form": "dashboards",
+      "title": "已有活性结果组合 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R15",
+      "source_sha256": "5c6b0553988367f8ae25175a874d8ef08b59bba3d885323f2acad0d66a913009",
+      "assets": {
+        "png": "H39_activity_dashboard_Custom/H39_activity_dashboard_Custom.png",
+        "svg": "H39_activity_dashboard_Custom/H39_activity_dashboard_Custom.svg",
+        "pdf": "H39_activity_dashboard_Custom/H39_activity_dashboard_Custom.pdf",
+        "tsv": "H39_activity_dashboard_Custom/H39_activity_dashboard_Custom.tsv",
+        "spec": "H39_activity_dashboard_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "5a510e4be10c6ee088ddd5de562ce55e87f94c8a57070afb794a0542fe36f606",
+        "notes": "Compact overview preserves all 150-by-44 values and five density tracks. Full-column aliases and numeric colour/top scales remain readable; caller-selected hidden row labels have the full labelled companion page.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "5c6b0553988367f8ae25175a874d8ef08b59bba3d885323f2acad0d66a913009"
+    },
+    {
+      "id": "H40_effect_distribution_forest",
+      "renderer": "figure_reference.plot_effect_distribution_forest",
+      "form": "effect-distribution",
+      "title": "给定分布与效应区间 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R16",
+      "source_sha256": "d3859263a355de8643f687e6d9a454336f016e12c7d3ea5e5fe6bb1d7b23401a",
+      "assets": {
+        "png": "H40_effect_distribution_forest/H40_effect_distribution_forest.png",
+        "svg": "H40_effect_distribution_forest/H40_effect_distribution_forest.svg",
+        "pdf": "H40_effect_distribution_forest/H40_effect_distribution_forest.pdf",
+        "tsv": "H40_effect_distribution_forest/H40_effect_distribution_forest.tsv",
+        "spec": "H40_effect_distribution_forest/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3cd0d8a6c8ba1103de83ce12a06ebbcdac01e569fee39d5bd49e832142532443",
+        "notes": "All twenty-six outcomes retain two full supplied point clouds, exact summaries/intervals and count text. Added raw-p symbol key resolves significance glyph ambiguity.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "d3859263a355de8643f687e6d9a454336f016e12c7d3ea5e5fe6bb1d7b23401a"
+    },
+    {
+      "id": "H40_effect_distribution_forest_Custom",
+      "renderer": "figure_reference.plot_effect_distribution_forest",
+      "form": "effect-distribution",
+      "title": "给定分布与效应区间 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R16",
+      "source_sha256": "d3859263a355de8643f687e6d9a454336f016e12c7d3ea5e5fe6bb1d7b23401a",
+      "assets": {
+        "png": "H40_effect_distribution_forest_Custom/H40_effect_distribution_forest_Custom.png",
+        "svg": "H40_effect_distribution_forest_Custom/H40_effect_distribution_forest_Custom.svg",
+        "pdf": "H40_effect_distribution_forest_Custom/H40_effect_distribution_forest_Custom.pdf",
+        "tsv": "H40_effect_distribution_forest_Custom/H40_effect_distribution_forest_Custom.tsv",
+        "spec": "H40_effect_distribution_forest_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "161bdbfa3cd5c0d60d968f06f885b02995efb17260b74f19a823dd988f9b846b",
+        "notes": "Custom width retains both complete metrics and aligned quiet row bands. Zero axes, supplied interval caption, colour scale and explicit raw-p thresholds are clear.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "d3859263a355de8643f687e6d9a454336f016e12c7d3ea5e5fe6bb1d7b23401a"
+    },
+    {
+      "id": "H41_facet_bubble_matrix",
+      "renderer": "figure_reference.plot_facet_bubble_matrix",
+      "form": "dot-matrix",
+      "title": "分面气泡矩阵 · 当前默认",
+      "variant": false,
+      "upgraded_from": "R20",
+      "source_sha256": "47a5ec510f6c91944e50656e78d8dc837312ce0ed7b6160644f69869adbfcf4e",
+      "assets": {
+        "png": "H41_facet_bubble_matrix/H41_facet_bubble_matrix.png",
+        "svg": "H41_facet_bubble_matrix/H41_facet_bubble_matrix.svg",
+        "pdf": "H41_facet_bubble_matrix/H41_facet_bubble_matrix.pdf",
+        "tsv": "H41_facet_bubble_matrix/H41_facet_bubble_matrix.tsv",
+        "spec": "H41_facet_bubble_matrix/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "cf9a900bdeb2baf856c52c19c1b06fb3d190185f447128615dabc79331f61c9f",
+        "notes": "Six complete facets retain eight features by eight windows; signed association and absolute-area guides are distinct; all facet identities remain visible.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "47a5ec510f6c91944e50656e78d8dc837312ce0ed7b6160644f69869adbfcf4e"
+    },
+    {
+      "id": "H41_facet_bubble_matrix_Custom",
+      "renderer": "figure_reference.plot_facet_bubble_matrix",
+      "form": "dot-matrix",
+      "title": "分面气泡矩阵 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "R20",
+      "source_sha256": "47a5ec510f6c91944e50656e78d8dc837312ce0ed7b6160644f69869adbfcf4e",
+      "assets": {
+        "png": "H41_facet_bubble_matrix_Custom/H41_facet_bubble_matrix_Custom.png",
+        "svg": "H41_facet_bubble_matrix_Custom/H41_facet_bubble_matrix_Custom.svg",
+        "pdf": "H41_facet_bubble_matrix_Custom/H41_facet_bubble_matrix_Custom.pdf",
+        "tsv": "H41_facet_bubble_matrix_Custom/H41_facet_bubble_matrix_Custom.tsv",
+        "spec": "H41_facet_bubble_matrix_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b8e1b390925ea4424bdbdf084366c7fffa8a3dffe2ade01ff4e698b578d1b209",
+        "notes": "Wide faceted bubble matrix retains full grid coverage and readable windows with a common signed scale and calibrated area key.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "47a5ec510f6c91944e50656e78d8dc837312ce0ed7b6160644f69869adbfcf4e"
+    },
+    {
+      "id": "H42_volcano_marginal",
+      "renderer": "figure_styles.plot_volcano_marginal",
+      "form": "volcano",
+      "title": "火山图与边际分布 · 当前默认",
+      "variant": false,
+      "upgraded_from": "P10",
+      "source_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10",
+      "assets": {
+        "png": "H42_volcano_marginal/H42_volcano_marginal.png",
+        "svg": "H42_volcano_marginal/H42_volcano_marginal.svg",
+        "pdf": "H42_volcano_marginal/H42_volcano_marginal.pdf",
+        "tsv": "H42_volcano_marginal/H42_volcano_marginal.tsv",
+        "spec": "H42_volcano_marginal/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "d8fdf01a2836b0b69f41b05af9e64115e80c00b3b8dc368c0d30d56d429a7ba4",
+        "notes": "Full point universe, selected labels, exact category totals and both stacked margins remain aligned; label leaders and thresholds are readable.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10"
+    },
+    {
+      "id": "H42_volcano_marginal_Custom",
+      "renderer": "figure_styles.plot_volcano_marginal",
+      "form": "volcano",
+      "title": "火山图与边际分布 · 自定义布局",
+      "variant": true,
+      "upgraded_from": "P10",
+      "source_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10",
+      "assets": {
+        "png": "H42_volcano_marginal_Custom/H42_volcano_marginal_Custom.png",
+        "svg": "H42_volcano_marginal_Custom/H42_volcano_marginal_Custom.svg",
+        "pdf": "H42_volcano_marginal_Custom/H42_volcano_marginal_Custom.pdf",
+        "tsv": "H42_volcano_marginal_Custom/H42_volcano_marginal_Custom.tsv",
+        "spec": "H42_volcano_marginal_Custom/example.spec.json"
+      },
+      "definition": "从原始公开冻结表逐字节迁移；旧图继续保留。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b209ed6a21d8277360bc98948433292d7ad88df56a392d485e5e33c55d8279c0",
+        "notes": "Wide marginal volcano preserves all points, count bins and selected gene labels; threshold key and full range remain clear.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10"
+    },
+    {
+      "id": "D01_Scatter3D",
+      "renderer": "figure_three_dimensional.plot_scatter3d",
+      "form": "scatter3d",
+      "title": "三维散点与正交投影 · 当前默认",
+      "variant": false,
+      "upgraded_from": null,
+      "source_sha256": "177809fbc70ecfd52f0ad760a78a4c1182746bd54bd7582f7bdaa903746b96fa",
+      "assets": {
+        "png": "D01_Scatter3D/D01_Scatter3D.png",
+        "svg": "D01_Scatter3D/D01_Scatter3D.svg",
+        "pdf": "D01_Scatter3D/D01_Scatter3D.pdf",
+        "tsv": "D01_Scatter3D/D01_Scatter3D.tsv",
+        "spec": "D01_Scatter3D/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1b8dc06a65b1b664f5ae545b4b8175c9bba1a5da1b5fe4e5256f9aa326d63d1b",
+        "notes": "All 144 supplied objects and three group counts appear in 3D plus three complete physical-coordinate projections. Cameras and internal z captions avoid panel collisions. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "177809fbc70ecfd52f0ad760a78a4c1182746bd54bd7582f7bdaa903746b96fa"
+    },
+    {
+      "id": "D01_Scatter3D_Custom",
+      "renderer": "figure_three_dimensional.plot_scatter3d",
+      "form": "scatter3d",
+      "title": "三维散点与正交投影 · 自定义布局",
+      "variant": true,
+      "upgraded_from": null,
+      "source_sha256": "177809fbc70ecfd52f0ad760a78a4c1182746bd54bd7582f7bdaa903746b96fa",
+      "assets": {
+        "png": "D01_Scatter3D_Custom/D01_Scatter3D_Custom.png",
+        "svg": "D01_Scatter3D_Custom/D01_Scatter3D_Custom.svg",
+        "pdf": "D01_Scatter3D_Custom/D01_Scatter3D_Custom.pdf",
+        "tsv": "D01_Scatter3D_Custom/D01_Scatter3D_Custom.tsv",
+        "spec": "D01_Scatter3D_Custom/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "308e8d6d9e5d3288b9fc8f4bf335bec4df51a64bd5fc658822c03b6f92e36c02",
+        "notes": "One-column four-panel page uses the requested alternate 3D camera and keeps all orthographic companions, complete points and shared group colours. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "177809fbc70ecfd52f0ad760a78a4c1182746bd54bd7582f7bdaa903746b96fa"
+    },
+    {
+      "id": "D01_Scatter3D_Small",
+      "renderer": "figure_three_dimensional.plot_scatter3d",
+      "form": "scatter3d",
+      "title": "三维散点与正交投影 · 小数据与替代视角",
+      "variant": true,
+      "upgraded_from": null,
+      "source_sha256": "072fa91e5db91805ea2cf10a2f33c2aa28cde6483aeac176a37afc75d6f6f2d5",
+      "assets": {
+        "png": "D01_Scatter3D_Small/D01_Scatter3D_Small.png",
+        "svg": "D01_Scatter3D_Small/D01_Scatter3D_Small.svg",
+        "pdf": "D01_Scatter3D_Small/D01_Scatter3D_Small.pdf",
+        "tsv": "D01_Scatter3D_Small/D01_Scatter3D_Small.tsv",
+        "spec": "D01_Scatter3D_Small/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "0115713459c0ffb1c24735acd1f1f173468e27c5e8a5bed9d5965efdbad639a3",
+        "notes": "Twenty-four objects are preserved in two alternate 3D cameras. Sparse point geometry, labelled physical axes and group counts remain clear. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "072fa91e5db91805ea2cf10a2f33c2aa28cde6483aeac176a37afc75d6f6f2d5"
+    },
+    {
+      "id": "D02_Volume",
+      "renderer": "figure_three_dimensional.plot_volume_rendering",
+      "form": "volume-rendering",
+      "title": "体渲染与给定传递函数 · 当前默认",
+      "variant": false,
+      "upgraded_from": null,
+      "source_sha256": "cd1ee908febbcae08919c68ed43e0ab9595f819e66fd57aedb444d1f3cf089ff",
+      "assets": {
+        "png": "D02_Volume/D02_Volume.png",
+        "svg": "D02_Volume/D02_Volume.svg",
+        "pdf": "D02_Volume/D02_Volume.pdf",
+        "tsv": "D02_Volume/D02_Volume.tsv",
+        "spec": "D02_Volume/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "cd42a63b0c64ddb38d59b4cfb8f2e1194a077617995a2351a42bc32bd3c6c6c1",
+        "notes": "Three actual front-to-back composites of the complete 24-cubed grid retain physical extents and an explicit opacity transfer guide; no MIP or inferred segmentation. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "cd1ee908febbcae08919c68ed43e0ab9595f819e66fd57aedb444d1f3cf089ff"
+    },
+    {
+      "id": "D02_Volume_Custom",
+      "renderer": "figure_three_dimensional.plot_volume_rendering",
+      "form": "volume-rendering",
+      "title": "体渲染与给定传递函数 · 自定义布局",
+      "variant": true,
+      "upgraded_from": null,
+      "source_sha256": "cd1ee908febbcae08919c68ed43e0ab9595f819e66fd57aedb444d1f3cf089ff",
+      "assets": {
+        "png": "D02_Volume_Custom/D02_Volume_Custom.png",
+        "svg": "D02_Volume_Custom/D02_Volume_Custom.svg",
+        "pdf": "D02_Volume_Custom/D02_Volume_Custom.pdf",
+        "tsv": "D02_Volume_Custom/D02_Volume_Custom.tsv",
+        "spec": "D02_Volume_Custom/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "777f769162cf093e796da6f1a69345220fdfa54312e00462824361ac5321db41",
+        "notes": "One-column page keeps reverse-z and x composites, two physical central slices and the same transfer function. Soft transparency is separated from the scalar slices. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "cd1ee908febbcae08919c68ed43e0ab9595f819e66fd57aedb444d1f3cf089ff"
+    },
+    {
+      "id": "D02_Volume_Small",
+      "renderer": "figure_three_dimensional.plot_volume_rendering",
+      "form": "volume-rendering",
+      "title": "体渲染与给定传递函数 · 小数据与替代视角",
+      "variant": true,
+      "upgraded_from": null,
+      "source_sha256": "183f3d8f6ccd55809e1f452293b7fb2c7acf6bf4f7f64e03f6f0afea0022fd40",
+      "assets": {
+        "png": "D02_Volume_Small/D02_Volume_Small.png",
+        "svg": "D02_Volume_Small/D02_Volume_Small.svg",
+        "pdf": "D02_Volume_Small/D02_Volume_Small.pdf",
+        "tsv": "D02_Volume_Small/D02_Volume_Small.tsv",
+        "spec": "D02_Volume_Small/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "717568854ead5aba9a6ad83535dc3523e2a8c1b69f8698f07f7928719ffa305f",
+        "notes": "Complete 12-cubed grid renders through the requested reverse-y ray direction; physical limits, scalar definition and opacity curve are readable. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "183f3d8f6ccd55809e1f452293b7fb2c7acf6bf4f7f64e03f6f0afea0022fd40"
+    },
+    {
+      "id": "D03_Trajectory",
+      "renderer": "figure_three_dimensional.plot_molecular_trajectory",
+      "form": "molecular-trajectory",
+      "title": "分子轨迹动画与逐帧查看 · 当前默认",
+      "variant": false,
+      "upgraded_from": null,
+      "source_sha256": "152d4117931cfc8db3e1690a9af5c139bc9c5b09132b31a3ae62ae4d6d3dcf2e",
+      "assets": {
+        "png": "D03_Trajectory/D03_Trajectory.png",
+        "svg": "D03_Trajectory/D03_Trajectory.svg",
+        "pdf": "D03_Trajectory/D03_Trajectory.pdf",
+        "tsv": "D03_Trajectory/D03_Trajectory.tsv",
+        "gif": "D03_Trajectory/D03_Trajectory.gif",
+        "html": "D03_Trajectory/D03_Trajectory.html",
+        "animation": "D03_Trajectory/D03_Trajectory.animation.json",
+        "spec": "D03_Trajectory/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "276f9ce4658844dd629033c6570a5412a136d5a05d3393f4f2b6e41949a27549",
+        "notes": "Three declared keyframes show all atoms and explicit bonds with fixed physical bounds, camera, element key and exact frame times. No inferred connectivity or alignment. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "152d4117931cfc8db3e1690a9af5c139bc9c5b09132b31a3ae62ae4d6d3dcf2e"
+    },
+    {
+      "id": "D03_Trajectory_Custom",
+      "renderer": "figure_three_dimensional.plot_molecular_trajectory",
+      "form": "molecular-trajectory",
+      "title": "分子轨迹动画与逐帧查看 · 自定义布局",
+      "variant": true,
+      "upgraded_from": null,
+      "source_sha256": "152d4117931cfc8db3e1690a9af5c139bc9c5b09132b31a3ae62ae4d6d3dcf2e",
+      "assets": {
+        "png": "D03_Trajectory_Custom/D03_Trajectory_Custom.png",
+        "svg": "D03_Trajectory_Custom/D03_Trajectory_Custom.svg",
+        "pdf": "D03_Trajectory_Custom/D03_Trajectory_Custom.pdf",
+        "tsv": "D03_Trajectory_Custom/D03_Trajectory_Custom.tsv",
+        "gif": "D03_Trajectory_Custom/D03_Trajectory_Custom.gif",
+        "html": "D03_Trajectory_Custom/D03_Trajectory_Custom.html",
+        "animation": "D03_Trajectory_Custom/D03_Trajectory_Custom.animation.json",
+        "spec": "D03_Trajectory_Custom/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "4ef36d61c38335226bd1a09279daaf6d87bdc51546277b2bcde3388bdbc5669d",
+        "notes": "Six declared keyframes use two columns and three rows, requested alternate camera and fixed global limits. Atom colours, time captions and coordinate units are unclipped. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "152d4117931cfc8db3e1690a9af5c139bc9c5b09132b31a3ae62ae4d6d3dcf2e"
+    },
+    {
+      "id": "D03_Trajectory_Small",
+      "renderer": "figure_three_dimensional.plot_molecular_trajectory",
+      "form": "molecular-trajectory",
+      "title": "分子轨迹动画与逐帧查看 · 小数据与替代视角",
+      "variant": true,
+      "upgraded_from": null,
+      "source_sha256": "9039dbf42c0100b82e0628d0ac6116912a7e13428cbeabf538d478e5fabb5c64",
+      "assets": {
+        "png": "D03_Trajectory_Small/D03_Trajectory_Small.png",
+        "svg": "D03_Trajectory_Small/D03_Trajectory_Small.svg",
+        "pdf": "D03_Trajectory_Small/D03_Trajectory_Small.pdf",
+        "tsv": "D03_Trajectory_Small/D03_Trajectory_Small.tsv",
+        "gif": "D03_Trajectory_Small/D03_Trajectory_Small.gif",
+        "html": "D03_Trajectory_Small/D03_Trajectory_Small.html",
+        "animation": "D03_Trajectory_Small/D03_Trajectory_Small.animation.json",
+        "spec": "D03_Trajectory_Small/example.spec.json"
+      },
+      "definition": "明确标记的合成绘图示例；给定坐标、体素或帧序列，无科学模型拟合。",
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "f54e24e61b013940024c090d07cf8873b5000f0807f729e18be9f1f836c23ada",
+        "notes": "Six-frame input has two clear one-column keyframe views. Complete atoms/bonds, physical times and element identity remain available at the smaller data scale. Final re-export individually inspected after bounding physical top/bottom whitespace; points, voxels and frames unchanged.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      },
+      "input_sha256": "9039dbf42c0100b82e0628d0ac6116912a7e13428cbeabf538d478e5fabb5c64"
+    },
+    {
+      "id": "H01_branch_tree_Composition",
+      "renderer": "figure_biomni_views.plot_branch_tree",
+      "form": "hierarchy",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E40",
+      "input_sha256": "c943b98c291b88635a25d459cf5bedbee278ca2087bd925cd9a3f8ceca781cad",
+      "title": "已有分支长度树 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H01_branch_tree_Composition/H01_branch_tree_Composition.svg",
+        "png": "H01_branch_tree_Composition/H01_branch_tree_Composition.png",
+        "layout": "H01_branch_tree_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "d417715db816beedd4f986977dcf16a60009a3585fe37e513a3535d450b1278e",
+        "notes": "Both complete trees retain five aligned labels, exact distances and separate captions; no panel collision. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H02_forest_Composition",
+      "renderer": "figure_core.plot_forest",
+      "form": "forest",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P19a",
+      "input_sha256": "82d2a916a399f477a2d4f9c4398a78de7a5578accff7c9eb00c03af582dabb5b",
+      "title": "效应区间森林图 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H02_forest_Composition/H02_forest_Composition.svg",
+        "png": "H02_forest_Composition/H02_forest_Composition.png",
+        "layout": "H02_forest_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b0000fa91dab01e60aa0574627bc16ca07f5ece6ab5205417b7265e02c05c1de",
+        "notes": "Both table forests retain six rows, exact numeric intervals and zero lines in separated lanes. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H03_volcano_Composition",
+      "renderer": "figure_core.plot_volcano",
+      "form": "volcano",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P08",
+      "input_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10",
+      "title": "火山图 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H03_volcano_Composition/H03_volcano_Composition.svg",
+        "png": "H03_volcano_Composition/H03_volcano_Composition.png",
+        "layout": "H03_volcano_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "39da137b4b2bb32e49b70e3580285cbbb1453af65f3f7f45098fb3cad5c375e7",
+        "notes": "Both full volcano clouds, all thresholds and legends survive the two-column composition; classic alternative is explicit. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H04_heatmap_Composition",
+      "renderer": "figure_core.plot_heatmap",
+      "form": "heatmap",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P12a",
+      "input_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+      "title": "矩阵热图 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H04_heatmap_Composition/H04_heatmap_Composition.svg",
+        "png": "H04_heatmap_Composition/H04_heatmap_Composition.png",
+        "layout": "H04_heatmap_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "142f97d80a83d0afc8942f137b445e49b92c640ba08149be752cc0262d7bf01e",
+        "notes": "Both twelve-by-eight matrices retain full labels and signed scales. Aspect changes are explicit in the comparison. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H05_paired_Composition",
+      "renderer": "figure_extensions.plot_paired",
+      "form": "paired",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "AUX_paired",
+      "input_sha256": "29a401737bae3d319bc992e81c6a1154e8ab28a98f6c8a1d85f308602af09473",
+      "title": "配对观测轨迹 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H05_paired_Composition/H05_paired_Composition.svg",
+        "png": "H05_paired_Composition/H05_paired_Composition.png",
+        "layout": "H05_paired_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "cab47a42e7dfbaa8f423808dfee5858f4343752c0c76c333e3db86c5b0ed32ec",
+        "notes": "Both forty-eight-pair views retain every endpoint and connection, including extremes. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H06_effect_matrix_Composition",
+      "renderer": "figure_extensions.plot_effect_matrix",
+      "form": "dot-matrix",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P14",
+      "input_sha256": "a166f8b8110d0b0a26af521b37f1afe90bc513bb5041145bd3a292e90a8bdeb4",
+      "title": "效应与不确定性矩阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H06_effect_matrix_Composition/H06_effect_matrix_Composition.svg",
+        "png": "H06_effect_matrix_Composition/H06_effect_matrix_Composition.png",
+        "layout": "H06_effect_matrix_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "46902861d77a583226394063d8a309a94c07560bf0fbccf2887439370ffd2be1",
+        "notes": "Both complete effect matrices retain signed colour and independent FDR-size guides without gutter overlap. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H07_xy_points_Composition",
+      "renderer": "figure_general.plot_xy_points",
+      "form": "scatter",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P33",
+      "input_sha256": "463db5c7a96b10fa1c1ec2b3118d23aea360985e5a6c393ffcaf7f39ae39b3ce",
+      "title": "独立单位散点 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H07_xy_points_Composition/H07_xy_points_Composition.svg",
+        "png": "H07_xy_points_Composition/H07_xy_points_Composition.png",
+        "layout": "H07_xy_points_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b3e10819c92709d1dba936a0059660ac11b5d950de2a357dc7bf065b4474b533",
+        "notes": "All points and named group keys survive in both panels; axes and outer labels are clear. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H08_grouped_estimates_Composition",
+      "renderer": "figure_general.plot_grouped_estimates",
+      "form": "bars",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P34",
+      "input_sha256": "082afbe85126bcaaf3e20fe2ac48f6d075e45336f4b21377fea89b11b19a020b",
+      "title": "分组估计区间 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H08_grouped_estimates_Composition/H08_grouped_estimates_Composition.svg",
+        "png": "H08_grouped_estimates_Composition/H08_grouped_estimates_Composition.png",
+        "layout": "H08_grouped_estimates_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "f89daebbaa3fcabbff50a6a77eec8f2001385b18fd680d69b0cd3fd98598e209",
+        "notes": "All grouped intervals and zero baseline survive both panels. Native-pixel legend crop confirms complete Group A/B/C text. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H09_confusion_counts_Composition",
+      "renderer": "figure_general.plot_confusion_counts",
+      "form": "heatmap",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P36",
+      "input_sha256": "47c6328bde4b29c51a4050b55a13da5c0d46a60ee17bfe086d900a2f7f841835",
+      "title": "给定混淆计数 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H09_confusion_counts_Composition/H09_confusion_counts_Composition.svg",
+        "png": "H09_confusion_counts_Composition/H09_confusion_counts_Composition.png",
+        "layout": "H09_confusion_counts_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "51abf2b6535f1b4aab44bd1e2fb89bd6d94e33e02953148810f63bf26ff93868",
+        "notes": "All nine exact counts and both class axes remain readable; custom square cells and colour keys remain whole. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H10_split_metric_matrix_Composition",
+      "renderer": "figure_linked_evidence.plot_split_metric_matrix",
+      "form": "heatmap",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E35",
+      "input_sha256": "9848b8a6bad07be531c6fc8386a4bbdab4bda5ab1c78477d947f3cee09294e9a",
+      "title": "双指标三角矩阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H10_split_metric_matrix_Composition/H10_split_metric_matrix_Composition.svg",
+        "png": "H10_split_metric_matrix_Composition/H10_split_metric_matrix_Composition.png",
+        "layout": "H10_split_metric_matrix_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "de9d7687bfb8cacf2895bf62f989754314df6b3f45e2f51881b4a085f3c3e548",
+        "notes": "Both split matrices retain independent probability/association keys and row-identity bands. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H11_hierarchy_tracks_Composition",
+      "renderer": "figure_linked_evidence.plot_hierarchy_tracks",
+      "form": "hierarchy",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E36",
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba",
+      "title": "已有层次树与轨道 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H11_hierarchy_tracks_Composition/H11_hierarchy_tracks_Composition.svg",
+        "png": "H11_hierarchy_tracks_Composition/H11_hierarchy_tracks_Composition.png",
+        "layout": "H11_hierarchy_tracks_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "a89262537316dbb5d1d8a95ff6621ee90d4763c860b282ecac32c075b6c68d5e",
+        "notes": "Both sixteen-leaf trees align with the complete supplied strips and merge-height axes. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H12_radial_hierarchy_Composition",
+      "renderer": "figure_linked_evidence.plot_radial_hierarchy",
+      "form": "hierarchy",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E37",
+      "input_sha256": "ffaee80ef0015b34e865187dbbe92fc19d95c1a2c46a753c77ea93a18a4674ba",
+      "title": "已有环形层次树 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H12_radial_hierarchy_Composition/H12_radial_hierarchy_Composition.svg",
+        "png": "H12_radial_hierarchy_Composition/H12_radial_hierarchy_Composition.png",
+        "layout": "H12_radial_hierarchy_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c3e1ab2076f39f89b2937549645dd6d2881786b5b9bb3ea83e0ddb8763b14856",
+        "notes": "All sixteen labels, branch structure and three calibrated guides remain complete in both radial panels. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H13_stacked_values_Composition",
+      "renderer": "figure_linked_evidence.plot_stacked_values",
+      "form": "bars",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "AUX_c37_terms",
+      "input_sha256": "75d756118f145c3052136581c06d3bf8aca91df96a2d473d77023e94c278871d",
+      "title": "同单位可加量堆积 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H13_stacked_values_Composition/H13_stacked_values_Composition.svg",
+        "png": "H13_stacked_values_Composition/H13_stacked_values_Composition.png",
+        "layout": "H13_stacked_values_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "95cdec2bab53febd719d6c01120c3f4b3296be6a54c9647510e7aa1d40d52acd",
+        "notes": "All eight terms and category keys are retained; probability-scale captions stay separate from data. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H14_enrichment_grid_Composition",
+      "renderer": "figure_method_extensions.plot_enrichment_grid",
+      "form": "dot-matrix",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E01",
+      "input_sha256": "4693c93c12e01023e7b381077de14b371ff28a38db141660204b3bb417d43b4d",
+      "title": "已有富集结果点阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H14_enrichment_grid_Composition/H14_enrichment_grid_Composition.svg",
+        "png": "H14_enrichment_grid_Composition/H14_enrichment_grid_Composition.png",
+        "layout": "H14_enrichment_grid_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c22ba8f34a84e877f1c1d3512a5bc94d47dbc1017e15ddc9c1f4bdfdbb7dd2f0",
+        "notes": "All eighteen term descriptions and six slots remain present in each panel, with independent probability/area/missingness guides. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H15_term_key_Composition",
+      "renderer": "figure_method_extensions.plot_term_key",
+      "form": "term-circle",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E06a",
+      "input_sha256": "3a3b9715b686e4dfce46380033a99feff4fb4ba677ff040e349a39bff53f449e",
+      "title": "条目索引表 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H15_term_key_Composition/H15_term_key_Composition.svg",
+        "png": "H15_term_key_Composition/H15_term_key_Composition.png",
+        "layout": "H15_term_key_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "3a84dfc6ccccf68cc7f31022ced866467a7e6203e0cca20fadcbfa2fb1715863",
+        "notes": "Both dictionaries preserve exact six-row ID-description mapping and quiet row bands. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H16_bivariate_tiles_Composition",
+      "renderer": "figure_method_extensions.plot_bivariate_tiles",
+      "form": "heatmap",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E19",
+      "input_sha256": "8173f54c86643e548ed476f96c348190947c6780d4668b5e2cfe4cebe52c5000",
+      "title": "双量值色块矩阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H16_bivariate_tiles_Composition/H16_bivariate_tiles_Composition.svg",
+        "png": "H16_bivariate_tiles_Composition/H16_bivariate_tiles_Composition.png",
+        "layout": "H16_bivariate_tiles_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "49df0388b5c8d1a300827e8ba2f69bf69a326a4e70d48f4537094b8faaa67338",
+        "notes": "Both complete matrices retain all seventy-two cells and nine-bin two-metric legend. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H17_cohort_intervals_Composition",
+      "renderer": "figure_multimodal.plot_cohort_intervals",
+      "form": "forest",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P21a",
+      "input_sha256": "188271cbd829a87354f03ec6c7e2fd5d979432b8b0993e65e161d83bc99f6b5f",
+      "title": "队列估计区间 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H17_cohort_intervals_Composition/H17_cohort_intervals_Composition.svg",
+        "png": "H17_cohort_intervals_Composition/H17_cohort_intervals_Composition.png",
+        "layout": "H17_cohort_intervals_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "e92d0a106845c9c9e48b4054086623958262c952c39a17db2b266d290db5d8d5",
+        "notes": "All five programs and three supplied cohort interval sets retain distinct shapes and full legends. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H18_association_matrix_Composition",
+      "renderer": "figure_multimodal.plot_association_matrix",
+      "form": "correlation",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P18",
+      "input_sha256": "bd956854ab851b778ebda369e5ef53e1251b788b5ea55e6d89bd8524036c6ba2",
+      "title": "关联结果矩阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H18_association_matrix_Composition/H18_association_matrix_Composition.svg",
+        "png": "H18_association_matrix_Composition/H18_association_matrix_Composition.png",
+        "layout": "H18_association_matrix_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "e7a4bc52e01c1a2eaa6dc5a02c7b9cd145c0128db51c0c34b678d05608807e14",
+        "notes": "All cells, numeric associations, FDR dots and unavailable hatching remain visible in both panels. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H19_calibration_counts_Composition",
+      "renderer": "figure_multimodal.plot_calibration_counts",
+      "form": "calibration",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P27",
+      "input_sha256": "1ce5698c07b8d49ebeff11554da3437b5eabb3bf37979ab27d27bb5083d9f213",
+      "title": "已有校准结果与人数 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H19_calibration_counts_Composition/H19_calibration_counts_Composition.svg",
+        "png": "H19_calibration_counts_Composition/H19_calibration_counts_Composition.png",
+        "layout": "H19_calibration_counts_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "db5e6be51ba5c1e616325e23c804b958fba863f568bf92c51505cc95713680eb",
+        "notes": "Both complete calibration-plus-count pairs retain explicit units, supplied bounds and within-model denominators. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H20_cross_effects_Composition",
+      "renderer": "figure_multiomics_views.plot_cross_effects",
+      "form": "scatter",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "M01",
+      "input_sha256": "79b2b2300b8899ad4c9eea995d4ab7b2efd145feb182d29b3c17d018ceae2494",
+      "title": "跨组学配对效应 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H20_cross_effects_Composition/H20_cross_effects_Composition.svg",
+        "png": "H20_cross_effects_Composition/H20_cross_effects_Composition.png",
+        "layout": "H20_cross_effects_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "54883a9cd31b2a43a5aced45c3b4bce65d9c54404cedbf11089ec8743037e8a9",
+        "notes": "Both matched-feature clouds retain signed axes and four eligibility identities without any new fit. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H21_aligned_views_Composition",
+      "renderer": "figure_multiomics_views.plot_aligned_views",
+      "form": "embedding",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "M04",
+      "input_sha256": "4d2aadc639ea828f5ea0831003c62a2bec25c4871177ca4b1a20f61ae6f3406d",
+      "title": "同对象对齐视图 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H21_aligned_views_Composition/H21_aligned_views_Composition.svg",
+        "png": "H21_aligned_views_Composition/H21_aligned_views_Composition.png",
+        "layout": "H21_aligned_views_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "5533910f89bd2b06fbe8fb563e303c47154fd05b8f822e97a909893831c1889a",
+        "notes": "Both complete three-view displays preserve point coordinates and legend; repaired gutter clearances keep ticks readable. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H22_genomic_links_Composition",
+      "renderer": "figure_multiomics_views.plot_genomic_links",
+      "form": "interval-tracks",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "M08",
+      "input_sha256": "89bcf3393693d79a1d6de20598e12510fdf768af4289d5279208c3f61775fe50",
+      "title": "基因组候选连接 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H22_genomic_links_Composition/H22_genomic_links_Composition.svg",
+        "png": "H22_genomic_links_Composition/H22_genomic_links_Composition.png",
+        "layout": "H22_genomic_links_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1c8df593801e5b9afc37030db6c6ab9f6de05347d820b20285ecc5e76bae3e81",
+        "notes": "All three physical-coordinate tracks and declared relationship links remain aligned in both complete panels. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H23_locus_tracks_Composition",
+      "renderer": "figure_multiscale.plot_locus_tracks",
+      "form": "interval-tracks",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E29",
+      "input_sha256": "98a31cc149ace0b39f6c0db6f3f467338b7eaf9f9439b2b30ba193d7d638b2f2",
+      "title": "局部位点结果轨道 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H23_locus_tracks_Composition/H23_locus_tracks_Composition.svg",
+        "png": "H23_locus_tracks_Composition/H23_locus_tracks_Composition.png",
+        "layout": "H23_locus_tracks_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "f7b58a1e9ff95d11f200746b2c79f24a497b25bfcee053855deecb37c46d49ac",
+        "notes": "Both full locus pages preserve boundary symbols, reference marker, supplied rate and gene spans. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H24_uncertainty_fan_Composition",
+      "renderer": "figure_multiscale.plot_uncertainty_fan",
+      "form": "ribbon",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "E32",
+      "input_sha256": "74c367b77ac669919c2ccc1ddcf36106c99c8d5430ce109e2d5938002065c3a6",
+      "title": "给定多层不确定区间 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H24_uncertainty_fan_Composition/H24_uncertainty_fan_Composition.svg",
+        "png": "H24_uncertainty_fan_Composition/H24_uncertainty_fan_Composition.png",
+        "layout": "H24_uncertainty_fan_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "0c999496f95c086d34c7d754c6a6adddf06926f5a493869dbfa06d47731ae8a8",
+        "notes": "Both complete ribbons retain supplied nested intervals and independent group/interval keys. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H25_typed_network_Composition",
+      "renderer": "figure_network_extensions.plot_typed_network",
+      "form": "network",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "N01",
+      "input_sha256": "d8727314f4134564b9ffd7e8573d8e49d1d3a5b563976f7dbbe5bf00aacc6f68",
+      "title": "类型互作网络 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H25_typed_network_Composition/H25_typed_network_Composition.svg",
+        "png": "H25_typed_network_Composition/H25_typed_network_Composition.png",
+        "layout": "H25_typed_network_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "2262e99948383137c3033df25186e085eba41cd577f61621b8fd4f27736d87bd",
+        "notes": "Both complete typed networks keep every node label and separate shape, identity and sign keys. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H26_multistate_matrix_Composition",
+      "renderer": "figure_network_extensions.plot_multistate_matrix",
+      "form": "state-matrix",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "N07",
+      "input_sha256": "c4b801a66bfe2a212730919eebe15c4727179199708fe83d90073bd646999bf0",
+      "title": "多事件状态矩阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H26_multistate_matrix_Composition/H26_multistate_matrix_Composition.svg",
+        "png": "H26_multistate_matrix_Composition/H26_multistate_matrix_Composition.png",
+        "layout": "H26_multistate_matrix_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "7c7ea2ddd44e0c2a31078d4ed8de78951d8a23f7718dd43366d5d3c338ae9c03",
+        "notes": "Both event-state grids retain all samples and rows, coexisting states and explicit measured-none caption. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H27_running_enrichment_Composition",
+      "renderer": "figure_network_extensions.plot_running_enrichment",
+      "form": "gsea",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "N08",
+      "input_sha256": "0b2814df73f336f374ec75db2d7f7cd14ef25cbb8f6fdf473fcf3e2904b4dc5a",
+      "title": "已有富集运行曲线 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H27_running_enrichment_Composition/H27_running_enrichment_Composition.svg",
+        "png": "H27_running_enrichment_Composition/H27_running_enrichment_Composition.png",
+        "layout": "H27_running_enrichment_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "db9bbf3cfa35ffa51094e25dafd26e351851e4190fa48ea04bef3bfa6f8ff932",
+        "notes": "Both complete ES, hit and rank tracks preserve the full frozen ranked universe and supplied curves. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H28_contour_field_Composition",
+      "renderer": "figure_network_extensions.plot_contour_field",
+      "form": "field",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "N11",
+      "input_sha256": "73880761c78e646d2353b388e93a3ff7deb550109236a7f8161a2f13dec20d0c",
+      "title": "给定等值场 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H28_contour_field_Composition/H28_contour_field_Composition.svg",
+        "png": "H28_contour_field_Composition/H28_contour_field_Composition.png",
+        "layout": "H28_contour_field_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "38ba23e435e31b420ae16c2fc87d9bdedf4d5acb44fafc39b518b49cce7a5fcf",
+        "notes": "Both signed fields retain all contour levels; the new contrast backing keeps numeric labels readable. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H29_process_dashboard_Composition",
+      "renderer": "figure_process_dashboard.plot_process_dashboard",
+      "form": "dashboards",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R24",
+      "input_sha256": "9df925fce91622f8c8f19138a1dfbecb6322ce00f1d8cf4ceb8557698127ba56",
+      "title": "流程与结果组合 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H29_process_dashboard_Composition/H29_process_dashboard_Composition.svg",
+        "png": "H29_process_dashboard_Composition/H29_process_dashboard_Composition.png",
+        "layout": "H29_process_dashboard_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "22566648d2e975c72cdde758ab706583375b3d6cd6cb98664fd3ce86be3a0947",
+        "notes": "One-column composition keeps two full process pages, supplied mini-surfaces/counts and explicit illustrative-geometry caption. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H30_publication_curve_Composition",
+      "renderer": "figure_publication.plot_publication_curve",
+      "form": "roc",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P26a",
+      "input_sha256": "deb7b0523c961b42e4aadb8f1ef42f10d589cb9f27ee5a3063e9ab8f9fea284b",
+      "title": "已有 ROC 与 PR 曲线 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H30_publication_curve_Composition/H30_publication_curve_Composition.svg",
+        "png": "H30_publication_curve_Composition/H30_publication_curve_Composition.png",
+        "layout": "H30_publication_curve_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "f528407cd64772b010bb0fb53cbd4665f305d477a5e1da7cb57887d71c47efb4",
+        "notes": "Both complete equal-aspect ROC panels retain all step curves, diagonal and full line-style keys. Screen review of editable complete-SVG comparison, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H31_aligned_matrix_Composition",
+      "renderer": "figure_publication.plot_aligned_matrix",
+      "form": "heatmap",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P16a",
+      "input_sha256": "205dac20b414087c86bfae27b98d7393f68153bd2650882c040a19b1f6c7e288",
+      "title": "带对齐注释的矩阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H31_aligned_matrix_Composition/H31_aligned_matrix_Composition.svg",
+        "png": "H31_aligned_matrix_Composition/H31_aligned_matrix_Composition.png",
+        "layout": "H31_aligned_matrix_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "6284a4839981aa2b44551d9e10abd166f338341f3f6a75450776dede5c981963",
+        "notes": "Both full matrices retain twelve row identities, three module strips, exact count sidebars and signed scales. Source-strip colour boundaries remain correctly aligned. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H32_mantel_matrix_Composition",
+      "renderer": "figure_reference.plot_mantel_matrix",
+      "form": "correlation",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R07",
+      "input_sha256": "6d37fe1625dca5d201d1a8df4c4a5121fca653866a107851c1efaebba25e6209",
+      "title": "已有 Mantel 结果矩阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H32_mantel_matrix_Composition/H32_mantel_matrix_Composition.svg",
+        "png": "H32_mantel_matrix_Composition/H32_mantel_matrix_Composition.png",
+        "layout": "H32_mantel_matrix_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "cbf1cc319277151c2759f03e6d7a1e4c9a13fdf23fef0f258d29110ba44b6f69",
+        "notes": "Both complete fourteen-variable triangles and four-set Mantel links retain independent p, absolute-r and correlation keys; all labels remain present. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H33_contribution_swarm_Composition",
+      "renderer": "figure_reference.plot_contribution_swarm",
+      "form": "contribution",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R10",
+      "input_sha256": "5a30ac9de883658a9c58c83547ae4063e711cba1af563478a03877a628421372",
+      "title": "给定贡献点分布 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H33_contribution_swarm_Composition/H33_contribution_swarm_Composition.svg",
+        "png": "H33_contribution_swarm_Composition/H33_contribution_swarm_Composition.png",
+        "layout": "H33_contribution_swarm_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "044388a3ae3775f1422e0d795b9f6cfb590e6e01c55b171c8d0068d50742a7b7",
+        "notes": "Both full nineteen-row contribution displays preserve the signed axis, feature-value key and near-zero effects without exaggerating them. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H34_pca_reference_Composition",
+      "renderer": "figure_reference.plot_pca_reference",
+      "form": "embedding",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R18",
+      "input_sha256": "0b95ddf8b4c2be649fb83954a01666245cf902e3fd0c435b36da1e58171cc94a",
+      "title": "已有 PCA 坐标与区间 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H34_pca_reference_Composition/H34_pca_reference_Composition.svg",
+        "png": "H34_pca_reference_Composition/H34_pca_reference_Composition.png",
+        "layout": "H34_pca_reference_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "b6ade924edae0cef222c7580597861a7494df59c6142db172c7d48cd1fb7a7d5",
+        "notes": "Both complete supplied-coordinate PCA views retain declared ellipses, centroids, all points and supplied explained variance; no new confidence inference. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H35_state_dashboard_Composition",
+      "renderer": "figure_reference.plot_state_dashboard",
+      "form": "dashboards",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R03",
+      "input_sha256": "5cc781b5179abfa3a6f3ba724478d42d13d07e9c842c5fc5bb52e410be078c3f",
+      "title": "状态结果组合 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H35_state_dashboard_Composition/H35_state_dashboard_Composition.svg",
+        "png": "H35_state_dashboard_Composition/H35_state_dashboard_Composition.png",
+        "layout": "H35_state_dashboard_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "9f6c96c439919364f100a5d0e9f4fc3808e2048f6554bf3285db2470a60d7953",
+        "notes": "Both full four-block state pages retain aligned rows, identity bullets, numeric area examples and independent matrix colour scales. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H36_multiclass_contributions_Composition",
+      "renderer": "figure_reference.plot_multiclass_contributions",
+      "form": "contribution",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R11",
+      "input_sha256": "4cfc42e8fdfcca65e408b3acd8c54e2d24e04cafc1ece69f792ef9bcf660f721",
+      "title": "分类贡献分解 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H36_multiclass_contributions_Composition/H36_multiclass_contributions_Composition.svg",
+        "png": "H36_multiclass_contributions_Composition/H36_multiclass_contributions_Composition.png",
+        "layout": "H36_multiclass_contributions_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "dff3ecbe80d2bf85d6c75127be719525996d6f121540f02cc67534d000eeda0b",
+        "notes": "Both full multiclass displays retain all five feature distributions and share summaries, calibrated rose area and explicit ring order. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H37_embedding_atlas_Composition",
+      "renderer": "figure_reference.plot_embedding_atlas",
+      "form": "dashboards",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R04",
+      "input_sha256": "3f2f9f67af37b32b28153b0bd6638e24c2b525ecfd5828b6520086c3e0fbeb36",
+      "title": "已有嵌入坐标多视图 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H37_embedding_atlas_Composition/H37_embedding_atlas_Composition.svg",
+        "png": "H37_embedding_atlas_Composition/H37_embedding_atlas_Composition.png",
+        "layout": "H37_embedding_atlas_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c8471ed325e005edcd5da9c2288d2e9dffc5f109f4e6a08794695f093dc44388",
+        "notes": "One-column composition keeps all seventy atlas names, sixteen main classes, supplied counts/tree/markers and calibrated segment key. Native zoom is required for this long reading page. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H38_training_dashboard_Composition",
+      "renderer": "figure_reference.plot_training_dashboard",
+      "form": "dashboards",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R14",
+      "input_sha256": "7383e79221d9fb47407fbd9036c7350c26344f528d3481a83cc81a8e2ec2cfac",
+      "title": "已有训练曲线组合 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H38_training_dashboard_Composition/H38_training_dashboard_Composition.svg",
+        "png": "H38_training_dashboard_Composition/H38_training_dashboard_Composition.png",
+        "layout": "H38_training_dashboard_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "efe3dabf5861fe77a7c4e3e40dedfbfa98abde83def969e065d905704aa0afa5",
+        "notes": "Both balanced pages retain all loss/gradient traces and 28-run by 120-epoch heatmaps. Repaired unique titles and gradient captions stay separated. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H39_activity_dashboard_Composition",
+      "renderer": "figure_reference.plot_activity_dashboard",
+      "form": "dashboards",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R15",
+      "input_sha256": "5c6b0553988367f8ae25175a874d8ef08b59bba3d885323f2acad0d66a913009",
+      "title": "已有活性结果组合 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H39_activity_dashboard_Composition/H39_activity_dashboard_Composition.svg",
+        "png": "H39_activity_dashboard_Composition/H39_activity_dashboard_Composition.png",
+        "layout": "H39_activity_dashboard_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "600813266bf806fed8418820c3f8cac68662198267a3f9af573df5e47d198389",
+        "notes": "One-column reading comparison preserves the complete labelled 150-by-44 page and compact full-value overview. Module strip is clear of row IDs; original-size reading remains available. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H40_effect_distribution_forest_Composition",
+      "renderer": "figure_reference.plot_effect_distribution_forest",
+      "form": "effect-distribution",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R16",
+      "input_sha256": "d3859263a355de8643f687e6d9a454336f016e12c7d3ea5e5fe6bb1d7b23401a",
+      "title": "给定分布与效应区间 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H40_effect_distribution_forest_Composition/H40_effect_distribution_forest_Composition.svg",
+        "png": "H40_effect_distribution_forest_Composition/H40_effect_distribution_forest_Composition.png",
+        "layout": "H40_effect_distribution_forest_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "83f314c31a86c2854f61da14a70cfc8bf7a7bb6b64ff8b68dd95ca1b98273ebe",
+        "notes": "Both complete twenty-six-outcome forests retain two metrics, point clouds, count text and explicit raw-p glyph key. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H41_facet_bubble_matrix_Composition",
+      "renderer": "figure_reference.plot_facet_bubble_matrix",
+      "form": "dot-matrix",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "R20",
+      "input_sha256": "47a5ec510f6c91944e50656e78d8dc837312ce0ed7b6160644f69869adbfcf4e",
+      "title": "分面气泡矩阵 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H41_facet_bubble_matrix_Composition/H41_facet_bubble_matrix_Composition.svg",
+        "png": "H41_facet_bubble_matrix_Composition/H41_facet_bubble_matrix_Composition.png",
+        "layout": "H41_facet_bubble_matrix_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "c8e503d18ca9a6814bd09b7b48f026c3bd1a614a1fe632d38a927a13d0fa9909",
+        "notes": "Both full six-facet grids preserve eight features and eight windows, independent size/signed-colour keys and shared facet identities. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "H42_volcano_marginal_Composition",
+      "renderer": "figure_styles.plot_volcano_marginal",
+      "form": "volcano",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": "P10",
+      "input_sha256": "0304d250d061655beea3ddbf557544ec524591be9f77105d44b9182de3901a10",
+      "title": "火山图与边际分布 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "H42_volcano_marginal_Composition/H42_volcano_marginal_Composition.svg",
+        "png": "H42_volcano_marginal_Composition/H42_volcano_marginal_Composition.png",
+        "layout": "H42_volcano_marginal_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1b8f11a25b124048f2cc286c1afb819d0f204c6dacabca9552af245c84390ca6",
+        "notes": "Both full volcano clouds retain complete stacked marginals, exact category counts, supplied cutoffs and selected gene labels. Screen review of complete editable SVGs, not a single-column print proof.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "D01_Scatter3D_Composition",
+      "renderer": "figure_three_dimensional.plot_scatter3d",
+      "form": "scatter3d",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": null,
+      "input_sha256": "177809fbc70ecfd52f0ad760a78a4c1182746bd54bd7582f7bdaa903746b96fa",
+      "title": "三维散点与正交投影 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "D01_Scatter3D_Composition/D01_Scatter3D_Composition.svg",
+        "png": "D01_Scatter3D_Composition/D01_Scatter3D_Composition.png",
+        "layout": "D01_Scatter3D_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "8182314f309ead2e2deaf66768b0fb646d7e95185979751ed9834d485bbb99b0",
+        "notes": "Final one-column complete-SVG comparison removes the ragged two-column void. Both cameras and all three projections keep every point, clear units and group counts; bounded physical page margins inspected.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "D02_Volume_Composition",
+      "renderer": "figure_three_dimensional.plot_volume_rendering",
+      "form": "volume-rendering",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": null,
+      "input_sha256": "cd1ee908febbcae08919c68ed43e0ab9595f819e66fd57aedb444d1f3cf089ff",
+      "title": "体渲染与给定传递函数 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "D02_Volume_Composition/D02_Volume_Composition.svg",
+        "png": "D02_Volume_Composition/D02_Volume_Composition.png",
+        "layout": "D02_Volume_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "ef53fe9c293fba7cd1b98acc34459521f554d66d0a68221de2d3811f8bc40d70",
+        "notes": "Final one-column comparison retains all axial composites, physical slices and opacity curve. Repaired long-page top margin removes excessive blank space; no voxel values or transfer knots changed.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    },
+    {
+      "id": "D03_Trajectory_Composition",
+      "renderer": "figure_three_dimensional.plot_molecular_trajectory",
+      "form": "molecular-trajectory",
+      "variant": true,
+      "composition": true,
+      "upgraded_from": null,
+      "input_sha256": "152d4117931cfc8db3e1690a9af5c139bc9c5b09132b31a3ae62ae4d6d3dcf2e",
+      "title": "分子轨迹动画与逐帧查看 · 完整单图组装示例",
+      "definition": "两幅完整单图采用同一冻结输入；显式列数、自然高度与完整图例。布局变化不是独立科学结果。",
+      "assets": {
+        "svg": "D03_Trajectory_Composition/D03_Trajectory_Composition.svg",
+        "png": "D03_Trajectory_Composition/D03_Trajectory_Composition.png",
+        "layout": "D03_Trajectory_Composition/layout.request.json"
+      },
+      "visual_review": {
+        "state": "SCREEN_REVIEWED",
+        "png_sha256": "1214776e38df41d4c3206c5e40211b7c8b7424d3084f76b7a164d2c4335f94a4",
+        "notes": "Final one-column comparison retains three default and six custom keyframes, fixed axes, exact times and element keys. Ragged two-column void removed; no atom, frame or bond omitted.",
+        "scope": "Agent individual screen review; not independent journal acceptance"
+      }
+    }
+  ],
+  "baseline_recipes": 42,
+  "new_methods": 3,
+  "native_examples": 93,
+  "composition_examples": 45,
+  "scientific_acceptance": false,
+  "aesthetic_approval": false,
+  "review_scope": "Every shipped native PNG and composition individually inspected by the authoring agent"
+}

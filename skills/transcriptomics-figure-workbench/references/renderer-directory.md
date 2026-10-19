@@ -138,6 +138,9 @@ Discovery does not import plotting dependencies. Source availability is not runt
 | figure_styles.plot_enrichment_lollipop | canonical ID | yes | score_type, denominator_label, count_label |
 | figure_styles.plot_composition_panels | canonical ID | yes | palette, unit_label |
 | figure_styles.plot_sample_distribution | canonical ID | yes | palette, y_label |
+| figure_three_dimensional.plot_scatter3d | canonical ID | yes | axis_labels, coordinate_unit, coordinate_definition |
+| figure_three_dimensional.plot_volume_rendering | canonical ID | yes | coordinate_unit, value_label, value_limits, transfer, opacity_unit_distance, volume_definition |
+| figure_three_dimensional.plot_molecular_trajectory | canonical ID | yes | frame_order, coordinate_unit, time_unit, topology_definition, coordinate_definition, periodic_boundary_handling |
 | figure_wgcna_views.plot_wgcna_view | canonical ID | yes | mode, title, context |
 
 ## figure_analysis_evidence.plot_analysis_evidence
@@ -353,6 +356,7 @@ See the fixed implementation and its input contract.
 | x_label | true | — |
 | interval_label | true | — |
 | effect_scale | true | — |
+| presentation | false | "classic" |
 
 ## figure_core.plot_volcano
 
@@ -847,6 +851,7 @@ See the fixed implementation and its input contract.
 | area_definition | true | — |
 | label_ids | false | [] |
 | title | false | "" |
+| numeric_guides | false | false |
 
 ## figure_linked_evidence.plot_stacked_values
 
@@ -1111,6 +1116,7 @@ See the fixed implementation and its input contract.
 | coordinate_definition | true | — |
 | draw_links | false | true |
 | title | false | "" |
+| guide_clearance_pt | false | 0 |
 
 ## figure_multiomics_views.plot_loading_projection
 
@@ -1374,6 +1380,7 @@ See the fixed implementation and its input contract.
 | x_label | true | — |
 | y_label | true | — |
 | title | false | "" |
+| label_contrast | false | "classic" |
 
 ## figure_package_styles.plot_package_style
 
@@ -1717,6 +1724,7 @@ See the fixed implementation and its input contract.
 | mean_label | true | — |
 | program_label | true | — |
 | size | false | [9, 9] |
+| numeric_guides | false | false |
 
 ## figure_reference.plot_multiclass_contributions
 
@@ -1729,6 +1737,7 @@ See the fixed implementation and its input contract.
 | feature_orders | true | — |
 | limits | true | — |
 | size | false | [12, 9] |
+| numeric_guides | false | false |
 
 ## figure_reference.plot_embedding_atlas
 
@@ -1745,6 +1754,7 @@ R04 all three subfigures. Supplied tree segments are drawn, not clustered.
 | fraction_label | true | — |
 | radial_count_max | true | — |
 | size | false | [10, 15] |
+| numeric_guides | false | false |
 
 ## figure_reference.plot_training_dashboard
 
@@ -1759,6 +1769,7 @@ See the fixed implementation and its input contract.
 | heat_label | true | — |
 | gradient_label | true | — |
 | size | false | [10, 6] |
+| presentation | false | "classic" |
 
 ## figure_reference.plot_activity_dashboard
 
@@ -1778,6 +1789,8 @@ See the fixed implementation and its input contract.
 | row_label_wrap | false | 18 |
 | column_label_wrap | false | 13 |
 | row_label_mode | false | "all" |
+| column_label_rotation | false | 45 |
+| row_strip_left | false | 0.04 |
 
 ## figure_reference.plot_effect_distribution_forest
 
@@ -1793,6 +1806,7 @@ See the fixed implementation and its input contract.
 | count_label | true | — |
 | p_type | true | — |
 | size | false | [12, 9] |
+| numeric_guides | false | false |
 
 ## figure_reference.plot_facet_bubble_matrix
 
@@ -1943,6 +1957,64 @@ See the fixed implementation and its input contract.
 |---|---|---|
 | palette | true | — |
 | y_label | true | — |
+
+## figure_three_dimensional.plot_scatter3d
+
+Actual 3D points and aligned orthographic companions, with no fitting.
+
+| Parameter | Required | Default |
+|---|---|---|
+| axis_labels | true | — |
+| coordinate_unit | true | — |
+| coordinate_definition | true | — |
+| views | false | [[23, -58]] |
+| include_projections | false | true |
+| columns | false | "auto" |
+| rows | false | null |
+| width | false | null |
+| panel_height | false | 3.8 |
+| title | false | "Stored three-dimensional coordinates" |
+
+## figure_three_dimensional.plot_volume_rendering
+
+True direct volume compositing, declared transfer function and optional slices.
+
+| Parameter | Required | Default |
+|---|---|---|
+| coordinate_unit | true | — |
+| value_label | true | — |
+| value_limits | true | — |
+| transfer | true | — |
+| opacity_unit_distance | true | — |
+| volume_definition | true | — |
+| views | false | ["z+", "x+", "y+"] |
+| slice_axes | false | [] |
+| columns | false | "auto" |
+| rows | false | null |
+| width | false | null |
+| panel_height | false | 3.6 |
+| title | false | "Direct volume rendering · supplied voxel field" |
+
+## figure_three_dimensional.plot_molecular_trajectory
+
+Static keyframes plus actual GIF and offline frame-by-frame HTML playback.
+
+| Parameter | Required | Default |
+|---|---|---|
+| frame_order | true | — |
+| coordinate_unit | true | — |
+| time_unit | true | — |
+| topology_definition | true | — |
+| coordinate_definition | true | — |
+| periodic_boundary_handling | true | — |
+| key_frames | false | null |
+| view | false | [22, -60] |
+| columns | false | "auto" |
+| rows | false | null |
+| width | false | null |
+| panel_height | false | 3.2 |
+| animation_fps | false | 10 |
+| title | false | "Molecular trajectory · stored coordinates" |
 
 ## figure_wgcna_views.plot_wgcna_view
 

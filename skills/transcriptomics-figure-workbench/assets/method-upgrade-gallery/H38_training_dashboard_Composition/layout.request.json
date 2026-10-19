@@ -1,0 +1,26 @@
+{
+  "id": "H38_training_dashboard_Composition",
+  "title": "Same frozen input · default and caller-selected layout",
+  "columns": 2,
+  "canvas_width_pt": 1828.82,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "heading_pt": 40,
+  "panel_label_gutter_pt": 20,
+  "packing": "masonry",
+  "packing_order": "input",
+  "panels": [
+    {
+      "id": "Default",
+      "svg": "../H38_training_dashboard/H38_training_dashboard.svg",
+      "table": "../H38_training_dashboard/H38_training_dashboard.tsv",
+      "label": "A  Default · complete source"
+    },
+    {
+      "id": "Custom",
+      "svg": "../H38_training_dashboard_Custom/H38_training_dashboard_Custom.svg",
+      "table": "../H38_training_dashboard_Custom/H38_training_dashboard_Custom.tsv",
+      "label": "B  Caller-selected layout · same source"
+    }
+  ]
+}
