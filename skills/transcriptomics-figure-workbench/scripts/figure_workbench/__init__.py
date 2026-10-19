@@ -1,2 +1,2 @@
 """Lazy, contract-driven interface to the established scientific figure library."""
-__version__ = '0.10.0'
+__version__ = '0.11.0'

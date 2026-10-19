@@ -5,7 +5,10 @@ ROOT=Path(__file__).resolve().parents[1]
 SKILL=ROOT/'skills/transcriptomics-figure-workbench'
 
 
-def main(output,routine_only=False,analysis_only=False,companions_only=False):
+def main(output,routine_only=False,analysis_only=False,companions_only=False,current_only=False):
+    if current_only:
+        from current_release import build_current_release
+        return build_current_release(output)
     output.mkdir(parents=True,exist_ok=False)
     version=(ROOT/'VERSION').read_text().strip()
     assert version==(SKILL/'VERSION').read_text().strip()
@@ -201,4 +204,4 @@ def main(output,routine_only=False,analysis_only=False,companions_only=False):
     print(json.dumps(dict(status='PUBLIC_RELEASE_ARCHIVE_VERIFIED',version=version,unique_archive_entries=len(files),assets=[dict(name=p.name,bytes=p.stat().st_size) for p in assets])))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);group=p.add_mutually_exclusive_group();group.add_argument('--routine-only',action='store_true');group.add_argument('--analysis-only',action='store_true');group.add_argument('--companions-only',action='store_true');a=p.parse_args();main(a.output,a.routine_only,a.analysis_only,a.companions_only)
+    p=argparse.ArgumentParser();p.add_argument('--output',required=True,type=Path);group=p.add_mutually_exclusive_group();group.add_argument('--routine-only',action='store_true');group.add_argument('--analysis-only',action='store_true');group.add_argument('--companions-only',action='store_true');group.add_argument('--current-only',action='store_true');a=p.parse_args();main(a.output,a.routine_only,a.analysis_only,a.companions_only,a.current_only)

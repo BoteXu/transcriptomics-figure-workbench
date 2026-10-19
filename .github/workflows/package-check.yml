@@ -15,6 +15,8 @@ jobs:
           python-version: '3.11'
       - name: Check skill, public catalog, links and asset integrity
         run: python tests/check_package.py
+      - name: Check installable README links and public-only package selection
+        run: python tests/check_release_documents.py
   frozen-plotting:
     runs-on: ubuntu-latest
     steps:

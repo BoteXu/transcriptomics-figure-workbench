@@ -8,6 +8,8 @@
 
 [快速上手](#quick-start) · [42 个升级配方](#upgraded-recipes) · [三维与动画实例](#three-dimensional) · [自定义布局](#custom-layout) · [完整分析配套](#analysis-suites) · [安装为 skill](#install-skill) · [检查与来源](#validation)
 
+**当前版本：v0.11.0。** [下载完整 skill 包与 SHA256 校验文件](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v0.11.0)。包内包含本页的可移植说明、当前全部图库和准确示例；源提交及文档哈希记录在 `RELEASE_SOURCE.json`。版本变化与复现方式见[发布说明](docs/release-v0110.md)。
+
 ## 工作台覆盖什么
 
 | 研究与表达场景 | 可选择的画法与配套 | 需要提供的结果 |
