@@ -52,6 +52,8 @@ def check():
         p=(SKILL/'assets'/r['png']).resolve()
         assert SKILL.resolve() in p.parents and p.is_file(),'Installed preview escapes the portable skill'
     full=(ROOT/'examples/studio/index.html').read_text(encoding='utf8')
-    assert len(json.loads(full.split('studio-data',1)[1].split('>',1)[1].split('</script>',1)[0])['examples'])==260
+    full_state=json.loads(full.split('studio-data',1)[1].split('>',1)[1].split('</script>',1)[0])
+    assert len(full_state['examples'])==260
+    assert full_state['registry']==state['registry'],'Both offline interfaces must expose the current callable registry'
     print(json.dumps(dict(status='EDITORIAL_RELEASE_PASS',forms_searched=90,reviewed_original_figures=8,screened_exports=27,refreshed_existing_exports=23,scientific_acceptance=False)))
 if __name__=='__main__':check()
