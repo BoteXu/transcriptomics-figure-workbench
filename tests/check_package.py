@@ -31,7 +31,7 @@ def main():
     names=sorted(set(x for x in inventory if x))
     assert not any(set(Path(x).parts)&{'private','.env','.venv'} for x in names),'Private file staged for publication'
     files=[ROOT/x for x in names if (ROOT/x).is_file()]
-    for p in files:
+    for scanned,p in enumerate(files,1):
         assert p.stat().st_size < 100_000_000, 'GitHub file size exceeded'
         assert not p.is_symlink(), 'Symlink in publication package'
         if p.suffix in TEXT_SUFFIXES:
@@ -40,6 +40,7 @@ def main():
             assert not SECRET.search(text), 'Credential candidate'
         if p.suffix=='.py': ast.parse(p.read_text(encoding='utf8'),filename=p.name)
         if p.suffix=='.json': json.loads(p.read_text(encoding='utf8'))
+        if scanned%5000==0:print(f'Public files inspected: {scanned}/{len(files)}',flush=True)
     catalog=json.loads((GALLERY/'catalog.json').read_text(encoding='utf8'))
     items=catalog['preserved_examples']; groups=catalog['general_entries']
     assert len(items)==260 and len(groups)==45
@@ -132,8 +133,10 @@ def main():
     marker=re.search(r'const\s+methods\s*=\s*',html)
     assert marker and json.JSONDecoder().raw_decode(html[marker.end():])[0]==methods
     assert not list(GALLERY.glob('references/*')), 'Private source pictures bundled'
-    for p in ROOT.rglob('*.md'):
-        if '.git' in p.parts or 'dist' in p.parts: continue
+    # Check only the exact publication inventory above. Traversing ignored QA
+    # directories can expose private filenames in failures and needlessly scan
+    # unrelated local work; CI and local publication use the same selected set.
+    for p in (p for p in files if p.suffix=='.md'):
         text=p.read_text(encoding='utf8')
         for link in re.findall(r'\[[^\]\n]+\]\(([^\)\n]+)\)',text):
             link=link.split('#',1)[0].split('?',1)[0]
@@ -161,7 +164,7 @@ def main():
         current=SKILL/'scripts'/(record['module']+'.py')
         if record['source_sha256']!=sha(current):
             historical=SKILL/'references/source-archive-v080'/(record['module']+'.py.txt')
-            candidates=[historical,SKILL/'references/source-archive-v081'/(record['module']+'.py.txt'),SKILL/'references/source-archive-v093'/(record['module']+'.py.txt')]
+            candidates=[historical,SKILL/'references/source-archive-v081'/(record['module']+'.py.txt'),SKILL/'references/source-archive-v093'/(record['module']+'.py.txt'),SKILL/'references/source-archive-v100'/(record['module']+'.py.txt')]
             assert any(p.is_file() and record['source_sha256']==sha(p) for p in candidates), 'Historical source identity lost'
     plots={}
     for p in (SKILL/'scripts').glob('figure_*.py'):

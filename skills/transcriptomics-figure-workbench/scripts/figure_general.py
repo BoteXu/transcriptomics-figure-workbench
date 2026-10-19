@@ -22,31 +22,41 @@ def plot_xy_points(data,palette,x_label,y_label,*,unit_label,connect_order=False
         if connect_order:
             if len(sub)<2 or (np.diff(sub.x)<=0).any():raise ValueError('Connected points need an explicitly increasing input order')
             ax.plot(sub.x,sub.y,color=palette[g],lw=1.2,alpha=.8,zorder=1)
-        ax.scatter(sub.x,sub.y,color=palette[g],s=27,alpha=.8,label=g,linewidths=.3,edgecolors='white',zorder=2)
+        ax.scatter(sub.x,sub.y,color=palette[g],s=27,alpha=.8,label=f'{g} · n={len(sub)}',linewidths=.3,edgecolors='white',zorder=2)
         if label_points:
             for row in sub.itertuples():ax.annotate(str(row.unit_id),(row.x,row.y),xytext=(4,4),textcoords='offset points',fontsize=8,color='#40535F')
-    ax.set(xlabel=x_label,ylabel=y_label);ax.legend(frameon=False)
+    ax.set(xlabel=x_label,ylabel=y_label);ax.legend(title=unit_label,frameon=False,title_fontsize=8,fontsize=8)
     return stamp(fig,data,'xy_points',palette=palette,x_label=x_label,y_label=y_label,unit_label=unit_label,
                  connect_order=connect_order,label_points=label_points,inference='No correlation, fit or p-value computed; connected order is supplied')
 
 
-def plot_grouped_estimates(data,palette,y_label,*,interval_label):
+def plot_grouped_estimates(data,palette,y_label,*,interval_label,presentation='adaptive'):
     text_required(y=y_label,interval=interval_label)
     d=checked(data,['category','group','estimate','lower','upper'],['estimate','lower','upper'])
     if d.duplicated(['category','group']).any() or len(d)!=d.category.nunique()*d.group.nunique():
         raise ValueError('Complete unique category-by-group grid required')
     if ((d.lower>d.estimate)|(d.upper<d.estimate)).any(): raise ValueError('Invalid supplied interval')
     palette_check(d.group,palette);fig,ax=canvas();cats=list(pd.unique(d.category));groups=list(pd.unique(d.group))
+    if presentation not in ('adaptive','points','bars'):raise ValueError('Use adaptive, points or bars')
+    horizontal=presentation=='adaptive' and (len(cats)>6 or max(map(len,map(str,cats)))>18)
+    if horizontal:
+        fig.set_layout_engine(None);height=max(3.3,1.6+len(cats)*.42);fig.set_size_inches(9,height);ax.set_position([.28,.75/height,.44,(height-1.45)/height])
     width=.75/len(groups)
     for i,g in enumerate(groups):
         sub=d[d.group==g].set_index('category').loc[cats];x=np.arange(len(cats))+(i-(len(groups)-1)/2)*width
-        ax.bar(x,sub.estimate,width*.9,color=palette[g],label=g,zorder=2)
-        ax.errorbar(x,sub.estimate,yerr=np.array([sub.estimate-sub.lower,sub.upper-sub.estimate]),
-                    fmt='none',ecolor='#344149',capsize=2,linewidth=.8,zorder=3)
-    ax.axhline(0,color='#8B949B',linewidth=.6);ax.set_xticks(range(len(cats)),cats)
-    ax.set(ylabel=y_label,title=interval_label);ax.legend(frameon=False)
+        errors=np.array([sub.estimate-sub.lower,sub.upper-sub.estimate])
+        if horizontal:ax.errorbar(sub.estimate,x,xerr=errors,fmt='o',color=palette[g],capsize=2,ms=4.5,lw=1.2,label=g,zorder=3)
+        elif presentation=='bars':
+            ax.bar(x,sub.estimate,width*.9,color=palette[g],label=g,zorder=2)
+            ax.errorbar(x,sub.estimate,yerr=errors,fmt='none',ecolor='#344149',capsize=2,linewidth=.8,zorder=3)
+        else:ax.errorbar(x,sub.estimate,yerr=errors,fmt='o',color=palette[g],capsize=2,ms=4.5,lw=1.2,label=g,zorder=3)
+    if horizontal:
+        ax.axvline(0,color='#8B949B',linewidth=.6);ax.set_yticks(range(len(cats)),cats);ax.set_ylim(len(cats)-.5,-.5);ax.set(xlabel=y_label,title=interval_label);ax.grid(axis='x',color='#E9EEF0',lw=.5)
+    else:
+        ax.axhline(0,color='#8B949B',linewidth=.6);ax.set_xticks(range(len(cats)),cats);ax.set(ylabel=y_label,title=interval_label)
+    ax.legend(loc='upper left',bbox_to_anchor=(1.04,1),frameon=False,fontsize=8);ax.set_axisbelow(True)
     return stamp(fig,data,'grouped_estimates',palette=palette,y_label=y_label,interval_label=interval_label,
-                 baseline=0,ordering='first appearance',statistics='Supplied estimates and intervals; no aggregation')
+                 presentation=presentation,orientation='horizontal' if horizontal else 'vertical',baseline=0,ordering='first appearance',statistics='Supplied estimates and intervals; no aggregation')
 
 
 def plot_binned_distribution(data,palette,x_label,*,denominator_label):
@@ -96,6 +106,7 @@ def plot_confusion_counts(data,*,unit_label,label_order=None,label_aliases=None,
     ax.set_xticks(range(len(labels)),shown,rotation=45,ha='right');ax.set_yticks(range(len(labels)),shown)
     fig.subplots_adjust(left=min(.42,max(.12,.12+max(len(x.replace('\n','')) for x in shown)*.004)),bottom=.25,right=.84)
     ax.set(xlabel='Predicted class',ylabel='Observed class');fig.colorbar(image,ax=ax,label='Count: '+unit_label)
+    fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
     return stamp(fig,data,'confusion_counts',unit_label=unit_label,total=int(d['count'].sum()),label_order=labels,label_aliases=dict(zip(labels,shown)),figsize=list(map(float,figsize)),
                  semantics='Rows observed, columns predicted; no model fitting, threshold choice or accuracy calculation')
 

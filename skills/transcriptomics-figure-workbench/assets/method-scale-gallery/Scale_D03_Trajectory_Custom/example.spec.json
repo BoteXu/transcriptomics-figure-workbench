@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "figure_id": "Scale_D03_Trajectory_Custom",
+  "renderer": "figure_three_dimensional.plot_molecular_trajectory",
+  "input": {
+    "path": "Scale_D03_Trajectory_Custom.tsv",
+    "sha256": "152d4117931cfc8db3e1690a9af5c139bc9c5b09132b31a3ae62ae4d6d3dcf2e",
+    "numeric_columns": [
+      "time",
+      "x",
+      "y",
+      "z"
+    ],
+    "max_rows": 100000,
+    "max_bytes": 20971520
+  },
+  "parameters": {
+    "frame_order": [
+      "F00",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "F13",
+      "F14",
+      "F15",
+      "F16",
+      "F17",
+      "F18",
+      "F19",
+      "F20",
+      "F21",
+      "F22",
+      "F23"
+    ],
+    "coordinate_unit": "Å",
+    "time_unit": "ps",
+    "topology_definition": "Explicit fictional chain and connectivity, not an identified protein",
+    "coordinate_definition": "Authored stored coordinate frames; no MD or conformer generation",
+    "periodic_boundary_handling": "Fictional nonperiodic coordinates; no reimaging applied",
+    "title": "Stored molecular frames · fixed camera",
+    "key_frames": [
+      "F00",
+      "F04",
+      "F08",
+      "F12",
+      "F16",
+      "F20"
+    ],
+    "columns": 3,
+    "rows": 2,
+    "width": 14.5,
+    "view": [
+      35,
+      -45
+    ],
+    "panel_height": 2.65
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-three-dimensional",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "State A": 0,
+      "State B": 1,
+      "State C": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#218C8D"
+      ],
+      "diverging": [
+        "#218C8D",
+        "#F7F7F7",
+        "#74798D"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Public authored drawing fixture; Complete original frames, explicit topology and unaltered physical time",
+    "input_unit": "Explicit display records with declared physical or synthetic units",
+    "experimental_unit": "No real biological independent units; no scientific inference",
+    "contrast": "Declared illustrative comparison; preserve original values and complete selected scope",
+    "denominator": "Every row of the exact frozen selected input table",
+    "model": "No scientific model fitted",
+    "limits": "Software and visual demonstration, not biomedical evidence",
+    "filtering": "No filtering while drawing",
+    "uncertainty": "Only supplied uncertainty channels; no interval estimation",
+    "interpretation_limit": "Review new data, units, layout and intended display size separately",
+    "synthetic": true
+  },
+  "export": {
+    "raster_dpi": 300,
+    "readability_policy": "warn"
+  }
+}

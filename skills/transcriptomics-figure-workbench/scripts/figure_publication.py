@@ -39,6 +39,7 @@ def plot_publication_curve(data,palette,*,curve_type,labels,title='',prevalence=
     ax.set(xlim=(-.015,1.015),ylim=(-.015,1.025),xlabel='False-positive rate' if curve_type=='ROC' else 'Recall',ylabel='True-positive rate' if curve_type=='ROC' else 'Precision',title=title)
     ax.set_xticks(np.linspace(0,1,6));ax.set_yticks(np.linspace(0,1,6));ax.set_aspect('equal');paper_axis(ax)
     ax.legend(loc='upper center',bbox_to_anchor=(.5,-.17),ncol=2,frameon=False,fontsize=8.5,handlelength=2.7,columnspacing=1.7)
+    fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
     return stamp(fig,data,'publication_curve',curve_type=curve_type,labels=labels,palette=palette,step_by_model=steps,prevalence=prevalence)
 
 def plot_aligned_matrix(data,*,value_label,limits,signed=True,center=0,geometry='tile',block_palette=None,count_label='Supplied count',title='',continuous_colors=None,

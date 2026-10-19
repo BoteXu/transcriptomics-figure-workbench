@@ -108,7 +108,8 @@ def plot_forest(data, x_label, interval_label, *, effect_scale, presentation='cl
     if presentation not in ['table','classic']:raise ValueError('Use table or classic forest presentation')
     fig, ax = canvas(); y = np.arange(len(d))
     if presentation=='table':
-        fig.set_layout_engine(None);fig.set_size_inches(8.4,max(2.6,1.35+.36*len(d)));ax.set_position([.21,.23,.49,.60])
+        fig.set_layout_engine(None);height=max(2.6,1.8+.30*len(d));fig.set_size_inches(8.4,height)
+        ax.set_position([.21,.78/height,.49,(height-1.52)/height])
         for i in range(len(d)):
             if i%2==0:ax.axhspan(i-.5,i+.5,color='#F0F5F6',zorder=0)
     ax.axvline(null,color='#929AA1',linestyle='--',linewidth=.7)
@@ -119,14 +120,14 @@ def plot_forest(data, x_label, interval_label, *, effect_scale, presentation='cl
             color='#497F9D' if row.estimate<null else '#CC8069'
             ax.errorbar(row.estimate,i,xerr=[[row.estimate-row.lower],[row.upper-row.estimate]],fmt='o',color=color,capsize=2.5,ms=5,lw=1.4,zorder=3)
             ax.text(1.05,i,f'{row.estimate:.2f}  [{row.lower:.2f}, {row.upper:.2f}]',transform=ax.get_yaxis_transform(),va='center',fontsize=8.5,color='#415763',clip_on=False)
-        ax.text(1.05,1.07,'Estimate [supplied interval]',transform=ax.transAxes,fontsize=8.5,color='#415763')
+        ax.text(1.05,1.07,'Estimate [supplied interval]',transform=ax.transAxes,fontsize=8,color='#415763')
         ax.spines[['top','right','left']].set_visible(False);ax.tick_params(axis='y',length=0)
-    ax.set_yticks(y,d.label); ax.invert_yaxis()
+    ax.set_yticks(y,d.label);ax.set_ylim(len(d)-.5,-.5)
     ax.set(xlabel=x_label,title=interval_label)
     return stamp(fig, data, 'forest', effect_scale=effect_scale, null_value=null,
                  x_label=x_label, interval_label=interval_label,presentation=presentation)
 
-def plot_volcano(data, alpha=.05, fc=1):
+def plot_volcano(data, alpha=.05, fc=1, presentation='informative'):
     d = checked(data,['gene','log2FC','padj'],['log2FC','padj'])
     if d.gene.duplicated().any() or ((d.padj<=0)|(d.padj>1)).any():
         raise ValueError('Genes must be unique; padj in (0,1]; zero requires explicit display floor')
@@ -138,8 +139,10 @@ def plot_volcano(data, alpha=.05, fc=1):
     for cut in [-fc,fc]: ax.axvline(cut,color='grey',linestyle='--',linewidth=.6)
     ax.set(xlabel='log2 fold change',ylabel='-log10(adjusted p)')
     from matplotlib.lines import Line2D
-    ax.legend(handles=[Line2D([],[],marker='o',linestyle='',color=c,label=l) for l,c in [('Up','#B84E35'),('Down','#35618F'),('Other','#BFC5CB')]],frameon=False)
-    return stamp(fig, data, 'volcano', alpha=alpha, fc=fc)
+    if presentation not in ('informative','classic'):raise ValueError('Use informative or classic volcano')
+    counts=[int(((d.padj<=alpha)&(d.log2FC>=fc)).sum()),int(((d.padj<=alpha)&(d.log2FC<=-fc)).sum())];counts.append(len(d)-sum(counts))
+    ax.legend(handles=[Line2D([],[],marker='o',linestyle='',color=c,label=l+(f'  {n:,} ({n/len(d):.1%})' if presentation=='informative' else '')) for (l,c),n in zip([('Up','#B84E35'),('Down','#35618F'),('Other','#BFC5CB')],counts)],frameon=False,fontsize=8,title=f'Adjusted p ≤ {alpha:g}; |log2FC| ≥ {fc:g}' if presentation=='informative' else None,title_fontsize=8)
+    return stamp(fig, data, 'volcano', alpha=alpha, fc=fc,presentation=presentation)
 
 def plot_dot(data, value_label, *, value_semantics, denominator_label,
              row_field='feature', column_field='group', fraction_field='fraction',

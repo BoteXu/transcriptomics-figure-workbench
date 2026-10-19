@@ -12,7 +12,7 @@ from figure_core import stamp,palette_check
 from figure_reference import _new,_ax,_types,_records,_unique,_grid
 
 def plot_process_dashboard(data,palette,*,surface_order,bar_group_order,stage_order,
-                           geometry_label,count_label,size=(12,9)):
+                           geometry_label,count_label,size=(12,9),presentation='reading',columns='auto',rows=None,width=None):
     _types(data,['node','edge','path','matrix','surface','landmark','count'])
     nodes=_records(data,'node',['node_id','x','y','width','height','group'],['x','y','width','height']); edges=_records(data,'edge',['edge_id','x0','y0','x1','y1','line_style'],['x0','y0','x1','y1']); paths=_records(data,'path',['object_id','order','x','y','group','shape'],['order','x','y']); matrices=_records(data,'matrix',['matrix_id','row','column','value'],['row','column','value']); surfaces=_records(data,'surface',['surface_id','x','y','z'],['x','y','z']); peaks=_records(data,'landmark',['surface_id','landmark','x','y','z','group'],['x','y','z']); counts=_records(data,'count',['bar_group','category','stage','value'],['value'])
     # An explicitly declared backdrop may have no annotation. This is an empty
@@ -31,6 +31,10 @@ def plot_process_dashboard(data,palette,*,surface_order,bar_group_order,stage_or
     palette_check(nodes.group,palette); palette_check(paths.group,palette); palette_check(peaks.group,palette); palette_check(counts.stage,palette)
     if (nodes[['width','height']]<=0).any().any() or (counts.value<0).any() or (counts.value%1!=0).any() or set(surfaces.surface_id)!=set(surface_order) or set(counts.bar_group)!=set(bar_group_order) or set(counts.stage)!=set(stage_order): raise ValueError('Invalid process dimensions/categories/counts')
     if not set(edges.line_style)<={'solid','dashed','dotted'} or not set(paths['shape'])<={'ribbon','outline'}: raise ValueError('Unknown geometry/style')
+    if presentation not in ('reading','classic'):raise ValueError('Use reading or classic process layout')
+    if presentation=='reading':
+        from figure_reading_layouts import process_page
+        return process_page(data,palette,nodes,edges,paths,matrices,surfaces,peaks,counts,surface_order,bar_group_order,stage_order,geometry_label,count_label,columns,rows,width)
     fig=_new(size); body=_ax(fig,[.045,.18,.69,.70]); body.axis('off'); body.set(xlim=(0,100),ylim=(0,100))
     for n in nodes.itertuples():
         body.add_patch(FancyBboxPatch((n.x,n.y),n.width,n.height,boxstyle='round,pad=.4,rounding_size=2',fc=palette[n.group],ec='#64717A',lw=.8,alpha=.85)); body.text(n.x+n.width/2,n.y+n.height/2,n.text,ha='center',va='center',fontsize=8)

@@ -116,7 +116,7 @@ def plot_contact_tracks(data,theme,*,bin_order,track_order,region_definition,coo
                    coordinate_map='x=(u+v)/2; y=(v-u)/2; physical bin intervals retained',missing='neutral mask; explicit zero remains zero')
 
 
-def plot_branch_tree(data,theme,*,root_id,leaf_order,branch_unit,tree_definition,title=''):
+def plot_branch_tree(data,theme,*,root_id,leaf_order,branch_unit,tree_definition,title='',presentation='aligned'):
     d=checked(data,['node_id','branch_length','label'],['branch_length']);_unique(d,['node_id'])
     if 'parent_id' not in d or root_id not in set(d.node_id) or (d.branch_length<0).any():raise ValueError('Explicit root, parent IDs and nonnegative branches required')
     _declared(branch_unit,tree_definition);d=d.set_index('node_id');children={n:[] for n in d.index}
@@ -137,7 +137,9 @@ def plot_branch_tree(data,theme,*,root_id,leaf_order,branch_unit,tree_definition
         y[n]=(min(desc[n])+max(desc[n]))/2;active.remove(n)
     visit(root_id)
     if seen!=set(d.index):raise ValueError('Tree is disconnected or cyclic')
-    fig=_new(theme,(8,max(4,1.8+len(leaves)*.31)));ax=_axis(fig,[.12,.19,.60,.65]);color=theme['palette_colors'][0]
+    if presentation not in ('aligned','classic'):raise ValueError('Use aligned or classic tree')
+    height=max(2.8,1.6+len(leaves)*.31) if presentation=='aligned' else max(4,1.8+len(leaves)*.31)
+    fig=_new(theme,(8,height));ax=_axis(fig,[.12,.8/height,.60,(height-1.5)/height]);color=theme['palette_colors'][0]
     for n in d.index:
         if children[n]:ax.plot([x[n],x[n]],[min(y[c] for c in children[n]),max(y[c] for c in children[n])],c=color,lw=1.2)
         if n!=root_id:
@@ -146,10 +148,12 @@ def plot_branch_tree(data,theme,*,root_id,leaf_order,branch_unit,tree_definition
     if not np.isfinite(span) or span<=0:raise ValueError('Tree needs positive finite total branch span')
     ax.set(xlim=(0,span*1.03),ylim=(len(leaves)-.4,-.6),xlabel=branch_unit,yticks=[],title=title)
     ax.spines[['left','top','right']].set_visible(False)
-    for n in leaves:ax.text(1.02,y[n],d.loc[n,'label'],transform=ax.get_yaxis_transform(),va='center',fontsize=9)
+    for n in leaves:
+        if presentation=='aligned':ax.plot([x[n],span*1.045],[y[n],y[n]],c='#C6D0D6',lw=.6,ls=(0,(2,2)),clip_on=False,zorder=0)
+        ax.text(1.02,y[n],d.loc[n,'label'],transform=ax.get_yaxis_transform(),va='center',fontsize=9)
     fig.text(.12,.06,textwrap.fill(tree_definition,95),fontsize=8)
     return _finish(fig,data,theme,'branch_tree',root_id=root_id,leaf_order=leaves,branch_unit=branch_unit,tree_definition=tree_definition,title=title,
-                   inference='none; x is supplied cumulative branch length, not clustering height')
+                   presentation=presentation,terminal_leaders='faint label leaders; not branches' if presentation=='aligned' else None,inference='none; x is supplied cumulative branch length, not clustering height')
 
 
 def _pixel_grid(data,columns,view=None):

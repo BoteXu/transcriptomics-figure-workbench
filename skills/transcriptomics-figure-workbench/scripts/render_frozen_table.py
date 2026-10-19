@@ -61,7 +61,7 @@ def render(adapter,data,params,theme,*,layout=None):
     accepted=set(inspect.signature(fn).parameters)-{'data','theme'}
     from figure_workbench.responsive import validate_layout,apply_native_layout
     layout=validate_layout(layout);native=dict(layout)
-    if 'axis_groups' not in native and row['module'] in {'figure_chapter_views','figure_enrichment_story','figure_wgcna_views','figure_lineage_views','figure_coexpression_evidence','figure_analysis_evidence','figure_three_dimensional'}:
+    if 'axis_groups' not in native and ('columns' in accepted or row['module'] in {'figure_chapter_views','figure_enrichment_story','figure_wgcna_views','figure_lineage_views','figure_coexpression_evidence','figure_analysis_evidence','figure_three_dimensional'}):
         for key in ['columns','rows']:
             if key in native:
                 if key not in accepted:raise ValueError('This chapter supports columns; rows follow the complete content')
@@ -87,7 +87,7 @@ def render(adapter,data,params,theme,*,layout=None):
     except Exception:
         for number in set(plt.get_fignums())-before:plt.close(number)
         raise
-    if adapter in ['xy_points','embedding','frozen_dynamics','composition','grouped_estimates']:
+    if adapter in ['xy_points','embedding','frozen_dynamics','composition'] or adapter=='grouped_estimates' and fig._omics_spec.get('orientation')!='horizontal':
         fig.set_layout_engine(None);ax=fig.axes[0];ax.set_position([.12,.30,.60,.50] if adapter=='frozen_dynamics' else [.12,.20,.60,.62]);legend=ax.get_legend()
         if legend:legend.set_bbox_to_anchor((1.07,1));legend.set_loc('upper left')
     if fig._suptitle is not None and fig._suptitle.get_text().startswith('SYNTHETIC DEMO'):fig._suptitle.set_text('')

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "figure_id": "Scale_D01_Scatter3D_Small",
+  "renderer": "figure_three_dimensional.plot_scatter3d",
+  "input": {
+    "path": "Scale_D01_Scatter3D_Small.tsv",
+    "sha256": "aab86fa5d0a2f09735dc4b2b3892875c1a6c9f10872af1c4e5b3fe8187dfe07f",
+    "numeric_columns": [
+      "x",
+      "y",
+      "z"
+    ],
+    "max_rows": 100000,
+    "max_bytes": 20971520
+  },
+  "parameters": {
+    "axis_labels": [
+      "X",
+      "Y",
+      "Z"
+    ],
+    "coordinate_unit": "a.u.",
+    "coordinate_definition": "Authored frozen point coordinates; no embedding or fit",
+    "title": "Three-dimensional state geometry"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-three-dimensional",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "State A": 0,
+      "State B": 1,
+      "State C": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#218C8D"
+      ],
+      "diverging": [
+        "#218C8D",
+        "#F7F7F7",
+        "#74798D"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Public authored drawing fixture; Complete selected original coordinate records; no embedding fit",
+    "input_unit": "Explicit display records with declared physical or synthetic units",
+    "experimental_unit": "No real biological independent units; no scientific inference",
+    "contrast": "Declared illustrative comparison; preserve original values and complete selected scope",
+    "denominator": "Every row of the exact frozen selected input table",
+    "model": "No scientific model fitted",
+    "limits": "Software and visual demonstration, not biomedical evidence",
+    "filtering": "No filtering while drawing",
+    "uncertainty": "Only supplied uncertainty channels; no interval estimation",
+    "interpretation_limit": "Review new data, units, layout and intended display size separately",
+    "synthetic": true
+  },
+  "export": {
+    "raster_dpi": 300,
+    "readability_policy": "warn"
+  }
+}

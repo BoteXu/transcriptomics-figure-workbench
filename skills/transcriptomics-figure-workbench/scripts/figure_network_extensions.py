@@ -31,7 +31,7 @@ def _ribbon(ax,a0,a1,b0,b1,color,alpha=.45):
     codes=[Path.MOVETO]+[Path.CURVE4]*3+[Path.LINETO]+[Path.CURVE4]*3+[Path.CLOSEPOLY]
     ax.add_patch(PathPatch(Path(vertices,codes),fc=color,ec='none',alpha=alpha))
 
-def plot_typed_network(data,theme,*,edge_label,node_area_label,relation_semantics,directed=False,shape_map=None,title='',size=(8.5,6.2)):
+def plot_typed_network(data,theme,*,edge_label,node_area_label,relation_semantics,directed=False,shape_map=None,title='',size=(8.5,6.2),numeric_guides=True):
     """Explicit node XY/labels/types/groups/areas + edges/endpoints/weights/signs."""
     _types(data,['node','edge'])
     n=_records(data,'node',['node_id','label','entity_type','group','x','y','area'],['x','y','area']); _unique(n,['node_id'])
@@ -58,7 +58,12 @@ def plot_typed_network(data,theme,*,edge_label,node_area_label,relation_semantic
     fig.legend(handles=[Line2D([],[],marker='o',ls='',color=pal[g],label=g) for g in pal],title='Identity colour',loc='upper left',bbox_to_anchor=(.72,.66),frameon=False)
     shown=[('positive','positive',1),('negative','negative',-1),('neutral','unsigned',0)]
     fig.legend(handles=[Line2D([],[],color=theme['roles'][r],label=l) for r,l,s in shown if s in set(e.sign)],title=edge_label,loc='upper left',bbox_to_anchor=(.72,.32),frameon=False)
-    fig.text(.73,.14,node_area_label+'\nEdge width = supplied weight',fontsize=8)
+    fig.text(.73,.14,node_area_label+'\nEdge width = 0.5 + 1.8 × weight',fontsize=8)
+    if numeric_guides:
+        values=sorted(set([float(n.area.min()),float(n.area.max())]));guide=fig.add_axes([.73,.035,.25,.06]);guide.axis('off');guide.set(xlim=(-.6,len(values)-.4),ylim=(-.5,1))
+        guide.scatter(range(len(values)),[.5]*len(values),s=values,c='#8AA7B5',ec='#425D6C',lw=.5)
+        for i,v in enumerate(values):guide.text(i,-.2,f'{v:g} pt²',ha='center',fontsize=7)
+        if len(e):fig.text(.73,.405,f'Edge weights: {e.weight.min():.3g}–{e.weight.max():.3g}',fontsize=8)
     return _done(fig,data,'typed_network',theme,relation_semantics=relation_semantics,directed=directed,shape_map=shapes,node_area_label=node_area_label,edge_label=edge_label)
 
 def plot_weighted_chord(data,theme,*,weight_label,order,title=''):
@@ -202,19 +207,26 @@ def plot_multistate_matrix(data,theme,*,state_order,state_slots,title='',row_fie
     fig.text(.16,.05,'Multiple states may coexist; grey = explicit measured None',fontsize=8)
     return _done(fig,data,'multistate_matrix',theme,state_order=state_order,state_slots=state_slots,row_field=row_field,column_field=column_field,row_order=rows,column_order=cols,row_aliases=dict(zip(rows,yl)),column_aliases=dict(zip(cols,xl)),missing_policy='Missing rows/cells rejected; explicit None only')
 
-def plot_running_enrichment(data,theme,*,curve_groups,rank_label,title=''):
+def plot_running_enrichment(data,theme,*,curve_groups,rank_label,title='',presentation='informative'):
     _types(data,['running','hit','metric']);d=_records(data,'running',['group','rank','value'],['rank','value']);h=_records(data,'hit',['group','rank'],['rank']);m=_records(data,'metric',['rank','value'],['rank','value']);_unique(d,['group','rank']);_unique(h,['group','rank']);_unique(m,['rank'])
     if set(d.group)!=set(curve_groups) or set(h.group)-set(curve_groups):raise ValueError('Curve identity mismatch')
     ranges=[(tuple(d.loc[d.group==g,'rank']),g) for g in curve_groups]
     base=ranges[0][0]
-    if any(r[0]!=base for r in ranges) or tuple(m['rank'])!=base or not all(a<b for a,b in zip(base,base[1:])) or not set(h['rank'])<=set(base):raise ValueError('Shared ordered rank axis required; no interpolation or fitting')
+    metric_rank=tuple(m['rank'])
+    if any(r[0]!=base for r in ranges) or not set(base)<=set(metric_rank) or base[0]!=metric_rank[0] or base[-1]!=metric_rank[-1] or not all(a<b for a,b in zip(base,base[1:])) or not all(a<b for a,b in zip(metric_rank,metric_rank[1:])) or not set(h['rank'])<=set(metric_rank):raise ValueError('Shared complete ordered rank domain required; supplied curve vertices may be fewer than metric ranks')
+    if presentation not in ('informative','classic'):raise ValueError('Use informative or classic enrichment')
     pal=group_palette(theme,curve_groups);fig=_start(theme);top=_ax(fig,[.13,.52,.62,.32]);hits=_ax(fig,[.13,.35,.62,.12]);bottom=_ax(fig,[.13,.14,.62,.17]);
     for i,g in enumerate(curve_groups):
-        q=d[d.group==g];top.plot(q['rank'],q.value,color=pal[g],label=g);q=h[h.group==g];hits.vlines(q['rank'],i,i+.75,color=pal[g],lw=.8)
+        q=d[d.group==g];top.plot(q['rank'],q.value,color=pal[g],label=g,lw=1.7)
+        if presentation=='informative':top.fill_between(q['rank'],0,q.value,color=pal[g],alpha=.07)
+        q=h[h.group==g];hits.vlines(q['rank'],i,i+.75,color=pal[g],lw=.8)
     bottom.fill_between(m['rank'],0,m.value,color=theme['roles']['primary'],alpha=.25);bottom.plot(m['rank'],m.value,color=theme['roles']['primary']);top.axhline(0,color='#BBC3CB',lw=.6);top.set_ylabel('Stored running score');top.set_title(title,loc='left');hits.set_yticks(np.arange(len(curve_groups))+.35,curve_groups);hits.set_ylim(-.1,len(curve_groups));bottom.set(xlabel=rank_label,ylabel='Rank metric')
     for a in (top,hits,bottom):a.set_xlim(base[0],base[-1])
-    top.set_xticks([]);hits.set_xticks([]);fig.legend(handles=[Line2D([],[],color=pal[g],label=g) for g in curve_groups],loc='upper left',bbox_to_anchor=(.79,.84),frameon=False);fig.text(.13,.035,'Supplied enrichment curves and hit positions; no enrichment calculation',fontsize=8)
-    return _done(fig,data,'running_enrichment',theme,rank_label=rank_label,curve_groups=curve_groups)
+    if presentation=='informative':
+        bottom.collections[0].remove();bottom.fill_between(m['rank'],0,m.value,where=m.value>=0,color=theme['roles']['positive'],alpha=.35);bottom.fill_between(m['rank'],0,m.value,where=m.value<0,color=theme['roles']['negative'],alpha=.35)
+    top.set_xticks([]);hits.set_xticks([]);fig.legend(handles=[Line2D([],[],color=pal[g],label=g+(f' · {int((h.group==g).sum())} hits' if presentation=='informative' else '')) for g in curve_groups],loc='upper left',bbox_to_anchor=(.79,.84),frameon=False,fontsize=8)
+    fig.text(.13,.035,f'Supplied rank domain {metric_rank[0]:g}–{metric_rank[-1]:g}; exact stored vertices, all hits retained. No enrichment calculation.',fontsize=8)
+    return _done(fig,data,'running_enrichment',theme,rank_label=rank_label,curve_groups=curve_groups,presentation=presentation)
 
 def plot_rank_bump(data,theme,*,stage_order,title=''):
     d=checked(data,['group','stage','rank'],['rank']);_unique(d,['group','stage']);groups=list(pd.unique(d.group));pal=group_palette(theme,groups)
@@ -249,9 +261,16 @@ def plot_contour_field(data,theme,*,value_label,limits,levels,x_label,y_label,ti
     if not limits[0]<limits[1] or len(levels)<2 or any(a>=b for a,b in zip(levels,levels[1:])) or levels[0]<limits[0] or levels[-1]>limits[1]:raise ValueError('Explicit ordered color limits and contour levels required')
     if d.value.min()<limits[0] or d.value.max()>limits[1]:raise ValueError('Field exceeds declared color limits')
     fig=_start(theme);ax=_ax(fig,[.14,.16,.61,.69]);signed=limits[0]<0<limits[1];norm=TwoSlopeNorm(0,*limits) if signed else Normalize(*limits);cf=ax.contourf(xs,ys,mat.to_numpy(),levels=levels,cmap=_cmap(theme,signed),norm=norm);lines=ax.contour(xs,ys,mat.to_numpy(),levels=levels,colors='#647481',linewidths=.4,alpha=.6);ax.clabel(lines,inline=True,fontsize=6,fmt='%.1f');_colorbar(fig,[.80,.18,.025,.63],_cmap(theme,signed),norm,value_label);ax.set(xlabel=x_label,ylabel=y_label,title=title)
-    if label_contrast not in ('classic','clear'):raise ValueError('Choose classic or clear contour labels')
+    if label_contrast not in ('classic','clear','halo'):raise ValueError('Choose classic, clear or halo contour labels')
     if label_contrast=='clear':
         for label in lines.labelTexts:
             label.set_color('#304C5E');label.set_alpha(1)
             label.set_bbox(dict(facecolor='white',edgecolor='none',alpha=.80,pad=.4))
+    elif label_contrast=='halo':
+        from matplotlib.patheffects import withStroke
+        for label in lines.labelTexts:label.set_color('#304C5E');label.set_alpha(1);label.set_fontsize(7);label.set_path_effects([withStroke(linewidth=1.8,foreground='white')])
+    # Automatic contour labels can straddle the field boundary. Keep their
+    # complete numerals visible in the reserved surrounding margin rather than
+    # clipping a sign or decimal while leaving an apparently different value.
+    for label in lines.labelTexts:label.set_clip_on(False)
     return _done(fig,data,'contour_field',theme,value_label=value_label,limits=limits,levels=levels,label_contrast=label_contrast,analysis_boundary='Complete supplied grid; no spatial model or response fitting')

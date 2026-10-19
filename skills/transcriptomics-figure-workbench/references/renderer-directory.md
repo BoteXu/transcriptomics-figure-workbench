@@ -257,6 +257,7 @@ See the fixed implementation and its input contract.
 | branch_unit | true | — |
 | tree_definition | true | — |
 | title | false | "" |
+| presentation | false | "aligned" |
 
 ## figure_biomni_views.plot_slice_overlay
 
@@ -366,6 +367,7 @@ See the fixed implementation and its input contract.
 |---|---|---|
 | alpha | false | 0.05 |
 | fc | false | 1 |
+| presentation | false | "informative" |
 
 ## figure_core.plot_dot
 
@@ -664,6 +666,7 @@ See the fixed implementation and its input contract.
 | palette | true | — |
 | y_label | true | — |
 | interval_label | true | — |
+| presentation | false | "adaptive" |
 
 ## figure_general.plot_binned_distribution
 
@@ -864,6 +867,7 @@ See the fixed implementation and its input contract.
 | value_definition | true | — |
 | additivity_definition | true | — |
 | title | false | "" |
+| orientation | false | "auto" |
 
 ## figure_method_extensions.plot_enrichment_grid
 
@@ -899,6 +903,8 @@ See the fixed implementation and its input contract.
 | Parameter | Required | Default |
 |---|---|---|
 | title | false | "" |
+| presentation | false | "wrapped" |
+| width | false | 8.5 |
 
 ## figure_method_extensions.plot_two_set_overlap
 
@@ -1045,6 +1051,7 @@ Frozen signed correlation with supplied FDR marks; missing entries hatch.
 | cell_width | false | 0.7 |
 | cell_height | false | 0.36 |
 | label_rotation | false | 25 |
+| show_n | false | true |
 
 ## figure_multimodal.plot_calibration_counts
 
@@ -1117,6 +1124,10 @@ See the fixed implementation and its input contract.
 | draw_links | false | true |
 | title | false | "" |
 | guide_clearance_pt | false | 0 |
+| link_mode | false | "points" |
+| columns | false | "auto" |
+| rows | false | null |
+| width | false | null |
 
 ## figure_multiomics_views.plot_loading_projection
 
@@ -1281,6 +1292,7 @@ Explicit node XY/labels/types/groups/areas + edges/endpoints/weights/signs.
 | shape_map | false | null |
 | title | false | "" |
 | size | false | [8.5, 6.2] |
+| numeric_guides | false | true |
 
 ## figure_network_extensions.plot_weighted_chord
 
@@ -1346,6 +1358,7 @@ See the fixed implementation and its input contract.
 | curve_groups | true | — |
 | rank_label | true | — |
 | title | false | "" |
+| presentation | false | "informative" |
 
 ## figure_network_extensions.plot_rank_bump
 
@@ -1483,6 +1496,10 @@ See the fixed implementation and its input contract.
 | geometry_label | true | — |
 | count_label | true | — |
 | size | false | [12, 9] |
+| presentation | false | "reading" |
+| columns | false | "auto" |
+| rows | false | null |
+| width | false | null |
 
 ## figure_publication.plot_publication_curve
 
@@ -1738,6 +1755,9 @@ See the fixed implementation and its input contract.
 | limits | true | — |
 | size | false | [12, 9] |
 | numeric_guides | false | false |
+| presentation | false | "reading" |
+| columns | false | "auto" |
+| rows | false | null |
 
 ## figure_reference.plot_embedding_atlas
 
@@ -1755,6 +1775,7 @@ R04 all three subfigures. Supplied tree segments are drawn, not clustered.
 | radial_count_max | true | — |
 | size | false | [10, 15] |
 | numeric_guides | false | false |
+| presentation | false | "reading" |
 
 ## figure_reference.plot_training_dashboard
 
@@ -1791,6 +1812,7 @@ See the fixed implementation and its input contract.
 | row_label_mode | false | "all" |
 | column_label_rotation | false | 45 |
 | row_strip_left | false | 0.04 |
+| presentation | false | "reading" |
 
 ## figure_reference.plot_effect_distribution_forest
 
@@ -1994,6 +2016,9 @@ True direct volume compositing, declared transfer function and optional slices.
 | width | false | null |
 | panel_height | false | 3.6 |
 | title | false | "Direct volume rendering · supplied voxel field" |
+| camera_views | false | [] |
+| camera_resolution | false | 160 |
+| camera_steps | false | 96 |
 
 ## figure_three_dimensional.plot_molecular_trajectory
 

@@ -167,7 +167,7 @@ def build():
                'chapter-gallery', 'analysis-gallery', 'companion-gallery',
                'routine-layouts', 'refined-gallery', 'design-gallery',
                'clarity-gallery', 'package-gallery', 'method-gallery', 'aesthetic-gallery',
-               'method-upgrade-gallery']
+               'method-upgrade-gallery', 'method-scale-gallery']
     rows = []; coverage = []; by_path = {}; missing = []
     analysis_by_png = {str((S / 'assets/analysis-library' / r['assets']['png']).resolve()): r for r in analysis['records']}
     from rebuild_gallery_navigation import adapt_routine
@@ -257,7 +257,15 @@ def build():
     # Historical short IDs remain archive aliases. Migrated recipes gain their
     # own stable current IDs; old pixels and richer routine defaults survive.
     for r in rows:
-        if r['origin']=='method-upgrade-gallery':aliases[r['original_id']]=r['id']
+        if r['origin'] in {'method-upgrade-gallery','method-scale-gallery'}:aliases[r['original_id']]=r['id']
+    # Only the three new 3D families replace their initial demonstration with
+    # the complete, reviewed scale example. Specialist routine defaults keep
+    # their existing precedence; all old short IDs and assets remain available.
+    for family, method in [('scatter3d','D01_Scatter3D'),('volume-rendering','D02_Volume'),('molecular-trajectory','D03_Trajectory')]:
+        preferred='method-scale-gallery/Scale_'+method+'_Large'
+        if preferred not in {r['id'] for r in rows}:raise ValueError('Missing reviewed 3D scale example')
+        next(e for e in entries if e['id']==family)['default_id']=preferred
+        aliases[family]=preferred
     for r in rows:
         r['domains'] = ['general']
         r['domains'] += list(dict.fromkeys(c.split('.')[0] for c in r['chapters']))
@@ -303,7 +311,7 @@ def build():
     for r in renderer_coverage:
         lines.append(f"|`{r['renderer']}`|{len(r['current_spec_examples'])}|{len(r['historical_or_reference_examples'])}|{r['state']}|")
     lines += ['', '## 全面性的边界', '',
-              '这份清单核对的是现有实现，不代表所有科学可视化方法已经穷尽。42 个历史配方各有当前 FigureSpec、冻结数据、默认与自定义布局、完整单图组装示例。三维散点提供给定视角及正交投影；体渲染提供规则体素的六个轴向前向透明合成及物理切片；分子轨迹提供给定坐标的关键帧、GIF 和离线滑块播放。尚未提供任意三维相机体绘制、交互三维网格、模拟引擎或拓扑推断。雷达、三维曲面及原历史示例继续保留。', '',
+              '这份清单核对的是现有实现，不代表所有科学可视化方法已经穷尽。42 个历史配方各有当前 FigureSpec、冻结数据、默认与自定义布局、完整单图组装示例。45 种方法另有小／中／大三档冻结输入及同一大输入的自定义布局，合计180份单图与45份完整组装页。三维散点提供给定视角及正交投影；体渲染提供有限预算的正交三维相机射线合成、六个轴向观察方向、物理切片和透明度传递曲线；分子轨迹提供给定坐标的关键帧、GIF 和离线滑块播放。体绘制的三线性采样只用于图像生成，不改变源体素。尚未提供交互三维网格、模拟引擎或拓扑推断。雷达、三维曲面及原历史示例继续保留。', '',
               '多组学索引含跨层关系、基因组轨道、变异后验、剪接、质谱和通路叠加；建模含ROC、PR、校准、决策、生存、残差、贡献与敏感性。结构固定参考与可运行数值图分别标记。原生软件包算法没有因绘图入口而被实现或重新验证。', '',
               '历史版本完整导出沿用既有公开 v0.8.0 归档链接，便携安装提供离线预览；当前 FigureSpec、输入和导出直接使用随包本地文件。']
     (S / 'references/visual-library-coverage.md').write_text('\n'.join(lines)+'\n', encoding='utf8')

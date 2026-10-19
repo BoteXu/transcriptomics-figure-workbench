@@ -32,7 +32,7 @@ def _page(count, columns, rows, width, panel_height, title):
     # pages; percentage-only margins otherwise grow with every requested row.
     slots=facet_slots(fig,count,nr,nc,left=.11,right=.95,
                       bottom=min(.7,.10*height)/height,
-                      top=1-min(1.8,.17*height)/height,wspace=.42,hspace=.48)
+                      top=1-min(1.8,.17*height)/height,wspace=.62,hspace=.48)
     fig.suptitle(title,fontsize=13,weight='normal',y=.98)
     fig._responsive_facets=dict(rows=nr,columns=nc,panels=count)
     return fig,slots
@@ -124,16 +124,54 @@ def composite_volume(grid,axes,knots,colors,opacity,view,unit_distance):
     return rgb+transmittance[...,None]  # White background; no max-intensity projection.
 
 
+def composite_camera_volume(grid,axes,knots,colors,opacity,view,unit_distance,resolution=160,steps=96):
+    """Bounded orthographic ray casting through the actual scalar voxel field.
+
+    Trilinear sampling is a declared image-rendering operation. It never writes
+    resampled scientific values, extracts an isosurface or fits a spatial model.
+    """
+    import itertools
+    if len(view)!=2 or not np.isfinite(view).all() or not np.isfinite(unit_distance) or unit_distance<=0:raise ValueError('Finite camera and positive opacity reference distance required')
+    if type(resolution) is not int or not 32<=resolution<=256 or type(steps) is not int or not 24<=steps<=256:raise ValueError('Select bounded camera resolution/steps')
+    elevation,azimuth=np.radians(view);direction=np.array([np.cos(elevation)*np.cos(azimuth),np.cos(elevation)*np.sin(azimuth),np.sin(elevation)])
+    horizontal=np.array([-np.sin(azimuth),np.cos(azimuth),0.]);vertical=np.cross(direction,horizontal)
+    center=np.array([(v[0]+v[-1])/2 for v in axes]);corners=np.array(list(itertools.product(*[(v[0],v[-1]) for v in axes])))
+    projected=(corners-center)@np.stack([horizontal,vertical,direction],axis=1);lo=projected.min(axis=0);hi=projected.max(axis=0)
+    x=np.linspace(lo[0],hi[0],resolution);y=np.linspace(lo[1],hi[1],resolution);xx,yy=np.meshgrid(x,y)
+    plane=center+xx[...,None]*horizontal+yy[...,None]*vertical
+    rgb=np.zeros((resolution,resolution,3));transmittance=np.ones((resolution,resolution));spacing=np.array([v[1]-v[0] for v in axes]);origin=np.array([v[0] for v in axes]);shape=np.array(grid.shape);distance=(hi[2]-lo[2])/(steps-1)
+    for depth in np.linspace(hi[2],lo[2],steps):
+        coordinates=plane+depth*direction;index=(coordinates-origin)/spacing;inside=((index>=0)&(index<=shape-1)).all(axis=-1)
+        base=np.floor(np.clip(index,0,shape-1)).astype(int);base=np.minimum(base,shape-2);fraction=np.clip(index-base,0,1);value=np.zeros((resolution,resolution))
+        for a,b,c in itertools.product((0,1),repeat=3):
+            weight=(fraction[...,0] if a else 1-fraction[...,0])*(fraction[...,1] if b else 1-fraction[...,1])*(fraction[...,2] if c else 1-fraction[...,2])
+            value+=weight*grid[base[...,0]+a,base[...,1]+b,base[...,2]+c]
+        alpha=np.where(inside,1-(1-np.interp(value,knots,opacity))**(distance/unit_distance),0)
+        colour=np.stack([np.interp(value,knots,colors[:,i]) for i in range(3)],axis=-1);rgb+=(transmittance*alpha)[...,None]*colour;transmittance*=1-alpha
+    return rgb+transmittance[...,None],(lo[0],hi[0],lo[1],hi[1]),corners,projected[:,:2],horizontal,vertical
+
+
 def plot_volume_rendering(data,theme,*,coordinate_unit,value_label,value_limits,transfer,
                           opacity_unit_distance,volume_definition,views=('z+','x+','y+'),
                           slice_axes=(),columns='auto',rows=None,width=None,panel_height=3.6,
-                          title='Direct volume rendering · supplied voxel field'):
+                          title='Direct volume rendering · supplied voxel field',camera_views=(),camera_resolution=160,camera_steps=96):
     """True direct volume compositing, declared transfer function and optional slices."""
     _words(coordinate_unit,value_label,volume_definition)
     grid,axes,knots,colors,opacity=_volume(data,value_limits,transfer)
-    if not views or len(views)>6 or len(set(views))!=len(views):raise ValueError('Explicit unique volume views required')
+    if (not views and not camera_views) or len(views)>6 or len(set(views))!=len(views) or len(camera_views)>4:raise ValueError('Explicit bounded volume views required')
     if len(set(slice_axes))!=len(slice_axes) or set(slice_axes)-set('xyz'):raise ValueError('Choose unique x/y/z central slices')
-    fig,slots=_page(len(views)+len(slice_axes)+1,columns,rows,width,panel_height,title)
+    fig,slots=_page(len(camera_views)+len(views)+len(slice_axes)+1,columns,rows,width,panel_height,title)
+    for i,view in enumerate(camera_views):
+        ax=fig.add_subplot(slots[i]);image,extent,corners,projected,horizontal,vertical=composite_camera_volume(grid,axes,knots,colors,opacity,view,opacity_unit_distance,camera_resolution,camera_steps)
+        ax.imshow(image,origin='lower',extent=extent,interpolation='bilinear',aspect='equal')
+        for j,a in enumerate(corners):
+            for k,b in enumerate(corners[j+1:],j+1):
+                if np.count_nonzero(a!=b)==1:ax.plot(projected[[j,k],0],projected[[j,k],1],color='#B3C7CE',lw=.5,alpha=.65)
+        anchor=projected[0]
+        for dim,label in enumerate('XYZ'):
+            end=corners[0].copy();end[dim]=axes[dim][-1];point=(end-np.array([v[0] for v in axes]))@np.stack([horizontal,vertical],axis=1)+anchor
+            mid=(anchor+point)/2;ax.text(mid[0],mid[1],f'{label} · {axes[dim][-1]-axes[dim][0]:g} {coordinate_unit}',fontsize=7,color='#405E6D',ha='center',bbox=dict(fc='white',ec='none',alpha=.85,pad=.6))
+        ax.set_title(f'Volume · elevation {view[0]:g}° / azimuth {view[1]:g}°',fontsize=10);ax.axis('off');ax._explicit_guide_layout=True
     def plane(ax,image,axis,caption):
         remaining=[i for i in range(3) if i!=axis];a,b=remaining
         edges=[(v[0]-(v[1]-v[0])/2,v[-1]+(v[1]-v[0])/2) for v in axes]
@@ -141,22 +179,23 @@ def plot_volume_rendering(data,theme,*,coordinate_unit,value_label,value_limits,
         ax.set(xlabel=f'{"XYZ"[a]} ({coordinate_unit})',ylabel=f'{"XYZ"[b]} ({coordinate_unit})',title=caption)
         ax.spines[['top','right']].set_visible(False);ax._explicit_guide_layout=True
     for i,view in enumerate(views):
-        ax=fig.add_subplot(slots[i]);image=composite_volume(grid,axes,knots,colors,opacity,view,opacity_unit_distance)
+        ax=fig.add_subplot(slots[len(camera_views)+i]);image=composite_volume(grid,axes,knots,colors,opacity,view,opacity_unit_distance)
         plane(ax,image,'xyz'.index(view[0]),f'Volume · looking along {view}')
     cmap=LinearSegmentedColormap.from_list('declared_volume',list(zip((knots-knots[0])/(knots[-1]-knots[0]),colors)))
     for j,axis_name in enumerate(slice_axes):
         axis='xyz'.index(axis_name);mid=len(axes[axis])//2;values=np.take(grid,mid,axis=axis)
-        plane(fig.add_subplot(slots[len(views)+j]),cmap(Normalize(*value_limits)(values)),axis,f'Slice · {axis_name}={axes[axis][mid]:.3g} {coordinate_unit}')
+        plane(fig.add_subplot(slots[len(camera_views)+len(views)+j]),cmap(Normalize(*value_limits)(values)),axis,f'Slice · {axis_name}={axes[axis][mid]:.3g} {coordinate_unit}')
     ax=fig.add_subplot(slots[-1]);ax._explicit_guide_layout=True
     for lo,hi,c in zip(knots[:-1],knots[1:],colors[:-1]):ax.axvspan(lo,hi,color=c,alpha=.11,lw=0)
     ax.plot(knots,opacity,color='#456B80',lw=1.8,marker='o',ms=5)
     ax.set(xlabel=value_label,ylabel='Opacity per reference distance',ylim=(-.03,1.03),xlim=value_limits,title='Declared transfer function')
     ax.spines[['top','right']].set_visible(False);ax.grid(axis='y',color='#E6ECEF',lw=.5)
     ax.text(.02,.94,f'Reference distance: {opacity_unit_distance:g} {coordinate_unit}\nFront-to-back compositing · uniform voxels',transform=ax.transAxes,va='top',fontsize=8)
+    fig.text(.11,.16/fig.get_figheight(),'Grid '+ ' × '.join(map(str,grid.shape))+' · '+f'{grid.size:,} supplied voxels · physical spacing corrected opacity',fontsize=8,color='#526B78')
     return stamp(fig,data,'volume_rendering',coordinate_unit=coordinate_unit,value_label=value_label,value_limits=value_limits,
                  transfer=transfer,opacity_unit_distance=opacity_unit_distance,volume_definition=volume_definition,
                  views=views,slice_axes=slice_axes,columns=columns,rows=rows,width=width,panel_height=panel_height,title=title,
-                 voxel_shape=list(grid.shape),projection='orthographic direct volume compositing',inference='none')
+                 camera_views=camera_views,camera_resolution=camera_resolution,camera_steps=camera_steps,voxel_shape=list(grid.shape),projection='orthographic direct volume compositing; arbitrary supplied camera uses bounded trilinear ray sampling',inference='none')
 
 
 def _trajectory(data,frame_order):
@@ -210,6 +249,7 @@ def plot_molecular_trajectory(data,theme,*,frame_order,coordinate_unit,time_unit
     fig,slots=_page(len(selected),columns,rows,width,panel_height,title)
     for slot,frame in zip(slots,selected):draw(fig.add_subplot(slot,projection='3d'),frame_order.index(frame))
     fig.legend(handles=[Line2D([],[],marker='o',ls='',color=pal[e],label=e) for e in pd.unique(atoms.element)],loc='upper center',bbox_to_anchor=(.5,1-min(.6,.06*fig.get_figheight())/fig.get_figheight()),ncol=6,frameon=False,fontsize=9)
+    fig.text(.11,.16/fig.get_figheight(),f'{len(frame_order)} stored frames · {len(atoms)} atoms · {len(bonds)} explicit bonds · '+f'{times[0]:g}–{times[-1]:g} {time_unit} · no alignment or MD run',fontsize=8,color='#526B78')
     def write_animation(directory,figure_id,synthetic=False):
         from PIL import Image
         out=Path(directory);images=[];encoded=[]

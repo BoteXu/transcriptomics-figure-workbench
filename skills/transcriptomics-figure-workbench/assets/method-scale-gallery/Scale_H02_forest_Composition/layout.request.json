@@ -1,0 +1,26 @@
+{
+  "id": "Scale_H02_forest_Composition",
+  "title": "效应区间森林图 · same input, different complete layout",
+  "columns": 2,
+  "canvas_width_pt": 2124.0,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "heading_pt": 40,
+  "panel_label_gutter_pt": 20,
+  "packing": "masonry",
+  "packing_order": "input",
+  "panels": [
+    {
+      "id": "Scale_H02_forest_Large",
+      "label": "A  Large · complete selected source",
+      "svg": "../Scale_H02_forest_Large/Scale_H02_forest_Large.svg",
+      "table": "../Scale_H02_forest_Large/Scale_H02_forest_Large.tsv"
+    },
+    {
+      "id": "Scale_H02_forest_Custom",
+      "label": "B  Caller layout · same source",
+      "svg": "../Scale_H02_forest_Custom/Scale_H02_forest_Custom.svg",
+      "table": "../Scale_H02_forest_Custom/Scale_H02_forest_Custom.tsv"
+    }
+  ]
+}

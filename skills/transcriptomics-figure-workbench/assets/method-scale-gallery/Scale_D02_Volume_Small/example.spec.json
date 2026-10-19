@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "figure_id": "Scale_D02_Volume_Small",
+  "renderer": "figure_three_dimensional.plot_volume_rendering",
+  "input": {
+    "path": "Scale_D02_Volume_Small.tsv",
+    "sha256": "cdba469f25780638fb86504b2513627204acce178f80932fbde72ff5911bd438",
+    "numeric_columns": [
+      "x",
+      "y",
+      "z",
+      "value"
+    ],
+    "max_rows": 100000,
+    "max_bytes": 20971520
+  },
+  "parameters": {
+    "coordinate_unit": "mm",
+    "value_label": "Illustrative scalar (a.u.)",
+    "value_limits": [
+      0,
+      1.2
+    ],
+    "opacity_unit_distance": 0.35,
+    "transfer": [
+      {
+        "value": 0,
+        "color": "#FFFFFF",
+        "opacity": 0
+      },
+      {
+        "value": 0.15,
+        "color": "#D7EBEE",
+        "opacity": 0.015
+      },
+      {
+        "value": 0.35,
+        "color": "#71B7C7",
+        "opacity": 0.08
+      },
+      {
+        "value": 0.65,
+        "color": "#2691AA",
+        "opacity": 0.24
+      },
+      {
+        "value": 0.92,
+        "color": "#365BA1",
+        "opacity": 0.55
+      },
+      {
+        "value": 1.2,
+        "color": "#804B8D",
+        "opacity": 0.85
+      }
+    ],
+    "volume_definition": "Complete authored regular grid; not measured tissue or segmented anatomy",
+    "title": "Volume structure and declared opacity",
+    "camera_views": [
+      [
+        25,
+        -55
+      ]
+    ],
+    "views": [
+      "z+"
+    ],
+    "slice_axes": [
+      "y"
+    ]
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-three-dimensional",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "State A": 0,
+      "State B": 1,
+      "State C": 2
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#218C8D",
+      "positive": "#74798D",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#218C8D"
+      ],
+      "diverging": [
+        "#218C8D",
+        "#F7F7F7",
+        "#74798D"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Public authored drawing fixture; Authored analytic drawing field sampled before freezing; not measured anatomy or resampled private data",
+    "input_unit": "Explicit display records with declared physical or synthetic units",
+    "experimental_unit": "No real biological independent units; no scientific inference",
+    "contrast": "Declared illustrative comparison; preserve original values and complete selected scope",
+    "denominator": "Every row of the exact frozen selected input table",
+    "model": "No scientific model fitted",
+    "limits": "Software and visual demonstration, not biomedical evidence",
+    "filtering": "No filtering while drawing",
+    "uncertainty": "Only supplied uncertainty channels; no interval estimation",
+    "interpretation_limit": "Review new data, units, layout and intended display size separately",
+    "synthetic": true
+  },
+  "export": {
+    "raster_dpi": 300,
+    "readability_policy": "warn"
+  }
+}

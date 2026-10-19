@@ -249,6 +249,8 @@ def plot_mantel_matrix(data,*,labels,specimen_order,p_type,pearson_p_type,size=(
     l1=lg.legend(handles=[Line2D([],[],color=c,lw=2,label=t) for c,t in zip(colors,['<0.01','0.01–0.05','>=0.05'])],title=f'Mantel {p_type} p',frameon=False,loc='upper left',fontsize=8,title_fontsize=8); lg.add_artist(l1)
     lg.legend(handles=[Line2D([],[],color=INK,lw=w,label=t) for w,t in zip([.7,1.6,2.7],['<0.2','0.2–0.4','>=0.4'])],title='Absolute Mantel r',frameon=False,loc='lower left',fontsize=8,title_fontsize=8)
     _colorbar(fig,[.85,.20,.025,.22],cm,norm,'Pearson r')
+    fig.text(.08,.065,f'Square area = |Pearson r| · {pearson_p_type} p: * < 0.05, ** < 0.01, *** < 0.001',fontsize=8)
+    fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
     return _finish(fig,data,'mantel_matrix',labels=labels,specimen_order=specs,p_type=p_type,pearson_p_type=pearson_p_type,area='absolute Pearson r',tests='none; supplied statistics')
 
 def plot_parallel_trials(data,*,axis_order,axis_ranges,score_label,score_limits,size=(10,5)):
@@ -284,9 +286,10 @@ def plot_contribution_swarm(data,*,feature_order,contribution_label,limits,cmap_
     _types(data,['contribution']); d=_records(data,'contribution',['unit_id','feature','contribution','feature_value'],['contribution','feature_value']); _unique(d,['unit_id','feature'])
     if set(d.feature)!=set(feature_order) or ((d.feature_value<0)|(d.feature_value>1)).any(): raise ValueError('Invalid feature order or normalized feature values')
     if limits[0]>=limits[1] or ((d.contribution<limits[0])|(d.contribution>limits[1])).any(): raise ValueError('Limits clip contributions')
-    fig=_new(size); ax=_ax(fig,[.28,.12,.57,.77]); cm=reference_cmap(cmap_name,semantic='sequential')
+    height=max(3.5,1.5+len(feature_order)*.29);fig=_new((size[0],height));ax=_ax(fig,[.25,.8/height,.55,(height-1.5)/height]);cm=reference_cmap(cmap_name,semantic='sequential')
     _draw_swarm(ax,d,feature_order,cm,limits); ax.set_xlabel(contribution_label)
-    _colorbar(fig,[.90,.15,.018,.72],cm,Normalize(0,1),'Feature value (upstream scaled)')
+    _colorbar(fig,[.87,.5-.9/height,.018,1.8/height],cm,Normalize(0,1),'Feature value (upstream scaled)')
+    fig.text(.25,1-.35/height,f'{d.unit_id.nunique()} supplied units · {len(feature_order)} features · no model refit',fontsize=8)
     return _finish(fig,data,'contribution_swarm',feature_order=list(feature_order),limits=list(limits),cmap=cmap_name,color='supplied feature_value on [0,1]',x_label=contribution_label,packing='display offsets only')
 
 def plot_group_beeswarm(data,palette,*,group_order,value_label,summary_label,limits,size=(9,5)):
@@ -391,7 +394,7 @@ def plot_pca_reference(data,palette,*,group_order,axis_labels,limits,ellipse_lab
         sub=pts[pts.group==g]; c=centers.set_index('group').loc[g]; e=ell.set_index('group').loc[g]
         if spider:
             for p in sub.itertuples(): ax.plot([c.x,p.x],[c.y,p.y],color=palette[g],alpha=.14,lw=.5)
-        ax.scatter(sub.x,sub.y,s=24,color=palette[g],alpha=.80,marker=markers[i] if landscape else 'o',ec='white',lw=.4,label=g)
+        ax.scatter(sub.x,sub.y,s=24,color=palette[g],alpha=.80,marker=markers[i] if landscape else 'o',ec='white',lw=.4,label=f'{g} · n={len(sub)}')
         ax.add_patch(Ellipse((e.x,e.y),e.width,e.height,angle=e.angle,fc='none',ec=palette[g],lw=1.6))
         if spider: ax.scatter(c.x,c.y,s=170,color=palette[g],ec='white',lw=1.8,zorder=6)
         if landscape:
@@ -433,21 +436,26 @@ def plot_state_dashboard(data,palette,*,family_order,condition_order,mean_label,
         for i,c in enumerate(cols): ax.text(i,-1.0,c,rotation=45,ha='right',fontsize=7)
         _colorbar(fig,[left,.078,width,.012],cmap,norm,label,orientation='horizontal')
     _colorbar(fig,[.44,.078,.14,.012],effcm,TwoSlopeNorm(0,-effect_bound,effect_bound),'Supplied log2 OR',orientation='horizontal')
-    fig.text(.22,.084,'Dot area: supplied\n−log10(adjusted p)',fontsize=7)
+    if not numeric_guides:fig.text(.22,.105,'Dot area: supplied\n−log10(adjusted p)',fontsize=7)
     if numeric_guides:
-        guide=_ax(fig,[.23,.12,.16,.05]);maximum=max(float(effect.evidence.max()),1e-9);values=[maximum/4,maximum/2,maximum]
+        guide=_ax(fig,[.23,.065,.16,.04]);maximum=max(float(effect.evidence.max()),1e-9);values=[maximum/4,maximum/2,maximum]
+        guide.set_title('Dot area: supplied\n−log10(adjusted p)',fontsize=7,pad=5)
         guide.scatter([0,1,2],[.5]*3,s=np.array(values)*3,color='#718A9C')
         guide.set(xlim=(-.5,2.5),ylim=(0,1),xticks=[0,1,2],xticklabels=[f'{v:.2g}' for v in values],yticks=[])
         guide.tick_params(length=0,labelsize=7);guide.spines[:].set_visible(False)
     return _finish(fig,data,'state_dashboard',family_order=list(family_order),condition_order=list(condition_order),palette=palette,mean_label=mean_label,program_label=program_label,numeric_guides=numeric_guides,area='3 times supplied negative log adjusted p',shared_state_order=states)
 
-def plot_multiclass_contributions(data,palette,*,class_order,feature_orders,limits,size=(12,9),numeric_guides=False):
+def plot_multiclass_contributions(data,palette,*,class_order,feature_orders,limits,size=(12,9),numeric_guides=False,presentation='reading',columns='auto',rows=None):
     _types(data,['contribution','share'])
     d=_records(data,'contribution',['unit_id','class','feature','contribution','feature_value'],['contribution','feature_value']); shares=_records(data,'share',['class','feature','value'],['value'])
     _unique(d,['unit_id','class','feature']); _unique(shares,['class','feature']); palette_check(shares.feature,palette)
     if len(class_order)>5 or set(d['class'])!=set(class_order) or set(shares['class'])!=set(class_order) or ((d.feature_value<0)|(d.feature_value>1)).any() or (shares.value<0).any(): raise ValueError('Invalid multiclass data')
     if limits[0]>=limits[1] or ((d.contribution<limits[0])|(d.contribution>limits[1])).any(): raise ValueError('Clipped contributions')
     if not np.allclose(shares.groupby('class').value.sum(),1,atol=1e-6): raise ValueError('Shares must sum to 1 for each class')
+    if presentation not in ('reading','classic'):raise ValueError('Use reading or classic contribution layout')
+    if presentation=='reading':
+        from figure_reading_layouts import multiclass_page
+        return multiclass_page(data,d,shares,palette,class_order,feature_orders,limits,columns,rows,size)
     fig=_new(size); cm=reference_cmap('shap_reference_rainbow',semantic='sequential')
     rose_limit=max(1.1,1.75*np.sqrt(float(shares.value.max()))*1.12)
     for k,cl in enumerate(class_order):
@@ -477,7 +485,7 @@ def plot_multiclass_contributions(data,palette,*,class_order,feature_orders,limi
     return _finish(fig,data,'multiclass_contributions',palette=palette,class_order=list(class_order),feature_orders=feature_orders,limits=list(limits),numeric_guides=numeric_guides,rose='equal angular sectors; area proportional to supplied share',rings='outer to inner follows explicit class_order; angle supplied share',shares='provided upstream; not derived from points')
 
 def plot_embedding_atlas(data,palette,stack_palette,*,atlas_order,main_order,marker_label,
-                         count_label,fraction_label,radial_count_max,size=(10,15),numeric_guides=False):
+                         count_label,fraction_label,radial_count_max,size=(10,15),numeric_guides=False,presentation='reading'):
     """R04 all three subfigures. Supplied tree segments are drawn, not clustered."""
     _types(data,['point','count','leaf','tree','marker'])
     pts=_records(data,'point',['unit_id','layer','group','x','y'],['x','y']); counts=_records(data,'count',['layer','group','segment','value'],['value'])
@@ -506,7 +514,13 @@ def plot_embedding_atlas(data,palette,stack_palette,*,atlas_order,main_order,mar
             height=.50*sub.value.iloc[0]/radial_count_max
             if height>0: ring.add_patch(Wedge((0,0),start+height,a-360/len(atlas_order)*.38,a+360/len(atlas_order)*.38,width=height,fc=stack_palette[s],ec='white',lw=.2))
             start+=height
-        t=np.deg2rad(a); ring.text(.95*np.cos(t),.95*np.sin(t),str(i+1),ha='center',va='center',fontsize=5,color=palette[g],weight='bold')
+        t=np.deg2rad(a)
+        # Two explicit radial label lanes keep adjacent two-digit identities
+        # legible in a dense atlas, including the 70/1 seam. Category angles,
+        # supplied counts and point coordinates are unchanged.
+        radius=(.96 if i%2==0 else .87) if presentation=='reading' and len(atlas_order)>48 else .95
+        if radius<.9:ring.plot(np.cos(t)*np.array([radius+.025,1.005]),np.sin(t)*np.array([radius+.025,1.005]),color=palette[g],lw=.45,alpha=.65)
+        ring.text(radius*np.cos(t),radius*np.sin(t),str(i+1),ha='center',va='center',fontsize=5,color=palette[g],weight='bold',bbox=dict(fc='white',ec='none',alpha=.8,pad=.05) if radius<.9 else None)
     ring.set(xlim=(-1.60,1.60),ylim=(-1.60,1.60)); ring.set_title('A  Embedding with aligned radial counts',loc='left',fontsize=10)
     lg=_ax(fig,[.55,.65,.43,.26]); lg.axis('off'); rows=math.ceil(len(atlas_order)/3)
     for i,g in enumerate(atlas_order):
@@ -535,7 +549,25 @@ def plot_embedding_atlas(data,palette,stack_palette,*,atlas_order,main_order,mar
     dot.set_xticks(range(n),order,rotation=90,fontsize=5.5); dot.set_yticks(range(len(mrows)),mrows,fontsize=6); dot.set(xlim=(-.5,n-.5),ylim=(len(mrows)-.5,-.5))
     _colorbar(fig,[.89,.16,.012,.10],cm,norm,marker_label)
     fig.legend(handles=[Line2D([],[],ls='',marker='o',color='#AD3D3D',ms=np.sqrt(f*45),label=f'{f:.0%}') for f in [.25,.5,1]],title=fraction_label,loc='lower right',bbox_to_anchor=(.98,.083),frameon=False,fontsize=6,title_fontsize=6)
-    return _finish(fig,data,'embedding_atlas',palette=palette,stack_palette=stack_palette,atlas_order=list(atlas_order),main_order=order,radial_count_max=radial_count_max,numeric_guides=numeric_guides,uniform_display_scale=float(display_scale),display_translation=center.tolist(),tree='supplied exact segments, no clustering',marker_area='supplied fraction',marker_label=marker_label,fraction_label=fraction_label,count_label=count_label)
+    if presentation not in ('classic','reading'):raise ValueError('Use reading or classic atlas')
+    if presentation=='reading':
+        # Each scientific component owns a measured lane. This preserves all
+        # 70-category keys without letting the stack legend cross the caption.
+        height=max(12.8,10+math.ceil(len(atlas_order)/3)*.18)
+        fig.set_size_inches(12,height);ring.set_position([.035,.59,.46,.33]);lg.set_position([.54,.62,.43,.29]);main.set_position([.055,.365,.50,.17]);dend.set_position([.15,.285,.66,.055]);bar.set_position([.15,.21,.66,.065]);dot.set_position([.15,.075,.66,.12])
+        for artist in lg.texts:artist.set_fontsize(8)
+        legend=main.get_legend()
+        if legend:legend.remove()
+        fig.legend(*main.get_legend_handles_labels(),loc='upper left',bbox_to_anchor=(.61,.55),frameon=False,ncols=2,fontsize=8,markerscale=3)
+        for t in fig.texts:
+            if t.get_text().startswith('Radial length'):t.set_position((.54,.60))
+            if t.get_text().startswith('Radial reference'):t.set_position((.54,.58))
+        for legend in fig.legends:
+            labels=[t.get_text() for t in legend.get_texts()]
+            if labels==segs:legend.set_bbox_to_anchor((.04,.585),transform=fig.transFigure)
+        for axis in fig.axes:axis._explicit_guide_layout=True
+        fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
+    return _finish(fig,data,'embedding_atlas',palette=palette,stack_palette=stack_palette,atlas_order=list(atlas_order),main_order=order,radial_count_max=radial_count_max,numeric_guides=numeric_guides,presentation=presentation,uniform_display_scale=float(display_scale),display_translation=center.tolist(),tree='supplied exact segments, no clustering',marker_area='supplied fraction',marker_label=marker_label,fraction_label=fraction_label,count_label=count_label)
 
 def plot_training_dashboard(data,palette,*,selected_epoch,selection_label,loss_label,heat_label,
                             gradient_label,size=(10,6),presentation='classic'):
@@ -573,7 +605,7 @@ def plot_training_dashboard(data,palette,*,selected_epoch,selection_label,loss_l
 
 def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,bar_label,line_label,size=(10,7),
                             row_aliases=None,column_aliases=None,row_label_wrap=18,column_label_wrap=13,
-                            row_label_mode='all',column_label_rotation=45,row_strip_left=.04):
+                            row_label_mode='all',column_label_rotation=45,row_strip_left=.04,presentation='reading'):
     _types(data,['matrix','row','top','density'])
     matrix=_records(data,'matrix',['row','column','value'],['value']); rows=_records(data,'row',['row','group']); top=_records(data,'top',['column','bar','line'],['bar','line']); density=_records(data,'density',['group','coordinate','value'],['coordinate','value'])
     _unique(rows,['row']); _unique(top,['column']); _unique(density,['group','coordinate']); palette_check(rows.group,palette)
@@ -603,13 +635,24 @@ def plot_activity_dashboard(data,palette,*,row_order,column_order,value_label,ba
     bind_index_axes(fig,ax,twin,'x',column_order)
     _colorbar(fig,[.75,.25,.015,.42],cm,im.norm,value_label)
     cats=list(dict.fromkeys(groups))
+    density_max=float(density.value.max())
     for i,g in enumerate(cats):
-        dy=.61/len(cats); dax=_ax(fig,[.82,.16+(len(cats)-1-i)*dy,.16,dy*.85]); sub=density[density.group==g].sort_values('coordinate'); dax.fill_between(sub.coordinate,0,sub.value,color=palette[g],alpha=.35); dax.plot(sub.coordinate,sub.value,color=palette[g],lw=1.2); dax.set_yticks([]); dax.set_title(g,loc='left',fontsize=7,pad=1)
+        dy=.61/len(cats); dax=_ax(fig,[.82,.16+(len(cats)-1-i)*dy,.16,dy*.85]); sub=density[density.group==g].sort_values('coordinate'); dax.fill_between(sub.coordinate,0,sub.value,color=palette[g],alpha=.35); dax.plot(sub.coordinate,sub.value,color=palette[g],lw=1.2); dax.set_ylim(0,max(density_max*1.06,1e-9));dax.set_yticks([0,density_max] if density_max>0 else [0]);dax.tick_params(axis='y',labelsize=6,pad=2); dax.set_title(g,loc='left',fontsize=7,pad=1)
+        if i==0:dax.set_ylabel('Supplied density',fontsize=7)
         if i<len(cats)-1: dax.set_xticks([])
         else: dax.set_xlabel('Supplied density\ncoordinate',fontsize=7)
     # These lanes explicitly own aligned strips, the dual-axis summary and
     # density guides. Generic pairwise expansion mistakes the intentional twins
     # for colliding panels and inflates dense reading pages without improving ink.
+    if presentation not in ('reading','classic'):raise ValueError('Use reading or classic activity layout')
+    if presentation=='reading':
+        height=fig.get_figheight();bottom=1.05/height;mainheight=(height-3.15)/height
+        ax.set_position([.11,bottom,.59,mainheight]);strip.set_position([row_strip_left,bottom,.022,mainheight]);tops.set_position([.11,1-1.8/height,.59,.95/height]);twin.set_position(tops.get_position())
+        coloraxis=next(a for a in fig.axes if hasattr(a,'_colorbar'));coloraxis.set_position([.75,bottom+mainheight/2-1.2/height,.012,2.4/height])
+        density_axes=[a for a in fig.axes if a not in [ax,strip,tops,twin,coloraxis]]
+        for i,dax in enumerate(density_axes):
+            dy=mainheight/len(density_axes);dax.set_position([.83,bottom+(len(density_axes)-1-i)*dy,.15,min(2.2/height,dy*.85)])
+        fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
     for guide in fig.axes:guide._explicit_guide_layout=True
     return _finish(fig,data,'activity_dashboard',palette=palette,row_order=list(row_order),column_order=list(column_order),row_aliases=dict(zip(row_order,rlabels)),column_aliases=dict(zip(column_order,clabels)),row_label_mode=row_label_mode,column_label_rotation=column_label_rotation,row_strip_left=row_strip_left,value_label=value_label,bar_label=bar_label,line_label=line_label,density='supplied, no KDE',top_scales='separate labelled axes')
 
@@ -628,13 +671,15 @@ def plot_effect_distribution_forest(data,*,row_order,panel_order,panel_labels,li
         for i,r in enumerate(row_order):
             if i%2: ax.axhspan(i-.5,i+.5,color='#EFEFEF',zorder=0)
             sub=effects[(effects.panel==p)&(effects.row==r)]; offset=_pack(sub.value,spacing=(limits[1]-limits[0])/100,max_width=.2)
-            ax.scatter(sub.value,i+offset,s=3,c=sub.value,cmap=cm,norm=norm,alpha=.45,lw=0)
+            ax.scatter(sub.value,i+offset,s=7,c=sub.value,cmap=cm,norm=norm,alpha=.75,lw=0)
             s=sums[(sums.panel==p)&(sums.row==r)].iloc[0]
             ax.plot([s.lower,s.upper],[i,i],color='#767E83',lw=1.1,zorder=3)
             ax.scatter(s.value,i,s=55,marker='D',fc=cm(norm(s.value)) if s.p<.05 else 'white',ec=INK,lw=.8,zorder=4)
             star='***' if s.p<.001 else '**' if s.p<.01 else '*' if s.p<.05 else ''
             ax.text(limits[1]-.18,i,star,ha='right',va='center',fontsize=7)
         ax.axvline(0,ls='--',color='#8A949B',lw=.8); ax.set(xlim=limits,ylim=(n-.5,-.5),xlabel=panel_labels[p],title=str(p)); ax.set_yticks(range(n),[f'{r}  {sums[(sums.panel==p)&(sums.row==r)].count_text.iloc[0]}' for r in row_order] if k==0 else [],fontsize=7)
+        from matplotlib.ticker import MaxNLocator
+        ax.xaxis.set_major_locator(MaxNLocator(5));ax.tick_params(axis='x',labelsize=8)
     fig.text(.22,.02,interval_label+'; '+count_label,fontsize=8)
     if numeric_guides:
         fig.text(.22,.945,f'Supplied {p_type} p: * < 0.05, ** < 0.01, *** < 0.001; filled diamond < 0.05',fontsize=7,color='#54636E')
@@ -647,6 +692,10 @@ def plot_facet_bubble_matrix(data,*,row_facets,column_facets,feature_order,windo
     if set(d.row_facet)!=set(row_facets) or set(d.column_facet)!=set(column_facets) or set(d.feature)!=set(feature_order) or set(d.window)!=set(window_order): raise ValueError('Facet category mismatch')
     expected=len(row_facets)*len(column_facets)*len(feature_order)*len(window_order)
     if len(d)!=expected: raise ValueError('Incomplete facet matrix')
+    if tuple(size)==(10,8):
+        # Sparse facets need compact rows, dense facets need more physical ink
+        # space. Explicit caller sizes still take precedence.
+        size=(max(10,2.2*len(column_facets)+2.8),max(3.8,1.3+len(row_facets)*(.30*len(feature_order)+.7)))
     fig=_new(size); cm=reference_cmap('partial_blue_red'); norm=Normalize(-.5,.5)
     # Use the full [-1,1] domain if the supplied values exceed the reference's range.
     domain=max(.5,float(d.r.abs().max())); norm=Normalize(-domain,domain)
@@ -661,6 +710,8 @@ def plot_facet_bubble_matrix(data,*,row_facets,column_facets,feature_order,windo
     fig.text(.39,.065,'Supplied window / condition',ha='center',fontsize=9)
     lg=_ax(fig,[.85,.61,.14,.22]); lg.axis('off'); lg.legend(handles=[Line2D([],[],ls='',marker='o',ms=np.sqrt(v*520),mfc='white',mec='#555F66',label=f'{v:g}') for v in [.1,.3,.5]],title='Absolute r (area)',frameon=False,fontsize=8,title_fontsize=8)
     _colorbar(fig,[.87,.26,.018,.26],cm,norm,value_label)
+    fig._responsive_canvas_aspect=fig.get_figwidth()/fig.get_figheight()
+    for guide in fig.axes:guide._explicit_guide_layout=True
     return _finish(fig,data,'facet_bubble_matrix',row_facets=list(row_facets),column_facets=list(column_facets),feature_order=list(feature_order),window_order=list(window_order),color_limits=[-domain,domain],value_label=value_label,area='abs supplied r times 520')
 
 def plot_strip_effects(data,palette,*,panel_order,contrast_order,up_color='#FF6A3D',down_color='#7CCD14',

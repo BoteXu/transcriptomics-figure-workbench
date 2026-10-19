@@ -1,0 +1,26 @@
+{
+  "id": "Scale_D02_Volume_Composition",
+  "title": "体渲染与给定传递函数 · same input, different complete layout",
+  "columns": 1,
+  "canvas_width_pt": 876.0,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "heading_pt": 40,
+  "panel_label_gutter_pt": 20,
+  "packing": "masonry",
+  "packing_order": "input",
+  "panels": [
+    {
+      "id": "Scale_D02_Volume_Large",
+      "label": "A  Large · complete selected source",
+      "svg": "../Scale_D02_Volume_Large/Scale_D02_Volume_Large.svg",
+      "table": "../Scale_D02_Volume_Large/Scale_D02_Volume_Large.tsv"
+    },
+    {
+      "id": "Scale_D02_Volume_Custom",
+      "label": "B  Caller layout · same source",
+      "svg": "../Scale_D02_Volume_Custom/Scale_D02_Volume_Custom.svg",
+      "table": "../Scale_D02_Volume_Custom/Scale_D02_Volume_Custom.tsv"
+    }
+  ]
+}

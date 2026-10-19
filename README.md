@@ -4,19 +4,23 @@
 
 [打开完整绘图库](skills/transcriptomics-figure-workbench/assets/visual-library/index.html) · [方法覆盖与真实状态](skills/transcriptomics-figure-workbench/references/visual-library-coverage.md) · [跨领域选图规则](skills/transcriptomics-figure-workbench/references/comprehensive-selection.md)
 
-- **恢复完整范围：** 主目录覆盖20份图库；原有90个基础画法、458个历史示例及原始入口全部保留。雷达、三维曲面、环形网络、结构、质谱、基因组轨道和模型评估保持可选，新增三维散点、体渲染和分子轨迹动画。
+- **恢复完整范围：** 主目录覆盖21份图库；原有90个基础画法、458个历史示例及原始入口全部保留。雷达、三维曲面、环形网络、结构、质谱、基因组轨道和模型评估保持可选，新增三维散点、体渲染和分子轨迹动画。
 - **按画法去重，扩展仍可选：** 原基础画法、3种新增方法与专用配套归入86个父族，箱线／小提琴／云雨、矩阵注释／相关／状态等在同一父族内具名选择。不同数据、配色和布局不重复占据主菜单；分析、量尺、分母和准确文件分别保留。
-- **覆盖可以核对：** 2022条来源记录指向1472个保留示例条目，其中1014个当前示例、458个历史条目；它们不是独立方法数。136个登记绘图入口中135个有当前可调用 FigureSpec，1个是单面板委托封装。42个原历史配方已全部升级；示例数量不等于算法数量。
+- **覆盖可以核对：** 2247条来源记录指向1697个保留示例条目，其中1239个当前示例、458个历史条目；它们不是独立方法数。136个登记绘图入口中135个有当前可调用 FigureSpec，1个是单面板委托封装。42个原历史配方已全部升级；示例数量不等于算法数量。
 - **综合检索与真实模板：** `visual-library --search 雷达` 跨领域查找；`visual-template --entry radar --output <fresh-directory>` 导出当前可运行配置与原始冻结表。历史参考明确区分，不伪装成可执行 FigureSpec。原有命令及目录名称继续兼容。
 
-本轮新增 [42个历史配方与三维／动画实际示例](skills/transcriptomics-figure-workbench/assets/method-upgrade-gallery/index.html)及[输入、调用、布局和验收说明](skills/transcriptomics-figure-workbench/references/historical-and-3d-methods.md)。93份当前单图和45份完整单图组装页均有实际导出、逐张屏幕检查记录和最终图片哈希。旧图及其原检查范围保留；作者自检不等于独立审美评审或纸面校样。
+当前增加 [45种方法的小／中／大数据及自定义布局实测](skills/transcriptomics-figure-workbench/assets/method-scale-gallery/index.html)：135份不同冻结输入、45份同一大输入的自定义布局，共180份单图及45份完整SVG组装页；[逐项数据量、改进和检查范围](skills/transcriptomics-figure-workbench/references/method-scale-validation.md)均可核对。上一轮[93份单图和45份组装页](skills/transcriptomics-figure-workbench/assets/method-upgrade-gallery/index.html)原字节保留。每份最终PNG有逐张屏幕检查记录和图片哈希；作者自检不等于独立审美评审或纸面校样。
+
+- **改的是实际画法：** 森林图按行对齐区间与数值；长类别点区间和数值条自动横向；双通道矩阵分离注释带与标签；富集曲线补齐命中数、完整rank轨道及对比色；PCA优先给定轮廓和边缘分布；密集模型组图拆出完整阅读布局。
+- **实际改变布局：** 支持不同物理宽度，跨视图由横向改为单列，流程和多类别贡献图改变列数，三维图改变相机／投影／切片／关键帧数量；每种均保留同一完整输入作对照。大型长页按原尺寸阅读，不压成期刊单栏后仍声称可读。
+- **直接调用实测模板：** `visual-template --entry Scale_H02_forest_Large --output <fresh-directory>`；三维使用 `Scale_D01_Scatter3D_Custom`、`Scale_D02_Volume_Custom`、`Scale_D03_Trajectory_Custom`。旧短编号继续兼容。
 
 ### 当前可调用的历史配方与三维方法
 
 - **42个配方：** 每种都有当前 FigureSpec、原字节冻结 TSV、默认／自定义布局、PNG／SVG／PDF，以及完整双图组装示例。可直接使用 `visual-template --entry H02_forest --output <fresh-directory>`；原历史编号继续指向原归档。
 - **三维散点：** 多个明确相机视角与完整 XY／XZ／YZ 投影；支持显式列数、行数、宽度和面板高度。所有点和原始坐标保留。
-- **体渲染：** 对完整规则物理体素执行前向透明度合成，支持六个轴向观察方向、透明度传递曲线和中央物理切片；提供24³与12³体素实例。不是最大强度投影或任意相机交互体绘制。
-- **分子轨迹：** 对已给定的原子坐标、明确键和物理时间生成关键帧、真实 GIF、完全离线的逐帧播放页及帧时间记录。24帧／6帧实例与不同相机、行列布局可直接查看；不运行分子动力学、不猜测键、不自行做对齐或周期边界处理。
+- **体渲染：** 对完整规则物理体素执行前向透明度合成，支持有限预算的正交三维相机、六个轴向观察方向、透明度传递曲线和中央物理切片；8³／16³／24³同一物理范围实例可比较。三线性采样仅用于绘图，不改变源体素；不声称已集成VTK或交互飞行浏览。
+- **分子轨迹：** 对已给定的原子坐标、明确键和物理时间生成关键帧、真实 GIF、完全离线的逐帧播放页及帧时间记录。6／12／24帧及不同相机、行列布局可直接查看；不运行分子动力学、不猜测键、不自行做对齐或周期边界处理。
 
 当前示例可离线浏览，历史版本的完整归档下载沿用既有公开链接。结构固定参考、绘图代码、原生软件包运行和真实科学分析分别记录；新数据、新布局和投稿尺寸须重新看图。
 

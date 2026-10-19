@@ -4,7 +4,7 @@
 
 ## 本轮实际交付与边界
 
-42 个原来只有历史配方的入口各提供两份当前单图：默认画法和完整输入的自定义布局。另新增三维散点、体渲染、分子轨迹，每种有默认、自定义和较小数据示例。共 **93 份当前单图、45 份完整单图组装页**；138 是示例与布局数量，不能称为138种科学方法。
+上一轮42个迁移入口与三种新增方法的 **93 份单图、45 份完整组装页**保持原文件。本轮另提供[45种方法的实际数据量与布局检查](method-scale-validation.md)：**135份不同冻结输入、180张单图、45张完整布局对照页**，逐张检查并绑定最终图片哈希。`Scale_H01_...` 到 `Scale_H42_...` 及 `Scale_D01_...` 到 `Scale_D03_...` 是新模板编号；相同方法的档位／布局没有重复计为新方法。
 
 所有示例均为明确标记的公开软件绘图测试数据。历史输入逐字节保留，三维新数据是作者构造的坐标／规则网格／帧序列。没有组学推断、模型训练、拓扑推测、分子动力学、体分割或真实生物学效应验证。绘图实现、数值编码检查、作者逐图屏幕自检、独立审美评审和真实科学验收分别记录。
 
@@ -22,6 +22,9 @@ python workbench.py render --plan example-forest/plan.json --output example-fore
 python workbench.py visual-template --entry D01_Scatter3D --output example-3d
 python workbench.py visual-template --entry D02_Volume_Custom --output example-volume
 python workbench.py visual-template --entry D03_Trajectory --output example-frames
+
+python workbench.py visual-template --entry Scale_H02_forest_Medium --output example-scale-forest
+python workbench.py visual-template --entry Scale_D02_Volume_Custom --output example-camera-volume
 ```
 
 `visual-template` 复制真实模板与输入，不执行推断。新数据须更新输入哈希、单位、来源、参数和图号，再生成新计划、渲染、逐张检查。默认与 `_Custom` 使用相同冻结输入；`_Small` 是明确独立的数据量示例。命令、文件及图片存在不自动授予科学或美观验收。
@@ -39,18 +42,18 @@ python workbench.py visual-template --entry D03_Trajectory --output example-fram
 |入口|准确输入|实际实现与可调项|
 |---|---|---|
 |`figure_three_dimensional.plot_scatter3d`|`object_id, group, x, y, z`；唯一对象、有限数值、明确轴标签和坐标单位|1–8个明确仰角／方位角、正交投影、正交三维相机、完整对象与组计数、按物理范围设置箱体比例|
-|`figure_three_dimensional.plot_volume_rendering`|`x, y, z, value`；完整均匀规则体素，明确单位、值域、透明度参考距离和传递结点|六个轴向射线方向，前向透明度合成，按物理步长修正透明度；中央物理切片与传递曲线。缺失体素拒绝，不补零；不是 MIP，不支持任意相机交互体绘制|
+|`figure_three_dimensional.plot_volume_rendering`|`x, y, z, value`；完整均匀规则体素，明确单位、值域、透明度参考距离和传递结点|六个轴向方向及1–4个给定正交相机；有限预算的前向射线合成，物理步长修正透明度，三线性图像采样；中央切片与传递曲线。缺失体素拒绝，不补零；不是MIP、分割或交互三维网格|
 |`figure_three_dimensional.plot_molecular_trajectory`|atom行：`frame_id,time,atom_id,element,chain,x,y,z`；bond行：`source_id,target_id`；2–240帧，元素C/N/O/S/H/P，严格递增时间|固定相机／全帧范围、选定关键帧、真实GIF、离线滑块和播放按钮。1–30 fps是展示速度；物理时间来自原表。键必须明确，所有帧原子身份一致，不拟合／对齐／重成像|
 
 轨迹例子是虚构链，不冒充已识别蛋白。真实结构继续使用已有结构查看器核对链、残基、单位、拓扑和上游处理。所有大型计算保持已有服务器流程。
 
 ## 保留与改进的明确选项
 
-经典调用默认保留。当前迁移示例按审阅选择：森林图 `presentation='table'`；径向层级／状态／多分类贡献／嵌入图谱／效应分布森林 `numeric_guides=True`；对齐跨组学视图 `guide_clearance_pt=28`；等高线 `label_contrast='clear'`；训练诊断 `presentation='balanced'`；活动矩阵90度列名、独立模块条带通道。位点边界点保持完整符号。原值、分母、坐标和统计量不变。
+经典调用默认保留。当前迁移与数据量示例按审阅选择：森林图 `presentation='table'`；状态及径向图 `numeric_guides=True`；多分类贡献／嵌入图谱／活动矩阵 `presentation='reading'`，同时保留 `classic`；跨组学视图的实际对象连线支持行列变化；等高线对比描边并保留边缘数字；训练诊断 `presentation='balanced'`；活动矩阵90度列名、完整行标签、独立模块条带和密度数值尺度。位点边界符号和给定参考始终保留。原值、分母、坐标和统计量不变。
 
 ## 参考及采用范围
 
-代码为本项目独立实现，未复制第三方脚本或再分发模型／权重。采用 [Matplotlib 三维轴文档](https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html)中明确相机和轴控制方式；依据 [Matplotlib 动画文档](https://matplotlib.org/stable/users/explain/animations/animations.html)把静态关键帧与动画导出分别验证。体值的颜色和透明度分别声明，参考 [Kitware 的体绘制说明](https://www.kitware.com/new-in-paraview-5-9-volume-rendering-with-a-separate-opacity-array/)中的通道区分；本项目仅实现受限轴向合成，没有声称集成ParaView／VTK后端。
+代码为本项目独立实现，未复制第三方脚本或再分发模型／权重。采用 [Matplotlib 三维轴文档](https://matplotlib.org/stable/api/toolkits/mplot3d/axes3d.html)中明确相机和轴控制方式；依据 [Matplotlib 动画文档](https://matplotlib.org/stable/users/explain/animations/animations.html)把静态关键帧与动画导出分别验证。体值的颜色和透明度分别声明，参考 [Kitware 的体绘制说明](https://www.kitware.com/new-in-paraview-5-9-volume-rendering-with-a-separate-opacity-array/)中的通道区分；本项目实现有限轴向与给定正交相机合成，没有集成ParaView／VTK后端。
 
 ## 42 项保留映射
 

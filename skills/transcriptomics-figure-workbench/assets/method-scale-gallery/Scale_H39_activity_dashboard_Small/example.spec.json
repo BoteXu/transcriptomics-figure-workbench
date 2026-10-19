@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "figure_id": "Scale_H39_activity_dashboard_Small",
+  "renderer": "figure_reference.plot_activity_dashboard",
+  "input": {
+    "path": "Scale_H39_activity_dashboard_Small.tsv",
+    "sha256": "db2c03a44caed856b64649037e7e88de35afd7205b10c3d1fe6c274a5f9635e7",
+    "numeric_columns": [
+      "value",
+      "bar",
+      "line",
+      "coordinate"
+    ],
+    "max_rows": 100000,
+    "max_bytes": 20971520
+  },
+  "parameters": {
+    "palette": {
+      "Module 1": "#3B578F",
+      "Module 2": "#EF4831",
+      "Module 3": "#00A78D",
+      "Module 4": "#EDA019",
+      "Module 5": "#8257C4"
+    },
+    "row_order": [
+      "Row000",
+      "Row003",
+      "Row006",
+      "Row010",
+      "Row013",
+      "Row016",
+      "Row019",
+      "Row023",
+      "Row026",
+      "Row029",
+      "Row030",
+      "Row033",
+      "Row036",
+      "Row040",
+      "Row043",
+      "Row046",
+      "Row049",
+      "Row053",
+      "Row056",
+      "Row059",
+      "Row060",
+      "Row063",
+      "Row066",
+      "Row070",
+      "Row073",
+      "Row076",
+      "Row079",
+      "Row083",
+      "Row086",
+      "Row089",
+      "Row090",
+      "Row093",
+      "Row096",
+      "Row100",
+      "Row103",
+      "Row106",
+      "Row109",
+      "Row113",
+      "Row116",
+      "Row119",
+      "Row120",
+      "Row123",
+      "Row126",
+      "Row130",
+      "Row133",
+      "Row136",
+      "Row139",
+      "Row143",
+      "Row146",
+      "Row149"
+    ],
+    "column_order": [
+      "Column01",
+      "Column04",
+      "Column07",
+      "Column10",
+      "Column13",
+      "Column16",
+      "Column19",
+      "Column23",
+      "Column26",
+      "Column29",
+      "Column32",
+      "Column35",
+      "Column38",
+      "Column41",
+      "Column44"
+    ],
+    "value_label": "Supplied matrix value",
+    "bar_label": "Recorded bar",
+    "line_label": "Recorded line",
+    "size": [
+      12,
+      12.0
+    ],
+    "column_label_rotation": 90,
+    "row_strip_left": 0.015,
+    "column_aliases": {
+      "Column01": "C01",
+      "Column04": "C04",
+      "Column07": "C07",
+      "Column10": "C10",
+      "Column13": "C13",
+      "Column16": "C16",
+      "Column19": "C19",
+      "Column23": "C23",
+      "Column26": "C26",
+      "Column29": "C29",
+      "Column32": "C32",
+      "Column35": "C35",
+      "Column38": "C38",
+      "Column41": "C41",
+      "Column44": "C44"
+    }
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "aesthetic-library-preview",
+    "palette_name": "card_06",
+    "palette_colors": [
+      "#506AAA",
+      "#728DC1",
+      "#91BBDF",
+      "#B6DBF1",
+      "#F6D3D9",
+      "#E79FBF",
+      "#E17692"
+    ],
+    "group_slots": {
+      "G1": 0,
+      "G2": 1,
+      "G3": 2,
+      "G4": 3,
+      "G5": 4,
+      "G6": 5,
+      "G7": 6,
+      "All points": 0,
+      "Support": 1,
+      "Site": 6,
+      "Input": 2,
+      "Output": 0
+    },
+    "roles": {
+      "primary": "#506AAA",
+      "negative": "#506AAA",
+      "positive": "#E17692",
+      "accent": "#E17692",
+      "neutral": "#A8ADB3",
+      "significant": "#E17692",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#506AAA"
+      ],
+      "diverging": [
+        "#506AAA",
+        "#F7F7F7",
+        "#E17692"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true,
+    "category_colors": {
+      "Module 1": "#3B578F",
+      "Module 2": "#EF4831",
+      "Module 3": "#00A78D",
+      "Module 4": "#EDA019",
+      "Module 5": "#8257C4"
+    }
+  },
+  "provenance": {
+    "source": "Public authored drawing fixture; Complete selected frozen identities and supplied channels; no inference",
+    "input_unit": "Explicit display records with declared physical or synthetic units",
+    "experimental_unit": "No real biological independent units; no scientific inference",
+    "contrast": "Declared illustrative comparison; preserve original values and complete selected scope",
+    "denominator": "Every row of the exact frozen selected input table",
+    "model": "No scientific model fitted",
+    "limits": "Software and visual demonstration, not biomedical evidence",
+    "filtering": "No filtering while drawing",
+    "uncertainty": "Only supplied uncertainty channels; no interval estimation",
+    "interpretation_limit": "Review new data, units, layout and intended display size separately",
+    "synthetic": true
+  },
+  "export": {
+    "raster_dpi": 300,
+    "readability_policy": "warn"
+  },
+  "appearance": {
+    "preset": "compact"
+  }
+}

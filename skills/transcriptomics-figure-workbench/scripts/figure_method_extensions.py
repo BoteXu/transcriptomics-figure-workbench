@@ -67,8 +67,8 @@ def plot_enrichment_grid(data,theme,*,significance_limits,ratio_max,block_slots,
     blocks=list(pd.unique(d.block));bp=group_palette(theme,list(block_slots.values()))
     if set(blocks)!=set(block_slots):raise ValueError('Explicit block slots required')
     cellclasses=list(pd.unique(d.cell_class));cp=group_palette(theme,cellclasses)
-    height=max(5.2,len(term_order)*.27+1.7);fig=_new(theme,(11.6,height))
-    ax=_axis(fig,[.055,.15,.27,.68]);labelax=fig.add_axes([.345,.15,.385,.68]);strip=fig.add_axes([.055,.837,.27,.068]);guide=fig.add_axes([.78,.12,.19,.80]);guide.axis('off')
+    height=max(5.2,len(term_order)*.27+1.7);fig=_new(theme,(10.8,height))
+    ax=_axis(fig,[.055,.15,.27,.68]);labelax=fig.add_axes([.345,.15,.29,.68]);strip=fig.add_axes([.055,.837,.27,.068]);guide=fig.add_axes([.69,.12,.27,.80]);guide.axis('off')
     labels=d.drop_duplicates('term_id').set_index('term_id').loc[term_order];cols=d.drop_duplicates('column_id').set_index('column_id').loc[column_order]
     ax.set(xlim=(-.5,len(column_order)-.5),ylim=(len(term_order)-.5,-.5));ax.set_xticks(range(len(column_order)),cols.cell_class,rotation=0);ax.set_yticks([])
     ax.set_xticks(np.arange(len(column_order)+1)-.5,minor=True);ax.set_yticks(np.arange(len(term_order)+1)-.5,minor=True);ax.grid(which='minor',color='#E5E9ED',ls='--',lw=.55);ax.tick_params(which='minor',length=0)
@@ -96,9 +96,10 @@ def plot_enrichment_grid(data,theme,*,significance_limits,ratio_max,block_slots,
         strip.add_patch(Rectangle((min(positions)-.5,1),len(positions),1,fc=pal[g],ec='white',lw=.6));strip.text(np.mean(positions),1.5,g,ha='center',va='center',fontsize=8)
     shape_guide=guide.legend(handles=[Line2D([],[],marker=shapes[j],color=pal[g],ls='',markersize=10,label=g) for j,g in enumerate(groups)],title='Group shape',loc='upper left',frameon=False);guide.add_artist(shape_guide)
     for j,g in enumerate(groups):
-        cax=fig.add_axes([.80,.62-j*.155,.115,.018]);fig.colorbar(plt.cm.ScalarMappable(norm=norm,cmap=scales[g]),cax=cax,orientation='horizontal');cax.set_title(g+'  -log10(adjusted p)',fontsize=8,loc='left')
+        cax=fig.add_axes([.71,.62-j*.155,.15,.018]);fig.colorbar(plt.cm.ScalarMappable(norm=norm,cmap=scales[g]),cax=cax,orientation='horizontal');cax.set_title(g+'  -log10(adjusted p)',fontsize=8,loc='left')
     guide.legend(handles=[Line2D([],[],marker='o',ls='',mfc='#586672',mec='none',markersize=np.sqrt(95*r/ratio_max/shape_areas['o']),label=f'{r:g}') for r in [ratio_max*.25,ratio_max*.5,ratio_max]],title='Gene ratio (filled area)',loc='lower left',bbox_to_anchor=(0,.13),frameon=False)
     guide.text(0,.035,'dot: tested, not reported\nx: not tested',fontsize=8)
+    for owned in fig.axes:owned._explicit_guide_layout=True
     fig.text(.055,.94,title,fontsize=11,weight='bold');fig.text(.055,.065,'All group scales use the same limits; missing tests remain explicit.',fontsize=8)
     return _finish(fig,data,theme,'multi_group_enrichment_grid',significance_limits=list(significance_limits),ratio_max=ratio_max,column_order=column_order,term_order=term_order,group_shapes=dict(zip(groups,shapes)),marker_polygon_areas=shape_areas,size_definition='Filled glyph area proportional to gene ratio, polygon area normalization across shapes',block_slots=block_slots,absence_policy='tested_absent dot; not_tested x; no imputation')
 
@@ -131,9 +132,21 @@ def plot_term_effect_circle(data,theme,*,term_order,effect_limits,zscore_limits,
     fig.text(.06,.93,title,fontsize=11,weight='bold');fig.text(.06,.035,'Each outer point is a named member; angular spacing is layout only.',fontsize=8)
     return _finish(fig,data,theme,'term_effect_circle',term_order=term_order,effect_limits=list(effect_limits),zscore_limits=list(zscore_limits),significance_max=significance_max,zscore_definition=zscore_definition,effect_label=effect_label,inner_height='-log10(adjusted p)',outer_radius='linear supplied effect',angular_order='input member order; layout only')
 
-def plot_term_key(data,theme,*,title=''):
+def plot_term_key(data,theme,*,title='',presentation='wrapped',width=8.5):
     d=checked(data,['term_id','description']);_unique(d,['term_id'])
-    if max(d.description.str.len())>130:raise ValueError('Split long descriptions into an accompanying text table')
+    if presentation not in ('wrapped','classic'):raise ValueError('Use wrapped or classic term key')
+    if presentation=='wrapped':
+        import textwrap
+        if not 6<=width<=20:raise ValueError('Term-key width must be 6 to 20 inches')
+        chars=max(30,int(width*7));wrapped=[textwrap.fill(str(v),chars,break_long_words=False) for v in d.description]
+        row_heights=[max(.35,.15+.16*(v.count('\n')+1)) for v in wrapped];body=sum(row_heights);height=body+1.6
+        fig=_new(theme,(width,height));ax=fig.add_axes([.04,.6/height,.92,(body+.4)/height]);ax.set(xlim=(0,1),ylim=(body+.4,0));ax.axis('off')
+        ax.add_patch(Rectangle((0,0),1,.4,fc='#E5EDF0',ec='none'));ax.text(.015,.2,'ID',va='center',weight='bold',fontsize=9);ax.text(.27,.2,'Description',va='center',weight='bold',fontsize=9)
+        y=.4
+        for i,((_,r),text,h) in enumerate(zip(d.iterrows(),wrapped,row_heights)):
+            ax.add_patch(Rectangle((0,y),1,h,fc='#F2F6F7' if i%2==0 else 'white',ec='none'));ax.text(.015,y+h/2,str(r.term_id),va='center',fontsize=8.5);ax.text(.27,y+h/2,text,va='center',fontsize=8.5,linespacing=1.25);y+=h
+        fig.text(.04,1-.5/height,title,fontsize=11,weight='bold')
+        return _finish(fig,data,theme,'term_key',columns=['term_id','description'],order=list(d.term_id),presentation=presentation,width=width,full_descriptions=True)
     fig=_new(theme,(7.0,max(2.3,len(d)*.38+1.2)));ax=fig.add_axes([.025,.15,.95,.65]);ax.axis('off')
     table=ax.table(cellText=d[['term_id','description']].to_numpy(),colLabels=['ID','Description'],colWidths=[.22,.78],cellLoc='left',loc='center')
     table.auto_set_font_size(False);table.set_fontsize(9);table.scale(1,1.45)
@@ -321,6 +334,9 @@ def plot_bivariate_tiles(data,theme,*,x_breaks,y_breaks,x_label,y_label,title=''
     ax.set(xlim=(0,len(cols)),ylim=(len(rows),0),xticks=np.arange(len(cols))+.5,xticklabels=cols,yticks=np.arange(len(rows))+.5,yticklabels=rows,title=title);ax.tick_params(length=0);ax.spines[:].set_visible(False)
     for i in range(3):
         for j in range(3):key.add_patch(Rectangle((i,j),1,1,fc=colors[(i,j)],ec='white',lw=.7))
-    key.set(xlim=(0,3),ylim=(0,3),xticks=[.5,1.5,2.5],xticklabels=['L','M','H'],yticks=[.5,1.5,2.5],yticklabels=['L','M','H'],xlabel=x_label,ylabel=y_label);key.tick_params(length=0,labelsize=8);key.spines[:].set_visible(False)
+    def ranges(b):return [f'{b[i]:g}–{b[i+1]:g}'+(']' if i==2 else ')') for i in range(3)]
+    key.set(xlim=(0,3),ylim=(0,3),xticks=[.5,1.5,2.5],xticklabels=ranges(x_breaks),yticks=[.5,1.5,2.5],yticklabels=ranges(y_breaks),xlabel=x_label,ylabel=y_label);key.tick_params(length=0,labelsize=7);key.spines[:].set_visible(False)
+    key.set_xticklabels([f'[{v}' for v in ranges(x_breaks)],rotation=45,ha='right')
+    key.set_yticklabels([f'[{v}' for v in ranges(y_breaks)])
     fig.text(.13,.08,'Bounded bins, left-closed; final upper edge included. Two metrics share a 2D legend.',fontsize=8)
     return _finish(fig,data,theme,'bivariate_tiles',x_breaks=list(x_breaks),y_breaks=list(y_breaks),x_label=x_label,y_label=y_label,color_provenance='original blend of project semantic roles; not a source colour card',bin_policy='left closed; final upper edge inclusive',legend_colors={str(k):v.tolist() for k,v in colors.items()})

@@ -9,7 +9,7 @@ description: Design, render and improve scientific figures for multi-omics, comp
 
 Start with the [complete visual library](assets/visual-library/index.html), rather
 than treating the transcriptomics analysis library as the whole package.
-The complete library indexes 20 galleries, keeps all 90 original base forms and
+The complete library indexes 21 galleries, keeps all 90 original base forms and
 458 historical examples, and nests original/new forms in 86 parent families.
 Radar, 3D surface, 3D scatter, volume rendering, molecular trajectory, circular networks, box, violin, and their alternatives remain
 selectable. A drawing is not removed merely because another form is preferred.
@@ -31,10 +31,20 @@ frozen TSVs, default/custom layouts and real composed SVG examples. Use stable
 archive; richer routine defaults are unchanged. Read the [migration and 3D
 guide](references/historical-and-3d-methods.md), including its 42-row mapping.
 
+Use the [actual scale/layout examples](assets/method-scale-gallery/index.html)
+and [their precise review scope](references/method-scale-validation.md) when
+checking these 45 methods: each has three distinct frozen data volumes and a
+custom layout using the identical complete large input, plus a full SVG
+composition. `Scale_H01_..._Small/Medium/Large/Custom` and the corresponding
+`Scale_D01_...` IDs export runnable specs. Original examples remain unchanged.
+Never count different data sizes or page layouts as additional methods.
+
 For `D01_Scatter3D`, preserve supplied XYZ and offer companion projections to
 expose occlusion. For `D02_Volume`, require a complete uniform grid, physical
-units, limits and explicit colour/opacity transfer; six axis-aligned front-to-back
-composites and central slices are implemented, not arbitrary-camera 3D interaction.
+units, limits and explicit colour/opacity transfer. Six axis-aligned front-to-back
+composites, bounded supplied-camera ray casting and central slices are supported.
+Camera ray casting uses declared trilinear image sampling; it does not save
+resampled scientific measurements, fit a surface or infer segmentation.
 For `D03_Trajectory`, require identical atom identities, supplied bonds, increasing
 physical times and explicit alignment/PBC provenance. Export keyframes, GIF and
 offline frame playback. Never infer bonds, fit an embedding, generate conformers,

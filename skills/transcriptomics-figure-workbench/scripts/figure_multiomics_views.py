@@ -25,26 +25,30 @@ def plot_cross_effects(data,theme,*,x_label,y_label,comparison_definition,alpha=
     if set(label_ids)-set(d.feature_id) or len(label_ids)>12:raise ValueError('Explicit available labels, max12')
     pal=group_palette(theme,states);fig=_new(theme,(8.2,5.6));ax=_axis(fig,[.13,.21,.60,.62])
     for name in states:
-        q=d[d.status==name];ax.scatter(q.effect_x,q.effect_y,c=pal[name],s=25,ec='white',lw=.3,label=name,alpha=.82)
+        q=d[d.status==name];ax.scatter(q.effect_x,q.effect_y,c=pal[name],s=25,ec='white',lw=.3,label=f'{name} · n={len(q)}',alpha=.82)
     ax.axvline(0,c=theme['roles']['border'],lw=.7);ax.axhline(0,c=theme['roles']['border'],lw=.7)
     for row in d[d.feature_id.isin(label_ids)].itertuples():ax.annotate(row.feature_id,(row.effect_x,row.effect_y),xytext=(4,4),textcoords='offset points',fontsize=8)
     ax.set(xlabel=x_label,ylabel=y_label,title=title);fig.legend(*ax.get_legend_handles_labels(),bbox_to_anchor=(.76,.84),loc='upper left',frameon=False)
-    fig.text(.13,.07,'Matched mapped features; axis signs refer to their declared contrasts.',fontsize=8)
+    fig.text(.13,.07,textwrap.fill(comparison_definition+f'; adjusted q ≤ {alpha:g}; {len(d)} matched feature records.',100),fontsize=8)
     return _finish(fig,data,theme,'cross_layer_effects',x_label=x_label,y_label=y_label,comparison_definition=comparison_definition,alpha=alpha,label_ids=list(label_ids),state_rule='supplied q compared to declared alpha; no testing')
 
 
-def plot_aligned_views(data,theme,*,view_order,coordinate_definition,draw_links=True,title='',guide_clearance_pt=0):
+def plot_aligned_views(data,theme,*,view_order,coordinate_definition,draw_links=True,title='',guide_clearance_pt=0,link_mode='points',columns='auto',rows=None,width=None):
     d=checked(data,['object_id','group','view','x','y'],['x','y']);_unique(d,['object_id','view'])
     if not 2<=len(view_order)<=3 or len(view_order)!=len(set(view_order)) or set(view_order)!=set(d.view) or not coordinate_definition:raise ValueError('Two or three explicit coordinate views required')
     if (d.groupby('object_id').group.nunique()!=1).any():raise ValueError('Object identities change between views')
     sets=[set(d.loc[d.view==v,'object_id']) for v in view_order]
     if draw_links and (any(s!=sets[0] for s in sets) or len(sets[0])>100):raise ValueError('Link views only for <=100 exact matched objects; unpaired views must disable links')
     if not np.isfinite(guide_clearance_pt) or not 0<=guide_clearance_pt<=60:raise ValueError('Guide clearance must be 0 to 60 points')
-    pal=group_palette(theme,list(pd.unique(d.group)));fig=_new(theme,(10.5,5.5));axes=[];w=.75/len(view_order)
+    if link_mode not in ('points','gutter'):raise ValueError('Use point-to-point or legacy gutter links')
+    from figure_workbench.responsive import grid_shape,facet_slots
+    nr,nc=grid_shape(len(view_order),columns,rows)
+    pal=group_palette(theme,list(pd.unique(d.group)));height=nr*3.1+1.5;fig=_new(theme,(width or max(8,nc*3.7+1.3),height));axes=[]
+    grid=facet_slots(fig,len(view_order),nr,nc,left=.10,right=.82,bottom=1.0/height,top=1-.8/height,wspace=.8,hspace=.55)
     for j,view in enumerate(view_order):
-        ax=_axis(fig,[.07+j*w,.22,w-.05,.58]);q=d[d.view==view]
+        ax=fig.add_subplot(grid[j]);ax.spines[['top','right']].set_visible(False);ax.tick_params(labelsize=8);q=d[d.view==view]
         for g in pal:
-            z=q[q.group==g];ax.scatter(z.x,z.y,c=pal[g],s=20,ec='white',lw=.3,label=g)
+            z=q[q.group==g];ax.scatter(z.x,z.y,c=pal[g],s=28,ec='white',lw=.5,label=f'{g} · n={len(z)}',zorder=4)
         ax.set(title=view,xlabel='Supplied component 1',ylabel='Supplied component 2' if j==0 else '');axes.append(ax)
     fig.canvas.draw()
     if draw_links:
@@ -52,15 +56,24 @@ def plot_aligned_views(data,theme,*,view_order,coordinate_definition,draw_links=
             a=d[d.view==view_order[j]].set_index('object_id');b=d[d.view==view_order[j+1]].set_index('object_id').loc[a.index]
             for id_ in a.index:
                 pa=fig.transFigure.inverted().transform(axes[j].transData.transform([a.loc[id_,'x'],a.loc[id_,'y']]));pb=fig.transFigure.inverted().transform(axes[j+1].transData.transform([b.loc[id_,'x'],b.loc[id_,'y']]))
-                # Connect only in the gutter; do not draw through either point cloud.
+                if link_mode=='points':
+                    from matplotlib.patches import ConnectionPatch
+                    patch=ConnectionPatch((a.loc[id_,'x'],a.loc[id_,'y']),(b.loc[id_,'x'],b.loc[id_,'y']),coordsA='data',coordsB='data',axesA=axes[j],axesB=axes[j+1],color=pal[a.loc[id_,'group']],alpha=.12,lw=.6,zorder=-1)
+                    patch.set_gid('object-link:'+str(id_)+':'+str(j));fig.add_artist(patch)
+                    continue
+                # Compatibility view: clipped segments in the gutter only.
                 left=axes[j].get_position().x1;right=axes[j+1].get_position().x0
                 right-=min(guide_clearance_pt/72/fig.get_figwidth(),.7*(right-left))
                 fig.add_artist(Line2D([left,right],[pa[1],pb[1]],transform=fig.transFigure,color=pal[a.loc[id_,'group']],alpha=.20,lw=.45))
-        if guide_clearance_pt:
+        if guide_clearance_pt or link_mode=='points':
+            for ax in axes:ax.patch.set_alpha(0)
             for ax in axes[1:]:
                 for tick in ax.get_yticklabels():tick.set_bbox(dict(facecolor='white',edgecolor='none',pad=1))
-    fig.legend(*axes[0].get_legend_handles_labels(),bbox_to_anchor=(.86,.82),loc='upper left',frameon=False);fig.text(.07,.92,title,fontsize=11,weight='bold');fig.text(.07,.075,'Gutter links identify the same objects; separate view axes are not a shared metric space.',fontsize=8)
-    return _finish(fig,data,theme,'aligned_coordinate_views',view_order=view_order,coordinate_definition=coordinate_definition,draw_links=draw_links,guide_clearance_pt=guide_clearance_pt,matching='explicit object IDs; no matching or integration computed')
+    for ax in axes:
+        for label in [ax.xaxis.label,ax.yaxis.label,ax.title,*ax.get_xticklabels(),*ax.get_yticklabels()]:label.set_bbox(dict(fc='white',ec='none',pad=.6))
+    fig.legend(*axes[0].get_legend_handles_labels(),bbox_to_anchor=(.84,1-.8/height),loc='upper left',frameon=False,fontsize=8);fig.text(.10,1-.25/height,title,fontsize=11,weight='bold');fig.text(.10,.16/height,textwrap.fill(coordinate_definition+'; lines join identical object IDs. Separate coordinate spaces are not a common metric.',int(fig.get_figwidth()*10)),fontsize=8)
+    for ax in axes:ax._explicit_guide_layout=True
+    return _finish(fig,data,theme,'aligned_coordinate_views',view_order=view_order,coordinate_definition=coordinate_definition,draw_links=draw_links,guide_clearance_pt=guide_clearance_pt,link_mode=link_mode,columns=nc,rows=nr,width=width,matching='explicit object IDs; no matching or integration computed')
 
 
 def plot_loading_projection(data,theme,*,x_label,y_label,projection_definition,title=''):
@@ -111,12 +124,13 @@ def plot_genomic_links(data,theme,*,track_order,region,assembly,chromosome,coord
         from matplotlib.patches import PathPatch
         height=.20+.65*(r.end-r.start)/(hi-lo);mid=(r.start+r.end)/2
         arc.add_patch(PathPatch(Path([(r.start,0),(mid,2*height),(r.end,0)],[Path.MOVETO,Path.CURVE3,Path.CURVE3]),fc='none',ec=theme['roles']['primary'],alpha=.25+.65*r.score,lw=1.2))
+        if len(l)<=8:arc.text(mid,height+.035,f'{r.link_id} · {r.score:g}',ha='center',fontsize=7,color='#425F6E')
     vmax=max(float(s.value.max()),1e-12);n=len(track_order)
     for j,track in enumerate(track_order):
         ax=_axis(fig,[.14,.21+(n-j-1)*.38/n,.60,.31/n]);q=s[s.track==track];ax.bar(q.start,q.value,width=q.end-q.start,align='edge',fc=pal[track],ec='none');ax.set(xlim=region,ylim=(0,vmax),ylabel=track)
         if j<n-1:ax.set_xticks([])
         else:ax.set_xlabel(chromosome+' / '+coordinate_definition)
-    fig.text(.78,.75,'Link alpha\n0.25 + 0.65 score\nArc height: layout\nNo direction inferred',fontsize=8);fig.text(.14,.075,assembly+'; '+value_definition,fontsize=8)
+    fig.text(.78,.75,'Link alpha\n0.25 + 0.65 score\nArc height: layout\nNo direction inferred',fontsize=8);fig.text(.14,.065,textwrap.fill(assembly+'; '+value_definition+'; '+link_definition,100),fontsize=8)
     return _finish(fig,data,theme,'genomic_links_and_signal',track_order=track_order,region=list(region),assembly=assembly,chromosome=chromosome,coordinate_definition=coordinate_definition,value_definition=value_definition,link_definition=link_definition,arrowheads='none; supplied association links are not regulatory proof')
 
 

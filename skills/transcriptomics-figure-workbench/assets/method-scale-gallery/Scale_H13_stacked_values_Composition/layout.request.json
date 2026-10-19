@@ -1,0 +1,26 @@
+{
+  "id": "Scale_H13_stacked_values_Composition",
+  "title": "同单位可加量堆积 · same input, different complete layout",
+  "columns": 2,
+  "canvas_width_pt": 1512.0,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "heading_pt": 40,
+  "panel_label_gutter_pt": 20,
+  "packing": "masonry",
+  "packing_order": "input",
+  "panels": [
+    {
+      "id": "Scale_H13_stacked_values_Large",
+      "label": "A  Large · complete selected source",
+      "svg": "../Scale_H13_stacked_values_Large/Scale_H13_stacked_values_Large.svg",
+      "table": "../Scale_H13_stacked_values_Large/Scale_H13_stacked_values_Large.tsv"
+    },
+    {
+      "id": "Scale_H13_stacked_values_Custom",
+      "label": "B  Caller layout · same source",
+      "svg": "../Scale_H13_stacked_values_Custom/Scale_H13_stacked_values_Custom.svg",
+      "table": "../Scale_H13_stacked_values_Custom/Scale_H13_stacked_values_Custom.tsv"
+    }
+  ]
+}

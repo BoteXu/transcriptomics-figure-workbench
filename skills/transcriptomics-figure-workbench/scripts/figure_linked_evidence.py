@@ -62,14 +62,14 @@ def plot_split_metric_matrix(data,theme,*,row_order,column_order,row_slots,assoc
     if not association_definition or not probability_definition or len(row_order)!=len(set(row_order)) or len(column_order)!=len(set(column_order)) or set(row_order)!=set(d.row_id) or set(column_order)!=set(d.column_id) or len(d)!=len(row_order)*len(column_order) or set(row_order)!=set(row_slots):raise ValueError('Complete declared matrix/order and two metric definitions required')
     if (d.pvalue<=0).any() or (d.pvalue>1).any():raise ValueError('Supplied probabilities must be in (0,1]')
     an=_limits(d.association,association_limits,signed=True);pn=_limits(-np.log10(d.pvalue),significance_limits)
-    pal=group_palette(theme,list(row_slots.values()));fig=_new(theme,(9,6));ax=fig.add_axes([.15,.26,.57,.59]);lookup=d.set_index(['row_id','column_id'])
+    pal=group_palette(theme,list(dict.fromkeys(row_slots.values())));fig=_new(theme,(9,max(4.6,1.9+len(row_order)*.30)));ax=fig.add_axes([.25,.26,.47,.59]);lookup=d.set_index(['row_id','column_id'])
     for i,row in enumerate(row_order):
         ax.add_patch(Rectangle((-.15,i),.08,1,fc=pal[row_slots[row]],ec='white',lw=.5,clip_on=False))
         for j,col in enumerate(column_order):
             r=lookup.loc[(row,col)]
             ax.add_patch(Polygon([(j,i),(j+1,i),(j,i+1)],fc=_cmap(theme)(pn(-np.log10(r.pvalue))),ec='white',lw=.5))
             ax.add_patch(Polygon([(j+1,i),(j+1,i+1),(j,i+1)],fc=_cmap(theme,True)(an(r.association)),ec='white',lw=.5))
-    ax.set(xlim=(0,len(column_order)),ylim=(len(row_order),0));ax.set_xticks(np.arange(len(column_order))+.5,column_order,rotation=35,ha='right');ax.set_yticks(np.arange(len(row_order))+.5,row_order);ax.tick_params(length=0)
+    ax.set(xlim=(0,len(column_order)),ylim=(len(row_order),0));ax.set_xticks(np.arange(len(column_order))+.5,column_order,rotation=35,ha='right');ax.set_yticks(np.arange(len(row_order))+.5,row_order);ax.tick_params(length=0);ax.tick_params(axis='y',pad=24)
     fig.colorbar(plt.cm.ScalarMappable(norm=pn,cmap=_cmap(theme)),cax=fig.add_axes([.79,.58,.025,.23]),label='Upper: -log10 p')
     fig.colorbar(plt.cm.ScalarMappable(norm=an,cmap=_cmap(theme,True)),cax=fig.add_axes([.79,.27,.025,.23]),label='Lower: association')
     fig.text(.15,.93,title,fontsize=12,weight='bold');fig.text(.15,.07,'Two independent color keys; probability is not correlation magnitude. Supplied results only.',fontsize=8)
@@ -131,16 +131,25 @@ def plot_radial_hierarchy(data,theme,*,leaf_order,height_definition,metric_limit
         area._explicit_guide_layout=True;ruler._explicit_guide_layout=True
     else:
         fig.text(.82,.34,'Point area:\n'+area_definition,fontsize=8);fig.text(.82,.21,'Outer height:\n'+outer_definition,fontsize=8)
-    fig.text(.07,.05,'Frozen hierarchy; no target ranking or binding prediction. Distances and channels use their supplied definitions.',fontsize=8)
+    fig.text(.07,.075,f'Merge height increases inward: 0 → {maxh:g} · {height_definition}',fontsize=8)
+    fig.text(.07,.04,'Frozen hierarchy; no target ranking or binding prediction.',fontsize=8)
     return _finish(fig,data,theme,'radial_hierarchy',leaf_order=leaf_order,height_definition=height_definition,metric_limits=metric_limits,metric_definition=metric_definition,outer_definition=outer_definition,area_definition=area_definition,label_ids=list(label_ids),numeric_guides=numeric_guides,area_mapping='12 + 120 * supplied area_value',outer_height_mapping='0.20 * supplied outer_value / maximum',outer_value_maximum=maximum)
 
 
-def plot_stacked_values(data,theme,*,object_order,segment_order,value_definition,additivity_definition,title=''):
+def plot_stacked_values(data,theme,*,object_order,segment_order,value_definition,additivity_definition,title='',orientation='auto'):
     d=checked(data,['object_id','segment','value'],['value']);_unique(d,['object_id','segment'])
     if not value_definition or not additivity_definition or (d.value<0).any() or set(object_order)!=set(d.object_id) or set(segment_order)!=set(d.segment) or len(set(object_order))!=len(object_order) or len(set(segment_order))!=len(segment_order) or len(d)!=len(object_order)*len(segment_order):raise ValueError('Complete nonnegative additive quantity grid and explicit orders required')
-    pal=group_palette(theme,segment_order);fig=_new(theme,(11,5.6));ax=_axis(fig,[.10,.27,.67,.57]);base=np.zeros(len(object_order))
+    if orientation not in ('auto','horizontal','vertical'):raise ValueError('Unknown stacked orientation')
+    horizontal=orientation=='horizontal' or orientation=='auto' and len(object_order)>10
+    height=max(3.2,1.7+len(object_order)*.27) if horizontal else 5.6
+    pal=group_palette(theme,segment_order);fig=_new(theme,(10,height));ax=_axis(fig,[.29,.9/height,.43,(height-1.65)/height] if horizontal else [.10,.27,.67,.57]);base=np.zeros(len(object_order))
     for s in segment_order:
-        values=d[d.segment==s].set_index('object_id').loc[object_order,'value'].to_numpy();ax.bar(range(len(values)),values,bottom=base,color=pal[s],label=s,width=.78,ec='white',lw=.4);base+=values
-    ax.set_xticks(range(len(object_order)),object_order,rotation=90,fontsize=7);ax.set(ylabel=value_definition,title=title)
-    fig.legend(*ax.get_legend_handles_labels(),bbox_to_anchor=(.81,.80),loc='upper left',frameon=False);fig.text(.10,.06,additivity_definition,fontsize=8)
-    return _finish(fig,data,theme,'stacked_values',object_order=object_order,segment_order=segment_order,value_definition=value_definition,additivity_definition=additivity_definition,normalization='none; input quantities retained')
+        values=d[d.segment==s].set_index('object_id').loc[object_order,'value'].to_numpy()
+        if horizontal:ax.barh(range(len(values)),values,left=base,color=pal[s],label=s,height=.72,ec='white',lw=.4)
+        else:ax.bar(range(len(values)),values,bottom=base,color=pal[s],label=s,width=.78,ec='white',lw=.4)
+        base+=values
+    if horizontal:ax.set_yticks(range(len(object_order)),object_order,fontsize=8);ax.set(ylim=(len(object_order)-.5,-.5),xlabel=value_definition,title=title)
+    else:ax.set_xticks(range(len(object_order)),object_order,rotation=90,fontsize=7);ax.set(ylabel=value_definition,title=title)
+    import textwrap
+    fig.legend(*ax.get_legend_handles_labels(),bbox_to_anchor=(.77,.85),loc='upper left',frameon=False,fontsize=8);fig.text(.10,.05,textwrap.fill(additivity_definition,110),fontsize=8)
+    return _finish(fig,data,theme,'stacked_values',object_order=object_order,segment_order=segment_order,value_definition=value_definition,additivity_definition=additivity_definition,orientation='horizontal' if horizontal else 'vertical',normalization='none; input quantities retained')

@@ -363,7 +363,7 @@
       "aliases": [
         "sequence_logo"
       ],
-      "source_sha256": "156fa4b6b45991b05b675993f07c5bfcebf29c4b613980324caf90a0f2a5db45",
+      "source_sha256": "7488186cd1fb6f4ecfc79bf00d9444e73500c4242f16a0935f6830069cf775a9",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "height"
@@ -423,7 +423,7 @@
       "aliases": [
         "contact_tracks"
       ],
-      "source_sha256": "156fa4b6b45991b05b675993f07c5bfcebf29c4b613980324caf90a0f2a5db45",
+      "source_sha256": "7488186cd1fb6f4ecfc79bf00d9444e73500c4242f16a0935f6830069cf775a9",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -463,6 +463,12 @@
           "required": false,
           "annotation": null,
           "default": ""
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "aligned"
         }
       ],
       "frozen_table_entry": true,
@@ -470,7 +476,7 @@
       "aliases": [
         "branch_tree"
       ],
-      "source_sha256": "156fa4b6b45991b05b675993f07c5bfcebf29c4b613980324caf90a0f2a5db45",
+      "source_sha256": "7488186cd1fb6f4ecfc79bf00d9444e73500c4242f16a0935f6830069cf775a9",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "branch_length"
@@ -531,7 +537,7 @@
       "aliases": [
         "slice_overlay"
       ],
-      "source_sha256": "156fa4b6b45991b05b675993f07c5bfcebf29c4b613980324caf90a0f2a5db45",
+      "source_sha256": "7488186cd1fb6f4ecfc79bf00d9444e73500c4242f16a0935f6830069cf775a9",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "intensity",
@@ -590,7 +596,7 @@
       "aliases": [
         "registration_check"
       ],
-      "source_sha256": "156fa4b6b45991b05b675993f07c5bfcebf29c4b613980324caf90a0f2a5db45",
+      "source_sha256": "7488186cd1fb6f4ecfc79bf00d9444e73500c4242f16a0935f6830069cf775a9",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "fixed",
@@ -833,7 +839,7 @@
       "aliases": [
         "embedding"
       ],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -861,7 +867,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -899,7 +905,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -925,6 +931,12 @@
           "required": false,
           "annotation": null,
           "default": 1
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "informative"
         }
       ],
       "frozen_table_entry": true,
@@ -932,7 +944,7 @@
       "aliases": [
         "volcano"
       ],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "log2FC",
@@ -1057,7 +1069,7 @@
       "aliases": [
         "dot_matrix"
       ],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "fraction",
@@ -1238,7 +1250,7 @@
       "aliases": [
         "heatmap"
       ],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -1296,7 +1308,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -1356,7 +1368,7 @@
       "aliases": [
         "composition"
       ],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count"
@@ -1433,7 +1445,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "e74f9ad1da06ed59dbc44e97d0ab23dc9a5cb85423f97aba253d9a97bf851f0e",
+      "source_sha256": "d2e7237f1de2d82f72e1fa3bc4a77a4381ec0de72af6bf8ca8dc27b5ea86186d",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "lower",
@@ -1899,7 +1911,7 @@
       "aliases": [
         "paired"
       ],
-      "source_sha256": "7dc8c96e64e41591e5d9d9c1a0dd2e5c4e6a7b94f1de44b1aa23edb60e4dfbb8",
+      "source_sha256": "62803f564a70b08787e0b158ac337173cefcd01e52335cc583bd09ba9f9014e2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -1982,7 +1994,7 @@
       "aliases": [
         "effect_matrix"
       ],
-      "source_sha256": "7dc8c96e64e41591e5d9d9c1a0dd2e5c4e6a7b94f1de44b1aa23edb60e4dfbb8",
+      "source_sha256": "62803f564a70b08787e0b158ac337173cefcd01e52335cc583bd09ba9f9014e2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -2142,7 +2154,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "7dc8c96e64e41591e5d9d9c1a0dd2e5c4e6a7b94f1de44b1aa23edb60e4dfbb8",
+      "source_sha256": "62803f564a70b08787e0b158ac337173cefcd01e52335cc583bd09ba9f9014e2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -2167,7 +2179,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "7dc8c96e64e41591e5d9d9c1a0dd2e5c4e6a7b94f1de44b1aa23edb60e4dfbb8",
+      "source_sha256": "62803f564a70b08787e0b158ac337173cefcd01e52335cc583bd09ba9f9014e2",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -2216,7 +2228,7 @@
       "aliases": [
         "xy_points"
       ],
-      "source_sha256": "20fd739adc5e1c5a9fe68e48bf9c12241700f26ce2a959735f68bb54658e01f4",
+      "source_sha256": "496280442eb1f644ebcacea87976d5e0e85983efc07c16d177a3208f9258e199",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -2244,6 +2256,12 @@
           "name": "interval_label",
           "required": true,
           "annotation": null
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "adaptive"
         }
       ],
       "frozen_table_entry": true,
@@ -2251,7 +2269,7 @@
       "aliases": [
         "grouped_estimates"
       ],
-      "source_sha256": "20fd739adc5e1c5a9fe68e48bf9c12241700f26ce2a959735f68bb54658e01f4",
+      "source_sha256": "496280442eb1f644ebcacea87976d5e0e85983efc07c16d177a3208f9258e199",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -2285,7 +2303,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "20fd739adc5e1c5a9fe68e48bf9c12241700f26ce2a959735f68bb54658e01f4",
+      "source_sha256": "496280442eb1f644ebcacea87976d5e0e85983efc07c16d177a3208f9258e199",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count",
@@ -2333,7 +2351,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "20fd739adc5e1c5a9fe68e48bf9c12241700f26ce2a959735f68bb54658e01f4",
+      "source_sha256": "496280442eb1f644ebcacea87976d5e0e85983efc07c16d177a3208f9258e199",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count"
@@ -2385,7 +2403,7 @@
       "aliases": [
         "density_ridges"
       ],
-      "source_sha256": "20fd739adc5e1c5a9fe68e48bf9c12241700f26ce2a959735f68bb54658e01f4",
+      "source_sha256": "496280442eb1f644ebcacea87976d5e0e85983efc07c16d177a3208f9258e199",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "density",
@@ -2888,7 +2906,7 @@
       "aliases": [
         "membership_ribbons"
       ],
-      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
+      "source_sha256": "228f5f0469d6471cf687ad63b503a8b7619041868681ea60f0e49fed0ce11c02",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count",
@@ -2951,7 +2969,7 @@
       "aliases": [
         "split_metric_matrix"
       ],
-      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
+      "source_sha256": "228f5f0469d6471cf687ad63b503a8b7619041868681ea60f0e49fed0ce11c02",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "association",
@@ -2987,7 +3005,7 @@
       "aliases": [
         "hierarchy_tracks"
       ],
-      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
+      "source_sha256": "228f5f0469d6471cf687ad63b503a8b7619041868681ea60f0e49fed0ce11c02",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "height"
@@ -3054,7 +3072,7 @@
       "aliases": [
         "radial_hierarchy"
       ],
-      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
+      "source_sha256": "228f5f0469d6471cf687ad63b503a8b7619041868681ea60f0e49fed0ce11c02",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "area_value",
@@ -3095,6 +3113,12 @@
           "required": false,
           "annotation": null,
           "default": ""
+        },
+        {
+          "name": "orientation",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
         }
       ],
       "frozen_table_entry": true,
@@ -3102,7 +3126,7 @@
       "aliases": [
         "stacked_values"
       ],
-      "source_sha256": "f5c9b24d217ed49c3fcd602e535a7b3ead764c6f5869eba31c4163c362de6411",
+      "source_sha256": "228f5f0469d6471cf687ad63b503a8b7619041868681ea60f0e49fed0ce11c02",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -3152,7 +3176,7 @@
       "aliases": [
         "enrichment_grid"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "gene_ratio",
@@ -3208,7 +3232,7 @@
       "aliases": [
         "term_effect_circle"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "effect",
@@ -3228,6 +3252,18 @@
           "required": false,
           "annotation": null,
           "default": ""
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "wrapped"
+        },
+        {
+          "name": "width",
+          "required": false,
+          "annotation": null,
+          "default": 8.5
         }
       ],
       "frozen_table_entry": true,
@@ -3235,7 +3271,7 @@
       "aliases": [
         "term_key"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -3268,7 +3304,7 @@
       "aliases": [
         "two_set_overlap"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -3311,7 +3347,7 @@
       "aliases": [
         "gene_term_chord"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "effect"
@@ -3357,7 +3393,7 @@
       "aliases": [
         "distribution"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -3398,7 +3434,7 @@
       "aliases": [
         "balance"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "smd"
@@ -3443,7 +3479,7 @@
       "aliases": [
         "agreement"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "difference",
@@ -3484,7 +3520,7 @@
       "aliases": [
         "survival"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "at_risk",
@@ -3528,7 +3564,7 @@
       "aliases": [
         "swimmer"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -3575,7 +3611,7 @@
       "aliases": [
         "specification_curve"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -3618,7 +3654,7 @@
       "aliases": [
         "vector_field"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "vx",
@@ -3666,7 +3702,7 @@
       "aliases": [
         "bivariate_tiles"
       ],
-      "source_sha256": "7c48707164d6fe89710303ba6520a25b5f1ee1376ffc9602e5289e8775178fae",
+      "source_sha256": "59744fba0eb290fac93944e40e5f739d4ed4258c40ec458d42a971328cf6235c",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "metric_x",
@@ -3710,7 +3746,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "source_sha256": "2ce05c4eb1af66fffbdc8dbd18e2c4bb06aa638bf00d7d95c04a095ae14a9bab",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -3800,12 +3836,18 @@
           "required": false,
           "annotation": null,
           "default": 25
+        },
+        {
+          "name": "show_n",
+          "required": false,
+          "annotation": null,
+          "default": true
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "source_sha256": "2ce05c4eb1af66fffbdc8dbd18e2c4bb06aa638bf00d7d95c04a095ae14a9bab",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "n",
@@ -3847,7 +3889,7 @@
       "aliases": [
         "calibration_counts"
       ],
-      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "source_sha256": "2ce05c4eb1af66fffbdc8dbd18e2c4bb06aa638bf00d7d95c04a095ae14a9bab",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "bin_left",
@@ -3907,7 +3949,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "source_sha256": "2ce05c4eb1af66fffbdc8dbd18e2c4bb06aa638bf00d7d95c04a095ae14a9bab",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -3959,7 +4001,7 @@
       "aliases": [
         "frozen_dynamics"
       ],
-      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "source_sha256": "2ce05c4eb1af66fffbdc8dbd18e2c4bb06aa638bf00d7d95c04a095ae14a9bab",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -3990,7 +4032,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "55b4cc8a989ef4f39d204f4fa724f4f28ed25acd4337c6dd7e966268e7a98201",
+      "source_sha256": "2ce05c4eb1af66fffbdc8dbd18e2c4bb06aa638bf00d7d95c04a095ae14a9bab",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "plddt",
@@ -4043,7 +4085,7 @@
       "aliases": [
         "cross_effects"
       ],
-      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
+      "source_sha256": "a7daf592da274d10cea6dd4ba51f8968a3d3fa3ba674f1ea49625812d2855156",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "effect_x",
@@ -4086,6 +4128,30 @@
           "required": false,
           "annotation": null,
           "default": 0
+        },
+        {
+          "name": "link_mode",
+          "required": false,
+          "annotation": null,
+          "default": "points"
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "width",
+          "required": false,
+          "annotation": null,
+          "default": null
         }
       ],
       "frozen_table_entry": true,
@@ -4093,7 +4159,7 @@
       "aliases": [
         "aligned_views"
       ],
-      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
+      "source_sha256": "a7daf592da274d10cea6dd4ba51f8968a3d3fa3ba674f1ea49625812d2855156",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -4134,7 +4200,7 @@
       "aliases": [
         "loading_projection"
       ],
-      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
+      "source_sha256": "a7daf592da274d10cea6dd4ba51f8968a3d3fa3ba674f1ea49625812d2855156",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -4192,7 +4258,7 @@
       "aliases": [
         "mass_spectrum"
       ],
-      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
+      "source_sha256": "a7daf592da274d10cea6dd4ba51f8968a3d3fa3ba674f1ea49625812d2855156",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "intensity",
@@ -4253,7 +4319,7 @@
       "aliases": [
         "genomic_links"
       ],
-      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
+      "source_sha256": "a7daf592da274d10cea6dd4ba51f8968a3d3fa3ba674f1ea49625812d2855156",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -4296,7 +4362,7 @@
       "aliases": [
         "pathway_overlay"
       ],
-      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
+      "source_sha256": "a7daf592da274d10cea6dd4ba51f8968a3d3fa3ba674f1ea49625812d2855156",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -4344,7 +4410,7 @@
       "aliases": [
         "model_diagnostic"
       ],
-      "source_sha256": "179c4511f625fe8c8655a660bc07a85898a7f19805c61eb2069c1b541e83776b",
+      "source_sha256": "a7daf592da274d10cea6dd4ba51f8968a3d3fa3ba674f1ea49625812d2855156",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "cook",
@@ -4385,7 +4451,7 @@
       "aliases": [
         "ternary"
       ],
-      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
+      "source_sha256": "71a596d30ec4adf923cdf684978523b7f145ce5bf932a366b0d368729b5bec74",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -4438,7 +4504,7 @@
       "aliases": [
         "genome_overview"
       ],
-      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
+      "source_sha256": "71a596d30ec4adf923cdf684978523b7f145ce5bf932a366b0d368729b5bec74",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "position",
@@ -4499,7 +4565,7 @@
       "aliases": [
         "locus_tracks"
       ],
-      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
+      "source_sha256": "71a596d30ec4adf923cdf684978523b7f145ce5bf932a366b0d368729b5bec74",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "end",
@@ -4550,7 +4616,7 @@
       "aliases": [
         "funnel"
       ],
-      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
+      "source_sha256": "71a596d30ec4adf923cdf684978523b7f145ce5bf932a366b0d368729b5bec74",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -4586,7 +4652,7 @@
       "aliases": [
         "hierarchy_area"
       ],
-      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
+      "source_sha256": "71a596d30ec4adf923cdf684978523b7f145ce5bf932a366b0d368729b5bec74",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -4635,7 +4701,7 @@
       "aliases": [
         "uncertainty_fan"
       ],
-      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
+      "source_sha256": "71a596d30ec4adf923cdf684978523b7f145ce5bf932a366b0d368729b5bec74",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "center",
@@ -4696,7 +4762,7 @@
       "aliases": [
         "spatial_overlay"
       ],
-      "source_sha256": "e50e2bbbeeb8c39d730471d9897cdb533d8b0b44591d400a2640a4f4e165e802",
+      "source_sha256": "71a596d30ec4adf923cdf684978523b7f145ce5bf932a366b0d368729b5bec74",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "blue",
@@ -4756,6 +4822,12 @@
             8.5,
             6.2
           ]
+        },
+        {
+          "name": "numeric_guides",
+          "required": false,
+          "annotation": null,
+          "default": true
         }
       ],
       "frozen_table_entry": true,
@@ -4763,7 +4835,7 @@
       "aliases": [
         "typed_network"
       ],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "area",
@@ -4802,7 +4874,7 @@
       "aliases": [
         "weighted_chord"
       ],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "weight"
@@ -4891,7 +4963,7 @@
       "aliases": [
         "alluvial"
       ],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "weight"
@@ -4926,7 +4998,7 @@
       "aliases": [
         "upset"
       ],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -4995,7 +5067,7 @@
       "aliases": [
         "multistate_matrix"
       ],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -5021,6 +5093,12 @@
           "required": false,
           "annotation": null,
           "default": ""
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "informative"
         }
       ],
       "frozen_table_entry": true,
@@ -5028,7 +5106,7 @@
       "aliases": [
         "running_enrichment"
       ],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "rank",
@@ -5059,7 +5137,7 @@
       "aliases": [
         "rank_bump"
       ],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "rank"
@@ -5103,7 +5181,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -5158,7 +5236,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "e4f73da7f38d042129d997a0f14be2c6db59ba7ee7ceaecf9e8c44246596d63e",
+      "source_sha256": "ef2da6bf6277b081c2ff357ab293356d880cab8a317565a8e39c3160e8a62c92",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -5611,12 +5689,36 @@
             12,
             9
           ]
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "reading"
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "width",
+          "required": false,
+          "annotation": null,
+          "default": null
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "438de77a29aa36bb756a49f137ba4eff2750350d603bcd7605d22993918e52c4",
+      "source_sha256": "dc4cfdf2fae0a78474e79d76020b3f0b24ff068e3dadc261273831bee280c180",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -5660,7 +5762,7 @@
       "aliases": [
         "frozen_curve"
       ],
-      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
+      "source_sha256": "25b2ae40ba7e5bb23db5d9508bb7b98966a5875f33288b055a3c36e0d97a7120",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -5840,7 +5942,7 @@
       "aliases": [
         "annotated_matrix"
       ],
-      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
+      "source_sha256": "25b2ae40ba7e5bb23db5d9508bb7b98966a5875f33288b055a3c36e0d97a7120",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "row_count",
@@ -5898,7 +6000,7 @@
       "aliases": [
         "forest"
       ],
-      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
+      "source_sha256": "25b2ae40ba7e5bb23db5d9508bb7b98966a5875f33288b055a3c36e0d97a7120",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "estimate",
@@ -5977,7 +6079,7 @@
       "aliases": [
         "feature_facets"
       ],
-      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
+      "source_sha256": "25b2ae40ba7e5bb23db5d9508bb7b98966a5875f33288b055a3c36e0d97a7120",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value",
@@ -6025,7 +6127,7 @@
       "aliases": [
         "raincloud"
       ],
-      "source_sha256": "ce19e976e2e407e2bd9fec5dcc9297e1048eda811f263b80911a443321d07378",
+      "source_sha256": "25b2ae40ba7e5bb23db5d9508bb7b98966a5875f33288b055a3c36e0d97a7120",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -6207,7 +6309,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6242,7 +6344,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6284,7 +6386,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6328,7 +6430,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6372,7 +6474,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6417,7 +6519,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6466,7 +6568,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6528,7 +6630,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "left",
@@ -6592,7 +6694,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6647,7 +6749,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6692,12 +6794,30 @@
           "required": false,
           "annotation": null,
           "default": false
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "reading"
+        },
+        {
+          "name": "columns",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "rows",
+          "required": false,
+          "annotation": null,
+          "default": null
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6762,12 +6882,18 @@
           "required": false,
           "annotation": null,
           "default": false
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "reading"
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6827,7 +6953,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6918,12 +7044,18 @@
           "required": false,
           "annotation": null,
           "default": 0.04
+        },
+        {
+          "name": "presentation",
+          "required": false,
+          "annotation": null,
+          "default": "reading"
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -6988,7 +7120,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7037,7 +7169,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7105,7 +7237,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7169,7 +7301,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7229,7 +7361,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "1ac7a1c009031ff07b6585491db9087874009ffc0e6c6d9d5928d0f06cb22519",
+      "source_sha256": "ecf1c9ebd76f4838c430f9d88c3aeeb8311737063b00911d278f980b1e6c9b81",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7436,7 +7568,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
+      "source_sha256": "c0f540b97e63a310d3b0e5bb4537659d7ac15591f5cc7e8f3c205f756b71a474",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "log2FC",
@@ -7486,7 +7618,7 @@
       "aliases": [
         "volcano_marginal"
       ],
-      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
+      "source_sha256": "c0f540b97e63a310d3b0e5bb4537659d7ac15591f5cc7e8f3c205f756b71a474",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "log2FC",
@@ -7519,7 +7651,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
+      "source_sha256": "c0f540b97e63a310d3b0e5bb4537659d7ac15591f5cc7e8f3c205f756b71a474",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count",
@@ -7590,7 +7722,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
+      "source_sha256": "c0f540b97e63a310d3b0e5bb4537659d7ac15591f5cc7e8f3c205f756b71a474",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count"
@@ -7617,7 +7749,7 @@
       "frozen_table_entry": true,
       "theme_mode": "wrapper",
       "aliases": [],
-      "source_sha256": "bc686b1182ac0a262fbc9f3967a92efc59244e8a90a1085ab8193176beb117a5",
+      "source_sha256": "c0f540b97e63a310d3b0e5bb4537659d7ac15591f5cc7e8f3c205f756b71a474",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "value"
@@ -7696,7 +7828,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "aea61541e5b7138073c831d403d8df1db7f01ccc19189bf7a36cb8808997a01f",
+      "source_sha256": "233db741ed6c26d8f23ed303752e23ac71abf735b3cdac072c57a328e16c5de4",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "x",
@@ -7786,12 +7918,30 @@
           "required": false,
           "annotation": null,
           "default": "Direct volume rendering · supplied voxel field"
+        },
+        {
+          "name": "camera_views",
+          "required": false,
+          "annotation": null,
+          "default": []
+        },
+        {
+          "name": "camera_resolution",
+          "required": false,
+          "annotation": null,
+          "default": 160
+        },
+        {
+          "name": "camera_steps",
+          "required": false,
+          "annotation": null,
+          "default": 96
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "aea61541e5b7138073c831d403d8df1db7f01ccc19189bf7a36cb8808997a01f",
+      "source_sha256": "233db741ed6c26d8f23ed303752e23ac71abf735b3cdac072c57a328e16c5de4",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -7887,7 +8037,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "aea61541e5b7138073c831d403d8df1db7f01ccc19189bf7a36cb8808997a01f",
+      "source_sha256": "233db741ed6c26d8f23ed303752e23ac71abf735b3cdac072c57a328e16c5de4",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },

@@ -128,9 +128,11 @@ def plot_volcano_marginal(data, *, labels=(), alpha=.05, fc=1, x_bins=42, y_bins
         marginal.spines[['top', 'right']].set_visible(False)
         marginal.grid(False)
     ax_top.tick_params(axis='x', labelbottom=False, bottom=False)
-    ax_top.tick_params(axis='y', labelleft=False, left=False)
+    ax_top.tick_params(axis='y', labelleft=True, left=True,labelsize=7)
     ax_right.tick_params(axis='y', labelleft=False, left=False)
-    ax_right.tick_params(axis='x', labelbottom=False, bottom=False)
+    ax_right.tick_params(axis='x', labelbottom=True, bottom=True,labelsize=7)
+    from matplotlib.ticker import MaxNLocator
+    ax_top.yaxis.set_major_locator(MaxNLocator(3,integer=True));ax_right.xaxis.set_major_locator(MaxNLocator(3,integer=True))
     ax_top.set_ylabel('Gene count / bin', fontsize=8)
     ax_right.set_xlabel('Gene count / bin', fontsize=8)
     handles = [Line2D([], [], ls='', marker='o', markersize=6,

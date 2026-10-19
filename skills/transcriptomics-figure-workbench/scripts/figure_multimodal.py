@@ -50,8 +50,8 @@ def plot_cohort_intervals(data,palette,*,effect_scale,effect_label,interval_labe
         raise ValueError('Complete unique feature-by-cohort grid required; split incompatible cohorts')
     if effect_scale=='ratio' and (d[['estimate','lower','upper']]<=0).any().any():
         raise ValueError('Ratio bounds must be positive')
-    fig,ax=plt.subplots(figsize=(max(7.1,6.2+len(cohorts)*.45),max(3.6,len(rows)*.55+1.6)))
-    fig.subplots_adjust(left=.29,right=.97,bottom=.25,top=.86)
+    height=max(3.5,len(rows)*.43+1.8);fig,ax=plt.subplots(figsize=(max(8.7,6.2+len(cohorts)*.45),height))
+    fig.subplots_adjust(left=.28,right=.73,bottom=.85/height,top=1-.65/height)
     ax.axvline(null,color='#AEB7BF',ls='--',lw=.8)
     offsets=np.linspace(-.27,.27,len(cohorts)) if len(cohorts)>1 else [0]
     for i,c in enumerate(cohorts):
@@ -61,7 +61,8 @@ def plot_cohort_intervals(data,palette,*,effect_scale,effect_label,interval_labe
     ax.set_yticks(range(len(rows)),[textwrap.fill(str(x),25) for x in rows]);ax.invert_yaxis()
     if effect_scale=='ratio':ax.set_xscale('log')
     ax.set(xlabel=effect_label,title=title)
-    ax.legend(loc='upper center',bbox_to_anchor=(.5,-.18),ncol=min(4,len(cohorts)),frameon=False)
+    ax.legend(loc='upper left',bbox_to_anchor=(1.05,1),frameon=False,fontsize=8)
+    fig.text(.28,.04,interval_label,fontsize=8)
     axis(ax)
     return stamp(fig,data,'cohort_intervals',effect_scale=effect_scale,effect_label=effect_label,
                  interval_label=interval_label,null_value=null,palette=palette,pooling='none',cohort_order=cohorts)
@@ -69,7 +70,7 @@ def plot_cohort_intervals(data,palette,*,effect_scale,effect_label,interval_labe
 @themed
 def plot_association_matrix(data,*,value_label,method_label,alpha=.05,title='',
                             row_field='feature',column_field='modality',row_order=None,column_order=None,
-                            row_aliases=None,column_aliases=None,cell_width=.7,cell_height=.36,label_rotation=25):
+                            row_aliases=None,column_aliases=None,cell_width=.7,cell_height=.36,label_rotation=25,show_n=True):
     """Frozen signed correlation with supplied FDR marks; missing entries hatch."""
     required_text(value_label=value_label,method_label=method_label)
     d=checked(data,[row_field,column_field,'status'])
@@ -92,7 +93,7 @@ def plot_association_matrix(data,*,value_label,method_label,alpha=.05,title='',
         raise ValueError('Correlation [-1,1], FDR [0,1], integer matched n>=3 required')
     if d.loc[d.status=='unavailable',['value','q','n']].notna().any().any():
         raise ValueError('Unavailable values must remain missing, never zero')
-    fig,ax=plt.subplots(figsize=(max(5.5,len(cols)*float(cell_width)+2.8),max(3.6,len(rows)*float(cell_height)+1.8)))
+    fig,ax=plt.subplots(figsize=(max(6.5,len(cols)*max(float(cell_width),.85)+2.8),max(3.8,len(rows)*max(float(cell_height),.48 if show_n else .36)+1.8)))
     fig.subplots_adjust(left=.30,right=.86,bottom=.27,top=.85)
     values=d.pivot(index='feature',columns='modality',values='value').reindex(index=rows,columns=cols).to_numpy(dtype=float)
     im=ax.imshow(np.ma.masked_invalid(values),cmap=SIGNED,norm=TwoSlopeNorm(0,-1,1),aspect='auto')
@@ -106,7 +107,8 @@ def plot_association_matrix(data,*,value_label,method_label,alpha=.05,title='',
             luminance=float(np.dot(linear,[.2126,.7152,.0722]))
             ink='white' if 1.05/(luminance+.05)>(luminance+.05)/.0556 else '#111111'
             label=f'{r.value:+.2f}' if len(rows)<=12 and len(cols)<=8 else ('+' if r.value>0 else '−' if r.value<0 else '0')
-            ax.text(j,i,label,ha='center',va='center',fontsize=8,color=ink)
+            ax.text(j,i-.12 if show_n else i,label,ha='center',va='center',fontsize=8,color=ink)
+            if show_n:ax.text(j,i+.22,f'n={int(r.n)}',ha='center',va='center',fontsize=7,color=ink)
             if r.q<=alpha:ax.text(j+.30,i-.27,'•',ha='center',va='center',fontsize=8,color=ink)
     xlabels=[str((column_aliases or {}).get(x,x)) for x in cols];ylabels=[str((row_aliases or {}).get(x,x)) for x in rows]
     if len(set(xlabels))!=len(xlabels) or len(set(ylabels))!=len(ylabels):raise ValueError('Axis aliases must be unique')
@@ -114,7 +116,7 @@ def plot_association_matrix(data,*,value_label,method_label,alpha=.05,title='',
     ax.set_yticks(range(len(rows)),[textwrap.fill(x,25) for x in ylabels]);ax.tick_params(length=0)
     for s in ax.spines.values():s.set_visible(False)
     ax.set_title(title,pad=12);fig.colorbar(im,ax=ax,fraction=.04,pad=.04,label=value_label)
-    fig.text(.30,.09,f'• supplied FDR ≤ {alpha:g}; hatching = unavailable\n{method_label}; matched n in source table',fontsize=8)
+    fig.text(.30,.09,f'• supplied FDR ≤ {alpha:g}; hatching = unavailable\n{method_label}; '+('n = supplied matched observations per cell' if show_n else 'matched n in source table'),fontsize=8)
     return stamp(fig,data,'association_matrix',value_label=value_label,method_label=method_label,
                  limits=[-1,1],alpha=alpha,missing='explicit_hatched_not_zero',statistics='frozen_no_fit',
                  row_field=row_field,column_field=column_field,row_order=rows,column_order=cols,

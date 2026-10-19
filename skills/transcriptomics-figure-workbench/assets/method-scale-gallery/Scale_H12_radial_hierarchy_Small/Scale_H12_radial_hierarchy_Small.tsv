@@ -1,0 +1,12 @@
+record_type	node_id	group	metric	outer_value	area_value	left	right	height
+leaf	F01	G1	-2.2	1.0	0.1			
+leaf	F04	G1	-4.3	2.5	0.64			
+leaf	F07	G3	-6.3999999999999995	1.0	0.28			
+leaf	F10	G5	-3.6	2.5	0.82			
+leaf	F13	G7	-5.7	1.0	0.45999999999999996			
+leaf	F16	G7	-2.9000000000000004	2.5	0.1			
+merge	H08					F01	F04	2.0
+merge	H11					F13	F16	2.18
+merge	H12					H08	F07	3.0
+merge	H13					F10	H11	3.06
+merge	H14					H12	H13	4.0

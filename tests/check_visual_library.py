@@ -31,7 +31,7 @@ def main():
     covered={c['source_id'] for c in d['coverage']}
     # Inspect all authoritative manifests, independently of the builder list.
     folders={a.split('/')[0] for a in covered if not a.startswith('legacy/')}
-    assert len(folders)==20
+    assert len(folders)==21
     for folder in folders:
         m=json.loads((S/'assets'/folder/'manifest.json').read_text(encoding='utf8'))
         for r in m['records']:

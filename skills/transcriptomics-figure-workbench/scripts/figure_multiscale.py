@@ -80,7 +80,7 @@ def plot_locus_tracks(data,theme,*,position_limits,chromosome,assembly,coordinat
         genes.plot([row.start,row.end],[row.lane]*2,c=theme['roles']['primary'],lw=3);mid=(row.start+row.end)/2;direction=1 if row.strand=='+' else -1
         genes.annotate('',xy=(mid+direction*(hi-lo)*.018,row.lane),xytext=(mid-direction*(hi-lo)*.018,row.lane),arrowprops=dict(arrowstyle='->',color=theme['roles']['border'],lw=.7))
         genes.text(mid,row.lane+.24,row.gene_id,ha='center',fontsize=8)
-    genes.set(ylim=(-.4,g.lane.max()+.8),yticks=[],xlabel=chromosome+' / supplied position');genes.spines[['top','right','left']].set_visible(False)
+    genes.set(ylim=(-.4,g.lane.max()+.8),yticks=[],xlabel=chromosome+' / '+coordinate_definition);genes.spines[['top','right','left']].set_visible(False)
     cb=fig.add_axes([.80,.59,.023,.23]);fig.colorbar(plt.cm.ScalarMappable(norm=Normalize(0,1),cmap=cm),cax=cb,label='Supplied LD r2')
     fig.text(.79,.46,'Reference\n'+ld_reference+'\nGrey x: LD unavailable',fontsize=8);fig.text(.12,.055,assembly+'; supplied gene spans, no exon structure or colocalization inferred.',fontsize=8)
     return _finish(fig,data,theme,'local_association_tracks',position_limits=list(position_limits),chromosome=chromosome,assembly=assembly,coordinate_definition=coordinate_definition,ld_reference=ld_reference,ld_definition=ld_definition,recombination_unit=recombination_unit,missing_ld='grey x; never zero-imputed')

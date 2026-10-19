@@ -51,14 +51,17 @@ def plot_effect_matrix(data, effect_label, *, effect_scale, evidence_cap=6,
         if len(column_order)!=len(set(column_order)) or set(column_order)!=set(cols):raise ValueError('column_order must cover every column')
         cols=column_order
     x=[cols.index(v) for v in d.contrast]; y=[rows.index(v) for v in d.feature]
-    fig,ax=canvas(); fig.set_size_inches(max(7.1,len(cols)*float(cell_width)),max(4.5,len(rows)*float(cell_height)+1.5))
+    fig,ax=canvas();fig.set_layout_engine(None);height=max(3.6,len(rows)*float(cell_height)+1.5);fig.set_size_inches(max(8.5,len(cols)*float(cell_width)+4.5),height)
+    ax.set_position([.28,.8/height,.35,(height-1.5)/height])
     ax.scatter(x,y,s=180,facecolors='none',edgecolors='#D8DDE2',marker='s',linewidths=.6)
     extent=max(abs(colors).max(),1e-9)
     dots=ax.scatter(x,y,s=score/evidence_cap*160,c=colors,cmap='RdBu_r',norm=TwoSlopeNorm(0,-extent,extent))
-    fig.colorbar(dots,ax=ax,label=('log2 of '+effect_label) if effect_scale=='ratio' else effect_label)
+    bar_height=min(1.8,max(.9,(height-1.3)*.42));bar_bottom=height-.75-bar_height
+    colorbar=fig.add_axes([.73,bar_bottom/height,.018,bar_height/height])
+    fig.colorbar(dots,cax=colorbar,label=('log2 of '+effect_label) if effect_scale=='ratio' else effect_label)
     levels=sorted(set([min(1,evidence_cap),min(3,evidence_cap),evidence_cap]))
     ax.legend(handles=[ax.scatter([],[],s=v/evidence_cap*160,color='#5D6975',label=f'{v:g}') for v in levels],
-              title=f'-log10(FDR)\ncapped at {evidence_cap:g}',loc='upper left',bbox_to_anchor=(1.3,1),frameon=False)
+              title=f'-log10(FDR)\ncapped at {evidence_cap:g}',loc='upper left',bbox_to_anchor=(.71,(bar_bottom-.3)/height),bbox_transform=fig.transFigure,frameon=False,fontsize=8,title_fontsize=8)
     xl=[str((column_aliases or {}).get(x,x)) for x in cols];yl=[str((row_aliases or {}).get(x,x)) for x in rows]
     if len(set(xl))!=len(xl) or len(set(yl))!=len(yl):raise ValueError('Axis aliases must be unique')
     ax.set_xticks(range(len(cols)),xl,rotation=30,ha='right'); ax.set_yticks(range(len(rows)),yl)

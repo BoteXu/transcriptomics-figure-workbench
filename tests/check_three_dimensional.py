@@ -7,7 +7,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from figure_three_dimensional import composite_volume,_volume,_trajectory,plot_scatter3d,plot_molecular_trajectory
+from figure_three_dimensional import composite_volume,composite_camera_volume,_volume,_trajectory,plot_scatter3d,plot_molecular_trajectory
 from project_theme import create_theme
 
 
@@ -26,6 +26,16 @@ def main():
     np.testing.assert_allclose(front,np.broadcast_to([.75,.25,.5],(2,2,3)))
     np.testing.assert_allclose(back,np.broadcast_to([.5,.25,.75],(2,2,3)))
     np.testing.assert_allclose(composite_volume(grid,axes,knots,colors,np.zeros(2),'z+',1),1)
+    # Camera rendering must obey the declared transfer, sample actual voxels,
+    # retain physical extents and leave source arrays intact.
+    frozen=grid.copy()
+    camera,extent,corners,projected,u,v=composite_camera_volume(grid,axes,knots,colors,np.zeros(2),(25,-55),1,48,48)
+    np.testing.assert_allclose(camera,1);np.testing.assert_array_equal(grid,frozen)
+    assert camera.shape==(48,48,3) and corners.shape==(8,3) and projected.shape==(8,2)
+    np.testing.assert_allclose(np.linalg.norm(u),1);np.testing.assert_allclose(np.linalg.norm(v),1);np.testing.assert_allclose(np.dot(u,v),0,atol=1e-14)
+    opaque=composite_camera_volume(np.zeros((2,2,2)),axes,knots,colors,np.ones(2),(25,-55),1,48,48)[0]
+    assert opaque[24,24,0]>.99 and max(opaque[24,24,1:])<.01
+    reject(lambda:composite_camera_volume(grid,axes,knots,colors,opacity,(25,-55),1,1000,96))
     homogeneous=np.zeros((2,2,2));spaced=[np.array([0.,2.])]*3
     np.testing.assert_allclose(composite_volume(homogeneous,spaced,knots,colors,opacity,'z+',1),np.broadcast_to([1.,.0625,.0625],(2,2,3)))
     voxels=pd.DataFrame([dict(x=i,y=j,z=k,value=.25) for i in range(2) for j in range(2) for k in range(2)])

@@ -1,0 +1,26 @@
+{
+  "id": "Scale_H27_running_enrichment_Composition",
+  "title": "已有富集运行曲线 · same input, different complete layout",
+  "columns": 2,
+  "canvas_width_pt": 1764.0,
+  "gap_pt": 24,
+  "padding_pt": 24,
+  "heading_pt": 40,
+  "panel_label_gutter_pt": 20,
+  "packing": "masonry",
+  "packing_order": "input",
+  "panels": [
+    {
+      "id": "Scale_H27_running_enrichment_Large",
+      "label": "A  Large · complete selected source",
+      "svg": "../Scale_H27_running_enrichment_Large/Scale_H27_running_enrichment_Large.svg",
+      "table": "../Scale_H27_running_enrichment_Large/Scale_H27_running_enrichment_Large.tsv"
+    },
+    {
+      "id": "Scale_H27_running_enrichment_Custom",
+      "label": "B  Caller layout · same source",
+      "svg": "../Scale_H27_running_enrichment_Custom/Scale_H27_running_enrichment_Custom.svg",
+      "table": "../Scale_H27_running_enrichment_Custom/Scale_H27_running_enrichment_Custom.tsv"
+    }
+  ]
+}

@@ -7,3 +7,5 @@
 # Keep source/doc whitespace checks, without rewriting frozen scientific files.
 *.svg -whitespace
 *.tsv -whitespace
+# Historical source snapshots preserve exact audited bytes, including EOF space.
+skills/transcriptomics-figure-workbench/references/source-archive-*/*.txt -whitespace

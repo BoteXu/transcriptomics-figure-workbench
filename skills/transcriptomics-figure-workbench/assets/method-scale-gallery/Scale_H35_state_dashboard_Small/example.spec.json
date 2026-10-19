@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "figure_id": "Scale_H35_state_dashboard_Small",
+  "renderer": "figure_reference.plot_state_dashboard",
+  "input": {
+    "path": "Scale_H35_state_dashboard_Small.tsv",
+    "sha256": "3d2901e606e28754f74383b7db23c4a9cc401f28e66fbbbe5cfa0543be40e47e",
+    "numeric_columns": [
+      "order",
+      "x",
+      "y",
+      "value",
+      "evidence"
+    ],
+    "max_rows": 100000,
+    "max_bytes": 20971520
+  },
+  "parameters": {
+    "family_order": [
+      "Block A",
+      "Block B",
+      "Block C",
+      "Block D"
+    ],
+    "condition_order": [
+      "Level 1",
+      "Level 2",
+      "Level 3"
+    ],
+    "palette": {
+      "1.1 state 1": "#bf4d4d",
+      "1.2 state 2": "#4d6ebf",
+      "1.3 state 3": "#90bf4d",
+      "1.4 state 4": "#bf4db1",
+      "1.5 state 5": "#4dbfac",
+      "1.6 state 6": "#bf8a4d",
+      "1.7 state 7": "#694dbf",
+      "2.1 state 1": "#52bf4d",
+      "2.2 state 2": "#bf4d73",
+      "2.3 state 3": "#4d95bf",
+      "2.4 state 4": "#b6bf4d",
+      "2.5 state 5": "#a74dbf",
+      "2.6 state 6": "#4dbf85",
+      "2.7 state 7": "#bf644d",
+      "3.1 state 1": "#4d57bf",
+      "3.2 state 2": "#78bf4d",
+      "3.3 state 3": "#bf4d9a",
+      "3.4 state 4": "#4dbbbf",
+      "3.5 state 5": "#bfa24d",
+      "3.6 state 6": "#804dbf",
+      "3.7 state 7": "#4dbf5f",
+      "4.1 state 1": "#bf4d5c",
+      "4.2 state 2": "#4d7dbf",
+      "4.3 state 3": "#9fbf4d",
+      "4.4 state 4": "#be4dbf",
+      "4.5 state 5": "#4dbf9d",
+      "4.6 state 6": "#bf7b4d",
+      "4.7 state 7": "#5a4dbf"
+    },
+    "mean_label": "Supplied mean value",
+    "program_label": "Supplied signed score",
+    "numeric_guides": true,
+    "size": [
+      12,
+      7
+    ]
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "aesthetic-library-preview",
+    "palette_name": "card_06",
+    "palette_colors": [
+      "#506AAA",
+      "#728DC1",
+      "#91BBDF",
+      "#B6DBF1",
+      "#F6D3D9",
+      "#E79FBF",
+      "#E17692"
+    ],
+    "group_slots": {
+      "G1": 0,
+      "G2": 1,
+      "G3": 2,
+      "G4": 3,
+      "G5": 4,
+      "G6": 5,
+      "G7": 6,
+      "All points": 0,
+      "Support": 1,
+      "Site": 6,
+      "Input": 2,
+      "Output": 0
+    },
+    "roles": {
+      "primary": "#506AAA",
+      "negative": "#506AAA",
+      "positive": "#E17692",
+      "accent": "#E17692",
+      "neutral": "#A8ADB3",
+      "significant": "#E17692",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#F7F9FC",
+        "#506AAA"
+      ],
+      "diverging": [
+        "#506AAA",
+        "#F7F7F7",
+        "#E17692"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true,
+    "category_colors": {
+      "1.1 state 1": "#bf4d4d",
+      "1.2 state 2": "#4d6ebf",
+      "1.3 state 3": "#90bf4d",
+      "1.4 state 4": "#bf4db1",
+      "1.5 state 5": "#4dbfac",
+      "1.6 state 6": "#bf8a4d",
+      "1.7 state 7": "#694dbf",
+      "2.1 state 1": "#52bf4d",
+      "2.2 state 2": "#bf4d73",
+      "2.3 state 3": "#4d95bf",
+      "2.4 state 4": "#b6bf4d",
+      "2.5 state 5": "#a74dbf",
+      "2.6 state 6": "#4dbf85",
+      "2.7 state 7": "#bf644d",
+      "3.1 state 1": "#4d57bf",
+      "3.2 state 2": "#78bf4d",
+      "3.3 state 3": "#bf4d9a",
+      "3.4 state 4": "#4dbbbf",
+      "3.5 state 5": "#bfa24d",
+      "3.6 state 6": "#804dbf",
+      "3.7 state 7": "#4dbf5f",
+      "4.1 state 1": "#bf4d5c",
+      "4.2 state 2": "#4d7dbf",
+      "4.3 state 3": "#9fbf4d",
+      "4.4 state 4": "#be4dbf",
+      "4.5 state 5": "#4dbf9d",
+      "4.6 state 6": "#bf7b4d",
+      "4.7 state 7": "#5a4dbf"
+    }
+  },
+  "provenance": {
+    "source": "Public authored drawing fixture; Complete selected frozen identities and supplied channels; no inference",
+    "input_unit": "Explicit display records with declared physical or synthetic units",
+    "experimental_unit": "No real biological independent units; no scientific inference",
+    "contrast": "Declared illustrative comparison; preserve original values and complete selected scope",
+    "denominator": "Every row of the exact frozen selected input table",
+    "model": "No scientific model fitted",
+    "limits": "Software and visual demonstration, not biomedical evidence",
+    "filtering": "No filtering while drawing",
+    "uncertainty": "Only supplied uncertainty channels; no interval estimation",
+    "interpretation_limit": "Review new data, units, layout and intended display size separately",
+    "synthetic": true
+  },
+  "export": {
+    "raster_dpi": 300,
+    "readability_policy": "warn"
+  }
+}

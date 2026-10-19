@@ -5,12 +5,14 @@ import path from 'node:path';
 import {pathToFileURL} from 'node:url';
 const out=process.argv[2];if(!out)throw Error('Choose a fresh evidence directory');
 await fs.mkdir(out,{recursive:false});
-const base=path.resolve('skills/transcriptomics-figure-workbench/assets/method-upgrade-gallery');
+const base=path.resolve(process.argv[3]||'skills/transcriptomics-figure-workbench/assets/method-upgrade-gallery');
+const manifest=JSON.parse(await fs.readFile(path.join(base,'manifest.json'),'utf8'));
+const selected=manifest.records.filter(r=>r.assets?.animation).map(r=>r.id);
 const {chromium}=await import(pathToFileURL(process.env.FIGURE_PLAYWRIGHT_MODULE));
 const browser=await chromium.launch({headless:true,...(process.platform==='win32'?{channel:'msedge'}:{})});
 const errors=[],external=[],records=[];
 try{
- for(const id of ['D03_Trajectory','D03_Trajectory_Custom','D03_Trajectory_Small']){
+ for(const id of selected){
   const p=await browser.newPage({viewport:{width:1000,height:900}});
   try{
    p.on('pageerror',e=>errors.push(e.message));
