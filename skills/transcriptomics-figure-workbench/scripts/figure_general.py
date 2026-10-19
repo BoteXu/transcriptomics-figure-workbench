@@ -25,7 +25,7 @@ def plot_xy_points(data,palette,x_label,y_label,*,unit_label,connect_order=False
         ax.scatter(sub.x,sub.y,color=palette[g],s=27,alpha=.8,label=f'{g} · n={len(sub)}',linewidths=.3,edgecolors='white',zorder=2)
         if label_points:
             for row in sub.itertuples():ax.annotate(str(row.unit_id),(row.x,row.y),xytext=(4,4),textcoords='offset points',fontsize=8,color='#40535F')
-    ax.set(xlabel=x_label,ylabel=y_label);ax.legend(title=unit_label,frameon=False,title_fontsize=8,fontsize=8)
+    ax.set(xlabel=x_label,ylabel=y_label);ax.legend(title=textwrap.fill(unit_label,28),frameon=False,title_fontsize=8,fontsize=8)
     return stamp(fig,data,'xy_points',palette=palette,x_label=x_label,y_label=y_label,unit_label=unit_label,
                  connect_order=connect_order,label_points=label_points,inference='No correlation, fit or p-value computed; connected order is supplied')
 

@@ -69,6 +69,15 @@ def main():
     assert len(numbers)==70
     radii={round(np.hypot(*t.get_position()),2) for t in numbers}
     assert radii=={.87,.96};plt.close(f);checked+=1
+    # A genuine legacy fixture exposed a long observation-unit legend title
+    # outside the canvas on Linux. Preserve its full wording and wrap it.
+    from method_extension_fixture import fixture_cases
+    theme,cases=fixture_cases();case=cases['E24'];theme['font_family']='DejaVu Sans'
+    f,audit=render('xy_points',case['data'],case['params'],theme)
+    assert not audit['issues']
+    legend=f.axes[0].get_legend() or f.legends[0]
+    assert ' '.join(legend.get_title().get_text().split())==case['params']['unit_label']
+    assert '\n' in legend.get_title().get_text();plt.close(f);checked+=1
     assert not plt.get_fignums()
     print(json.dumps(dict(state='SCALE_EXPOSED_DRAWING_REGRESSIONS_PASS',cases=checked,scientific_inference=False)))
 
