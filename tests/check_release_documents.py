@@ -13,8 +13,11 @@ from current_release import DOCUMENTS, PREFIX, check_document_links, portable_do
 def main():
     version = (ROOT / 'VERSION').read_text('utf8').strip()
     files = public_files()
-    members = set(files) | set(DOCUMENTS) | {'LICENSE', 'requirements.txt', 'requirements-review.txt', 'RELEASE_SOURCE.json'}
-    docs = {name: portable_document((ROOT / name).read_text('utf8'), name, version, members) for name in DOCUMENTS}
+    members = set(files) | set(DOCUMENTS.values()) | {'LICENSE', 'requirements.txt', 'requirements-review.txt', 'RELEASE_SOURCE.json'}
+    docs = {destination: portable_document((ROOT / name).read_text('utf8'), name, version, members)
+            for name, destination in DOCUMENTS.items()}
+    assert not set(files) & set(docs), 'Generated docs must preserve original package documents'
+    assert 'THIRD_PARTY.md' in files and 'SOURCE_ATTRIBUTION.md' in docs
     count = check_document_links(docs, members)
     assert 'python scripts/workbench.py visual-template' in docs['README.md']
     assert 'python ' + PREFIX + 'scripts/workbench.py' not in docs['README.md']

@@ -12,7 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PREFIX = 'skills/transcriptomics-figure-workbench/'
 PACKAGE = 'transcriptomics-figure-workbench/'
 REPOSITORY = 'https://github.com/BoteXu/transcriptomics-figure-workbench'
-DOCUMENTS = ('README.md', 'THIRD_PARTY.md', 'docs/readme-history-before-overview.md', 'docs/release-v0110.md')
+DOCUMENTS = {'README.md': 'README.md', 'THIRD_PARTY.md': 'SOURCE_ATTRIBUTION.md',
+             'docs/readme-history-before-overview.md': 'docs/readme-history-before-overview.md',
+             'docs/release-v0110.md': 'docs/release-v0110.md'}
 LINK = re.compile(r'(\[[^\]\n]+\]\()([^\)\n]+)(\))')
 
 
@@ -56,11 +58,12 @@ def portable_document(text, source, version, members):
         original = posixpath.normpath(posixpath.join(posixpath.dirname(source), unquote(split.path)))
         if original.startswith(('../', '/')):
             raise ValueError('Document link escapes the public repository')
-        candidate = original.removeprefix(PREFIX)
+        candidate = DOCUMENTS.get(original, original.removeprefix(PREFIX))
         if original == 'examples/studio/index.html':
             candidate = 'assets/figure-studio.html'
         if candidate in members:
-            rewritten = posixpath.relpath(candidate, posixpath.dirname(source) or '.')
+            destination = DOCUMENTS.get(source, source)
+            rewritten = posixpath.relpath(candidate, posixpath.dirname(destination) or '.')
         else:
             rewritten = REPOSITORY + '/blob/v' + version + '/' + original
         if split.query:
@@ -109,9 +112,9 @@ def build_current_release(output):
         if name in files and file_digest(files[name]) != file_digest(ROOT / name):
             raise ValueError('Conflicting dependency or license document: ' + name)
         files[name] = ROOT / name
-    members = set(files) | set(DOCUMENTS) | {'RELEASE_SOURCE.json'}
-    documents = {name: portable_document((ROOT / name).read_text('utf8'), name, version, members)
-                 for name in DOCUMENTS}
+    members = set(files) | set(DOCUMENTS.values()) | {'RELEASE_SOURCE.json'}
+    documents = {destination: portable_document((ROOT / name).read_text('utf8'), name, version, members)
+                 for name, destination in DOCUMENTS.items()}
     local_links = check_document_links(documents, members)
     provenance = dict(schema_version=1, version=version, tag='v' + version, source_commit=source,
                       repository=REPOSITORY, repository_readme_sha256=file_digest(ROOT / 'README.md'),
