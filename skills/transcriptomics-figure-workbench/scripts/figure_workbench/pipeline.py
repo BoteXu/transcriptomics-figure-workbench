@@ -50,6 +50,9 @@ def render_plan(plan,output):
         'input_sha256':plan['input_sha256'],'source_identity':plan['source_identity'],
         'renderer':plan['renderer'],'quantitative_geometry_sha256':geometry_signature(fig),
         'appearance_sha256':hash_value(theme),'export':settings,'print_readability':readability,'visual_acceptance':False,'scientific_acceptance':False}
+    if 'handoff' in plan:
+        # Preserve source/QC lineage in the export; machine-local plan paths stay private.
+        meta['workbench']['handoff']={k:copy.deepcopy(v) for k,v in plan['handoff'].items() if k!='path'}
     lock=output/('.'+spec['figure_id']+'.lock')
     guard=None
     try:

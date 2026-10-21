@@ -38,6 +38,8 @@ def main():
     method_spec=commands.add_parser('method-spec');method_spec.add_argument('--entry',required=True)
     method_spec.add_argument('--template',required=True,type=Path);method_spec.add_argument('--output',required=True,type=Path)
     plan=commands.add_parser('plan');plan.add_argument('--spec',required=True,type=Path);plan.add_argument('--output',required=True,type=Path)
+    handoff=commands.add_parser('handoff-plan');handoff.add_argument('--handoff',required=True,type=Path);handoff.add_argument('--output',required=True,type=Path)
+    linked=commands.add_parser('linked-views');linked.add_argument('--request',required=True,type=Path);linked.add_argument('--output',required=True,type=Path)
     render=commands.add_parser('render');source=render.add_mutually_exclusive_group(required=True)
     source.add_argument('--spec',type=Path);source.add_argument('--plan',type=Path);render.add_argument('--output',required=True,type=Path)
     migrate=commands.add_parser('migrate');migrate.add_argument('--input',required=True,type=Path)
@@ -141,6 +143,14 @@ def main():
     elif args.command=='plan':
         result=make_plan(read_json(args.spec),args.spec.resolve().parent);write_new(args.output,result)
         result={'status':'PREFLIGHT_ONLY','rows':result['rows'],'renderer':result['renderer'],'output':str(args.output)}
+    elif args.command=='handoff-plan':
+        from figure_workbench.handoff import handoff_plan
+        result=handoff_plan(args.handoff);write_new(args.output,result)
+        result={'status':'PREFLIGHT_ONLY','rows':result['rows'],'renderer':result['renderer'],'handoff_checked':True,
+                'analysis_performed':False,'visual_acceptance':False,'output':str(args.output)}
+    elif args.command=='linked-views':
+        from figure_workbench.linked import build_linked
+        result=build_linked(read_json(args.request),args.request.resolve().parent,args.output)
     elif args.command=='render':
         from figure_workbench.pipeline import render_plan
         selected=read_json(args.plan) if args.plan else make_plan(read_json(args.spec),args.spec.resolve().parent)

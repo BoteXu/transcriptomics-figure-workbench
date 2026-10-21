@@ -14,7 +14,8 @@ PACKAGE = 'transcriptomics-figure-workbench/'
 REPOSITORY = 'https://github.com/BoteXu/transcriptomics-figure-workbench'
 DOCUMENTS = {'README.md': 'README.md', 'THIRD_PARTY.md': 'SOURCE_ATTRIBUTION.md',
              'docs/readme-history-before-overview.md': 'docs/readme-history-before-overview.md',
-             'docs/release-v0110.md': 'docs/release-v0110.md'}
+             'docs/release-v0110.md': 'docs/release-v0110.md',
+             'docs/release-v0120.md': 'docs/release-v0120.md'}
 LINK = re.compile(r'(\[[^\]\n]+\]\()([^\)\n]+)(\))')
 
 

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "title": "One state geometry, three coordinated views",
+  "subtitle": "Inspect the supplied X, Y and Z coordinates together. Select an object in any panel to trace the same identity across the other projections and its exact stored values.",
+  "input": {
+    "path": "input.tsv",
+    "sha256": "177809fbc70ecfd52f0ad760a78a4c1182746bd54bd7582f7bdaa903746b96fa"
+  },
+  "id_column": "object_id",
+  "group_column": "group",
+  "views": [
+    {
+      "id": "xy",
+      "title": "XY · state separation",
+      "x": "x",
+      "y": "y",
+      "x_label": "X coordinate (a.u.)",
+      "y_label": "Y coordinate (a.u.)"
+    },
+    {
+      "id": "xz",
+      "title": "XZ · depth and overlap",
+      "x": "x",
+      "y": "z",
+      "x_label": "X coordinate (a.u.)",
+      "y_label": "Z coordinate (a.u.)"
+    },
+    {
+      "id": "yz",
+      "title": "YZ · complementary structure",
+      "x": "y",
+      "y": "z",
+      "x_label": "Y coordinate (a.u.)",
+      "y_label": "Z coordinate (a.u.)"
+    }
+  ],
+  "colors": {
+    "State A": "#218C8D",
+    "State B": "#D8795B",
+    "State C": "#5676A5"
+  },
+  "context": {
+    "independent_unit": "Synthetic objects; no donors or biological inference",
+    "scope": "Every stored object from the selected published scale fixture; no coordinate fitting or thinning",
+    "missingness": "All coordinate pairs supplied in this example. NA pairs in other data remain unavailable.",
+    "synthetic": true
+  },
+  "layout": {
+    "columns": "auto",
+    "width_px": 1440,
+    "panel_height": 320
+  }
+}

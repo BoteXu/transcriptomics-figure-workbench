@@ -163,6 +163,11 @@ def make_plan(spec,base):
 def check_plan(plan):
     if not isinstance(plan,dict) or plan.get('schema_version')!=1:
         raise ValueError('Unsupported plan')
+    if 'handoff' in plan:
+        from .handoff import handoff_plan
+        if handoff_plan(plan['handoff']['path'])!=plan:
+            raise ValueError('Handoff, input, QC, sources or renderer changed; prepare a new plan')
+        return plan
     validate_spec(plan['spec'])
     # Rebind the selected resolved file, independent of the original spec directory.
     rebound=json.loads(json.dumps(plan['spec']))

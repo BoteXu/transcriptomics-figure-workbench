@@ -1,4 +1,18 @@
+# 0.12.0
+
+- Source-bound FigureHandoff consumer and revalidation using existing FigureSpec/render contracts.
+- Offline shared-identity coordinated views, explicit missing pairs, stable axes, keyboard selection, complete register and SVG export.
+- Actual 48/96/144-object fixtures and a custom two-column layout, reusing published frozen coordinates.
+- Progressive skill routing with the full v0.11 guide preserved; README, source attribution and release documentation synchronized.
+- Existing 42 upgrades, 3D/volume/trajectory, rich bulk/single-cell forms and original exports preserved. No scientific engine added.
+
+## 0.11.0
+
+Source-bound current packages, portable README/release notes, exact input examples, original attribution preservation and checked clean-install command paths. The indexed static library has 21 galleries and 136 registered Python entries (135 current runnable implementations plus a delegating wrapper); examples and layouts are not algorithm counts.
+
 # Change log
+
+## Change log
 
 ## 0.10.0 source update · complete cross-domain visual library
 

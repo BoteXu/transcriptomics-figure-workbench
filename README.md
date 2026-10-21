@@ -8,7 +8,19 @@
 
 [快速上手](#quick-start) · [42 个升级配方](#upgraded-recipes) · [三维与动画实例](#three-dimensional) · [自定义布局](#custom-layout) · [完整分析配套](#analysis-suites) · [安装为 skill](#install-skill) · [检查与来源](#validation)
 
-**当前版本：v0.11.0。** [下载完整 skill 包与 SHA256 校验文件](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v0.11.0)。包内包含本页的可移植说明、当前全部图库和准确示例；源提交及文档哈希记录在 `RELEASE_SOURCE.json`。版本变化与复现方式见[发布说明](docs/release-v0110.md)。
+**当前版本：v0.12.0。** [下载完整 skill 包与 SHA256 校验文件](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v0.12.0)。包内包含本页的可移植说明、当前全部图库和准确示例；源提交及文档哈希记录在 `RELEASE_SOURCE.json`。版本变化与复现方式见[发布说明](docs/release-v0120.md)。
+
+## v0.12.0：结果交接与同对象联动
+
+增加 `handoff-plan`，直接核验 BioResearchWorkbench 交来的准确结果、QC、方法／参考版本和来源，再进入现有绘图流程。增加 `linked-views`，在多视图中同步选中同一对象，保留固定轴域、完整数据、缺失值、键盘操作和对齐 SVG 导出。它是已有画法的检查扩展，不增加科学分析或模型服务。
+
+[实际可操作的 48／96／144 对象与双列布局](skills/transcriptomics-figure-workbench/assets/connected-examples/index.html) · [来源交接、完整参数与调用](skills/transcriptomics-figure-workbench/references/connected-workflows-v0120.md)。skill 入口按任务重整，旧详细说明和所有旧画法保留。
+
+```sh
+python skills/transcriptomics-figure-workbench/scripts/workbench.py handoff-plan --handoff skills/transcriptomics-figure-workbench/assets/connected-examples/handoff/figure-handoff.json --output outputs/handoff-plan.json
+python skills/transcriptomics-figure-workbench/scripts/workbench.py render --plan outputs/handoff-plan.json --output outputs/handoff-render
+python skills/transcriptomics-figure-workbench/scripts/workbench.py linked-views --request skills/transcriptomics-figure-workbench/assets/connected-examples/medium/request.json --output outputs/linked-medium
+```
 
 ## 工作台覆盖什么
 

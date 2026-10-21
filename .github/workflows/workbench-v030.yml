@@ -39,6 +39,7 @@ jobs:
           python tests/check_companion_catalog.py
           python tests/check_visual_library.py
           python tests/check_method_upgrades.py
+          python tests/check_connected.py
           python tests/check_method_scale_examples.py
           python tests/check_private_profile_sync.py
           python tools/build_journal_review.py --check
@@ -56,6 +57,8 @@ jobs:
       - run: python -m pip install -r requirements-review.txt
       - name: Render frozen fixtures and verify output/review behavior
         run: python tests/check_workbench_runtime.py workbench-ci
+      - name: Consume and render the source-bound shared handoff
+        run: python tests/check_connected_runtime.py connected-runtime-ci
       - name: Check variable-data single-figure layouts
         run: python tests/check_responsive_layout.py responsive-ci
       - name: Check study routing, independent units and repaired layout regressions
@@ -99,6 +102,7 @@ jobs:
           path: |
             workbench-ci
             study-ci-fixtures
+            connected-runtime-ci
   browser:
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -129,6 +133,7 @@ jobs:
           node tests/check_navigation_dedup.mjs navigation-dedup-ci
           node tests/check_visual_library.mjs visual-library-ci
           node tests/check_trajectory_browser.mjs trajectory-browser-ci
+          node tests/check_connected_browser.mjs connected-browser-ci
           node tests/check_trajectory_browser.mjs trajectory-scale-browser-ci skills/transcriptomics-figure-workbench/assets/method-scale-gallery
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
@@ -140,3 +145,4 @@ jobs:
             forms-browser-ci
             v090-browser-ci
             companion-browser-ci
+            connected-browser-ci
