@@ -18,6 +18,9 @@ def main(output):
     lineage=receipt['workbench']['handoff']
     assert lineage['binding_sha256']==p['handoff']['binding_sha256'] and 'path' not in lineage
     assert lineage['execution_state']=='frozen_results_supplied' and lineage['caller_assertions_independently_verified'] is False
+    assert lineage['context']['method_version']==p['handoff']['context']['method_version']
+    assert lineage['context']['reference_version']==p['handoff']['context']['reference_version']
+    assert lineage['qc']['review_reference']==p['handoff']['qc']['review_reference']
     report={'state':'HANDOFF_RENDER_PASS','objects':96,'input_qc_source_lineage_preserved':True,'analysis_performed':False,'visual_acceptance':False}
     (out/'validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8');print(json.dumps(report))
 

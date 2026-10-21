@@ -28,6 +28,11 @@ def main():
     assert p['handoff']['caller_assertions_independently_verified'] is False
     with tempfile.TemporaryDirectory() as temporary:
         folder=Path(temporary);value=json.loads(source.read_text('utf8'))
+        for name in ['small','medium','large','custom']:
+            request_path=examples/name/'request.json';request=json.loads(request_path.read_text('utf8'))
+            rendered=build_linked(request,request_path.parent,folder/('replay-'+name))
+            assert (folder/('replay-'+name)/'index.html').read_bytes()==(examples/name/'index.html').read_bytes()
+            assert rendered['html_sha256']==json.loads((examples/name/'manifest.json').read_text('utf8'))['html_sha256']
         (folder/'frozen.tsv').write_bytes((source.parent/'frozen.tsv').read_bytes())
         def save(v):
             (folder/'handoff.json').write_text(json.dumps(v),encoding='utf8');return folder/'handoff.json'

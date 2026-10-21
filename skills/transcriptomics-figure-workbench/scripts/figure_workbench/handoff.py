@@ -15,5 +15,6 @@ def handoff_plan(path):
     plan['handoff'] = {'path':str(path), 'sha256':before, 'binding_sha256':check['binding_sha256'],
                        'context_sha256':check['context_sha256'], 'qc_state':'passed',
                        'execution_state':value['execution']['state'], 'source_records':value['sources'],
+                       'context':value['context'], 'qc':value['qc'], 'execution':value['execution'],
                        'caller_assertions_independently_verified':False}
     return plan
