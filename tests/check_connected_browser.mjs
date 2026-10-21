@@ -30,6 +30,7 @@ try{
    await p.locator(`.view:first-child .dot[data-object-id="${id}"]`).focus();await p.keyboard.press('Space');
    assert.equal(await p.locator('.dot[aria-pressed="true"]').count(),0);
    await p.keyboard.press('Enter');assert.equal(await p.locator('.dot[aria-pressed="true"]').count(),3);
+   assert.equal(await p.locator('#rows tr').count(),8);await p.locator('#all').click();assert.equal(await p.locator('#rows tr').count(),1);await p.locator('#all').click();
    await p.screenshot({path:path.join(out,record.id+'-selected.png'),fullPage:true});
    const domains=await p.evaluate(()=>window.linkedInspector.domains);
    await p.locator('#group').selectOption(data.rows.at(-1).group);
@@ -42,6 +43,8 @@ try{
    const svg=await fs.readFile(svgFile,'utf8');assert.ok(svg.includes(data.input_sha256));
    for(const group of Object.keys(data.colors))assert.ok(svg.includes(group));
    assert.equal((svg.match(/class="dot"/g)||[]).length,record.rows*3);
+   const exportPage=await browser.newPage({viewport:{width:1500,height:1100}});
+   try{await exportPage.route('**/*',r=>/^(file:|data:)/.test(r.request().url())?r.continue():r.abort());await exportPage.goto(pathToFileURL(svgFile).href);await exportPage.screenshot({path:path.join(out,record.id+'-svg-export.png'),fullPage:true})}finally{await exportPage.close()}
    await p.locator('#reset').click();await p.locator('#next').click();assert.ok((await p.locator('#page').textContent()).startsWith('9'));
    await p.setViewportSize({width:900,height:1000});assert.equal(await p.locator('#views').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length),2);
    await p.screenshot({path:path.join(out,record.id+'-tablet.png'),fullPage:true});
