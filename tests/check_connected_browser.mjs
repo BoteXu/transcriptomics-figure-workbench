@@ -43,8 +43,11 @@ try{
    const svg=await fs.readFile(svgFile,'utf8');assert.ok(svg.includes(data.input_sha256));
    for(const group of Object.keys(data.colors))assert.ok(svg.includes(group));
    assert.equal((svg.match(/class="dot"/g)||[]).length,record.rows*3);
+   assert.ok(await p.evaluate(text=>!new DOMParser().parseFromString(text,'image/svg+xml').querySelector('parsererror'),svg),'Exported SVG must parse independently');
+   const preview=path.join(out,record.id+'-svg-preview.html');
+   await fs.writeFile(preview,'<!doctype html><meta charset="utf-8"><title>Exact exported SVG</title><style>body{margin:20px;background:white}img{display:block;max-width:100%;height:auto}</style><img alt="Exact exported coordinated views" src="'+encodeURIComponent(path.basename(svgFile))+'">');
    const exportPage=await browser.newPage({viewport:{width:1500,height:1100}});
-   try{await exportPage.route('**/*',r=>/^(file:|data:)/.test(r.request().url())?r.continue():r.abort());await exportPage.goto(pathToFileURL(svgFile).href);await exportPage.screenshot({path:path.join(out,record.id+'-svg-export.png'),fullPage:true})}finally{await exportPage.close()}
+   try{await exportPage.route('**/*',r=>/^(file:|data:)/.test(r.request().url())?r.continue():r.abort());await exportPage.goto(pathToFileURL(preview).href);await exportPage.locator('img').evaluate(im=>im.decode());assert.ok(await exportPage.locator('img').evaluate(im=>im.naturalWidth>500&&im.naturalHeight>200));await exportPage.screenshot({path:path.join(out,record.id+'-svg-export.png'),fullPage:true})}finally{await exportPage.close()}
    await p.locator('#reset').click();await p.locator('#next').click();assert.ok((await p.locator('#page').textContent()).startsWith('9'));
    await p.setViewportSize({width:900,height:1000});assert.equal(await p.locator('#views').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length),2);
    await p.screenshot({path:path.join(out,record.id+'-tablet.png'),fullPage:true});

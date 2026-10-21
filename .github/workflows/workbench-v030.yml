@@ -121,6 +121,7 @@ jobs:
           FIGURE_PLAYWRIGHT_MODULE: ${{ github.workspace }}/.ci/deps/node_modules/playwright/index.mjs
         run: |
           python skills/transcriptomics-figure-workbench/scripts/workbench.py studio --output .ci/studio.html --gallery examples/gallery --demo-svg examples/workbench-v030/WB_ma/WB_ma.svg
+          node tests/check_connected_browser.mjs connected-browser-ci
           node tests/check_publication_browser.mjs publication-browser-ci .ci/studio.html
           node tests/check_clarity_browser.mjs clarity-browser-ci
           node tests/check_forms_browser.mjs forms-browser-ci
@@ -134,7 +135,6 @@ jobs:
           node tests/check_navigation_dedup.mjs navigation-dedup-ci
           node tests/check_visual_library.mjs visual-library-ci
           node tests/check_trajectory_browser.mjs trajectory-browser-ci
-          node tests/check_connected_browser.mjs connected-browser-ci
           node tests/check_trajectory_browser.mjs trajectory-scale-browser-ci skills/transcriptomics-figure-workbench/assets/method-scale-gallery
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
