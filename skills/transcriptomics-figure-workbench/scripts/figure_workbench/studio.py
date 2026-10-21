@@ -76,6 +76,10 @@ def build_studio(output,gallery=None,demo_svg=None):
         prefix=Path(os.path.relpath(visual,output.resolve().parent)).as_posix()
         content=content.replace('</header>','<a class="button secondary" href="'+prefix+'/index.html">完整绘图库 · 多组学 / 计算生物学 / 计算机建模</a></header>',1)
     analysis=SKILL/'assets/analysis-library'
+    connected=SKILL/'assets/connected-examples'
+    if connected.is_dir():
+        prefix=Path(os.path.relpath(connected,output.resolve().parent)).as_posix()
+        content=content.replace('</header>','<a class="button secondary" href="'+prefix+'/index.html">同对象联动检查 · 冻结结果交接</a></header>',1)
     if analysis.is_dir():
         prefix=Path(os.path.relpath(analysis,output.resolve().parent)).as_posix()
         content=content.replace('</header>','<a class="button secondary" href="'+prefix+'/index.html">按分析取整套图 · WGCNA / GSVA / 调控 / 剪接</a></header>',1)

@@ -23,6 +23,7 @@ jobs:
           PYTHONUTF8: '1'
         run: |
           python tools/sync_renderer_registry.py --check
+          python tools/sync_studio_pages.py --check
           python tests/check_workbench.py
           python tests/check_design_workflow.py
           python tests/check_review_update.py
