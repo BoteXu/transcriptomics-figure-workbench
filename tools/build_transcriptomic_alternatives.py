@@ -20,6 +20,8 @@ def cases():
     for view in ['evidence','facets']:
         add('PCA_'+view,routine('BulkPCA'),{'presentation':view,'title':'Sample structure and supporting evidence'})
     add('PCA_one_column',routine('BulkPCA'),{'presentation':'facets','ncols':1,'panel_width':5.0,'panel_height':3.8,'title':'Sample identity at matched limits'})
+    for size in ['Small','Medium','Large']:
+        add('PCA_scope_'+size,ASSETS/'method-scale-gallery'/('Scale_H34_pca_reference_'+size)/'example.spec.json',{'presentation':'facets' if size=='Medium' else 'evidence'},'figure_integrated_views.plot_integrated_view')
     for view in ['evidence','landscape']:
         add('Volcano_'+view,routine('BulkDE'),{'presentation':view,'title':'Differential expression with complete context'})
     for view in ['cards','aligned']:
@@ -46,6 +48,14 @@ def build(output,render=False):
     for name,source,updates,renderer in cases():
         spec=json.loads(source.read_text('utf8'));original=copy.deepcopy(spec);table=source.parent/spec['input']['path'];raw=table.read_bytes()
         assert hashlib.sha256(raw).hexdigest()==spec['input']['sha256']
+        if name.startswith('PCA_scope_'):
+            import csv,io
+            old=spec['parameters'];spec['parameters']={'mode':'pca','title':'Frozen PCA reference | '+name.removeprefix('PCA_scope_')+' scope','axis_labels':old['axis_labels'],'ellipse_definition':old['ellipse_label']+'; coverage level was not supplied and is not inferred.'}
+            rows=list(csv.DictReader(io.StringIO(raw.decode('utf8')),delimiter='\t'))
+            for row in rows:
+                row['object_id']=row.pop('unit_id')
+                if row['record_type']=='point':row['record_type']='embedding'
+            buf=io.StringIO(newline='');w=csv.DictWriter(buf,fieldnames=list(rows[0]),delimiter='\t',lineterminator='\n');w.writeheader();w.writerows(rows);raw=buf.getvalue().encode('utf8')
         if renderer=='figure_gsea.plot_gsea_tracks':
             spec['parameters']={'contract':spec['parameters']['contract'],**spec['parameters']['options']}
             spec['parameters'].pop('line_encoding',None)

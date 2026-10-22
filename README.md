@@ -8,7 +8,23 @@
 
 [快速上手](#quick-start) · [42 个升级配方](#upgraded-recipes) · [三维与动画实例](#three-dimensional) · [自定义布局](#custom-layout) · [完整分析配套](#analysis-suites) · [安装为 skill](#install-skill) · [检查与来源](#validation)
 
-**当前版本：v0.13.0。** [下载完整 skill 包与 SHA256 校验文件](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v0.13.0)。包内包含本页的可移植说明、当前全部图库和准确示例；源提交及文档哈希记录在 `RELEASE_SOURCE.json`。版本变化与复现方式见[发布说明](docs/release-v0130.md)。
+**当前版本：v0.14.0。** [下载完整 skill 包与 SHA256 校验文件](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v0.14.0)。包内包含本页的可移植说明、当前全部图库和准确示例；源提交及文档哈希记录在 `RELEASE_SOURCE.json`。版本变化与复现方式见[发布说明](docs/release-v0140.md)。
+
+## v0.14.0：五类转录组图的完整替代画法
+
+增加可直接调用的 **PCA 证据页／分组聚焦、火山图基因明细／全基因效应景观、GSEA 独立卡片／对齐轨道、横向／纵向云雨图、逐亚群 marker 条带／并排卡片**。每种画法使用已有结果；所有经典画法、42 个历史升级配方、三维与动画入口保留。
+
+[28 张实际示例与准确输入](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/index.html)覆盖不同数据量、单图、五个亚群、2／4／8 个 marker 和自定义行列。每张附 PNG、SVG、PDF、TSV 及完整调用参数。[如何选图、输入要求与调用方法](skills/transcriptomics-figure-workbench/references/transcriptomic-alternatives-v0140.md)。
+
+| 图型 | 可选画法增加的信息 |
+|---|---|
+| PCA | 颜色加形状、给定椭圆、已核对边缘比例、样本支持数、完整给定方差；分面保留其他样本背景与相同轴域 |
+| 火山图 | 完整检验分母与堆积边缘分布、选定基因效应／FDR 明细，可加全基因效应排序带 |
+| GSEA | 每条通路的 ES、命中、leading edge、排序指标、NES／FDR、集合大小和版本；可独立阅读或对齐比较 |
+| 云雨图 | 给定半云、每个原始点、经验箱线与中位数、独立单位和 n；横向／纵向与自定义排布 |
+| 逐亚群多 marker | 位置、全部身份特异性、每个 marker 的全细胞图、跨身份均值和检出比例；统一坐标与色阶 |
+
+这些是完整信息的可选表达，不能补造缺失的密度、区间或分析。示例为明确标注的模拟结果；实际屏幕自检与打印校样、独立审阅、科学有效性分别记录。
 
 ## v0.13.0：更多可选表达与可读性修订
 

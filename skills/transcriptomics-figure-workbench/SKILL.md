@@ -36,6 +36,7 @@ In the source repository prepend `skills/transcriptomics-figure-workbench/` to
 | Single form or cross-domain choice | `visual-library --search`, `forms`, `catalog`, `describe` | [Coverage](references/visual-library-coverage.md), [selection rules](references/comprehensive-selection.md) |
 | Design using actual columns | `design --brief … --output …` | [DesignBrief](references/design-workflow-v050.md); candidates still need exact renderer mapping |
 | Routine bulk / single-cell | `choose`, `study-plan`, `study-render` | [Defaults](references/publication-defaults-v096.md), [actual examples](assets/routine-gallery/index.html) |
+| Alternative PCA, volcano, GSEA, raincloud or subgroup marker composition | Existing renderer's `presentation`, `mode` or `composition` | [Five families: exact calls and selection](references/transcriptomic-alternatives-v0140.md), [28 frozen examples](assets/transcriptomic-alternatives/index.html) |
 | Full per-analysis package | `analysis-library`, `analysis-suite`, `analysis-render` | [58-chapter companions](references/analysis-companion-coverage-v100.md), [input protocol](references/analysis-companion-protocol-v100.md) |
 | Package-specific plots / GSEA | `methods`, `method`, `method-spec` | [Package contracts](references/package-method-entries.md); native software and frozen-result rendering are separate |
 | Workbench result/QC/source handoff | `handoff-plan` then normal `render` | [Exact handoff contract](references/connected-workflows-v0120.md#handoff) |
@@ -65,6 +66,10 @@ review scope; open only the relevant sections.
 | Cross-omics / modelling | Explicit shared objects, matched scales and independent units; complementary effects, contributions, uncertainty, validation and coordinated views |
 
 Preference depends on real channels. NES alone cannot supply an ES curve or CI.
+For these five families, choose the compatible evidence/facet, landscape,
+card/aligned, oriented raincloud or marker strip/card alternative described in
+the [selection guide](references/transcriptomic-alternatives-v0140.md). Use the
+actual example specs; preserve complete denominators and shared marker scales.
 Cells, spots, frames, libraries and sample labels do not establish biological
 replication. Keep one named category mapping throughout a project; do not cycle
 indistinguishable identity colours.

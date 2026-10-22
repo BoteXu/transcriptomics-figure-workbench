@@ -44,11 +44,15 @@ def _note(fig,text):
 
 def pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols='auto',nrows=None,panel_width=4.5,panel_height=4.0):
     d=checked(data[data.record_type=='embedding'],['object_id','group','x','y'],['x','y'])
-    e=checked(data[data.record_type=='ellipse'],['group','x','y','width','height','angle','coverage'],['x','y','width','height','angle','coverage'])
+    e=checked(data[data.record_type=='ellipse'],['group','x','y','width','height','angle'],['x','y','width','height','angle'])
     names=list(d.group.unique());pal=group_palette(theme,names)
     if d.object_id.duplicated().any() or not ellipse_definition or not axis_labels or len(axis_labels)!=2:raise ValueError('Unique PCA samples, exact axes and ellipse meaning required')
-    if set(e.group)!=set(names) or e.group.duplicated().any() or ((e.width<=0)|(e.height<=0)|(e.coverage<=0)|(e.coverage>=1)).any() or any(sum(d.group==g)<3 for g in names):raise ValueError('Complete valid supplied ellipse geometry and at least three samples per group required')
-    var=checked(data[data.record_type=='pc_variance'],['component','percent'],['percent'])
+    if set(e.group)!=set(names) or e.group.duplicated().any() or ((e.width<=0)|(e.height<=0)).any() or any(sum(d.group==g)<3 for g in names):raise ValueError('Complete valid supplied ellipse geometry and at least three samples per group required')
+    if 'coverage' in e:
+        e=checked(e,['coverage'],['coverage'])
+        if ((e.coverage<=0)|(e.coverage>=1)).any():raise ValueError('Supplied coverage must be between zero and one; never infer coverage')
+    var=data[data.record_type=='pc_variance']
+    if not var.empty:var=checked(var,['component','percent'],['percent'])
     if not var.empty and (var.component.duplicated().any() or (var.percent<0).any() or abs(var.percent.sum()-100)>1e-6):raise ValueError('Complete supplied variance profile must sum to 100%')
     facets=presentation=='facets';rows,cols=grid_shape(len(names),ncols,nrows) if facets else (1,1)
     if not facets and (nrows is not None or ncols!='auto'):raise ValueError('Use facets for PCA row/column requests')
@@ -193,7 +197,7 @@ def marker(data,theme,mode,title,expression_label,detection_definition,expressio
         part=dots[dots.feature==gene].set_index('group').loc[names];focus=part.loc[focus_group]
         a.text(0,-.07,f'Target: {focus.fraction:.0%} detected · mean {focus.value:.2f}',transform=a.transAxes,fontsize=8,color=MUTED)
         b=_axis(fig,[x+cw*(.53 if strip else .62),bottom/height,cw*(.43 if strip else .33),h/height]);yy=np.arange(len(names));b.axhspan(names.index(focus_group)-.42,names.index(focus_group)+.42,fc=pal[focus_group]+'18',ec='none')
-        b.hlines(yy,0,part.value,c='#D7E3E7',lw=2);b.scatter(part.value,yy,s=90*part.fraction,c=part.value,cmap=cmap,norm=norm,ec='white',lw=.45,zorder=3);b.set(ylim=(len(names)-.5,-.5),xlim=expression_limits,xlabel='Supplied mean');b.set_yticks(yy,[textwrap.fill(g,13) for g in names],fontsize=8);b.spines['left'].set_visible(False);b.tick_params(axis='y',length=0);b.xaxis.set_major_locator(MaxNLocator(3));b.set_title('Across all identities',loc='left',fontsize=9,color=MUTED)
+        b.hlines(yy,0,part.value,colors='#D7E3E7',lw=2);b.scatter(part.value,yy,s=90*part.fraction,c=part.value,cmap=cmap,norm=norm,ec='white',lw=.45,zorder=3);b.set(ylim=(len(names)-.5,-.5),xlim=expression_limits,xlabel='Supplied mean');b.set_yticks(yy,[textwrap.fill(g,13) for g in names],fontsize=8);b.spines['left'].set_visible(False);b.tick_params(axis='y',length=0);b.xaxis.set_major_locator(MaxNLocator(3));b.set_title('Across all identities',loc='left',fontsize=9,color=MUTED)
     cax=fig.add_axes([.71,.95/height,.23,.08/height]);cb=fig.colorbar(plt.cm.ScalarMappable(norm=norm,cmap=cmap),cax=cax,orientation='horizontal');cb.set_label(expression_label,fontsize=9);cb.ax.tick_params(labelsize=8)
     fig.legend(handles=[Line2D([],[],ls='',marker='o',color='#527F89',ms=math.sqrt(90*p),label=str(int(p*100))+'%') for p in [.25,.5,1]],title='Cells detected',loc='lower left',bbox_to_anchor=(.07,.60/height),ncols=3,frameon=False,fontsize=9,title_fontsize=9)
     _note(fig,detection_definition+'; all feature maps share the same coordinates, expression limits and complete comparison identities.')
