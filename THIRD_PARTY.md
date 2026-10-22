@@ -1,5 +1,12 @@
 # Sources, attribution and license boundaries
 
+The v0.13 readability revision uses independently written shape, text wrapping,
+keyboard and supplied-interval displays. SciSpace located the Jambor figure
+checklist, Ramsey/Schroeder accessibility commentary and Fitzgerald et al. MARC
+comparison; primary records and adoption limits are documented in
+[readable-choices-v0130.md](skills/transcriptomics-figure-workbench/references/readable-choices-v0130.md).
+No article images, fonts, source code or external package algorithms are bundled.
+
 The workbench implementation is original. The root MIT license applies to the original code, documentation and independently generated synthetic examples. It does not relicense external software, reference articles, source images, fonts or scientific data.
 
 - EasyPlot (MIT), SciPilot Figure (MIT), Academic Figure Skill (Apache-2.0), and Scientific Figure Making were consulted for general workflow/design ideas. No source code, prompt templates or images from them are redistributed. The conflicting CC BY-NC 4.0 repository / MIT skill metadata of Scientific Figure Making was treated conservatively: independent implementation only. Exact repositories, fixed commits and what was adopted are in [external-increments-20261005.md](skills/transcriptomics-figure-workbench/references/external-increments-20261005.md).

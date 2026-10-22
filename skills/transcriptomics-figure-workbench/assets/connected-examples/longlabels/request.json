@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "title": "Long labels and six named states retain one geometry",
+  "subtitle": "Existing coordinates with explicitly authored six-state labels and two missing values exercise wrapping, stable shape/colour guides and complete scope. Groups are software-fixture metadata, not biological assignments.",
+  "input": {
+    "path": "input.tsv",
+    "sha256": "238520811167dbed15949f2e7c29544cea98459de40464599c4a8b410304932b"
+  },
+  "id_column": "object_id",
+  "group_column": "group",
+  "views": [
+    {
+      "id": "xy",
+      "title": "XY · state separation",
+      "x": "x",
+      "y": "y",
+      "x_label": "Supplied X coordinate of the synthetic object · arbitrary display units",
+      "y_label": "Supplied Y coordinate · arbitrary display units"
+    },
+    {
+      "id": "xz",
+      "title": "XZ · depth and overlap",
+      "x": "x",
+      "y": "z",
+      "x_label": "Supplied X coordinate of the synthetic object · arbitrary display units",
+      "y_label": "Supplied Z coordinate · arbitrary display units"
+    },
+    {
+      "id": "yz",
+      "title": "YZ · complementary structure",
+      "x": "y",
+      "y": "z",
+      "x_label": "Supplied Y coordinate of the synthetic object · arbitrary display units",
+      "y_label": "Supplied Z coordinate · arbitrary display units"
+    }
+  ],
+  "colors": {
+    "Condition A · early": "#247e87",
+    "Condition A · late": "#bb6b51",
+    "Condition B · early": "#6977a8",
+    "Condition B · late": "#a96c94",
+    "Reference · early": "#697f42",
+    "Reference · late": "#a47c31"
+  },
+  "context": {
+    "independent_unit": "Synthetic objects; no donors or biological inference",
+    "scope": "Explicit synthetic display comparison; stored coordinate/interval numbers reused unchanged; no biological inference",
+    "missingness": "Unavailable pairs retained as NA; complete input register stays available",
+    "synthetic": true
+  },
+  "layout": {
+    "columns": "auto",
+    "width_px": 1440,
+    "panel_height": 340
+  }
+}

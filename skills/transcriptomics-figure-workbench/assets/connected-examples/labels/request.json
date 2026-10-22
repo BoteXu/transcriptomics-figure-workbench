@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "title": "Direct object labels for a declared small scope",
+  "subtitle": "Twelve source-order fixture objects, two complementary projections. Complete labels remain optional; larger datasets use point selection to protect readability.",
+  "input": {
+    "path": "input.tsv",
+    "sha256": "8cec8bd6de08603f42eb24ec5362e56c95d7072ea93258f92c2bec10cd1495c3"
+  },
+  "id_column": "object_id",
+  "group_column": "group",
+  "views": [
+    {
+      "id": "xy",
+      "title": "XY · state separation",
+      "x": "x",
+      "y": "y",
+      "x_label": "X coordinate (a.u.)",
+      "y_label": "Y coordinate (a.u.)",
+      "kind": "labels"
+    },
+    {
+      "id": "xz",
+      "title": "XZ · depth and overlap",
+      "x": "x",
+      "y": "z",
+      "x_label": "X coordinate (a.u.)",
+      "y_label": "Z coordinate (a.u.)",
+      "kind": "labels"
+    }
+  ],
+  "colors": {
+    "State A": "#218C8D",
+    "State B": "#D8795B",
+    "State C": "#5676A5"
+  },
+  "context": {
+    "independent_unit": "Synthetic objects; no donors or biological inference",
+    "scope": "Explicit synthetic display comparison; stored coordinate/interval numbers reused unchanged; no biological inference",
+    "missingness": "Unavailable pairs retained as NA; complete input register stays available",
+    "synthetic": true
+  },
+  "layout": {
+    "columns": "auto",
+    "width_px": 1440,
+    "panel_height": 340
+  }
+}

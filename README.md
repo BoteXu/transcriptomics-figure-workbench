@@ -8,7 +8,13 @@
 
 [快速上手](#quick-start) · [42 个升级配方](#upgraded-recipes) · [三维与动画实例](#three-dimensional) · [自定义布局](#custom-layout) · [完整分析配套](#analysis-suites) · [安装为 skill](#install-skill) · [检查与来源](#validation)
 
-**当前版本：v0.12.0。** [下载完整 skill 包与 SHA256 校验文件](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v0.12.0)。包内包含本页的可移植说明、当前全部图库和准确示例；源提交及文档哈希记录在 `RELEASE_SOURCE.json`。版本变化与复现方式见[发布说明](docs/release-v0120.md)。
+**当前版本：v0.13.0。** [下载完整 skill 包与 SHA256 校验文件](https://github.com/BoteXu/transcriptomics-figure-workbench/releases/tag/v0.13.0)。包内包含本页的可移植说明、当前全部图库和准确示例；源提交及文档哈希记录在 `RELEASE_SOURCE.json`。版本变化与复现方式见[发布说明](docs/release-v0130.md)。
+
+## v0.13.0：更多可选表达与可读性修订
+
+同一结果可选普通散点、对象标签散点，以及带给定区间的点线图；实际示例见[六分组与长标签](skills/transcriptomics-figure-workbench/assets/connected-examples/longlabels/index.html)、[12 对象直接标签](skills/transcriptomics-figure-workbench/assets/connected-examples/labels/index.html)、[六效应区间与标签替代画法](skills/transcriptomics-figure-workbench/assets/connected-examples/intervals/index.html)。它们是原有联动检查的显示方式，不增加科学算法。
+
+分组同时用固定颜色、形状和名称识别；图例可过滤并保留完整计数。长标题／轴标签换行、面板宽度、键盘浏览和数值精度同步改善。SVG 按请求尺寸重新绘制，手机查看不会改变导出几何。所有旧画法保留。[完整参数、实际调用及 SciSpace 原文审阅边界](skills/transcriptomics-figure-workbench/references/readable-choices-v0130.md)。
 
 ## v0.12.0：结果交接与同对象联动
 

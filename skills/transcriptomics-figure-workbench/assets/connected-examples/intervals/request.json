@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "title": "One frozen effect table, two explicit display choices",
+  "subtitle": "Compare interval and labelled-point presentations. Row positions encode source order only. Selecting a feature preserves its identity in both alternatives; intervals are never inferred.",
+  "input": {
+    "path": "input.tsv",
+    "sha256": "37eb38a093a907a077b3f4063cb2a2b30cd4f88d49f2e0945d3575832064e8f1"
+  },
+  "id_column": "object_id",
+  "group_column": "group",
+  "views": [
+    {
+      "id": "intervals",
+      "kind": "interval",
+      "title": "Effect estimates with their supplied intervals",
+      "x": "estimate",
+      "y": "display_row",
+      "x_label": "Supplied effect (a.u.)",
+      "y_label": "Display row (source order)",
+      "x_lower": "lower",
+      "x_upper": "upper",
+      "interval_label": "Supplied illustrative bounds; not recalculated"
+    },
+    {
+      "id": "identities",
+      "kind": "labels",
+      "title": "The same estimates, directly labelled",
+      "x": "estimate",
+      "y": "display_row",
+      "x_label": "Supplied effect (a.u.)",
+      "y_label": "Display row (source order)"
+    }
+  ],
+  "colors": {
+    "Supplied effects": "#247e87"
+  },
+  "context": {
+    "independent_unit": "Synthetic objects; no donors or biological inference",
+    "scope": "Explicit synthetic display comparison; stored coordinate/interval numbers reused unchanged; no biological inference",
+    "missingness": "Unavailable pairs retained as NA; complete input register stays available",
+    "synthetic": true
+  },
+  "layout": {
+    "columns": "auto",
+    "width_px": 1440,
+    "panel_height": 340
+  }
+}

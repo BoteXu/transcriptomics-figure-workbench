@@ -28,7 +28,7 @@ def main():
     assert p['handoff']['caller_assertions_independently_verified'] is False
     with tempfile.TemporaryDirectory() as temporary:
         folder=Path(temporary);value=json.loads(source.read_text('utf8'))
-        for name in ['small','medium','large','custom']:
+        for name in ['small','medium','large','custom','longlabels','labels','intervals']:
             request_path=examples/name/'request.json';request=json.loads(request_path.read_text('utf8'))
             rendered=build_linked(request,request_path.parent,folder/('replay-'+name))
             assert (folder/('replay-'+name)/'index.html').read_bytes()==(examples/name/'index.html').read_bytes()
@@ -51,6 +51,7 @@ def main():
         assert result['rows']==48 and result['views']==3 and result['analysis_performed'] is False
         refused(lambda:build_linked(request,folder,folder/'single-column'))
         request['layout']['columns']=8;refused(lambda:build_linked(request,folder,folder/'bad-layout'))
+        request['layout']['columns']=True;refused(lambda:build_linked(request,folder,folder/'bool-layout'))
         request['layout']['columns']=2;request['input']['sha256']='0'*64
         refused(lambda:build_linked(request,folder,folder/'bad-hash'))
         request['input']={'path':'fixture.tsv','sha256':''}
@@ -60,6 +61,13 @@ def main():
         assert result['rows']==3 and sorted(result['unavailable_pairs'].values())==[0,1,1]
         (folder/'fixture.tsv').write_text(text.replace('B\tState B','A\tState B'),encoding='utf8');request['input']['sha256']=hashlib.sha256((folder/'fixture.tsv').read_bytes()).hexdigest()
         refused(lambda:build_linked(request,folder,folder/'ambiguous-identity'))
+        interval_path=examples/'intervals/request.json';interval=json.loads(interval_path.read_text('utf8'))
+        interval['input']['path']=str(interval_path.parent/'input.tsv')
+        interval['views'][0].pop('interval_label');refused(lambda:build_linked(interval,folder,folder/'unlabelled-interval'))
+        interval=json.loads(interval_path.read_text('utf8'));interval['input']['path']=str(interval_path.parent/'input.tsv')
+        interval['views'][0]['x_lower']='upper';refused(lambda:build_linked(interval,folder,folder/'inverted-interval'))
+        too_many=json.loads((examples/'large/request.json').read_text('utf8'));too_many['input']['path']=str(examples/'large/input.tsv')
+        too_many['views'][0]['kind']='labels';refused(lambda:build_linked(too_many,folder,folder/'crowded-labels'))
     print(json.dumps({'state':'CONNECTED_CONTRACTS_PASS','handoff_input_qc_source_mutations_refused':True,
                       'missing_pairs_explicit':True,'identity_and_layout_checked':True,'scientific_acceptance':False}))
 

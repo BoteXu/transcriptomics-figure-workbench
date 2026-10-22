@@ -1,3 +1,7 @@
+# v0.13.0
+
+Readable linked scatter / label / supplied-interval choices; stable shape guides, bounded keyboard navigation, exact numeric register, adaptive labels and viewport-independent SVG. Seven replayable synthetic examples preserve all historical forms. See docs/release-v0130.md.
+
 # 0.12.0
 
 - Source-bound FigureHandoff consumer and revalidation using existing FigureSpec/render contracts.

@@ -40,6 +40,7 @@ In the source repository prepend `skills/transcriptomics-figure-workbench/` to
 | Package-specific plots / GSEA | `methods`, `method`, `method-spec` | [Package contracts](references/package-method-entries.md); native software and frozen-result rendering are separate |
 | Workbench result/QC/source handoff | `handoff-plan` then normal `render` | [Exact handoff contract](references/connected-workflows-v0120.md#handoff) |
 | Shared-identity interactive inspection | `linked-views` | [Coordinated views and examples](references/connected-workflows-v0120.md#linked-views) |
+| Alternative linked displays and readable exports | `linked-views`, per-view `kind` | [Scatter, labels and supplied intervals](references/readable-choices-v0130.md) |
 | Arbitrary assembly | `layout-plan`, `layout-export`, `layout-inspect` | [Flexible board](references/forms-v080.md#adapt-layout-at-use-time), [responsive layout](references/responsive-layout-v081.md) |
 | Legacy, radar, 3D or animation | `visual-template --entry <ID> --output <fresh-directory>` | [42 upgrades and 3D](references/historical-and-3d-methods.md), [scale examples](assets/method-scale-gallery/index.html) |
 
@@ -87,6 +88,12 @@ use simulations to fill missing project evidence.
    example or shrink text until it becomes unreadable.
 5. Keep full guides, units and complete selected content. Near-identical
    heatmaps are extensions, not automatically separate main panels.
+
+Use colour together with stable shapes or named/textual cues. Keep keyboard
+focus distinct from selection. For linked inspection, use full object labels
+only for a small explicit scope; interval views require supplied bounds and
+their meaning. Redraw exports at the requested size rather than cloning a
+narrow-screen panel. See [readable alternatives](references/readable-choices-v0130.md).
 
 For 3D expose occlusion with companion projections. Volumes need a complete
 uniform grid, units and explicit transfer functions. Trajectories need stable
