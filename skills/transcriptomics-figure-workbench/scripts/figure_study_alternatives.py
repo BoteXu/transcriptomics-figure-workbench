@@ -78,7 +78,8 @@ def pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols='auto
             if len(d)<=18:
                 for item in q.itertuples():ax.annotate(str(item.object_id),(item.x,item.y),xytext=(5,6),textcoords='offset points',fontsize=8,color=INK)
         ax.axhline(0,c=GRID,lw=.7,zorder=0);ax.axvline(0,c=GRID,lw=.7,zorder=0)
-        ax.set(xlim=(lo-.12,hi+.12),ylim=(yl-.12,yh+.12),xlabel=axis_labels[0],ylabel=axis_labels[1]);ax.xaxis.set_major_locator(MaxNLocator(5));ax.yaxis.set_major_locator(MaxNLocator(5))
+        xpad=max(.12,.08*(hi-lo));ypad=max(.12,.08*(yh-yl))
+        ax.set(xlim=(lo-xpad,hi+xpad),ylim=(yl-ypad,yh+ypad),xlabel=axis_labels[0],ylabel=axis_labels[1]);ax.xaxis.set_major_locator(MaxNLocator(5));ax.yaxis.set_major_locator(MaxNLocator(5))
     if facets:
         for i,(g,slot) in enumerate(zip(names,facet_slots(fig,len(names),rows,cols,left=.09,right=.96,bottom=1.15/height,top=1-1.85/height,wspace=.80,hspace=.42))):
             ax=fig.add_subplot(slot);score(ax,g);ax.set_title(g+' · n='+str(sum(d.group==g)),loc='left',color=pal[g],fontweight='bold',pad=12)
