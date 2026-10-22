@@ -58,7 +58,7 @@ def pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols='auto
     if not facets and (nrows is not None or ncols!='auto'):raise ValueError('Use facets for PCA row/column requests')
     width=max(9.8,cols*panel_width+.8) if facets else max(10.2,panel_width*2.3)
     height=1.7+rows*panel_height+(1.3 if facets else .3)
-    fig=plt.figure(figsize=canvas_budget(width,height));_head(fig,title,str(len(d))+' supplied samples · colour + shape identity · frozen contours and coordinates')
+    fig=plt.figure(figsize=canvas_budget(width,height));_head(fig,title,str(len(d))+' supplied observations · colour + shape identity · frozen contours and coordinates')
     markers=['o','s','^','D','P','X'];bounds=[d.x.min(),d.x.max(),d.y.min(),d.y.max()]
     # Retain complete contour extents as well as all observations.
     rx=max(abs(e.width).max(),abs(e.height).max())/2
@@ -80,13 +80,16 @@ def pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols='auto
         _note(fig,ellipse_definition+' All other samples remain in the grey background; limits match across panels.')
     else:
         from figure_integrated_views import _marginals
-        if {'pca_x_bin','pca_y_bin'}<=set(data.record_type):
+        has_marginals={'pca_x_bin','pca_y_bin'}<=set(data.record_type)
+        compact=var.empty and not has_marginals
+        if has_marginals:
             ax,top,right=_marginals(fig,[.09,.20,.57,.57],data,d,pal,'x','y',xkind='pca_x_bin',ykind='pca_y_bin');score(ax);top.set_xlim(ax.get_xlim());right.set_ylim(ax.get_ylim())
         else:
-            ax=_axis(fig,[.09,.20,.47,.57]);score(ax)
-        a=_axis(fig,[.74,.43,.21,.30]);a.spines[:].set_visible(False);a.set_xticks([]);a.set_yticks([])
-        a.text(0,1.08,'Sample support',transform=a.transAxes,fontsize=11,fontweight='bold',color=INK)
-        for i,g in enumerate(names):a.text(0,.93-i*.20,g,transform=a.transAxes,color=pal[g],fontweight='bold');a.text(.98,.93-i*.20,str(sum(d.group==g))+' / '+str(len(d)),ha='right',transform=a.transAxes,color=INK)
+            ax=_axis(fig,[.09,.22,.86 if compact else .47,.55]);score(ax)
+        if not compact:
+            a=_axis(fig,[.74,.43,.21,.30]);a.spines[:].set_visible(False);a.set_xticks([]);a.set_yticks([])
+            a.text(0,1.08,'Displayed support',transform=a.transAxes,fontsize=11,fontweight='bold',color=INK)
+            for i,g in enumerate(names):a.text(0,.93-i*.20,g,transform=a.transAxes,color=pal[g],fontweight='bold');a.text(.98,.93-i*.20,str(sum(d.group==g))+' / '+str(len(d)),ha='right',transform=a.transAxes,color=INK)
         if not var.empty:
             a=_axis(fig,[.74,.20,.21,.15]);a.bar(range(len(var)),var.percent,color=[theme['roles']['primary'] if i<2 else '#D7E3E6' for i in range(len(var))],width=.65)
             ticks=sorted(set([0,min(1,len(var)-1),len(var)//2,len(var)-1]));a.set_xticks(ticks,[var.component.iloc[k] for k in ticks],fontsize=8);a.set_ylabel('Variance %',fontsize=9);a.set_title('Complete supplied variance',loc='left',fontsize=10)
