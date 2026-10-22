@@ -106,12 +106,19 @@ function drawPanel(svg,view,w,interactive=true){
    else if(['ArrowRight','ArrowDown','ArrowLeft','ArrowUp','Home','End'].includes(e.key)){e.preventDefault();const i=rows.findIndex(r=>r.id===row.id),n=e.key==='Home'?0:e.key==='End'?rows.length-1:(i+(['ArrowLeft','ArrowUp'].includes(e.key)?-1:1)+rows.length)%rows.length;Array.from(svg.querySelectorAll('.dot')).find(d=>d.dataset.objectId===rows[n].id)?.focus()}
   })}group.append(dot);
  }svg.append(group);
- const labelRows=view.kind==='labels'?rows:rows.filter(active).slice(0,3),occupied=[];
- for(const row of labelRows){const x=X(row.values[view.x]),y=Y(row.values[view.y]),maxWidth=Math.min(170,(w-L-R)*.6),lines=wrap(row.id,maxWidth,11),boxHeight=lines.length*14;
-  let labelY=Math.max(T+12,y-10);while(occupied.some(p=>Math.abs(p.x-x)<maxWidth&&Math.abs(p.y-labelY)<boxHeight+2)&&labelY<h-B-boxHeight-8)labelY+=boxHeight+4;
-  const right=x>(L+w-R)/2,labelX=right?Math.max(L+maxWidth,x-9):Math.min(w-R-maxWidth,x+9);
-  if(Math.abs(labelY-y)>20)svg.append(el('line',{x1:x,x2:labelX,y1:y,y2:labelY,stroke:'#9aadb6','stroke-width':.7}));
-  linesText(svg,row.id,labelX,labelY,maxWidth,{size:11,lineHeight:14,anchor:right?'end':'start',fill:'#234654',weight:600});occupied.push({x,y:labelY});
+ const labelRows=view.kind==='labels'?rows:rows.filter(active).slice(0,3),occupied=[],positions=rows.map(r=>({x:X(r.values[view.x]),y:Y(r.values[view.y])}));
+ for(const row of labelRows){const x=X(row.values[view.x]),y=Y(row.values[view.y]),maxWidth=Math.min(160,(w-L-R)*.6),lines=wrap(row.id,maxWidth,11),bh=lines.length*14,bw=Math.max(...lines.map(s=>textWidth(s,11)))*1.12+4;
+  let best;
+  for(let ring=0;ring<=12;ring++)for(const shift of ring?[ring*14,-ring*14]:[0])for(const dx of [9,-bw-9,-bw/2])for(const dy of [-bh-8,8]){
+   const bx=Math.max(L+3,Math.min(w-R-bw-3,x+dx)),by=Math.max(T+3,Math.min(h-B-bh-3,y+dy+shift));
+   const overlap=occupied.reduce((s,p)=>s+Math.max(0,Math.min(bx+bw+3,p.x+p.w)-Math.max(bx-3,p.x))*Math.max(0,Math.min(by+bh+3,p.y+p.h)-Math.max(by-3,p.y)),0);
+   const hits=positions.filter(p=>p.x>bx-4&&p.x<bx+bw+4&&p.y>by-4&&p.y<by+bh+4).length;
+   const score=overlap*10000+hits*1000+Math.hypot(bx+bw/2-x,by+bh/2-y);
+   if(!best||score<best.score)best={x:bx,y:by,w:bw,h:bh,score};
+  }
+  const endX=Math.max(best.x,Math.min(best.x+best.w,x)),endY=Math.max(best.y,Math.min(best.y+best.h,y));
+  if(Math.hypot(endX-x,endY-y)>14)svg.append(el('line',{x1:x,x2:endX,y1:y,y2:endY,stroke:'#9aadb6','stroke-width':.7}));
+  linesText(svg,row.id,best.x,best.y+11,maxWidth,{size:11,lineHeight:14,fill:'#234654',weight:600});const label=svg.lastChild;label.setAttribute('class','object-label');label.setAttribute('style','paint-order:stroke;stroke:white;stroke-width:3px;stroke-linejoin:round');occupied.push(best);
  }
  return h;
 }

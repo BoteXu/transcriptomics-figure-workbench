@@ -10,6 +10,12 @@ const manifest=JSON.parse(await fs.readFile(path.join(base,'manifest.json'),'utf
 const {chromium}=await import(pathToFileURL(process.env.FIGURE_PLAYWRIGHT_MODULE));
 const browser=await chromium.launch({headless:true,...(process.platform==='win32'?{channel:'msedge'}:{})});
 const errors=[],external=[],records=[];
+async function labelClarity(page){
+ const problems=await page.locator('.view svg').evaluateAll(svgs=>svgs.flatMap(svg=>{
+  const boxes=Array.from(svg.querySelectorAll('.object-label')).map(n=>n.getBoundingClientRect()),bounds=svg.getBoundingClientRect(),issues=[];
+  for(let i=0;i<boxes.length;i++){const a=boxes[i];if(a.left<bounds.left||a.right>bounds.right||a.top<bounds.top||a.bottom>bounds.bottom)issues.push('clipped label');for(let j=i+1;j<boxes.length;j++){const b=boxes[j];if(Math.min(a.right,b.right)-Math.max(a.left,b.left)>1&&Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1)issues.push('colliding labels')}}return issues;
+ }));assert.deepEqual(problems,[],'Actual label boxes must remain visible and separated');
+}
 try{
  for(const record of manifest.records){
   const p=await browser.newPage({viewport:{width:1500,height:1100}});
@@ -29,7 +35,7 @@ try{
    if(record.id==='Intervals')assert.equal(await p.locator('.interval').count(),record.rows);
    await p.locator('.view:first-child .dot[tabindex="0"]').focus();await p.keyboard.press('ArrowRight');
    assert.equal(await p.evaluate(()=>document.activeElement.dataset.objectId),data.rows.filter(r=>[data.views[0].x,data.views[0].y].every(k=>r.values[k]!==null))[1].id);
-   await p.screenshot({path:path.join(out,record.id+'-default.png'),fullPage:true});
+   await labelClarity(p);await p.screenshot({path:path.join(out,record.id+'-default.png'),fullPage:true});
    const id=data.rows.find(r=>data.views.every(v=>[v.x,v.y].every(k=>r.values[k]!==null))).id;
    await p.locator(`.view:first-child .dot[data-object-id="${id}"]`).click();
    assert.equal(await p.locator('.dot[aria-pressed="true"]').count(),record.views);
@@ -61,7 +67,7 @@ try{
    await p.setViewportSize({width:390,height:844});await p.waitForTimeout(100);
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    assert.equal(await p.locator('#views').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length),1);
-   await p.screenshot({path:path.join(out,record.id+'-mobile.png'),fullPage:true});
+   await labelClarity(p);await p.screenshot({path:path.join(out,record.id+'-mobile.png'),fullPage:true});
    await p.locator('#find').fill(id);
    assert.equal(await p.evaluate(()=>window.linkedInspector.exportSvg()),svg,'SVG export geometry must be independent of the screen viewport');
    records.push({id:record.id,rows:record.rows,shared_identity:true,keyboard:true,unchanged_filter_axes:true,desktop_tablet_mobile:true,svg_export:true});
