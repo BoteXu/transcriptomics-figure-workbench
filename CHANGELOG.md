@@ -1,3 +1,9 @@
+## 0.14.0
+
+- Add complete optional PCA evidence/facets, volcano evidence/landscape, GSEA cards/aligned tracks, oriented rainclouds and per-subgroup marker strips/paired cards.
+- Reuse exact frozen results with 28 actual single/composition/scope/layout examples. Preserve all classic/historical calls.
+- Repair observed guide/track collisions; keep source bindings, native text measurements, screen review and scientific acceptance distinct.
+
 # v0.13.0
 
 Readable linked scatter / label / supplied-interval choices; stable shape guides, bounded keyboard navigation, exact numeric register, adaptive labels and viewport-independent SVG. Seven replayable synthetic examples preserve all historical forms. See docs/release-v0130.md.

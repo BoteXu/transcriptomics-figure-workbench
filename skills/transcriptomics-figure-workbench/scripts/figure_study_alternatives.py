@@ -75,7 +75,7 @@ def pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols='auto
         ax.axhline(0,c=GRID,lw=.7,zorder=0);ax.axvline(0,c=GRID,lw=.7,zorder=0)
         ax.set(xlim=(lo-.12,hi+.12),ylim=(yl-.12,yh+.12),xlabel=axis_labels[0],ylabel=axis_labels[1]);ax.xaxis.set_major_locator(MaxNLocator(5));ax.yaxis.set_major_locator(MaxNLocator(5))
     if facets:
-        for i,(g,slot) in enumerate(zip(names,facet_slots(fig,len(names),rows,cols,left=.09,right=.96,bottom=1.15/height,top=1-1.35/height,wspace=.35,hspace=.42))):
+        for i,(g,slot) in enumerate(zip(names,facet_slots(fig,len(names),rows,cols,left=.09,right=.96,bottom=1.15/height,top=1-1.85/height,wspace=.80,hspace=.42))):
             ax=fig.add_subplot(slot);score(ax,g);ax.set_title(g+' · n='+str(sum(d.group==g)),loc='left',color=pal[g],fontweight='bold',pad=12)
         _note(fig,ellipse_definition+' All other samples remain in the grey background; limits match across panels.')
     else:
@@ -130,9 +130,9 @@ def gsea(data,theme,contract,curve_order,ranked_universe,metric_label,contrast,g
     else:
         if ncols not in ['auto',1] or nrows is not None:raise ValueError('Aligned GSEA uses one common rank axis; use cards for arbitrary rows/columns')
         rows,cols=len(names),1
-    height=1.45+rows*panel_height if presentation=='cards' else 2.7+len(names)*1.55;width=max(8.8,cols*max(5.4,panel_width)+.9) if presentation=='cards' else max(10,panel_width*2.1)
+    height=1.85+rows*panel_height if presentation=='cards' else 3.2+len(names)*1.55;width=max(8.8,cols*max(5.4,panel_width)+.9) if presentation=='cards' else max(10,panel_width*2.1)
     fig=plt.figure(figsize=canvas_budget(width,height));_head(fig,title,contrast+' · '+str(ranked_universe)+' ranked genes · '+gene_set_version)
-    if presentation=='cards':slots=facet_slots(fig,len(names),rows,cols,left=.09,right=.96,bottom=.65/height,top=1-1.25/height,wspace=1.0,hspace=.36)
+    if presentation=='cards':slots=facet_slots(fig,len(names),rows,cols,left=.09,right=.96,bottom=1.05/height,top=1-1.25/height,wspace=1.0,hspace=.36)
     else:slots=None
     for i,name in enumerate(names):
         c=curve[curve.pathway==name];h=hit[hit.pathway==name];s=summary.loc[name];lead=h[h.leading_edge==1]
@@ -151,7 +151,7 @@ def gsea(data,theme,contract,curve_order,ranked_universe,metric_label,contrast,g
         rug.set(xlim=(1,ranked_universe),ylim=(0,1));rug.axis('off')
         if slots:fig.text(x,y+hh*.29,'Leading hits: '+str(len(lead))+' / '+str(len(h))+(' · bold rug' if show_leading_edge else ' · emphasis off'),color=MUTED,fontsize=8,va='center')
     if presentation=='aligned':
-        met=_axis(fig,[.09,.60/height,.60,.70/height]);met.fill_between(metric['rank'],metric.value,0,color='#CEDFE3');met.plot(metric['rank'],metric.value,c='#657F8C',lw=.8);met.set(xlim=(1,ranked_universe),xlabel='Rank in complete ordered list',ylabel=metric_label);met.xaxis.set_major_locator(MaxNLocator(5,integer=True))
+        met=_axis(fig,[.09,1.0/height,.60,.70/height]);met.fill_between(metric['rank'],metric.value,0,color='#CEDFE3');met.plot(metric['rank'],metric.value,c='#657F8C',lw=.8);met.set(xlim=(1,ranked_universe),xlabel='Rank in complete ordered list',ylabel=metric_label);met.xaxis.set_major_locator(MaxNLocator(5,integer=True))
     _note(fig,'Complete running scores, hit positions, supplied leading-edge flags and ranked metric. No recomputation or interpolation; full gene identities remain in the exact TSV.')
     return _finish(fig,data,theme,'gsea',presentation=presentation,curve_order=names,ranked_universe=ranked_universe,gene_set_version=gene_set_version,complete_tracks=True,layout={'rows':rows,'columns':cols})
 
