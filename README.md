@@ -31,23 +31,23 @@
 
 ### PCA：给定椭圆、边缘比例与方差
 
-![PCA evidence](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/PCA_evidence/export/PCA_evidence/PCA_evidence.png)
+![PCA evidence](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/PCA_evidence/PCA_evidence.png)
 
 ### 火山图：堆积分布、基因明细与全基因效应
 
-![Volcano landscape](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Volcano_landscape/export/Volcano_landscape/Volcano_landscape.png)
+![Volcano landscape](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Volcano_landscape/Volcano_landscape.png)
 
 ### GSEA：每条通路的完整卡片
 
-![GSEA cards](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/GSEA_cards/export/GSEA_cards/GSEA_cards.png)
+![GSEA cards](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/GSEA_cards/GSEA_cards.png)
 
 ### 云雨图：给定云形、全部原始点与经验箱线
 
-![Horizontal donor raincloud](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Expression_raincloud_horizontal/export/Expression_raincloud_horizontal/Expression_raincloud_horizontal.png)
+![Horizontal donor raincloud](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Expression_raincloud_horizontal/Expression_raincloud_horizontal.png)
 
 ### 逐亚群多 marker：位置、特异性和跨身份对照
 
-![Subgroup marker cards](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Subgroup_01_paired_cards/export/Subgroup_01_paired_cards/Subgroup_01_paired_cards.png)
+![Subgroup marker cards](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Subgroup_01_paired_cards/Subgroup_01_paired_cards.png)
 
 </details>
 
