@@ -44,7 +44,7 @@ def main(output):
     rejects('Expression_raincloud_horizontal',missing_cloud)
     rejects('Subgroup_01_paired_cards',lambda d,p:(d[~((d.record_type=='feature_map')&(d.feature==p['marker_order'][0]))],p))
     # Reproduce observed collisions at real rendered font/physical sizes.
-    for name in ['PCA_facets','PCA_one_column','GSEA_single','GSEA_cards','Expression_raincloud_horizontal']:
+    for name in ['PCA_facets','PCA_one_column','GSEA_single','GSEA_cards','Expression_raincloud_horizontal','Markers_eight_three_columns']:
         f=out/name;spec=json.loads((f/'figure.spec.json').read_text('utf8'))
         d=load_table(f/'input.tsv',spec['renderer'],spec['parameters'],spec['input']['numeric_columns'])
         fig,_=render(spec['renderer'],d,spec['parameters'],project_appearance(spec));fig.canvas.draw();renderer=fig.canvas.get_renderer()
@@ -60,8 +60,12 @@ def main(output):
             for text in fig.texts:
                 if text.get_text().startswith('Leading hits:'):
                     assert all(not text.get_window_extent(renderer).overlaps(a.get_window_extent(renderer)) for a in fig.axes),name+' leading-edge text invades track'
+        if name=='Markers_eight_three_columns':
+            for a in fig.axes:
+                for text in a.get_xticklabels():
+                    assert all(not text.get_window_extent(renderer).overlaps(b.title.get_window_extent(renderer)) for b in fig.axes if b is not a and b.title.get_text()),name+' identity labels collide with next marker row'
         plt.close(fig)
-    print('28 exact bindings/native font measurements, 7 channel/layout rejections and 5 measured collision regressions passed; visual/scientific acceptance remains separate')
+    print('28 exact bindings/native font measurements, 7 channel/layout rejections and 6 measured collision regressions passed; visual/scientific acceptance remains separate')
 
 
 if __name__=='__main__':main(sys.argv[1])

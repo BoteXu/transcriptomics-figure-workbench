@@ -186,13 +186,14 @@ def marker(data,theme,mode,title,expression_label,detection_definition,expressio
     if strip and ncols not in ['auto',1]:raise ValueError('Strips require one complete marker per row; use paired_cards for multiple columns')
     columns=1 if strip else (2 if ncols=='auto' and nrows is None else ncols);nr,nc=grid_shape(len(marker_order),columns,nrows)
     step=max(2.65 if strip else 3.15,panel_height);h=step-.85
-    width=max(11.7 if strip else nc*6.3+1,panel_width*(3.25 if strip else nc*1.95));height=5.7+nr*step;fig=plt.figure(figsize=canvas_budget(width,height))
+    context_extra=.075*max(map(len,marker_order)) if len(marker_order)>6 else 0
+    width=max(11.7 if strip else nc*6.3+1,panel_width*(3.25 if strip else nc*1.95));height=5.7+context_extra+nr*step;fig=plt.figure(figsize=canvas_budget(width,height))
     _head(fig,title,focus_group+' · '+str(sum(emb.group==focus_group))+' / '+str(len(emb))+' cells · '+str(len(marker_order))+' markers · '+str(len(names))+' comparison identities')
     cmap=LinearSegmentedColormap.from_list('marker_signal',['#E7EDEF','#91BEB8','#227F83','#123F58']);norm=Normalize(*expression_limits)
     a=_axis(fig,[.07,1-3.45/height,.29,2.2/height]);_coordinates(a,emb);a.scatter(emb.x,emb.y,c='#DCE5E8',s=5,ec='none',rasterized=True);q=emb[emb.group==focus_group];a.scatter(q.x,q.y,c=pal[focus_group],s=8,ec='none',rasterized=True);a.set_title('A  Population location',loc='left',fontsize=11,fontweight='bold')
     a=_axis(fig,[.48,1-3.35/height,.45,1.85/height]);_dot(a,dots,names,marker_order,expression_limits,cmap,focus_group,pal);a.set_title('B  All-identity specificity',loc='left',fontsize=11,fontweight='bold',pad=14)
     for index,gene in enumerate(marker_order):
-        row,col=divmod(index,nc);cw=.89/nc;x=.07+col*cw;bottom=height-4.45-row*step-h
+        row,col=divmod(index,nc);cw=.89/nc;in_row=min(nc,len(marker_order)-row*nc);x=.07+(col+(nc-in_row)/2)*cw;bottom=height-4.45-context_extra-row*step-h
         a=_axis(fig,[x,bottom/height,cw*(.35 if strip else .37),h/height]);_coordinates(a,emb);q=features[features.feature==gene].sort_values('value',kind='stable');a.scatter(q.x,q.y,c=q.value,cmap=cmap,norm=norm,s=6,ec='none',rasterized=True);a.set_title(gene,loc='left',fontsize=11,fontweight='bold',pad=8)
         part=dots[dots.feature==gene].set_index('group').loc[names];focus=part.loc[focus_group]
         a.text(0,-.07,f'Target: {focus.fraction:.0%} detected · mean {focus.value:.2f}',transform=a.transAxes,fontsize=8,color=MUTED)
