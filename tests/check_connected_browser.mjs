@@ -24,6 +24,9 @@ try{
    const columns=await p.locator('#views').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length);
    assert.equal(columns,record.id==='Custom'?2:Math.min(3,record.views));
    assert.equal(await p.locator('.dot[tabindex="0"]').count(),record.views);
+   assert.equal(await p.locator('.view svg[role="group"]').count(),record.views);
+   if(record.id==='LongLabels')assert.equal(new Set(await p.locator('.view:first-child .dot').evaluateAll(ds=>ds.map(d=>d.dataset.symbol))).size,6);
+   if(record.id==='Intervals')assert.equal(await p.locator('.interval').count(),record.rows);
    await p.locator('.view:first-child .dot[tabindex="0"]').focus();await p.keyboard.press('ArrowRight');
    assert.equal(await p.evaluate(()=>document.activeElement.dataset.objectId),data.rows.filter(r=>[data.views[0].x,data.views[0].y].every(k=>r.values[k]!==null))[1].id);
    await p.screenshot({path:path.join(out,record.id+'-default.png'),fullPage:true});
@@ -51,9 +54,9 @@ try{
    const preview=path.join(out,record.id+'-svg-preview.html');
    await fs.writeFile(preview,'<!doctype html><meta charset="utf-8"><title>Exact exported SVG</title><style>body{margin:20px;background:white}img{display:block;max-width:100%;height:auto}</style><img alt="Exact exported coordinated views" src="'+encodeURIComponent(path.basename(svgFile))+'">');
    const exportPage=await browser.newPage({viewport:{width:1500,height:1100}});
-   try{await exportPage.route('**/*',r=>/^(file:|data:)/.test(r.request().url())?r.continue():r.abort());await exportPage.goto(pathToFileURL(preview).href);await exportPage.locator('img').evaluate(im=>im.decode());assert.ok(await exportPage.locator('img').evaluate(im=>im.naturalWidth>500&&im.naturalHeight>200));await exportPage.screenshot({path:path.join(out,record.id+'-svg-export.png'),fullPage:true})}finally{await exportPage.close()}
+   try{await exportPage.route('**/*',r=>/^(file:|data:)/.test(r.request().url())?r.continue():r.abort());await exportPage.goto(pathToFileURL(preview).href);await exportPage.locator('img').evaluate(im=>im.decode());assert.ok(await exportPage.locator('img').evaluate(im=>im.naturalWidth>500&&im.naturalHeight>200));await exportPage.locator('img').screenshot({path:path.join(out,record.id+'-svg-export.png')})}finally{await exportPage.close()}
    await p.locator('#reset').click();if(record.rows>8){await p.locator('#next').click();assert.ok((await p.locator('#page').textContent()).startsWith('9'))}
-   await p.setViewportSize({width:900,height:1000});assert.equal(await p.locator('#views').evaluate(e=>getComputedStyle(e).gridTemplateColumns.split(' ').length),2);
+   await p.setViewportSize({width:900,height:1000});await p.waitForFunction(()=>getComputedStyle(document.getElementById('views')).gridTemplateColumns.split(' ').length===2);
    await p.screenshot({path:path.join(out,record.id+'-tablet.png'),fullPage:true});
    await p.setViewportSize({width:390,height:844});await p.waitForTimeout(100);
    assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
