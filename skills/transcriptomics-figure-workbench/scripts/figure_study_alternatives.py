@@ -18,6 +18,10 @@ from figure_workbench.responsive import grid_shape, facet_slots, canvas_budget
 INK='#263E4B'; MUTED='#627983'; GRID='#E8EEF0'
 
 
+def _dimensions(width,height):
+    if any(type(v) not in (int,float) or not math.isfinite(v) or not 2<=v<=20 for v in [width,height]):raise ValueError('Choose finite panel dimensions from two to twenty inches')
+
+
 def _axis(fig, rect):
     a=fig.add_axes(rect);a.spines[['top','right']].set_visible(False)
     a.spines[['bottom','left']].set_color('#BBCBD1')
@@ -43,6 +47,7 @@ def _note(fig,text):
 
 
 def pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols='auto',nrows=None,panel_width=4.5,panel_height=4.0):
+    _dimensions(panel_width,panel_height)
     d=checked(data[data.record_type=='embedding'],['object_id','group','x','y'],['x','y'])
     e=checked(data[data.record_type=='ellipse'],['group','x','y','width','height','angle'],['x','y','width','height','angle'])
     names=list(d.group.unique());pal=group_palette(theme,names)
@@ -100,6 +105,7 @@ def pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols='auto
 
 
 def volcano(data,theme,title,labels,alpha,fc,presentation,panel_width=4.5,panel_height=4.0):
+    _dimensions(panel_width,panel_height)
     from figure_integrated_views import _volcano_panel
     d=checked(data[data.record_type=='de'],['gene','log2FC','padj'],['log2FC','padj']).copy()
     if d.empty or d.gene.duplicated().any() or ((d.padj<=0)|(d.padj>1)).any() or not 0<alpha<1 or fc<=0:raise ValueError('Complete tested genes and valid thresholds required')
@@ -124,6 +130,7 @@ def volcano(data,theme,title,labels,alpha,fc,presentation,panel_width=4.5,panel_
 
 
 def gsea(data,theme,contract,curve_order,ranked_universe,metric_label,contrast,gene_set_version,title,presentation,ncols='auto',nrows=None,panel_width=4.8,panel_height=4.7,show_leading_edge=True):
+    _dimensions(panel_width,panel_height)
     from figure_gsea import _gsea_input
     from figure_editorial import validate_contract
     validate_contract(contract)
@@ -133,7 +140,8 @@ def gsea(data,theme,contract,curve_order,ranked_universe,metric_label,contrast,g
     else:
         if ncols not in ['auto',1] or nrows is not None:raise ValueError('Aligned GSEA uses one common rank axis; use cards for arbitrary rows/columns')
         rows,cols=len(names),1
-    height=1.85+rows*panel_height if presentation=='cards' else 3.2+len(names)*1.55;width=max(8.8,cols*max(5.4,panel_width)+.9) if presentation=='cards' else max(10,panel_width*2.1)
+    lane=max(1.55,panel_height*.42)
+    height=1.85+rows*panel_height if presentation=='cards' else 3.2+len(names)*lane;width=max(8.8,cols*max(5.4,panel_width)+.9) if presentation=='cards' else max(10,panel_width*2.1)
     fig=plt.figure(figsize=canvas_budget(width,height));_head(fig,title,contrast+' · '+str(ranked_universe)+' ranked genes · '+gene_set_version)
     if presentation=='cards':slots=facet_slots(fig,len(names),rows,cols,left=.09,right=.96,bottom=1.05/height,top=1-1.25/height,wspace=1.0,hspace=.36)
     else:slots=None
@@ -146,7 +154,7 @@ def gsea(data,theme,contract,curve_order,ranked_universe,metric_label,contrast,g
             ax.set_ylabel('Running ES',fontsize=9);met.set_ylabel(metric_label,fontsize=8)
             met.fill_between(metric['rank'],metric.value,0,color='#C4D7DE',alpha=.7);met.plot(metric['rank'],metric.value,c='#657F8C',lw=.7);met.set(xlim=(1,ranked_universe),xlabel='Rank in complete ordered list');met.xaxis.set_major_locator(MaxNLocator(4,integer=True))
         else:
-            hh=1.55/height;y=1-(1.3+(i+1)*1.55)/height;ax=_axis(fig,[.09,y+.18/height,.60,1.04/height]);rug=_axis(fig,[.09,y,.60,.13/height]);ax.set_ylabel('ES',fontsize=9)
+            hh=lane/height;y=1-(1.3+(i+1)*lane)/height;ax=_axis(fig,[.09,y+.18/height,.60,(lane-.51)/height]);rug=_axis(fig,[.09,y,.60,.13/height]);ax.set_ylabel('ES',fontsize=9)
             ax.text(1.05,.90,textwrap.fill(name,26)+f'\nNES {s.NES:+.2f}\nFDR {s.padj:.2g} · n={int(s.set_size)}\nLeading {len(lead)} / {len(h)}',transform=ax.transAxes,va='top',fontsize=9,color=pal[name],linespacing=1.6)
         ax.plot(c['rank'],c.value,c=pal[name],lw=1.75);ax.fill_between(c['rank'],c.value,0,color=pal[name],alpha=.12);ax.axhline(0,c='#A2B5BE',lw=.65);ax.set_xlim(1,ranked_universe);ax.tick_params(labelbottom=False);ax.yaxis.set_major_locator(MaxNLocator(3))
         rug.vlines(h['rank'],0,1,color=pal[name],lw=.7,alpha=.35)
@@ -179,6 +187,7 @@ def raincloud(data,theme,panels,title,scope_note,columns,rows,presentation):
 
 
 def marker(data,theme,mode,title,expression_label,detection_definition,expression_limits,marker_order,focus_group,group_order,ncols,nrows,panel_width,panel_height,composition):
+    _dimensions(panel_width,panel_height)
     from figure_annotation_views import plot_annotation_evidence,_coordinates,_dot
     # Reuse the complete canonical scientific channel checks, then compose anew.
     probe=plot_annotation_evidence(data,theme,mode=mode,title=title,expression_label=expression_label,detection_definition=detection_definition,expression_limits=expression_limits,marker_order=marker_order,focus_group=focus_group,group_order=group_order,ncols='auto',composition='evidence')

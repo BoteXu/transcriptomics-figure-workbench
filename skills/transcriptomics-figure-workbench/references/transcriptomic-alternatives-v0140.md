@@ -24,7 +24,7 @@ public fixtures; no private research, fitted densities or biological claims.
 | Per-subgroup markers | same | `composition="paired_cards"` | Multiple marker cards across adaptable rows/columns; shared complete coordinates, expression limits and comparison groups |
 
 The APIs retain all required scientific parameters. Change only the documented
-presentation parameters in a compatible FigureSpec. `describe --renderer ...`
+presentation parameters in a compatible FigureSpec. `describe <renderer>`
 shows the current full signature; the example's `figure.spec.json` is the
 complete reproducible call, including source hash, units, theme and metadata.
 
