@@ -57,7 +57,9 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install -r requirements-review.txt
       - name: Render actual alternatives for five transcriptomic families
-        run: python tools/build_transcriptomic_alternatives.py --output transcriptomic-alternatives-ci --render
+        run: |
+          python tools/build_transcriptomic_alternatives.py --output transcriptomic-alternatives-ci --render
+          python tests/check_transcriptomic_alternatives.py transcriptomic-alternatives-ci
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

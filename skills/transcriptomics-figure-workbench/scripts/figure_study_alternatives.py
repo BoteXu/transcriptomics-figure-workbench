@@ -89,7 +89,7 @@ def pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols='auto
         for i,g in enumerate(names):a.text(0,.93-i*.20,g,transform=a.transAxes,color=pal[g],fontweight='bold');a.text(.98,.93-i*.20,str(sum(d.group==g))+' / '+str(len(d)),ha='right',transform=a.transAxes,color=INK)
         if not var.empty:
             a=_axis(fig,[.74,.20,.21,.15]);a.bar(range(len(var)),var.percent,color=[theme['roles']['primary'] if i<2 else '#D7E3E6' for i in range(len(var))],width=.65)
-            a.set_xticks(range(len(var)),var.component,fontsize=8);a.set_ylabel('Variance %',fontsize=9);a.set_title('Complete supplied variance',loc='left',fontsize=10)
+            ticks=sorted(set([0,min(1,len(var)-1),len(var)//2,len(var)-1]));a.set_xticks(ticks,[var.component.iloc[k] for k in ticks],fontsize=8);a.set_ylabel('Variance %',fontsize=9);a.set_title('Complete supplied variance',loc='left',fontsize=10)
         _note(fig,ellipse_definition+(' Complete variance profile not supplied; the original axis definitions are retained.' if var.empty else ' No PCA or ellipse fitting.'))
     handles=[Line2D([],[],marker=markers[i%6],ls='',c=pal[g],ms=6,label=g+' · n='+str(sum(d.group==g))) for i,g in enumerate(names)]
     fig.legend(handles=handles,loc='upper left',bbox_to_anchor=(.07,1-.93/height),ncols=min(4,len(names)),frameon=False,fontsize=9)
@@ -130,9 +130,9 @@ def gsea(data,theme,contract,curve_order,ranked_universe,metric_label,contrast,g
     else:
         if ncols not in ['auto',1] or nrows is not None:raise ValueError('Aligned GSEA uses one common rank axis; use cards for arbitrary rows/columns')
         rows,cols=len(names),1
-    height=1.45+rows*panel_height if presentation=='cards' else 2.7+len(names)*1.55;width=max(8.8,cols*panel_width+.9) if presentation=='cards' else max(10,panel_width*2.1)
+    height=1.45+rows*panel_height if presentation=='cards' else 2.7+len(names)*1.55;width=max(8.8,cols*max(5.4,panel_width)+.9) if presentation=='cards' else max(10,panel_width*2.1)
     fig=plt.figure(figsize=canvas_budget(width,height));_head(fig,title,contrast+' · '+str(ranked_universe)+' ranked genes · '+gene_set_version)
-    if presentation=='cards':slots=facet_slots(fig,len(names),rows,cols,left=.09,right=.96,bottom=.65/height,top=1-1.25/height,wspace=.28,hspace=.36)
+    if presentation=='cards':slots=facet_slots(fig,len(names),rows,cols,left=.09,right=.96,bottom=.65/height,top=1-1.25/height,wspace=1.0,hspace=.36)
     else:slots=None
     for i,name in enumerate(names):
         c=curve[curve.pathway==name];h=hit[hit.pathway==name];s=summary.loc[name];lead=h[h.leading_edge==1]
@@ -149,7 +149,7 @@ def gsea(data,theme,contract,curve_order,ranked_universe,metric_label,contrast,g
         rug.vlines(h['rank'],0,1,color=pal[name],lw=.7,alpha=.35)
         if show_leading_edge:rug.vlines(lead['rank'],0,1,color=pal[name],lw=1.4)
         rug.set(xlim=(1,ranked_universe),ylim=(0,1));rug.axis('off')
-        if slots:ax.text(0,-.42,'Supplied leading hits: '+str(len(lead))+' / '+str(len(h))+(' · bold rug' if show_leading_edge else ' · emphasis off'),transform=ax.transAxes,color=MUTED,fontsize=8)
+        if slots:fig.text(x,y+hh*.29,'Leading hits: '+str(len(lead))+' / '+str(len(h))+(' · bold rug' if show_leading_edge else ' · emphasis off'),color=MUTED,fontsize=8,va='center')
     if presentation=='aligned':
         met=_axis(fig,[.09,.60/height,.60,.70/height]);met.fill_between(metric['rank'],metric.value,0,color='#CEDFE3');met.plot(metric['rank'],metric.value,c='#657F8C',lw=.8);met.set(xlim=(1,ranked_universe),xlabel='Rank in complete ordered list',ylabel=metric_label);met.xaxis.set_major_locator(MaxNLocator(5,integer=True))
     _note(fig,'Complete running scores, hit positions, supplied leading-edge flags and ranked metric. No recomputation or interpolation; full gene identities remain in the exact TSV.')
@@ -160,9 +160,9 @@ def raincloud(data,theme,panels,title,scope_note,columns,rows,presentation):
     from figure_raincloud_geometry import draw_supplied_raincloud
     if any(p['kind']!='points' or not p.get('grouped_distribution') or not p.get('point_unit') or 'cloud_shapes' not in p for p in panels):raise ValueError('Raincloud alternatives require all observations, count units and supplied cloud geometry per panel')
     nr,nc=grid_shape(len(panels),min(2,len(panels)) if columns=='auto' else columns,rows)
-    horizontal=presentation=='raincloud_horizontal';width=max(8.8,nc*4.6+.7);height=1.75+nr*(3.4 if horizontal else 3.65)
+    horizontal=presentation=='raincloud_horizontal';width=max(8.8,nc*5.6+.6);height=1.75+nr*(3.4 if horizontal else 3.65)
     fig=plt.figure(figsize=canvas_budget(width,height));_head(fig,title,scope_note)
-    for p,slot in zip(panels,facet_slots(fig,len(panels),nr,nc,left=.10,right=.96,bottom=.65/height,top=1-1.2/height,hspace=.43,wspace=.34)):
+    for p,slot in zip(panels,facet_slots(fig,len(panels),nr,nc,left=.12,right=.96,bottom=.65/height,top=1-1.25/height,hspace=.50,wspace=1.0)):
         q=checked(data[data.panel_id==p['id']],['series','x','y'],['x','y']);groups=p.get('series_order',list(q.series.unique()));pal=group_palette(theme,groups)
         if set(groups)!=set(q.series) or len(groups)!=len(set(groups)) or set(p['cloud_shapes'])!=set(groups):raise ValueError('Complete unique group order and clouds required')
         a=fig.add_subplot(slot);a.spines[['top','right']].set_visible(False);a.tick_params(labelsize=9,length=2,colors=INK)

@@ -27,7 +27,7 @@ def draw_supplied_raincloud(ax,x,values,color,cloud,point_size=20,orientation='v
         ax.fill_between(grid,x-.38*width/width.max(),x,color=color,alpha=.26,edgecolor=color,lw=.8,zorder=1)
         ax.plot(grid,x-.38*width/width.max(),c=color,lw=.85,alpha=.8,zorder=2)
         ax.scatter(v,x+offset,c=color,s=point_size,alpha=.78 if len(v)<30 else .35,ec='white' if len(v)<30 else 'none',lw=.45,zorder=3,rasterized=True)
-        ax.boxplot([v],positions=[x+.065],widths=.085,manage_ticks=False,patch_artist=True,showfliers=False,orientation='horizontal',
+        ax.boxplot([v],positions=[x+.065],widths=.085,manage_ticks=False,patch_artist=True,showfliers=False,vert=False,
             boxprops=dict(fc='white',ec=color,lw=.9),medianprops=dict(color=color,lw=1.5),whiskerprops=dict(color=color,lw=.8),capprops=dict(color=color,lw=.8))
         return
     ax.fill_betweenx(grid,x-.38*width/width.max(),x,color=color,alpha=.26,edgecolor=color,lw=.8,zorder=1)
