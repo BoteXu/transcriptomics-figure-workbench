@@ -116,12 +116,20 @@ jobs:
         run: |
           npm install --prefix .ci/deps --ignore-scripts playwright@1.62.1
           .ci/deps/node_modules/.bin/playwright install --with-deps --only-shell chromium
+      - name: Check coordinated displays before the complete browser regression
+        env:
+          FIGURE_PLAYWRIGHT_MODULE: ${{ github.workspace }}/.ci/deps/node_modules/playwright/index.mjs
+        run: node tests/check_connected_browser.mjs connected-browser-ci
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: connected-review-previews
+          path: connected-browser-ci
       - name: Check offline Studio in a real browser
         env:
           FIGURE_PLAYWRIGHT_MODULE: ${{ github.workspace }}/.ci/deps/node_modules/playwright/index.mjs
         run: |
           python skills/transcriptomics-figure-workbench/scripts/workbench.py studio --output .ci/studio.html --gallery examples/gallery --demo-svg examples/workbench-v030/WB_ma/WB_ma.svg
-          node tests/check_connected_browser.mjs connected-browser-ci
           node tests/check_publication_browser.mjs publication-browser-ci .ci/studio.html
           node tests/check_clarity_browser.mjs clarity-browser-ci
           node tests/check_forms_browser.mjs forms-browser-ci
