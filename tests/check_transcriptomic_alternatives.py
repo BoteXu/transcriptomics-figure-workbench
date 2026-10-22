@@ -57,9 +57,11 @@ def main(output):
                     box=text.get_window_extent(renderer)
                     assert all(not box.overlaps(b.get_window_extent(renderer)) for b in fig.axes if b is not a),name+' labels invade another panel'
         if name.startswith('GSEA'):
-            for text in fig.texts:
-                if text.get_text().startswith('Leading hits:'):
-                    assert all(not text.get_window_extent(renderer).overlaps(a.get_window_extent(renderer)) for a in fig.axes),name+' leading-edge text invades track'
+            notes=[(a,t) for a in fig.axes for t in a.texts if t.get_text().startswith('Leading hits:')]
+            assert len(notes)==len(spec['parameters']['curve_order']),name+' leading-edge note detached from its pathway'
+            for owner,text in notes:
+                assert all(not text.get_window_extent(renderer).overlaps(a.get_window_extent(renderer)) for a in fig.axes),name+' leading-edge text invades track'
+                assert 0<owner.get_window_extent(renderer).y0-text.get_window_extent(renderer).y1<fig.dpi*.4,name+' leading-edge note escaped its hit lane'
         if name=='Markers_eight_three_columns':
             for a in fig.axes:
                 for text in a.get_xticklabels():
