@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "figure_id": "GSEA_aligned",
+  "renderer": "figure_gsea.plot_gsea_tracks",
+  "input": {
+    "path": "input.tsv",
+    "sha256": "d7a4edb9e9fa1c1d93f3f2883510bd84c86461764efe474c1056779670732ffd",
+    "numeric_columns": [
+      "rank",
+      "value",
+      "leading_edge",
+      "NES",
+      "padj",
+      "set_size"
+    ]
+  },
+  "parameters": {
+    "contract": {
+      "synthetic": true,
+      "source_definition": "Fictional complete ranked result v0.9",
+      "independent_unit": "Synthetic ranked identifiers; donor contrast supplied separately",
+      "denominator": "Complete supplied ranked universe and exact supplied pathway hit sets",
+      "value_definition": "Running ES, NES, adjusted probability, leading-edge flags and ranked metric supplied separately",
+      "uncertainty_definition": "No interval supplied; adjusted probabilities are existing display inputs"
+    },
+    "curve_order": [
+      "Interferon response",
+      "Extracellular matrix",
+      "Mitochondrial function"
+    ],
+    "ranked_universe": 1200,
+    "metric_label": "log2 fold change",
+    "contrast": "Treated vs Control",
+    "gene_set_version": "Synthetic set definition v0.9",
+    "title": "Pathway enrichment profiles",
+    "ncols": "auto",
+    "panel_width": 4.4,
+    "panel_height": 4.7,
+    "mode": "aligned"
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-transcriptomic-study",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Control": 0,
+      "Treated": 1,
+      "T cells": 0,
+      "B cells": 1,
+      "Myeloid": 2,
+      "Stromal": 3,
+      "Endothelial": 4,
+      "Batch 1": 0,
+      "Batch 2": 1,
+      "Batch 3": 2,
+      "Interferon response": 0,
+      "Extracellular matrix": 1,
+      "Mitochondrial function": 2,
+      "RNA processing": 3,
+      "Cell cycle": 4,
+      "Inflammatory response": 5
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Synthetic routine-request audit; seed 20261017; publication v0.9.6 display revision with unchanged frozen table bytes; alternative composition reuses the frozen results without scientific analysis",
+    "input_unit": "Synthetic ranked gene and hit",
+    "experimental_unit": "Synthetic donor; cells nested within donors",
+    "contrast": "Treated versus Control; purely illustrative",
+    "denominator": "All 1200 ranks; exact declared hit genes; no enrichment calculation",
+    "model": "No statistical model fitted; every estimate and uncertainty channel is an illustrative frozen input",
+    "limits": "Declared complete display scope; data have no biomedical validity",
+    "filtering": "Declared fixture selection only; no research filtering",
+    "uncertainty": "Only explicitly supplied illustrative intervals; no new uncertainty estimation",
+    "interpretation_limit": "Software and visual acceptance only; no biological or clinical conclusions",
+    "synthetic": true
+  },
+  "appearance": {
+    "preset": "paper",
+    "label_pt": 10.5,
+    "tick_pt": 10,
+    "note_pt": 9.5,
+    "title_pt": 12
+  },
+  "export": {
+    "raster_dpi": 300,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "warn"
+  }
+}

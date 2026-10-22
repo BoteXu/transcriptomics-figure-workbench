@@ -26,6 +26,31 @@
 
 这些是完整信息的可选表达，不能补造缺失的密度、区间或分析。示例为明确标注的模拟结果；实际屏幕自检与打印校样、独立审阅、科学有效性分别记录。
 
+<details>
+<summary>直接查看五类实际出图示例</summary>
+
+### PCA：给定椭圆、边缘比例与方差
+
+![PCA evidence](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/PCA_evidence/export/PCA_evidence/PCA_evidence.png)
+
+### 火山图：堆积分布、基因明细与全基因效应
+
+![Volcano landscape](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Volcano_landscape/export/Volcano_landscape/Volcano_landscape.png)
+
+### GSEA：每条通路的完整卡片
+
+![GSEA cards](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/GSEA_cards/export/GSEA_cards/GSEA_cards.png)
+
+### 云雨图：给定云形、全部原始点与经验箱线
+
+![Horizontal donor raincloud](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Expression_raincloud_horizontal/export/Expression_raincloud_horizontal/Expression_raincloud_horizontal.png)
+
+### 逐亚群多 marker：位置、特异性和跨身份对照
+
+![Subgroup marker cards](skills/transcriptomics-figure-workbench/assets/transcriptomic-alternatives/Subgroup_01_paired_cards/export/Subgroup_01_paired_cards/Subgroup_01_paired_cards.png)
+
+</details>
+
 ## v0.13.0：更多可选表达与可读性修订
 
 同一结果可选普通散点、对象标签散点，以及带给定区间的点线图；实际示例见[六分组与长标签](skills/transcriptomics-figure-workbench/assets/connected-examples/longlabels/index.html)、[12 对象直接标签](skills/transcriptomics-figure-workbench/assets/connected-examples/labels/index.html)、[六效应区间与标签替代画法](skills/transcriptomics-figure-workbench/assets/connected-examples/intervals/index.html)。它们是原有联动检查的显示方式，不增加科学算法。

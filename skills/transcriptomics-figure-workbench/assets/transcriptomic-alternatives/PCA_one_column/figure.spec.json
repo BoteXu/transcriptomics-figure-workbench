@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "figure_id": "PCA_one_column",
+  "renderer": "figure_integrated_views.plot_integrated_view",
+  "input": {
+    "path": "input.tsv",
+    "sha256": "94cc6a30e0e7ca2bec34498bcbac5ffbf15e4938a0f67589c086dbdf3de38821",
+    "numeric_columns": [
+      "x",
+      "y",
+      "width",
+      "height",
+      "angle",
+      "coverage",
+      "left",
+      "right",
+      "count",
+      "percent"
+    ]
+  },
+  "parameters": {
+    "mode": "pca",
+    "title": "Sample identity at matched limits",
+    "axis_labels": [
+      "PC1 (38.4%)",
+      "PC2 (17.6%)"
+    ],
+    "ellipse_definition": "Supplied 95% reference dispersion contours; illustrative, not mean confidence intervals or a separation test.",
+    "presentation": "facets",
+    "ncols": 1,
+    "panel_width": 5.0,
+    "panel_height": 3.8
+  },
+  "theme": {
+    "schema_version": 1,
+    "project_id": "synthetic-transcriptomic-study",
+    "palette_name": "package_editorial",
+    "palette_colors": [
+      "#218C8D",
+      "#D8795B",
+      "#5676A5",
+      "#A795BD",
+      "#C8A34E",
+      "#6EA98C",
+      "#B66C87",
+      "#7B94A1",
+      "#A28C77",
+      "#74798D"
+    ],
+    "group_slots": {
+      "Control": 0,
+      "Treated": 1,
+      "T cells": 0,
+      "B cells": 1,
+      "Myeloid": 2,
+      "Stromal": 3,
+      "Endothelial": 4,
+      "Batch 1": 0,
+      "Batch 2": 1,
+      "Batch 3": 2,
+      "Interferon response": 0,
+      "Extracellular matrix": 1,
+      "Mitochondrial function": 2,
+      "RNA processing": 3,
+      "Cell cycle": 4,
+      "Inflammatory response": 5
+    },
+    "roles": {
+      "primary": "#218C8D",
+      "negative": "#4477AA",
+      "positive": "#D8795B",
+      "accent": "#74798D",
+      "neutral": "#A8ADB3",
+      "significant": "#74798D",
+      "border": "#526272"
+    },
+    "continuous": {
+      "sequential": [
+        "#DFE7EA",
+        "#326B8D"
+      ],
+      "diverging": [
+        "#4477AA",
+        "#F7F7F7",
+        "#D8795B"
+      ]
+    },
+    "continuous_provenance": "Explicit original semantic extensions from selected base card; not an author-provided scale",
+    "font_family": "DejaVu Sans",
+    "design": {
+      "label_pt": 10,
+      "tick_pt": 9,
+      "title_pt": 11,
+      "note_pt": 8,
+      "spine_width": 0.7,
+      "spine_mode": "keep",
+      "grid": "keep"
+    },
+    "line_width": 1.4,
+    "point_edge_width": 0.4,
+    "preview_only": true
+  },
+  "provenance": {
+    "source": "Fictional frozen study v0.9.1; same point/results, explicit supplied display channels; no analysis; publication v0.9.6 display revision with unchanged frozen table bytes; alternative composition reuses the frozen results without scientific analysis",
+    "input_unit": "Synthetic donor",
+    "experimental_unit": "Synthetic donor; cells nested within donors",
+    "contrast": "Treated versus Control; purely illustrative",
+    "denominator": "One stored PCA coordinate per synthetic donor",
+    "model": "No statistical model fitted; every estimate and uncertainty channel is an illustrative frozen input",
+    "limits": "Declared complete display scope; data have no biomedical validity",
+    "filtering": "Declared fixture selection only; no research filtering",
+    "uncertainty": "Only explicitly supplied illustrative intervals; no new uncertainty estimation",
+    "interpretation_limit": "Software and visual acceptance only; no biological or clinical conclusions",
+    "synthetic": true
+  },
+  "appearance": {
+    "preset": "paper",
+    "label_pt": 10.5,
+    "tick_pt": 10,
+    "note_pt": 9.5,
+    "title_pt": 12
+  },
+  "export": {
+    "raster_dpi": 300,
+    "minimum_text_pt": 7.5,
+    "readability_policy": "warn"
+  }
+}

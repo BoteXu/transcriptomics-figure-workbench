@@ -41,6 +41,7 @@ jobs:
           python tests/check_visual_library.py
           python tests/check_method_upgrades.py
           python tests/check_connected.py
+          python tests/check_transcriptomic_alternatives_release.py
           python tests/check_method_scale_examples.py
           python tests/check_private_profile_sync.py
           python tools/build_journal_review.py --check
