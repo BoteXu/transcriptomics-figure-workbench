@@ -70,7 +70,7 @@ def build(output,render=False):
         spec['provenance']['source']+='; alternative composition reuses the frozen results without scientific analysis'
         # Reading pages retain their physical type size. Journal-column acceptance
         # requires separate reflow and review at the requested final width.
-        spec['export']={'raster_dpi':200,'minimum_text_pt':7.5,'readability_policy':'block'}
+        spec['export']={'raster_dpi':300,'minimum_text_pt':7.5,'readability_policy':'warn'}
         (folder/'input.tsv').write_bytes(raw)
         (folder/'figure.spec.json').write_text(json.dumps(spec,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
         record={'id':name,'source_spec':source.relative_to(ROOT).as_posix(),'original_input_sha256':original['input']['sha256'],'input_sha256':spec['input']['sha256'],'renderer':spec['renderer'],'parameters':updates,'rendered':False,'screen_review':'UNREVIEWED','scientific_acceptance':False}
