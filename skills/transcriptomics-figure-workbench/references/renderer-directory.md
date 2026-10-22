@@ -785,6 +785,10 @@ Prefer a compatible information-rich view; all extra scientific channels are sup
 | expression_limits | false | null |
 | identity_by_cell | false | null |
 | identity_order | false | null |
+| ncols | false | "auto" |
+| nrows | false | null |
+| panel_width | false | 4.5 |
+| panel_height | false | 4.0 |
 
 ## figure_lineage_views.plot_lineage_view
 

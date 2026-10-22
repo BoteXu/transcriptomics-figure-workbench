@@ -80,6 +80,9 @@ def plot_annotation_evidence(data, theme, *, mode, title, expression_label,
     """
     if mode not in ['atlas', 'subgroup']:
         raise ValueError('Choose atlas or subgroup evidence')
+    if composition in ['strips','paired_cards']:
+        from figure_study_alternatives import marker
+        return marker(data,theme,mode,title,expression_label,detection_definition,expression_limits,marker_order,focus_group,group_order,ncols,nrows,panel_width,panel_height,composition)
     if composition not in ['auto', 'evidence', 'grid']:
         raise ValueError('Choose auto, evidence or grid composition')
     evidence = mode=='subgroup' and (composition=='evidence' or

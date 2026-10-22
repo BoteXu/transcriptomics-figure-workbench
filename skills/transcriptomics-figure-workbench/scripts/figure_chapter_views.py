@@ -171,7 +171,10 @@ def plot_transcriptomic_chapter(data,theme,*,panels,title,scope_note,columns='au
     if len(ids)!=len(set(ids)) or set(data.panel_id)!=set(ids):raise ValueError('Every input panel must be declared exactly once')
     kinds={'curve','points','interval','matrix','bubble','embedding','network','stack','bars','vector'}
     if any(p.get('kind') not in kinds or not p.get('title') for p in panels):raise ValueError('Use a documented typed panel')
-    if presentation not in ['classic','publication']:raise ValueError('Choose classic or publication presentation')
+    if presentation in ['raincloud_horizontal','raincloud_vertical']:
+        from figure_study_alternatives import raincloud
+        return raincloud(data,theme,panels,title,scope_note,columns,rows,presentation)
+    if presentation not in ['classic','publication']:raise ValueError('Choose a documented chapter presentation')
     if presentation=='publication' and len(panels)==1 and panels[0]['kind']=='matrix' and panels[0].get('matrix_semantics') in ['design','cell_support']:
         from figure_study_publication import matrix_evidence
         return apply_project_style(matrix_evidence(data,theme,panels[0],title,scope_note),theme)

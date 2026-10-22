@@ -304,7 +304,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "42bd91e60748e6dbea9d5026f70fa0932560792e03603177c3a6a1bdacfeea39",
+      "source_sha256": "aa1a180e2d979e9ecb1ebe7321d5dd9f62859de8397dec0378557dc870954507",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "fraction",
@@ -649,7 +649,7 @@
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "bba71e7875163d82bd9b447fe47bc6d0633307317d08697ada5158fb87566b3c",
+      "source_sha256": "0041ad2126c06f5a021ae8d3c23ac518c3b8d98dcfefe4bb0d48fd836777cfdc",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": []
     },
@@ -2495,7 +2495,7 @@
       "aliases": [
         "gsea_tracks"
       ],
-      "source_sha256": "0a6ced6613c83fbae1d00bad86ef05c27a5d64949e8991a53d2da73eb01f4dc8",
+      "source_sha256": "2e1d666ca27be12ff37824ebae1dcda165c57cb253f0c62563303efa0f1bcb89",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "NES",
@@ -2557,7 +2557,7 @@
       "aliases": [
         "gsea_nes"
       ],
-      "source_sha256": "0a6ced6613c83fbae1d00bad86ef05c27a5d64949e8991a53d2da73eb01f4dc8",
+      "source_sha256": "2e1d666ca27be12ff37824ebae1dcda165c57cb253f0c62563303efa0f1bcb89",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "NES",
@@ -2609,7 +2609,7 @@
       "aliases": [
         "gsea_leading_edge"
       ],
-      "source_sha256": "0a6ced6613c83fbae1d00bad86ef05c27a5d64949e8991a53d2da73eb01f4dc8",
+      "source_sha256": "2e1d666ca27be12ff37824ebae1dcda165c57cb253f0c62563303efa0f1bcb89",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "leading_edge",
@@ -2669,7 +2669,7 @@
       "aliases": [
         "ora_terms"
       ],
-      "source_sha256": "0a6ced6613c83fbae1d00bad86ef05c27a5d64949e8991a53d2da73eb01f4dc8",
+      "source_sha256": "2e1d666ca27be12ff37824ebae1dcda165c57cb253f0c62563303efa0f1bcb89",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "count",
@@ -2771,12 +2771,36 @@
           "required": false,
           "annotation": null,
           "default": null
+        },
+        {
+          "name": "ncols",
+          "required": false,
+          "annotation": null,
+          "default": "auto"
+        },
+        {
+          "name": "nrows",
+          "required": false,
+          "annotation": null,
+          "default": null
+        },
+        {
+          "name": "panel_width",
+          "required": false,
+          "annotation": null,
+          "default": 4.5
+        },
+        {
+          "name": "panel_height",
+          "required": false,
+          "annotation": null,
+          "default": 4.0
         }
       ],
       "frozen_table_entry": true,
       "theme_mode": "argument",
       "aliases": [],
-      "source_sha256": "9994981ef129259565a6a7815bc6e38ef77c9d37f8c57b1d66d3fa7cf9d02d7b",
+      "source_sha256": "981b9f2070fff73441c1698c4de5e1a9c0099f59a662b63a5ef2d27c76395035",
       "validation": "implemented_source; runtime and visual receipts are separate",
       "numeric_columns": [
         "average",

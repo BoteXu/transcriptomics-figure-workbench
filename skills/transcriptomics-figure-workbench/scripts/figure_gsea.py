@@ -61,6 +61,9 @@ def plot_gsea_tracks(data, theme, *, contract, curve_order, ranked_universe,
     """GSEA classic/overlay/facets: exact running ES, hit rugs, rank metric and supplied NES/FDR."""
     validate_contract(contract)
     _required_text(metric_label=metric_label, contrast=contrast, gene_set_version=gene_set_version)
+    if mode in {'cards','aligned'} and type(show_leading_edge) is bool:
+        from figure_study_alternatives import gsea
+        return gsea(data,theme,contract,curve_order,ranked_universe,metric_label,contrast,gene_set_version,title,mode,ncols,nrows,panel_width,panel_height,show_leading_edge)
     if mode not in {'classic', 'overlay', 'facets'} or type(show_leading_edge) is not bool:
         raise ValueError('Choose classic, overlay or facets and an explicit leading-edge display')
     curve, hit, metric, summary, pathways = _gsea_input(data, curve_order, ranked_universe)

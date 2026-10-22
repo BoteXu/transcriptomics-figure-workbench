@@ -6,7 +6,8 @@ explicit provenance as larger clouds and never replace the observation dots.
 import numpy as np
 
 
-def draw_supplied_raincloud(ax,x,values,color,cloud,point_size=20):
+def draw_supplied_raincloud(ax,x,values,color,cloud,point_size=20,orientation='vertical'):
+    if orientation not in ['vertical','horizontal']:raise ValueError('Choose vertical or horizontal raincloud orientation')
     v=np.asarray(values,float)
     if v.ndim!=1 or len(v)<2 or not np.isfinite(v).all():
         raise ValueError('Rainclouds require at least two finite observations')
@@ -21,6 +22,14 @@ def draw_supplied_raincloud(ax,x,values,color,cloud,point_size=20):
         or not np.isclose(grid.min(),v.min(),rtol=0,atol=1e-9)
         or not np.isclose(grid.max(),v.max(),rtol=0,atol=1e-9)):
         raise ValueError('Cloud geometry must match its declared observation scope and observed range')
+    offset=.21+((np.arange(len(v))*.61803398875)%1-.5)*.15
+    if orientation=='horizontal':
+        ax.fill_between(grid,x-.38*width/width.max(),x,color=color,alpha=.26,edgecolor=color,lw=.8,zorder=1)
+        ax.plot(grid,x-.38*width/width.max(),c=color,lw=.85,alpha=.8,zorder=2)
+        ax.scatter(v,x+offset,c=color,s=point_size,alpha=.78 if len(v)<30 else .35,ec='white' if len(v)<30 else 'none',lw=.45,zorder=3,rasterized=True)
+        ax.boxplot([v],positions=[x+.065],widths=.085,manage_ticks=False,patch_artist=True,showfliers=False,orientation='horizontal',
+            boxprops=dict(fc='white',ec=color,lw=.9),medianprops=dict(color=color,lw=1.5),whiskerprops=dict(color=color,lw=.8),capprops=dict(color=color,lw=.8))
+        return
     ax.fill_betweenx(grid,x-.38*width/width.max(),x,color=color,alpha=.26,edgecolor=color,lw=.8,zorder=1)
     ax.plot(x-.38*width/width.max(),grid,c=color,lw=.85,alpha=.8,zorder=2)
     offset=.21+((np.arange(len(v))*.61803398875)%1-.5)*.15

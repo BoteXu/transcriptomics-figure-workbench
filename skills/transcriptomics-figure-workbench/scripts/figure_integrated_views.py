@@ -202,11 +202,20 @@ def _annotation_atlas(data,theme,title,include_response=False,feature_columns='a
     return fig
 
 
-def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_definition=None,labels=(),alpha=.05,fc=1,feature_columns='auto',cloud_shapes=None,observation_unit=None,presentation='auto',group_counts=None,expression_limits=None,identity_by_cell=None,identity_order=None):
+def plot_integrated_view(data,theme,*,mode,title,axis_labels=None,ellipse_definition=None,labels=(),alpha=.05,fc=1,feature_columns='auto',cloud_shapes=None,observation_unit=None,presentation='auto',group_counts=None,expression_limits=None,identity_by_cell=None,identity_order=None,ncols='auto',nrows=None,panel_width=4.5,panel_height=4.0):
     """Prefer a compatible information-rich view; all extra scientific channels are supplied."""
     if mode not in ['pca','volcano','annotation_atlas','single_cell_main','qc','marker_dot','batch_facets','effect_table','ma','unit_profile']:raise ValueError('Choose a documented integrated presentation')
     if not isinstance(title,str) or not title.strip():raise ValueError('State the comparison')
-    if presentation not in ['auto','publication','classic']:raise ValueError('Choose auto, publication or classic presentation')
+    if presentation in ['evidence','facets','landscape']:
+        from figure_study_alternatives import pca,volcano
+        if mode=='pca' and presentation in ['evidence','facets']:
+            return pca(data,theme,title,axis_labels,ellipse_definition,presentation,ncols,nrows,panel_width,panel_height)
+        if mode=='volcano' and presentation in ['evidence','landscape']:
+            if ncols!='auto' or nrows is not None:raise ValueError('Volcano evidence uses aligned quantitative axes; resize panels instead of assigning rows')
+            return volcano(data,theme,title,labels,alpha,fc,presentation,panel_width,panel_height)
+        raise ValueError('This alternative is available only for its documented PCA or volcano mode')
+    if presentation not in ['auto','publication','classic']:raise ValueError('Choose a documented presentation')
+    if ncols!='auto' or nrows is not None or panel_width!=4.5 or panel_height!=4.0:raise ValueError('Native integrated layout controls require an explicit alternative presentation')
     if mode=='qc' and cloud_shapes is not None and presentation!='classic':
         d=checked(data,['cell_id','sample','group','value'],['value'])
         if not observation_unit or (d.groupby('sample').group.nunique()!=1).any():raise ValueError('Explicit QC count units and stable sample groups required')
