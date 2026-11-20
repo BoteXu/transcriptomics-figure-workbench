@@ -1,0 +1,5 @@
+# Reviewed frozen public-result display cases
+
+Eight display forms at 89 and 183 mm, sixteen individually reviewed PNG exports, corresponding editable SVGs and bounded frozen public-result tables. These are display checks, not native server runs, new model fits or clinical/scientific validation. Sources include published GSE52778 DE and frozen Hallmark row-Z scores, WDBC bootstrap estimates, official Vina 1IEP poses, a short MD trajectory, curated fgsea pathway membership, and PBMC3k IL7R detection fractions from a nonnegative raw layer. The exact input/channel distinctions are in visual_reviews.json and the gallery captions.
+
+PNG/SVG pixels and geometry are byte-preserved from the reviewed exports. Only local file-location metadata in JSON was replaced by artifact basenames; sample/feature identities, data values, thresholds, quantities and units were not altered. Source fingerprints remain for identification; original local source receipts are not uploaded. Fixture plans explicitly do not claim actual native backend receipts.

@@ -1,3 +1,7 @@
+# New scientific-visualization public source
+
+The following older sections describe the retained legacy engine. The newly added `skills/scientific-visualization` uses its own Apache-2.0 LICENSE for original maintained source. Its exact 3Dmol viewer source retains the adjacent BSD/MIT notices, and its unmodified Liberation font assets retain OFL-1.1 and original notices. Public frozen-result examples retain their source-specific terms in `examples/scientific-v220/PUBLIC_SOURCES.md`; no third-party algorithm/model/database is relicensed or bundled. Initial BioResearchWorkbench tooling was based on Biomni; our maintained layer supplies adapters, QC, layout and result handoffs.
+
 # Sources, attribution and license boundaries
 
 The v0.13 readability revision uses independently written shape, text wrapping,

@@ -68,7 +68,9 @@ def portable_document(text, source, version, members):
             destination = DOCUMENTS.get(source, source)
             rewritten = posixpath.relpath(candidate, posixpath.dirname(destination) or '.')
         else:
-            rewritten = REPOSITORY + '/blob/v' + version + '/' + original
+            cross_skill = original.startswith(('skills/scientific-visualization/', 'examples/scientific-v220/')) or original in {'docs/release-scientific-v220.md','SCIENTIFIC_VERSION'}
+            target_version = (ROOT/'SCIENTIFIC_VERSION').read_text('utf8').strip() if cross_skill else version
+            rewritten = REPOSITORY + '/blob/v' + target_version + '/' + original
         if split.query:
             rewritten += '?' + split.query
         if split.fragment:

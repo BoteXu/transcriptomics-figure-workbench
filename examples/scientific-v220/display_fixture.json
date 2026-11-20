@@ -1,0 +1,88 @@
+{
+  "schema": "frozen-display-consumer-fixture/1",
+  "state": "READY_FOR_DISPLAY_REVIEW",
+  "backend": "public_frozen_display_test",
+  "route": {
+    "kind": "real_public_frozen_result_display_only",
+    "allowed_views": [
+      "volcano",
+      "interval",
+      "rank",
+      "matrix",
+      "scatter",
+      "curve",
+      "edges",
+      "proportions"
+    ],
+    "interpretation_boundary": "Display adapter test from existing public frozen results; not a native engine invocation, completed workflow receipt or new scientific validation"
+  },
+  "output_root": "consumer_display",
+  "selected": {
+    "volcano": [
+      {
+        "path": "published_DE.tsv",
+        "sha256": "9a0d4ec6b43042008e83baf97799e92c186b474c9af9bd28fbff62dab835fe30",
+        "bytes": 608449
+      }
+    ],
+    "interval": [
+      {
+        "path": "frozen_intervals.tsv",
+        "sha256": "9ca75c94c66890aace5057c3dac30e3e7eada3a586fa2d89faaa851f243b576c",
+        "bytes": 302
+      }
+    ],
+    "rank": [
+      {
+        "path": "frozen_intervals.tsv",
+        "sha256": "9ca75c94c66890aace5057c3dac30e3e7eada3a586fa2d89faaa851f243b576c",
+        "bytes": 302
+      }
+    ],
+    "matrix": [
+      {
+        "path": "frozen_Hallmark_display.tsv",
+        "sha256": "2789776e0a4d5bf8d0e7297f91883c920ebd1aab9f0f03b9b9771276a248d7ba",
+        "bytes": 4128
+      }
+    ],
+    "annotations": [
+      {
+        "path": "source_condition_axis.tsv",
+        "sha256": "a64a69f8e98d127f5a191de812ab31e0c823860850a11f1c5f0a3ee40113b318",
+        "bytes": 308
+      }
+    ],
+    "scatter": [
+      {
+        "path": "real_docking_pose_scores.tsv",
+        "sha256": "b24d728175c80a89a53ee7dbf25fb4c5b8d84a3e04f91d1e62c35adbeccf0f8c",
+        "bytes": 167
+      }
+    ],
+    "curve": [
+      {
+        "path": "real_transition_RMSD.tsv",
+        "sha256": "a37354f768400617f649fb1348bd0d6c8378a3be488e214bdc608164412c1b81",
+        "bytes": 674
+      }
+    ],
+    "edges": [
+      {
+        "path": "real_frozen_pathway_links.tsv",
+        "sha256": "5e5b0de021627f62da1a444a1ef08e103fe730e667ffa96328a98da24c7143e3",
+        "bytes": 465
+      }
+    ],
+    "proportions": [
+      {
+        "path": "real_marker_detection.tsv",
+        "sha256": "b36f6b336b271b3eccd1c0339653920cf900f6092e35646a7c751cb5dcbe3af8",
+        "bytes": 420
+      }
+    ]
+  },
+  "request_sha256": "display-fixture-not-a-scientific-request",
+  "receipt_sha256": "no-native-backend-receipt-was-fabricated",
+  "binding_sha256": "1eff032e0d5a29a3c3d4acb52fa56c17a9b177379937339f9c14588983a37f0d"
+}
