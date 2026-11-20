@@ -4,5 +4,7 @@ Pillow>=10.0
 PyMuPDF>=1.24
 
 # Serial contact-sheet PDF assembly (no scientific engine).
-pypdf>=5.0
+# The legacy reading exporter merges pages before attaching them to a writer.
+# pypdf 7 removes that API path.
+pypdf>=5.0,<7
 reportlab>=4.0
